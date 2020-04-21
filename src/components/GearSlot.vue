@@ -1,138 +1,100 @@
 <template>
-  <div @click="onClick()"
-       class="gear-container">
+  <div @click="onClick()" class="gear-container">
     <template v-if="isGearSelected()">
-      <div class="gear-element gear-name"
-           v-on:click="openGearModal()">{{ currentGear.itemName}}</div>
+      <div class="gear-element gear-name" v-on:click="openGearModal()">{{ currentGear.itemName}}</div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
       <div class="gear-element core-attribute">
-        <v-select placeholder="Core attribute"
-                  :clearable="false"
-                  v-model="currentGear.core"
-                  :options="coreAttributes">
+        <v-select
+          placeholder="Core attribute"
+          :clearable="false"
+          v-model="currentGear.core"
+          :options="coreAttributes"
+        >
           <template v-slot:option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.label }}
-            </span>
-            <span class="attribute-value">
-              {{option.value}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.label }}</span>
+            <span class="attribute-value">{{option.value}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.label }}
-            </span>
-            <span class="attribute-value">
-              {{option.value}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.label }}</span>
+            <span class="attribute-value">{{option.value}}</span>
           </template>
         </v-select>
       </div>
       <div class="gear-element attribute-one">
-        <v-select placeholder="Minor attribute 1"
-                  :clearable="false"
-                  :options="gearAttributes"
-                  v-model="currentGear.attributeOne"
-                  label="Stat">
+        <v-select
+          placeholder="Minor attribute 1"
+          :clearable="false"
+          :options="filterGearAttributes(gearAttributes, currentGear.attributeTwo)"
+          v-model="currentGear.attributeOne"
+          label="Stat"
+        >
           <template v-slot:option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.Stat }}
-            </span>
-            <span class="attribute-value">
-              {{option.Max}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.Stat }}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.Stat }}
-            </span>
-            <span class="attribute-value">
-              {{option.Max}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.Stat }}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
         </v-select>
       </div>
       <div class="gear-element attribute-two">
-        <v-select placeholder="Minor attribute 2"
-                  :clearable="false"
-                  :options="gearAttributes"
-                  v-model="currentGear.attributeTwo"
-                  label="Stat">
+        <v-select
+          placeholder="Minor attribute 2"
+          :clearable="false"
+          :options="filterGearAttributes(gearAttributes, currentGear.attributeOne)"
+          v-model="currentGear.attributeTwo"
+          label="Stat"
+        >
           <template v-slot:option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.Stat }}
-            </span>
-            <span class="attribute-value">
-              {{option.Max}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.Stat }}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.Stat }}
-            </span>
-            <span class="attribute-value">
-              {{option.Max}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.Stat }}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
         </v-select>
       </div>
-      <div class="gear-element mod-slot"
-           v-if="currentGear.filters.mod">
-        <v-select placeholder="Mod"
-                  :clearable="false"
-                  :options="gearMods"
-                  v-model="currentGear.mod"
-                  label="Stat">
+      <div class="gear-element mod-slot" v-if="currentGear.filters.mod">
+        <v-select
+          placeholder="Mod"
+          :clearable="false"
+          :options="gearMods"
+          v-model="currentGear.mod"
+          label="Stat"
+        >
           <template v-slot:option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.Stat }}
-            </span>
-            <span class="attribute-value">
-              {{option.Max}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.Stat }}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image"
-                 v-bind:src="typeToImgSrc[option.Type]">
-            <span class="attribute-label">
-              {{ option.Stat }}
-            </span>
-            <span class="attribute-value">
-              {{option.Max}}
-            </span>
+            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <span class="attribute-label">{{ option.Stat }}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
         </v-select>
       </div>
-      <div class="gear-element talent"
-           v-if="gearTalents.length > 0">
-        <v-select placeholder="Talent"
-                  :clearable="false"
-                  label="Talent"
-                  v-model="currentGear.talent"
-                  :options="gearTalents"></v-select>
-        <div class="talent-description"
-             v-if="currentGear.talent">
-          {{currentGear.talent.Desc}}
-        </div>
+      <div class="gear-element talent" v-if="gearTalents.length > 0">
+        <v-select
+          placeholder="Talent"
+          :clearable="false"
+          label="Talent"
+          v-model="currentGear.talent"
+          :options="gearTalents"
+        ></v-select>
+        <div class="talent-description" v-if="currentGear.talent">{{currentGear.talent.Desc}}</div>
       </div>
     </template>
 
-    <span class="no-gear-selected"
-          v-if="!isGearSelected()">
+    <span class="no-gear-selected" v-if="!isGearSelected()">
       <p>CHOSE YOUR GEAR</p>
     </span>
   </div>
@@ -202,6 +164,11 @@ export default {
         this.gearTalents = talents.filter(talent => {
           return talent.Slot === this.name;
         });
+      });
+    },
+    filterGearAttributes(attributes, otherAttribute) {
+      return attributes.filter(attribute => {
+        return otherAttribute ? otherAttribute.index !== attribute.index : true;
       });
     }
   },

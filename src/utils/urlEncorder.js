@@ -10,42 +10,10 @@ const gearEncoderMap = {
 import {
     allDataPromies
 } from "./dataImporter";
-
-// https://stackoverflow.com/a/27696695/10300983
-/*eslint-disable */
-const Base64 = (function () {
-    var digitsStr =
-        //   0       8       16      24      32      40      48      56     63
-        //   v       v       v       v       v       v       v       v      v
-        "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz+-";
-    var digits = digitsStr.split('');
-    var digitsMap = {};
-    for (var i = 0; i < digits.length; i++) {
-        digitsMap[digits[i]] = i;
-    }
-    return {
-        fromInt: function (int32) {
-            var result = '';
-            while (true) {
-                result = digits[int32 & 0x3f] + result;
-                int32 >>>= 6;
-                if (int32 === 0)
-                    break;
-            }
-            return result;
-        },
-        toInt: function (digitsStr) {
-            var result = 0;
-            var digits = digitsStr.split('');
-            for (var i = 0; i < digits.length; i++) {
-                result = (result << 6) + digitsMap[digits[i]];
-            }
-            return result;
-        }
-    };
-})();
-window.Base64 = Base64 // For debug purpose only TODO: Delete me
-/*eslint-enable */
+import {
+    compressToEncodedURIComponent,
+    decompressFromEncodedURIComponent
+} from "lz-string";
 
 // https://stackoverflow.com/a/6491621/10300983 modified to work with my code
 const getByString = function (o, s) {
@@ -73,15 +41,14 @@ const urlEncoder = function (gearArray) {
     for (let i = 0; i < gearArray.length; i++) {
         const gear = gearArray[i];
         urlChunks[i] = '';
-        urlChunks[i] += getByString(gear, 'id');
-        urlChunks[i] += getByString(gear, 'attributeOne.index');
-        urlChunks[i] += getByString(gear, 'attributeTwo.index');
-        urlChunks[i] += getByString(gear, 'core.index');
-        urlChunks[i] += getByString(gear, 'mod.index');
-        urlChunks[i] += getByString(gear, 'talent.index');
-        urlChunks[i] = Base64.fromInt(urlChunks[i]);
+        urlChunks[i] += ('00' + getByString(gear, 'id')).slice(-3) + '-';
+        urlChunks[i] += ('00' + getByString(gear, 'attributeOne.index')).slice(-3) + '-';
+        urlChunks[i] += ('00' + getByString(gear, 'attributeTwo.index')).slice(-3) + '-';
+        urlChunks[i] += ('00' + getByString(gear, 'core.index')).slice(-3) + '-';
+        urlChunks[i] += ('00' + getByString(gear, 'mod.index')).slice(-3) + '-';
+        urlChunks[i] += ('00' + getByString(gear, 'talent.index')).slice(-3);
     }
-    const url = urlChunks.join(':');
+    const url = compressToEncodedURIComponent(urlChunks.join(':'));
     window.history.pushState("", "", badUrl + url)
 }
 
@@ -89,14 +56,8 @@ const urlDecoder = function (encodedBuild) {
     return new Promise((resolve, reject) => {
         Promise.all(allDataPromies).then(() => {
             console.log('Everything loaded and ready for decode');
-            const splitted = encodedBuild.split(':');
-            const result = [];
-            for (let i = 0; i < splitted.length; i++) {
-                const gear = splitted[i];
-                // https://stackoverflow.com/questions/8513032/less-than-10-add-0-to-number/8513046
-                result.push(('000000' + Base64.toInt(gear)).slice(-7));
-            }
-            resolve(result);
+            const splitted = decompressFromEncodedURIComponent(encodedBuild).split(':');
+            resolve(splitted);
         })
     });
 

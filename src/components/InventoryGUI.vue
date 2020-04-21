@@ -39,6 +39,7 @@ import GearSlot from "./GearSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
 import { gearEncoderMap, urlEncoder, urlDecoder } from "../utils/urlEncorder";
+import * as LZstring from "lz-string";
 
 export default {
   name: "InventoryGUI",

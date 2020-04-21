@@ -261,33 +261,34 @@ export default {
     },
     init: {
       handler: function(ids) {
-        const gearId = parseInt([ids[0]]);
+        const splittedIdS = ids.split("-");
+        const gearId = parseInt([splittedIdS[0]]);
         // id 0
         // attributeOne.index 1
         // attributeTwo.index 2
         // core.index 3
         // mod.index 4
-        // talent.index 5 
+        // talent.index 5
         if (gearId) {
           const fromUrlGear = new GearBase(
             this.gearList.find(gear => gear.index === gearId)
           );
           this.currentGear = fromUrlGear;
           this.currentGear.attributeOne = this.gearAttributes.find(
-            attribute => attribute.index === parseInt([ids[1]])
+            attribute => attribute.index === parseInt(splittedIdS[1])
           );
           this.currentGear.attributeTwo = this.gearAttributes.find(
-            attribute => attribute.index === parseInt([ids[2]])
+            attribute => attribute.index === parseInt(splittedIdS[2])
           );
           this.currentGear.core = this.coreAttributes.find(
-            attribute => attribute.index === parseInt([ids[3]])
+            attribute => attribute.index === parseInt(splittedIdS[3])
           );
-          this.currentGear.mod = this.gearMods.find(mod => {
-            mod.index === parseInt([ids[4]]);
-          });
-          this.currentGear.talent = this.allTalents.find(talent => {
-            talent.index === parseInt([ids[5]]);
-          });
+          this.currentGear.mod = this.gearMods.find(
+            mod => mod.index === parseInt(splittedIdS[4])
+          );
+          this.currentGear.talent = this.allTalents.find(
+            talent => talent.index === parseInt(splittedIdS[5])
+          );
         }
       }
     }

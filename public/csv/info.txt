@@ -5,3 +5,9 @@ https://docs.google.com/spreadsheets/d/13ktgihRoZjkcoNq7vMOOlOhE51BSfOdGuUPDPiVb
 
 Splitted CSV Fils Based on Content in One Line using PowerShell
 https://www.codeproject.com/Articles/70319/Splitting-CSV-file-based-on-content-in-one-line-us
+
+How to import one of those CSV into google sheets
+=importdata("https://raw.githubusercontent.com/mxswat/mx-division-builds/master/public/csv/gear/Kneepads.csv")
+
+This might be useful?
+https://github.com/odeke-em/drive

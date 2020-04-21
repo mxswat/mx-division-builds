@@ -25,7 +25,7 @@ export default {
   },
   methods: {
     gearChanged(gear) {
-      this.gearClass = qualityToCss[gear.quality];
+      this.gearClass = qualityToCss[gear.quality] + " no-anim";
       this.$parent.gearChanged(this.name, gear);
     }
   }
@@ -49,7 +49,7 @@ export default {
     background: rgba(255, 94, 0, 0.25);
   }
   &.gearset {
-    background: rgba(1, 224, 143,0.25);
+    background: rgba(1, 224, 143, 0.25);
   }
 }
 
@@ -86,6 +86,9 @@ export default {
     transition: 0.5s all;
     z-index: 1;
   }
+}
+
+.outer-border:not(.no-anim) {
   &:hover {
     &:after,
     &:before {

@@ -125,10 +125,11 @@ export default {
         { label: "Armor", value: 170000, Type: "D", index: 2 }
       ],
       typeToImgSrc: null,
-      gearMods: undefined,
-      gearAttributes: undefined,
-      gearTalents: undefined,
-      allTalents: undefined
+      gearMods: null,
+      gearAttributes: null,
+      gearTalents: null,
+      allTalents: null,
+      allAttributes: null
     };
   },
   methods: {
@@ -144,9 +145,9 @@ export default {
       this.currentGear = new GearBase(data);
       switch (this.currentGear.quality) {
         case "Exotic":
+        case "Named":
           this.currentGear.core = this.coreAttributes.find(
-            attribute =>
-              attribute.label === this.currentGear.filters.core
+            attribute => attribute.label === this.currentGear.filters.core
           );
           this.currentGear.attributeOne = this.gearAttributes.find(
             attribute =>
@@ -157,10 +158,8 @@ export default {
               attribute.Stat === this.currentGear.filters.attributeTwo
           );
           this.currentGear.talent = this.allTalents.find(talent => {
-            return (talent.Talent === this.currentGear.filters.talent);
+            return talent.Talent === this.currentGear.filters.talent;
           });
-          break;
-        case "Named":
           break;
         case "Gearset":
           break;
@@ -177,8 +176,11 @@ export default {
       });
     },
     initGearAttributes() {
-      gearAttributesList.Attributes.then(res => {
-        this.gearAttributes = res;
+      gearAttributesList.Attributes.then(attributes => {
+        this.allAttributes = attributes;
+        this.gearAttributes = attributes.filter(attribute => {
+          return attribute.Quality === "A";
+        });
       });
     },
     initGearTalentsList() {
@@ -187,7 +189,7 @@ export default {
       gearTalentsList.GearTalents.then(talents => {
         this.allTalents = talents;
         this.gearTalents = talents.filter(talent => {
-          return talent.Slot === this.name;
+          return talent.Slot === this.name && talent.Quality === "A";
         });
       });
     },
@@ -200,12 +202,21 @@ export default {
       return mods;
     },
     filterGearAttributes(attributes, otherAttribute) {
+      const isTheOtherAttributeTheNamedOne =
+        otherAttribute &&
+        otherAttribute.index === this.currentGear.attributeOne.index;
       switch (this.currentGear.quality) {
         case "Exotic": {
           attributes = [];
           break;
         }
         case "Named":
+          if (
+            !this.isNamedTalent(this.currentGear.filters) &&
+            !isTheOtherAttributeTheNamedOne
+          ) {
+            attributes = [];
+          }
           break;
         case "Gearset":
           break;
@@ -217,6 +228,9 @@ export default {
           ? true
           : otherAttribute.index !== attribute.index;
       });
+    },
+    isNamedTalent(currentGearFilters) {
+      return !!currentGearFilters.talent;
     }
   },
   components: {},

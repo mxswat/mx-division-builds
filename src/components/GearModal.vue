@@ -50,4 +50,7 @@ export default {
 </script>
 
 <style>
+span.ag-header-icon.ag-header-cell-menu-button {
+  opacity: 1 !important;
+}
 </style>

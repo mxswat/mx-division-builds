@@ -15,13 +15,13 @@ function sourceFilesToVariables(sourceList, listToPopulate, path) {
                     // console.log("Parsing complete:", incomingData, fileName);
                     const headers = incomingData.data.shift();
                     let result = csvToArrayWithKeys(headers, incomingData.data)
-                        // .filter((el) => {
-                        //     // TODO Remove me
-                        //     return el.Quality !== 'Named' &&
-                        //         el.Quality !== 'N' &&
-                        //         el.Quality !== 'E' &&
-                        //         el.Quality !== 'Exotic' ? true : false;
-                        // })
+                    // .filter((el) => {
+                    //     // TODO Remove me
+                    //     return el.Quality !== 'Named' &&
+                    //         el.Quality !== 'N' &&
+                    //         el.Quality !== 'E' &&
+                    //         el.Quality !== 'Exotic' ? true : false;
+                    // })
                     // console.log(result);
                     resolve(result);
                 },
@@ -39,7 +39,7 @@ const gearList = {
     Kneepads: null,
     Backpack: null,
     Mask: null,
-    Weapons: null
+    // Weapons: null
 };
 
 const gearListSource = [
@@ -78,9 +78,16 @@ const gearTalentsPath = './csv/gear/';
 
 sourceFilesToVariables(gearTalentsListSource, gearTalentsList, gearTalentsPath);
 
+const allDataPromies = [
+    ...Object.values(gearList),
+    ...Object.values(gearTalentsList),
+    ...Object.values(gearAttributesList),
+    ...Object.values(gearModsList),
+]
 export {
     gearList,
     gearTalentsList,
     gearAttributesList,
-    gearModsList
+    gearModsList,
+    allDataPromies
 };

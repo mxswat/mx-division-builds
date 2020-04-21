@@ -114,14 +114,15 @@ export default {
   name: "GearSlot",
   props: {
     gearList: undefined,
-    name: undefined
+    name: undefined,
+    init: null
   },
   data() {
     return {
       currentGear: GearBase,
       coreAttributes: [
-        { label: "Weapon Damage", value: 15, Type: "O", index: 0 },
-        { label: "Skill Tier", value: 1, Type: "U", index: 1 },
+        { label: "Weapon Damage", value: 15, Type: "O", index: 1 },
+        { label: "Skill Tier", value: 1, Type: "U", index: 0 },
         { label: "Armor", value: 170000, Type: "D", index: 2 }
       ],
       typeToImgSrc: null,
@@ -162,6 +163,9 @@ export default {
           });
           break;
         case "Gearset":
+          this.currentGear.talent = this.allTalents.find(talent => {
+            return talent.Talent === this.currentGear.filters.talent;
+          });
           break;
         default:
           break;
@@ -254,6 +258,38 @@ export default {
         this.$parent.gearChanged(val);
       },
       deep: true
+    },
+    init: {
+      handler: function(ids) {
+        const gearId = parseInt([ids[0]]);
+        // id 0
+        // attributeOne.index 1
+        // attributeTwo.index 2
+        // core.index 3
+        // mod.index 4
+        // talent.index 5 
+        if (gearId) {
+          const fromUrlGear = new GearBase(
+            this.gearList.find(gear => gear.index === gearId)
+          );
+          this.currentGear = fromUrlGear;
+          this.currentGear.attributeOne = this.gearAttributes.find(
+            attribute => attribute.index === parseInt([ids[1]])
+          );
+          this.currentGear.attributeTwo = this.gearAttributes.find(
+            attribute => attribute.index === parseInt([ids[2]])
+          );
+          this.currentGear.core = this.coreAttributes.find(
+            attribute => attribute.index === parseInt([ids[3]])
+          );
+          this.currentGear.mod = this.gearMods.find(mod => {
+            mod.index === parseInt([ids[4]]);
+          });
+          this.currentGear.talent = this.allTalents.find(talent => {
+            talent.index === parseInt([ids[5]]);
+          });
+        }
+      }
     }
   }
 };

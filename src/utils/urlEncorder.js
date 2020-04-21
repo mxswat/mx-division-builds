@@ -7,6 +7,10 @@ const gearEncoderMap = {
     Kneepads: 5
 };
 
+import {
+    allDataPromies
+} from "./dataImporter";
+
 // https://stackoverflow.com/a/27696695/10300983
 /*eslint-disable */
 const Base64 = (function () {
@@ -43,7 +47,7 @@ const Base64 = (function () {
 window.Base64 = Base64 // For debug purpose only TODO: Delete me
 /*eslint-enable */
 
-// https://stackoverflow.com/a/6491621/10300983
+// https://stackoverflow.com/a/6491621/10300983 modified to work with my code
 const getByString = function (o, s) {
     s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
     s = s.replace(/^\./, ''); // strip a leading dot
@@ -81,8 +85,25 @@ const urlEncoder = function (gearArray) {
     window.history.pushState("", "", badUrl + url)
 }
 
+const urlDecoder = function (encodedBuild) {
+    return new Promise((resolve, reject) => {
+        Promise.all(allDataPromies).then(() => {
+            console.log('Everything loaded and ready for decode');
+            const splitted = encodedBuild.split(':');
+            const result = [];
+            for (let i = 0; i < splitted.length; i++) {
+                const gear = splitted[i];
+                // https://stackoverflow.com/questions/8513032/less-than-10-add-0-to-number/8513046
+                result.push(('000000' + Base64.toInt(gear)).slice(-7));
+            }
+            resolve(result);
+        })
+    });
+
+}
 
 export {
     gearEncoderMap,
-    urlEncoder
+    urlEncoder,
+    urlDecoder
 }

@@ -11,7 +11,7 @@ const fs = require("fs");
         await execa("git", ["--work-tree", 'dist', "commit", "-m", "gh-pages"]);
         console.log("Pushing to gh-pages...");
         await execa("git", ["push", "origin", "HEAD:gh-pages", "--force"]);
-        await execa("del", ["-r", 'dist']); // Windows only
+        // await execa("del", ["-r", 'dist']); // Windows only
         await execa("git", ["checkout", "-f", "master"]);
         await execa("git", ["branch", "-D", "gh-pages"]);
         console.log("Successfully deployed");

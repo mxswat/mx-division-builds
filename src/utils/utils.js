@@ -11,7 +11,7 @@ const zipObject = (keys, values) =>
  * @param {*} headers 
  * @param {*} data 
  */
-const csvToArrayWithKeys = (headers, data) => {
+const csvToArrayWithKeys = (headers, data, globalMapping) => {
     const result = [];
     for (let i = 0; i < data.length; i++) {
         const dataRow = data[i];

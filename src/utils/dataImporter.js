@@ -15,13 +15,13 @@ function sourceFilesToVariables(sourceList, listToPopulate, path) {
                     // console.log("Parsing complete:", incomingData, fileName);
                     const headers = incomingData.data.shift();
                     let result = csvToArrayWithKeys(headers, incomingData.data)
-                        .filter((el) => {
-                            // TODO Remove me
-                            return el.Quality !== 'Named' &&
-                                el.Quality !== 'N' &&
-                                el.Quality !== 'E' &&
-                                el.Quality !== 'Exotic' ? true : false;
-                        })
+                        // .filter((el) => {
+                        //     // TODO Remove me
+                        //     return el.Quality !== 'Named' &&
+                        //         el.Quality !== 'N' &&
+                        //         el.Quality !== 'E' &&
+                        //         el.Quality !== 'Exotic' ? true : false;
+                        // })
                     // console.log(result);
                     resolve(result);
                 },

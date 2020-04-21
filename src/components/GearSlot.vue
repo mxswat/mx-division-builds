@@ -167,9 +167,33 @@ export default {
       });
     },
     filterGearAttributes(attributes, otherAttribute) {
+      let filterCondition = this.defaultAttributeFilter;
+      switch (this.currentGear.quality) {
+        case "Exotic": {
+          const firstAttribute = attributes.find(
+            attribute =>
+              attribute.Stat === this.currentGear.filters.attributeOne
+          );
+          const secondAttribute = attributes.find(
+            attribute =>
+              attribute.Stat === this.currentGear.filters.attributeTwo
+          );
+          attributes = [firstAttribute, secondAttribute];
+          break;
+        }
+        case "Named":
+          break;
+        case "Gearset":
+          break;
+        default:
+          break;
+      }
       return attributes.filter(attribute => {
-        return !otherAttribute ? true : otherAttribute.index !== attribute.index;
+        return filterCondition(attribute, otherAttribute);
       });
+    },
+    defaultAttributeFilter(attribute, otherAttribute) {
+      return !otherAttribute ? true : otherAttribute.index !== attribute.index;
     }
   },
   components: {},
@@ -183,6 +207,24 @@ export default {
     currentGear: {
       handler: function(val, oldVal) {
         // console.log("watched", val, oldVal);
+        // filters: Object
+        //   attributeOne: "Critical Hit Chance"
+        //   attributeTwo: "Critical Hit Damage"
+        //   core: "Weapon Damage"
+        //   mod: "O"
+        //   talent: "Pack Instincts"
+        // let gear;
+        // switch (val.quality) {
+        //   case "Exotic":
+        //     val;
+        //     break;
+        //   case "Named":
+        //     break;
+        //   case "Gearset":
+        //     break;
+        //   default:
+        //     break;
+        // }
         this.$parent.gearChanged(val);
       },
       deep: true

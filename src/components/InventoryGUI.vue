@@ -1,6 +1,8 @@
 <template>
   <div class="main-area">
-    <BasicTile class="primary"></BasicTile>
+    <BasicTile class="primary">
+      <WeaponSlot></WeaponSlot>
+    </BasicTile>
     <BasicTile class="secondary"></BasicTile>
     <BasicTile class="pistol"></BasicTile>
     <img class="img-mask mask" src="icons/mask.png" />
@@ -36,6 +38,7 @@
 <script>
 import BasicTile from "./BasicTile";
 import GearSlot from "./GearSlot";
+import WeaponSlot from "./WeaponSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
 import { gearEncoderMap, urlEncoder, urlDecoder } from "../utils/urlEncorder";
@@ -48,7 +51,8 @@ export default {
   },
   components: {
     BasicTile,
-    GearSlot
+    GearSlot,
+    WeaponSlot
   },
   data() {
     return {

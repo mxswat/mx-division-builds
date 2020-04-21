@@ -108,6 +108,6 @@ export default {
 .img-kneepads {
   align-self: center;
   justify-self: center;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 </style>

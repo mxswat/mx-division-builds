@@ -168,7 +168,7 @@ export default {
     },
     filterGearAttributes(attributes, otherAttribute) {
       return attributes.filter(attribute => {
-        return otherAttribute ? otherAttribute.index !== attribute.index : true;
+        return !otherAttribute ? true : otherAttribute.index !== attribute.index;
       });
     }
   },

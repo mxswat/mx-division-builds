@@ -66,7 +66,7 @@
         <v-select
           placeholder="Mod"
           :clearable="false"
-          :options="gearMods"
+          :options="filterGearMods(gearMods)"
           v-model="currentGear.mod"
           label="Stat"
         >
@@ -166,6 +166,14 @@ export default {
         });
       });
     },
+    filterGearMods(mods) {
+      if (this.currentGear.quality === 'Exotic') {
+        mods = mods.filter(mod => {
+          return mod.Type === this.currentGear.filters.mod
+        });
+      }
+      return mods;
+    },
     filterGearAttributes(attributes, otherAttribute) {
       let filterCondition = this.defaultAttributeFilter;
       switch (this.currentGear.quality) {
@@ -189,11 +197,8 @@ export default {
           break;
       }
       return attributes.filter(attribute => {
-        return filterCondition(attribute, otherAttribute);
+        return !otherAttribute ? true : otherAttribute.index !== attribute.index;
       });
-    },
-    defaultAttributeFilter(attribute, otherAttribute) {
-      return !otherAttribute ? true : otherAttribute.index !== attribute.index;
     }
   },
   components: {},
@@ -206,25 +211,6 @@ export default {
   watch: {
     currentGear: {
       handler: function(val, oldVal) {
-        // console.log("watched", val, oldVal);
-        // filters: Object
-        //   attributeOne: "Critical Hit Chance"
-        //   attributeTwo: "Critical Hit Damage"
-        //   core: "Weapon Damage"
-        //   mod: "O"
-        //   talent: "Pack Instincts"
-        // let gear;
-        // switch (val.quality) {
-        //   case "Exotic":
-        //     val;
-        //     break;
-        //   case "Named":
-        //     break;
-        //   case "Gearset":
-        //     break;
-        //   default:
-        //     break;
-        // }
         this.$parent.gearChanged(val);
       },
       deep: true

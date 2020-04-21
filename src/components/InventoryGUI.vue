@@ -60,7 +60,9 @@ import { gearEncoderMap, urlEncoder } from "../utils/urlEncorder";
 
 export default {
   name: "InventoryGUI",
-  props: {},
+  props: {
+    encodedBuild: null,
+  },
   components: {
     BasicTile,
     GearSlot
@@ -79,6 +81,7 @@ export default {
   },
   created() {
     this.initGearList();
+    console.log('this.encodedBuild', this.encodedBuild)
   },
   methods: {
     initGearList() {

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
 import VModal from 'vue-js-modal';
-import vSelect from 'vue-select'
-
+import vSelect from 'vue-select';
+import VueRouter from 'vue-router';
+import router from "./router";
 Vue.config.productionTip = false
 Vue.use(VModal, {
   dynamic: true,
@@ -10,8 +11,12 @@ Vue.use(VModal, {
 })
 Vue.component('v-select', vSelect)
 
+
+Vue.use(VueRouter);
+
 var vueInstance = new Vue({
   render: h => h(App),
+  router
 }).$mount('#app')
 
 document.addEventListener('DOMContentLoaded', function () {

@@ -61,8 +61,8 @@ const getByString = function (o, s) {
     return o;
 }
 
-// Use router
-const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/' : '/';
+// I should use the vue router
+const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/#/' : '/#/';
 
 const urlEncoder = function (gearArray) {
     let urlChunks = [];

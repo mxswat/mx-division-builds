@@ -2,19 +2,17 @@
   <div id="app">
     <div class="grid-container">
       <div class="tbd-one"></div>
-      <InventoryGUI></InventoryGUI>
+      <router-view></router-view>
       <div class="tbd-two"></div>
     </div>
   </div>
 </template>
 
 <script>
-import InventoryGUI from "./components/InventoryGUI";
 
 export default {
   name: "App",
   components: {
-    InventoryGUI
   }
 };
 </script>

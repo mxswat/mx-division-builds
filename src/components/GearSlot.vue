@@ -157,7 +157,7 @@ export default {
               attribute.Stat === this.currentGear.filters.attributeTwo
           );
           this.currentGear.talent = this.allTalents.find(talent => {
-            return (talent.Talent = this.currentGear.filters.talent);
+            return (talent.Talent === this.currentGear.filters.talent);
           });
           break;
         case "Named":

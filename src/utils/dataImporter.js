@@ -5,11 +5,13 @@ import {
 
 // TODO Remind me Download CSV file from Github (RAW)
 function sourceFilesToVariables(sourceList, listToPopulate, path) {
+    // Temporary TODO: Remove me
+    const cacheKiller = Math.floor(Math.random() * 1000000000)
     for (let i = 0; i < sourceList.length; i++) {
         const sourceRow = sourceList[i];
         const varName = sourceRow.slice(0, sourceRow.length - 4); // Remove.csv
         listToPopulate[varName] = new Promise((resolve, reject) => {
-            Papa.parse(`${path}${sourceRow}`, {
+            Papa.parse(`${path}${sourceRow}?${cacheKiller}`, {
                 download: true,
                 complete: function (incomingData, fileName) {
                     // console.log("Parsing complete:", incomingData, fileName);

@@ -1,0 +1,7 @@
+The original CSVs are from
+https://www.reddit.com/r/thedivision/comments/fx22fk/the_division_2_build_tool_updated_for_tu8/
+https://docs.google.com/spreadsheets/d/13ktgihRoZjkcoNq7vMOOlOhE51BSfOdGuUPDPiVb9yc/
+
+
+Splitted CSV Fils Based on Content in One Line using PowerShell
+https://www.codeproject.com/Articles/70319/Splitting-CSV-file-based-on-content-in-one-line-us

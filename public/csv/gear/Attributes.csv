@@ -1,0 +1,38 @@
+Quality,Type,Stat,Max
+A,O,Weapon Handling,14
+A,O,Critical Hit Chance,6
+A,O,Critical Hit Damage,12
+A,O,Headshot Damage,10
+A,D,Armor Regen,4925
+A,D,Hazard Protection,10
+A,D,Health,18935
+A,D,Explosive Resistance,10
+A,U,Skill Damage,10
+A,U,Repair Skills,20
+A,U,Skill Haste,12
+A,U,Status Effects,10
+N,Damage to TOC,Damage to TOC,15
+N,Damage to Armor,Damage to Armor,11
+N,Pulse Haste,Pulse Haste,100
+N,Damage to Health,Damage to Health,21
+N,Headshot Damage,Headshot Damage,10.9
+N,Melee Damage,Melee Damage,200
+N,Armor % on Kill,Armor % on Kill,5
+N,Skill Health,Skill Health,20
+N,Status Effects,Status Effects,10.5
+N,Sheild Health,Sheild Health,10
+N,Ammo Capacity,Ammo Capacity,10
+N,Armor Regen %,Armor Regen %,1
+E,Critical Hit Chance,Critical Hit Chance,6
+E,Critical Hit Damage,Critical Hit Damage,12
+E,Skill Haste,Skill Haste,12
+E,Skill Damage,Skill Damage,10
+E,Explosive Resistance,Explosive Resistance,10
+E,Armor Regen,Armor Regen,4925
+E,Repair Skills,Repair Skills,20
+E,Weapon Handling,Weapon Handling,14
+E,Headshot Damage,Headshot Damage,10
+E,Status Effects,Status Effects,10
+E,Hazard Protection,Hazard Protection,10
+E,Health,Health,18935
+A,D,Protection from Elites,13

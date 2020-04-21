@@ -88,7 +88,7 @@
           :clearable="false"
           label="Talent"
           v-model="currentGear.talent"
-          :options="gearTalents"
+          :options="filterGearTalents(gearTalents)"
         ></v-select>
         <div class="talent-description" v-if="currentGear.talent">{{currentGear.talent.Desc}}</div>
       </div>
@@ -228,6 +228,14 @@ export default {
           ? true
           : otherAttribute.index !== attribute.index;
       });
+    },
+    filterGearTalents(talents) {
+      const result =
+        !this.isNamedTalent(this.currentGear.filters) &&
+        this.currentGear.quality !== "Exotic"
+          ? talents
+          : [];
+      return result;
     },
     isNamedTalent(currentGearFilters) {
       return !!currentGearFilters.talent;

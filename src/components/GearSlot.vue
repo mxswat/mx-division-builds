@@ -8,7 +8,7 @@
           placeholder="Core attribute"
           :clearable="false"
           v-model="currentGear.core"
-          :options="coreAttributes"
+          :options="currentGear.quality === 'Exotic' ? [] : coreAttributes"
         >
           <template v-slot:option="option">
             <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
@@ -82,7 +82,7 @@
           </template>
         </v-select>
       </div>
-      <div class="gear-element talent" v-if="gearTalents.length > 0">
+      <div class="gear-element talent" v-if="gearTalents.length > 0 || this.currentGear.talent">
         <v-select
           placeholder="Talent"
           :clearable="false"
@@ -118,7 +118,7 @@ export default {
   },
   data() {
     return {
-      currentGear: null,
+      currentGear: GearBase,
       coreAttributes: [
         { label: "Weapon Damage", value: 15, Type: "O", index: 0 },
         { label: "Skill Tier", value: 1, Type: "U", index: 1 },
@@ -142,6 +142,31 @@ export default {
     },
     onModalClose(data) {
       this.currentGear = new GearBase(data);
+      switch (this.currentGear.quality) {
+        case "Exotic":
+          this.currentGear.core = this.coreAttributes.find(
+            attribute =>
+              attribute.label === this.currentGear.filters.core
+          );
+          this.currentGear.attributeOne = this.gearAttributes.find(
+            attribute =>
+              attribute.Stat === this.currentGear.filters.attributeOne
+          );
+          this.currentGear.attributeTwo = this.gearAttributes.find(
+            attribute =>
+              attribute.Stat === this.currentGear.filters.attributeTwo
+          );
+          this.currentGear.talent = this.allTalents.find(talent => {
+            return (talent.Talent = this.currentGear.filters.talent);
+          });
+          break;
+        case "Named":
+          break;
+        case "Gearset":
+          break;
+        default:
+          break;
+      }
     },
     openGearModal() {
       openGearModal(this.gearList, this.onModalClose);
@@ -167,26 +192,17 @@ export default {
       });
     },
     filterGearMods(mods) {
-      if (this.currentGear.quality === 'Exotic') {
+      if (this.currentGear.quality === "Exotic") {
         mods = mods.filter(mod => {
-          return mod.Type === this.currentGear.filters.mod
+          return mod.Type === this.currentGear.filters.mod;
         });
       }
       return mods;
     },
     filterGearAttributes(attributes, otherAttribute) {
-      let filterCondition = this.defaultAttributeFilter;
       switch (this.currentGear.quality) {
         case "Exotic": {
-          const firstAttribute = attributes.find(
-            attribute =>
-              attribute.Stat === this.currentGear.filters.attributeOne
-          );
-          const secondAttribute = attributes.find(
-            attribute =>
-              attribute.Stat === this.currentGear.filters.attributeTwo
-          );
-          attributes = [firstAttribute, secondAttribute];
+          attributes = [];
           break;
         }
         case "Named":
@@ -197,7 +213,9 @@ export default {
           break;
       }
       return attributes.filter(attribute => {
-        return !otherAttribute ? true : otherAttribute.index !== attribute.index;
+        return !otherAttribute
+          ? true
+          : otherAttribute.index !== attribute.index;
       });
     }
   },

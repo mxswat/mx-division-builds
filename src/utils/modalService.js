@@ -1,10 +1,12 @@
-import GearModal from "../components/GearModal";
+import TableModal from "../components/TableModal";
+import { gearHeaders, weaponsHeaders } from "./agGridDefaults";
 
 const openGearModal = function (gearList, onModalClose) {
     window.vueInstance.$modal.show(
-        GearModal, {
+        TableModal, {
             gearData: gearList,
-            onModalClose: onModalClose
+            onModalClose: onModalClose,
+            tableHeaders: gearHeaders
         }, {
             adaptive: true,
             width: "75%",
@@ -13,18 +15,18 @@ const openGearModal = function (gearList, onModalClose) {
     );
 }
 
-
-const openWeaponsModal = function (gearList, onModalClose) {
-    // window.vueInstance.$modal.show(
-    //     GearModal, {
-    //         gearData: gearList,
-    //         onModalClose: onModalClose
-    //     }, {
-    //         adaptive: true,
-    //         width: "75%",
-    //         height: "90%"
-    //     }
-    // );
+const openWeaponsModal = function (weaponLists, onModalClose) {
+    window.vueInstance.$modal.show(
+        TableModal, {
+            gearData: weaponLists,
+            onModalClose: onModalClose,
+            tableHeaders: weaponsHeaders
+        }, {
+            adaptive: true,
+            width: "75%",
+            height: "90%"
+        }
+    );
 }
 
 

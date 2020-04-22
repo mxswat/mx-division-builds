@@ -8,9 +8,21 @@
 
 <script>
 import { openWeaponsModal } from "../utils/modalService";
+import { weaponsList } from "../utils/dataImporter";
 
 export default {
   name: "WeaponSlot",
+  data() {
+    return {
+      weaponsList: null,
+      currentWeapon: null
+    };
+  },
+  created() {
+    weaponsList.Weapons.then(weapons => {
+      this.weaponsList = weapons;
+    });
+  },
   methods: {
     isWeaponSelected() {
       return this.currentWeapon && this.currentWeapon.itemName;
@@ -21,7 +33,7 @@ export default {
       }
     },
     openWeaponsModal() {
-      openWeaponsModal(this.gearList, this.onModalClose);
+      openWeaponsModal(this.weaponsList, this.onModalClose);
     }
   }
 };

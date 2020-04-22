@@ -6,17 +6,16 @@
       :columnDefs="columnDefs"
       :rowData="rowData"
       :gridOptions="gridOptions"
+      @first-data-rendered="onFirstDataRendered"
     ></ag-grid-vue>
   </div>
 </template>
 
 <script>
-import { masksList } from "../utils/dataImporter";
 import { AgGridVue } from "ag-grid-vue";
-import { columnDef } from "../utils/agGridDefaults";
 export default {
-  name: "GearModal",
-  props: ["gearData", "onModalClose"],
+  name: "TableModal",
+  props: ["gearData", "onModalClose", "tableHeaders"],
   components: { AgGridVue },
   data() {
     return {
@@ -25,26 +24,26 @@ export default {
         onRowClicked: this.onRowClicked,
         suppressCellSelection: true
       },
-      columnDefs: [
-        // { headerName: "Brand", field: "Brand", ...columnDef }, hidden, not really needed for now
-        { headerName: "Quality", field: "Quality", ...columnDef },
-        { headerName: "Item Name", field: "Item Name", ...columnDef },
-        { headerName: "Core", field: "Core", ...columnDef },
-        { headerName: "Attribute 1", field: "Attribute 1", ...columnDef },
-        { headerName: "Attribute 2", field: "Attribute 2", ...columnDef },
-        { headerName: "Mod", field: "Mod", ...columnDef },
-        { headerName: "Talent", field: "Talent", ...columnDef }
-      ]
+      columnDefs: this.tableHeaders,
+      gridColumnApi: null
     };
   },
   methods: {
     onRowClicked(node) {
       this.$emit("close");
       this.onModalClose(node.data);
+    },
+    onFirstDataRendered(params) {
+      var allColumnIds = [];
+      this.gridColumnApi.getAllColumns().forEach(function(column) {
+        allColumnIds.push(column.colId);
+      });
+      this.gridColumnApi.autoSizeColumns(allColumnIds, false);
     }
   },
   mounted() {
     this.rowData = this.gearData;
+    this.gridColumnApi = this.gridOptions.columnApi;
   }
 };
 </script>

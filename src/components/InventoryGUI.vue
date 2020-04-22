@@ -12,8 +12,12 @@
     <BasicTile class="primary">
       <WeaponSlot></WeaponSlot>
     </BasicTile>
-    <BasicTile class="secondary"></BasicTile>
-    <BasicTile class="pistol"></BasicTile>
+    <BasicTile class="secondary">
+      <WeaponSlot></WeaponSlot>
+    </BasicTile>
+    <BasicTile class="pistol">
+      <WeaponSlot></WeaponSlot>
+    </BasicTile>
     <BasicTile class="mask" v-bind:name="'Mask'">
       <GearSlot v-bind:name="'Mask'" v-bind:init="initGearSlot[0]" v-bind:gearList="maskList"></GearSlot>
     </BasicTile>

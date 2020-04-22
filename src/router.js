@@ -14,7 +14,7 @@ const router = new VueRouter({
         },
         {
             path: '/:encodedBuild',
-            name: 'home',
+            name: 'homeId',
             component: InventoryGUI,
             props: true
         }

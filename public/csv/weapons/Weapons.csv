@@ -1,4 +1,4 @@
-Variant,Weapon,Slot,Type,Weapon Type,Base Damage,Mag Size,RPM,Reload Speed (ms),Optimal Range,Core 1,Core 1 Max,Core 2,Core 2 Max,Attribute 1,Talent,Optics,Under Barrel,Magazine,Muzzle,HSD
+Variant,Name,Slot,Quality,Weapon Type,Base Damage,Mag Size,RPM,Reload Speed (ms),Optimal Range,Core 1,Core 1 Max,Core 2,Core 2 Max,Attribute 1,Talent,Optics,Under Barrel,Magazine,Muzzle,HSD
 AUG,The Bighorn,P,Exotic,Assault Rifle,46071,30,800,2100,27,Assault Rifle Damage,15,Damage to Health,11,Critical Hit Damage,Big Game Hunter,The Bighorn,The Bighorn,The Bighorn,The Bighorn,55
 M4,Eagle Bearer,P,Exotic,Assault Rifle,47952,30,750,2500,35,Assault Rifle Damage,15,Damage to Health,11,Headshot Damage,Eagle's Strike,Eagle Bearer,Eagle Bearer,Eagle Bearer,Eagle Bearer,55
 Vector,Chameleon,P,Exotic,Assault Rifle,30087,30,900,2400,15,Assault Rifle Damage,15,Damage to Health,11,Critical Hit Chance,Adaptive Instincts,Chameleon,Chameleon,Chameleon,Chameleon,50

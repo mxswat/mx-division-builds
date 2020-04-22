@@ -17,7 +17,7 @@ const gearHeaders =  [
 
 const weaponsHeaders = [
     { headerName: 'Weapon Type', field: 'Weapon Type', ...columnDef },
-    { headerName: 'Weapon', field: 'Weapon', ...columnDef },
+    { headerName: 'Name', field: 'Name', ...columnDef },
     // { headerName: 'Slot', field: 'Slot', ...columnDef }, hidden, not really needed for now
     { headerName: 'Type', field: 'Type', ...columnDef },
     { headerName: 'Base Damage', field: 'Base Damage', ...columnDef },

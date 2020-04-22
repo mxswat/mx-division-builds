@@ -1,4 +1,4 @@
-export class GearBase {
+class GearBase {
     // type = null
     id = null;
     quality = null;
@@ -29,6 +29,57 @@ export class GearBase {
         this.filters.mod = gearRaw.Mod;
         this.filters.talent = gearRaw.Talent;
     }
+}
+
+class WeaponBase {
+    // "Slot" = null;
+    "Name" = null;
+    "Base Damage" = null;
+    "RPM" = null;
+    "Mag Size" = null;
+    "Quality" = null;
+    "Optimal Range" = null;
+    "Weapon Type" = null;
+    "Reload Speed (ms)" = null;
+    "HSD" = null;
+    "Variant" = null;
+    
+    // Core is always the same per weapon category
+    // "Core 1" = null;
+    // "Core 1 Max" = null;
+    // "Core 2" = null;
+    // "Core 2 Max" = null;
+    
+    // Used in Encoding
+    id = null;
+    "Attribute 1" = null;
+    "Talent" = null;
+    "Optics" = null;
+    "Under Barrel" = null;
+    "Magazine" = null;
+    "Muzzle" = null;
+
+    filters = {
+        "Core 1": null,
+        "Core 1 Max": null,
+        "Core 2": null,
+        "Core 2 Max": null,
+        "Attribute 1": null,
+        "Talent": null,
+        "Optics": null,
+        "Under Barrel": null,
+        "Magazine": null,
+        "Muzzle": null,
+    }
+    constructor(weaponRaw) {
+        console.log(weaponRaw);
+
+    }
+}
+
+export {
+    GearBase,
+    WeaponBase
 }
 
 // TODO CHANGE ME

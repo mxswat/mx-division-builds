@@ -1,9 +1,9 @@
 <template>
   <div @click="onClick()" class="gear-container">
     <template v-if="isGearSelected()">
-      <div class="gear-element gear-name" v-on:click="openGearModal()">{{ currentGear.itemName}}</div>
+      <div class="slot-element gear-name" v-on:click="openGearModal()">{{ currentGear.itemName}}</div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
-      <div class="gear-element core-attribute">
+      <div class="slot-element core-attribute">
         <v-select
           placeholder="Core attribute"
           :clearable="false"
@@ -22,7 +22,7 @@
           </template>
         </v-select>
       </div>
-      <div class="gear-element attribute-one">
+      <div class="slot-element attribute-one">
         <v-select
           placeholder="Minor attribute 1"
           :clearable="false"
@@ -42,7 +42,7 @@
           </template>
         </v-select>
       </div>
-      <div class="gear-element attribute-two">
+      <div class="slot-element attribute-two">
         <v-select
           placeholder="Minor attribute 2"
           :clearable="false"
@@ -62,7 +62,7 @@
           </template>
         </v-select>
       </div>
-      <div class="gear-element mod-slot" v-if="currentGear.filters.mod">
+      <div class="slot-element mod-slot" v-if="currentGear.filters.mod">
         <v-select
           placeholder="Mod"
           :clearable="false"
@@ -82,7 +82,7 @@
           </template>
         </v-select>
       </div>
-      <div class="gear-element talent" v-if="gearTalents.length > 0 || this.currentGear.talent">
+      <div class="slot-element talent" v-if="gearTalents.length > 0 || this.currentGear.talent">
         <v-select
           placeholder="Talent"
           :clearable="false"
@@ -296,13 +296,13 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 .gear-container {
   height: 100%;
   color: white;
 }
 
-.gear-element {
+.slot-element {
   margin-top: 8px;
   align-items: center;
   position: relative;

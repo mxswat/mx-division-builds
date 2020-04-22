@@ -94,14 +94,14 @@
       </div>
     </template>
 
-    <span class="no-gear-selected" v-if="!isGearSelected()">
+    <span class="no-element-selected" v-if="!isGearSelected()">
       <p>CHOSE YOUR GEAR</p>
     </span>
   </div>
 </template>
 
 <script>
-import { openGearModal } from "../utils/openGearModal";
+import { openGearModal } from "../utils/modalService";
 import { GearBase } from "../utils/classes";
 import { typeToImgSrc } from "../utils/utils";
 import {
@@ -312,25 +312,6 @@ export default {
     width: 25px;
     padding: 4px;
     margin-top: -3px;
-  }
-}
-
-.no-gear-selected {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.25);
-  cursor: pointer;
-  p {
-    position: absolute;
-    bottom: 16px;
-    left: 0px;
-    right: 0px;
-    color: orange;
-    text-align: center;
   }
 }
 

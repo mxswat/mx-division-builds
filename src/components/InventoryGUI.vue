@@ -1,21 +1,28 @@
 <template>
   <div class="main-area">
+    <img class="img-slot-bg primary" src="icons/main-weapon.png" />
+    <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
+    <img class="img-slot-bg pistol" src="icons/sidearm.png" />
+    <img class="img-slot-bg mask" src="icons/mask.png" />
+    <img class="img-slot-bg backpack" src="icons/backpack.png" />
+    <img class="img-slot-bg chest" src="icons/chest.png" />
+    <img class="img-slot-bg gloves" src="icons/gloves.png" />
+    <img class="img-slot-bg holster" src="icons/holster.png" />
+    <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
     <BasicTile class="primary">
       <WeaponSlot></WeaponSlot>
     </BasicTile>
     <BasicTile class="secondary"></BasicTile>
     <BasicTile class="pistol"></BasicTile>
-    <img class="img-mask mask" src="icons/mask.png" />
-    <img class="img-backpack backpack" src="icons/backpack.png" />
-    <img class="img-chest chest" src="icons/chest.png" />
-    <img class="img-gloves gloves" src="icons/gloves.png" />
-    <img class="img-holster holster" src="icons/holster.png" />
-    <img class="img-kneepads kneepads" src="icons/kneepads.png" />
     <BasicTile class="mask" v-bind:name="'Mask'">
       <GearSlot v-bind:name="'Mask'" v-bind:init="initGearSlot[0]" v-bind:gearList="maskList"></GearSlot>
     </BasicTile>
     <BasicTile class="backpack" v-bind:name="'Backpack'">
-      <GearSlot v-bind:name="'Backpack'" v-bind:init="initGearSlot[1]" v-bind:gearList="backpackList"></GearSlot>
+      <GearSlot
+        v-bind:name="'Backpack'"
+        v-bind:init="initGearSlot[1]"
+        v-bind:gearList="backpackList"
+      ></GearSlot>
     </BasicTile>
     <BasicTile class="chest" v-bind:name="'Chest'">
       <GearSlot v-bind:name="'Chest'" v-bind:init="initGearSlot[2]" v-bind:gearList="chestList"></GearSlot>
@@ -27,7 +34,11 @@
       <GearSlot v-bind:name="'Holster'" v-bind:init="initGearSlot[4]" v-bind:gearList="holsterList"></GearSlot>
     </BasicTile>
     <BasicTile class="kneepads" v-bind:name="'Kneepads'">
-      <GearSlot v-bind:name="'Kneepads'" v-bind:init="initGearSlot[5]"  v-bind:gearList="kneepadsList"></GearSlot>
+      <GearSlot
+        v-bind:name="'Kneepads'"
+        v-bind:init="initGearSlot[5]"
+        v-bind:gearList="kneepadsList"
+      ></GearSlot>
     </BasicTile>
     <BasicTile class="skill-one"></BasicTile>
     <BasicTile class="skill-two"></BasicTile>
@@ -104,12 +115,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.img-mask,
-.img-backpack,
-.img-chest,
-.img-gloves,
-.img-holster,
-.img-kneepads {
+.img-slot-bg {
   align-self: center;
   justify-self: center;
   opacity: 0.2;

@@ -160,4 +160,25 @@ $vs-dropdown-bg: #151515;
 .vs__selected > .attribute-value {
     margin-right: 11px;
 }
+
+
+.no-element-selected {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  p {
+    position: absolute;
+    bottom: 16px;
+    left: 0px;
+    right: 0px;
+    color: orange;
+    text-align: center;
+  }
+}
+
 </style>

@@ -32,6 +32,7 @@ class GearBase {
 }
 
 class WeaponBase {
+    id = null;
     // "Slot" = null;
     "Name" = null;
     "Base Damage" = null;
@@ -49,9 +50,8 @@ class WeaponBase {
     // "Core 1 Max" = null;
     // "Core 2" = null;
     // "Core 2 Max" = null;
-    
+
     // Used in Encoding
-    id = null;
     "Attribute 1" = null;
     "Talent" = null;
     "Optics" = null;
@@ -73,7 +73,36 @@ class WeaponBase {
     }
     constructor(weaponRaw) {
         console.log(weaponRaw);
+        this.id = weaponRaw.index;
+        this["Name"] = weaponRaw["Name"];
+        this["Base Damage"] = weaponRaw["Base Damage"];
+        this["RPM"] = weaponRaw["RPM"];
+        this["Mag Size"] = weaponRaw["Mag Size"];
+        this["Quality"] = weaponRaw["Quality"];
+        this["Optimal Range"] = weaponRaw["Optimal Range"];
+        this["Weapon Type"] = weaponRaw["Weapon Type"];
+        this["Reload Speed (ms)"] = weaponRaw["Reload Speed (ms)"];
+        this["HSD"] = weaponRaw["HSD"];
+        this["Variant"] = weaponRaw["Variant"];
+        this["Attribute 1"] = weaponRaw["Attribute 1"];
+        this["Talent"] = weaponRaw["Talent"];
+        this["Optics"] = weaponRaw["Optics"];
+        this["Under Barrel"] = weaponRaw["Under Barrel"];
+        this["Magazine"] = weaponRaw["Magazine"];
+        this["Muzzle"] = weaponRaw["Muzzle"];
 
+        this.filters = {
+            "Core 1" : this["Core 1"],
+            "Core 1 Max" : this["Core 1 Max"],
+            "Core 2" : this["Core 2"],
+            "Core 2 Max" : this["Core 2 Max"],
+            "Attribute 1" : this["Attribute 1"],
+            "Talent" : this["Talent"],
+            "Optics" : this["Optics"],
+            "Under Barrel" : this["Under Barrel"],
+            "Magazine" : this["Magazine"],
+            "Muzzle" : this["Muzzle"],
+        }
     }
 }
 

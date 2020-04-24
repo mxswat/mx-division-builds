@@ -17,6 +17,9 @@ class GearBase {
         talent: null,
     };
     constructor(gearRaw) {
+        if (!gearRaw) {
+            return
+        }
         // this.type = gearRaw.Type not used at the moment
         // If named do filters and bla bla
         this.id = gearRaw.index;
@@ -33,75 +36,79 @@ class GearBase {
 
 class WeaponBase {
     id = null;
-    // "Slot" = null;
-    "Name" = null;
-    "Base Damage" = null;
-    "RPM" = null;
-    "Mag Size" = null;
-    "Quality" = null;
-    "Optimal Range" = null;
-    "Weapon Type" = null;
-    "Reload Speed (ms)" = null;
-    "HSD" = null;
-    "Variant" = null;
+    // "slot" = null;
+    "name" = null;
+    "base damage" = null;
+    "rpm" = null;
+    "mag size" = null;
+    "quality" = null;
+    "optimal range" = null;
+    "weapon type" = null;
+    "reload speed (ms)" = null;
+    "hsd" = null;
+    "variant" = null;
     
-    // Core is always the same per weapon category
-    // "Core 1" = null;
-    // "Core 1 Max" = null;
-    // "Core 2" = null;
-    // "Core 2 Max" = null;
+    // core is always the same per weapon category
+    // "core 1" = null;
+    // "core 1 max" = null;
+    // "core 2" = null;
+    // "core 2 max" = null;
 
-    // Used in Encoding
-    "Attribute 1" = null;
-    "Talent" = null;
-    "Optics" = null;
-    "Under Barrel" = null;
-    "Magazine" = null;
-    "Muzzle" = null;
+    // used in encoding
+    "attribute 1" = null;
+    "talent" = null;
+    "optics" = null;
+    "under barrel" = null;
+    "magazine" = null;
+    "muzzle" = null;
 
     filters = {
-        "Core 1": null,
-        "Core 1 Max": null,
-        "Core 2": null,
-        "Core 2 Max": null,
-        "Attribute 1": null,
-        "Talent": null,
-        "Optics": null,
-        "Under Barrel": null,
-        "Magazine": null,
-        "Muzzle": null,
+        "core 1": null,
+        "core 1 max": null,
+        "core 2": null,
+        "core 2 max": null,
+        "attribute 1": null,
+        "talent": null,
+        "optics": null,
+        "under barrel": null,
+        "magazine": null,
+        "muzzle": null,
     }
+
     constructor(weaponRaw) {
+        if (!weaponRaw) {
+            return
+        }
         console.log(weaponRaw);
         this.id = weaponRaw.index;
-        this["Name"] = weaponRaw["Name"];
-        this["Base Damage"] = weaponRaw["Base Damage"];
-        this["RPM"] = weaponRaw["RPM"];
-        this["Mag Size"] = weaponRaw["Mag Size"];
-        this["Quality"] = weaponRaw["Quality"];
-        this["Optimal Range"] = weaponRaw["Optimal Range"];
-        this["Weapon Type"] = weaponRaw["Weapon Type"];
-        this["Reload Speed (ms)"] = weaponRaw["Reload Speed (ms)"];
-        this["HSD"] = weaponRaw["HSD"];
-        this["Variant"] = weaponRaw["Variant"];
-        this["Attribute 1"] = weaponRaw["Attribute 1"];
-        this["Talent"] = weaponRaw["Talent"];
-        this["Optics"] = weaponRaw["Optics"];
-        this["Under Barrel"] = weaponRaw["Under Barrel"];
-        this["Magazine"] = weaponRaw["Magazine"];
-        this["Muzzle"] = weaponRaw["Muzzle"];
+        this["name"] = weaponRaw["Name"];
+        this["base damage"] = weaponRaw["Base Damage"];
+        this["rpm"] = weaponRaw["RPM"];
+        this["mag size"] = weaponRaw["Mag Size"];
+        this["quality"] = weaponRaw["Quality"];
+        this["optimal range"] = weaponRaw["Optimal Range"];
+        this["weapon type"] = weaponRaw["Weapon Type"];
+        this["reload speed (ms)"] = weaponRaw["Reload Speed (ms)"];
+        this["hsd"] = weaponRaw["HSD"];
+        this["variant"] = weaponRaw["Variant"];
+        this["attribute 1"] = weaponRaw["Attribute 1"];
+        this["talent"] = weaponRaw["Talent"];
+        this["optics"] = weaponRaw["Optics"];
+        this["under barrel"] = weaponRaw["Under Barrel"];
+        this["magazine"] = weaponRaw["Magazine"];
+        this["muzzle"] = weaponRaw["Muzzle"];
 
         this.filters = {
-            "Core 1" : this["Core 1"],
-            "Core 1 Max" : this["Core 1 Max"],
-            "Core 2" : this["Core 2"],
-            "Core 2 Max" : this["Core 2 Max"],
-            "Attribute 1" : this["Attribute 1"],
-            "Talent" : this["Talent"],
-            "Optics" : this["Optics"],
-            "Under Barrel" : this["Under Barrel"],
-            "Magazine" : this["Magazine"],
-            "Muzzle" : this["Muzzle"],
+            "core 1" : this["Core 1"],
+            "core 1 max" : this["Core 1 Max"],
+            "core 2" : this["Core 2"],
+            "core 2 max" : this["Core 2 Max"],
+            "attribute 1" : this["Attribute 1"],
+            "talent" : this["Talent"],
+            "optics" : this["Optics"],
+            "under barrel" : this["Under Barrel"],
+            "magazine" : this["Magazine"],
+            "muzzle" : this["Muzzle"],
         }
     }
 }

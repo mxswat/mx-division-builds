@@ -1,7 +1,7 @@
 <template>
   <div @click="onClick()" class="weapon-container">
     <template v-if="isWeaponSelected()">
-      <div class="slot-element gear-name" v-on:click="openGearModal()">{{ currentWeapon.itemName}}</div>
+      <div class="slot-element gear-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
     </template>
     <span class="no-element-selected" v-if="!isWeaponSelected()">
       <p>CHOSE YOUR WEAPON</p>
@@ -19,7 +19,7 @@ export default {
   data() {
     return {
       weaponsList: null,
-      currentWeapon: null
+      currentWeapon: new WeaponBase()
     };
   },
   created() {
@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     isWeaponSelected() {
-      return this.currentWeapon && this.currentWeapon.itemName;
+      return this.currentWeapon && this.currentWeapon.name;
     },
     onClick() {
       if (!this.isWeaponSelected()) {

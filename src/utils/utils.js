@@ -19,17 +19,30 @@ const csvToArrayWithKeys = (headers, data, globalMapping) => {
         // Never start form 0 because I'm lazy to handle the url conversion if all indexes are 0
         // TODO Handle it in code clean up sprint
         // Nevermind maybe i'll actualy use the 0 as "empty"
-        object['index'] = i + 1; 
+        object['index'] = i + 1;
         result.push(object);
     }
     return result;
 }
 
 const typeToImgSrc = {
-    'O': 'icons/offence.png',
-    'U': 'icons/utility.png',
-    'D': 'icons/defence.png',
+    core: {
+        'O': 'icons/offense1.png',
+        'U': 'icons/tech1.png',
+        'D': 'icons/defense1.png',
+    },
+    attribute: {
+        'O': 'icons/offense2.png',
+        'U': 'icons/tech2.png',
+        'D': 'icons/defense2.png',
+    },
+    mod: {
+        'O': 'icons/offense3_2.png',
+        'U': 'icons/tech3_2.png',
+        'D': 'icons/defense3_2.png',
+    }
 }
+
 
 export {
     zipObject,

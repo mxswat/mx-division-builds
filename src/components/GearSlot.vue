@@ -11,12 +11,12 @@
           :options="currentGear.quality === 'Exotic' ? [] : coreAttributes"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.core[option.Type]" />
             <span class="attribute-label">{{ option.label }}</span>
             <span class="attribute-value">{{option.value}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.core[option.Type]" />
             <span class="attribute-label">{{ option.label }}</span>
             <span class="attribute-value">{{option.value}}</span>
           </template>
@@ -26,17 +26,17 @@
         <v-select
           placeholder="Minor attribute 1"
           :clearable="false"
-          :options="filterGearAttributes(gearAttributes, currentGear.attributeTwo)"
+          :options="filterGearAttributes(gearAttributes, currentGear.attributeTwo, currentGear.filters.attributeOne)"
           v-model="currentGear.attributeOne"
           label="Stat"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
             <span class="attribute-label">{{ option.Stat }}</span>
             <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
             <span class="attribute-label">{{ option.Stat }}</span>
             <span class="attribute-value">{{option.Max}}</span>
           </template>
@@ -46,17 +46,17 @@
         <v-select
           placeholder="Minor attribute 2"
           :clearable="false"
-          :options="filterGearAttributes(gearAttributes, currentGear.attributeOne)"
+          :options="filterGearAttributes(gearAttributes, currentGear.attributeOne, currentGear.filters.attributeTwo)"
           v-model="currentGear.attributeTwo"
           label="Stat"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
             <span class="attribute-label">{{ option.Stat }}</span>
             <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
             <span class="attribute-label">{{ option.Stat }}</span>
             <span class="attribute-value">{{option.Max}}</span>
           </template>
@@ -71,12 +71,12 @@
           label="Stat"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.mod[option.Type]" />
             <span class="attribute-label">{{ option.Stat }}</span>
             <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc[option.Type]" />
+            <img class="attribute-image" v-bind:src="typeToImgSrc.mod[option.Type]" />
             <span class="attribute-label">{{ option.Stat }}</span>
             <span class="attribute-value">{{option.Max}}</span>
           </template>
@@ -119,7 +119,7 @@ export default {
   },
   data() {
     return {
-      currentGear: GearBase,
+      currentGear: new GearBase(),
       coreAttributes: [
         { label: "Weapon Damage", value: 15, Type: "O", index: 1 },
         { label: "Skill Tier", value: 1, Type: "U", index: 0 },
@@ -130,7 +130,7 @@ export default {
       gearAttributes: null,
       gearTalents: null,
       allTalents: null,
-      allAttributes: null
+      allGearAttributes: null
     };
   },
   methods: {
@@ -150,11 +150,11 @@ export default {
           this.currentGear.core = this.coreAttributes.find(
             attribute => attribute.label === this.currentGear.filters.core
           );
-          this.currentGear.attributeOne = this.gearAttributes.find(
+          this.currentGear.attributeOne = this.allGearAttributes.find(
             attribute =>
               attribute.Stat === this.currentGear.filters.attributeOne
           );
-          this.currentGear.attributeTwo = this.gearAttributes.find(
+          this.currentGear.attributeTwo = this.allGearAttributes.find(
             attribute =>
               attribute.Stat === this.currentGear.filters.attributeTwo
           );
@@ -181,7 +181,7 @@ export default {
     },
     initGearAttributes() {
       gearAttributesList.Attributes.then(attributes => {
-        this.allAttributes = attributes;
+        this.allGearAttributes = attributes;
         this.gearAttributes = attributes.filter(attribute => {
           return attribute.Quality === "A";
         });
@@ -205,20 +205,15 @@ export default {
       }
       return mods;
     },
-    filterGearAttributes(attributes, otherAttribute) {
-      const isTheOtherAttributeTheNamedOne =
-        otherAttribute &&
-        otherAttribute.index === this.currentGear.attributeOne.index;
+    filterGearAttributes(attributes, otherAttribute, filter) {
       switch (this.currentGear.quality) {
         case "Exotic": {
           attributes = [];
           break;
         }
         case "Named":
-          if (
-            !this.isNamedTalent(this.currentGear.filters) &&
-            !isTheOtherAttributeTheNamedOne
-          ) {
+          // If it is longer than 1 is clearly a name on not just 'A
+          if (filter !== 'A') {
             attributes = [];
           }
           break;
@@ -274,10 +269,10 @@ export default {
             this.gearList.find(gear => gear.index === gearId)
           );
           this.currentGear = fromUrlGear;
-          this.currentGear.attributeOne = this.gearAttributes.find(
+          this.currentGear.attributeOne = this.allGearAttributes.find(
             attribute => attribute.index === parseInt(splittedIdS[1])
           );
-          this.currentGear.attributeTwo = this.gearAttributes.find(
+          this.currentGear.attributeTwo = this.allGearAttributes.find(
             attribute => attribute.index === parseInt(splittedIdS[2])
           );
           this.currentGear.core = this.coreAttributes.find(

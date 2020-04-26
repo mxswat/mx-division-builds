@@ -132,11 +132,29 @@ export default {
       handler: function(ids) {
         const splittedIdS = ids.split("-");
         const id = parseInt([splittedIdS[0]]);
+        // Like From urlEncoder
+        const map = [
+          null,
+          { target: "attribute 1", source: this.weaponAttributes },
+          { target: "talent", source: this.weaponAttributes },
+          { target: "optic", source: this.weaponMods },
+          { target: "under barrel", source: this.weaponMods },
+          { target: "magazine", source: this.weaponMods },
+          { target: "muzzle", source: this.weaponMods }
+        ];
         if (id) {
           const fromUrlGear = new WeaponBase(
             this.weaponsList.find(weapon => weapon.index === id)
           );
           this.currentWeapon = fromUrlGear;
+          // Start from 1 because 0 is used to build the object
+          for (let i = 1; i < splittedIdS.length; i++) {
+            const id = parseInt(splittedIdS[i]);
+            const mapped = map[i];
+            this.currentWeapon[mapped.target] = mapped.source.find(
+              el => el.index === id
+            );
+          }
         }
       }
     }

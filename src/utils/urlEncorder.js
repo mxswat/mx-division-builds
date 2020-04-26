@@ -4,7 +4,10 @@ const gearEncoderMap = {
     Chest: 2,
     Gloves: 3,
     Holster: 4,
-    Kneepads: 5
+    Kneepads: 5,
+    Primary: 6,
+    Secondary: 7,
+    SideArm: 8
 };
 
 import {

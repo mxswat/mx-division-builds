@@ -9,13 +9,13 @@
     <img class="img-slot-bg gloves" src="icons/gloves.png" />
     <img class="img-slot-bg holster" src="icons/holster.png" />
     <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
-    <BasicTile class="primary">
+    <BasicTile class="primary" v-bind:name="'Primary'">
       <WeaponSlot></WeaponSlot>
     </BasicTile>
-    <BasicTile class="secondary">
+    <BasicTile class="secondary" v-bind:name="'Secondary'">
       <WeaponSlot></WeaponSlot>
     </BasicTile>
-    <BasicTile class="pistol">
+    <BasicTile class="pistol" v-bind:name="'SideArm'">
       <WeaponSlot></WeaponSlot>
     </BasicTile>
     <BasicTile class="mask" v-bind:name="'Mask'">
@@ -78,8 +78,8 @@ export default {
       holsterList: Array,
       kneepadsList: Array,
       weaponsList: Array,
-      gear: [null, null, null, null, null, null],
-      initGearSlot: [null, null, null, null, null, null]
+      gear: [null, null, null, null, null, null, null, null, null],
+      initGearSlot: [null, null, null, null, null, null, null, null, null]
     };
   },
   created() {

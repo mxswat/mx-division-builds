@@ -80,7 +80,7 @@ export default {
       weaponAttributes: null,
       weaponMods: null,
       currentWeapon: new WeaponBase(),
-      modSlots: ["optics", "under barrel", "magazine", "muzzle"]
+      modSlots: ["optic", "under barrel", "magazine", "muzzle"]
     };
   },
   created() {

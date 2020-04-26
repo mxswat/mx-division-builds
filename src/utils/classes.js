@@ -57,7 +57,7 @@ class WeaponBase {
     // used in encoding with id
     "attribute 1" = null;
     "talent" = null;
-    "optics" = null;
+    "optic" = null;
     "under barrel" = null;
     "magazine" = null;
     "muzzle" = null;
@@ -106,7 +106,7 @@ class WeaponBase {
             "core 2 max" : weaponRaw["Core 2 Max"],
             "attribute 1" : weaponRaw["Attribute 1"],
             "talent" : weaponRaw["Talent"],
-            "optics" : weaponRaw["Optics"],
+            "optic" : weaponRaw["Optics"],
             "under barrel" : weaponRaw["Under Barrel"],
             "magazine" : weaponRaw["Magazine"],
             "muzzle" : weaponRaw["Muzzle"],

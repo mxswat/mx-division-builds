@@ -206,6 +206,7 @@ export default {
       return mods;
     },
     filterGearAttributes(attributes, otherAttribute, filter) {
+      // TODO  Clean code like I did for filterWeaponModsByType();
       switch (this.currentGear.quality) {
         case "Exotic": {
           attributes = [];
@@ -213,7 +214,7 @@ export default {
         }
         case "Named":
           // If it is longer than 1 is clearly a name on not just 'A
-          if (filter !== 'A') {
+          if (filter !== "A") {
             attributes = [];
           }
           break;
@@ -237,7 +238,7 @@ export default {
       return result;
     },
     isNamedTalent(currentGearFilters) {
-      return currentGearFilters.talent !== 'A';
+      return currentGearFilters.talent !== "A";
     }
   },
   components: {},

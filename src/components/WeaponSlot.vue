@@ -111,11 +111,59 @@ export default {
     },
     onModalClose(data) {
       this.currentWeapon = new WeaponBase(data);
+      const isExotic = this.currentWeapon.quality === "Exotic";
+      const isNamed = this.currentWeapon.quality === "Named";
+      if (isExotic || isNamed) {
+        const mappedCommon = [
+          {
+            target: "attribute 1",
+            source: this.weaponAttributes,
+            toMatch: "Stat"
+          },
+          { target: "talent", source: this.weaponAttributes, toMatch: "Name" }
+        ];
+
+        for (let i = 0; i < mappedCommon.length; i++) {
+          const mapped = mappedCommon[i];
+          this.currentWeapon[mapped.target] = mapped.source.find(el => {
+            return (
+              el[mapped.toMatch] === this.currentWeapon.filters[mapped.target]
+            );
+          });
+        }
+
+        if (isExotic) {
+          const modMap = [
+            { target: "optic", source: this.weaponMods, toMatch: "Slot" },
+            {
+              target: "under barrel",
+              source: this.weaponMods,
+              toMatch: "Slot"
+            },
+            { target: "magazine", source: this.weaponMods, toMatch: "Slot" },
+            { target: "muzzle", source: this.weaponMods, toMatch: "Slot" }
+          ];
+          for (let i = 0; i < modMap.length; i++) {
+            const mappedMod = modMap[i];
+            const mappedFilter = this.currentWeapon.filters[mappedMod.target];
+            this.currentWeapon[mappedMod.target] = mappedMod.source.find(el => {
+              return (
+                el[mappedMod.toMatch].toLowerCase() === mappedMod.target &&
+                el.Type === mappedFilter
+              );
+            });
+          }
+        }
+      }
     },
     filterWeaponModsByType(type, slot) {
-      return this.weaponMods.filter(
-        mod => slot === mod.Slot.toLowerCase() && type.indexOf(mod.Type) >= 0
-      );
+      let result = [];
+      if (this.currentWeapon.quality !== "Exotic") {
+        result = this.weaponMods.filter(
+          mod => slot === mod.Slot.toLowerCase() && type.indexOf(mod.Type) >= 0
+        );
+      }
+      return result;
     },
     weaponHasThisMod(mod) {
       return this.currentWeapon.filters[mod];

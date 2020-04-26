@@ -74,6 +74,9 @@ import { WeaponBase } from "../utils/classes";
 
 export default {
   name: "WeaponSlot",
+  props: {
+    init: null
+  },
   data() {
     return {
       weaponsList: null,
@@ -110,7 +113,9 @@ export default {
       this.currentWeapon = new WeaponBase(data);
     },
     filterWeaponModsByType(type, slot) {
-      return this.weaponMods.filter(mod => slot === mod.Slot.toLowerCase() && type.indexOf(mod.Type) >= 0);
+      return this.weaponMods.filter(
+        mod => slot === mod.Slot.toLowerCase() && type.indexOf(mod.Type) >= 0
+      );
     },
     weaponHasThisMod(mod) {
       return this.currentWeapon.filters[mod];
@@ -122,6 +127,18 @@ export default {
         this.$parent.gearChanged(val);
       },
       deep: true
+    },
+    init: {
+      handler: function(ids) {
+        const splittedIdS = ids.split("-");
+        const id = parseInt([splittedIdS[0]]);
+        if (id) {
+          const fromUrlGear = new WeaponBase(
+            this.weaponsList.find(weapon => weapon.index === id)
+          );
+          this.currentWeapon = fromUrlGear;
+        }
+      }
     }
   }
 };

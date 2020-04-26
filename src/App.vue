@@ -154,7 +154,11 @@ $vs-dropdown-bg: #151515;
   position: absolute;
 }
 
-.vs__selected + input.vs__search[aria-activedescendant] {
+// .vs__selected + input.vs__search[aria-activedescendant] {
+//   position: relative;
+// }
+
+.v-select.vs--open input.vs__search {
   position: relative;
 }
 

@@ -36,20 +36,38 @@ const getByString = function (o, s) {
     return o;
 }
 
+const gearToId = function(object, path, separator) {
+    return ('00' + getByString(object, path)).slice(-3) + separator;
+}
+
 // I should use the vue router
 const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/#/' : '/#/';
 
 const urlEncoder = function (gearArray) {
     let urlChunks = [];
     for (let i = 0; i < gearArray.length; i++) {
-        const gear = gearArray[i];
         urlChunks[i] = '';
-        urlChunks[i] += ('00' + getByString(gear, 'id')).slice(-3) + '-';
-        urlChunks[i] += ('00' + getByString(gear, 'attributeOne.index')).slice(-3) + '-';
-        urlChunks[i] += ('00' + getByString(gear, 'attributeTwo.index')).slice(-3) + '-';
-        urlChunks[i] += ('00' + getByString(gear, 'core.index')).slice(-3) + '-';
-        urlChunks[i] += ('00' + getByString(gear, 'mod.index')).slice(-3) + '-';
-        urlChunks[i] += ('00' + getByString(gear, 'talent.index')).slice(-3);
+        if (i < 6) {
+            const gear = gearArray[i];
+            // Is gear
+            urlChunks[i] += gearToId(gear, 'id', '-');
+            urlChunks[i] += gearToId(gear, 'attributeOne.index', '-');
+            urlChunks[i] += gearToId(gear, 'attributeTwo.index', '-');
+            urlChunks[i] += gearToId(gear, 'core.index', '-');
+            urlChunks[i] += gearToId(gear, 'mod.index', '-');
+            urlChunks[i] += gearToId(gear, 'talent.index', '');
+        } else {
+            // Weapon
+            const weapon = gearArray[i];
+            urlChunks[i] += gearToId(weapon, 'id', '-');
+            urlChunks[i] += gearToId(weapon, "attribute 1.index", '-');
+            urlChunks[i] += gearToId(weapon, 'talent.index', '-');
+            urlChunks[i] += gearToId(weapon, 'optic.index', '-');
+            urlChunks[i] += gearToId(weapon, "under barrel.index", '-');
+            urlChunks[i] += gearToId(weapon, 'magazine.index', '-');
+            urlChunks[i] += gearToId(weapon, 'muzzle.index', '');
+        }
+
     }
     const url = compressToEncodedURIComponent(urlChunks.join(':'));
     window.history.pushState("", "", badUrl + url)

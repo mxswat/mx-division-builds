@@ -10,13 +10,13 @@
     <img class="img-slot-bg holster" src="icons/holster.png" />
     <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
     <BasicTile class="primary" v-bind:name="'Primary'">
-      <WeaponSlot></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[6]"></WeaponSlot>
     </BasicTile>
     <BasicTile class="secondary" v-bind:name="'Secondary'">
-      <WeaponSlot></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[7]"></WeaponSlot>
     </BasicTile>
     <BasicTile class="pistol" v-bind:name="'SideArm'">
-      <WeaponSlot></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[8]"></WeaponSlot>
     </BasicTile>
     <BasicTile class="mask" v-bind:name="'Mask'">
       <GearSlot v-bind:name="'Mask'" v-bind:init="initGearSlot[0]" v-bind:gearList="maskList"></GearSlot>

@@ -1,45 +1,45 @@
 Variant,Name,Slot,Quality,Weapon Type,Base Damage,Mag Size,RPM,Reload Speed (ms),Optimal Range,Core 1,Core 1 Max,Core 2,Core 2 Max,Attribute 1,Talent,Optics,Under Barrel,Magazine,Muzzle,HSD
-AUG,The Bighorn,P,Exotic,Assault Rifle,46071,30,800,2100,27,Assault Rifle Damage,15,Damage to Health,11,Critical Hit Damage,Big Game Hunter,The Bighorn,The Bighorn,The Bighorn,The Bighorn,55
-M4,Eagle Bearer,P,Exotic,Assault Rifle,47952,30,750,2500,35,Assault Rifle Damage,15,Damage to Health,11,Headshot Damage,Eagle's Strike,Eagle Bearer,Eagle Bearer,Eagle Bearer,Eagle Bearer,55
-Vector,Chameleon,P,Exotic,Assault Rifle,30087,30,900,2400,15,Assault Rifle Damage,15,Damage to Health,11,Critical Hit Chance,Adaptive Instincts,Chameleon,Chameleon,Chameleon,Chameleon,50
-ACR,ACR,P,High End,Assault Rifle,48422,30,650,2300,27,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-ACR,ACR-E,P,High End,Assault Rifle,48422,30,650,2300,27,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-AK-47,AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short,7.62,,55
-AK-47,Black Market AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-AK-47,Black Market AK-M Replica,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-AK-47,Military AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-AUG,AUG A3-CQC,P,High End,Assault Rifle,46071,30,680,2100,27,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short,5.56,5.56,55
-Carbine 7,Carbine 7,P,High End,Assault Rifle,43215,30,790,2400,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
-F2000,F2000,P,High End,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,,5.56,5.56,55
-F2000,F2000 Replica,P,High End,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,,5.56,5.56,55
-FAL,FAL,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-FAL,FAL SA-58,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-FAL,FAL SA-58 Para,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-FAL,FAL SA-58 Para Replica,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
-FAMAS,FAMAS 2010,P,High End,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short,,5.56,55
-FAMAS,FAMAS 2010 Replica,P,High End,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short,,5.56,55
-G36,G36 C,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short,5.56,5.56,55
-G36,G36 Enhanced,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
-G36,G36 Enhanced Replica,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
-G36,Military G36,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
-M4,Police M4,P,High End,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
-M4,Police M4 Replica,P,High End,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
-P416,Custom P416 G3,P,High End,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-P416,Military P416,P,High End,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-Honey Badger,Honey Badger,P,High End,Assault Rifle,43251,30,750,2400,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Short / Long,Side / Short / Long,5.56,,55
-SCAR,Mk16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-SCAR,SOCOM Mk16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-SCAR,Tactical Mk 16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-SCAR,Tactical Mk 16 Replica,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-TAR-21,CTAR-21,P,High End,Assault Rifle,38079,30,900,2100,35,Assault Rifle Damage,15,Damage to Health,11,A,A,Micro / Short,Side,5.56,5.56,55
-AK-47,Manic,P,Named,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,11,A,Perfect Overflowing,Short / Long,Side / Short / Long,7.62,7.62,55
-AUG,Invisible Hand,P,Named,Assault Rifle,46071,30,680,2100,27,Assault Rifle Damage,15,Damage to Health,11,A,Perfect Allegro,Ironsights / Short / Long,Side / Short,5.56,5.56,55
-F2000,Shield Splinterer,P,Named,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,11,A,Perfect Optimist,Ironsights / Short / Long,,5.56,5.56,55
-FAMAS,Burnout,P,Named,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,11,A,Perfectly on Empty,Short / Long,Side / Short,,5.56,55
-M4,Pyromaniac,P,Named,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,11,A,Perfectly Ignited,Short / Long,Side / Short / Long,5.56,5.56,55
-P416,Glory Daze,P,Named,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,11,A,Perfect Near Sighted,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
-Honey Badger,Savage Wolverine,P,Named,Assault Rifle,43251,30,750,2400,35,Assault Rifle Damage,15,Damage to Health,11,A,Perfectly Close & Personal,Short / Long,Side / Short / Long,5.56,,55
-TAR-21,The Railsplitter,P,Named,Assault Rifle,38079,30,900,2100,35,Assault Rifle Damage,15,Damage to Health,11,A,Perfectly Accurate,Micro / Short,Side,5.56,5.56,55
+AUG,The Bighorn,P,Exotic,Assault Rifle,46071,30,800,2100,27,Assault Rifle Damage,15,Damage to Health,21,Critical Hit Damage,Big Game Hunter,The Bighorn,The Bighorn,The Bighorn,The Bighorn,55
+M4,Eagle Bearer,P,Exotic,Assault Rifle,47952,30,750,2500,35,Assault Rifle Damage,15,Damage to Health,21,Headshot Damage,Eagle's Strike,Eagle Bearer,Eagle Bearer,Eagle Bearer,Eagle Bearer,55
+Vector,Chameleon,P,Exotic,Assault Rifle,30087,30,900,2400,15,Assault Rifle Damage,15,Damage to Health,21,Critical Hit Chance,Adaptive Instincts,Chameleon,Chameleon,Chameleon,Chameleon,50
+ACR,ACR,P,High End,Assault Rifle,48422,30,650,2300,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+ACR,ACR-E,P,High End,Assault Rifle,48422,30,650,2300,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+AK-47,AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,7.62,,55
+AK-47,Black Market AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+AK-47,Black Market AK-M Replica,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+AK-47,Military AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+AUG,AUG A3-CQC,P,High End,Assault Rifle,46071,30,680,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short,5.56,5.56,55
+Carbine 7,Carbine 7,P,High End,Assault Rifle,43215,30,790,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+F2000,F2000,P,High End,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,,5.56,5.56,55
+F2000,F2000 Replica,P,High End,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,,5.56,5.56,55
+FAL,FAL,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAL,FAL SA-58,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAL,FAL SA-58 Para,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAL,FAL SA-58 Para Replica,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAMAS,FAMAS 2010,P,High End,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,,5.56,55
+FAMAS,FAMAS 2010 Replica,P,High End,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,,5.56,55
+G36,G36 C,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,5.56,5.56,55
+G36,G36 Enhanced,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+G36,G36 Enhanced Replica,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+G36,Military G36,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+M4,Police M4,P,High End,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+M4,Police M4 Replica,P,High End,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+P416,Custom P416 G3,P,High End,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+P416,Military P416,P,High End,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+Honey Badger,Honey Badger,P,High End,Assault Rifle,43251,30,750,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,,55
+SCAR,Mk16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+SCAR,SOCOM Mk16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+SCAR,Tactical Mk 16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+SCAR,Tactical Mk 16 Replica,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+TAR-21,CTAR-21,P,High End,Assault Rifle,38079,30,900,2100,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Micro / Short,Side,5.56,5.56,55
+AK-47,Manic,P,Named,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Overflowing,Short / Long,Side / Short / Long,7.62,7.62,55
+AUG,Invisible Hand,P,Named,Assault Rifle,46071,30,680,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Allegro,Ironsights / Short / Long,Side / Short,5.56,5.56,55
+F2000,Shield Splinterer,P,Named,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Optimist,Ironsights / Short / Long,,5.56,5.56,55
+FAMAS,Burnout,P,Named,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly on Empty,Short / Long,Side / Short,,5.56,55
+M4,Pyromaniac,P,Named,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly Ignited,Short / Long,Side / Short / Long,5.56,5.56,55
+P416,Glory Daze,P,Named,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Near Sighted,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+Honey Badger,Savage Wolverine,P,Named,Assault Rifle,43251,30,750,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly Close & Personal,Short / Long,Side / Short / Long,5.56,,55
+TAR-21,The Railsplitter,P,Named,Assault Rifle,38079,30,900,2100,35,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly Accurate,Micro / Short,Side,5.56,5.56,55
 NEGEV,Bullet King,P,Exotic,LMG,35729,,850,,40,LMG Damage,15,Damage to TOC,12,Critical Hit Damage,Bullet Hell,Bullet King,Bullet King,Bullet King,Bullet King,65
 M249,Pestilence,P,Exotic,LMG,47012,100,550,5600,35,LMG Damage,15,Damage to TOC,12,Damage to Armor,Plague of the Outcasts,Pestilence,Pestilence,Pestilence,Pestilence,65
 L86,Custom L86 A2,P,High End,LMG,55004,30,610,3000,32,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,5.56,5.56,65

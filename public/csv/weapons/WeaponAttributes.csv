@@ -1,0 +1,14 @@
+Quality,Type,Weapon Type,Stat,Max
+A,O,,Critical Hit Chance,9.5
+A,O,,Critical Hit Damage,10
+A,O,,Headshot Damage,10
+A,O,,Damage to TOC,10
+A,O,,Damage to Armor,6
+A,O,,Damage to Health,9.5
+A,O,,Rate of Fire %,5
+A,O,,Stability,12
+A,O,,Accuracy,12
+A,O,,Reload Speed %,12
+A,O,,Mag Size %,12.5
+A,O,,Optimal Range,24
+A,O,,Swap Speed,6

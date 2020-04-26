@@ -80,27 +80,31 @@ const gearTalentsPath = './csv/gear/';
 
 sourceFilesToVariables(gearTalentsListSource, gearTalentsList, gearTalentsPath);
 
-const weaponsList = {
-    Weapons: null
+// TODO Change all gear Imports to an import like weaponsData
+
+const weaponsData = {
+    Weapons: null,
+    WeaponAttributes: null,
+    WeaponMods: null
 };
-const weaponsListSource = ['Weapons.csv'];
+const weaponsDataSource = ['Weapons.csv', 'WeaponAttributes.csv', 'WeaponMods.csv'];
 const weaponsPath = './csv/weapons/';
 
-sourceFilesToVariables(weaponsListSource, weaponsList, weaponsPath);
+sourceFilesToVariables(weaponsDataSource, weaponsData, weaponsPath);
 
 const allDataPromies = [
     ...Object.values(gearList),
     ...Object.values(gearTalentsList),
     ...Object.values(gearAttributesList),
     ...Object.values(gearModsList),
-    ...Object.values(weaponsList),
+    ...Object.values(weaponsData),
 ]
 
 export {
+    allDataPromies,
     gearList,
     gearTalentsList,
     gearAttributesList,
     gearModsList,
-    weaponsList,
-    allDataPromies
+    weaponsData,
 };

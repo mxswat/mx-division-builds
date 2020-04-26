@@ -1,7 +1,33 @@
 <template>
   <div @click="onClick()" class="weapon-container">
     <template v-if="isWeaponSelected()">
-      <div class="slot-element gear-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
+      <div class="slot-element weapon-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
+      <div class="slot-element weapon-core-1">
+        <span class="core">{{ currentWeapon.filters['core 1']}}</span>
+        <span class="core-max">{{currentWeapon.filters['core 1 max']}}</span>
+      </div>
+      <div class="slot-element weapon-core-2">
+        <span class="core">{{ currentWeapon.filters['core 2']}}</span>
+        <span class="core-max">{{currentWeapon.filters['core 2 max']}}</span>
+      </div>
+      <div class="slot-element attribute-one">
+        <v-select
+          placeholder="Attribute"
+          :clearable="false"
+          :options="weaponAttributes"
+          v-model="currentWeapon['attribute 1']"
+          label="Stat"
+        >
+          <template v-slot:option="option">
+            <span class="attribute-label">{{option.Stat}}</span>
+            <span class="attribute-value">{{option.Max}}</span>
+          </template>
+          <template #selected-option="option">
+            <span class="attribute-label">{{option.Stat}}</span>
+            <span class="attribute-value">{{option.Max}}</span>
+          </template>
+        </v-select>
+      </div>
     </template>
     <span class="no-element-selected" v-if="!isWeaponSelected()">
       <p>CHOSE YOUR WEAPON</p>
@@ -11,7 +37,7 @@
 
 <script>
 import { openWeaponsModal } from "../utils/modalService";
-import { weaponsList } from "../utils/dataImporter";
+import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
 
 export default {
@@ -19,12 +45,16 @@ export default {
   data() {
     return {
       weaponsList: null,
+      weaponAttributes: null,
       currentWeapon: new WeaponBase()
     };
   },
   created() {
-    weaponsList.Weapons.then(weapons => {
+    weaponsData.Weapons.then(weapons => {
       this.weaponsList = weapons;
+    });
+    weaponsData.WeaponAttributes.then(weaponsAttr => {
+      this.weaponAttributes = weaponsAttr;
     });
   },
   methods: {
@@ -58,5 +88,38 @@ export default {
 .weapon-container {
   height: 100%;
   color: white;
+}
+
+.weapon-name {
+  border-bottom: 1px solid white;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  &::after {
+    content: "";
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 6px;
+    background-position: center;
+    background-size: cover;
+    filter: invert(1);
+  }
+}
+
+.weapon-core-1,
+.weapon-core-2 {
+  border-bottom: 1px solid white;
+  padding: 8px;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  .core {
+  }
+  .core-max {
+    margin-left: auto;
+  }
 }
 </style>

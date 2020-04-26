@@ -54,7 +54,7 @@ class WeaponBase {
     // "core 2" = null;
     // "core 2 max" = null;
 
-    // used in encoding
+    // used in encoding with id
     "attribute 1" = null;
     "talent" = null;
     "optics" = null;
@@ -91,24 +91,25 @@ class WeaponBase {
         this["reload speed (ms)"] = weaponRaw["Reload Speed (ms)"];
         this["hsd"] = weaponRaw["HSD"];
         this["variant"] = weaponRaw["Variant"];
-        this["attribute 1"] = weaponRaw["Attribute 1"];
-        this["talent"] = weaponRaw["Talent"];
-        this["optics"] = weaponRaw["Optics"];
-        this["under barrel"] = weaponRaw["Under Barrel"];
-        this["magazine"] = weaponRaw["Magazine"];
-        this["muzzle"] = weaponRaw["Muzzle"];
+        // Do not set them in here
+        // this["attribute 1"] = weaponRaw["Attribute 1"];
+        // this["talent"] = weaponRaw["Talent"];
+        // this["optics"] = weaponRaw["Optics"];
+        // this["under barrel"] = weaponRaw["Under Barrel"];
+        // this["magazine"] = weaponRaw["Magazine"];
+        // this["muzzle"] = weaponRaw["Muzzle"];
 
         this.filters = {
-            "core 1" : this["Core 1"],
-            "core 1 max" : this["Core 1 Max"],
-            "core 2" : this["Core 2"],
-            "core 2 max" : this["Core 2 Max"],
-            "attribute 1" : this["Attribute 1"],
-            "talent" : this["Talent"],
-            "optics" : this["Optics"],
-            "under barrel" : this["Under Barrel"],
-            "magazine" : this["Magazine"],
-            "muzzle" : this["Muzzle"],
+            "core 1" : weaponRaw["Core 1"],
+            "core 1 max" : weaponRaw["Core 1 Max"],
+            "core 2" : weaponRaw["Core 2"],
+            "core 2 max" : weaponRaw["Core 2 Max"],
+            "attribute 1" : weaponRaw["Attribute 1"],
+            "talent" : weaponRaw["Talent"],
+            "optics" : weaponRaw["Optics"],
+            "under barrel" : weaponRaw["Under Barrel"],
+            "magazine" : weaponRaw["Magazine"],
+            "muzzle" : weaponRaw["Muzzle"],
         }
     }
 }

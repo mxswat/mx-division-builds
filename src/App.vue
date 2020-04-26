@@ -39,7 +39,7 @@ body,
 .main-area {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
+  grid-template-rows: 33vh 33vh calc(33vh - 8px) auto;
   gap: 8px 8px;
   // grid-template-areas: "specialization pistol" "primary secondary" "mask backpack" "chest gloves" "holster kneepads" "skill-one skill-two";
   grid-template-areas: "primary secondary pistol" "mask backpack chest" "gloves holster kneepads" "skill-one skill-two specialization";
@@ -181,4 +181,39 @@ $vs-dropdown-bg: #151515;
   }
 }
 
+// TODO Make SCSS Vars
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #e1e1e1;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb:active {
+  background: orange;
+}
+::-webkit-scrollbar-track {
+  background: #666666;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+::-webkit-scrollbar-track:hover {
+  background: #666666;
+}
+::-webkit-scrollbar-track:active {
+  background: #333333;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
 </style>

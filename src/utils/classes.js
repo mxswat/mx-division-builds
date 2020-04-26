@@ -69,7 +69,7 @@ class WeaponBase {
         "core 2 max": null,
         "attribute 1": null,
         "talent": null,
-        "optics": null,
+        "optic": null,
         "under barrel": null,
         "magazine": null,
         "muzzle": null,
@@ -94,7 +94,7 @@ class WeaponBase {
         // Do not set them in here
         // this["attribute 1"] = weaponRaw["Attribute 1"];
         // this["talent"] = weaponRaw["Talent"];
-        // this["optics"] = weaponRaw["Optics"];
+        // this["optic"] = weaponRaw["Optics"];
         // this["under barrel"] = weaponRaw["Under Barrel"];
         // this["magazine"] = weaponRaw["Magazine"];
         // this["muzzle"] = weaponRaw["Muzzle"];

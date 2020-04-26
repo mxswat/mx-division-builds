@@ -9,11 +9,9 @@
 </template>
 
 <script>
-
 export default {
   name: "App",
-  components: {
-  }
+  components: {}
 };
 </script>
 
@@ -39,7 +37,7 @@ body,
 .main-area {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 33vh 33vh calc(33vh - 8px) auto;
+  grid-template-rows: auto auto auto auto;
   gap: 8px 8px;
   // grid-template-areas: "specialization pistol" "primary secondary" "mask backpack" "chest gloves" "holster kneepads" "skill-one skill-two";
   grid-template-areas: "primary secondary pistol" "mask backpack chest" "gloves holster kneepads" "skill-one skill-two specialization";
@@ -152,15 +150,17 @@ $vs-dropdown-bg: #151515;
   color: transparent;
 }
 
-.vs--single .vs__selected {
+.vs__selected + input.vs__search {
   position: absolute;
+}
+
+.vs__selected + input.vs__search[aria-activedescendant] {
+  position: relative;
+}
+
+.vs--single .vs__selected {
   width: 100%;
 }
-
-.vs__selected > .attribute-value {
-    margin-right: 11px;
-}
-
 
 .no-element-selected {
   position: absolute;

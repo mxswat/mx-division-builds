@@ -1,4 +1,4 @@
-Slot,Type,Name,val,pos,val,neg,Spec
+Slot,Type,Name,valPos,pos,valNeg,neg,Spec
 Optic,Ironsights,Open Iron Sights,10,Accuracy,,,A
 Optic,Ironsights,Streamlined Iron Sights,10,Reload Speed %,,,A
 Optic,Ironsights,Weighted Iron Sights,10,Stability,,,A

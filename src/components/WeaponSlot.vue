@@ -28,6 +28,38 @@
           </template>
         </v-select>
       </div>
+      <template v-for="(mod, i) in modSlots">
+        <template v-if="weaponHasThisMod(mod)">
+          <div class="slot-element mod-slot" v-bind:key="i">
+            <v-select
+              :placeholder="'Mod Slot: '+ mod"
+              :clearable="false"
+              :options="filterWeaponModsByType(currentWeapon.filters[mod], mod)"
+              v-model="currentWeapon[mod]"
+              label="Name"
+            >
+              <template v-slot:option="option">
+                <div class="mod-option-container">
+                  <span class="mod-name">{{option.Name}}</span>
+                  <span class="mod-stat">
+                    <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
+                    <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
+                  </span>
+                </div>
+              </template>
+              <template #selected-option="option">
+                <div class="mod-option-container">
+                  <span class="mod-name">{{option.Name}}</span>
+                  <span class="mod-stat">
+                    <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
+                    <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
+                  </span>
+                </div>
+              </template>
+            </v-select>
+          </div>
+        </template>
+      </template>
     </template>
     <span class="no-element-selected" v-if="!isWeaponSelected()">
       <p>CHOSE YOUR WEAPON</p>
@@ -46,7 +78,9 @@ export default {
     return {
       weaponsList: null,
       weaponAttributes: null,
-      currentWeapon: new WeaponBase()
+      weaponMods: null,
+      currentWeapon: new WeaponBase(),
+      modSlots: ["optics", "under barrel", "magazine", "muzzle"]
     };
   },
   created() {
@@ -55,6 +89,9 @@ export default {
     });
     weaponsData.WeaponAttributes.then(weaponsAttr => {
       this.weaponAttributes = weaponsAttr;
+    });
+    weaponsData.WeaponMods.then(weaponMods => {
+      this.weaponMods = weaponMods;
     });
   },
   methods: {
@@ -71,6 +108,12 @@ export default {
     },
     onModalClose(data) {
       this.currentWeapon = new WeaponBase(data);
+    },
+    filterWeaponModsByType(type, slot) {
+      return this.weaponMods.filter(mod => slot === mod.Slot.toLowerCase() && type.indexOf(mod.Type) >= 0);
+    },
+    weaponHasThisMod(mod) {
+      return this.currentWeapon.filters[mod];
     }
   },
   watch: {
@@ -116,10 +159,22 @@ export default {
   position: relative;
   display: flex;
   flex-direction: row;
-  .core {
-  }
+  // .core {
+  // }
   .core-max {
     margin-left: auto;
+  }
+}
+
+.mod-option-container {
+  display: flex;
+  flex-direction: column;
+  .mod-stat {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .mod-increase {
+    margin-right: 8px;
   }
 }
 </style>

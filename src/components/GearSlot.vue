@@ -237,7 +237,7 @@ export default {
       return result;
     },
     isNamedTalent(currentGearFilters) {
-      return !!currentGearFilters.talent;
+      return currentGearFilters.talent !== 'A';
     }
   },
   components: {},

@@ -180,17 +180,17 @@ export default {
       handler: function(ids) {
         const splittedIdS = ids.split("-");
         const id = parseInt([splittedIdS[0]]);
-        // Like From urlEncoder
-        const map = [
-          null,
-          { target: "attribute 1", source: this.weaponAttributes },
-          { target: "talent", source: this.weaponAttributes },
-          { target: "optic", source: this.weaponMods },
-          { target: "under barrel", source: this.weaponMods },
-          { target: "magazine", source: this.weaponMods },
-          { target: "muzzle", source: this.weaponMods }
-        ];
         if (id) {
+          // Like From urlEncoder
+          const map = [
+            null,
+            { target: "attribute 1", source: this.weaponAttributes },
+            { target: "talent", source: this.weaponAttributes },
+            { target: "optic", source: this.weaponMods },
+            { target: "under barrel", source: this.weaponMods },
+            { target: "magazine", source: this.weaponMods },
+            { target: "muzzle", source: this.weaponMods }
+          ];
           const fromUrlGear = new WeaponBase(
             this.weaponsList.find(weapon => weapon.index === id)
           );

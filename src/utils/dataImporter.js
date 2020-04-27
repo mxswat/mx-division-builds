@@ -85,9 +85,10 @@ sourceFilesToVariables(gearTalentsListSource, gearTalentsList, gearTalentsPath);
 const weaponsData = {
     Weapons: null,
     WeaponAttributes: null,
-    WeaponMods: null
+    WeaponMods: null,
+    WeaponTalents: null
 };
-const weaponsDataSource = ['Weapons.csv', 'WeaponAttributes.csv', 'WeaponMods.csv'];
+const weaponsDataSource = ['Weapons.csv', 'WeaponAttributes.csv', 'WeaponMods.csv', 'WeaponTalents.csv'];
 const weaponsPath = './csv/weapons/';
 
 sourceFilesToVariables(weaponsDataSource, weaponsData, weaponsPath);

@@ -28,6 +28,28 @@
           </template>
         </v-select>
       </div>
+      <div class="slot-element talent">
+        <v-select
+          placeholder="Talent"
+          :clearable="false"
+          :options="filterTalents(weaponTalents)"
+          v-model="currentWeapon['talent']"
+          label="Name"
+        >
+          <template v-slot:option="option">
+            <div class="talent-info-container">
+              <span class="talent-label">{{option.Name}}</span>
+              <span class="talent-desc">{{option.Desc}}</span>
+            </div>
+          </template>
+          <template #selected-option="option">
+            <div class="talent-info-container label-selected">
+              <span class="talent-label">{{option.Name}}</span>
+              <span class="talent-desc">{{option.Desc}}</span>
+            </div>
+          </template>
+        </v-select>
+      </div>
       <template v-for="(mod, i) in modSlots">
         <template v-if="weaponHasThisMod(mod)">
           <div class="slot-element mod-slot" v-bind:key="i">
@@ -82,6 +104,7 @@ export default {
       weaponsList: null,
       weaponAttributes: null,
       weaponMods: null,
+      weaponTalents: null,
       currentWeapon: new WeaponBase(),
       modSlots: ["optic", "under barrel", "magazine", "muzzle"]
     };
@@ -95,6 +118,9 @@ export default {
     });
     weaponsData.WeaponMods.then(weaponMods => {
       this.weaponMods = weaponMods;
+    });
+    weaponsData.WeaponTalents.then(weaponTalents => {
+      this.weaponTalents = weaponTalents;
     });
   },
   methods: {
@@ -114,24 +140,12 @@ export default {
       const isExotic = this.currentWeapon.quality === "Exotic";
       const isNamed = this.currentWeapon.quality === "Named";
       if (isExotic || isNamed) {
-        const mappedCommon = [
-          {
-            target: "attribute 1",
-            source: this.weaponAttributes,
-            toMatch: "Stat"
-          },
-          { target: "talent", source: this.weaponAttributes, toMatch: "Name" }
-        ];
-
-        for (let i = 0; i < mappedCommon.length; i++) {
-          const mapped = mappedCommon[i];
-          this.currentWeapon[mapped.target] = mapped.source.find(el => {
-            return (
-              el[mapped.toMatch] === this.currentWeapon.filters[mapped.target]
-            );
-          });
-        }
-
+        this.currentWeapon["attribute 1"] = this.weaponAttributes.find(el => {
+          return el["Stat"] === this.currentWeapon.filters["attribute 1"];
+        });
+        this.currentWeapon["talent"] = this.weaponTalents.find(el => {
+          return el["Name"] === this.currentWeapon.filters["talent"];
+        });
         if (isExotic) {
           const modMap = [
             { target: "optic", source: this.weaponMods, toMatch: "Slot" },
@@ -165,6 +179,19 @@ export default {
       }
       return result;
     },
+    filterTalents(weaponTalents) {
+      let result = [];
+      if (
+        this.currentWeapon.quality !== "Exotic" &&
+        this.currentWeapon.filters.talent === "A"
+      ) {
+        // TODO: Or is not a named talent
+        result = weaponTalents.filter(talent => {
+          return !!talent[this.currentWeapon["weapon type"]];
+        });
+      }
+      return result;
+    },
     weaponHasThisMod(mod) {
       return this.currentWeapon.filters[mod];
     }
@@ -185,7 +212,7 @@ export default {
           const map = [
             null,
             { target: "attribute 1", source: this.weaponAttributes },
-            { target: "talent", source: this.weaponAttributes },
+            { target: "talent", source: this.weaponTalents },
             { target: "optic", source: this.weaponMods },
             { target: "under barrel", source: this.weaponMods },
             { target: "magazine", source: this.weaponMods },
@@ -259,5 +286,15 @@ export default {
   .mod-increase {
     margin-right: 8px;
   }
+}
+
+.talent-info-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.talent-label,
+.talent-desc {
+  white-space: break-spaces;
 }
 </style>

@@ -6,7 +6,7 @@
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
         <span class="core-max">{{currentWeapon.filters['core 1 max']}}</span>
       </div>
-      <div class="slot-element weapon-core-2">
+      <div v-if="currentWeapon.filters['core 2']" class="slot-element weapon-core-2">
         <span class="core">{{ currentWeapon.filters['core 2']}}</span>
         <span class="core-max">{{currentWeapon.filters['core 2 max']}}</span>
       </div>
@@ -27,28 +27,6 @@
             <span class="attribute-value">{{option.Max}}</span>
           </template>
         </v-select>
-      </div>
-      <div class="slot-element talent">
-        <v-select
-          placeholder="Talent"
-          :clearable="false"
-          :options="filterTalents(weaponTalents)"
-          v-model="currentWeapon['talent']"
-          label="Name"
-        >
-          <template v-slot:option="option">
-            <div class="talent-info-container">
-              <span class="talent-label">{{option.Name}}</span>
-              <span class="talent-desc">{{option.Desc}}</span>
-            </div>
-          </template>
-          <template #selected-option="option">
-            <div class="talent-info-container label-selected">
-              <span class="talent-label">{{option.Name}}</span>
-            </div>
-          </template>
-        </v-select>
-        <div class="talent-description" v-if="currentWeapon.talent">{{currentWeapon.talent.Desc}}</div>
       </div>
       <template v-for="(mod, i) in modSlots">
         <template v-if="weaponHasThisMod(mod)">
@@ -82,6 +60,28 @@
           </div>
         </template>
       </template>
+      <div class="slot-element talent">
+        <v-select
+          placeholder="Talent"
+          :clearable="false"
+          :options="filterTalents(weaponTalents)"
+          v-model="currentWeapon['talent']"
+          label="Name"
+        >
+          <template v-slot:option="option">
+            <div class="talent-info-container">
+              <span class="talent-label">{{option.Name}}</span>
+              <span class="talent-desc">{{option.Desc}}</span>
+            </div>
+          </template>
+          <template #selected-option="option">
+            <div class="talent-info-container label-selected">
+              <span class="talent-label">{{option.Name}}</span>
+            </div>
+          </template>
+        </v-select>
+        <div class="talent-description" v-if="currentWeapon.talent">{{currentWeapon.talent.Desc}}</div>
+      </div>
     </template>
     <span class="no-element-selected" v-if="!isWeaponSelected()">
       <p>CHOSE YOUR WEAPON</p>
@@ -112,9 +112,11 @@ export default {
   },
   created() {
     weaponsData.Weapons.then(weapons => {
-      this.weaponsList = !this.slotFilter ? weapons : weapons.filter((gun)=> {
-        return gun.Slot === this.slotFilter
-      });
+      this.weaponsList = !this.slotFilter
+        ? weapons
+        : weapons.filter(gun => {
+            return gun.Slot === this.slotFilter;
+          });
     });
     weaponsData.WeaponAttributes.then(weaponsAttr => {
       this.weaponAttributes = weaponsAttr;

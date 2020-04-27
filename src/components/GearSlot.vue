@@ -213,8 +213,8 @@ export default {
           break;
         }
         case "Named":
-          // If it is longer than 1 is clearly a name on not just 'A
-          if (filter !== "A") {
+          // If it is longer than 1 is clearly a name on not just A,O or U
+          if (filter.length > 1) {
             attributes = [];
           }
           break;

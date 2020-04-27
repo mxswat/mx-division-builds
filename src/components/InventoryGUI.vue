@@ -16,7 +16,7 @@
       <WeaponSlot v-bind:init="initGearSlot[7]"></WeaponSlot>
     </BasicTile>
     <BasicTile class="pistol" v-bind:name="'SideArm'">
-      <WeaponSlot v-bind:init="initGearSlot[8]"></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[8]" v-bind:slotFilter="'S'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="mask" v-bind:name="'Mask'">
       <GearSlot v-bind:name="'Mask'" v-bind:init="initGearSlot[0]" v-bind:gearList="maskList"></GearSlot>

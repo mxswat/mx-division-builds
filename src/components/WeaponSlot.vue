@@ -97,7 +97,8 @@ import { WeaponBase } from "../utils/classes";
 export default {
   name: "WeaponSlot",
   props: {
-    init: null
+    init: null,
+    slotFilter: null
   },
   data() {
     return {
@@ -111,7 +112,9 @@ export default {
   },
   created() {
     weaponsData.Weapons.then(weapons => {
-      this.weaponsList = weapons;
+      this.weaponsList = !this.slotFilter ? weapons : weapons.filter((gun)=> {
+        return gun.Slot === this.slotFilter
+      });
     });
     weaponsData.WeaponAttributes.then(weaponsAttr => {
       this.weaponAttributes = weaponsAttr;

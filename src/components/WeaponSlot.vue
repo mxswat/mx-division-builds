@@ -45,10 +45,10 @@
           <template #selected-option="option">
             <div class="talent-info-container label-selected">
               <span class="talent-label">{{option.Name}}</span>
-              <span class="talent-desc">{{option.Desc}}</span>
             </div>
           </template>
         </v-select>
+        <div class="talent-description" v-if="currentWeapon.talent">{{currentWeapon.talent.Desc}}</div>
       </div>
       <template v-for="(mod, i) in modSlots">
         <template v-if="weaponHasThisMod(mod)">

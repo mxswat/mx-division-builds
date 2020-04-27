@@ -329,10 +329,6 @@ export default {
   }
 }
 
-.talent-description {
-  padding: 10px;
-}
-
 // attribute-label
 .attribute-value {
   margin-left: auto;

@@ -220,4 +220,10 @@ $vs-dropdown-bg: #151515;
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+
+.talent-description {
+  padding: 10px;
+  border-bottom: 1px solid white;
+}
 </style>

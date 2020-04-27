@@ -22,3 +22,9 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+### Know issues
+Ammo dump does not have a a third slot 
+
+### TODOs

@@ -28,7 +28,33 @@
           </template>
         </v-select>
       </div>
-      <div class="mods-slots-container">
+      <div class="slot-element talent">
+        <v-select
+          placeholder="Talent"
+          :clearable="false"
+          :options="filterTalents(weaponTalents)"
+          v-model="currentWeapon['talent']"
+          label="Name"
+        >
+          <template v-slot:option="option">
+            <div class="talent-info-container">
+              <span class="talent-label">{{option.Name}}</span>
+              <span class="talent-desc">{{option.Desc}}</span>
+            </div>
+          </template>
+          <template #selected-option="option">
+            <div class="talent-info-container label-selected">
+              <span class="talent-label">{{option.Name}}</span>
+            </div>
+          </template>
+        </v-select>
+        <div class="talent-description" v-if="currentWeapon.talent">{{currentWeapon.talent.Desc}}</div>
+      </div>
+      <div class="mods-toggle" @click="showModSlots = !showModSlots">
+        <span>Mods</span>
+        <div class="arrow-down"></div>
+      </div>
+      <div class="mods-slots-container" v-if="showModSlots">
         <template v-for="(mod, i) in modSlots">
           <template v-if="weaponHasThisMod(mod)">
             <div class="slot-element mod-slot" v-bind:key="i">
@@ -58,41 +84,19 @@
                   </div>
                 </template>
               </v-select>
-              <span class="mod-stat">
+              <span class="mod-stat" v-if="currentWeapon[mod]">
                 <span
                   class="mod-increase"
-                  v-if="currentWeapon[mod] && currentWeapon[mod].pos"
+                  v-if="currentWeapon[mod].pos"
                 >{{currentWeapon[mod].pos}} +{{currentWeapon[mod].valPos}}</span>
                 <span
                   class="mod-decrease"
-                  v-if="currentWeapon[mod] && currentWeapon[mod].neg"
+                  v-if="currentWeapon[mod].neg"
                 >{{currentWeapon[mod].neg}} {{currentWeapon[mod].valNeg}}</span>
               </span>
             </div>
           </template>
         </template>
-      </div>
-      <div class="slot-element talent">
-        <v-select
-          placeholder="Talent"
-          :clearable="false"
-          :options="filterTalents(weaponTalents)"
-          v-model="currentWeapon['talent']"
-          label="Name"
-        >
-          <template v-slot:option="option">
-            <div class="talent-info-container">
-              <span class="talent-label">{{option.Name}}</span>
-              <span class="talent-desc">{{option.Desc}}</span>
-            </div>
-          </template>
-          <template #selected-option="option">
-            <div class="talent-info-container label-selected">
-              <span class="talent-label">{{option.Name}}</span>
-            </div>
-          </template>
-        </v-select>
-        <div class="talent-description" v-if="currentWeapon.talent">{{currentWeapon.talent.Desc}}</div>
       </div>
     </template>
     <span class="no-element-selected" v-if="!isWeaponSelected()">
@@ -119,7 +123,8 @@ export default {
       weaponMods: null,
       weaponTalents: null,
       currentWeapon: new WeaponBase(),
-      modSlots: ["optic", "under barrel", "magazine", "muzzle"]
+      modSlots: ["optic", "under barrel", "magazine", "muzzle"],
+      showModSlots: false
     };
   },
   created() {
@@ -316,5 +321,24 @@ export default {
 .talent-label,
 .talent-desc {
   white-space: break-spaces;
+}
+
+.arrow-down {
+  height: 14px;
+  width: 14px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' fill='white' height='10' role='presentation' class='vs__open-indicator'%3E%3Cpath d='M9.211364 7.59931l4.48338-4.867229c.407008-.441854.407008-1.158247 0-1.60046l-.73712-.80023c-.407008-.441854-1.066904-.441854-1.474243 0L7 5.198617 2.51662.33139c-.407008-.441853-1.066904-.441853-1.474243 0l-.737121.80023c-.407008.441854-.407008 1.158248 0 1.600461l4.48338 4.867228L7 10l2.211364-2.40069z'%3E%3C/path%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  margin-left: auto;
+  background-position: bottom;
+}
+
+.mods-toggle {
+  margin-top: 8px;
+  padding: 8px;
+  padding-right: 6px;
+  display: flex;
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid white;
+  cursor: pointer;
 }
 </style>

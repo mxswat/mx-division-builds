@@ -28,38 +28,40 @@
           </template>
         </v-select>
       </div>
-      <template v-for="(mod, i) in modSlots">
-        <template v-if="weaponHasThisMod(mod)">
-          <div class="slot-element mod-slot" v-bind:key="i">
-            <v-select
-              :placeholder="'Mod Slot: '+ mod"
-              :clearable="false"
-              :options="filterWeaponModsByType(currentWeapon.filters[mod], mod)"
-              v-model="currentWeapon[mod]"
-              label="Name"
-            >
-              <template v-slot:option="option">
-                <div class="mod-option-container">
-                  <span class="mod-name">{{option.Name}}</span>
-                  <span class="mod-stat">
-                    <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
-                    <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
-                  </span>
-                </div>
-              </template>
-              <template #selected-option="option">
-                <div class="mod-option-container">
-                  <span class="mod-name">{{option.Name}}</span>
-                  <span class="mod-stat">
-                    <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
-                    <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
-                  </span>
-                </div>
-              </template>
-            </v-select>
-          </div>
+      <div class="mods-slots-container">
+        <template v-for="(mod, i) in modSlots">
+          <template v-if="weaponHasThisMod(mod)">
+            <div class="slot-element mod-slot" v-bind:key="i">
+              <v-select
+                :placeholder="'Mod Slot: '+ mod"
+                :clearable="false"
+                :options="filterWeaponModsByType(currentWeapon.filters[mod], mod)"
+                v-model="currentWeapon[mod]"
+                label="Name"
+              >
+                <template v-slot:option="option">
+                  <div class="mod-option-container">
+                    <span class="mod-name">{{option.Name}}</span>
+                    <span class="mod-stat">
+                      <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
+                      <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
+                    </span>
+                  </div>
+                </template>
+                <template #selected-option="option">
+                  <div class="mod-option-container">
+                    <span class="mod-name">{{option.Name}}</span>
+                    <span class="mod-stat">
+                      <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
+                      <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
+                    </span>
+                  </div>
+                </template>
+              </v-select>
+            </div>
+          </template>
         </template>
-      </template>
+      </div>
       <div class="slot-element talent">
         <v-select
           placeholder="Talent"

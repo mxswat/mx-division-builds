@@ -221,9 +221,30 @@ $vs-dropdown-bg: #151515;
   background: transparent;
 }
 
-
 .talent-description {
   padding: 10px;
   border-bottom: 1px solid white;
+}
+
+.mods-slots-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.slot-element.mod-slot:nth-child(even) {
+  margin-right: 0px;
+  width: 50%
+}
+
+.slot-element.mod-slot {
+  margin-right: 8px;
+  width: calc(50% - 8px);
+  .v-select {
+    height: 100%;
+    .vs__dropdown-toggle {
+      height: 100%;
+    }
+  }
 }
 </style>

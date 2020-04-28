@@ -226,25 +226,21 @@ $vs-dropdown-bg: #151515;
   border-bottom: 1px solid white;
 }
 
-.mods-slots-container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+// .slot-element.mod-slot {
+//   .v-select {
+//     height: 100%;
+//     .vs__dropdown-toggle {
+//       height: 100%;
+//     }
+//   }
+// }
 
-.slot-element.mod-slot:nth-child(even) {
-  margin-right: 0px;
-  width: 50%
-}
-
-.slot-element.mod-slot {
-  margin-right: 8px;
-  width: calc(50% - 8px);
-  .v-select {
-    height: 100%;
-    .vs__dropdown-toggle {
-      height: 100%;
-    }
-  }
-}
+// .mods-slots-container {
+//   display: grid;
+//   grid-template-columns: 1fr 1fr;
+//   grid-gap: 5px;
+//   .vs__dropdown-menu {
+//     min-width: 385px;
+//   }
+// }
 </style>

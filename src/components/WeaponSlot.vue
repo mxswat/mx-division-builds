@@ -51,13 +51,23 @@
                 <template #selected-option="option">
                   <div class="mod-option-container">
                     <span class="mod-name">{{option.Name}}</span>
-                    <span class="mod-stat">
+                    <!-- <span class="mod-stat">
                       <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
                       <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
-                    </span>
+                    </span>-->
                   </div>
                 </template>
               </v-select>
+              <span class="mod-stat">
+                <span
+                  class="mod-increase"
+                  v-if="currentWeapon[mod] && currentWeapon[mod].pos"
+                >{{currentWeapon[mod].pos}} +{{currentWeapon[mod].valPos}}</span>
+                <span
+                  class="mod-decrease"
+                  v-if="currentWeapon[mod] && currentWeapon[mod].neg"
+                >{{currentWeapon[mod].neg}} {{currentWeapon[mod].valNeg}}</span>
+              </span>
             </div>
           </template>
         </template>
@@ -286,13 +296,16 @@ export default {
 .mod-option-container {
   display: flex;
   flex-direction: column;
-  .mod-stat {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .mod-increase {
-    margin-right: 8px;
-  }
+}
+
+.mod-stat {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 10px;
+}
+
+.mod-increase {
+  margin-right: 8px;
 }
 
 .talent-info-container {

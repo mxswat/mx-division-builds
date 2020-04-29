@@ -27,9 +27,9 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 Add Specialization slot
 
-Make the UI working on Mobile devices
-
 Update UI to allow stats editing
+
+Make the UI working on Mobile devices
 
 Update "DB" to have a multiplicative vs additive map 
 

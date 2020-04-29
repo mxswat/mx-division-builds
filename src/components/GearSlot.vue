@@ -42,7 +42,7 @@
           </template>
         </v-select>
       </div>
-      <div class="slot-element attribute-two">
+      <div class="slot-element attribute-two" v-if="currentGear.filters.attributeTwo">
         <v-select
           placeholder="Minor attribute 2"
           :clearable="false"

@@ -102,7 +102,6 @@ body,
   grid-area: tbd-two;
 }
 
-
 // Import first the variables or the override wont work
 $vs-colors: (
   lightest: white,
@@ -190,23 +189,9 @@ $vs-dropdown-bg: #151515;
   border-bottom: 1px solid white;
 }
 
-@import './style/scrollbar.scss';
+@import "./style/scrollbar.scss";
 
-// .slot-element.mod-slot {
-//   .v-select {
-//     height: 100%;
-//     .vs__dropdown-toggle {
-//       height: 100%;
-//     }
-//   }
-// }
-
-// .mods-slots-container {
-//   display: grid;
-//   grid-template-columns: 1fr 1fr;
-//   grid-gap: 5px;
-//   .vs__dropdown-menu {
-//     min-width: 385px;
-//   }
-// }
+.tile:not(.specialization) {
+  min-height: 230px;
+}
 </style>

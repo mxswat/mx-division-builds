@@ -7,7 +7,8 @@ const gearEncoderMap = {
     Kneepads: 5,
     Primary: 6,
     Secondary: 7,
-    SideArm: 8
+    SideArm: 8,
+    Specialization: 9
 };
 
 import {
@@ -43,22 +44,20 @@ const gearToId = function(object, path, separator) {
 // I should use the vue router
 const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/#/' : '/#/';
 
-const urlEncoder = function (gearArray) {
+const urlEncoder = function (idArray) {
     let urlChunks = [];
-    for (let i = 0; i < gearArray.length; i++) {
+    for (let i = 0; i < idArray.length; i++) {
         urlChunks[i] = '';
         if (i < 6) {
-            const gear = gearArray[i];
-            // Is gear
+            const gear = idArray[i];
             urlChunks[i] += gearToId(gear, 'id', '-');
             urlChunks[i] += gearToId(gear, 'attributeOne.index', '-');
             urlChunks[i] += gearToId(gear, 'attributeTwo.index', '-');
             urlChunks[i] += gearToId(gear, 'core.index', '-');
             urlChunks[i] += gearToId(gear, 'mod.index', '-');
             urlChunks[i] += gearToId(gear, 'talent.index', '');
-        } else {
-            // Weapon
-            const weapon = gearArray[i];
+        } else if (i < 9) {
+            const weapon = idArray[i];
             urlChunks[i] += gearToId(weapon, 'id', '-');
             urlChunks[i] += gearToId(weapon, "attribute 1.index", '-');
             urlChunks[i] += gearToId(weapon, 'talent.index', '-');
@@ -66,6 +65,9 @@ const urlEncoder = function (gearArray) {
             urlChunks[i] += gearToId(weapon, "under barrel.index", '-');
             urlChunks[i] += gearToId(weapon, 'magazine.index', '-');
             urlChunks[i] += gearToId(weapon, 'muzzle.index', '');
+        } else if (i < 10) {
+            const specialization = idArray[i];
+            urlChunks[i] += gearToId(specialization, 'id', '');
         }
 
     }

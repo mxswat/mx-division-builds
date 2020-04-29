@@ -1,5 +1,8 @@
 <template>
   <div class="main-area">
+    <BasicTile class="specialization" v-bind:name="'Specialization'">
+      <SpecializationSlot v-bind:init="initGearSlot[9]"></SpecializationSlot>
+    </BasicTile>
     <img class="img-slot-bg primary" src="icons/main-weapon.png" />
     <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
     <img class="img-slot-bg pistol" src="icons/sidearm.png" />
@@ -44,9 +47,9 @@
         v-bind:gearList="kneepadsList"
       ></GearSlot>
     </BasicTile>
-    <BasicTile class="skill-one"></BasicTile>
+    <!-- <BasicTile class="skill-one"></BasicTile>
     <BasicTile class="skill-two"></BasicTile>
-    <BasicTile class="specialization"></BasicTile>
+    <BasicTile class="skill-two"></BasicTile> -->
   </div>
 </template>
 
@@ -54,6 +57,7 @@
 import BasicTile from "./BasicTile";
 import GearSlot from "./GearSlot";
 import WeaponSlot from "./WeaponSlot";
+import SpecializationSlot from "./SpecializationSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
 import { gearEncoderMap, urlEncoder, urlDecoder } from "../utils/urlEncorder";
@@ -67,7 +71,8 @@ export default {
   components: {
     BasicTile,
     GearSlot,
-    WeaponSlot
+    WeaponSlot,
+    SpecializationSlot
   },
   data() {
     return {
@@ -78,8 +83,10 @@ export default {
       holsterList: Array,
       kneepadsList: Array,
       weaponsList: Array,
-      gear: [null, null, null, null, null, null, null, null, null],
-      initGearSlot: [null, null, null, null, null, null, null, null, null]
+      // Only for debug purpose
+      gear: [null, null, null, null, null, null, null, null, null, null],
+      // TODO this system must be changed, too ugly
+      initGearSlot: [null, null, null, null, null, null, null, null, null, null]
     };
   },
   created() {
@@ -109,8 +116,8 @@ export default {
         this.maskList = values[5];
       });
     },
-    gearChanged(slot, gear) {
-      console.log("gearChanged", slot, gear);
+    slotChanged(slot, gear) {
+      console.log("slotChanged", slot, gear);
       this.gear[gearEncoderMap[slot]] = gear;
       urlEncoder(this.gear);
     }

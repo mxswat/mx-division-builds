@@ -16,6 +16,7 @@ const qualityToCss = {
 export default {
   name: "BasicTile",
   props: {
+    // TODO Change me this is ugly
     name: String
   },
   data() {
@@ -24,9 +25,10 @@ export default {
     };
   },
   methods: {
-    gearChanged(gear) {
-      this.gearClass = qualityToCss[gear.quality] + " no-anim";
-      this.$parent.gearChanged(this.name, gear);
+    slotChanged(gear) {
+      const quality = gear.quality || 'Exotic';
+      this.gearClass = qualityToCss[quality] + " no-anim";
+      this.$parent.slotChanged(this.name, gear);
     }
   }
 };

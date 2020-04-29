@@ -93,12 +93,21 @@ const weaponsPath = './csv/weapons/';
 
 sourceFilesToVariables(weaponsDataSource, weaponsData, weaponsPath);
 
+const specializationList = {
+    Specialization: null
+};
+const specializationListSource = ['Specialization.csv'];
+const specializationPath = './csv/general/';
+
+sourceFilesToVariables(specializationListSource, specializationList, specializationPath);
+
 const allDataPromies = [
     ...Object.values(gearList),
     ...Object.values(gearTalentsList),
     ...Object.values(gearAttributesList),
     ...Object.values(gearModsList),
     ...Object.values(weaponsData),
+    ...Object.values(specializationList),
 ]
 
 export {
@@ -108,4 +117,5 @@ export {
     gearAttributesList,
     gearModsList,
     weaponsData,
+    specializationList
 };

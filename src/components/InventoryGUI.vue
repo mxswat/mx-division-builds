@@ -1,5 +1,8 @@
 <template>
   <div class="main-area">
+    <BasicTile class="specialization">
+      <SpecializationSlot></SpecializationSlot>
+    </BasicTile>
     <img class="img-slot-bg primary" src="icons/main-weapon.png" />
     <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
     <img class="img-slot-bg pistol" src="icons/sidearm.png" />
@@ -46,7 +49,7 @@
     </BasicTile>
     <BasicTile class="skill-one"></BasicTile>
     <BasicTile class="skill-two"></BasicTile>
-    <BasicTile class="specialization"></BasicTile>
+    <BasicTile class="skill-two"></BasicTile>
   </div>
 </template>
 
@@ -54,6 +57,7 @@
 import BasicTile from "./BasicTile";
 import GearSlot from "./GearSlot";
 import WeaponSlot from "./WeaponSlot";
+import SpecializationSlot from "./SpecializationSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
 import { gearEncoderMap, urlEncoder, urlDecoder } from "../utils/urlEncorder";
@@ -67,7 +71,8 @@ export default {
   components: {
     BasicTile,
     GearSlot,
-    WeaponSlot
+    WeaponSlot,
+    SpecializationSlot
   },
   data() {
     return {

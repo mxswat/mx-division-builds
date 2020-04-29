@@ -42,6 +42,9 @@ import { specializationList } from "../utils/dataImporter";
 
 export default {
   name: "SpecializationSlot",
+  props: {
+    init: null
+  },
   data() {
     return {
       specializations: [],
@@ -49,14 +52,18 @@ export default {
     };
   },
   created() {
+    let specIndex = 0;
     specializationList.Specialization.then(specializations => {
       const holder = {};
       for (let i = 0; i < specializations.length; i++) {
         const specialization = specializations[i];
-        holder[specialization.Name] = holder[specialization.Name] || {};
-        holder[specialization.Name].name = specialization.Name;
-        holder[specialization.Name].stats =
-          holder[specialization.Name].stats || [];
+        if (!holder[specialization.Name]) {
+          holder[specialization.Name] = holder[specialization.Name] || {};
+          holder[specialization.Name].name = specialization.Name;
+          holder[specialization.Name].stats =
+            holder[specialization.Name].stats || [];
+          holder[specialization.Name].id = ++specIndex;
+        }
         holder[specialization.Name].stats.push({
           name: specialization.Stat,
           val: specialization.Val
@@ -64,6 +71,23 @@ export default {
       }
       this.specializations = Object.values(holder);
     });
+  },
+  watch: {
+    currentSpecialization: {
+      handler: function(val, oldVal) {
+        this.$parent.slotChanged(val);
+      },
+      deep: true
+    },
+    init: {
+      handler: function(ids) {
+        console.log('spec', ids)
+        const specId = parseInt(ids) - 1;
+        if (specId >= 0) {
+          this.currentSpecialization = this.specializations[specId];
+        }
+      }
+    }
   }
 };
 </script>

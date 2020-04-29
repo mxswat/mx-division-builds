@@ -221,7 +221,7 @@ export default {
   watch: {
     currentWeapon: {
       handler: function(val, oldVal) {
-        this.$parent.gearChanged(val);
+        this.$parent.slotChanged(val);
       },
       deep: true
     },

@@ -25,7 +25,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Tasks required to be done before going to beta 2
 
-Add Specialization slot
+~Add Specialization slot~
 
 Update UI to allow stats editing
 

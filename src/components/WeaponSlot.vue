@@ -2,13 +2,18 @@
   <div @click="onClick()" class="weapon-container">
     <template v-if="isWeaponSelected()">
       <div class="slot-element weapon-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
-      <div class="slot-element weapon-core-1">
+      <div class="slot-element stat-edit">
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
-        <span class="core-max">{{currentWeapon.filters['core 1 max']}}</span>
+        <StatInput v-bind:stat="currentWeapon.filters" v-bind:maxPath="'core 1 max'"></StatInput>
       </div>
-      <div v-if="currentWeapon.filters['core 2']" class="slot-element weapon-core-2">
+      <div class="slot-element stat-edit">
+        <span
+          v-if="!currentWeapon.filters['core 2']"
+          class="core"
+          style="opacity: 0.5"
+        >Core 2 is not available on this weapon</span>
         <span class="core">{{ currentWeapon.filters['core 2']}}</span>
-        <span class="core-max">{{currentWeapon.filters['core 2 max']}}</span>
+        <StatInput v-bind:stat="currentWeapon.filters" v-bind:maxPath="'core 2 max'"></StatInput>
       </div>
       <div class="slot-element stat-edit attribute-one">
         <v-select
@@ -27,7 +32,7 @@
             <!-- <span class="attribute-value">{{option.Max}}</span> -->
           </template>
         </v-select>
-        <input class="stat-value" type="number" :max="currentWeapon.filters['core 1 max']" />
+        <StatInput v-bind:stat="currentWeapon['attribute 1']" v-bind:maxPath="'Max'"></StatInput>
       </div>
       <div class="slot-element talent">
         <v-select
@@ -110,9 +115,10 @@
 import { openWeaponsModal } from "../utils/modalService";
 import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
-
+import StatInput from "./StatInput";
 export default {
   name: "WeaponSlot",
+  components: { StatInput },
   props: {
     init: null,
     slotFilter: null
@@ -284,19 +290,10 @@ export default {
   }
 }
 
-.weapon-core-1,
-.weapon-core-2 {
-  border-bottom: 1px solid white;
+span.core {
+  flex: 3;
   padding: 8px;
-  cursor: pointer;
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  // .core {
-  // }
-  .core-max {
-    margin-left: auto;
-  }
+  border-bottom: 1px solid white;
 }
 
 .mod-option-container {
@@ -338,7 +335,7 @@ export default {
   padding: 8px;
   padding-right: 6px;
   display: flex;
-  background: rgba(0, 0, 0, 0.3);
+  // background: rgba(0, 0, 0, 0.3);
   border-bottom: 1px solid white;
   cursor: pointer;
 }

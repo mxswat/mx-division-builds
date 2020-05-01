@@ -81,7 +81,7 @@ export default {
     },
     init: {
       handler: function(ids) {
-        console.log('spec', ids)
+        // console.log('spec', ids)
         const specId = parseInt(ids) - 1;
         if (specId >= 0) {
           this.currentSpecialization = this.specializations[specId];

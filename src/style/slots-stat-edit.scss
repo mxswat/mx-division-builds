@@ -1,0 +1,37 @@
+.slot-element {
+    &.stat-edit {
+        display: flex;
+
+        .v-select {
+            flex: 3;
+        }
+    }
+}
+
+input.stat-value {
+    $height: 31px;
+    min-width: 0;
+    flex: 1;
+    height: $height;
+    line-height: $height;
+    padding: 0px;
+    margin-left: 8px;
+    // background: rgba(0, 0, 0, 0.3);
+    background: transparent;
+    border: 0px;
+    border-bottom: 1px solid white;
+    font-size: 16px;
+    color: white;
+}
+
+// /* Chrome, Safari, Edge, Opera */
+// input::-webkit-outer-spin-button,
+// input::-webkit-inner-spin-button {
+//     -webkit-appearance: none;
+//     margin: 0;
+// }
+
+// /* Firefox */
+// input[type=number] {
+//     -moz-appearance: textfield;
+// }

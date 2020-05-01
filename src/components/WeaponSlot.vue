@@ -10,7 +10,7 @@
         <span class="core">{{ currentWeapon.filters['core 2']}}</span>
         <span class="core-max">{{currentWeapon.filters['core 2 max']}}</span>
       </div>
-      <div class="slot-element attribute-one">
+      <div class="slot-element stat-edit attribute-one">
         <v-select
           placeholder="Attribute"
           :clearable="false"
@@ -24,9 +24,10 @@
           </template>
           <template #selected-option="option">
             <span class="attribute-label">{{option.Stat}}</span>
-            <span class="attribute-value">{{option.Max}}</span>
+            <!-- <span class="attribute-value">{{option.Max}}</span> -->
           </template>
         </v-select>
+        <input class="stat-value" type="number" :max="currentWeapon.filters['core 1 max']" />
       </div>
       <div class="slot-element talent">
         <v-select

@@ -298,19 +298,6 @@ export default {
   color: white;
 }
 
-.slot-element {
-  margin-top: 8px;
-  align-items: center;
-  position: relative;
-  background: rgba(0, 0, 0, 0.3);
-  .attribute-image {
-    height: 25px;
-    width: 25px;
-    padding: 4px;
-    margin-top: -3px;
-  }
-}
-
 .gear-name {
   border-bottom: 1px solid white;
   padding: 8px;

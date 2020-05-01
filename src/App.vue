@@ -132,7 +132,7 @@ $vs-dropdown-bg: #151515;
 
 .vs__dropdown-toggle {
   border: 0;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid white;
 }
 
 .vs--searchable .vs__search,
@@ -189,7 +189,7 @@ $vs-dropdown-bg: #151515;
   border-bottom: 1px solid white;
 }
 
-@import "./style/scrollbar.scss";
+@import "./style/main.scss";
 
 .tile:not(.specialization) {
   min-height: 230px;

@@ -12,8 +12,10 @@
           class="core"
           style="opacity: 0.5"
         >Core 2 is not available on this weapon</span>
-        <span class="core">{{ currentWeapon.filters['core 2']}}</span>
-        <StatInput v-bind:stat="currentWeapon.filters" v-bind:maxPath="'core 2 max'"></StatInput>
+        <template v-if="currentWeapon.filters['core 2']">
+          <span class="core">{{ currentWeapon.filters['core 2']}}</span>
+          <StatInput v-bind:stat="currentWeapon.filters" v-bind:maxPath="'core 2 max'"></StatInput>
+        </template>
       </div>
       <div class="slot-element stat-edit attribute-one">
         <v-select

@@ -23,10 +23,8 @@ A,Backpack,Vigilance,Increases total weapon damage by 25%. Taking damage disable
 A,Backpack,Wicked,Applying a status effect increases total weapon damage by 18% for 20 seconds.,,
 A,Chest,Empathic Resolve,Repairing an ally increases their total weapon and skill damage by 3-15% for 10 seconds. 1-7% if self. Effectiveness increased by your skill tier.,,
 A,Chest,Mad Bomber,"Grenade radius increased by 50%. Grenades that kill are refunded. Grenades can now be ""cooked"". 5% bonus armor while aiming grenades.",,
-A,Chest,Overwatch,"Staying in cover for 10s increases your and allies’ weapon and skill damage by 12% as long as you stay in cover or in a cover-to-cover move.
-",,
-N,Chest,Perfect Overwatch,"Staying in cover for 8s increases your and allies’ weapon and skill damage by 12% as long as you stay in cover or in a cover-to-cover move.
-",,
+A,Chest,Overwatch,"Staying in cover for 10s increases your and allies’ weapon and skill damage by 12% as long as you stay in cover or in a cover-to-cover move.",,
+N,Chest,Perfect Overwatch,"Staying in cover for 8s increases your and allies’ weapon and skill damage by 12% as long as you stay in cover or in a cover-to-cover move.",,
 A,Chest,Trauma,Applies blind to an enemy hit in the head. Cooldown is 30 seconds. Applies bleed to an enemy hit in the chest. Cooldown is 30 seconds.,,
 A,Chest,Explosive Delivery,"1.5s after a skill lands, creates an explosion with a 5M radius. Damage scales with skill tier, 25-100% damage of a concussion grenade.",,
 A,Chest,Kinetic Momentum,"When in combat, skills not on cooldown generate stacks that increase skill damage by 1% and skill repair by 2%. Max 15 stacks. Lost on cooldown.",,

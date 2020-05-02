@@ -307,6 +307,7 @@ span.core {
   display: flex;
   flex-wrap: wrap;
   padding: 6px 10px;
+  border-bottom: 1px solid white;
 }
 
 .mod-increase {

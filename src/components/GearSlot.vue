@@ -20,7 +20,11 @@
             <span class="attribute-label">{{ option.label }}</span>
           </template>
         </v-select>
-        <StatInput v-model="currentGear.core.StatValue" v-bind:max="currentGear.core.Max"></StatInput>
+        <StatInput
+          v-if="currentGear.core"
+          v-model="currentGear.core.StatValue"
+          v-bind:max="currentGear.core.Max"
+        ></StatInput>
       </div>
       <div class="slot-element stat-edit attribute-one">
         <v-select
@@ -41,6 +45,7 @@
           </template>
         </v-select>
         <StatInput
+          v-if="currentGear.attributeOne"
           v-model="currentGear.attributeOne.StatValue"
           v-bind:max="currentGear.attributeOne.Max"
         ></StatInput>
@@ -64,6 +69,7 @@
           </template>
         </v-select>
         <StatInput
+          v-if="currentGear.attributeTwo"
           v-model="currentGear.attributeTwo.StatValue"
           v-bind:max="currentGear.attributeTwo.Max"
         ></StatInput>

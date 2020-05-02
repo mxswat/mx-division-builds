@@ -37,3 +37,56 @@ const criticalHeadShot = function (baseDMG, AWD, WD, WIT, CHD, HSD, TATfG, AMP) 
     const _TATfG = TATfG;
     const _AMP = AMP;
 }
+
+const updateStats = function (slots) {
+    let stats = {
+        'Weapon Damage': [],
+        'Skill Tier': [],
+        'Armor': [],
+        'Weapon Handling': [],
+        'Critical Hit Chance': [],
+        'Critical Hit Damage': [],
+        'Headshot Damage': [],
+        'Armor Regeneration': [],
+        'Hazard Protection': [],
+        'Health': [],
+        'Explosive Resistance': [],
+        'Skill Damage': [],
+        'Repair Skills': [],
+        'Skill Haste': [],
+        'Status Effects': [],
+        'Damage to TOC': [],
+        'Damage to Armor': [],
+        'Pulse Haste': [],
+        'Damage to Health': [],
+        'Melee Damage': [],
+        'Armor % on Kill': [],
+        'Skill Health': [],
+        'Sheild Health': [],
+        'Ammo Capacity': [],
+        'Armor Regeneration %': [],
+        'Protection from Elites': [],
+    }
+
+    for (let i = 0; i < slots.length; i++) {
+        const slot = slots[i];
+        if (slot) {
+            if (i < 6) {
+                slot.attributeOne.Stat
+                slot.attributeTwo.Stat
+                slot.core.label
+                slot.mod.Stat
+                // slot.talent.Talent
+            } else if (i < 9) {
+                //
+            } else if (i < 10) {
+                //
+            }
+        }
+    }
+
+}
+
+export {
+    updateStats
+}

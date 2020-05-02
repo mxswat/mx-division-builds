@@ -48,11 +48,12 @@ class WeaponBase {
     "hsd" = null;
     "variant" = null;
     
-    // core is always the same per weapon category
-    // "core 1" = null;
-    // "core 1 max" = null;
-    // "core 2" = null;
-    // "core 2 max" = null;
+    "core 1" = {
+        max: null
+    };
+    "core 2" = {
+        max: null
+    };
 
     // used in encoding with id
     "attribute 1" = null;
@@ -91,13 +92,8 @@ class WeaponBase {
         this["reload speed (ms)"] = weaponRaw["Reload Speed (ms)"];
         this["hsd"] = weaponRaw["HSD"];
         this["variant"] = weaponRaw["Variant"];
-        // Do not set them in here
-        // this["attribute 1"] = weaponRaw["Attribute 1"];
-        // this["talent"] = weaponRaw["Talent"];
-        // this["optic"] = weaponRaw["Optics"];
-        // this["under barrel"] = weaponRaw["Under Barrel"];
-        // this["magazine"] = weaponRaw["Magazine"];
-        // this["muzzle"] = weaponRaw["Muzzle"];
+        this["core 1"].max = weaponRaw["Core 1 Max"];
+        this["core 2"].max = weaponRaw["Core 2 Max"];
 
         this.filters = {
             "core 1" : weaponRaw["Core 1"],

@@ -61,7 +61,7 @@ import SpecializationSlot from "./SpecializationSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
 import { gearEncoderMap, urlEncoder, urlDecoder } from "../utils/urlEncorder";
-import * as LZstring from "lz-string";
+import { updateStats } from "../utils/statsCalculator";
 
 export default {
   name: "InventoryGUI",
@@ -119,6 +119,7 @@ export default {
     slotChanged(slot, gear) {
       console.log("slotChanged", slot, gear);
       this.gear[gearEncoderMap[slot]] = gear;
+      updateStats(this.gear);
       urlEncoder(this.gear);
     }
   }

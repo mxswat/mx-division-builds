@@ -4,7 +4,7 @@
       <div class="slot-element weapon-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
       <div class="slot-element stat-edit">
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
-        <StatInput v-bind:stat="currentWeapon.filters" v-bind:maxPath="'core 1 max'"></StatInput>
+        <StatInput v-model="currentWeapon['core 1'].StatValue"></StatInput>
       </div>
       <div class="slot-element stat-edit">
         <span

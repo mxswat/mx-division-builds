@@ -2,9 +2,8 @@
   <input
     class="stat-value"
     type="number"
-    :max="stat ? stat[maxPath] : 0"
-    :value="stat ? stat[maxPath] : 0"
-    :disabled="!stat"
+    :value="value"
+    v-on:input="updateValue($event.target.value)"
   />
 </template>
 
@@ -12,8 +11,13 @@
 export default {
   name: "StatInput",
   props: {
-    stat: null,
+    value: null,
     maxPath: null
+  },
+  methods: {
+    updateValue: function(value) {
+      this.$emit("input", value);
+    }
   }
 };
 </script>

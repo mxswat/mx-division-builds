@@ -22,6 +22,10 @@ input.stat-value {
     border-bottom: 1px solid white;
     font-size: 16px;
     color: white;
+
+    &:disabled {
+        opacity: 0.5;
+    }
 }
 
 // /* Chrome, Safari, Edge, Opera */

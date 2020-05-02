@@ -4,6 +4,7 @@
     type="number"
     :max="stat ? stat[maxPath] : 0"
     :value="stat ? stat[maxPath] : 0"
+    :disabled="!stat"
   />
 </template>
 

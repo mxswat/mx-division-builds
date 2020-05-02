@@ -49,6 +49,12 @@ const urlEncoder = function (idArray) {
     for (let i = 0; i < idArray.length; i++) {
         urlChunks[i] = '';
         if (i < 6) {
+            
+            /**
+             * Encode value of stats edit into a new var like 'data-chunk'
+             * Also I guess that having extra 0s is not necessary anymore
+             */
+
             const gear = idArray[i];
             urlChunks[i] += gearToId(gear, 'id', '-');
             urlChunks[i] += gearToId(gear, 'attributeOne.index', '-');

@@ -44,8 +44,32 @@ const typeToImgSrc = {
 }
 
 
+const coreAttributes = [{
+        label: "Weapon Damage",
+        value: 15,
+        Max: 15,
+        Type: "O",
+        index: 1
+    },
+    {
+        label: "Skill Tier",
+        value: 1,
+        Max: 1,
+        Type: "U",
+        index: 0
+    },
+    {
+        label: "Armor",
+        value: 170000,
+        Max: 170000,
+        Type: "D",
+        index: 2
+    }
+];
+
 export {
     zipObject,
     csvToArrayWithKeys,
-    typeToImgSrc
+    typeToImgSrc,
+    coreAttributes
 };

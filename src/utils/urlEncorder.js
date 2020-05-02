@@ -55,7 +55,6 @@ const urlEncoder = function (idArray) {
              * Also I guess that having extra 0s is not necessary anymore
              * And use Hex decimals instead of integers
              */
-
             const gear = idArray[i];
             urlChunks[i] += gearToId(gear, 'id', '-');
             urlChunks[i] += gearToId(gear, 'attributeOne.index', '-');

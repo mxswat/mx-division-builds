@@ -72,10 +72,20 @@ const updateStats = function (slots) {
         const slot = slots[i];
         if (slot) {
             if (i < 6) {
-                slot.attributeOne.Stat
-                slot.attributeTwo.Stat
                 slot.core.label
-                slot.mod.Stat
+                slot.core.Max
+                slot.core.StatValue
+                slot.attributeOne.Stat
+                slot.attributeOne.Max
+                slot.attributeOne.StatValue
+                slot.attributeTwo.Stat
+                slot.attributeTwo.Max
+                slot.attributeTwo.StatValue
+                if (slot.mod) {
+                    slot.mod.Stat
+                    slot.mod.Max
+                    slot.mod.StatValue
+                }
                 // slot.talent.Talent
             } else if (i < 9) {
                 //

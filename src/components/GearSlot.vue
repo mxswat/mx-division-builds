@@ -13,14 +13,14 @@
           <template v-slot:option="option">
             <img class="attribute-image" v-bind:src="typeToImgSrc.core[option.Type]" />
             <span class="attribute-label">{{ option.label }}</span>
-            <span class="attribute-value">{{option.value}}</span>
+            <span class="attribute-value">{{option.Max}}</span>
           </template>
           <template #selected-option="option">
             <img class="attribute-image" v-bind:src="typeToImgSrc.core[option.Type]" />
             <span class="attribute-label">{{ option.label }}</span>
           </template>
         </v-select>
-        <StatInput v-bind:stat="currentGear.core" v-bind:maxPath="'value'"></StatInput>
+        <StatInput v-model="currentGear.core.StatValue" v-bind:max="currentGear.core.Max"></StatInput>
       </div>
       <div class="slot-element stat-edit attribute-one">
         <v-select
@@ -40,7 +40,10 @@
             <span class="attribute-label">{{ option.Stat }}</span>
           </template>
         </v-select>
-        <StatInput v-bind:stat="currentGear.attributeOne" v-bind:maxPath="'Max'"></StatInput>
+        <StatInput
+          v-model="currentGear.attributeOne.StatValue"
+          v-bind:max="currentGear.attributeOne.Max"
+        ></StatInput>
       </div>
       <div class="slot-element stat-edit attribute-two" v-if="currentGear.filters.attributeTwo">
         <v-select
@@ -60,7 +63,10 @@
             <span class="attribute-label">{{ option.Stat }}</span>
           </template>
         </v-select>
-        <StatInput v-bind:stat="currentGear.attributeTwo" v-bind:maxPath="'Max'"></StatInput>
+        <StatInput
+          v-model="currentGear.attributeTwo.StatValue"
+          v-bind:max="currentGear.attributeTwo.Max"
+        ></StatInput>
       </div>
       <div class="slot-element stat-edit mod-slot" v-if="currentGear.filters.mod">
         <v-select
@@ -80,7 +86,11 @@
             <span class="attribute-label">{{ option.Stat }}</span>
           </template>
         </v-select>
-        <StatInput v-bind:stat="currentGear.mod" v-bind:maxPath="'Max'"></StatInput>
+        <StatInput
+          v-if="currentGear.mod"
+          v-model="currentGear.mod.StatValue"
+          v-bind:max="currentGear.mod.Max"
+        ></StatInput>
       </div>
       <div class="slot-element talent" v-if="gearTalents.length > 0 || this.currentGear.talent">
         <v-select
@@ -103,7 +113,7 @@
 <script>
 import { openGearModal } from "../utils/modalService";
 import { GearBase } from "../utils/classes";
-import { typeToImgSrc } from "../utils/utils";
+import { typeToImgSrc, coreAttributes } from "../utils/utils";
 import {
   gearModsList,
   gearAttributesList,
@@ -122,11 +132,7 @@ export default {
   data() {
     return {
       currentGear: new GearBase(),
-      coreAttributes: [
-        { label: "Weapon Damage", value: 15, Type: "O", index: 1 },
-        { label: "Skill Tier", value: 1, Type: "U", index: 0 },
-        { label: "Armor", value: 170000, Type: "D", index: 2 }
-      ],
+      coreAttributes: [],
       typeToImgSrc: null,
       gearMods: null,
       gearAttributes: null,
@@ -244,6 +250,7 @@ export default {
     }
   },
   created() {
+    this.coreAttributes = coreAttributes;
     this.typeToImgSrc = typeToImgSrc;
     this.initGearMods();
     this.initGearAttributes();

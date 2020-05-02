@@ -53,6 +53,7 @@ const urlEncoder = function (idArray) {
             /**
              * Encode value of stats edit into a new var like 'data-chunk'
              * Also I guess that having extra 0s is not necessary anymore
+             * And use Hex decimals instead of integers
              */
 
             const gear = idArray[i];

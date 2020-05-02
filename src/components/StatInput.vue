@@ -2,9 +2,12 @@
   <input
     class="stat-value"
     type="number"
-    :value="value"
+    :max="max"
+    :value="value || max"
+    :placeholder="max"
     v-on:input="updateValue($event.target.value)"
   />
+  <!-- :value="value || max" TODO: Check this out  -->
 </template>
 
 <script>
@@ -12,7 +15,7 @@ export default {
   name: "StatInput",
   props: {
     value: null,
-    maxPath: null
+    max: null
   },
   methods: {
     updateValue: function(value) {

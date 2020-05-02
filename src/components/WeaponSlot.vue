@@ -4,7 +4,11 @@
       <div class="slot-element weapon-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
       <div class="slot-element stat-edit">
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
-        <StatInput v-model="currentWeapon['core 1'].StatValue"></StatInput>
+        <StatInput
+          v-if="currentWeapon['core 1']"
+          v-model="currentWeapon['core 1'].StatValue"
+          v-bind:max="currentWeapon['core 1'].max"
+        ></StatInput>
       </div>
       <div class="slot-element stat-edit">
         <span
@@ -14,7 +18,11 @@
         >Core 2 is not available on this weapon</span>
         <template v-if="currentWeapon.filters['core 2']">
           <span class="core">{{ currentWeapon.filters['core 2']}}</span>
-          <StatInput v-bind:stat="currentWeapon.filters" v-bind:maxPath="'core 2 max'"></StatInput>
+          <StatInput
+            v-if="currentWeapon['core 2']"
+            v-model="currentWeapon['core 2'].StatValue"
+            v-bind:max="currentWeapon['core 2'].max"
+          ></StatInput>
         </template>
       </div>
       <div class="slot-element stat-edit attribute-one">
@@ -34,7 +42,11 @@
             <!-- <span class="attribute-value">{{option.Max}}</span> -->
           </template>
         </v-select>
-        <StatInput v-bind:stat="currentWeapon['attribute 1']" v-bind:maxPath="'Max'"></StatInput>
+        <StatInput
+          v-if="currentWeapon['attribute 1']"
+          v-model="currentWeapon['attribute 1'].StatValue"
+          v-bind:max="currentWeapon['attribute 1'].Max"
+        ></StatInput>
       </div>
       <div class="slot-element talent">
         <v-select

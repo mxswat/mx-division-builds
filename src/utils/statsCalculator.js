@@ -46,6 +46,22 @@ const updateStats = async function (slots) {
     const brandSetBonuses = await brandSetBonusesList.BrandSetBonuses;
     // TODO Automatize get all the stats from mods and gear and other stuff
     let stats = {
+        'Assault Rifle Damage': [],
+        'LMG Damage': [],
+        'Marksman Rifle Damage': [],
+        'Pistol Damage': [],
+        'Rifle Damage': [],
+        'Shotgun Damage': [],
+        'SMG Damage': [],
+        // Weird weapon specific stuff
+        'Rate of Fire %': [],
+        'Stability': [],
+        'Accuracy': [],
+        'Reload Speed %': [],
+        'Mag Size %': [],
+        'Optimal Range': [],
+        'Swap Speed': [],
+        // General
         'Weapon Damage': [],
         'Skill Tier': [],
         'Armor': [],
@@ -79,7 +95,7 @@ const updateStats = async function (slots) {
         'Burn Resistance': [],
         'Disrupt Resistance': [],
         'Shock Resistance': [],
-        'Skill Duration': []
+        'Skill Duration': [],
     }
 
     let brands = {};
@@ -106,7 +122,13 @@ const updateStats = async function (slots) {
             } else if (i < 9) {
                 //
             } else if (i < 10) {
-                //
+                stats['Assault Rifle Damage'].push(15);
+                stats['LMG Damage'].push(15);
+                stats['Marksman Rifle Damage'].push(15);
+                stats['Pistol Damage'].push(15);
+                stats['Rifle Damage'].push(15);
+                stats['Shotgun Damage'].push(15);
+                stats['SMG Damage'].push(15);
             }
         }
     }

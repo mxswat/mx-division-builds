@@ -46,6 +46,7 @@ const updateStats = async function (slots) {
     const brandSetBonuses = await brandSetBonusesList.BrandSetBonuses;
     // TODO Automatize get all the stats from mods and gear and other stuff
     let stats = {
+        // Spec and brands
         'Assault Rifle Damage': [],
         'LMG Damage': [],
         'Marksman Rifle Damage': [],

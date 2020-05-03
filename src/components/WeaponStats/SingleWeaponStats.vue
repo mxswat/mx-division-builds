@@ -1,5 +1,6 @@
 <template>
   <div class="weapon-stat">
+    Get all general stats, add on top of them the specific weapon Buff
     <span>Weapon Damage</span>
     <span>Critical Hit Chance</span>
     <span>Critical Hit Damage</span>
@@ -25,5 +26,14 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
+.weapon-stat {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  span {
+    border-bottom: 1px solid white;
+    padding: 8px;
+  }
+}
 </style>

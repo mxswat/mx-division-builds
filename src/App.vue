@@ -2,16 +2,28 @@
   <div id="app">
     <div class="grid-container">
       <div class="tbd-one"></div>
-      <router-view></router-view>
+      <router-view v-if="loaded"></router-view>
       <div class="tbd-two"></div>
     </div>
   </div>
 </template>
 
 <script>
+import { allDataPromies } from "./utils/dataImporter";
 export default {
   name: "App",
-  components: {}
+  components: {},
+  data() {
+    return {
+      loaded: false
+    };
+  },
+  created() {
+    Promise.all(allDataPromies).then(() => {
+      this.loaded = true
+      console.log('allDataPromies Complete')
+    });
+  }
 };
 </script>
 

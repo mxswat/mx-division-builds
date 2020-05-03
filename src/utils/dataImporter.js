@@ -101,6 +101,14 @@ const specializationPath = './csv/general/';
 
 sourceFilesToVariables(specializationListSource, specializationList, specializationPath);
 
+const brandSetBonusesList = {
+    BrandSetBonuses: null
+};
+const BrandSetBonusesListSource = ['BrandSetBonuses.csv'];
+const BrandSetBonusesPath = './csv/gear/';
+
+sourceFilesToVariables(BrandSetBonusesListSource, brandSetBonusesList, BrandSetBonusesPath);
+
 const allDataPromies = [
     ...Object.values(gearList),
     ...Object.values(gearTalentsList),
@@ -108,6 +116,7 @@ const allDataPromies = [
     ...Object.values(gearModsList),
     ...Object.values(weaponsData),
     ...Object.values(specializationList),
+    ...Object.values(brandSetBonusesList),
 ]
 
 export {
@@ -117,5 +126,6 @@ export {
     gearAttributesList,
     gearModsList,
     weaponsData,
-    specializationList
+    specializationList,
+    brandSetBonusesList
 };

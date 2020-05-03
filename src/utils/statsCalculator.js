@@ -1,3 +1,6 @@
+import {
+    brandSetBonusesList
+} from "./dataImporter";
 /**
  * ----- Variables -----
  * baseDMG = Weapon damage
@@ -38,7 +41,9 @@ const criticalHeadShot = function (baseDMG, AWD, WD, WIT, CHD, HSD, TATfG, AMP) 
     const _AMP = AMP;
 }
 
-const updateStats = function (slots) {
+// Debounce this
+const updateStats = async function (slots) {
+    const brandSetBonuses = await brandSetBonusesList.BrandSetBonuses;
     // TODO Automatize get all the stats from mods and gear and other stuff
     let stats = {
         'Weapon Damage': [],
@@ -77,11 +82,17 @@ const updateStats = function (slots) {
         'Skill Duration': []
     }
 
+    let brands = {};
+
     for (let i = 0; i < slots.length; i++) {
         const slot = slots[i];
         if (slot) {
             if (i < 6) {
-                stats[slot.core.label].push(slot.core.StatValue ? slot.core.StatValue : slot.core.Max);
+                brands[slot.brand] = brands[slot.brand] || 0
+                brands[slot.brand]++;
+                if (slot.core) {
+                    stats[slot.core.label].push(slot.core.StatValue ? slot.core.StatValue : slot.core.Max);
+                }
                 if (slot.attributeOne) {
                     stats[slot.attributeOne.Stat].push(slot.attributeOne.StatValue ? slot.attributeOne.StatValue : slot.attributeOne.Max);
                 }
@@ -96,6 +107,22 @@ const updateStats = function (slots) {
                 //
             } else if (i < 10) {
                 //
+            }
+        }
+    }
+
+    for (const brand in brands) {
+        // eslint-disable-next-line
+        if (brands.hasOwnProperty(brand)) {
+            const brandCount = brands[brand];
+            for (let idx = 0; idx < brandCount; idx++) {
+                const found = brandSetBonuses.find(
+                    b => b.Brand == `${brand}${idx}`
+                )
+                if (found) {
+                    stats[found.stat] = stats[found.stat] || []
+                    stats[found.stat].push(found.val);
+                }
             }
         }
     }

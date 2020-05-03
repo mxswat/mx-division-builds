@@ -100,6 +100,8 @@ const updateStats = async function (slots) {
 
     let brands = {};
 
+    let primaryWeapon
+
     for (let i = 0; i < slots.length; i++) {
         const slot = slots[i];
         if (slot) {
@@ -120,7 +122,8 @@ const updateStats = async function (slots) {
                 }
                 // slot.talent.Talent
             } else if (i < 9) {
-                //
+                // Not needed for now
+                // I can calculate stuff specific per weapon later in the weapon stat component
             } else if (i < 10) {
                 stats['Assault Rifle Damage'].push(15);
                 stats['LMG Damage'].push(15);

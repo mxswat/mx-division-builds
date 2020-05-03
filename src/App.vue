@@ -5,14 +5,22 @@
       <router-view v-if="loaded"></router-view>
       <div class="tbd-two"></div>
     </div>
+    <div class="grid-container">
+      <div class="tbd-one"></div>
+      <WeaponStats></WeaponStats>
+      <div class="tbd-two"></div>
+    </div>
   </div>
 </template>
 
 <script>
 import { allDataPromies } from "./utils/dataImporter";
+import WeaponStats from "./components/WeaponStats/WeaponStats";
 export default {
   name: "App",
-  components: {},
+  components: {
+    WeaponStats
+  },
   data() {
     return {
       loaded: false
@@ -20,8 +28,8 @@ export default {
   },
   created() {
     Promise.all(allDataPromies).then(() => {
-      this.loaded = true
-      console.log('allDataPromies Complete')
+      this.loaded = true;
+      console.log("allDataPromies Complete");
     });
   }
 };
@@ -35,7 +43,6 @@ html,
 body,
 #app,
 .grid-container {
-  height: 100%;
   margin: 0;
   background: #252525;
   font-family: "Roboto", sans-serif;

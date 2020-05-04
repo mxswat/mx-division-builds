@@ -21,8 +21,36 @@
 </template>
 
 <script>
+import { statsProvider } from "../../utils/statsCalculator";
+import { GearProvider } from "../../utils/gearService";
+import { combineLatest, map, timer } from "rxjs";
+import { debounce } from "rxjs/operators";
+
 export default {
-  name: "SingleWeaponStats"
+  name: "SingleWeaponStats",
+  props: {
+    name: null
+  },
+  data() {
+    return {
+      weapon: null,
+      stats: null
+    };
+  },
+  created() {
+    // https://www.learnrxjs.io/learn-rxjs/operators/combination/combinelatest
+    combineLatest(
+      GearProvider.subscribeGear(this.name),
+      statsProvider.getStats()
+    )
+      // https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce
+      .pipe(debounce(() => timer(300)))
+      .subscribe(([weapon, stats]) => {
+        this.weapon = weapon;
+        this.stats = stats;
+        console.log(weapon, stats);
+      });
+  }
 };
 </script>
 

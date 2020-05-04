@@ -1,13 +1,13 @@
 <template>
   <div class="weapon-stats-container">
     <BasicTile class="primary no-anim">
-      <SingleWeaponStats></SingleWeaponStats>
+      <SingleWeaponStats v-bind:name="'Primary'"></SingleWeaponStats>
     </BasicTile>
     <BasicTile class="secondary no-anim">
-      <SingleWeaponStats></SingleWeaponStats>
+      <SingleWeaponStats v-bind:name="'Secondary'"></SingleWeaponStats>
     </BasicTile>
     <BasicTile class="sidearm no-anim">
-      <SingleWeaponStats></SingleWeaponStats>
+      <SingleWeaponStats v-bind:name="'SideArm'"></SingleWeaponStats>
     </BasicTile>
   </div>
 </template>
@@ -15,8 +15,6 @@
 <script>
 import SingleWeaponStats from "./SingleWeaponStats";
 import BasicTile from "../BasicTile";
-import { statsProvider } from "../../utils/statsCalculator";
-import { GearProvider } from "../../utils/gearService";
 
 export default {
   name: "WeaponStats",
@@ -24,20 +22,7 @@ export default {
     SingleWeaponStats,
     BasicTile
   },
-  created() {
-    statsProvider.getStats().subscribe(stats => {
-      console.log('stats', stats);
-    });
-    GearProvider.subscribeGear("Primary").subscribe(Primary => {
-      console.log("Primary", Primary);
-    });
-    GearProvider.subscribeGear("Secondary").subscribe(Secondary => {
-      console.log("Secondary", Secondary);
-    });
-    GearProvider.subscribeGear("SideArm").subscribe(SideArm => {
-      console.log("SideArm", SideArm);
-    });
-  }
+  created() {}
 };
 </script>
 

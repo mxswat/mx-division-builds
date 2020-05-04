@@ -63,6 +63,3 @@ mySubject.next(); // Cleared
 mySubject.next(); // Cleared
 mySubject.next(); // Cleared
 mySubject.next(); // Performed and will output: Triggered only once
-
-
-https://stackoverflow.com/questions/44004144/how-to-wait-for-two-observables-in-rxjs

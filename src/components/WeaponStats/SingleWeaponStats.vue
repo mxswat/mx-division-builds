@@ -1,22 +1,10 @@
 <template>
   <div class="weapon-stat">
     Get all general stats, add on top of them the specific weapon Buff
-    <span>Weapon Damage</span>
-    <span>Critical Hit Chance</span>
-    <span>Critical Hit Damage</span>
-    <span>Crit Hit Aggregate</span>
-    <span>Headshot Damage</span>
-    <span>Damage to Armor</span>
-    <span>Damage to Health</span>
-    <span>Damage to TOC</span>
-    <span>Rate of Fire %</span>
-    <span>Mag Size %</span>
-    <span>Extra Rounds</span>
-    <span>Reload Speed %</span>
-    <span>Stability</span>
-    <span>Accuracy</span>
-    <span>Optimal Range</span>
-    <span>Swap Speed</span>
+    <span
+      v-for="(weaponStatsKey, idx) in weaponStatsArr"
+      v-bind:key="idx"
+    >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
   </div>
 </template>
 
@@ -34,11 +22,46 @@ export default {
   data() {
     return {
       weapon: null,
-      stats: null
+      stats: null,
+      weaponStatsArr: [
+        "Weapon Damage",
+        "Critical Hit Chance",
+        "Critical Hit Damage",
+        "Headshot Damage",
+        "Damage to Armor",
+        "Damage to Health",
+        "Damage to TOC",
+        "Rate of Fire %",
+        "Mag Size %",
+        "Extra Rounds",
+        "Reload Speed %",
+        "Stability",
+        "Accuracy",
+        "Optimal Range",
+        "Swap Speed"
+      ],
+      weaponStats: {
+        "Weapon Damage": { value: 0 },
+        "Critical Hit Chance": { value: 0 },
+        "Critical Hit Damage": { value: 0 },
+        "Headshot Damage": { value: 0 },
+        "Damage to Armor": { value: 0 },
+        "Damage to Health": { value: 0 },
+        "Damage to TOC": { value: 0 },
+        "Rate of Fire %": { value: 0 },
+        "Mag Size %": { value: 0 },
+        "Extra Rounds": { value: 0 },
+        "Reload Speed %": { value: 0 },
+        Stability: { value: 0 },
+        Accuracy: { value: 0 },
+        "Optimal Range": { value: 0 },
+        "Swap Speed": { value: 0 }
+      }
     };
   },
   created() {
     // https://www.learnrxjs.io/learn-rxjs/operators/combination/combinelatest
+    const _vm = this;
     combineLatest(
       GearProvider.subscribeGear(this.name),
       statsProvider.getStats()
@@ -46,10 +69,26 @@ export default {
       // https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce
       .pipe(debounce(() => timer(300)))
       .subscribe(([weapon, stats]) => {
-        this.weapon = weapon;
-        this.stats = stats;
-        console.log(weapon, stats);
+        _vm.updateStatsUI(weapon, stats);
       });
+  },
+  methods: {
+    updateStatsUI(weapon, stats) {
+      this.weapon = weapon;
+      this.stats = stats.stats;
+      this.brandsStats = stats.brand;
+      console.log(weapon, stats.stats);
+      const statsKey = Object.keys(this.stats);
+      for (let i = 0; i < statsKey.length; i++) {
+        const stat = statsKey[i];
+        if (this.weaponStats[stat]) {
+          this.weaponStats[stat].value = this.stats[stat].reduce(
+            (a, b) => parseFloat(a) + parseFloat(b),
+            0
+          );
+        }
+      }
+    }
   }
 };
 </script>

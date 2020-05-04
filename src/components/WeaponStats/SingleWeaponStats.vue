@@ -107,7 +107,7 @@ export default {
       }
       // this.weapon["base damage"]; Combine with Coreone
       if (coretwo && coretwo.stat) {
-        this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.Max);
+        this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.max);
       }
       const mods = [magazine, muzzle, optic, underbarrel];
       for (let i = 0; i < mods.length; i++) {
@@ -131,7 +131,6 @@ export default {
       // this.weapon["weapon type"];
     },
     addToStat(statName, value, fallbackVal) {
-      fallbackVal;
       this.weaponStats[statName].value += value
         ? parseFloat(value)
         : parseFloat(fallbackVal);

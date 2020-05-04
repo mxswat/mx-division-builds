@@ -1,10 +1,12 @@
 <template>
   <div class="weapon-stat" v-if="weapon">
     <span>{{weapon.name}}</span>
-    <span
-      v-for="(weaponStatsKey, idx) in weaponStatsArr"
-      v-bind:key="idx"
-    >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
+    <template v-for="(weaponStatsKey, idx) in weaponStatsArr">
+      <span
+        v-if="weaponStats[weaponStatsKey].value"
+        v-bind:key="idx"
+      >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
+    </template>
   </div>
 </template>
 
@@ -37,6 +39,7 @@ export default {
         "Reload Speed %",
         "Stability",
         "Accuracy",
+        "Weapon Handling",
         "Optimal Range",
         "Swap Speed"
       ],
@@ -54,6 +57,7 @@ export default {
         "Reload Speed %": { value: 0 },
         Stability: { value: 0 },
         Accuracy: { value: 0 },
+        "Weapon Handling": { value: 0 },
         "Optimal Range": { value: 0 },
         "Swap Speed": { value: 0 }
       }
@@ -142,7 +146,7 @@ export default {
     },
     // Used for mods negative bonus
     reduceStat(statName, value) {
-      this.weaponStats[statName].value -= parseFloat(value);
+      this.weaponStats[statName].value += parseFloat(value);
     }
   }
 };

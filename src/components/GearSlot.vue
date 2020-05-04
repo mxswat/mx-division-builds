@@ -190,13 +190,13 @@ export default {
     },
     initGearMods() {
       gearModsList.GearMods.then(res => {
-        this.gearMods = res;
+        this.gearMods = JSON.parse(JSON.stringify(res));
       });
     },
     initGearAttributes() {
       gearAttributesList.Attributes.then(attributes => {
-        this.allGearAttributes = attributes;
-        this.gearAttributes = attributes.filter(attribute => {
+        this.allGearAttributes = JSON.parse(JSON.stringify(attributes));
+        this.gearAttributes = this.allGearAttributes.filter(attribute => {
           return attribute.Quality === "A";
         });
       });
@@ -256,7 +256,7 @@ export default {
     }
   },
   created() {
-    this.coreAttributes = coreAttributes;
+    this.coreAttributes = JSON.parse(JSON.stringify(coreAttributes));
     this.typeToImgSrc = typeToImgSrc;
     this.initGearMods();
     this.initGearAttributes();

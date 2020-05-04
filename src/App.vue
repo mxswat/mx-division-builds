@@ -1,11 +1,11 @@
 <template>
   <div id="app">
-    <div class="grid-container">
+    <div class="grid-container" v-if="loaded">
       <div class="tbd-one"></div>
-      <router-view v-if="loaded"></router-view>
+      <router-view></router-view>
       <div class="tbd-two"></div>
     </div>
-    <div class="grid-container">
+    <div class="grid-container" v-if="loaded">
       <div class="tbd-one"></div>
       <WeaponStats></WeaponStats>
       <div class="tbd-two"></div>

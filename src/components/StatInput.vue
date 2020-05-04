@@ -2,6 +2,7 @@
   <input
     class="stat-value"
     type="number"
+    step="0.1"
     :max="max"
     :value="value || max"
     :placeholder="max"

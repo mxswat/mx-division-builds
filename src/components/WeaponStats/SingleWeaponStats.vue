@@ -1,6 +1,6 @@
 <template>
-  <div class="weapon-stat">
-    Get all general stats, add on top of them the specific weapon Buff
+  <div class="weapon-stat" v-if="weapon">
+    <span>{{weapon.name}}</span>
     <span
       v-for="(weaponStatsKey, idx) in weaponStatsArr"
       v-bind:key="idx"
@@ -88,34 +88,39 @@ export default {
           );
         }
       }
-      const attributeone = this.weapon["attribute 1"];
-      const coreone = this.weapon["core 1"];
-      const coretwo = this.weapon["core 2"];
-      // Mods
-      const magazine = this.weapon["magazine"];
-      const muzzle = this.weapon["muzzle"];
-      const optic = this.weapon["optic"];
-      const underbarrel = this.weapon["under barrel"];
 
-      this.addToStat("Headshot Damage", this.weapon["hsd"], null);
-      if (attributeone) {
-        this.addToStat(
-          attributeone.Stat,
-          attributeone.StatValue,
-          attributeone.Max
-        );
-      }
-      // this.weapon["base damage"]; Combine with Coreone
-      if (coretwo && coretwo.stat) {
-        this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.max);
-      }
-      const mods = [magazine, muzzle, optic, underbarrel];
-      for (let i = 0; i < mods.length; i++) {
-        const mod = mods[i];
-        if (mod) {
-          this.addToStat(mod.pos, mod.valPos);
-          if (mod.neg) {
-            this.reduceStat(mod.neg, mod.valNeg);
+      if (this.weapon) {
+        const attributeone = this.weapon["attribute 1"];
+        const coreone = this.weapon["core 1"];
+        const coretwo = this.weapon["core 2"];
+        // Mods
+        const magazine = this.weapon["magazine"];
+        const muzzle = this.weapon["muzzle"];
+        const optic = this.weapon["optic"];
+        const underbarrel = this.weapon["under barrel"];
+
+        this.addToStat("Headshot Damage", this.weapon["hsd"], null);
+        if (attributeone) {
+          this.addToStat(
+            attributeone.Stat,
+            attributeone.StatValue,
+            attributeone.Max
+          );
+        }
+
+        // this.weapon["base damage"]; Combine with Coreone
+        if (coretwo && coretwo.stat) {
+          this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.max);
+        }
+
+        const mods = [magazine, muzzle, optic, underbarrel];
+        for (let i = 0; i < mods.length; i++) {
+          const mod = mods[i];
+          if (mod) {
+            this.addToStat(mod.pos, mod.valPos);
+            if (mod.neg) {
+              this.reduceStat(mod.neg, mod.valNeg);
+            }
           }
         }
       }

@@ -49,10 +49,12 @@ class WeaponBase {
     "variant" = null;
     
     "core 1" = {
+        stat: null,
         max: null
     };
     "core 2" = {
-        max: null
+        stat: null,
+        max: null,
     };
 
     // used in encoding with id
@@ -92,7 +94,9 @@ class WeaponBase {
         this["reload speed (ms)"] = weaponRaw["Reload Speed (ms)"];
         this["hsd"] = weaponRaw["HSD"];
         this["variant"] = weaponRaw["Variant"];
+        this["core 1"].stat = weaponRaw["Core 1"];
         this["core 1"].max = weaponRaw["Core 1 Max"];
+        this["core 2"].stat = weaponRaw["Core 2"];
         this["core 2"].max = weaponRaw["Core 2 Max"];
 
         this.filters = {

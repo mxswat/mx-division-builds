@@ -22,7 +22,7 @@ export default {
   data() {
     return {
       weapon: null,
-      stats: null,
+      // stats: null,
       weaponStatsArr: [
         "Weapon Damage",
         "Critical Hit Chance",
@@ -75,19 +75,70 @@ export default {
   methods: {
     updateStatsUI(weapon, stats) {
       this.weapon = weapon;
-      this.stats = stats.stats;
+      const _stats = stats.stats;
       this.brandsStats = stats.brand;
       console.log(weapon, stats.stats);
-      const statsKey = Object.keys(this.stats);
+      const statsKey = Object.keys(_stats);
       for (let i = 0; i < statsKey.length; i++) {
         const stat = statsKey[i];
         if (this.weaponStats[stat]) {
-          this.weaponStats[stat].value = this.stats[stat].reduce(
+          this.weaponStats[stat].value = _stats[stat].reduce(
             (a, b) => parseFloat(a) + parseFloat(b),
             0
           );
         }
       }
+      const attributeone = this.weapon["attribute 1"];
+      const coreone = this.weapon["core 1"];
+      const coretwo = this.weapon["core 2"];
+      // Mods
+      const magazine = this.weapon["magazine"];
+      const muzzle = this.weapon["muzzle"];
+      const optic = this.weapon["optic"];
+      const underbarrel = this.weapon["under barrel"];
+
+      this.addToStat("Headshot Damage", this.weapon["hsd"], null);
+      if (attributeone) {
+        this.addToStat(
+          attributeone.Stat,
+          attributeone.StatValue,
+          attributeone.Max
+        );
+      }
+      // this.weapon["base damage"]; Combine with Coreone
+      if (coretwo && coretwo.stat) {
+        this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.Max);
+      }
+      const mods = [magazine, muzzle, optic, underbarrel];
+      for (let i = 0; i < mods.length; i++) {
+        const mod = mods[i];
+        if (mod) {
+          this.addToStat(mod.pos, mod.valPos);
+          if (mod.neg) {
+            this.reduceStat(mod.neg, mod.valNeg);
+          }
+        }
+      }
+
+      // this.weapon["mag size"];
+      // this.weapon["name"];
+      // this.weapon["optimal range"];
+      // this.weapon["quality"];
+      // this.weapon["reload speed (ms)"];
+      // this.weapon["rpm"];
+      // this.weapon["talent"];
+      // this.weapon["variant"];
+      // this.weapon["weapon type"];
+    },
+    addToStat(statName, value, fallbackVal) {
+      fallbackVal;
+      this.weaponStats[statName].value += value
+        ? parseFloat(value)
+        : parseFloat(fallbackVal);
+    },
+    // Used for mods negative bonus
+    reduceStat(statName, value) {
+      this.weaponStats[statName].value -= parseFloat(value);
     }
   }
 };

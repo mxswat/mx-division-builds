@@ -140,9 +140,11 @@ export default {
       // this.weapon["weapon type"];
     },
     addToStat(statName, value, fallbackVal) {
-      this.weaponStats[statName].value += value
-        ? parseFloat(value)
-        : parseFloat(fallbackVal);
+      if (this.weaponStats[statName]) {
+        this.weaponStats[statName].value += value
+          ? parseFloat(value)
+          : parseFloat(fallbackVal);
+      }
     },
     // Used for mods negative bonus
     reduceStat(statName, value) {

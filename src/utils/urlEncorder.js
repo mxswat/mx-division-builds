@@ -38,7 +38,7 @@ const getByString = function (o, s) {
 }
 
 const gearToId = function(object, path, separator) {
-    return ('00' + getByString(object, path)).slice(-3) + separator;
+    return ('' + getByString(object, path)) + separator;
 }
 
 // I should use the vue router

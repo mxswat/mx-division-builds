@@ -1,6 +1,17 @@
 import {
     brandSetBonusesList
 } from "./dataImporter";
+
+import { Subject } from 'rxjs';
+
+const subject = new Subject();
+
+const statsProvider = {
+    sendStats: Stats => subject.next(Stats),
+    clearStats: () => subject.next(),
+    getStats: () => subject.asObservable()
+};
+
 /**
  * ----- Variables -----
  * baseDMG = Weapon damage
@@ -98,10 +109,12 @@ const updateStats = async function (slots) {
         'Shock Resistance': [],
         'Skill Duration': [],
     }
+    
+    let primary = {};
 
     let brands = {};
 
-    let primaryWeapon
+    // let primaryWeapon
 
     for (let i = 0; i < slots.length; i++) {
         const slot = slots[i];
@@ -153,10 +166,16 @@ const updateStats = async function (slots) {
         }
     }
 
-    console.log(stats);
+    // console.log(stats);
+    const allStats = {
+        stats,
+        brands
+    }
 
+    statsProvider.sendStats(allStats);
 }
 
 export {
-    updateStats
+    updateStats,
+    statsProvider
 }

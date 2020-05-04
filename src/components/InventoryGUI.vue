@@ -13,13 +13,13 @@
     <img class="img-slot-bg holster" src="icons/holster.png" />
     <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
     <BasicTile class="primary" v-bind:name="'Primary'">
-      <WeaponSlot v-bind:init="initGearSlot[6]"></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[6]" v-bind:name="'Primary'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="secondary" v-bind:name="'Secondary'">
-      <WeaponSlot v-bind:init="initGearSlot[7]"></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[7]" v-bind:name="'Secondary'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="pistol" v-bind:name="'SideArm'">
-      <WeaponSlot v-bind:init="initGearSlot[8]" v-bind:slotFilter="'S'"></WeaponSlot>
+      <WeaponSlot v-bind:init="initGearSlot[8]" v-bind:slotFilter="'S'" v-bind:name="'SideArm'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="mask" v-bind:name="'Mask'">
       <GearSlot v-bind:name="'Mask'" v-bind:init="initGearSlot[0]" v-bind:gearList="maskList"></GearSlot>
@@ -49,7 +49,7 @@
     </BasicTile>
     <!-- <BasicTile class="skill-one"></BasicTile>
     <BasicTile class="skill-two"></BasicTile>
-    <BasicTile class="skill-two"></BasicTile> -->
+    <BasicTile class="skill-two"></BasicTile>-->
   </div>
 </template>
 
@@ -117,7 +117,7 @@ export default {
       });
     },
     slotChanged(slot, gear) {
-      console.log("slotChanged", slot, gear);
+      // console.log("slotChanged", slot, gear);
       this.gear[gearEncoderMap[slot]] = gear;
       updateStats(this.gear);
       urlEncoder(this.gear);

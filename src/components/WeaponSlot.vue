@@ -129,11 +129,14 @@
 import { openWeaponsModal } from "../utils/modalService";
 import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
+import { GearProvider } from "../utils/gearService";
+
 import StatInput from "./StatInput";
 export default {
   name: "WeaponSlot",
   components: { StatInput },
   props: {
+    name: null,
     init: null,
     slotFilter: null
   },
@@ -243,6 +246,7 @@ export default {
     currentWeapon: {
       handler: function(val, oldVal) {
         this.$parent.slotChanged(val);
+        GearProvider.updateGear(this.name, val);
       },
       deep: true
     },

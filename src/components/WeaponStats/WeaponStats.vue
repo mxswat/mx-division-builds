@@ -15,11 +15,28 @@
 <script>
 import SingleWeaponStats from "./SingleWeaponStats";
 import BasicTile from "../BasicTile";
+import { statsProvider } from "../../utils/statsCalculator";
+import { GearProvider } from "../../utils/gearService";
+
 export default {
   name: "WeaponStats",
   components: {
     SingleWeaponStats,
     BasicTile
+  },
+  created() {
+    statsProvider.getStats().subscribe(stats => {
+      console.log('stats', stats);
+    });
+    GearProvider.subscribeGear("Primary").subscribe(Primary => {
+      console.log("Primary", Primary);
+    });
+    GearProvider.subscribeGear("Secondary").subscribe(Secondary => {
+      console.log("Secondary", Secondary);
+    });
+    GearProvider.subscribeGear("SideArm").subscribe(SideArm => {
+      console.log("SideArm", SideArm);
+    });
   }
 };
 </script>

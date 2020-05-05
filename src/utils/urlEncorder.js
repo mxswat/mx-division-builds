@@ -37,7 +37,7 @@ const getByString = function (o, s) {
     return o;
 }
 
-const gearToId = function(object, path, separator) {
+const objectPropToNumber = function (object, path, separator) {
     return ('' + getByString(object, path)) + separator;
 }
 
@@ -46,38 +46,44 @@ const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/#/' 
 
 const urlEncoder = function (idArray) {
     let urlChunks = [];
+    let statsChunks = [];
     for (let i = 0; i < idArray.length; i++) {
         urlChunks[i] = '';
+        statsChunks[i] = '';
         if (i < 6) {
-            
             /**
              * Encode value of stats edit into a new var like 'data-chunk'
-             * Also I guess that having extra 0s is not necessary anymore
-             * And use Hex decimals instead of integers
              */
             const gear = idArray[i];
-            urlChunks[i] += gearToId(gear, 'id', '-');
-            urlChunks[i] += gearToId(gear, 'attributeOne.index', '-');
-            urlChunks[i] += gearToId(gear, 'attributeTwo.index', '-');
-            urlChunks[i] += gearToId(gear, 'core.index', '-');
-            urlChunks[i] += gearToId(gear, 'mod.index', '-');
-            urlChunks[i] += gearToId(gear, 'talent.index', '');
+            urlChunks[i] += objectPropToNumber(gear, 'id', '-');
+            urlChunks[i] += objectPropToNumber(gear, 'attributeOne.index', '-');
+            urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.index', '-');
+            urlChunks[i] += objectPropToNumber(gear, 'core.index', '-');
+            urlChunks[i] += objectPropToNumber(gear, 'mod.index', '-');
+            urlChunks[i] += objectPropToNumber(gear, 'talent.index', '');
+            statsChunks[i] += objectPropToNumber(gear, 'core.StatValue', '-')
+            statsChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
+            statsChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '')
+            statsChunks[i] += objectPropToNumber(gear, 'slot.mod.StatValue', '')
         } else if (i < 9) {
             const weapon = idArray[i];
-            urlChunks[i] += gearToId(weapon, 'id', '-');
-            urlChunks[i] += gearToId(weapon, "attribute 1.index", '-');
-            urlChunks[i] += gearToId(weapon, 'talent.index', '-');
-            urlChunks[i] += gearToId(weapon, 'optic.index', '-');
-            urlChunks[i] += gearToId(weapon, "under barrel.index", '-');
-            urlChunks[i] += gearToId(weapon, 'magazine.index', '-');
-            urlChunks[i] += gearToId(weapon, 'muzzle.index', '');
+            urlChunks[i] += objectPropToNumber(weapon, 'id', '-');
+            urlChunks[i] += objectPropToNumber(weapon, "attribute 1.index", '-');
+            urlChunks[i] += objectPropToNumber(weapon, 'talent.index', '-');
+            urlChunks[i] += objectPropToNumber(weapon, 'optic.index', '-');
+            urlChunks[i] += objectPropToNumber(weapon, "under barrel.index", '-');
+            urlChunks[i] += objectPropToNumber(weapon, 'magazine.index', '-');
+            urlChunks[i] += objectPropToNumber(weapon, 'muzzle.index', '');
+            statsChunks[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-');
+            statsChunks[i] += objectPropToNumber(weapon, "core 1.StatValue", '-');
+            statsChunks[i] += objectPropToNumber(weapon, "core 2.StatValue", '');
         } else if (i < 10) {
             const specialization = idArray[i];
-            urlChunks[i] += gearToId(specialization, 'id', '');
+            urlChunks[i] += objectPropToNumber(specialization, 'id', '');
         }
-
     }
     const url = compressToEncodedURIComponent(urlChunks.join(':'));
+    const urlStats = compressToEncodedURIComponent(statsChunks.join(':')); // Use subject for manual save?
     window.history.pushState("", "", badUrl + url)
 }
 

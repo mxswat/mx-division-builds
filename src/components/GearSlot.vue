@@ -24,7 +24,6 @@
           v-if="currentGear.core"
           v-model="currentGear.core.StatValue"
           v-bind:max="currentGear.core.Max"
-          v-bind:imported="currentGear.core.imported"
         ></StatInput>
       </div>
       <div class="slot-element stat-edit attribute-one">
@@ -49,7 +48,6 @@
           v-if="currentGear.attributeOne"
           v-model="currentGear.attributeOne.StatValue"
           v-bind:max="currentGear.attributeOne.Max"
-          v-bind:imported="currentGear.attributeOne.imported"
         ></StatInput>
       </div>
       <div class="slot-element stat-edit attribute-two" v-if="currentGear.filters.attributeTwo">
@@ -74,7 +72,6 @@
           v-if="currentGear.attributeTwo"
           v-model="currentGear.attributeTwo.StatValue"
           v-bind:max="currentGear.attributeTwo.Max"
-          v-bind:imported="currentGear.attributeTwo.imported"
         ></StatInput>
       </div>
       <div class="slot-element stat-edit mod-slot" v-if="currentGear.filters.mod">
@@ -99,7 +96,6 @@
           v-if="currentGear.mod"
           v-model="currentGear.mod.StatValue"
           v-bind:max="currentGear.mod.Max"
-          v-bind:imported="currentGear.mod.imported"
         ></StatInput>
       </div>
       <div class="slot-element talent" v-if="gearTalents.length > 0 || this.currentGear.talent">
@@ -130,6 +126,7 @@ import {
   gearTalentsList
 } from "../utils/dataImporter";
 import StatInput from "./StatInput";
+import Vue from "vue";
 
 export default {
   name: "GearSlot",
@@ -310,7 +307,9 @@ export default {
             const currentStatToUpdate = this.currentGear[stat];
             const valueToImport = parseFloat(splittedIdS[5 + idx]);
             if (currentStatToUpdate && valueToImport > 0) {
-              currentStatToUpdate.imported = splittedIdS[5 + idx];
+              // Using Vue set because I want this to be reactive and
+              // to trigger watch deep when it changes into StatInput
+              Vue.set(currentStatToUpdate, "StatValue", valueToImport);
             }
           }
         }

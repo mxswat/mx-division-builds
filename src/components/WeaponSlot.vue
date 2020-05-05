@@ -8,7 +8,6 @@
           v-if="currentWeapon['core 1']"
           v-model="currentWeapon['core 1'].StatValue"
           v-bind:max="currentWeapon['core 1'].max"
-          v-bind:imported="currentWeapon['core 1'].imported"
         ></StatInput>
       </div>
       <div class="slot-element stat-edit">
@@ -23,7 +22,6 @@
             v-if="currentWeapon['core 2']"
             v-model="currentWeapon['core 2'].StatValue"
             v-bind:max="currentWeapon['core 2'].max"
-            v-bind:imported="currentWeapon['core 2'].imported"
           ></StatInput>
         </template>
       </div>
@@ -48,7 +46,6 @@
           v-if="currentWeapon['attribute 1']"
           v-model="currentWeapon['attribute 1'].StatValue"
           v-bind:max="currentWeapon['attribute 1'].Max"
-          v-bind:imported="currentWeapon['attribute 1'].imported"
         ></StatInput>
       </div>
       <div class="slot-element talent">
@@ -133,6 +130,7 @@ import { openWeaponsModal } from "../utils/modalService";
 import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
 import { GearProvider } from "../utils/gearService";
+import Vue from "vue";
 
 import StatInput from "./StatInput";
 export default {
@@ -153,6 +151,9 @@ export default {
       modSlots: ["optic", "under barrel", "magazine", "muzzle"],
       showModSlots: false
     };
+  },
+  updated() {
+    console.log(this.name + "updated!");
   },
   created() {
     weaponsData.Weapons.then(weapons => {
@@ -287,7 +288,9 @@ export default {
             const currentStatToUpdate = this.currentWeapon[stat];
             const statValueToImport = parseFloat(splittedIdS[6 + idx]);
             if (currentStatToUpdate && statValueToImport > 0) {
-              currentStatToUpdate.imported = statValueToImport;
+              // Using Vue set because I want this to be reactive and
+              // to trigger watch deep when it changes into StatInput
+              Vue.set(currentStatToUpdate, "StatValue", statValueToImport);
             }
           }
         }

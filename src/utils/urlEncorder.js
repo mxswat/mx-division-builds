@@ -64,7 +64,7 @@ const urlEncoder = function (idArray) {
             urlChunks[i] += objectPropToNumber(gear, 'core.StatValue', '-')
             urlChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
             urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '')
-            urlChunks[i] += objectPropToNumber(gear, 'slot.mod.StatValue', '')
+            urlChunks[i] += objectPropToNumber(gear, 'mod.StatValue', '')
         } else if (i < 9) {
             const weapon = idArray[i];
             urlChunks[i] += objectPropToNumber(weapon, 'id', '-');

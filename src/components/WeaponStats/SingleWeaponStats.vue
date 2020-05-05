@@ -82,7 +82,7 @@ export default {
       if (this.weapon) {
         const _stats = stats.stats;
         this.brandsStats = stats.brand;
-        console.log(weapon, stats.stats);
+        // console.log(weapon, stats.stats);
         const statsKey = Object.keys(_stats);
         for (let i = 0; i < statsKey.length; i++) {
           const stat = statsKey[i];

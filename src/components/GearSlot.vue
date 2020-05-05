@@ -308,7 +308,8 @@ export default {
           for (let idx = 1; idx < stats.length; idx++) {
             const stat = stats[idx];
             const currentStatToUpdate = this.currentGear[stat];
-            if (currentStatToUpdate) {
+            const valueToImport = parseFloat(splittedIdS[5 + idx]);
+            if (currentStatToUpdate && valueToImport > 0) {
               currentStatToUpdate.imported = splittedIdS[5 + idx];
             }
           }

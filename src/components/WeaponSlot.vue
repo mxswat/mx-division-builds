@@ -285,7 +285,10 @@ export default {
           for (let idx = 1; idx < stats.length; idx++) {
             const stat = stats[idx];
             const currentStatToUpdate = this.currentWeapon[stat];
-            currentStatToUpdate.imported = splittedIdS[6 + idx];
+            const statValueToImport = parseFloat(splittedIdS[6 + idx]);
+            if (currentStatToUpdate && statValueToImport > 0) {
+              currentStatToUpdate.imported = statValueToImport;
+            }
           }
         }
       }

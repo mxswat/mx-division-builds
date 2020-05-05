@@ -65,6 +65,7 @@ const urlEncoder = function (idArray) {
             urlChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
             urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '')
             urlChunks[i] += objectPropToNumber(gear, 'mod.StatValue', '')
+            console.log('gear', urlChunks[i])
         } else if (i < 9) {
             const weapon = idArray[i];
             urlChunks[i] += objectPropToNumber(weapon, 'id', '-');
@@ -74,9 +75,9 @@ const urlEncoder = function (idArray) {
             urlChunks[i] += objectPropToNumber(weapon, "under barrel.index", '-');
             urlChunks[i] += objectPropToNumber(weapon, 'magazine.index', '-');
             urlChunks[i] += objectPropToNumber(weapon, 'muzzle.index', '-');
-            urlChunks[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-');
-            urlChunks[i] += objectPropToNumber(weapon, "core 1.StatValue", '-');
-            urlChunks[i] += objectPropToNumber(weapon, "core 2.StatValue", '');
+            urlChunks[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-')
+            urlChunks[i] += objectPropToNumber(weapon, "core 1.StatValue", '-')
+            urlChunks[i] += objectPropToNumber(weapon, "core 2.StatValue", '')
             console.log('weapon', urlChunks[i])
         } else if (i < 10) {
             const specialization = idArray[i];

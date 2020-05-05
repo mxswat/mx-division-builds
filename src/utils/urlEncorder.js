@@ -63,7 +63,7 @@ const urlEncoder = function (idArray) {
             urlChunks[i] += objectPropToNumber(gear, 'talent.index', '-');
             urlChunks[i] += objectPropToNumber(gear, 'core.StatValue', '-')
             urlChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
-            urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '')
+            urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '-')
             urlChunks[i] += objectPropToNumber(gear, 'mod.StatValue', '')
             console.log('gear', urlChunks[i])
         } else if (i < 9) {

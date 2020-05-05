@@ -8,7 +8,6 @@
     :placeholder="max"
     v-on:input="updateValue($event.target.value)"
   />
-  <!-- :value="value || max" TODO: Check this out  -->
 </template>
 
 <script>

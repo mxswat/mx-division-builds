@@ -4,7 +4,7 @@
     type="number"
     step="0.1"
     :max="max"
-    :value="value || max"
+    :value="value || imported || max"
     :placeholder="max"
     v-on:input="updateValue($event.target.value)"
   />
@@ -16,7 +16,8 @@ export default {
   name: "StatInput",
   props: {
     value: null,
-    max: null
+    max: null,
+    imported: null
   },
   methods: {
     updateValue: function(value) {

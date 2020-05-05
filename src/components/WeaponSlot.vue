@@ -8,6 +8,7 @@
           v-if="currentWeapon['core 1']"
           v-model="currentWeapon['core 1'].StatValue"
           v-bind:max="currentWeapon['core 1'].max"
+          v-bind:imported="currentWeapon['core 1'].imported"
         ></StatInput>
       </div>
       <div class="slot-element stat-edit">
@@ -22,6 +23,7 @@
             v-if="currentWeapon['core 2']"
             v-model="currentWeapon['core 2'].StatValue"
             v-bind:max="currentWeapon['core 2'].max"
+            v-bind:imported="currentWeapon['core 2'].imported"
           ></StatInput>
         </template>
       </div>
@@ -46,6 +48,7 @@
           v-if="currentWeapon['attribute 1']"
           v-model="currentWeapon['attribute 1'].StatValue"
           v-bind:max="currentWeapon['attribute 1'].Max"
+          v-bind:imported="currentWeapon['attribute 1'].imported"
         ></StatInput>
       </div>
       <div class="slot-element talent">
@@ -270,12 +273,19 @@ export default {
           );
           this.currentWeapon = fromUrlGear;
           // Start from 1 because 0 is used to build the object
-          for (let i = 1; i < splittedIdS.length; i++) {
+          for (let i = 1; i < 6; i++) {
             const id = parseInt(splittedIdS[i]);
             const mapped = map[i];
             this.currentWeapon[mapped.target] = mapped.source.find(
               el => el.index === id
             );
+          }
+
+          const stats = [null, "attribute 1", "core 1", "core 2"];
+          for (let idx = 1; idx < stats.length; idx++) {
+            const stat = stats[idx];
+            const currentStatToUpdate = this.currentWeapon[stat];
+            currentStatToUpdate.imported = splittedIdS[6 + idx];
           }
         }
       }

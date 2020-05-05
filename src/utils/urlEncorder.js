@@ -60,11 +60,11 @@ const urlEncoder = function (idArray) {
             urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.index', '-');
             urlChunks[i] += objectPropToNumber(gear, 'core.index', '-');
             urlChunks[i] += objectPropToNumber(gear, 'mod.index', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'talent.index', '');
-            statsChunks[i] += objectPropToNumber(gear, 'core.StatValue', '-')
-            statsChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
-            statsChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '')
-            statsChunks[i] += objectPropToNumber(gear, 'slot.mod.StatValue', '')
+            urlChunks[i] += objectPropToNumber(gear, 'talent.index', '-');
+            urlChunks[i] += objectPropToNumber(gear, 'core.StatValue', '-')
+            urlChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
+            urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '')
+            urlChunks[i] += objectPropToNumber(gear, 'slot.mod.StatValue', '')
         } else if (i < 9) {
             const weapon = idArray[i];
             urlChunks[i] += objectPropToNumber(weapon, 'id', '-');
@@ -73,17 +73,17 @@ const urlEncoder = function (idArray) {
             urlChunks[i] += objectPropToNumber(weapon, 'optic.index', '-');
             urlChunks[i] += objectPropToNumber(weapon, "under barrel.index", '-');
             urlChunks[i] += objectPropToNumber(weapon, 'magazine.index', '-');
-            urlChunks[i] += objectPropToNumber(weapon, 'muzzle.index', '');
-            statsChunks[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-');
-            statsChunks[i] += objectPropToNumber(weapon, "core 1.StatValue", '-');
-            statsChunks[i] += objectPropToNumber(weapon, "core 2.StatValue", '');
+            urlChunks[i] += objectPropToNumber(weapon, 'muzzle.index', '-');
+            urlChunks[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-');
+            urlChunks[i] += objectPropToNumber(weapon, "core 1.StatValue", '-');
+            urlChunks[i] += objectPropToNumber(weapon, "core 2.StatValue", '');
+            console.log('weapon', urlChunks[i])
         } else if (i < 10) {
             const specialization = idArray[i];
             urlChunks[i] += objectPropToNumber(specialization, 'id', '');
         }
     }
     const url = compressToEncodedURIComponent(urlChunks.join(':'));
-    const urlStats = compressToEncodedURIComponent(statsChunks.join(':')); // Use subject for manual save?
     window.history.pushState("", "", badUrl + url)
 }
 

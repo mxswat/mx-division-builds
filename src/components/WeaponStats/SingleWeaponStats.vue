@@ -79,21 +79,20 @@ export default {
   methods: {
     updateStatsUI(weapon, stats) {
       this.weapon = weapon;
-      const _stats = stats.stats;
-      this.brandsStats = stats.brand;
-      console.log(weapon, stats.stats);
-      const statsKey = Object.keys(_stats);
-      for (let i = 0; i < statsKey.length; i++) {
-        const stat = statsKey[i];
-        if (this.weaponStats[stat]) {
-          this.weaponStats[stat].value = _stats[stat].reduce(
-            (a, b) => parseFloat(a) + parseFloat(b),
-            0
-          );
-        }
-      }
-
       if (this.weapon) {
+        const _stats = stats.stats;
+        this.brandsStats = stats.brand;
+        console.log(weapon, stats.stats);
+        const statsKey = Object.keys(_stats);
+        for (let i = 0; i < statsKey.length; i++) {
+          const stat = statsKey[i];
+          if (this.weaponStats[stat]) {
+            this.weaponStats[stat].value = _stats[stat].reduce(
+              (a, b) => parseFloat(a) + parseFloat(b),
+              0
+            );
+          }
+        }
         const attributeone = this.weapon["attribute 1"];
         const coreone = this.weapon["core 1"];
         const coretwo = this.weapon["core 2"];

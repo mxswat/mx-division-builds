@@ -1,6 +1,6 @@
 {
   "name": "mx-division-tools",
-  "version": "0.2.0-beta",
+  "version": "0.2.5-beta",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

@@ -1,14 +1,11 @@
 <template>
   <div id="app">
     <div class="grid-container" v-if="loaded">
-      <div class="tbd-one"></div>
       <router-view></router-view>
-      <div class="tbd-two"></div>
-    </div>
-    <div class="grid-container" v-if="loaded">
-      <div class="tbd-one"></div>
       <WeaponStats></WeaponStats>
-      <div class="tbd-two"></div>
+      <BasicTile class="general-stats-col no-anim">
+        <GeneralStats></GeneralStats>
+      </BasicTile>
     </div>
   </div>
 </template>
@@ -16,10 +13,14 @@
 <script>
 import { allDataPromies } from "./utils/dataImporter";
 import WeaponStats from "./components/WeaponStats/WeaponStats";
+import GeneralStats from "./components/GeneralStats";
+import BasicTile from "./components/BasicTile";
 export default {
   name: "App",
   components: {
-    WeaponStats
+    WeaponStats,
+    GeneralStats,
+    BasicTile
   },
   data() {
     return {
@@ -49,14 +50,16 @@ body,
   // font-family: "Roboto", sans-serif;
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
+  color: white;
+  margin-bottom: 8px;
 }
 
 .grid-container {
   display: grid;
-  grid-template-columns: 0.25fr 1fr 0.25fr;
+  grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr;
   gap: 8px 8px;
-  grid-template-areas: "tbd-one main-area tbd-two";
+  grid-template-areas: "main-area general-stats-col";
 }
 
 .main-area {
@@ -120,8 +123,11 @@ body,
   grid-area: tbd-one;
 }
 
-.tbd-two {
-  grid-area: tbd-two;
+.tile.general-stats-col {
+  grid-area: general-stats-col;
+  margin-bottom: 8px;
+  position: sticky;
+  top: 0;
 }
 
 // Import first the variables or the override wont work

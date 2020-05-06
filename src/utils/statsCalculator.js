@@ -2,7 +2,9 @@ import {
     brandSetBonusesList
 } from "./dataImporter";
 
-import { Subject } from 'rxjs';
+import {
+    Subject
+} from 'rxjs';
 
 const subject = new Subject();
 
@@ -109,7 +111,7 @@ const updateStats = async function (slots) {
         'Shock Resistance': [],
         'Skill Duration': [],
     }
-    
+
     let primary = {};
 
     let brands = {};
@@ -120,8 +122,8 @@ const updateStats = async function (slots) {
         const slot = slots[i];
         if (slot) {
             if (i < 6) {
-                brands[slot.brand] = brands[slot.brand] || 0
-                brands[slot.brand]++;
+                brands[slot.brand] = brands[slot.brand] || []
+                brands[slot.brand].push(null);
                 if (slot.core) {
                     stats[slot.core.label].push(slot.core.StatValue ? slot.core.StatValue : slot.core.Max);
                 }
@@ -153,12 +155,13 @@ const updateStats = async function (slots) {
     for (const brand in brands) {
         // eslint-disable-next-line
         if (brands.hasOwnProperty(brand)) {
-            const brandCount = brands[brand];
+            const brandCount = brands[brand].length;
             for (let idx = 0; idx < brandCount; idx++) {
                 const found = brandSetBonuses.find(
                     b => b.Brand == `${brand}${idx}`
                 )
                 if (found) {
+                    brands[brand][idx] = `${found.stat} +${found.val}`;
                     stats[found.stat] = stats[found.stat] || []
                     stats[found.stat].push(found.val);
                 }

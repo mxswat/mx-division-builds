@@ -1,12 +1,17 @@
 <template>
-  <div class="weapon-stat" v-if="weapon">
-    <span>{{weapon.name}}</span>
-    <template v-for="(weaponStatsKey, idx) in weaponStatsArr">
-      <span
-        v-if="weaponStats[weaponStatsKey].value"
-        v-bind:key="idx"
-      >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
+  <div class="weapon-stat">
+    <template v-if="weapon">
+      <span class="weapon-name-stat bold">{{weapon.name}}</span>
+      <template v-for="(weaponStatsKey, idx) in weaponStatsArr">
+        <span
+          v-if="weaponStats[weaponStatsKey].value"
+          v-bind:key="idx"
+        >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
+      </template>
     </template>
+    <span class="weapon-name-stat bold" v-if="!weapon">
+      No weapon selected
+    </span>
   </div>
 </template>
 

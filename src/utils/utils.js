@@ -73,10 +73,75 @@ const coreAttributes = [{
     }
 ];
 
+
+const utilityStats = [
+    'Skill Tier',
+    'Skill Damage',
+    'Repair Skills',
+    'Skill Haste',
+    'Status Effects',
+    'Pulse Haste',
+    'Skill Health',
+    'Sheild Health',
+    'Skill Duration',
+]
+
+const offensiveStats = [
+    'Weapon Damage',
+    'Critical Hit Chance',
+    'Critical Hit Damage',
+    'Headshot Damage',
+    'Damage to TOC',
+    'Damage to Armor',
+    'Damage to Health',
+    'Assault Rifle Damage',
+    'LMG Damage',
+    'Marksman Rifle Damage',
+    'Pistol Damage',
+    'Rifle Damage',
+    'Shotgun Damage',
+    'SMG Damage',
+    'Rate of Fire %',
+    'Stability',
+    'Accuracy',
+    'Reload Speed %',
+    'Mag Size %',
+    'Optimal Range',
+    'Swap Speed',
+    'Weapon Handling',
+    'Melee Damage',
+    'Ammo Capacity',
+]
+
+const defensiveStats = [
+    'Armor',
+    'Armor Regeneration',
+    'Hazard Protection',
+    'Health',
+    'Explosive Resistance',
+    'Damage to Health',
+    'Melee Damage',
+    'Armor % on Kill',
+    'Sheild Health',
+    'Armor Regeneration %',
+    'Protection from Elites',
+    'Armor on Kill',
+    'Incoming Repairs',
+    'Bleed Resistance',
+    'Blind Resistance',
+    'Burn Resistance',
+    'Disrupt Resistance',
+    'Shock Resistance',
+    'Skill Duration',
+]
+
 export {
     zipObject,
     csvToArrayWithKeys,
     typeToImgSrc,
     coreAttributes,
-    qualityToCss
+    qualityToCss,
+    utilityStats,
+    offensiveStats,
+    defensiveStats
 };

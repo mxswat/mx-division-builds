@@ -9,11 +9,25 @@
         </div>
       </template>
     </div>
-    <span class="section-title">All Stats</span>
-    <div class="all-stats-list">
-      <div v-for="(vals, stat) in stats" v-bind:key="stat">
-        {{stat}}:
-        <span>{{sumStatVals(vals)}}</span>
+    <span class="section-title">Offensive</span>
+    <div class="stats-list-2-col" v-if="stats">
+      <div v-for="(statName, idx) in offensiveStats" v-bind:key="idx">
+        {{statName}}:
+        <span>{{sumStatVals(stats[statName])}}</span>
+      </div>
+    </div>
+    <span class="section-title">Defensive</span>
+    <div class="stats-list-2-col" v-if="stats">
+      <div v-for="(statName, idx) in defensiveStats" v-bind:key="idx">
+        {{statName}}:
+        <span>{{sumStatVals(stats[statName])}}</span>
+      </div>
+    </div>
+    <span class="section-title">Utility</span>
+    <div class="stats-list-2-col" v-if="stats">
+      <div v-for="(statName, idx) in utilityStats" v-bind:key="idx">
+        {{statName}}:
+        <span>{{sumStatVals(stats[statName])}}</span>
       </div>
     </div>
   </div>
@@ -23,12 +37,16 @@
 import { statsProvider } from "../utils/statsCalculator";
 import { combineLatest, map, timer } from "rxjs";
 import { debounce } from "rxjs/operators";
+import { utilityStats, offensiveStats, defensiveStats } from "../utils/utils";
 export default {
   name: "GeneralStats",
   data() {
     return {
       brands: null,
-      stats: null
+      stats: null,
+      utilityStats: [],
+      offensiveStats: [],
+      defensiveStats: []
     };
   },
   created() {
@@ -39,6 +57,9 @@ export default {
       .subscribe(allStats => {
         _vm.updateStatsUI(allStats);
       });
+    this.utilityStats = utilityStats;
+    this.offensiveStats = offensiveStats;
+    this.defensiveStats = defensiveStats;
   },
   methods: {
     updateStatsUI(allStats) {
@@ -70,7 +91,7 @@ export default {
 }
 .brand-stats {
 }
-.all-stats-list {
+.stats-list-2-col {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

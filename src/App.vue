@@ -56,7 +56,7 @@ body,
 
 .grid-container {
   display: grid;
-  // grid-template-columns: 1fr 0.5fr;
+  grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr;
   gap: 8px 8px;
   grid-template-areas: "main-area general-stats-col" "weapon-stats-container .";

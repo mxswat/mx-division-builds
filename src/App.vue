@@ -60,6 +60,8 @@ body,
   grid-template-rows: 1fr;
   gap: 8px 8px;
   grid-template-areas: "main-area general-stats-col" "weapon-stats-container .";
+  margin-left: 8px;
+  margin-right: 8px;
 }
 
 .main-area {
@@ -67,7 +69,7 @@ body,
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto auto auto;
   gap: 8px 8px;
-  grid-template-areas: "specialization specialization specialization" "primary secondary pistol" "mask backpack chest" "gloves holster kneepads" "skill-one skill-two boh";
+  grid-template-areas: "specialization specialization specialization" "primary secondary pistol" "mask backpack chest" "gloves holster kneepads";
   grid-area: main-area;
 }
 

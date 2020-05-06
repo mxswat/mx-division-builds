@@ -1,5 +1,5 @@
 <template>
-  <div class="main-area">
+  <div class="inventory-gui">
     <BasicTile class="specialization" v-bind:name="'Specialization'">
       <SpecializationSlot v-bind:init="initGearSlot[9]"></SpecializationSlot>
     </BasicTile>
@@ -127,9 +127,120 @@ export default {
 </script>
 
 <style scoped lang="scss">
+@import "../style/_include-media.scss";
+
 .img-slot-bg {
   align-self: center;
   justify-self: center;
   opacity: 0.2;
+}
+
+.inventory-gui {
+  display: grid;
+  grid-template-columns: repeat(3, [col] minmax(0px, 1fr));
+  grid-template-rows: repeat(4, [row] auto);
+  gap: 8px 8px;
+  .specialization {
+    grid-column: col / span 3;
+    grid-row: row;
+  }
+
+  .primary {
+    grid-column: col 1 / span 1;
+    grid-row: row 2;
+  }
+
+  .secondary {
+    grid-column: col 2 / span 1;
+    grid-row: row 2;
+  }
+
+  .pistol {
+    grid-column: col 3 / span 1;
+    grid-row: row 2;
+  }
+
+  .mask {
+    grid-column: col 1 / span 1;
+    grid-row: row 3;
+  }
+
+  .backpack {
+    grid-column: col 2 / span 1;
+    grid-row: row 3;
+  }
+
+  .chest {
+    grid-column: col 3 / span 1;
+    grid-row: row 3;
+  }
+
+  .gloves {
+    grid-column: col 1 / span 1;
+    grid-row: row 4;
+  }
+
+  .holster {
+    grid-column: col 2 / span 1;
+    grid-row: row 4;
+  }
+
+  .kneepads {
+    grid-column: col 3 / span 1;
+    grid-row: row 4;
+  }
+
+  // @include media(">=laptop", "<desktop") {
+  //   grid-template-columns: repeat(2, [col] minmax(0px, 1fr));
+  //   .specialization {
+  //     grid-column: col / span 3;
+  //     grid-row: row;
+  //   }
+
+  //   .primary {
+  //     grid-column: col 1 / span 1;
+  //     grid-row: row 2;
+  //   }
+
+  //   .secondary {
+  //     grid-column: col 2 / span 1;
+  //     grid-row: row 2;
+  //   }
+
+  //   .pistol {
+  //     grid-column: col 3 / span 1;
+  //     grid-row: row 2;
+  //   }
+
+  //   .mask {
+  //     grid-column: col 1 / span 1;
+  //     grid-row: row 3;
+  //   }
+
+  //   .backpack {
+  //     grid-column: col 2 / span 1;
+  //     grid-row: row 3;
+  //   }
+
+  //   .chest {
+  //     grid-column: col 3 / span 1;
+  //     grid-row: row 3;
+  //   }
+
+  //   .gloves {
+  //     grid-column: col 1 / span 1;
+  //     grid-row: row 4;
+  //   }
+
+  //   .holster {
+  //     grid-column: col 2 / span 1;
+  //     grid-row: row 4;
+  //   }
+
+  //   .kneepads {
+  //     grid-column: col 3 / span 1;
+  //     grid-row: row 4;
+  //   }
+  // }
 }
 </style>

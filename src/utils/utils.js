@@ -77,8 +77,8 @@ const coreAttributes = [{
 const utilityStats = [
     'Skill Tier',
     'Skill Damage',
-    'Repair Skills',
     'Skill Haste',
+    'Repair Skills',
     'Status Effects',
     'Pulse Haste',
     'Skill Health',
@@ -88,9 +88,9 @@ const utilityStats = [
 
 const offensiveStats = [
     'Weapon Damage',
+    'Headshot Damage',
     'Critical Hit Chance',
     'Critical Hit Damage',
-    'Headshot Damage',
     'Damage to TOC',
     'Damage to Armor',
     'Damage to Health',

@@ -46,3 +46,67 @@
 .bold {
     font-weight: 700;
 }
+
+// TODO Move me in my correct file
+// Import first the variables or the override wont work
+$vs-colors: (
+  lightest: white,
+  light: white,
+  dark: white,
+  darkest: white
+);
+$vs-dropdown-box-shadow: none;
+$vs-border-radius: 0px;
+$vs-dropdown-bg: #151515;
+// Than import the actuall vue-select scss
+@import "vue-select/src/scss/vue-select.scss";
+
+.vs__dropdown-option {
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.vs__dropdown-option--highlight {
+  background: rgba(255, 165, 0, 0.5);
+  color: white;
+}
+
+.vs__search::placeholder {
+  color: white;
+}
+
+.vs__dropdown-toggle {
+  border: 0;
+  border-bottom: 1px solid white;
+}
+
+.vs--searchable .vs__search,
+.vs--searchable .vs__dropdown-toggle {
+  cursor: pointer;
+}
+
+.vs--searchable.vs--open .vs__search {
+  cursor: text;
+  caret-color: white;
+}
+
+.vs__search:focus::placeholder {
+  color: transparent;
+}
+
+.vs__selected + input.vs__search {
+  position: absolute;
+}
+
+// .vs__selected + input.vs__search[aria-activedescendant] {
+//   position: relative;
+// }
+
+.v-select.vs--open input.vs__search {
+  position: relative;
+}
+
+.vs--single .vs__selected {
+  width: 100%;
+}

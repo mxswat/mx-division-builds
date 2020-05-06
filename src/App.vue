@@ -39,11 +39,11 @@ export default {
 <style lang="scss">
 @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
 @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine-dark.css";
+@import "./style/main.scss";
 
 html,
 body,
-#app,
-.grid-container {
+#app {
   margin: 0;
   background: #252525;
   background: #232830;
@@ -56,142 +56,31 @@ body,
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  grid-template-rows: 1fr;
-  gap: 8px 8px;
-  grid-template-areas: "main-area general-stats-col" "weapon-stats-container .";
+  grid-template-columns: repeat(5, [col] 1fr);
+  grid-template-rows: repeat(2, [row] auto);
+  gap: 8px;
   margin-left: 8px;
   margin-right: 8px;
 }
 
-.main-area {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto auto auto auto;
-  gap: 8px 8px;
-  grid-template-areas: "specialization specialization specialization" "primary secondary pistol" "mask backpack chest" "gloves holster kneepads";
-  grid-area: main-area;
+.inventory-gui {
+  grid-column: col / span 3;
+  grid-row: row;
 }
 
-.specialization {
-  grid-area: specialization;
+.general-stats-col {
+  grid-column: col 4 / span 2;
+  grid-row: row;
 }
 
-.pistol {
-  grid-area: pistol;
-}
-
-.primary {
-  grid-area: primary;
-}
-
-.secondary {
-  grid-area: secondary;
-}
-
-.mask {
-  grid-area: mask;
-}
-
-.backpack {
-  grid-area: backpack;
-}
-
-.chest {
-  grid-area: chest;
-}
-
-.gloves {
-  grid-area: gloves;
-}
-
-.holster {
-  grid-area: holster;
-}
-
-.kneepads {
-  grid-area: kneepads;
-}
-
-.skill-one {
-  grid-area: skill-one;
-}
-
-.skill-two {
-  grid-area: skill-two;
-}
-
-.tbd-one {
-  grid-area: tbd-one;
+.weapon-stats-container {
+  grid-column: col / span 3;
+  grid-row: row 2;
 }
 
 .tile.general-stats-col {
-  grid-area: general-stats-col;
   position: sticky;
   top: 0;
-}
-
-// Import first the variables or the override wont work
-$vs-colors: (
-  lightest: white,
-  light: white,
-  dark: white,
-  darkest: white
-);
-$vs-dropdown-box-shadow: none;
-$vs-border-radius: 0px;
-$vs-dropdown-bg: #151515;
-// Than import the actuall vue-select scss
-@import "vue-select/src/scss/vue-select.scss";
-
-.vs__dropdown-option {
-  color: white;
-  display: flex;
-  align-items: center;
-}
-
-.vs__dropdown-option--highlight {
-  background: rgba(255, 165, 0, 0.5);
-  color: white;
-}
-
-.vs__search::placeholder {
-  color: white;
-}
-
-.vs__dropdown-toggle {
-  border: 0;
-  border-bottom: 1px solid white;
-}
-
-.vs--searchable .vs__search,
-.vs--searchable .vs__dropdown-toggle {
-  cursor: pointer;
-}
-
-.vs--searchable.vs--open .vs__search {
-  cursor: text;
-  caret-color: white;
-}
-
-.vs__search:focus::placeholder {
-  color: transparent;
-}
-
-.vs__selected + input.vs__search {
-  position: absolute;
-}
-
-// .vs__selected + input.vs__search[aria-activedescendant] {
-//   position: relative;
-// }
-
-.v-select.vs--open input.vs__search {
-  position: relative;
-}
-
-.vs--single .vs__selected {
-  width: 100%;
 }
 
 .no-element-selected {
@@ -217,8 +106,6 @@ $vs-dropdown-bg: #151515;
   padding: 10px;
   border-bottom: 1px solid white;
 }
-
-@import "./style/main.scss";
 
 .tile:not(.specialization) {
   min-height: 230px;

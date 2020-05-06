@@ -39,14 +39,26 @@ Update "DB" to have a multiplicative vs additive map
 
 DPS Calculator
 
-DPS Calculator + Talents
+DPS Calculator + Talents handling
 
-### Tasks required to be done before going to Pre-Release
+DPS Calculator + Team-mate Talents handling
 
-TDB 
+### Task
+
+Generate Screenshot of the UI using JS
+
+Generate Report of the Build for easy text sharing
+
+### Tasks required to be done before going to Release
+
+Beta 2
+
+Beta 3
 
 ### Tasks cool to add after release
+
 Friend build interaction 
 
 ### Know issues
-Ammo dump does not have a a third slot 
+
+Ammo dump does not have a a third slot and probably will not have It for the next release

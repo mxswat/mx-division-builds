@@ -198,23 +198,28 @@ export default {
 
 $slots: (
   // specialization ((1, 1, 2), (1, 2, 1)),
-  primary ((1, 1, 2), (1, 1, 2)),
-  secondary ((2, 1, 2), (2, 1, 2)),
-  pistol ((3, 1, 2), (1, 1, 3))
+  primary ((1, 2), (1, 2)),
+  secondary ((2, 2), (2, 2)),
+  pistol ((3, 2), (1, 3))
 );
 
-@each $slot in $slots {
+$increment: 0;
+@for $idx from 1 through length($slots) {
+  $slot: nth($slots, $idx);
   $slotClass: nth($slot, 1);
   $values: nth($slot, 2);
-
   .#{$slotClass} {
     @for $i from 1 through length($values) {
       $x: nth($values, $i);
       $col: nth($x, 1);
-      $span: nth($x, 2);
-      $row: nth($x, 3);
+      $row: nth($x, 2);
+      @if ($i == 3) {
+        .#{$i} {
+          color: red;
+        }
+      }
       @include media(">=tablet", "<=laptop") {
-        grid-column: col #{$col} / span #{$span};
+        grid-column: col #{$col} / span 1;
         grid-row: row #{$row};
       }
     }

@@ -54,7 +54,8 @@ export default {
 .brand-container {
   display: flex;
   flex-direction: column;
-  flex: 1;
+  flex-shrink: 1;
+  flex-grow: 0;
   flex-basis: calc(33.33% - 16px);
   padding: 8px;
 }
@@ -62,6 +63,5 @@ export default {
   margin-bottom: 8px;
 }
 .brand-stats {
-  padding-left: 8px;
 }
 </style>

@@ -56,10 +56,10 @@ body,
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 0.5fr;
+  // grid-template-columns: 1fr 0.5fr;
   grid-template-rows: 1fr;
   gap: 8px 8px;
-  grid-template-areas: "main-area general-stats-col";
+  grid-template-areas: "main-area general-stats-col" "weapon-stats-container .";
 }
 
 .main-area {
@@ -125,7 +125,6 @@ body,
 
 .tile.general-stats-col {
   grid-area: general-stats-col;
-  margin-bottom: 8px;
   position: sticky;
   top: 0;
 }

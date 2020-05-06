@@ -27,18 +27,26 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ~Add Specialization slot~
 
-Update UI to allow stats editing
+~Update UI to allow stats editing~
+
+~Stats editing~
 
 Make the UI working on Mobile devices
 
+###  Tasks required to be done before going to beta 3
+
 Update "DB" to have a multiplicative vs additive map 
 
-Stats editing
+DPS Calculator
 
+DPS Calculator + Talents
 
 ### Tasks required to be done before going to Pre-Release
-Friend build interaction 
+
 TDB 
+
+### Tasks cool to add after release
+Friend build interaction 
 
 ### Know issues
 Ammo dump does not have a a third slot 

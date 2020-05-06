@@ -140,107 +140,84 @@ export default {
   grid-template-columns: repeat(3, [col] minmax(0px, 1fr));
   grid-template-rows: repeat(4, [row] auto);
   gap: 8px 8px;
-  .specialization {
-    grid-column: col / span 3;
-    grid-row: row;
+
+  @include media(">=tablet", "<=laptop") {
+    grid-template-columns: repeat(2, [col] minmax(0px, 1fr));
   }
+}
 
-  .primary {
-    grid-column: col 1 / span 1;
-    grid-row: row 2;
+.specialization {
+  grid-column: col 1 / span 3;
+  grid-row: row 1;
+}
+
+.primary {
+  grid-column: col 1 / span 1;
+  grid-row: row 2;
+}
+
+.secondary {
+  grid-column: col 2 / span 1;
+  grid-row: row 2;
+}
+
+.pistol {
+  grid-column: col 3 / span 1;
+  grid-row: row 2;
+}
+
+.mask {
+  grid-column: col 1 / span 1;
+  grid-row: row 3;
+}
+
+.backpack {
+  grid-column: col 2 / span 1;
+  grid-row: row 3;
+}
+
+.chest {
+  grid-column: col 3 / span 1;
+  grid-row: row 3;
+}
+
+.gloves {
+  grid-column: col 1 / span 1;
+  grid-row: row 4;
+}
+
+.holster {
+  grid-column: col 2 / span 1;
+  grid-row: row 4;
+}
+
+.kneepads {
+  grid-column: col 3 / span 1;
+  grid-row: row 4;
+}
+
+$slots: (
+  // specialization ((1, 1, 2), (1, 2, 1)),
+  primary ((1, 1, 2), (1, 1, 2)),
+  secondary ((2, 1, 2), (2, 1, 2)),
+  pistol ((3, 1, 2), (1, 1, 3))
+);
+
+@each $slot in $slots {
+  $slotClass: nth($slot, 1);
+  $values: nth($slot, 2);
+
+  .#{$slotClass} {
+    @for $i from 1 through length($values) {
+      $x: nth($values, $i);
+      $col: nth($x, 1);
+      $span: nth($x, 2);
+      $row: nth($x, 3);
+      @include media(">=tablet", "<=laptop") {
+        grid-column: col #{$col} / span #{$span};
+        grid-row: row #{$row};
+      }
+    }
   }
-
-  .secondary {
-    grid-column: col 2 / span 1;
-    grid-row: row 2;
-  }
-
-  .pistol {
-    grid-column: col 3 / span 1;
-    grid-row: row 2;
-  }
-
-  .mask {
-    grid-column: col 1 / span 1;
-    grid-row: row 3;
-  }
-
-  .backpack {
-    grid-column: col 2 / span 1;
-    grid-row: row 3;
-  }
-
-  .chest {
-    grid-column: col 3 / span 1;
-    grid-row: row 3;
-  }
-
-  .gloves {
-    grid-column: col 1 / span 1;
-    grid-row: row 4;
-  }
-
-  .holster {
-    grid-column: col 2 / span 1;
-    grid-row: row 4;
-  }
-
-  .kneepads {
-    grid-column: col 3 / span 1;
-    grid-row: row 4;
-  }
-
-  // @include media(">=laptop", "<desktop") {
-  //   grid-template-columns: repeat(2, [col] minmax(0px, 1fr));
-  //   .specialization {
-  //     grid-column: col / span 3;
-  //     grid-row: row;
-  //   }
-
-  //   .primary {
-  //     grid-column: col 1 / span 1;
-  //     grid-row: row 2;
-  //   }
-
-  //   .secondary {
-  //     grid-column: col 2 / span 1;
-  //     grid-row: row 2;
-  //   }
-
-  //   .pistol {
-  //     grid-column: col 3 / span 1;
-  //     grid-row: row 2;
-  //   }
-
-  //   .mask {
-  //     grid-column: col 1 / span 1;
-  //     grid-row: row 3;
-  //   }
-
-  //   .backpack {
-  //     grid-column: col 2 / span 1;
-  //     grid-row: row 3;
-  //   }
-
-  //   .chest {
-  //     grid-column: col 3 / span 1;
-  //     grid-row: row 3;
-  //   }
-
-  //   .gloves {
-  //     grid-column: col 1 / span 1;
-  //     grid-row: row 4;
-  //   }
-
-  //   .holster {
-  //     grid-column: col 2 / span 1;
-  //     grid-row: row 4;
-  //   }
-
-  //   .kneepads {
-  //     grid-column: col 3 / span 1;
-  //     grid-row: row 4;
-  //   }
-  // }
 }
 </style>

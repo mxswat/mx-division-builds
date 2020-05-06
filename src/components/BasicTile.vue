@@ -6,12 +6,6 @@
 </template>
 
 <script>
-const qualityToCss = {
-  "High End": "high-end",
-  Named: "named",
-  Exotic: "exotic",
-  Gearset: "gearset"
-};
 
 export default {
   name: "BasicTile",
@@ -26,8 +20,7 @@ export default {
   },
   methods: {
     slotChanged(gear) {
-      const quality = gear.quality || 'Exotic';
-      this.gearClass = qualityToCss[quality] + " no-anim";
+      this.gearClass = "no-anim";
       this.$parent.slotChanged(this.name, gear);
     }
   }

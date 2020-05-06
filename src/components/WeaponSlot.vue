@@ -1,7 +1,11 @@
 <template>
   <div @click="onClick()" class="weapon-container">
     <template v-if="isWeaponSelected()">
-      <div class="slot-element weapon-name" v-on:click="openWeaponsModal()">{{ currentWeapon.name}}</div>
+      <div
+        class="slot-element weapon-name"
+        v-bind:class="[qualityToCSS(currentWeapon.quality)]"
+        v-on:click="openWeaponsModal()"
+      >{{ currentWeapon.name}}</div>
       <div class="slot-element stat-edit">
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
         <StatInput
@@ -104,7 +108,7 @@
                   </div>
                 </template>
               </v-select>
-              <span class="mod-stat" v-if="currentWeapon[mod]">
+              <span class="mod-stat selected" v-if="currentWeapon[mod]">
                 <span
                   class="mod-increase"
                   v-if="currentWeapon[mod].pos"
@@ -130,6 +134,7 @@ import { openWeaponsModal } from "../utils/modalService";
 import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
 import { GearProvider } from "../utils/gearService";
+import { qualityToCss } from "../utils/utils";
 import Vue from "vue";
 
 import StatInput from "./StatInput";
@@ -174,6 +179,9 @@ export default {
     });
   },
   methods: {
+    qualityToCSS(quality) {
+      return qualityToCss[quality];
+    },
     isWeaponSelected() {
       return this.currentWeapon && this.currentWeapon.name;
     },
@@ -306,27 +314,9 @@ export default {
   color: white;
 }
 
-.weapon-name {
-  border-bottom: 1px solid white;
-  padding: 8px;
-  cursor: pointer;
-  position: relative;
-  &::after {
-    content: "";
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    right: 6px;
-    background-position: center;
-    background-size: cover;
-    filter: invert(1);
-  }
-}
-
 span.core {
   flex: 3;
-  padding: 8px;
+  padding: 4px 8px;
   border-bottom: 1px solid white;
 }
 
@@ -339,7 +329,10 @@ span.core {
   display: flex;
   flex-wrap: wrap;
   padding: 6px 10px;
-  border-bottom: 1px solid white;
+  &.selected {
+    padding-left: 20px;
+    border-bottom: 1px solid white;
+  }
 }
 
 .mod-increase {

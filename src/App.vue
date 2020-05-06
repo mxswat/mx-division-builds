@@ -45,7 +45,10 @@ body,
 .grid-container {
   margin: 0;
   background: #252525;
-  font-family: "Roboto", sans-serif;
+  background: #232830;
+  // font-family: "Roboto", sans-serif;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
 }
 
 .grid-container {

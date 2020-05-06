@@ -1,7 +1,11 @@
 <template>
   <div @click="onClick()" class="gear-container">
     <template v-if="isGearSelected()">
-      <div class="slot-element gear-name" v-on:click="openGearModal()">{{ currentGear.itemName}}</div>
+      <div
+        class="slot-element gear-name"
+        v-bind:class="[qualityToCSS(currentGear.quality)]"
+        v-on:click="openGearModal()"
+      >{{ currentGear.itemName}}</div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
       <div class="slot-element stat-edit core-attribute">
         <v-select
@@ -119,7 +123,7 @@
 <script>
 import { openGearModal } from "../utils/modalService";
 import { GearBase } from "../utils/classes";
-import { typeToImgSrc, coreAttributes } from "../utils/utils";
+import { typeToImgSrc, coreAttributes, qualityToCss } from "../utils/utils";
 import {
   gearModsList,
   gearAttributesList,
@@ -149,6 +153,9 @@ export default {
     };
   },
   methods: {
+    qualityToCSS(quality) {
+      return qualityToCss[quality];
+    },
     isGearSelected() {
       return this.currentGear && this.currentGear.itemName;
     },
@@ -323,24 +330,6 @@ export default {
 .gear-container {
   height: 100%;
   color: white;
-}
-
-.gear-name {
-  border-bottom: 1px solid white;
-  padding: 8px;
-  cursor: pointer;
-  position: relative;
-  &::after {
-    content: "";
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    right: 6px;
-    background-position: center;
-    background-size: cover;
-    filter: invert(1);
-  }
 }
 
 // attribute-label

@@ -43,6 +43,12 @@ const typeToImgSrc = {
     }
 }
 
+const qualityToCss = {
+    "High End": "high-end",
+    Named: "named",
+    Exotic: "exotic",
+    Gearset: "gearset"
+};
 
 const coreAttributes = [{
         label: "Weapon Damage",
@@ -71,5 +77,6 @@ export {
     zipObject,
     csvToArrayWithKeys,
     typeToImgSrc,
-    coreAttributes
+    coreAttributes,
+    qualityToCss
 };

@@ -38,6 +38,6 @@ export default {
 .primary,
 .secondary,
 .sidearm {
-  background: #151515;
+  background: rgba(0, 0, 0, 0.25);
 }
 </style>

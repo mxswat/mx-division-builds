@@ -1,3 +1,44 @@
 @import './scrollbar.scss';
 @import './slots-common.scss';
 @import './slots-stat-edit.scss';
+
+.gear-name,
+.weapon-name {
+    border-bottom: 1px solid white;
+    padding: 8px;
+    cursor: pointer;
+    position: relative;
+
+    &::after {
+        content: "";
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
+        height: 15px;
+        width: 15px;
+        right: 6px;
+        background-position: center;
+        background-size: cover;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        filter: invert(1);
+    }
+
+    font-weight: 700;
+    color: black;
+
+    &.high-end {
+        background: rgba(255, 175, 16, 1);
+    }
+
+    &.named {
+        background: rgba(255, 147, 16, 1);
+    }
+
+    &.exotic {
+        background: rgba(255, 94, 0, 1);
+    }
+
+    &.gearset {
+        background: rgba(7, 201, 114, 1);
+    }
+}

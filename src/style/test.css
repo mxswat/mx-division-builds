@@ -1,0 +1,118 @@
+@media (min-width: 768px) and (max-width: 1024px) {
+  .primary {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 0 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .primary {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 0 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .secondary {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 1 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .secondary {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 1 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pistol {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 1 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .pistol {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 1 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mask {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 2 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .mask {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 2 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .backpack {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 2 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .backpack {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 2 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .chest {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 3 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .chest {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 3 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gloves {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 3 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .gloves {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 3 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .holster {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 4 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .holster {
+    grid-column: col 2  /  span 1 !important;
+    grid-row: row 4 !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .kneepads {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 4 !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .kneepads {
+    grid-column: col 1  /  span 1 !important;
+    grid-row: row 4 !important;
+  }
+}
+
+/*# sourceMappingURL=test.css.map */

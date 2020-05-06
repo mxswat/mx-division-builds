@@ -9,21 +9,30 @@
         </div>
       </template>
     </div>
-    <span class="section-title">Offensive</span>
+    <span class="section-title offensive">
+      <img src="icons/offense1.png" class="image" /> 
+      Offensive
+    </span>
     <div class="stats-list-2-col" v-if="stats">
       <div v-for="(statName, idx) in offensiveStats" v-bind:key="idx">
         {{statName}}:
         <span>{{sumStatVals(stats[statName])}}</span>
       </div>
     </div>
-    <span class="section-title">Defensive</span>
+    <span class="section-title defensive">
+      <img src="icons/defense1.png" class="image" />
+      Defensive
+    </span>
     <div class="stats-list-2-col" v-if="stats">
       <div v-for="(statName, idx) in defensiveStats" v-bind:key="idx">
         {{statName}}:
         <span>{{sumStatVals(stats[statName])}}</span>
       </div>
     </div>
-    <span class="section-title">Utility</span>
+    <span class="section-title utility">
+      <img src="icons/tech1.png" class="image" />
+      Utility
+    </span>
     <div class="stats-list-2-col" v-if="stats">
       <div v-for="(statName, idx) in utilityStats" v-bind:key="idx">
         {{statName}}:
@@ -115,11 +124,26 @@ export default {
   font-weight: 700;
   border-bottom: 1px solid white;
   width: 100%;
-  display: block;
   margin-bottom: 16px;
   position: sticky;
   top: 0;
   background: #1a1e24;
+  display: flex;
+  align-items: center;
   padding: 8px 0px;
+  .image {
+    width: 25px;
+    margin-right: 4px;
+  }
+}
+
+.offensive {
+  color: #ce474d;
+}
+.defensive {
+  color: #82abd6;
+}
+.utility {
+  color: #f7d07c;
 }
 </style>

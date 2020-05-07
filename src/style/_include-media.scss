@@ -30,6 +30,7 @@
 ///  $breakpoints: ('phone': 320px);
 ///
 $breakpoints: ('phone': 425px,
+  'uibreak': 650px,
   'tablet': 768px,
   'laptop': 1024px,
   'desktop': 1920px) !default;

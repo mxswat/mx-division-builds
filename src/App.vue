@@ -62,7 +62,7 @@ body,
   gap: 8px;
   margin-left: 8px;
   margin-right: 8px;
-  @include media("<=phone") {
+  @include media("<=uibreak") {
     grid-template-columns: repeat(1, [col] 1fr);
     .inventory-gui {
       grid-column: col 1;

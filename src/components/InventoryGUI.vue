@@ -3,28 +3,25 @@
     <BasicTile class="specialization" v-bind:name="'Specialization'">
       <SpecializationSlot v-bind:init="initGearSlot[9]"></SpecializationSlot>
     </BasicTile>
-    <!-- <img class="img-slot-bg primary" src="icons/main-weapon.png" />
-    <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
-    <img class="img-slot-bg pistol" src="icons/sidearm.png" />
-    <img class="img-slot-bg mask" src="icons/mask.png" />
-    <img class="img-slot-bg backpack" src="icons/backpack.png" />
-    <img class="img-slot-bg chest" src="icons/chest.png" />
-    <img class="img-slot-bg gloves" src="icons/gloves.png" />
-    <img class="img-slot-bg holster" src="icons/holster.png" />
-    <img class="img-slot-bg kneepads" src="icons/kneepads.png" /> -->
+
     <BasicTile class="primary" v-bind:name="'Primary'">
+      <img class="img-slot-bg primary" src="icons/main-weapon.png" />
       <WeaponSlot v-bind:init="initGearSlot[6]" v-bind:name="'Primary'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="secondary" v-bind:name="'Secondary'">
+      <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
       <WeaponSlot v-bind:init="initGearSlot[7]" v-bind:name="'Secondary'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="pistol" v-bind:name="'SideArm'">
+      <img class="img-slot-bg pistol" src="icons/sidearm.png" />
       <WeaponSlot v-bind:init="initGearSlot[8]" v-bind:slotFilter="'S'" v-bind:name="'SideArm'"></WeaponSlot>
     </BasicTile>
     <BasicTile class="mask" v-bind:name="'Mask'">
+      <img class="img-slot-bg mask" src="icons/mask.png" />
       <GearSlot v-bind:name="'Mask'" v-bind:init="initGearSlot[0]" v-bind:gearList="maskList"></GearSlot>
     </BasicTile>
     <BasicTile class="backpack" v-bind:name="'Backpack'">
+      <img class="img-slot-bg backpack" src="icons/backpack.png" />
       <GearSlot
         v-bind:name="'Backpack'"
         v-bind:init="initGearSlot[1]"
@@ -32,15 +29,19 @@
       ></GearSlot>
     </BasicTile>
     <BasicTile class="chest" v-bind:name="'Chest'">
+      <img class="img-slot-bg chest" src="icons/chest.png" />
       <GearSlot v-bind:name="'Chest'" v-bind:init="initGearSlot[2]" v-bind:gearList="chestList"></GearSlot>
     </BasicTile>
     <BasicTile class="gloves" v-bind:name="'Gloves'">
+      <img class="img-slot-bg gloves" src="icons/gloves.png" />
       <GearSlot v-bind:name="'Gloves'" v-bind:init="initGearSlot[3]" v-bind:gearList="glovesList"></GearSlot>
     </BasicTile>
     <BasicTile class="holster" v-bind:name="'Holster'">
+      <img class="img-slot-bg holster" src="icons/holster.png" />
       <GearSlot v-bind:name="'Holster'" v-bind:init="initGearSlot[4]" v-bind:gearList="holsterList"></GearSlot>
     </BasicTile>
     <BasicTile class="kneepads" v-bind:name="'Kneepads'">
+      <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
       <GearSlot
         v-bind:name="'Kneepads'"
         v-bind:init="initGearSlot[5]"
@@ -131,106 +132,13 @@ export default {
 @use "sass:math";
 @import "../style/_include-media.scss";
 
-.img-slot-bg {
-  align-self: center;
-  justify-self: center;
-  opacity: 0.2;
-}
-
 .inventory-gui {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(372px, 1fr)
-  );
+  grid-template-columns: repeat(auto-fit, minmax(372px, 1fr));
   gap: 8px 8px;
 }
 
 .specialization {
   grid-column: 1 / -1;
 }
-///////////////////////////////////////////////////////////
-// Manual controll over grid resize 
-// With the formula below
-// .specialization {
-//   grid-column: col 1 / span 3;
-//   grid-row: row 1;
-// }
-// .primary {
-//   grid-column: col 1 / span 1;
-//   grid-row: row 2;
-// }
-
-// .secondary {
-//   grid-column: col 2 / span 1;
-//   grid-row: row 2;
-// }
-
-// .pistol {
-//   grid-column: col 3 / span 1;
-//   grid-row: row 2;
-// }
-
-// .mask {
-//   grid-column: col 1 / span 1;
-//   grid-row: row 3;
-// }
-
-// .backpack {
-//   grid-column: col 2 / span 1;
-//   grid-row: row 3;
-// }
-
-// .chest {
-//   grid-column: col 3 / span 1;
-//   grid-row: row 3;
-// }
-
-// .gloves {
-//   grid-column: col 1 / span 1;
-//   grid-row: row 4;
-// }
-
-// .holster {
-//   grid-column: col 2 / span 1;
-//   grid-row: row 4;
-// }
-
-// .kneepads {
-//   grid-column: col 3 / span 1;
-//   grid-row: row 4;
-// }
-
-// $slots: (
-//   "primary" (1, 2),
-//   "secondary" (2, 2),
-//   "pistol" (3, 2),
-//   "mask" (1, 3),
-//   "backpack" (2, 3),
-//   "chest" (3, 3),
-//   "gloves" (1, 4),
-//   "holster" (2, 4),
-//   "kneepads" (3, 4)
-// );
-
-// @for $idx from 1 through length($slots) {
-//   $slot: nth($slots, $idx);
-//   $slotClass: nth($slot, 1);
-//   $values: nth($slot, 2);
-
-//   .#{$slotClass} {
-//     $col: nth($values, 1);
-//     $row: nth($values, 2);
-
-//     $newCol: (($idx - 1) % 2) + 1;
-//     $col: $newCol;
-//     // $row: math.floor($idx / 2) + 2;
-//     $row: math.floor(($idx + 1) / 2) + 1;
-
-//     @include media(">=tablet", "<=laptop") {
-//       grid-column: col #{$col} #{" / "} span 1;
-//       grid-row: row #{$row};
-//     }
-//   }
-// }
 </style>

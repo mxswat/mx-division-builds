@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 export default {
   name: "BasicTile",
   props: {
@@ -28,6 +27,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
+.img-slot-bg {
+  opacity: 0.2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .tile {
   background: rgba(0, 0, 0, 0.25);
   position: relative;

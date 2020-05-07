@@ -29,10 +29,9 @@ export default {
 <style lang="scss" scoped>
 .weapon-stats-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 8px 8px;
-  grid-template-areas: "primary secondary sidearm";
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(1, [row] auto);
+  gap: 8px;
 }
 
 .primary,

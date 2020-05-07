@@ -100,6 +100,7 @@ body,
 .tile.general-stats-col {
   position: sticky;
   top: 0;
+  height: fit-content;
 }
 
 .no-element-selected {

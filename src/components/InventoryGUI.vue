@@ -199,19 +199,16 @@ export default {
 }
 
 $slots: (
-  // specialization ((1, 1, 2), (1, 2, 1)),
-    "primary" ((1, 2), (1, 2)),
-  "secondary" ((2, 2), (2, 2)),
-  "pistol" ((3, 2), (1, 3)),
-  "mask" ((1, 3), (1, 3)),
-  "backpack" ((2, 3), (2, 3)),
-  "chest" ((3, 3), (3, 3)),
-  "gloves" ((1, 4), (1, 4)),
-  "holster" ((2, 4), (2, 4)),
-  "kneepads" ((3, 4), (3, 4))
+  "primary" (1, 2),
+  "secondary" (2, 2),
+  "pistol" (3, 2),
+  "mask" (1, 3),
+  "backpack" (2, 3),
+  "chest" (3, 3),
+  "gloves" (1, 4),
+  "holster" (2, 4),
+  "kneepads" (3, 4)
 );
-
-$increment: 1;
 
 @for $idx from 1 through length($slots) {
   $slot: nth($slots, $idx);
@@ -219,19 +216,17 @@ $increment: 1;
   $values: nth($slot, 2);
 
   .#{$slotClass} {
-    @for $i from 1 through length($values) {
-      $x: nth($values, $i);
-      $col: nth($x, 1);
-      $row: nth($x, 2);
+    $col: nth($values, 1);
+    $row: nth($values, 2);
 
-      $newCol: (($idx - 1) % 2) + 1;
-      $col: $newCol;
-      $row: math.floor($idx / 2) +1;
+    $newCol: (($idx - 1) % 2) + 1;
+    $col: $newCol;
+    // $row: math.floor($idx / 2) + 2;
+    $row: math.floor(($idx + 1) / 2) + 1;
 
-      @include media(">=tablet", "<=laptop") {
-        grid-column: col #{$col} #{" / "} span 1 !important;
-        grid-row: row #{$row} !important;
-      }
+    @include media(">=tablet", "<=laptop") {
+      grid-column: col #{$col} #{" / "} span 1;
+      grid-row: row #{$row};
     }
   }
 }

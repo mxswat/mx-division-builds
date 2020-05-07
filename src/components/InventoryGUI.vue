@@ -3,7 +3,7 @@
     <BasicTile class="specialization" v-bind:name="'Specialization'">
       <SpecializationSlot v-bind:init="initGearSlot[9]"></SpecializationSlot>
     </BasicTile>
-    <img class="img-slot-bg primary" src="icons/main-weapon.png" />
+    <!-- <img class="img-slot-bg primary" src="icons/main-weapon.png" />
     <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
     <img class="img-slot-bg pistol" src="icons/sidearm.png" />
     <img class="img-slot-bg mask" src="icons/mask.png" />
@@ -11,7 +11,7 @@
     <img class="img-slot-bg chest" src="icons/chest.png" />
     <img class="img-slot-bg gloves" src="icons/gloves.png" />
     <img class="img-slot-bg holster" src="icons/holster.png" />
-    <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
+    <img class="img-slot-bg kneepads" src="icons/kneepads.png" /> -->
     <BasicTile class="primary" v-bind:name="'Primary'">
       <WeaponSlot v-bind:init="initGearSlot[6]" v-bind:name="'Primary'"></WeaponSlot>
     </BasicTile>
@@ -139,95 +139,98 @@ export default {
 
 .inventory-gui {
   display: grid;
-  grid-template-columns: repeat(3, [col] minmax(0px, 1fr));
-  grid-template-rows: repeat(4, [row] auto);
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(372px, 1fr)
+  );
   gap: 8px 8px;
-
-  @include media(">=tablet", "<=laptop") {
-    grid-template-columns: repeat(2, [col] minmax(0px, 1fr));
-  }
 }
 
 .specialization {
-  grid-column: col 1 / span 3;
-  grid-row: row 1;
+  grid-column: 1 / -1;
 }
+///////////////////////////////////////////////////////////
+// Manual controll over grid resize 
+// With the formula below
+// .specialization {
+//   grid-column: col 1 / span 3;
+//   grid-row: row 1;
+// }
+// .primary {
+//   grid-column: col 1 / span 1;
+//   grid-row: row 2;
+// }
 
-.primary {
-  grid-column: col 1 / span 1;
-  grid-row: row 2;
-}
+// .secondary {
+//   grid-column: col 2 / span 1;
+//   grid-row: row 2;
+// }
 
-.secondary {
-  grid-column: col 2 / span 1;
-  grid-row: row 2;
-}
+// .pistol {
+//   grid-column: col 3 / span 1;
+//   grid-row: row 2;
+// }
 
-.pistol {
-  grid-column: col 3 / span 1;
-  grid-row: row 2;
-}
+// .mask {
+//   grid-column: col 1 / span 1;
+//   grid-row: row 3;
+// }
 
-.mask {
-  grid-column: col 1 / span 1;
-  grid-row: row 3;
-}
+// .backpack {
+//   grid-column: col 2 / span 1;
+//   grid-row: row 3;
+// }
 
-.backpack {
-  grid-column: col 2 / span 1;
-  grid-row: row 3;
-}
+// .chest {
+//   grid-column: col 3 / span 1;
+//   grid-row: row 3;
+// }
 
-.chest {
-  grid-column: col 3 / span 1;
-  grid-row: row 3;
-}
+// .gloves {
+//   grid-column: col 1 / span 1;
+//   grid-row: row 4;
+// }
 
-.gloves {
-  grid-column: col 1 / span 1;
-  grid-row: row 4;
-}
+// .holster {
+//   grid-column: col 2 / span 1;
+//   grid-row: row 4;
+// }
 
-.holster {
-  grid-column: col 2 / span 1;
-  grid-row: row 4;
-}
+// .kneepads {
+//   grid-column: col 3 / span 1;
+//   grid-row: row 4;
+// }
 
-.kneepads {
-  grid-column: col 3 / span 1;
-  grid-row: row 4;
-}
+// $slots: (
+//   "primary" (1, 2),
+//   "secondary" (2, 2),
+//   "pistol" (3, 2),
+//   "mask" (1, 3),
+//   "backpack" (2, 3),
+//   "chest" (3, 3),
+//   "gloves" (1, 4),
+//   "holster" (2, 4),
+//   "kneepads" (3, 4)
+// );
 
-$slots: (
-  "primary" (1, 2),
-  "secondary" (2, 2),
-  "pistol" (3, 2),
-  "mask" (1, 3),
-  "backpack" (2, 3),
-  "chest" (3, 3),
-  "gloves" (1, 4),
-  "holster" (2, 4),
-  "kneepads" (3, 4)
-);
+// @for $idx from 1 through length($slots) {
+//   $slot: nth($slots, $idx);
+//   $slotClass: nth($slot, 1);
+//   $values: nth($slot, 2);
 
-@for $idx from 1 through length($slots) {
-  $slot: nth($slots, $idx);
-  $slotClass: nth($slot, 1);
-  $values: nth($slot, 2);
+//   .#{$slotClass} {
+//     $col: nth($values, 1);
+//     $row: nth($values, 2);
 
-  .#{$slotClass} {
-    $col: nth($values, 1);
-    $row: nth($values, 2);
+//     $newCol: (($idx - 1) % 2) + 1;
+//     $col: $newCol;
+//     // $row: math.floor($idx / 2) + 2;
+//     $row: math.floor(($idx + 1) / 2) + 1;
 
-    $newCol: (($idx - 1) % 2) + 1;
-    $col: $newCol;
-    // $row: math.floor($idx / 2) + 2;
-    $row: math.floor(($idx + 1) / 2) + 1;
-
-    @include media(">=tablet", "<=laptop") {
-      grid-column: col #{$col} #{" / "} span 1;
-      grid-row: row #{$row};
-    }
-  }
-}
+//     @include media(">=tablet", "<=laptop") {
+//       grid-column: col #{$col} #{" / "} span 1;
+//       grid-row: row #{$row};
+//     }
+//   }
+// }
 </style>

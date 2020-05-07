@@ -40,6 +40,7 @@ export default {
 @import "../node_modules/ag-grid-community/dist/styles/ag-grid.css";
 @import "../node_modules/ag-grid-community/dist/styles/ag-theme-alpine-dark.css";
 @import "./style/main.scss";
+@import "./style/_include-media.scss";
 
 html,
 body,
@@ -61,6 +62,24 @@ body,
   gap: 8px;
   margin-left: 8px;
   margin-right: 8px;
+  @include media("<=phone") {
+    grid-template-columns: repeat(1, [col] 1fr);
+    .inventory-gui {
+      grid-column: col 1;
+      grid-row: row 1;
+    }
+    .general-stats-col {
+      grid-column: col 1;
+      grid-row: row 2;
+      &.tile {
+        position: relative;
+      }
+    }
+    .weapon-stats-container {
+      grid-column: col 1;
+      grid-row: row 3;
+    }
+  }
 }
 
 .inventory-gui {

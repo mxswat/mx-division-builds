@@ -29,7 +29,7 @@
 /// @example scss - Creates a single breakpoint with the label `phone`
 ///  $breakpoints: ('phone': 320px);
 ///
-$breakpoints: ('phone': 320px,
+$breakpoints: ('phone': 425px,
   'tablet': 768px,
   'laptop': 1024px,
   'desktop': 1920px) !default;

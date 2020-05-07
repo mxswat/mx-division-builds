@@ -3,7 +3,6 @@
     <BasicTile class="specialization" v-bind:name="'Specialization'">
       <SpecializationSlot v-bind:init="initGearSlot[9]"></SpecializationSlot>
     </BasicTile>
-
     <BasicTile class="primary" v-bind:name="'Primary'">
       <img class="img-slot-bg primary" src="icons/main-weapon.png" />
       <WeaponSlot v-bind:init="initGearSlot[6]" v-bind:name="'Primary'"></WeaponSlot>
@@ -48,9 +47,6 @@
         v-bind:gearList="kneepadsList"
       ></GearSlot>
     </BasicTile>
-    <!-- <BasicTile class="skill-one"></BasicTile>
-    <BasicTile class="skill-two"></BasicTile>
-    <BasicTile class="skill-two"></BasicTile>-->
   </div>
 </template>
 

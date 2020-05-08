@@ -130,7 +130,7 @@ export default {
 
 .inventory-gui {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(372px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 8px 8px;
 }
 

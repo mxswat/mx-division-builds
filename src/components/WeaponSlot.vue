@@ -5,7 +5,11 @@
         class="slot-element weapon-name"
         v-bind:class="[qualityToCSS(currentWeapon.quality)]"
         v-on:click="openWeaponsModal()"
-      >{{ currentWeapon.name}}</div>
+      >{{ currentWeapon.name}}
+      <template v-if="isExotic(currentWeapon) || isNamed(currentWeapon) ">
+         ({{currentWeapon.variant}})
+      </template>
+      </div>
       <div class="slot-element stat-edit">
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
         <StatInput
@@ -195,8 +199,8 @@ export default {
     },
     onModalClose(data) {
       this.currentWeapon = new WeaponBase(data);
-      const isExotic = this.currentWeapon.quality === "Exotic";
-      const isNamed = this.currentWeapon.quality === "Named";
+      const isExotic = this.isExotic(this.currentWeapon);
+      const isNamed = this.isNamed(this.currentWeapon);
       if (isExotic || isNamed) {
         this.currentWeapon["attribute 1"] = this.weaponAttributes.find(el => {
           return el["Stat"] === this.currentWeapon.filters["attribute 1"];
@@ -252,6 +256,12 @@ export default {
     },
     weaponHasThisMod(mod) {
       return this.currentWeapon.filters[mod];
+    },
+    isExotic(currentWeapon) {
+      return currentWeapon.quality === "Exotic"
+    },
+    isNamed(currentWeapon) {
+      return currentWeapon.quality === "Named"
     }
   },
   watch: {

@@ -132,7 +132,6 @@ const defensiveStats = [
     'Burn Resistance',
     'Disrupt Resistance',
     'Shock Resistance',
-    'Skill Duration',
 ]
 
 export {

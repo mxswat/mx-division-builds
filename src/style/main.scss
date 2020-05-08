@@ -27,19 +27,19 @@
     color: black;
 
     &.high-end {
-        background: rgba(255, 175, 16, 1);
+        background: rgba(255, 175, 0);
     }
 
     &.named {
-        background: rgba(255, 147, 16, 1);
+        background: rgba(255, 147, 16);
     }
 
     &.exotic {
-        background: rgba(255, 94, 0, 1);
+        background: rgba(225, 75, 50);
     }
 
     &.gearset {
-        background: rgba(7, 201, 114, 1);
+        background: rgba(75, 175, 100);
     }
 }
 

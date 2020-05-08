@@ -10,13 +10,13 @@
       </template>
     </div>
     <span class="section-title offensive">
-      <img src="icons/offense1.png" class="image" /> 
+      <img src="icons/offense1.png" class="image" />
       Offensive
     </span>
     <div class="stats-list-2-col" v-if="stats">
-      <div v-for="(statName, idx) in offensiveStats" v-bind:key="idx">
-        {{statName}}:
-        <span>{{sumStatVals(stats[statName])}}</span>
+      <div v-for="(stat, idx) in offensiveStats" v-bind:key="idx">
+        {{stat.statName}}:
+        <span>{{stat.value}}</span>
       </div>
     </div>
     <span class="section-title defensive">
@@ -24,9 +24,9 @@
       Defensive
     </span>
     <div class="stats-list-2-col" v-if="stats">
-      <div v-for="(statName, idx) in defensiveStats" v-bind:key="idx">
-        {{statName}}:
-        <span>{{sumStatVals(stats[statName])}}</span>
+      <div v-for="(stat, idx) in defensiveStats" v-bind:key="idx">
+        {{stat.statName}}:
+        <span>{{stat.value}}</span>
       </div>
     </div>
     <span class="section-title utility">
@@ -34,9 +34,9 @@
       Utility
     </span>
     <div class="stats-list-2-col" v-if="stats">
-      <div v-for="(statName, idx) in utilityStats" v-bind:key="idx">
-        {{statName}}:
-        <span>{{sumStatVals(stats[statName])}}</span>
+      <div v-for="(stat, idx) in utilityStats" v-bind:key="idx">
+        {{stat.statName}}:
+        <span>{{stat.value}}</span>
       </div>
     </div>
   </div>
@@ -66,15 +66,49 @@ export default {
       .subscribe(allStats => {
         _vm.updateStatsUI(allStats);
       });
-    this.utilityStats = utilityStats;
-    this.offensiveStats = offensiveStats;
-    this.defensiveStats = defensiveStats;
+    // this.utilityStats = utilityStats;
+    // this.offensiveStats = offensiveStats;
+    // this.defensiveStats = defensiveStats;
   },
   methods: {
     updateStatsUI(allStats) {
       console.log(allStats);
       this.brands = allStats.brands;
       this.stats = allStats.stats;
+      this.utilityStats = [];
+      this.offensiveStats = [];
+      this.defensiveStats = [];
+      let utilityStatsIndexPrev = -1;
+      let offensiveStatsIndexPrev = -1;
+      let defensiveStatsIndexPrev = -1;
+      for (const statName in allStats.stats) {
+        // eslint-disable-next-line
+        if (allStats.stats.hasOwnProperty(statName)) {
+          const values = allStats.stats[statName];
+          const utilityStatsIndex = utilityStats.indexOf(statName);
+          const offensiveStatsIndex = offensiveStats.indexOf(statName);
+          const defensiveStatsIndex = defensiveStats.indexOf(statName);
+          const value = this.sumStatVals(values);
+          if (value > 0) {
+            if (utilityStatsIndex >= 0) {
+              this.utilityStats.push({
+                statName,
+                value
+              });
+            } else if (offensiveStatsIndex >= 0) {
+              this.offensiveStats.push({
+                statName,
+                value
+              });
+            } else if (defensiveStatsIndex >= 0) {
+              this.defensiveStats.push({
+                statName,
+                value
+              });
+            }
+          }
+        }
+      }
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);

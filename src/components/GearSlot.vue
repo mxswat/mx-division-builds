@@ -5,7 +5,10 @@
         class="slot-element gear-name"
         v-bind:class="[qualityToCSS(currentGear.quality)]"
         v-on:click="openGearModal()"
-      >{{ currentGear.itemName}}</div>
+      >
+        {{ currentGear.itemName}}
+        <template v-if="isNamedGear(currentGear)"> ({{currentGear.brand}})</template>
+      </div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
       <div class="slot-element stat-edit core-attribute">
         <v-select
@@ -261,6 +264,9 @@ export default {
     },
     isNamedTalent(currentGearFilters) {
       return currentGearFilters.talent !== "A";
+    },
+    isNamedGear() {
+      return this.currentGear.quality === "Named";
     }
   },
   created() {

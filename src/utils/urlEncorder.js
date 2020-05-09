@@ -1,3 +1,7 @@
+import {
+    Subject
+} from 'rxjs';
+
 const gearEncoderMap = {
     Mask: 0,
     Backpack: 1,
@@ -8,7 +12,17 @@ const gearEncoderMap = {
     Primary: 6,
     Secondary: 7,
     SideArm: 8,
-    Specialization: 9
+    Specialization: 9,
+    0: 'Mask',
+    1: 'Backpack',
+    2: 'Chest',
+    3: 'Gloves',
+    4: 'Holster',
+    5: 'Kneepads',
+    6: 'Primary',
+    7: 'Secondary',
+    8: 'SideArm',
+    9: 'Specialization',
 };
 
 import {
@@ -19,23 +33,7 @@ import {
     decompressFromEncodedURIComponent
 } from "lz-string";
 
-// https://stackoverflow.com/a/6491621/10300983 modified to work with my code
-const getByString = function (o, s) {
-    s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
-    s = s.replace(/^\./, ''); // strip a leading dot
-    var a = s.split('.');
-    for (var i = 0, n = a.length; i < n; ++i) {
-        var k = a[i];
-        // if (o && (k in o)) {
-        if (o === Object(o) && k in o) {
-            o = o[k];
-        } else {
-            return 0;
-            // return; This was the original return
-        }
-    }
-    return o;
-}
+import { getByString } from "./utils";
 
 const objectPropToNumber = function (object, path, separator) {
     return ('' + getByString(object, path)) + separator;
@@ -93,14 +91,36 @@ const urlDecoder = function (encodedBuild) {
         Promise.all(allDataPromies).then(() => {
             console.log('Everything loaded and ready for decode');
             const splitted = decompressFromEncodedURIComponent(encodedBuild).split(':');
-            resolve(splitted);
+            for (let i = 0; i < splitted.length; i++) {
+                const slotEncoded = splitted[i];
+                decodedSlots[gearEncoderMap[i]].next(slotEncoded);
+            }
         })
     });
-
 }
+
+const decodedSlots = {
+    Mask: new Subject(),
+    Backpack: new Subject(),
+    Chest: new Subject(),
+    Gloves: new Subject(),
+    Holster: new Subject(),
+    Kneepads: new Subject(),
+    Primary: new Subject(),
+    Secondary: new Subject(),
+    SideArm: new Subject(),
+    Specialization: new Subject(),
+}
+
+const updatedInput$ = new Subject();
+updatedInput$.subscribe((encodedBuild) => {
+    urlDecoder(encodedBuild);
+})
 
 export {
     gearEncoderMap,
     urlEncoder,
-    urlDecoder
+    urlDecoder,
+    updatedInput$,
+    decodedSlots
 }

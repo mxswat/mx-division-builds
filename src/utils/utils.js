@@ -25,6 +25,25 @@ const csvToArrayWithKeys = (headers, data, globalMapping) => {
     return result;
 }
 
+
+// https://stackoverflow.com/a/6491621/10300983 modified to work with my code
+const getByString = function (o, s) {
+    s = s.replace(/\[(\w+)\]/g, '.$1'); // convert indexes to properties
+    s = s.replace(/^\./, ''); // strip a leading dot
+    var a = s.split('.');
+    for (var i = 0, n = a.length; i < n; ++i) {
+        var k = a[i];
+        // if (o && (k in o)) {
+        if (o === Object(o) && k in o) {
+            o = o[k];
+        } else {
+            return 0;
+            // return; This was the original return
+        }
+    }
+    return o;
+}
+
 const typeToImgSrc = {
     core: {
         'O': 'icons/offense1.png',
@@ -135,6 +154,7 @@ const defensiveStats = [
 ]
 
 export {
+    getByString,
     zipObject,
     csvToArrayWithKeys,
     typeToImgSrc,

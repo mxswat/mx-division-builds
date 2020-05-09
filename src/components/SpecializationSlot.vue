@@ -39,6 +39,7 @@
 
 <script>
 import { specializationList } from "../utils/dataImporter";
+import { decodedSlots } from "../utils/urlEncorder";
 
 export default {
   name: "SpecializationSlot",
@@ -71,6 +72,17 @@ export default {
       }
       this.specializations = Object.values(holder);
     });
+    this.initSpec();
+  },
+  methods: {
+    initSpec() {
+      decodedSlots['Specialization'].subscribe(ids => {
+        const specId = parseInt(ids) - 1;
+        if (specId >= 0) {
+          this.currentSpecialization = this.specializations[specId];
+        }
+      });
+    }
   },
   watch: {
     currentSpecialization: {
@@ -78,15 +90,6 @@ export default {
         this.$parent.slotChanged(val);
       },
       deep: true
-    },
-    init: {
-      handler: function(ids) {
-        // console.log('spec', ids)
-        const specId = parseInt(ids) - 1;
-        if (specId >= 0) {
-          this.currentSpecialization = this.specializations[specId];
-        }
-      }
     }
   }
 };

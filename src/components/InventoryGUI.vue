@@ -57,7 +57,12 @@ import WeaponSlot from "./WeaponSlot";
 import SpecializationSlot from "./SpecializationSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
-import { gearEncoderMap, urlEncoder, urlDecoder } from "../utils/urlEncorder";
+import {
+  gearEncoderMap,
+  urlEncoder,
+  urlDecoder,
+  updatedInput$
+} from "../utils/urlEncorder";
 import { updateStats } from "../utils/statsCalculator";
 
 export default {
@@ -89,10 +94,11 @@ export default {
   created() {
     this.initGearList();
     if (this.encodedBuild) {
-      urlDecoder(this.encodedBuild).then(result => {
-        // this.gear Do I really have to update it? TODO check next iteration
-        this.initGearSlot = result;
-      });
+      updatedInput$.next(this.encodedBuild);
+      // urlDecoder(this.encodedBuild).then(result => {
+      //   // this.gear Do I really have to update it? TODO check next iteration
+      //   this.initGearSlot = result;
+      // });
     }
   },
   methods: {

@@ -1,13 +1,13 @@
 <template>
   <div class="weapon-stats-container">
     <BasicTile classes="primary no-anim">
-      <SingleWeaponStats v-bind:name="'Primary'"></SingleWeaponStats>
+      <SingleWeaponStats name="Primary"></SingleWeaponStats>
     </BasicTile>
     <BasicTile classes="secondary no-anim">
-      <SingleWeaponStats v-bind:name="'Secondary'"></SingleWeaponStats>
+      <SingleWeaponStats name="Secondary"></SingleWeaponStats>
     </BasicTile>
     <BasicTile classes="sidearm no-anim">
-      <SingleWeaponStats v-bind:name="'SideArm'"></SingleWeaponStats>
+      <SingleWeaponStats name="SideArm"></SingleWeaponStats>
     </BasicTile>
   </div>
 </template>

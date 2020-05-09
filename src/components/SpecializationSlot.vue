@@ -88,7 +88,6 @@ export default {
   watch: {
     currentSpecialization: {
       handler: function(val, oldVal) {
-        // this.$parent.slotChanged(val);
         coreService.sendSlotData('Specialization', val);
       },
       deep: true

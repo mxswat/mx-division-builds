@@ -327,7 +327,6 @@ export default {
   watch: {
     currentGear: {
       handler: function(val, oldVal) {
-        // this.$parent.slotChanged(val);
         coreService.sendSlotData(this.name, val);
       },
       deep: true

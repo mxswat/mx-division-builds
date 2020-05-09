@@ -72,21 +72,4 @@ class CoreService {
 
 const coreService = new CoreService();
 
-// Example of usage of CoreService
-// coreService.sendSlotData('Mask', 'Test Cyka Blyat Rush B with P90');
-// coreService.subscribeAllSlotsData$().subscribe(([
-//     Mask,
-//     Backpack,
-//     Chest,
-//     Gloves,
-//     Holster,
-//     Kneepads,
-//     Primary,
-//     Secondary,
-//     SideArm,
-//     Specialization,
-// ]) => {
-
-// })
-
 export default coreService;

@@ -41,7 +41,7 @@ const statsProvider = {
  * @param {*} CHD Critical Hit Damage
  * @param {*} HSD Headshot damage
  * @param {*} TATfG Total additive talents from gear = Additive stuff like Focus and vigilance
- * @param {*} AMP Am = Every amplifier talent or attribute = DTA, DttOOC, DTA on the weapon, DttOOC on the weapon
+ * @param {*} AMP Every amplifier talent or attribute = DTA, DttOOC, DTA on the weapon, DttOOC on the weapon
  */
 const criticalHeadShot = function (baseDMG, AWD, WD, WIT, CHD, HSD, TATfG, AMP) {
     const _baseDMG = baseDMG;

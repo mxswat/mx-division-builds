@@ -31,6 +31,7 @@ const gearEncoderMap = {
 import {
     allDataPromies
 } from "./dataImporter";
+
 import {
     compressToEncodedURIComponent,
     decompressFromEncodedURIComponent
@@ -78,6 +79,9 @@ coreService.subscribeAllSlotsData$().subscribe(([
         weapondsIds: weapondsIds,
         specializationIds: specializationIds,
     });
+    const buildData = [wearablesIds.join(':'), weapondsIds.join(':'), specializationIds.join(':')].join(':');
+    const url = compressToEncodedURIComponent(buildData);
+    window.history.pushState("", "", badUrl + url)
 })
 
 function wearableToIds(wearables) {
@@ -95,7 +99,7 @@ function wearableToIds(wearables) {
         ids[i] += objectPropToNumber(wearable, 'attributeOne.StatValue', '-')
         ids[i] += objectPropToNumber(wearable, 'attributeTwo.StatValue', '-')
         ids[i] += objectPropToNumber(wearable, 'mod.StatValue', '')
-        console.log('wearable', ids[i])
+        // console.log('wearable', ids[i])
     }
     return ids;
 }
@@ -115,7 +119,7 @@ function weaponsToIds(weapons) {
         ids[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-')
         ids[i] += objectPropToNumber(weapon, "core 1.StatValue", '-')
         ids[i] += objectPropToNumber(weapon, "core 2.StatValue", '')
-        console.log('weapon', ids[i]);
+        // console.log('weapon', ids[i]);
     }
     return ids;
 }
@@ -127,47 +131,6 @@ function specializationToIds(specialization) {
     return ids;
 }
 
-const urlEncoder = function (idArray) {
-    let urlChunks = [];
-    let statsChunks = [];
-    for (let i = 0; i < idArray.length; i++) {
-        urlChunks[i] = '';
-        statsChunks[i] = '';
-        if (i < 6) {
-            const gear = idArray[i];
-            urlChunks[i] += objectPropToNumber(gear, 'id', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'attributeOne.index', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.index', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'core.index', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'mod.index', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'talent.index', '-');
-            urlChunks[i] += objectPropToNumber(gear, 'core.StatValue', '-')
-            urlChunks[i] += objectPropToNumber(gear, 'attributeOne.StatValue', '-')
-            urlChunks[i] += objectPropToNumber(gear, 'attributeTwo.StatValue', '-')
-            urlChunks[i] += objectPropToNumber(gear, 'mod.StatValue', '')
-            console.log('gear', urlChunks[i])
-        } else if (i < 9) {
-            const weapon = idArray[i];
-            urlChunks[i] += objectPropToNumber(weapon, 'id', '-');
-            urlChunks[i] += objectPropToNumber(weapon, "attribute 1.index", '-');
-            urlChunks[i] += objectPropToNumber(weapon, 'talent.index', '-');
-            urlChunks[i] += objectPropToNumber(weapon, 'optic.index', '-');
-            urlChunks[i] += objectPropToNumber(weapon, "under barrel.index", '-');
-            urlChunks[i] += objectPropToNumber(weapon, 'magazine.index', '-');
-            urlChunks[i] += objectPropToNumber(weapon, 'muzzle.index', '-');
-            urlChunks[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-')
-            urlChunks[i] += objectPropToNumber(weapon, "core 1.StatValue", '-')
-            urlChunks[i] += objectPropToNumber(weapon, "core 2.StatValue", '')
-            console.log('weapon', urlChunks[i])
-        } else if (i < 10) {
-            const specialization = idArray[i];
-            urlChunks[i] += objectPropToNumber(specialization, 'id', '');
-            console.log('specialization', urlChunks[i])
-        }
-    }
-    const url = compressToEncodedURIComponent(urlChunks.join(':'));
-    window.history.pushState("", "", badUrl + url)
-}
 
 const urlDecoder = function (encodedBuild) {
     Promise.all(allDataPromies).then(() => {
@@ -200,7 +163,6 @@ updatedInput$.subscribe((encodedBuild) => {
 
 export {
     gearEncoderMap,
-    urlEncoder,
     urlDecoder,
     updatedInput$,
 }

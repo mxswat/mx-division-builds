@@ -7,7 +7,7 @@
         v-on:click="openGearModal()"
       >
         {{ currentGear.itemName}}
-        <template v-if="isNamedGear(currentGear)"> ({{currentGear.brand}})</template>
+        <template v-if="isNamedGear(currentGear)">({{currentGear.brand}})</template>
       </div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
       <div class="slot-element stat-edit core-attribute">
@@ -132,19 +132,21 @@ import {
   gearAttributesList,
   gearTalentsList
 } from "../utils/dataImporter";
+import { gearList } from "../utils/dataImporter";
 import StatInput from "./StatInput";
 import Vue from "vue";
+import coreService from "../utils/coreService";
 
 export default {
   name: "GearSlot",
   components: { StatInput },
   props: {
-    gearList: undefined,
     name: undefined,
     init: null
   },
   data() {
     return {
+      gearList: [],
       currentGear: new GearBase(),
       coreAttributes: [],
       typeToImgSrc: null,
@@ -267,32 +269,11 @@ export default {
     },
     isNamedGear() {
       return this.currentGear.quality === "Named";
-    }
-  },
-  created() {
-    this.coreAttributes = JSON.parse(JSON.stringify(coreAttributes));
-    this.typeToImgSrc = typeToImgSrc;
-    this.initGearMods();
-    this.initGearAttributes();
-    this.initGearTalentsList();
-  },
-  watch: {
-    currentGear: {
-      handler: function(val, oldVal) {
-        this.$parent.slotChanged(val);
-      },
-      deep: true
     },
-    init: {
-      handler: function(ids) {
+    initGearData() {
+      coreService.getSlotInit$(this.name).subscribe(ids => {
         const splittedIdS = ids.split("-");
         const gearId = parseInt([splittedIdS[0]]);
-        // id 0
-        // attributeOne.index 1
-        // attributeTwo.index 2
-        // core.index 3
-        // mod.index 4
-        // talent.index 5
         if (gearId) {
           const fromUrlGear = new GearBase(
             this.gearList.find(gear => gear.index === gearId)
@@ -326,7 +307,31 @@ export default {
             }
           }
         }
-      }
+      });
+    },
+    initWearableList() {
+      console.log(gearList[this.name]);
+      gearList[this.name].then(values => {
+        this.gearList = values;
+      });
+    }
+  },
+  created() {
+    this.coreAttributes = JSON.parse(JSON.stringify(coreAttributes));
+    this.typeToImgSrc = typeToImgSrc;
+    this.initWearableList();
+    this.initGearMods();
+    this.initGearAttributes();
+    this.initGearTalentsList();
+    this.initGearData();
+  },
+  watch: {
+    currentGear: {
+      handler: function(val, oldVal) {
+        // this.$parent.slotChanged(val);
+        coreService.sendSlotData(this.name, val);
+      },
+      deep: true
     }
   }
 };

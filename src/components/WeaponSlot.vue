@@ -5,10 +5,11 @@
         class="slot-element weapon-name"
         v-bind:class="[qualityToCSS(currentWeapon.quality)]"
         v-on:click="openWeaponsModal()"
-      >{{ currentWeapon.name}}
-      <template v-if="isExotic(currentWeapon) || isNamed(currentWeapon) ">
-         ({{currentWeapon.variant}})
-      </template>
+      >
+        {{ currentWeapon.name}}
+        <template
+          v-if="isExotic(currentWeapon) || isNamed(currentWeapon) "
+        >({{currentWeapon.variant}})</template>
       </div>
       <div class="slot-element stat-edit">
         <span class="core">{{ currentWeapon.filters['core 1']}}</span>
@@ -137,7 +138,7 @@
 import { openWeaponsModal } from "../utils/modalService";
 import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
-import { GearProvider } from "../utils/gearService";
+import coreService from "../utils/coreService";
 import { qualityToCss } from "../utils/utils";
 import Vue from "vue";
 
@@ -181,6 +182,7 @@ export default {
     weaponsData.WeaponTalents.then(weaponTalents => {
       this.weaponTalents = weaponTalents;
     });
+    this.initGearData();
   },
   methods: {
     qualityToCSS(quality) {
@@ -258,22 +260,13 @@ export default {
       return this.currentWeapon.filters[mod];
     },
     isExotic(currentWeapon) {
-      return currentWeapon.quality === "Exotic"
+      return currentWeapon.quality === "Exotic";
     },
     isNamed(currentWeapon) {
-      return currentWeapon.quality === "Named"
-    }
-  },
-  watch: {
-    currentWeapon: {
-      handler: function(val, oldVal) {
-        this.$parent.slotChanged(val);
-        GearProvider.updateGear(this.name, val);
-      },
-      deep: true
+      return currentWeapon.quality === "Named";
     },
-    init: {
-      handler: function(ids) {
+    initGearData() {
+      coreService.getSlotInit$(this.name).subscribe(ids => {
         const splittedIdS = ids.split("-");
         const id = parseInt([splittedIdS[0]]);
         if (id) {
@@ -312,7 +305,16 @@ export default {
             }
           }
         }
-      }
+      });
+    }
+  },
+  watch: {
+    currentWeapon: {
+      handler: function(val, oldVal) {
+        // this.$parent.slotChanged(val);
+        coreService.sendSlotData(this.name, val);
+      },
+      deep: true
     }
   }
 };

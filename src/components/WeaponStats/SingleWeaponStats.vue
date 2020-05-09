@@ -17,7 +17,7 @@
 
 <script>
 import { statsProvider } from "../../utils/statsCalculator";
-import { GearProvider } from "../../utils/gearService";
+import coreService from "../../utils/coreService";
 import { combineLatest, map, timer } from "rxjs";
 import { debounce } from "rxjs/operators";
 
@@ -72,7 +72,7 @@ export default {
     // https://www.learnrxjs.io/learn-rxjs/operators/combination/combinelatest
     const _vm = this;
     combineLatest(
-      GearProvider.subscribeGear(this.name),
+      coreService.subscribeSlotData(this.name),
       statsProvider.getStats()
     )
       // https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce

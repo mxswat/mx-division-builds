@@ -1,6 +1,9 @@
 import {
-    Subject
+    Subject,
+    BehaviorSubject
 } from 'rxjs';
+
+import coreService from "./coreService";
 
 const gearEncoderMap = {
     Mask: 0,
@@ -33,7 +36,9 @@ import {
     decompressFromEncodedURIComponent
 } from "lz-string";
 
-import { getByString } from "./utils";
+import {
+    getByString
+} from "./utils";
 
 const objectPropToNumber = function (object, path, separator) {
     return ('' + getByString(object, path)) + separator;
@@ -42,6 +47,86 @@ const objectPropToNumber = function (object, path, separator) {
 // I should use the vue router
 const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/#/' : '/#/';
 
+coreService.subscribeAllSlotsData$().subscribe(([
+    Mask,
+    Backpack,
+    Chest,
+    Gloves,
+    Holster,
+    Kneepads,
+    Primary,
+    Secondary,
+    SideArm,
+    Specialization,
+]) => {
+    const wearablesIds =
+        wearableToIds([
+            Mask,
+            Backpack,
+            Chest,
+            Gloves,
+            Holster,
+            Kneepads,
+        ])
+    const weapondsIds = weaponsToIds([Primary,
+        Secondary,
+        SideArm,
+    ]);
+    const specializationIds = specializationToIds(Specialization);
+    console.log('newEncoder', {
+        wearablesIds: wearablesIds,
+        weapondsIds: weapondsIds,
+        specializationIds: specializationIds,
+    });
+})
+
+function wearableToIds(wearables) {
+    let ids = []
+    for (let i = 0; i < wearables.length; i++) {
+        const wearable = wearables[i];
+        ids[i] = '';
+        ids[i] += objectPropToNumber(wearable, 'id', '-');
+        ids[i] += objectPropToNumber(wearable, 'attributeOne.index', '-');
+        ids[i] += objectPropToNumber(wearable, 'attributeTwo.index', '-');
+        ids[i] += objectPropToNumber(wearable, 'core.index', '-');
+        ids[i] += objectPropToNumber(wearable, 'mod.index', '-');
+        ids[i] += objectPropToNumber(wearable, 'talent.index', '-');
+        ids[i] += objectPropToNumber(wearable, 'core.StatValue', '-')
+        ids[i] += objectPropToNumber(wearable, 'attributeOne.StatValue', '-')
+        ids[i] += objectPropToNumber(wearable, 'attributeTwo.StatValue', '-')
+        ids[i] += objectPropToNumber(wearable, 'mod.StatValue', '')
+        console.log('wearable', ids[i])
+    }
+    return ids;
+}
+
+function weaponsToIds(weapons) {
+    let ids = []
+    for (let i = 0; i < weapons.length; i++) {
+        const weapon = weapons[i];
+        ids[i] = '';
+        ids[i] += objectPropToNumber(weapon, 'id', '-');
+        ids[i] += objectPropToNumber(weapon, "attribute 1.index", '-');
+        ids[i] += objectPropToNumber(weapon, 'talent.index', '-');
+        ids[i] += objectPropToNumber(weapon, 'optic.index', '-');
+        ids[i] += objectPropToNumber(weapon, "under barrel.index", '-');
+        ids[i] += objectPropToNumber(weapon, 'magazine.index', '-');
+        ids[i] += objectPropToNumber(weapon, 'muzzle.index', '-');
+        ids[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-')
+        ids[i] += objectPropToNumber(weapon, "core 1.StatValue", '-')
+        ids[i] += objectPropToNumber(weapon, "core 2.StatValue", '')
+        console.log('weapon', ids[i]);
+    }
+    return ids;
+}
+
+function specializationToIds(specialization) {
+    const ids = [];
+    ids[0] = '';
+    ids[0] += objectPropToNumber(specialization, 'id', '');
+    return ids;
+}
+
 const urlEncoder = function (idArray) {
     let urlChunks = [];
     let statsChunks = [];
@@ -49,9 +134,6 @@ const urlEncoder = function (idArray) {
         urlChunks[i] = '';
         statsChunks[i] = '';
         if (i < 6) {
-            /**
-             * Encode value of stats edit into a new var like 'data-chunk'
-             */
             const gear = idArray[i];
             urlChunks[i] += objectPropToNumber(gear, 'id', '-');
             urlChunks[i] += objectPropToNumber(gear, 'attributeOne.index', '-');
@@ -80,6 +162,7 @@ const urlEncoder = function (idArray) {
         } else if (i < 10) {
             const specialization = idArray[i];
             urlChunks[i] += objectPropToNumber(specialization, 'id', '');
+            console.log('specialization', urlChunks[i])
         }
     }
     const url = compressToEncodedURIComponent(urlChunks.join(':'));
@@ -87,15 +170,13 @@ const urlEncoder = function (idArray) {
 }
 
 const urlDecoder = function (encodedBuild) {
-    return new Promise((resolve, reject) => {
-        Promise.all(allDataPromies).then(() => {
-            console.log('Everything loaded and ready for decode');
-            const splitted = decompressFromEncodedURIComponent(encodedBuild).split(':');
-            for (let i = 0; i < splitted.length; i++) {
-                const slotEncoded = splitted[i];
-                decodedSlots[gearEncoderMap[i]].next(slotEncoded);
-            }
-        })
+    Promise.all(allDataPromies).then(() => {
+        console.log('Everything loaded and ready for decode');
+        const splitted = decompressFromEncodedURIComponent(encodedBuild).split(':');
+        for (let i = 0; i < splitted.length; i++) {
+            const slotEncoded = splitted[i];
+            coreService.sendSlotInit(gearEncoderMap[i], slotEncoded);
+        }
     });
 }
 
@@ -122,5 +203,4 @@ export {
     urlEncoder,
     urlDecoder,
     updatedInput$,
-    decodedSlots
 }

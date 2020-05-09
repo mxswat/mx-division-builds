@@ -40,6 +40,7 @@
 <script>
 import { specializationList } from "../utils/dataImporter";
 import { decodedSlots } from "../utils/urlEncorder";
+import coreService from "../utils/coreService";
 
 export default {
   name: "SpecializationSlot",
@@ -76,7 +77,7 @@ export default {
   },
   methods: {
     initSpec() {
-      decodedSlots['Specialization'].subscribe(ids => {
+      coreService.getSlotInit$('Specialization').subscribe(ids => {
         const specId = parseInt(ids) - 1;
         if (specId >= 0) {
           this.currentSpecialization = this.specializations[specId];
@@ -87,7 +88,8 @@ export default {
   watch: {
     currentSpecialization: {
       handler: function(val, oldVal) {
-        this.$parent.slotChanged(val);
+        // this.$parent.slotChanged(val);
+        coreService.sendSlotData('Specialization', val);
       },
       deep: true
     }

@@ -1,32 +1,26 @@
-<template>
-  <div class="tile outer-border" v-bind:class="[gearClass]">
+<template functional>
+  <div class="tile outer-border no-anim" :class="[props.classes]">
     <div class="inner-border"></div>
     <slot></slot>
   </div>
 </template>
 
 <script>
+// https://dev.to/vhoyer/functional-components-in-vue-js-20fl Working
+// I need to use props.blabla to use the pros in template
+// Looks like the other articles are wrong
 export default {
   name: "BasicTile",
   props: {
-    // TODO Change me this is ugly
-    name: String
-  },
-  data() {
-    return {
-      gearClass: ""
-    };
-  },
-  methods: {
-    slotChanged(gear) {
-      this.gearClass = "no-anim";
-      this.$parent.slotChanged(this.name, gear);
+    classes: {
+      required: true,
+      type: String
     }
   }
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss">
 .img-slot-bg {
   opacity: 0.2;
   position: absolute;

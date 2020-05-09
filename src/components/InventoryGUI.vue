@@ -1,41 +1,41 @@
 <template>
   <div class="inventory-gui">
-    <BasicTile class="specialization" v-bind:name="'Specialization'">
+    <BasicTile classes="specialization">
       <SpecializationSlot></SpecializationSlot>
     </BasicTile>
-    <BasicTile class="primary" v-bind:name="'Primary'">
+    <BasicTile classes="primary">
       <img class="img-slot-bg primary" src="icons/main-weapon.png" />
       <WeaponSlot v-bind:name="'Primary'"></WeaponSlot>
     </BasicTile>
-    <BasicTile class="secondary" v-bind:name="'Secondary'">
+    <BasicTile classes="secondary">
       <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
       <WeaponSlot v-bind:name="'Secondary'"></WeaponSlot>
     </BasicTile>
-    <BasicTile class="pistol" v-bind:name="'SideArm'">
+    <BasicTile classes="pistol">
       <img class="img-slot-bg pistol" src="icons/sidearm.png" />
       <WeaponSlot v-bind:name="'SideArm'"></WeaponSlot>
     </BasicTile>
-    <BasicTile class="mask" v-bind:name="'Mask'">
+    <BasicTile classes="mask">
       <img class="img-slot-bg mask" src="icons/mask.png" />
       <GearSlot v-bind:name="'Mask'"></GearSlot>
     </BasicTile>
-    <BasicTile class="backpack" v-bind:name="'Backpack'">
+    <BasicTile classes="backpack">
       <img class="img-slot-bg backpack" src="icons/backpack.png" />
       <GearSlot v-bind:name="'Backpack'"></GearSlot>
     </BasicTile>
-    <BasicTile class="chest" v-bind:name="'Chest'">
+    <BasicTile classes="chest">
       <img class="img-slot-bg chest" src="icons/chest.png" />
       <GearSlot v-bind:name="'Chest'"></GearSlot>
     </BasicTile>
-    <BasicTile class="gloves" v-bind:name="'Gloves'">
+    <BasicTile classes="gloves">
       <img class="img-slot-bg gloves" src="icons/gloves.png" />
       <GearSlot v-bind:name="'Gloves'"></GearSlot>
     </BasicTile>
-    <BasicTile class="holster" v-bind:name="'Holster'">
+    <BasicTile classes="holster">
       <img class="img-slot-bg holster" src="icons/holster.png" />
       <GearSlot v-bind:name="'Holster'"></GearSlot>
     </BasicTile>
-    <BasicTile class="kneepads" v-bind:name="'Kneepads'">
+    <BasicTile classes="kneepads">
       <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
       <GearSlot v-bind:name="'Kneepads'"></GearSlot>
     </BasicTile>

@@ -310,7 +310,6 @@ export default {
       });
     },
     initWearableList() {
-      console.log(gearList[this.name]);
       gearList[this.name].then(values => {
         this.gearList = values;
       });

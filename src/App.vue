@@ -3,7 +3,7 @@
     <div class="grid-container" v-if="loaded">
       <router-view></router-view>
       <WeaponStats></WeaponStats>
-      <BasicTile class="general-stats-col no-anim">
+      <BasicTile classes="general-stats-col no-anim">
         <GeneralStats></GeneralStats>
       </BasicTile>
     </div>

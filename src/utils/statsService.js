@@ -96,7 +96,6 @@ class StatsService {
     handleWearableEdgeCase(wearable, wearableEdgeCaseID) {
         switch (wearableEdgeCaseID) {
             case 0:
-                brands['Exotic'][0] = 'Ammo Capacity  +25%';
                 brands['Exotic'][1] = 'Repair Skills  +10%';
                 brands['Exotic'][2] = 'Status Effects +10%';
                 stats['Status Effects'] = stats['Status Effects'] || [];
@@ -104,7 +103,6 @@ class StatsService {
                 stats['Repair Skills'] = stats['Repair Skills'] || [];
                 stats['Repair Skills'].push('10');
                 break;
-        
             default:
                 break;
         }

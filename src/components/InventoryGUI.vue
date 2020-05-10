@@ -1,8 +1,5 @@
 <template>
   <div class="inventory-gui">
-    <BasicTile classes="specialization">
-      <SpecializationSlot></SpecializationSlot>
-    </BasicTile>
     <BasicTile classes="primary">
       <img class="img-slot-bg primary" src="icons/main-weapon.png" />
       <WeaponSlot name="Primary"></WeaponSlot>
@@ -46,7 +43,6 @@
 import BasicTile from "./BasicTile";
 import GearSlot from "./GearSlot";
 import WeaponSlot from "./WeaponSlot";
-import SpecializationSlot from "./SpecializationSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
 import {
@@ -64,7 +60,6 @@ export default {
     BasicTile,
     GearSlot,
     WeaponSlot,
-    SpecializationSlot
   },
   data() {
     return {};
@@ -87,9 +82,5 @@ export default {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 8px 8px;
-}
-
-.specialization {
-  grid-column: 1 / -1;
 }
 </style>

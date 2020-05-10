@@ -3,9 +3,14 @@
     <div class="grid-container" v-if="loaded">
       <router-view></router-view>
       <WeaponStats></WeaponStats>
-      <BasicTile classes="general-stats-col no-anim">
-        <GeneralStats></GeneralStats>
-      </BasicTile>
+      <div class="spec-and-stats">
+        <BasicTile classes="specialization">
+          <SpecializationSlot></SpecializationSlot>
+        </BasicTile>
+        <BasicTile classes="general-stats-col no-anim">
+          <GeneralStats></GeneralStats>
+        </BasicTile>
+      </div>
     </div>
   </div>
 </template>
@@ -15,12 +20,14 @@ import { allDataPromies } from "./utils/dataImporter";
 import WeaponStats from "./components/WeaponStats/WeaponStats";
 import GeneralStats from "./components/GeneralStats";
 import BasicTile from "./components/BasicTile";
+import SpecializationSlot from "./components/SpecializationSlot";
 export default {
   name: "App",
   components: {
     WeaponStats,
     GeneralStats,
-    BasicTile
+    BasicTile,
+    SpecializationSlot
   },
   data() {
     return {
@@ -60,6 +67,7 @@ body,
   grid-template-columns: repeat(5, [col] 1fr);
   grid-template-rows: repeat(2, [row] auto);
   gap: 8px;
+  margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
   @include media("<=uibreak") {
@@ -68,12 +76,12 @@ body,
       grid-column: col 1;
       grid-row: row 1;
     }
-    .general-stats-col {
+    .spec-and-stats {
       grid-column: col 1;
       grid-row: row 2;
-      &.tile {
-        position: relative;
-      }
+    }
+    .general-stats-col.tile {
+      position: relative;
     }
     .weapon-stats-container {
       grid-column: col 1;
@@ -87,14 +95,20 @@ body,
   grid-row: row;
 }
 
-.general-stats-col {
+.specialization {
   grid-column: col 4 / span 2;
   grid-row: row;
+  margin-bottom: 8px;
 }
 
 .weapon-stats-container {
   grid-column: col / span 3;
   grid-row: row 2;
+}
+
+.spec-and-stats {
+  grid-column: col 4 / span 2;
+  grid-row: row;
 }
 
 .tile.general-stats-col {

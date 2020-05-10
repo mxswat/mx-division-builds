@@ -5,6 +5,7 @@ import {
 
 import coreService from "./coreService";
 import statsService from "./statsService";
+import router from "../router";
 
 const gearEncoderMap = {
     Mask: 0,
@@ -46,9 +47,6 @@ const objectPropToNumber = function (object, path, separator) {
     return ('' + getByString(object, path)) + separator;
 }
 
-// I should use the vue router
-const badUrl = location.origin.indexOf('github') > 0 ? '/mx-division-builds/#/' : '/#/';
-
 coreService.subscribeAllSlotsData$().subscribe(([
     Mask,
     Backpack,
@@ -83,8 +81,16 @@ coreService.subscribeAllSlotsData$().subscribe(([
     });
     const buildData = [wearablesIds.join(':'), weapondsIds.join(':'), specializationIds.join(':')].join(':');
     statsService.afterEncoding();
-    const url = compressToEncodedURIComponent(buildData);
-    window.history.pushState("", "", badUrl + url)
+    const encodedBuild = compressToEncodedURIComponent(buildData);
+    const _router = router;
+    if (_router.history.current.params.encodedBuild !== encodedBuild) {
+        router.push({
+            name: 'homeId',
+            params: {
+                encodedBuild: '' + encodedBuild
+            }
+        })
+    }
 })
 
 function wearableToIds(wearables) {

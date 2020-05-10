@@ -1,5 +1,8 @@
 <template>
   <div id="app">
+    <BasicTile classes="toolbar-container">
+      <Toolbar></Toolbar>
+    </BasicTile>
     <div class="grid-container" v-if="loaded">
       <router-view></router-view>
       <WeaponStats></WeaponStats>
@@ -21,13 +24,15 @@ import WeaponStats from "./components/WeaponStats/WeaponStats";
 import GeneralStats from "./components/GeneralStats";
 import BasicTile from "./components/BasicTile";
 import SpecializationSlot from "./components/SpecializationSlot";
+import Toolbar from "./components/Toolbar";
 export default {
   name: "App",
   components: {
     WeaponStats,
     GeneralStats,
     BasicTile,
-    SpecializationSlot
+    SpecializationSlot,
+    Toolbar
   },
   data() {
     return {
@@ -115,6 +120,12 @@ body,
   position: sticky;
   top: 0;
   height: fit-content;
+}
+
+.tile.toolbar-container {
+  min-height: 0px !important;
+  padding: 8px;
+  margin: 8px;
 }
 
 .no-element-selected {

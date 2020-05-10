@@ -45,11 +45,7 @@ import GearSlot from "./GearSlot";
 import WeaponSlot from "./WeaponSlot";
 import { GearBase } from "../utils/classes";
 import { gearList } from "../utils/dataImporter";
-import {
-  gearEncoderMap,
-  urlDecoder,
-  updatedInput$
-} from "../utils/urlEncorder";
+import { gearEncoderMap, updatedInput$ } from "../utils/urlEncorder";
 
 export default {
   name: "InventoryGUI",
@@ -59,7 +55,7 @@ export default {
   components: {
     BasicTile,
     GearSlot,
-    WeaponSlot,
+    WeaponSlot
   },
   data() {
     return {};
@@ -68,8 +64,11 @@ export default {
     if (this.encodedBuild) {
       updatedInput$.next(this.encodedBuild);
     }
+    window.addEventListener('popstate', (event) => {
+      updatedInput$.next(this.$route.params.encodedBuild);
+    });
   },
-  methods: {}
+  methods: {},
 };
 </script>
 

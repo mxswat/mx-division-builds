@@ -5,8 +5,8 @@
     <button @click="history.back()">Undo</button>
     <button @click="history.forward()">Redo</button>
     <button @click="saveAndShare()">Save & Share</button>
-    <button>Clear</button>
-    <button>New Build</button>
+    <button @click="clear()">Clear</button>
+    <button @click="newBuild()">New Build</button>
   </div>
 </template>
 
@@ -24,8 +24,18 @@ export default {
     this.history = window.history;
   },
   methods: {
-    saveAndShare () {
+    saveAndShare() {
       openSaveShareModal();
+    },
+    clear() {
+      // TODO: Yeah this should be changed
+      this.$router.push({
+        name: "home"
+      });
+      location.reload();
+    },
+    newBuild() {
+      window.open('/','_blank');
     }
   }
 };

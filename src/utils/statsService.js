@@ -109,22 +109,23 @@ class StatsService {
     }
 
     addStatsFromSpecialization(specialization) {
-        stats['Assault Rifle Damage'] = stats['Assault Rifle Damage'] || [];
-        stats['LMG Damage'] = stats['LMG Damage'] || [];
-        stats['Marksman Rifle Damage'] = stats['Marksman Rifle Damage'] || [];
-        stats['Pistol Damage'] = stats['Pistol Damage'] || [];
-        stats['Rifle Damage'] = stats['Rifle Damage'] || [];
-        stats['Shotgun Damage'] = stats['Shotgun Damage'] || [];
-        stats['SMG Damage'] = stats['SMG Damage'] || [];
-        stats['Assault Rifle Damage'].push(15);
-        stats['LMG Damage'].push(15);
-        stats['Marksman Rifle Damage'].push(15);
-        stats['Pistol Damage'].push(15);
-        stats['Rifle Damage'].push(15);
-        stats['Shotgun Damage'].push(15);
-        stats['SMG Damage'].push(15);
+        if (specialization) {
+            stats['Assault Rifle Damage'] = stats['Assault Rifle Damage'] || [];
+            stats['LMG Damage'] = stats['LMG Damage'] || [];
+            stats['Marksman Rifle Damage'] = stats['Marksman Rifle Damage'] || [];
+            stats['Pistol Damage'] = stats['Pistol Damage'] || [];
+            stats['Rifle Damage'] = stats['Rifle Damage'] || [];
+            stats['Shotgun Damage'] = stats['Shotgun Damage'] || [];
+            stats['SMG Damage'] = stats['SMG Damage'] || [];
+            stats['Assault Rifle Damage'].push(15);
+            stats['LMG Damage'].push(15);
+            stats['Marksman Rifle Damage'].push(15);
+            stats['Pistol Damage'].push(15);
+            stats['Rifle Damage'].push(15);
+            stats['Shotgun Damage'].push(15);
+            stats['SMG Damage'].push(15);
+        }
     }
-
 }
 
 const statsService = new StatsService();

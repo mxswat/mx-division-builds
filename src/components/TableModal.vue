@@ -1,5 +1,6 @@
 <template>
-  <div style="height: 100%">
+  <div class="table-modal" style="height: 100%">
+    <span class="info">Click on the column header to sort it, or click to hamburger icon to search (The search will be improved next updates)</span>
     <ag-grid-vue
       style="height: 100%"
       class="ag-theme-alpine-dark"
@@ -51,5 +52,15 @@ export default {
 <style>
 span.ag-header-icon.ag-header-cell-menu-button {
   opacity: 1 !important;
+}
+
+.table-modal {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.info {
+  padding: 8px;
 }
 </style>

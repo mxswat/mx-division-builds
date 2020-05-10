@@ -118,7 +118,7 @@
     </template>
 
     <span class="no-element-selected" v-if="!isGearSelected()">
-      <p>CHOSE YOUR GEAR</p>
+      <p>CHOOSE YOUR GEAR</p>
     </span>
   </div>
 </template>

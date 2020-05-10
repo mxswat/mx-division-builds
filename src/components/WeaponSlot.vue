@@ -129,7 +129,7 @@
       </div>
     </template>
     <span class="no-element-selected" v-if="!isWeaponSelected()">
-      <p>CHOSE YOUR WEAPON</p>
+      <p>CHOOSE YOUR WEAPON</p>
     </span>
   </div>
 </template>

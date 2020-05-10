@@ -102,7 +102,7 @@ function wearableToIds(wearables) {
         ids[i] += objectPropToNumber(wearable, 'attributeOne.StatValue', '-');
         ids[i] += objectPropToNumber(wearable, 'attributeTwo.StatValue', '-');
         ids[i] += objectPropToNumber(wearable, 'mod.StatValue', '');
-        statsService.addStatFromwWearable(wearable);
+        statsService.addStatsFromwWearable(wearable);
     }
     return ids;
 }
@@ -122,7 +122,7 @@ function weaponsToIds(weapons) {
         ids[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-')
         ids[i] += objectPropToNumber(weapon, "core 1.StatValue", '-')
         ids[i] += objectPropToNumber(weapon, "core 2.StatValue", '')
-        statsService.addStatFromWeapon(weapon);
+        statsService.addStatsFromWeapon(weapon);
     }
     return ids;
 }
@@ -131,7 +131,7 @@ function specializationToIds(specialization) {
     const ids = [];
     ids[0] = '';
     ids[0] += objectPropToNumber(specialization, 'id', '');
-    statsService.addStatFromSpecialization(specialization);
+    statsService.addStatsFromSpecialization(specialization);
     return ids;
 }
 

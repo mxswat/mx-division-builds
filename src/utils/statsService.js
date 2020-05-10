@@ -58,9 +58,9 @@ class StatsService {
         }
     }
 
-    addStatFromWeapon(weapon) {}
+    addStatsFromWeapon(weapon) {}
 
-    addStatFromwWearable(wearable) {
+    addStatsFromwWearable(wearable) {
         if (wearable) {
             brands[wearable.brand] = brands[wearable.brand] || []
             brands[wearable.brand].push(null);
@@ -110,7 +110,7 @@ class StatsService {
         }
     }
 
-    addStatFromSpecialization(specialization) {
+    addStatsFromSpecialization(specialization) {
         stats['Assault Rifle Damage'] = stats['Assault Rifle Damage'] || [];
         stats['LMG Damage'] = stats['LMG Damage'] || [];
         stats['Marksman Rifle Damage'] = stats['Marksman Rifle Damage'] || [];

@@ -2,6 +2,7 @@
   <div class="weapon-stat">
     <template v-if="weapon">
       <span class="weapon-name-stat bold">{{weapon.name}}</span>
+      <span>Weapon damage (AWD only) {{weaponDamage}}</span>
       <template v-for="(weaponStatsKey, idx) in weaponStatsArr">
         <span
           v-if="weaponStats[weaponStatsKey].value"
@@ -9,9 +10,7 @@
         >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
       </template>
     </template>
-    <span class="weapon-name-stat bold" v-if="!weapon">
-      No weapon selected
-    </span>
+    <span class="weapon-name-stat bold" v-if="!weapon">No weapon selected</span>
   </div>
 </template>
 
@@ -28,6 +27,7 @@ export default {
   },
   data() {
     return {
+      weaponDamage: null,
       weapon: null,
       // stats: null,
       weaponStatsArr: [
@@ -74,8 +74,8 @@ export default {
       coreService.subscribeSlotData(this.name),
       statsService.getStats$()
     ).subscribe(([weapon, stats]) => {
-        _vm.updateStatsUI(weapon, stats);
-      });
+      _vm.updateStatsUI(weapon, stats);
+    });
   },
   methods: {
     updateStatsUI(weapon, stats) {
@@ -109,6 +109,21 @@ export default {
           );
         }
 
+        if (coreone && coreone.stat) {
+          const weaponDamage = coreone.StatValue
+            ? coreone.StatValue
+            : coreone.max;
+          let awd = 0;
+          if (stats["Weapon Damage"]) {
+            awd = stats["Weapon Damage"].reduce(
+              (a, b) => parseFloat(a) + parseFloat(b),
+              0
+            );
+          }
+          const finalDamage = (parseFloat(weaponDamage) + awd) / 100;
+          this.weaponDamage = (this.weapon["base damage"] * (1 + finalDamage)).toFixed(2);
+        }
+
         // this.weapon["base damage"]; Combine with Coreone
         if (coretwo && coretwo.stat) {
           this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.max);
@@ -125,16 +140,6 @@ export default {
           }
         }
       }
-
-      // this.weapon["mag size"];
-      // this.weapon["name"];
-      // this.weapon["optimal range"];
-      // this.weapon["quality"];
-      // this.weapon["reload speed (ms)"];
-      // this.weapon["rpm"];
-      // this.weapon["talent"];
-      // this.weapon["variant"];
-      // this.weapon["weapon type"];
     },
     addToStat(statName, value, fallbackVal) {
       if (this.weaponStats[statName]) {

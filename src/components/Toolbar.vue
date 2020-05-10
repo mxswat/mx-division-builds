@@ -13,7 +13,11 @@
 <script>
 export default {
   name: "Toolbar",
-  data: history,
+  data() {
+    return {
+      history
+    };
+  },
   created() {
     this.history = window.history;
   }

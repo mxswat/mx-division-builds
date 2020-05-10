@@ -110,6 +110,9 @@ export default {
           }
         }
       }
+      this.coresCount.utility = 0;
+      this.coresCount.offensive = 0;
+      this.coresCount.defensive = 0;
       if (this.stats) {
         if (this.stats["Skill Tier"]) {
           this.coresCount.utility = this.stats["Skill Tier"].length;

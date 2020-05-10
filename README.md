@@ -31,7 +31,7 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ~Stats editing~
 
-Make the UI working on Mobile devices
+~Make the UI working on Mobile devices~
 
 ###  Tasks required to be done before going to beta 3
 

@@ -11,7 +11,7 @@
     </div>
     <span class="section-title offensive">
       <img src="icons/offense1.png" class="image" />
-      Offensive
+      Offensive {{coresCount.offensive}}
     </span>
     <div class="stats-list-2-col" v-if="stats">
       <div v-for="(stat, idx) in offensiveStats" v-bind:key="idx">
@@ -21,7 +21,7 @@
     </div>
     <span class="section-title defensive">
       <img src="icons/defense1.png" class="image" />
-      Defensive
+      Defensive {{coresCount.defensive}}
     </span>
     <div class="stats-list-2-col" v-if="stats">
       <div v-for="(stat, idx) in defensiveStats" v-bind:key="idx">
@@ -31,7 +31,7 @@
     </div>
     <span class="section-title utility">
       <img src="icons/tech1.png" class="image" />
-      Utility
+      Utility {{coresCount.utility}}
     </span>
     <div class="stats-list-2-col" v-if="stats">
       <div v-for="(stat, idx) in utilityStats" v-bind:key="idx">
@@ -55,7 +55,12 @@ export default {
       stats: null,
       utilityStats: [],
       offensiveStats: [],
-      defensiveStats: []
+      defensiveStats: [],
+      coresCount: {
+        utility: 0,
+        offensive: 0,
+        defensive: 0
+      }
     };
   },
   created() {
@@ -103,6 +108,17 @@ export default {
               });
             }
           }
+        }
+      }
+      if (this.stats) {
+        if (this.stats["Skill Tier"]) {
+          this.coresCount.utility = this.stats["Skill Tier"].length;
+        }
+        if (this.stats["Weapon Damage"]) {
+          this.coresCount.offensive = this.stats["Weapon Damage"].length;
+        }
+        if (this.stats["Armor"]) {
+          this.coresCount.defensive = this.stats["Armor"].length;
         }
       }
     },

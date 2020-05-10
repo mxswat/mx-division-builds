@@ -16,10 +16,10 @@
 </template>
 
 <script>
-import { statsProvider } from "../../utils/statsCalculator";
 import coreService from "../../utils/coreService";
 import { combineLatest, map, timer } from "rxjs";
 import { debounce } from "rxjs/operators";
+import statsService from "../../utils/statsService";
 
 export default {
   name: "SingleWeaponStats",
@@ -69,30 +69,23 @@ export default {
     };
   },
   created() {
-    // https://www.learnrxjs.io/learn-rxjs/operators/combination/combinelatest
     const _vm = this;
     combineLatest(
       coreService.subscribeSlotData(this.name),
-      statsProvider.getStats()
-    )
-      // https://www.learnrxjs.io/learn-rxjs/operators/filtering/debounce
-      .pipe(debounce(() => timer(300)))
-      .subscribe(([weapon, stats]) => {
+      statsService.getStats$()
+    ).subscribe(([weapon, stats]) => {
         _vm.updateStatsUI(weapon, stats);
       });
   },
   methods: {
     updateStatsUI(weapon, stats) {
       this.weapon = weapon;
-      if (this.weapon) {
-        const _stats = stats.stats;
-        this.brandsStats = stats.brand;
-        // console.log(weapon, stats.stats);
-        const statsKey = Object.keys(_stats);
+      if (this.weapon && stats) {
+        const statsKey = Object.keys(stats);
         for (let i = 0; i < statsKey.length; i++) {
           const stat = statsKey[i];
           if (this.weaponStats[stat]) {
-            this.weaponStats[stat].value = _stats[stat].reduce(
+            this.weaponStats[stat].value = stats[stat].reduce(
               (a, b) => parseFloat(a) + parseFloat(b),
               0
             );

@@ -43,10 +43,10 @@
 </template>
 
 <script>
-import { statsProvider } from "../utils/statsCalculator";
 import { combineLatest, map, timer } from "rxjs";
 import { debounce } from "rxjs/operators";
 import { utilityStats, offensiveStats, defensiveStats } from "../utils/utils";
+import statsService from "../utils/statsService";
 export default {
   name: "GeneralStats",
   data() {
@@ -60,31 +60,27 @@ export default {
   },
   created() {
     const _vm = this;
-    statsProvider
-      .getStats()
-      .pipe(debounce(() => timer(300)))
-      .subscribe(allStats => {
-        _vm.updateStatsUI(allStats);
-      });
-    // this.utilityStats = utilityStats;
-    // this.offensiveStats = offensiveStats;
-    // this.defensiveStats = defensiveStats;
+    combineLatest(
+      statsService.getStats$(),
+      statsService.getBrands$()
+    ).subscribe(([stats, brands]) => {
+      _vm.updateStatsUI(stats, brands);
+    });
   },
   methods: {
-    updateStatsUI(allStats) {
-      console.log(allStats);
-      this.brands = allStats.brands;
-      this.stats = allStats.stats;
+    updateStatsUI(stats, brands) {
+      this.brands = brands;
+      this.stats = stats;
       this.utilityStats = [];
       this.offensiveStats = [];
       this.defensiveStats = [];
       let utilityStatsIndexPrev = -1;
       let offensiveStatsIndexPrev = -1;
       let defensiveStatsIndexPrev = -1;
-      for (const statName in allStats.stats) {
+      for (const statName in this.stats) {
         // eslint-disable-next-line
-        if (allStats.stats.hasOwnProperty(statName)) {
-          const values = allStats.stats[statName];
+        if (this.stats.hasOwnProperty(statName)) {
+          const values = this.stats[statName];
           const utilityStatsIndex = utilityStats.indexOf(statName);
           const offensiveStatsIndex = offensiveStats.indexOf(statName);
           const defensiveStatsIndex = defensiveStats.indexOf(statName);
@@ -132,8 +128,8 @@ export default {
   margin-right: 8px;
   margin-bottom: 8px;
 }
-.brand-stats {
-}
+// .brand-stats {
+// }
 .stats-list-2-col {
   display: flex;
   flex-direction: row;

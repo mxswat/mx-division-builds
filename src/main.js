@@ -5,10 +5,13 @@ import vSelect from 'vue-select';
 import VueRouter from 'vue-router';
 import router from "./router";
 Vue.config.productionTip = false
+
 Vue.use(VModal, {
+  dialog: true,
   dynamic: true,
   injectModalsContainer: true
 })
+
 Vue.component('v-select', vSelect)
 
 

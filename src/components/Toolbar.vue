@@ -4,13 +4,15 @@
     <div class="spacer"></div>
     <button @click="history.back()">Undo</button>
     <button @click="history.forward()">Redo</button>
-    <button>Save & Share</button>
+    <button @click="saveAndShare()">Save & Share</button>
     <button>Clear</button>
     <button>New Build</button>
   </div>
 </template>
 
 <script>
+import { openSaveShareModal } from "../utils/modalService";
+
 export default {
   name: "Toolbar",
   data() {
@@ -20,6 +22,11 @@ export default {
   },
   created() {
     this.history = window.history;
+  },
+  methods: {
+    saveAndShare () {
+      openSaveShareModal();
+    }
   }
 };
 </script>

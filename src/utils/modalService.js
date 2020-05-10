@@ -1,5 +1,8 @@
 import TableModal from "../components/TableModal";
-import { gearHeaders, weaponsHeaders } from "./agGridDefaults";
+import {
+    gearHeaders,
+    weaponsHeaders
+} from "./agGridDefaults";
 
 const openGearModal = function (gearList, onModalClose) {
     window.vueInstance.$modal.show(
@@ -29,8 +32,38 @@ const openWeaponsModal = function (weaponLists, onModalClose) {
     );
 }
 
+const openSaveShareModal = function () {
+    const bookmarkIt = 'You can add this build to your bookmarks by pressing ' + (navigator.userAgent.toLowerCase().indexOf('mac') != -1 ? 'Command/Cmd' : 'CTRL') + ' + D on your keyboard.'
+    window.vueInstance.$modal.show('dialog', {
+        title: 'Save & share',
+        text: `Hi, to save your build just bookmark it </br>
+        ${bookmarkIt} </br>
+        To share the build just send the URL of the page or click the copy button
+        `,
+        buttons: [{
+                title: 'Copy',
+                handler: () => {
+                    const el = document.createElement('textarea');
+                    el.value = document.location.href;
+                    el.setAttribute('readonly', '');
+                    el.style.position = 'absolute';
+                    el.style.left = '-9999px';
+                    document.body.appendChild(el);
+                    el.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(el);
+                    document.getElementsByClassName('vue-dialog-button')[0].innerText = 'Copied!'
+                }
+            },
+            {
+                title: 'Close'
+            }
+        ]
+    })
+}
 
 export {
     openGearModal,
-    openWeaponsModal
+    openWeaponsModal,
+    openSaveShareModal
 }

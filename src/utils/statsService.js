@@ -64,6 +64,11 @@ class StatsService {
         if (wearable) {
             brands[wearable.brand] = brands[wearable.brand] || []
             brands[wearable.brand].push(null);
+            const wearableEdgeCase = this.wearableEdgeCase(wearable)
+            if (wearableEdgeCase > -1) {
+                this.handleWearableEdgeCase(wearable, wearableEdgeCase);
+            }
+
             if (wearable.core) {
                 stats[wearable.core.label] = stats[wearable.core.label] || [];
                 stats[wearable.core.label].push(wearable.core.StatValue ? wearable.core.StatValue : wearable.core.Max);
@@ -80,6 +85,28 @@ class StatsService {
                 stats[wearable.mod.Stat] = stats[wearable.mod.Stat] || [];
                 stats[wearable.mod.Stat].push(wearable.mod.StatValue ? wearable.mod.StatValue : wearable.mod.Max)
             }
+        }
+    }
+
+    wearableEdgeCase(wearable) {
+        const edgeCases = ["Acosta's Go-Bag"]
+        return edgeCases.indexOf(wearable.itemName);
+    }
+
+    handleWearableEdgeCase(wearable, wearableEdgeCaseID) {
+        switch (wearableEdgeCaseID) {
+            case 0:
+                brands['Exotic'][0] = 'Ammo Capacity  +25%';
+                brands['Exotic'][1] = 'Repair Skills  +10%';
+                brands['Exotic'][2] = 'Status Effects +10%';
+                stats['Status Effects'] = stats['Status Effects'] || [];
+                stats['Status Effects'].push('10');
+                stats['Repair Skills'] = stats['Repair Skills'] || [];
+                stats['Repair Skills'].push('10');
+                break;
+        
+            default:
+                break;
         }
     }
 

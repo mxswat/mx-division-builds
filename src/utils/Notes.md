@@ -51,15 +51,3 @@ BODY = (((((finalDamage + (finalDamage * 0) + (finalDamage * 0)) * (1 + 0.08 + 0
 R1 Formula + MX
 finalDamage = (235060 + (235060 * (0.928 + 0.37))) + 0; // UI Damage
 BODY = (((((finalDamage + (finalDamage * 0) + (finalDamage * 0)) * (1 + 0.08 + 0.08 + 0.05))) * ( 1 + 0.25 + 0.5)))
-
-Debounce 
-
-const mySubject: Subject<void> = new Subject();
-subject.pipe(debounceTime(300)).subscribe(() => {
-  console.log('Triggered only once');
-});
-mySubject.next(); // Cleared
-mySubject.next(); // Cleared
-mySubject.next(); // Cleared
-mySubject.next(); // Cleared
-mySubject.next(); // Performed and will output: Triggered only once

@@ -4,7 +4,7 @@ import {
 } from 'rxjs';
 
 import {
-    brandSetBonusesList
+    gearData
 } from "./dataImporter";
 
 import {
@@ -39,7 +39,7 @@ class StatsService {
     }
 
     async updateBrandsStats() {
-        const brandSetBonuses = await brandSetBonusesList.BrandSetBonuses;
+        const brandSetBonuses = await gearData.BrandSetBonuses;
         for (const brand in brands) {
             // eslint-disable-next-line
             if (brands.hasOwnProperty(brand)) {

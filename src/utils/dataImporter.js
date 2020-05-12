@@ -3,15 +3,12 @@ import {
     csvToArrayWithKeys
 } from './utils';
 
-// TODO Remind me Download CSV file from Github (RAW)
-function sourceFilesToVariables(sourceList, listToPopulate, path) {
-    // Temporary TODO: Remove me
-    const cacheKiller = Math.floor(Math.random() * 1000000000)
-    for (let i = 0; i < sourceList.length; i++) {
-        const sourceRow = sourceList[i];
-        const varName = sourceRow.slice(0, sourceRow.length - 4); // Remove.csv
-        listToPopulate[varName] = new Promise((resolve, reject) => {
-            Papa.parse(`${path}${sourceRow}?${cacheKiller}`, {
+function getFromGoogleDrive(dataSources, listToPopulate) {
+    for (let i = 0; i < dataSources.length; i++) {
+        const key = dataSources[i].key;
+        const url = dataSources[i].url;
+        listToPopulate[key] = new Promise((resolve, reject) => {
+            Papa.parse(url, {
                 download: true,
                 complete: function (incomingData, fileName) {
                     // console.log("Parsing complete:", incomingData, fileName);
@@ -25,99 +22,109 @@ function sourceFilesToVariables(sourceList, listToPopulate, path) {
     // console.log(listToPopulate);
 }
 
-
-const gearList = {
-    Chest: null,
-    Gloves: null,
-    Holster: null,
-    Kneepads: null,
-    Backpack: null,
-    Mask: null,
-    // Weapons: null
-};
-
-const gearListSource = [
-    'Chest.csv',
-    'Gloves.csv',
-    'Holster.csv',
-    'Kneepads.csv',
-    'Mask.csv',
-    'Backpack.csv',
-    // 'Weapons.csv',
-]
-const gearPath = './csv/gear/';
-sourceFilesToVariables(gearListSource, gearList, gearPath);
-
-const gearAttributesList = {
-    Attributes: null
-};
-const gearAttributesListSource = ['Attributes.csv'];
-const gearAtributesPath = './csv/gear/';
-
-sourceFilesToVariables(gearAttributesListSource, gearAttributesList, gearAtributesPath);
-
-const gearModsList = {
-    GearMods: null
-};
-const gearModsListSource = ['GearMods.csv'];
-const gearModsPath = './csv/gear/';
-
-sourceFilesToVariables(gearModsListSource, gearModsList, gearModsPath);
-
-const gearTalentsList = {
-    GearTalents: null
-};
-const gearTalentsListSource = ['GearTalents.csv'];
-const gearTalentsPath = './csv/gear/';
-
-sourceFilesToVariables(gearTalentsListSource, gearTalentsList, gearTalentsPath);
-
-// TODO Change all gear Imports to an import like weaponsData
-
 const weaponsData = {
     Weapons: null,
     WeaponAttributes: null,
     WeaponMods: null,
     WeaponTalents: null
 };
-const weaponsDataSource = ['Weapons.csv', 'WeaponAttributes.csv', 'WeaponMods.csv', 'WeaponTalents.csv'];
-const weaponsPath = './csv/weapons/';
 
-sourceFilesToVariables(weaponsDataSource, weaponsData, weaponsPath);
+const weaponsDataSource = [{
+        key: 'Weapons',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRcPVplM-DEzkjImVGWGrHfqNTYuz-e6ONp-6e5PULADZPeco7idUHJa47ZEV_AaoAoikCtzwRxpV09/pub?output=csv'
+    },
+    {
+        key: 'WeaponAttributes',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLm3_ypkmAuuAHZ0uTfpZmEm19DjTEhwNtuH3m00-EM2fHbj_jrk-nm2pcMcZUunp3wVOV_JMaMYd4/pub?output=csv'
+    },
+    {
+        key: 'WeaponMods',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQIip4E2nSL_tZ4i0sUrreOFSc0oOM2S6c_jSzMuTV_GU2Nj39xHPrUq-91ZAqm6Dy1Gc5GwMrkAwWm/pub?output=csv'
+    },
+    {
+        key: 'WeaponTalents',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNOjJ5YpeNF28qwwffwyCJLqfoXCmnwkvcCLHJfc_eDUL6oEAMgd0aJJGSaYECveRWnBqDFJBNUQ6d/pub?output=csv'
+    },
+];
+getFromGoogleDrive(weaponsDataSource, weaponsData);
 
 const specializationList = {
     Specialization: null
 };
-const specializationListSource = ['Specialization.csv'];
-const specializationPath = './csv/general/';
 
-sourceFilesToVariables(specializationListSource, specializationList, specializationPath);
+const specializationListSource = [{
+    key: 'Specialization',
+    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHwYMNAuAnSwMdRZFQv5ULk8QOxQn94o3fCZxSUErUfmzoFQCrd41VoFR8IG1PEgnNgHV8WLysdepN/pub?output=csv'
+}];
 
-const brandSetBonusesList = {
-    BrandSetBonuses: null
+getFromGoogleDrive(specializationListSource, specializationList);
+
+const gearData = {
+    Chest: null,
+    Gloves: null,
+    Holster: null,
+    Kneepads: null,
+    Backpack: null,
+    Mask: null,
+    Attributes: null,
+    GearMods: null,
+    GearTalents: null,
+    BrandSetBonuses: null,
 };
-const BrandSetBonusesListSource = ['BrandSetBonuses.csv'];
-const BrandSetBonusesPath = './csv/gear/';
 
-sourceFilesToVariables(BrandSetBonusesListSource, brandSetBonusesList, BrandSetBonusesPath);
+const wearableSource = [{
+        key: 'Chest',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDlfmrpQYBmwHpBf1qMbBufc47cX-DuratgGK22WQCHeG7PYjPO7nScWag4dakrPgj5gjFYDveNQrN/pub?output=csv'
+    },
+    {
+        key: 'Gloves',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTpw_aHvN9IUfnjE2Ho70KZ-bJqZmKovsVuPBggkbtpqbSX82slObIRcl0u82tXeIztnL2wAQ4L_jGM/pub?output=csv'
+    },
+    {
+        key: 'Holster',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ1_Ar4eCdvb9XlgClSmxSNs8ilY8ecRb7QX20X_6NF3TeJNnRNLVOrzgxyoge4Arq1OzvxwGsZBad/pub?output=csv'
+    },
+    {
+        key: 'Kneepads',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLypQ-q9ljPhLCJTGqL5vIaNqiAAMDfF8bzrbEi-Tquxj4hNZhD10lDrmhQ1JcLVCyIaib6OQgdvGN/pub?output=csv'
+    },
+    {
+        key: 'Backpack',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMG0EQyPzT1pq3V0eeosoTBVoQnjau6QqAQaguXCv3rGAa2UERqZmlkJceDLMR5mzl5XKQe6XOmcAM/pub?output=csv'
+    },
+    {
+        key: 'Mask',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTuq4IcNINb2aR-yMn-oG1F7zM4Bdo3twa4LXjr3WVSEB2oSjB_T6MBa84yYO4tFIOlIwSA9kSzp63v/pub?output=csv'
+    },
+    {
+        key: 'Attributes',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdeBxM0F_-aSuGz8qjdn8K5wuV48p4mzwbw10vjsshrus_b7iOmYJhI8p8q1T6-0W53GTQFbrffMes/pub?output=csv'
+    },
+    {
+        key: 'GearMods',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSkeQl0E8FLDdqYdH4q2Br6oyEZqqeGjIeU9KngsGWR2HJ_k3oyWhAxlOGNLuyMJj82-314yBj_u-h8/pub?output=csv'
+    },
+    {
+        key: 'GearTalents',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTX_6lhgAseVURudnhRQduu64IVbGTdE66kImMkq0SN1QlseS4Udcqn4QBHi3Hb2Rgl_v6mAWTYcAWT/pub?output=csv'
+    },
+    {
+        key: 'BrandSetBonuses',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR5SjdRZqnZXMoq08qIekMFEV6FB37hxYkrg2q0DyTol6mvD60yLyWdyJrvybnr32_80h86Y-_NXJOh/pub?output=csv'
+    },
+];
+
+getFromGoogleDrive(wearableSource, gearData);
 
 const allDataPromies = [
-    ...Object.values(gearList),
-    ...Object.values(gearTalentsList),
-    ...Object.values(gearAttributesList),
-    ...Object.values(gearModsList),
+    ...Object.values(gearData),
     ...Object.values(weaponsData),
     ...Object.values(specializationList),
-    ...Object.values(brandSetBonusesList),
 ]
 
 export {
     allDataPromies,
-    gearList,
-    gearTalentsList,
-    gearAttributesList,
-    gearModsList,
+    gearData,
     weaponsData,
     specializationList,
-    brandSetBonusesList
 };

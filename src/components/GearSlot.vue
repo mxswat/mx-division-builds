@@ -127,12 +127,7 @@
 import { openGearModal } from "../utils/modalService";
 import { GearBase } from "../utils/classes";
 import { typeToImgSrc, coreAttributes, qualityToCss } from "../utils/utils";
-import {
-  gearModsList,
-  gearAttributesList,
-  gearTalentsList
-} from "../utils/dataImporter";
-import { gearList } from "../utils/dataImporter";
+import { gearData } from "../utils/dataImporter";
 import StatInput from "./StatInput";
 import Vue from "vue";
 import coreService from "../utils/coreService";
@@ -202,12 +197,12 @@ export default {
       openGearModal(this.gearList, this.onModalClose);
     },
     initGearMods() {
-      gearModsList.GearMods.then(res => {
+      gearData.GearMods.then(res => {
         this.gearMods = JSON.parse(JSON.stringify(res));
       });
     },
     initGearAttributes() {
-      gearAttributesList.Attributes.then(attributes => {
+      gearData.Attributes.then(attributes => {
         this.allGearAttributes = JSON.parse(JSON.stringify(attributes));
         this.gearAttributes = this.allGearAttributes.filter(attribute => {
           return attribute.Quality === "A";
@@ -217,7 +212,7 @@ export default {
     initGearTalentsList() {
       // At the moment I don't need to divide the talent by gear
       // So, no separate files
-      gearTalentsList.GearTalents.then(talents => {
+      gearData.GearTalents.then(talents => {
         this.allTalents = talents;
         this.gearTalents = talents.filter(talent => {
           return talent.Slot === this.name && talent.Quality === "A";
@@ -310,7 +305,7 @@ export default {
       });
     },
     initWearableList() {
-      gearList[this.name].then(values => {
+      gearData[this.name].then(values => {
         this.gearList = values;
       });
     }

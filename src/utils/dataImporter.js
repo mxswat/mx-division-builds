@@ -39,7 +39,7 @@ const weaponsDataSource = [{
     },
     {
         key: 'WeaponMods',
-        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQIip4E2nSL_tZ4i0sUrreOFSc0oOM2S6c_jSzMuTV_GU2Nj39xHPrUq-91ZAqm6Dy1Gc5GwMrkAwWm/pub?output=csv'
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR6qLETyBTl4WNH8lpHo5wMOjFz3XSRnVknew1GbM2zCMY6U1EVZ5SKyflgja8uWzEkvFXa59hrB2Vm/pub?gid=1315660561&single=true&output=csv'
     },
     {
         key: 'WeaponTalents',

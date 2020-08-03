@@ -5,6 +5,11 @@ import {
 
 const currentDBVersion = 1;
 
+const wipeLocalStorage = !!localStorage.getItem('localDBversion')
+if (wipeLocalStorage) {
+    window.localStorage.clear(); //clear all localstorage after new per sheet versioning
+}
+
 function getFromGoogleDrive(dataSources, listToPopulate) {
     for (let i = 0; i < dataSources.length; i++) {
         const key = dataSources[i].key;

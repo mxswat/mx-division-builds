@@ -3,7 +3,7 @@ import {
     csvToArrayWithKeys
 } from './utils';
 
-const currentDBVersion = 0;
+const currentDBVersion = 1;
 
 function getFromGoogleDrive(dataSources, listToPopulate) {
     for (let i = 0; i < dataSources.length; i++) {
@@ -11,6 +11,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
         const url = dataSources[i].url;
         const localDBversion = Number(localStorage.getItem('localDBversion'));
         if (!localDBversion || localDBversion < currentDBVersion) {
+            localStorage.setItem('localDBversion', currentDBVersion);
             listToPopulate[key] = new Promise((resolve, reject) => {
                 Papa.parse(url, {
                     download: true,

@@ -7,7 +7,7 @@
       <span class="loader"></span>
     </div>
     <div class="loading" v-if="errorOnGetData">
-      <span>I'm sorry, too many people are connected to the server right now, try again later, report this issue at <a  style="color:" href="http://discord.gg/ShYner2">my discord!</a></span>
+      <span>I'm sorry, too many people are connected to the server right now, try again later (about 60-70 minutes).<br> If you can, report this issue at <a  style="color:" href="http://discord.gg/ShYner2">my discord!</a></span>
     </div>
     <div class="grid-container" v-if="loaded && !errorOnGetData">
       <router-view></router-view>

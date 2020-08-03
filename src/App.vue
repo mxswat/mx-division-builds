@@ -3,6 +3,9 @@
     <BasicTile classes="toolbar-container">
       <Toolbar></Toolbar>
     </BasicTile>
+    <div class="loading" v-if="!loaded">
+      <span class="loader"></span>
+    </div>
     <div class="grid-container" v-if="loaded">
       <router-view></router-view>
       <WeaponStats></WeaponStats>
@@ -156,4 +159,68 @@ body,
 .tile:not(.specialization) {
   min-height: 230px;
 }
+
+.loading {
+  display: flex;
+  flex: 1 1 auto;
+  height: calc(100vh - 110px);
+  align-items: center;
+  justify-content: center;
+}
+
+$loader-size: 150px;
+.loader {
+  width: $loader-size;
+  height: $loader-size;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: $loader-size - 28;
+  height: $loader-size - 28;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: $loader-size - 56;
+  height: $loader-size - 56;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+    
 </style>

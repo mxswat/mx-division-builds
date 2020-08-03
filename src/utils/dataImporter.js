@@ -9,9 +9,10 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
     for (let i = 0; i < dataSources.length; i++) {
         const key = dataSources[i].key;
         const url = dataSources[i].url;
-        const localDBversion = Number(localStorage.getItem('localDBversion'));
+        const localDBVersionKey = `localDBversion-${key}`;
+        const localDBversion = Number(localStorage.getItem(localDBVersionKey));
         if (!localDBversion || localDBversion < currentDBVersion) {
-            localStorage.setItem('localDBversion', currentDBVersion);
+            localStorage.setItem(localDBVersionKey, currentDBVersion);
             listToPopulate[key] = new Promise((resolve, reject) => {
                 Papa.parse(url, {
                     download: true,

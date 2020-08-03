@@ -3,6 +3,8 @@ import {
     csvToArrayWithKeys
 } from './utils';
 
+const currentDBVersion = 0;
+
 function getFromGoogleDrive(dataSources, listToPopulate) {
     for (let i = 0; i < dataSources.length; i++) {
         const key = dataSources[i].key;
@@ -16,6 +18,9 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
                     let result = csvToArrayWithKeys(headers, incomingData.data)
                     resolve(result);
                 },
+                error: function returnError(params) {
+                    reject('Too many request, probably because of using CORS any where');
+                }
             });
         })
     }

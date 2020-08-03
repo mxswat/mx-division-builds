@@ -6,7 +6,10 @@
     <div class="loading" v-if="!loaded">
       <span class="loader"></span>
     </div>
-    <div class="grid-container" v-if="loaded">
+    <div class="loading" v-if="errorOnGetData">
+      <span>I'm sorry, too many people are connected to the server right now, try again later, report this issue at <a  style="color:" href="http://discord.gg/ShYner2">my discord!</a></span>
+    </div>
+    <div class="grid-container" v-if="loaded && !errorOnGetData">
       <router-view></router-view>
       <WeaponStats></WeaponStats>
       <div class="spec-and-stats">
@@ -40,14 +43,19 @@ export default {
   },
   data() {
     return {
-      loaded: false
+      loaded: false,
+      errorOnGetData: false
     };
   },
   created() {
     Promise.all(allDataPromies).then(() => {
       this.loaded = true;
       console.log("allDataPromies Complete");
-    });
+    }).catch(() => {
+      this.errorOnGetData = true;
+      this.loaded = true;
+      console.log('Too many request :( ')
+    })
   }
 };
 </script>
@@ -149,6 +157,10 @@ body,
     color: orange;
     text-align: center;
   }
+}
+
+a {
+  color: orange;
 }
 
 .talent-description {

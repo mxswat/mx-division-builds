@@ -35,7 +35,8 @@ export default {
       location.reload();
     },
     newBuild() {
-      window.open('/','_blank');
+      const routeData = this.$router.resolve({name: 'home'});
+      window.open(routeData.href, '_blank');
     }
   }
 };

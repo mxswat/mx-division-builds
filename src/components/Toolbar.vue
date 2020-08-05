@@ -7,11 +7,12 @@
     <button @click="saveAndShare()">Save & Share</button>
     <button @click="clear()">Clear</button>
     <button @click="newBuild()">New Build</button>
+    <button style="color: #f7d07c;" @click="issues()">Issues or bug?</button>
   </div>
 </template>
 
 <script>
-import { openSaveShareModal } from "../utils/modalService";
+import { openSaveShareModal, openIssueModal } from "../utils/modalService";
 
 export default {
   name: "Toolbar",
@@ -37,6 +38,9 @@ export default {
     newBuild() {
       const routeData = this.$router.resolve({name: 'home'});
       window.open(routeData.href, '_blank');
+    },
+    issues() {
+      openIssueModal()
     }
   }
 };

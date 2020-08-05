@@ -69,7 +69,7 @@ const openIssueModal = function () {
         Press the clean button and wait for the refresh, if you still have problems please report this issue at <a  style="color:" href="http://discord.gg/ShYner2">my discord server!</a>
         `,
         buttons: [{
-                title: 'Clean',
+                title: 'Clean local DB',
                 handler: () => {
                     window.localStorage.clear();
                     location.reload();

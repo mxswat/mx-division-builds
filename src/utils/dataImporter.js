@@ -13,7 +13,7 @@ if (wipeLocalStorage) {
 function getFromGoogleDrive(dataSources, listToPopulate) {
     for (let i = 0; i < dataSources.length; i++) {
         const key = dataSources[i].key;
-        const url = dataSources[i].url;
+        const url = newUrlBuilder(dataSources[i].url);
         const localDBVersionKey = `localDBversion-${key}`;
         const localDBversion = Number(localStorage.getItem(localDBVersionKey));
         if (!localDBversion || localDBversion < currentDBVersion) {
@@ -48,21 +48,30 @@ const weaponsData = {
     WeaponTalents: null
 };
 
+/**
+ * Changed because CORS is broken right now on google SHEETS https://support.google.com/docs/thread/56845119?hl=en&msgid=64018659
+ * Sheet1 is which sheet i'm loading in order the custom name does not work
+ * @param {*} key key is the string in the Gdrive sheet URL, in particular after /d/ and before /edit 
+ */
+function newUrlBuilder(key) {
+    return `https://docs.google.com/spreadsheets/d/${key}/gviz/tq?tqx=out:csv&sheet=Sheet1`
+}
+
 const weaponsDataSource = [{
     key: 'Weapons',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRcPVplM-DEzkjImVGWGrHfqNTYuz-e6ONp-6e5PULADZPeco7idUHJa47ZEV_AaoAoikCtzwRxpV09/pub?output=csv'
+    url: '12hCYqKgm1dY4Lk-alwwGCc6-YYd2fd2kZnpqNWiugZg'
 },
 {
     key: 'WeaponAttributes',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQLm3_ypkmAuuAHZ0uTfpZmEm19DjTEhwNtuH3m00-EM2fHbj_jrk-nm2pcMcZUunp3wVOV_JMaMYd4/pub?output=csv'
+    url: '1SjpqM6Zx-JGl7JxBBs19CjQVjzSLAxG-AqToLggPtxE'
 },
 {
     key: 'WeaponMods',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR6qLETyBTl4WNH8lpHo5wMOjFz3XSRnVknew1GbM2zCMY6U1EVZ5SKyflgja8uWzEkvFXa59hrB2Vm/pub?gid=1315660561&single=true&output=csv'
+    url: '1HTeu33nQ9gZoGdoSJTvI38qAKq8_aX1xxN590Rl8LXw'
 },
 {
     key: 'WeaponTalents',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNOjJ5YpeNF28qwwffwyCJLqfoXCmnwkvcCLHJfc_eDUL6oEAMgd0aJJGSaYECveRWnBqDFJBNUQ6d/pub?output=csv'
+    url: '1Je9EjrgwXqv0Ehh1xUmCzQtbYfpoWBR_nUEiMUAql-U'
 },
 ];
 getFromGoogleDrive(weaponsDataSource, weaponsData);
@@ -73,7 +82,7 @@ const specializationList = {
 
 const specializationListSource = [{
     key: 'Specialization',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHwYMNAuAnSwMdRZFQv5ULk8QOxQn94o3fCZxSUErUfmzoFQCrd41VoFR8IG1PEgnNgHV8WLysdepN/pub?output=csv'
+    url: '1sDygGjqldslj9MrDzQRg3JDSiIaEnnkqTvvkeO_eMg8'
 }];
 
 getFromGoogleDrive(specializationListSource, specializationList);
@@ -93,43 +102,43 @@ const gearData = {
 
 const wearableSource = [{
     key: 'Chest',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRDlfmrpQYBmwHpBf1qMbBufc47cX-DuratgGK22WQCHeG7PYjPO7nScWag4dakrPgj5gjFYDveNQrN/pub?output=csv'
+    url: '1VKEn9sarM3pJIUib7cl4zw-L3CCEgylSKJqh6-Ry29E'
 },
 {
     key: 'Gloves',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTpw_aHvN9IUfnjE2Ho70KZ-bJqZmKovsVuPBggkbtpqbSX82slObIRcl0u82tXeIztnL2wAQ4L_jGM/pub?output=csv'
+    url: '16cTJWwqrsjRccroeS9zFuY-sAhOyWEUgaTiFWCyyCz8'
 },
 {
     key: 'Holster',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSJ1_Ar4eCdvb9XlgClSmxSNs8ilY8ecRb7QX20X_6NF3TeJNnRNLVOrzgxyoge4Arq1OzvxwGsZBad/pub?output=csv'
+    url: '11wqBX2umxym_GARhBIebMBQ1LdwcWRUDSPy0d1V3o0U'
 },
 {
     key: 'Kneepads',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRLypQ-q9ljPhLCJTGqL5vIaNqiAAMDfF8bzrbEi-Tquxj4hNZhD10lDrmhQ1JcLVCyIaib6OQgdvGN/pub?output=csv'
+    url: '1QNIlpAx5cPvp0ZtlWiv3NJijUxe-wYu-8BwRfThXn98'
 },
 {
     key: 'Backpack',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRMG0EQyPzT1pq3V0eeosoTBVoQnjau6QqAQaguXCv3rGAa2UERqZmlkJceDLMR5mzl5XKQe6XOmcAM/pub?output=csv'
+    url: '1mdnKkX2C6CVK0BGC7EJPpK6lgQYKhl_sqrbAGqGTk58'
 },
 {
     key: 'Mask',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTuq4IcNINb2aR-yMn-oG1F7zM4Bdo3twa4LXjr3WVSEB2oSjB_T6MBa84yYO4tFIOlIwSA9kSzp63v/pub?output=csv'
+    url: '1R5fGkOaT3pBMIh954b-eGIuhz0RcUh-8dXM6HAd7BP8'
 },
 {
     key: 'Attributes',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vQdeBxM0F_-aSuGz8qjdn8K5wuV48p4mzwbw10vjsshrus_b7iOmYJhI8p8q1T6-0W53GTQFbrffMes/pub?output=csv'
+    url: '18Z_jX_jPBUDa5oIoQ6aQWd9M7avPYLAWuN88Rqb_hS4'
 },
 {
     key: 'GearMods',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSkeQl0E8FLDdqYdH4q2Br6oyEZqqeGjIeU9KngsGWR2HJ_k3oyWhAxlOGNLuyMJj82-314yBj_u-h8/pub?output=csv'
+    url: '1hF6JiKyJBMuZB3glun-nXAynEtzqEnJ6zeCeofTVNko'
 },
 {
     key: 'GearTalents',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTX_6lhgAseVURudnhRQduu64IVbGTdE66kImMkq0SN1QlseS4Udcqn4QBHi3Hb2Rgl_v6mAWTYcAWT/pub?output=csv'
+    url: '1HkJBxyUpJSxsPNd2s120P-_v5QWJ1t7a19JLDFqNi4E'
 },
 {
     key: 'BrandSetBonuses',
-    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR5SjdRZqnZXMoq08qIekMFEV6FB37hxYkrg2q0DyTol6mvD60yLyWdyJrvybnr32_80h86Y-_NXJOh/pub?output=csv'
+    url: '1csi8qk1U5g0zGjez3wIIBV-9Wc-VpQBPFwM3AdK2_oo'
 },
 ];
 

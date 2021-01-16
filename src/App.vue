@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import { allDataPromies } from "./utils/dataImporter";
+import { IsEverythingLoadedPromise } from "./utils/dataImporter";
 import WeaponStats from "./components/WeaponStats/WeaponStats";
 import GeneralStats from "./components/GeneralStats";
 import BasicTile from "./components/BasicTile";
@@ -48,9 +48,9 @@ export default {
     };
   },
   created() {
-    Promise.all(allDataPromies).then(() => {
+    IsEverythingLoadedPromise.then(() => {
       this.loaded = true;
-      console.log("allDataPromies Complete");
+      console.log("IsEverythingLoadedPromise Complete");
     }).catch(() => {
       this.errorOnGetData = true;
       this.loaded = true;

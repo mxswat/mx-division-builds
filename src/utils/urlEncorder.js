@@ -31,7 +31,7 @@ const gearEncoderMap = {
 };
 
 import {
-    allDataPromies
+    IsEverythingLoadedPromise
 } from "./dataImporter";
 
 import {
@@ -141,14 +141,16 @@ function specializationToIds(specialization) {
     return ids;
 }
 
-
 const urlDecoder = function (encodedBuild) {
-    Promise.all(allDataPromies).then(() => {
+    IsEverythingLoadedPromise.then(() => {
         console.log('Everything loaded and ready for decode');
         const splitted = decompressFromEncodedURIComponent(encodedBuild).split(':');
         for (let i = 0; i < splitted.length; i++) {
             const slotEncoded = splitted[i];
-            coreService.sendSlotInit(gearEncoderMap[i], slotEncoded);
+            // VERY LAZY FIX - TODO: Handle correctly the init of a weapon/gear slot before the data promise is resolved in the component created()
+            setTimeout(() => {
+                coreService.sendSlotInit(gearEncoderMap[i], slotEncoded);
+            }, 100);
         }
     });
 }

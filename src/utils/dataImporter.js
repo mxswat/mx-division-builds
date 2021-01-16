@@ -3,43 +3,70 @@ import {
     csvToArrayWithKeys
 } from './utils';
 
-const currentDBVersion = 3;
+let IsEverythingLoadedPromiseResolve, IsEverythingLoadedPromiseReject;
 
-const wipeLocalStorage = !!localStorage.getItem('localDBversion')
-if (wipeLocalStorage) {
-    window.localStorage.clear(); //clear all localstorage after new per sheet versioning
-}
+const IsEverythingLoadedPromise = new Promise(function(resolve, reject){
+  IsEverythingLoadedPromiseResolve = resolve;
+  IsEverythingLoadedPromiseReject = reject;
+});
+
+const ClientDBVersion = Number(localStorage.getItem('localDBversion')) || 0;
+let RemoteDBVersion = null;
 
 function getFromGoogleDrive(dataSources, listToPopulate) {
     for (let i = 0; i < dataSources.length; i++) {
-        const key = dataSources[i].key;
+        const DataTableName = dataSources[i].key;
         const url = dataSources[i].url;
-        const localDBVersionKey = `localDBversion-${key}`;
-        const localDBversion = Number(localStorage.getItem(localDBVersionKey));
-        if (!localDBversion || localDBversion < currentDBVersion) {
-            localStorage.setItem(localDBVersionKey, currentDBVersion);
-            listToPopulate[key] = new Promise((resolve, reject) => {
+        if (!ClientDBVersion || ClientDBVersion < RemoteDBVersion) {
+            listToPopulate[DataTableName] = new Promise((resolve, reject) => {
                 Papa.parse(url, {
                     download: true,
                     complete: function (incomingData, fileName) {
-                        // console.log("Parsing complete:", incomingData, fileName);
-                        const headers = incomingData.data.shift();
-                        let result = csvToArrayWithKeys(headers, incomingData.data)
-                        localStorage.setItem(key, JSON.stringify(result));
-                        resolve(result);
+                        try {
+                            console.log("Parsing complete:", incomingData, fileName);
+                            const headers = incomingData.data.shift();
+                            let result = csvToArrayWithKeys(headers, incomingData.data)
+                            localStorage.setItem(DataTableName, JSON.stringify(result));
+                            resolve(result);
+                        } catch (error) {
+                            reject('Something when wrong during the download of one data table');
+                        }
                     },
                     error: function returnError(params) {
-                        reject('Too many request, probably because of using CORS any where');
+                        reject('Something when wrong during the download of one data table');
                     }
                 });
             })
         } else {
-            const localData = localStorage.getItem(key);
-            listToPopulate[key] = Promise.resolve(JSON.parse(localData));
+            const localData = localStorage.getItem(DataTableName);
+            listToPopulate[DataTableName] = Promise.resolve(JSON.parse(localData));
         }
     }
-    // console.log(listToPopulate);
 }
+
+fetch("/DB.Version", { method: 'GET', })
+    .then(response => response.blob())
+    .then(blob => blob.text())
+    .then((DownloadedDBVersion) => {
+        RemoteDBVersion = Number(DownloadedDBVersion);   
+        if (DownloadedDBVersion > ClientDBVersion) {
+            window.localStorage.clear(); //clear all localstorage after new per sheet versioning
+        }
+        getFromGoogleDrive(wearableSource, gearData);
+        getFromGoogleDrive(weaponsDataSource, weaponsData);
+        getFromGoogleDrive(specializationListSource, specializationList);
+        
+        Promise.all([
+            ...Object.values(gearData),
+            ...Object.values(weaponsData),
+            ...Object.values(specializationList),
+        ])
+        .then(()=> {
+            localStorage.setItem('localDBversion', RemoteDBVersion);
+            IsEverythingLoadedPromiseResolve();
+        })
+        .catch(() => IsEverythingLoadedPromiseReject())
+    })
 
 const weaponsData = {
     Weapons: null,
@@ -65,7 +92,6 @@ const weaponsDataSource = [{
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vSNOjJ5YpeNF28qwwffwyCJLqfoXCmnwkvcCLHJfc_eDUL6oEAMgd0aJJGSaYECveRWnBqDFJBNUQ6d/pub?output=csv'
 },
 ];
-getFromGoogleDrive(weaponsDataSource, weaponsData);
 
 const specializationList = {
     Specialization: null
@@ -76,7 +102,6 @@ const specializationListSource = [{
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTHwYMNAuAnSwMdRZFQv5ULk8QOxQn94o3fCZxSUErUfmzoFQCrd41VoFR8IG1PEgnNgHV8WLysdepN/pub?output=csv'
 }];
 
-getFromGoogleDrive(specializationListSource, specializationList);
 
 const gearData = {
     Chest: null,
@@ -133,16 +158,8 @@ const wearableSource = [{
 },
 ];
 
-getFromGoogleDrive(wearableSource, gearData);
-
-const allDataPromies = [
-    ...Object.values(gearData),
-    ...Object.values(weaponsData),
-    ...Object.values(specializationList),
-]
-
 export {
-    allDataPromies,
+    IsEverythingLoadedPromise,
     gearData,
     weaponsData,
     specializationList,

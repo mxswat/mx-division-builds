@@ -44,7 +44,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
     }
 }
 
-fetch("/DB.Version", { method: 'GET', })
+fetch("/mx-division-builds/DB.Version", { method: 'GET', })
     .then(response => response.blob())
     .then(blob => blob.text())
     .then((DownloadedDBVersion) => {

@@ -3,7 +3,7 @@ import {
     csvToArrayWithKeys
 } from './utils';
 
-const currentDBVersion = 1;
+const currentDBVersion = 2;
 
 const wipeLocalStorage = !!localStorage.getItem('localDBversion')
 if (wipeLocalStorage) {
@@ -29,7 +29,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
                         resolve(result);
                     },
                     error: function returnError(params) {
-                        reject('Too many request, probably because of using CORS any where');
+                        reject('Too many request, probably because of too many request to my Google Drive, please try later');
                     }
                 });
             })

@@ -6,8 +6,10 @@
         v-bind:class="[qualityToCSS(currentGear.quality)]"
         v-on:click="openGearModal()"
       >
-        {{ currentGear.itemName}}
-        <template v-if="isNamedGear(currentGear)">({{currentGear.brand}})</template>
+        {{ currentGear.itemName }}
+        <template v-if="isNamedGear(currentGear)"
+          >({{ currentGear.brand }})</template
+        >
       </div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
       <div class="slot-element stat-edit core-attribute">
@@ -18,12 +20,18 @@
           :options="currentGear.quality === 'Exotic' ? [] : coreAttributes"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.core[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.core[option.Type]"
+            />
             <span class="attribute-label">{{ option.label }}</span>
-            <span class="attribute-value">{{option.Max}}</span>
+            <span class="attribute-value">{{ option.Max }}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.core[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.core[option.Type]"
+            />
             <span class="attribute-label">{{ option.label }}</span>
           </template>
         </v-select>
@@ -37,17 +45,29 @@
         <v-select
           placeholder="Minor attribute 1"
           :clearable="false"
-          :options="filterGearAttributes(gearAttributes, currentGear.attributeTwo, currentGear.filters.attributeOne)"
+          :options="
+            filterGearAttributes(
+              gearAttributes,
+              currentGear.attributeTwo,
+              currentGear.filters.attributeOne
+            )
+          "
           v-model="currentGear.attributeOne"
           label="Stat"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.attribute[option.Type]"
+            />
             <span class="attribute-label">{{ option.Stat }}</span>
-            <span class="attribute-value">{{option.Max}}</span>
+            <span class="attribute-value">{{ option.Max }}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.attribute[option.Type]"
+            />
             <span class="attribute-label">{{ option.Stat }}</span>
           </template>
         </v-select>
@@ -57,21 +77,36 @@
           v-bind:max="currentGear.attributeOne.Max"
         ></StatInput>
       </div>
-      <div class="slot-element stat-edit attribute-two" v-if="currentGear.filters.attributeTwo">
+      <div
+        class="slot-element stat-edit attribute-two"
+        v-if="currentGear.filters.attributeTwo"
+      >
         <v-select
           placeholder="Minor attribute 2"
           :clearable="false"
-          :options="filterGearAttributes(gearAttributes, currentGear.attributeOne, currentGear.filters.attributeTwo)"
+          :options="
+            filterGearAttributes(
+              gearAttributes,
+              currentGear.attributeOne,
+              currentGear.filters.attributeTwo
+            )
+          "
           v-model="currentGear.attributeTwo"
           label="Stat"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.attribute[option.Type]"
+            />
             <span class="attribute-label">{{ option.Stat }}</span>
-            <span class="attribute-value">{{option.Max}}</span>
+            <span class="attribute-value">{{ option.Max }}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.attribute[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.attribute[option.Type]"
+            />
             <span class="attribute-label">{{ option.Stat }}</span>
           </template>
         </v-select>
@@ -81,7 +116,10 @@
           v-bind:max="currentGear.attributeTwo.Max"
         ></StatInput>
       </div>
-      <div class="slot-element stat-edit mod-slot" v-if="currentGear.filters.mod">
+      <div
+        class="slot-element stat-edit mod-slot"
+        v-if="currentGear.filters.mod"
+      >
         <v-select
           placeholder="Mod"
           :clearable="false"
@@ -90,12 +128,18 @@
           label="Stat"
         >
           <template v-slot:option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.mod[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.mod[option.Type]"
+            />
             <span class="attribute-label">{{ option.Stat }}</span>
-            <span class="attribute-value">{{option.Max}}</span>
+            <span class="attribute-value">{{ option.Max }}</span>
           </template>
           <template #selected-option="option">
-            <img class="attribute-image" v-bind:src="typeToImgSrc.mod[option.Type]" />
+            <img
+              class="attribute-image"
+              v-bind:src="typeToImgSrc.mod[option.Type]"
+            />
             <span class="attribute-label">{{ option.Stat }}</span>
           </template>
         </v-select>
@@ -105,15 +149,31 @@
           v-bind:max="currentGear.mod.Max"
         ></StatInput>
       </div>
-      <div class="slot-element talent" v-if="gearTalents.length > 0 || this.currentGear.talent">
+      <div
+        class="slot-element talent"
+        v-if="gearTalents.length > 0 || this.currentGear.talent"
+      >
         <v-select
           placeholder="Talent"
           :clearable="false"
           label="Talent"
           v-model="currentGear.talent"
           :options="filterGearTalents(gearTalents)"
-        ></v-select>
-        <div class="talent-description" v-if="currentGear.talent">{{currentGear.talent.Desc}}</div>
+          :class="currentGear.talent ? 'tool' : ''"
+          :data-tip="currentGear.talent && currentGear.talent.Desc"
+        >
+          <template v-slot:option="option">
+            <div class="talent-info-container">
+              <span class="talent-label">{{ option.Talent }}</span>
+              <span class="talent-desc">{{ option.Desc }}</span>
+            </div>
+          </template>
+          <template #selected-option="option">
+            <div class="talent-info-container label-selected">
+              <span class="talent-label">{{ option.Talent }}</span>
+            </div>
+          </template>
+        </v-select>
       </div>
     </template>
 
@@ -137,7 +197,7 @@ export default {
   components: { StatInput },
   props: {
     name: undefined,
-    init: null
+    init: null,
   },
   data() {
     return {
@@ -149,7 +209,7 @@ export default {
       gearAttributes: null,
       gearTalents: null,
       allTalents: null,
-      allGearAttributes: null
+      allGearAttributes: null,
     };
   },
   methods: {
@@ -170,22 +230,22 @@ export default {
         case "Exotic":
         case "Named":
           this.currentGear.core = this.coreAttributes.find(
-            attribute => attribute.label === this.currentGear.filters.core
+            (attribute) => attribute.label === this.currentGear.filters.core
           );
           this.currentGear.attributeOne = this.allGearAttributes.find(
-            attribute =>
+            (attribute) =>
               attribute.Stat === this.currentGear.filters.attributeOne
           );
           this.currentGear.attributeTwo = this.allGearAttributes.find(
-            attribute =>
+            (attribute) =>
               attribute.Stat === this.currentGear.filters.attributeTwo
           );
-          this.currentGear.talent = this.allTalents.find(talent => {
+          this.currentGear.talent = this.allTalents.find((talent) => {
             return talent.Talent === this.currentGear.filters.talent;
           });
           break;
         case "Gearset":
-          this.currentGear.talent = this.allTalents.find(talent => {
+          this.currentGear.talent = this.allTalents.find((talent) => {
             return talent.Talent === this.currentGear.filters.talent;
           });
           break;
@@ -197,15 +257,15 @@ export default {
       openGearModal(this.gearList, this.onModalClose);
     },
     initGearMods() {
-      gearData.GearMods.then(res => {
+      gearData.GearMods.then((res) => {
         // Removed old fix to Gdrive Bug
         this.gearMods = res;
       });
     },
     initGearAttributes() {
-      gearData.Attributes.then(attributes => {
+      gearData.Attributes.then((attributes) => {
         this.allGearAttributes = JSON.parse(JSON.stringify(attributes));
-        this.gearAttributes = this.allGearAttributes.filter(attribute => {
+        this.gearAttributes = this.allGearAttributes.filter((attribute) => {
           return attribute.Quality === "A";
         });
       });
@@ -213,9 +273,9 @@ export default {
     initGearTalentsList() {
       // At the moment I don't need to divide the talent by gear
       // So, no separate files
-      gearData.GearTalents.then(talents => {
+      gearData.GearTalents.then((talents) => {
         this.allTalents = talents;
-        this.gearTalents = talents.filter(talent => {
+        this.gearTalents = talents.filter((talent) => {
           return talent.Slot === this.name && talent.Quality === "A";
         });
       });
@@ -242,7 +302,7 @@ export default {
         default:
           break;
       }
-      return attributes.filter(attribute => {
+      return attributes.filter((attribute) => {
         return !otherAttribute
           ? true
           : otherAttribute.index !== attribute.index;
@@ -263,28 +323,28 @@ export default {
       return this.currentGear.quality === "Named";
     },
     initGearData() {
-      coreService.getSlotInit$(this.name).subscribe(ids => {
+      coreService.getSlotInit$(this.name).subscribe((ids) => {
         const splittedIdS = ids.split("-");
         const gearId = parseInt([splittedIdS[0]]);
         if (gearId) {
           const fromUrlGear = new GearBase(
-            this.gearList.find(gear => gear.index === gearId)
+            this.gearList.find((gear) => gear.index === gearId)
           );
           this.currentGear = fromUrlGear;
           this.currentGear.attributeOne = this.allGearAttributes.find(
-            attribute => attribute.index === parseInt(splittedIdS[1])
+            (attribute) => attribute.index === parseInt(splittedIdS[1])
           );
           this.currentGear.attributeTwo = this.allGearAttributes.find(
-            attribute => attribute.index === parseInt(splittedIdS[2])
+            (attribute) => attribute.index === parseInt(splittedIdS[2])
           );
           this.currentGear.core = this.coreAttributes.find(
-            attribute => attribute.index === parseInt(splittedIdS[3])
+            (attribute) => attribute.index === parseInt(splittedIdS[3])
           );
           this.currentGear.mod = this.gearMods.find(
-            mod => mod.index === parseInt(splittedIdS[4])
+            (mod) => mod.index === parseInt(splittedIdS[4])
           );
           this.currentGear.talent = this.allTalents.find(
-            talent => talent.index === parseInt(splittedIdS[5])
+            (talent) => talent.index === parseInt(splittedIdS[5])
           );
 
           const stats = [null, "core", "attributeOne", "attributeTwo", "mod"];
@@ -302,10 +362,10 @@ export default {
       });
     },
     initWearableList() {
-      gearData[this.name].then(values => {
+      gearData[this.name].then((values) => {
         this.gearList = values;
       });
-    }
+    },
   },
   created() {
     this.coreAttributes = JSON.parse(JSON.stringify(coreAttributes));
@@ -318,12 +378,12 @@ export default {
   },
   watch: {
     currentGear: {
-      handler: function(val, oldVal) {
+      handler: function (val, oldVal) {
         coreService.sendSlotData(this.name, val);
       },
-      deep: true
-    }
-  }
+      deep: true,
+    },
+  },
 };
 </script>
 

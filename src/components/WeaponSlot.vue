@@ -64,6 +64,8 @@
           :options="filterTalents(weaponTalents)"
           v-model="currentWeapon['talent']"
           label="Name"
+            :class="currentWeapon.talent ? 'tool' : ''" 
+          :data-tip="currentWeapon.talent && currentWeapon.talent.Desc" 
         >
           <template v-slot:option="option">
             <div class="talent-info-container">
@@ -77,7 +79,6 @@
             </div>
           </template>
         </v-select>
-        <div class="talent-description" v-if="currentWeapon.talent">{{currentWeapon.talent.Desc}}</div>
       </div>
       <div class="mods-toggle" @click="showModSlots = !showModSlots">
         <span>Mods</span>

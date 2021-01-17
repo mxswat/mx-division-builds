@@ -1,6 +1,6 @@
-@import './scrollbar.scss';
-@import './slots-common.scss';
-@import './slots-stat-edit.scss';
+@import "./scrollbar.scss";
+@import "./slots-common.scss";
+@import "./slots-stat-edit.scss";
 
 .gear-name,
 .weapon-name {
@@ -49,10 +49,12 @@
 
 // TODO Move me in my correct file
 // Import first the variables or the override wont work
-$vs-colors: (lightest: white,
+$vs-colors: (
+  lightest: white,
   light: white,
   dark: white,
-  darkest: white);
+  darkest: white,
+);
 $vs-dropdown-box-shadow: none;
 $vs-border-radius: 0px;
 $vs-dropdown-bg: #151515;
@@ -93,7 +95,7 @@ $vs-dropdown-bg: #151515;
   color: transparent;
 }
 
-.vs__selected+input.vs__search {
+.vs__selected + input.vs__search {
   position: absolute;
 }
 
@@ -111,4 +113,77 @@ $vs-dropdown-bg: #151515;
 
 body .v--modal {
   background-color: #252525;
+}
+
+/*== code for tooltips from https://codepen.io/pure-css/pen/bddggP ==*/
+.tool {
+	cursor: help;
+	position: relative;
+	&::before {
+		left: 50%;
+		opacity: 0;
+		position: absolute;
+		z-index: -100;
+		border-style: solid;
+		border-width: 1em 0.75em 0 0.75em;
+		border-color: #3e474f transparent transparent transparent;
+		bottom: 100%;
+		content: "";
+		margin-left: -0.5em;
+		transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26), opacity 0.65s 0.5s;
+		transform: scale(0.6) translateY(-90%);
+	}
+	&::after {
+		left: 50%;
+		opacity: 0;
+		position: absolute;
+		z-index: -100;
+		background: #3e474f;
+		border-radius: 0.25em;
+		bottom: 150%;
+		color: #edeff0;
+		content: attr(data-tip);
+		margin-left: -8.75em;
+		padding: 1em;
+		transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+		transform: scale(0.6) translateY(50%);
+		width: 17.5em;
+	}
+	&:hover {
+		&::before {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+			z-index: 100;
+			transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+		}
+		&::after {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+			z-index: 100;
+			transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26);
+		}
+	}
+	&:focus {
+		&::before {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+			z-index: 100;
+			transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26) 0.2s;
+		}
+		&::after {
+			opacity: 1;
+			transform: scale(1) translateY(0);
+			z-index: 100;
+			transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26);
+		}
+	}
+}
+@media (max-width: 760px) {
+	.tool {
+		&::after {
+			font-size: 0.75em;
+			margin-left: -5em;
+			width: 10em;
+		}
+	}
 }

@@ -23,7 +23,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
                     download: true,
                     complete: function (incomingData, fileName) {
                         try {
-                            console.log("Parsing complete:", incomingData, fileName);
+                            // console.log("Parsing complete:", incomingData, fileName);
                             const headers = incomingData.data.shift();
                             let result = csvToArrayWithKeys(headers, incomingData.data)
                             localStorage.setItem(DataTableName, JSON.stringify(result));
@@ -44,7 +44,12 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
     }
 }
 
-fetch("/mx-division-builds/DB.Version", { method: 'GET', })
+// Check if is running in Dev env or in production
+// eslint-disable-next-line no-undef
+const path = webpackHotUpdate ? '/DB.Version' : '/mx-division-builds/DB.Version';
+
+// Disable browser cache while download the DB version
+fetch(`${path}?${new Date().toISOString()}`, { method: 'GET', })
     .then(response => response.blob())
     .then(blob => blob.text())
     .then((DownloadedDBVersion) => {

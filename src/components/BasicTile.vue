@@ -34,19 +34,6 @@ export default {
   position: relative;
   padding: 16px;
   overflow: visible;
-
-  &.high-end {
-    background: rgba(243, 175, 30, 0.25);
-  }
-  &.named {
-    background: rgba(243, 175, 30, 0.25);
-  }
-  &.exotic {
-    background: rgba(255, 94, 0, 0.25);
-  }
-  &.gearset {
-    background: rgba(1, 224, 143, 0.25);
-  }
 }
 
 // Borders

@@ -1,4 +1,6 @@
-import TableModal from "../components/TableModal";
+import TableModal from "../components/Modals/TableModal";
+import ScreenshotModal from "../components/Modals/ScreenshotModal";
+
 import {
     gearHeaders,
     weaponsHeaders
@@ -82,9 +84,21 @@ const openIssueModal = function () {
     })
 }
 
+const openScreenshotModal = function () {
+    window.vueInstance.$modal.show(
+        ScreenshotModal, {
+        }, {
+            adaptive: true,
+            width: "75%",
+            height: "90%"
+        }
+    );
+}
+
 export {
     openGearModal,
     openWeaponsModal,
     openSaveShareModal,
-    openIssueModal
+    openIssueModal,
+    openScreenshotModal
 }

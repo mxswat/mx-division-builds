@@ -13,8 +13,7 @@
 </template>
 
 <script>
-import { openSaveShareModal, openIssueModal } from "../utils/modalService";
-import html2canvas from "html2canvas";
+import { openSaveShareModal, openIssueModal, openScreenshotModal } from "../utils/modalService";
 
 export default {
   name: "Toolbar",
@@ -45,15 +44,7 @@ export default {
       openIssueModal();
     },
     screenshot() {
-      const target = document.querySelector("#inventory-gui");
-      html2canvas(target, {
-        backgroundColor: "#232830",
-        // onclone: (doc) => {
-        //   debugger;
-        // }
-      }).then((res) => {
-        document.body.appendChild(res);
-      });
+      openScreenshotModal();
     },
   },
 };

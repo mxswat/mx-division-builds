@@ -82,7 +82,6 @@ class WeaponBase {
         if (!weaponRaw) {
             return
         }
-        console.log(weaponRaw);
         this.id = weaponRaw.index;
         this["name"] = weaponRaw["Name"];
         this["base damage"] = weaponRaw["Base Damage"];

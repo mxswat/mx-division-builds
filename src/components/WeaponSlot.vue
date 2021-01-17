@@ -164,10 +164,9 @@ export default {
     };
   },
   updated() {
-    console.log(this.name + "updated!");
+    // console.log(this.name + "updated!");
   },
   created() {
-    console.log(weaponsData);
     weaponsData.Weapons.then(weapons => {
       this.weaponsList = !this.slotFilter
         ? weapons

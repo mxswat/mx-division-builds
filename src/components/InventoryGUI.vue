@@ -1,39 +1,30 @@
 <template>
-  <div class="inventory-gui">
-    <BasicTile classes="primary">
-      <img class="img-slot-bg primary" src="icons/main-weapon.png" />
+  <div class="inventory-gui" id='inventory-gui'>
+    <BasicTile classes="primary" bgImage="icons/main-weapon.png">
       <WeaponSlot name="Primary"></WeaponSlot>
     </BasicTile>
-    <BasicTile classes="secondary">
-      <img class="img-slot-bg secondary" src="icons/main-weapon.png" />
+    <BasicTile classes="secondary" bgImage="icons/main-weapon.png">
       <WeaponSlot name="Secondary"></WeaponSlot>
     </BasicTile>
-    <BasicTile classes="pistol">
-      <img class="img-slot-bg pistol" src="icons/sidearm.png" />
+    <BasicTile classes="pistol" bgImage="icons/sidearm.png">
       <WeaponSlot name="SideArm" slotFilter="S"></WeaponSlot>
     </BasicTile>
-    <BasicTile classes="mask">
-      <img class="img-slot-bg mask" src="icons/mask.png" />
+    <BasicTile classes="mask" bgImage="icons/mask.png">
       <GearSlot name="Mask"></GearSlot>
     </BasicTile>
-    <BasicTile classes="backpack">
-      <img class="img-slot-bg backpack" src="icons/backpack.png" />
+    <BasicTile classes="backpack" bgImage="icons/backpack.png">
       <GearSlot name="Backpack"></GearSlot>
     </BasicTile>
-    <BasicTile classes="chest">
-      <img class="img-slot-bg chest" src="icons/chest.png" />
+    <BasicTile classes="chest" bgImage="icons/chest.png">
       <GearSlot name="Chest"></GearSlot>
     </BasicTile>
-    <BasicTile classes="gloves">
-      <img class="img-slot-bg gloves" src="icons/gloves.png" />
+    <BasicTile classes="gloves" bgImage="icons/gloves.png">
       <GearSlot name="Gloves"></GearSlot>
     </BasicTile>
-    <BasicTile classes="holster">
-      <img class="img-slot-bg holster" src="icons/holster.png" />
+    <BasicTile classes="holster" bgImage="icons/holster.png">
       <GearSlot name="Holster"></GearSlot>
     </BasicTile>
-    <BasicTile classes="kneepads">
-      <img class="img-slot-bg kneepads" src="icons/kneepads.png" />
+    <BasicTile classes="kneepads" bgImage="icons/kneepads.png">
       <GearSlot name="Kneepads"></GearSlot>
     </BasicTile>
   </div>

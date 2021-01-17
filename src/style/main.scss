@@ -8,7 +8,8 @@
   padding: 8px;
   cursor: pointer;
   position: relative;
-
+  opacity: 1;
+  
   &::after {
     content: "";
     background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
@@ -26,20 +27,20 @@
   font-weight: 700;
   color: black;
 
-  &.high-end {
-    background: rgba(255, 175, 0);
+  &.high-end, &.named {
+    background: #ffaf00;
   }
 
-  &.named {
-    background: rgba(255, 147, 16);
-  }
+//   &.named {
+//     background: #ff9310;
+//   }
 
   &.exotic {
-    background: rgba(225, 75, 50);
+    background: #e14b32;
   }
 
   &.gearset {
-    background: rgba(75, 175, 100);
+    background: #4baf64;
   }
 }
 

@@ -1,11 +1,17 @@
 <template functional>
-  <div class="tile outer-border no-anim" :class="[props.classes]">
+  <div
+    class="tile outer-border no-anim"
+    :class="[props.classes]"
+  >
+    <img :src="props.bgImage" class="img-slot-bg">
     <div class="inner-border"></div>
     <slot></slot>
   </div>
 </template>
 
 <script>
+//     :style="props.bgImage ? `background-image: linear-gradient(to bottom, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0.5) 100%), url(${props.bgImage})` : ''"
+
 // https://dev.to/vhoyer/functional-components-in-vue-js-20fl Working
 // I need to use props.blabla to use the pros in template
 // Looks like the other articles are wrong
@@ -14,14 +20,18 @@ export default {
   props: {
     classes: {
       required: true,
-      type: String
-    }
-  }
+      type: String,
+    },
+    bgImage: {
+      required: true,
+      type: String,
+    },
+  },
 };
 </script>
 
 <style lang="scss">
-.img-slot-bg {
+img.img-slot-bg {
   opacity: 0.2;
   position: absolute;
   top: 50%;
@@ -52,6 +62,8 @@ export default {
 }
 
 .outer-border {
+  background-repeat: no-repeat;
+  background-position: center;
   &:before {
     top: 0px;
     left: 0px;

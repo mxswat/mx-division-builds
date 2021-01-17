@@ -5,20 +5,22 @@
     <button @click="history.back()">Undo</button>
     <button @click="history.forward()">Redo</button>
     <button @click="saveAndShare()">Save & Share</button>
+    <button @click="screenshot()">Save Screenshot</button>
     <button @click="clear()">Clear</button>
     <button @click="newBuild()">New Build</button>
-    <button style="color: #f7d07c;" @click="issues()">Issues or bug?</button>
+    <button style="color: #f7d07c" @click="issues()">Issues or bug?</button>
   </div>
 </template>
 
 <script>
 import { openSaveShareModal, openIssueModal } from "../utils/modalService";
+import html2canvas from "html2canvas";
 
 export default {
   name: "Toolbar",
   data() {
     return {
-      history
+      history,
     };
   },
   created() {
@@ -31,18 +33,29 @@ export default {
     clear() {
       // TODO: Yeah this should be changed
       this.$router.push({
-        name: "home"
+        name: "home",
       });
       location.reload();
     },
     newBuild() {
-      const routeData = this.$router.resolve({name: 'home'});
-      window.open(routeData.href, '_blank');
+      const routeData = this.$router.resolve({ name: "home" });
+      window.open(routeData.href, "_blank");
     },
     issues() {
-      openIssueModal()
-    }
-  }
+      openIssueModal();
+    },
+    screenshot() {
+      const target = document.querySelector("#inventory-gui");
+      html2canvas(target, {
+        backgroundColor: "#232830",
+        // onclone: (doc) => {
+        //   debugger;
+        // }
+      }).then((res) => {
+        document.body.appendChild(res);
+      });
+    },
+  },
 };
 </script>
 

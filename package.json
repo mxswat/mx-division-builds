@@ -12,6 +12,7 @@
     "ag-grid-community": "^23.0.2",
     "ag-grid-vue": "^23.0.2",
     "core-js": "^3.6.4",
+    "html2canvas": "^1.0.0-rc.7",
     "lz-string": "^1.4.4",
     "papaparse": "^5.2.0",
     "sass": "^1.26.5",

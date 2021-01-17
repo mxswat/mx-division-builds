@@ -198,7 +198,8 @@ export default {
     },
     initGearMods() {
       gearData.GearMods.then(res => {
-        this.gearMods = JSON.parse(JSON.stringify(res));
+        // Removed old fix to Gdrive Bug
+        this.gearMods = res;
       });
     },
     initGearAttributes() {
@@ -220,11 +221,7 @@ export default {
       });
     },
     filterGearMods(mods) {
-      if (this.currentGear.quality === "Exotic") {
-        mods = mods.filter(mod => {
-          return mod.Type === this.currentGear.filters.mod;
-        });
-      }
+      // Filter removed since now mods can go on every brand and exotic
       return mods;
     },
     filterGearAttributes(attributes, otherAttribute, filter) {

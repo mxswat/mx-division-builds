@@ -2,7 +2,7 @@ import Papa from "papaparse";
 import {
     csvToArrayWithKeys
 } from './utils';
-
+var webpackHotUpdate;
 let IsEverythingLoadedPromiseResolve, IsEverythingLoadedPromiseReject;
 
 const IsEverythingLoadedPromise = new Promise(function(resolve, reject){

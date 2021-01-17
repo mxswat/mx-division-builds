@@ -2,7 +2,6 @@ import Papa from "papaparse";
 import {
     csvToArrayWithKeys
 } from './utils';
-var webpackHotUpdate;
 let IsEverythingLoadedPromiseResolve, IsEverythingLoadedPromiseReject;
 
 const IsEverythingLoadedPromise = new Promise(function(resolve, reject){
@@ -46,7 +45,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
 
 // Check if is running in Dev env or in production
 // eslint-disable-next-line no-undef
-const path = webpackHotUpdate ? '/DB.Version' : '/mx-division-builds/DB.Version';
+const path = window.webpackHotUpdate ? '/DB.Version' : '/mx-division-builds/DB.Version';
 
 // Disable browser cache while download the DB version
 fetch(`${path}?${new Date().toISOString()}`, { method: 'GET', })

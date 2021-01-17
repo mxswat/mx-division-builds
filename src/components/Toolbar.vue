@@ -5,7 +5,7 @@
     <button @click="history.back()">Undo</button>
     <button @click="history.forward()">Redo</button>
     <button @click="saveAndShare()">Save & Share</button>
-    <button @click="screenshot()">Save Screenshot</button>
+    <button @click="screenshot()" id="screenshotBTT">Save Screenshot</button>
     <button @click="clear()">Clear</button>
     <button @click="newBuild()">New Build</button>
     <button style="color: #f7d07c" @click="issues()">Issues or bug?</button>

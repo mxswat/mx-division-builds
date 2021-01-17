@@ -7,7 +7,14 @@
       <span class="loader"></span>
     </div>
     <div class="loading" v-if="errorOnGetData">
-      <span>I'm sorry, too many people are connected to the server right now. Try again later in one hour.<br> If you can, please report this issue at <a  style="color:" href="http://discord.gg/ShYner2">my discord server!</a></span>
+      <span
+        >I'm sorry, too many people are connected to the server right now. Try
+        again later in one hour.<br />
+        If you can, please report this issue at
+        <a style="color: " href="http://discord.gg/ShYner2"
+          >my discord server!</a
+        ></span
+      >
     </div>
     <div class="grid-container" v-if="loaded && !errorOnGetData">
       <router-view></router-view>
@@ -32,6 +39,8 @@ import GeneralStats from "./components/GeneralStats";
 import BasicTile from "./components/BasicTile";
 import SpecializationSlot from "./components/SpecializationSlot";
 import Toolbar from "./components/Toolbar";
+import newFeatureGlow from "./utils/newFeatureGlow";
+
 export default {
   name: "App",
   components: {
@@ -39,24 +48,25 @@ export default {
     GeneralStats,
     BasicTile,
     SpecializationSlot,
-    Toolbar
+    Toolbar,
   },
   data() {
     return {
       loaded: false,
-      errorOnGetData: false
+      errorOnGetData: false,
     };
   },
   created() {
     IsEverythingLoadedPromise.then(() => {
       this.loaded = true;
       console.log("IsEverythingLoadedPromise Complete");
+      newFeatureGlow("screenshotBTT");
     }).catch(() => {
       this.errorOnGetData = true;
       this.loaded = true;
-      console.log('Too many request :( ')
-    })
-  }
+      console.log("Too many request :( ");
+    });
+  },
 };
 </script>
 
@@ -188,13 +198,13 @@ $loader-size: 150px;
   display: inline-block;
   position: relative;
   border: 3px solid;
-  border-color: #FFF #FFF transparent transparent;
+  border-color: #fff #fff transparent transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 .loader::after,
 .loader::before {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -203,7 +213,7 @@ $loader-size: 150px;
   bottom: 0;
   margin: auto;
   border: 3px solid;
-  border-color: transparent transparent #FF3D00 #FF3D00;
+  border-color: transparent transparent #ff3d00 #ff3d00;
   width: $loader-size - 28;
   height: $loader-size - 28;
   border-radius: 50%;
@@ -214,10 +224,10 @@ $loader-size: 150px;
 .loader::before {
   width: $loader-size - 56;
   height: $loader-size - 56;
-  border-color: #FFF #FFF transparent transparent;
+  border-color: #fff #fff transparent transparent;
   animation: rotation 1.5s linear infinite;
 }
-    
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -225,7 +235,7 @@ $loader-size: 150px;
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 @keyframes rotationBack {
   0% {
     transform: rotate(0deg);
@@ -234,5 +244,24 @@ $loader-size: 150px;
     transform: rotate(-360deg);
   }
 }
-    
+
+$glow-color: #FF6D10;
+
+@-webkit-keyframes glow {
+  to {
+    border-color: $glow-color;
+    -webkit-box-shadow: 0 0 5px $glow-color;
+    -moz-box-shadow: 0 0 5px $glow-color;
+    box-shadow: 0 0 5px $glow-color;
+  }
+}
+
+.new-feature-glow {
+  background-color: #ccc;
+  border: 1px solid transparent;
+  -webkit-animation: glow 1s infinite alternate;
+  -webkit-transition: border 1s linear, box-shadow 1s linear;
+  -moz-transition: border 1s linear, box-shadow 1s linear;
+  transition: border 1s linear, box-shadow 1s linear;
+}
 </style>

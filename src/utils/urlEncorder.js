@@ -142,9 +142,11 @@ function specializationToIds(specialization) {
 }
 
 const urlDecoder = function (encodedBuild) {
+    // Lazy fix, the reference to the text changes if the promise is not resolved in time in production
+    const _encodedBuild = encodedBuild;
     IsEverythingLoadedPromise.then(() => {
         console.log('Everything loaded and ready for decode');
-        const splitted = decompressFromEncodedURIComponent(encodedBuild).split(':');
+        const splitted = decompressFromEncodedURIComponent(_encodedBuild).split(':');
         for (let i = 0; i < splitted.length; i++) {
             const slotEncoded = splitted[i];
             // VERY LAZY FIX - TODO: Handle correctly the init of a weapon/gear slot before the data promise is resolved in the component created()

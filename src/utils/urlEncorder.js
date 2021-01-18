@@ -80,6 +80,11 @@ coreService.subscribeAllSlotsData$().subscribe(([
         specializationIds: specializationIds,
     });
     const buildData = [wearablesIds.join(':'), weapondsIds.join(':'), specializationIds.join(':')].join(':');
+    
+    // Lazy fix because of the new versioning an encoding will be triggered but all the values are 0
+    if (Number(buildData.replaceAll('-', '').replaceAll(':', '')) === 0) {
+        return;
+    }
     statsService.afterEncoding();
     const encodedBuild = compressToEncodedURIComponent(buildData);
     const _router = router;

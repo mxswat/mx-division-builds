@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 <template>
   <div id="screenshot-modal">
-    
     <img id="screenshot" src="" alt="" />
 
     <div class="controls" v-if="screenshotLoaded">
@@ -9,7 +8,8 @@
       <button @click="saveToClipBoard()">Copy to clipboard</button>
     </div>
     <span>
-        PRO Tip: if you copy to clipboard you can paste directly in Discord or Reddit
+      PRO Tip: if you copy to clipboard you can paste directly in Discord or
+      Reddit
     </span>
     <div class="loading" v-if="!screenshotLoaded">
       <span class="loader"></span>
@@ -40,11 +40,17 @@ export default {
   },
   methods: {
     saveToClipBoard() {
-      this.canvas.toBlob(function (blob) {
-        // eslint-disable-next-line no-undef
-        const item = new ClipboardItem({ "image/png": blob });
-        navigator.clipboard.write([item]);
-      });
+      navigator.permissions
+        .query({ name: "clipboard-write" })
+        .then((result) => {
+          if (result.state == "granted" || result.state == "prompt") {
+            this.canvas.toBlob(function (blob) {
+              // eslint-disable-next-line no-undef
+              const item = new ClipboardItem({ "image/png": blob });
+              navigator.clipboard.write([item]);
+            });
+          }
+        });
     },
     downloadImage() {
       const image = this.canvas.toDataURL("image/jpg");
@@ -85,6 +91,6 @@ button {
 }
 
 .controls {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 </style>

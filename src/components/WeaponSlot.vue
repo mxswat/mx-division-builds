@@ -155,6 +155,7 @@ export default {
   data() {
     return {
       weaponsList: null,
+      allWeaponAttributes: null,
       weaponAttributes: null,
       weaponMods: null,
       weaponTalents: null,
@@ -175,7 +176,10 @@ export default {
           });
     });
     weaponsData.WeaponAttributes.then(weaponsAttr => {
-      this.weaponAttributes = JSON.parse(JSON.stringify(weaponsAttr));
+      this.allWeaponAttributes = weaponsAttr;
+      this.weaponAttributes = weaponsAttr.filter((attribute) => {
+          return attribute.Quality === "A";
+        });
     });
     weaponsData.WeaponMods.then(weaponMods => {
       this.weaponMods = weaponMods;
@@ -205,8 +209,11 @@ export default {
       const isExotic = this.isExotic(this.currentWeapon);
       const isNamed = this.isNamed(this.currentWeapon);
       if (isExotic || isNamed) {
-        this.currentWeapon["attribute 1"] = this.weaponAttributes.find(el => {
+        this.currentWeapon["attribute 1"] = this.allWeaponAttributes.find(el => {
           return el["Stat"] === this.currentWeapon.filters["attribute 1"];
+        });
+        this.currentWeapon["attribute 2"] = this.allWeaponAttributes.find(el => {
+          return el["Stat"] === this.currentWeapon.filters["attribute 2"];
         });
         this.currentWeapon["talent"] = this.weaponTalents.find(el => {
           return el["Name"] === this.currentWeapon.filters["talent"];

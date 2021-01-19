@@ -275,9 +275,19 @@ export default {
       // So, no separate files
       gearData.GearTalents.then((talents) => {
         this.allTalents = talents;
-        this.gearTalents = talents.filter((talent) => {
-          return talent.Slot === this.name && talent.Quality === "A";
-        });
+        this.gearTalents = talents
+          .filter((talent) => {
+            return talent.Slot === this.name && talent.Quality === "A";
+          })
+          .sort(function (a, b) {
+            if (a.Talent < b.Talent) {
+              return -1;
+            }
+            if (a.Talent > b.Talent) {
+              return 1;
+            }
+            return 0;
+          });
       });
     },
     filterGearMods(mods) {

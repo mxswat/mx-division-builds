@@ -113,7 +113,24 @@ class WeaponBase {
     }
 }
 
+class WeaponTalent{
+    "Quality" = String
+    "Name" = String
+    "Assault Rifle" = String
+    "Rifle" = String
+    "Marksman Rifle" = String
+    "SMG" = String
+    "LMG" = String
+    "Pistol" = String
+    "Shotgun" = String
+    "Desc" = String
+    "attr" = String
+    "val" = String
+    "index" = Number
+}
+
 export {
+    WeaponTalent,
     GearBase,
     WeaponBase
 }

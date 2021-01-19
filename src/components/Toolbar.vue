@@ -2,8 +2,11 @@
   <div class="toolbar">
     <span>The division 2 Builds tool</span>
     <div class="spacer"></div>
+    <!-- 
+      Bugged TODO: Fix me
     <button @click="history.back()">Undo</button>
-    <button @click="history.forward()">Redo</button>
+    <button @click="history.forward()">Redo</button> 
+    -->
     <button @click="saveAndShare()">Save & Share</button>
     <button @click="screenshot()" id="screenshotBTT">Save Screenshot</button>
     <button @click="clear()">Clear</button>

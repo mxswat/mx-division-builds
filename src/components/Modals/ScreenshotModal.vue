@@ -40,17 +40,21 @@ export default {
   },
   methods: {
     saveToClipBoard() {
-      navigator.permissions
-        .query({ name: "clipboard-write" })
-        .then((result) => {
-          if (result.state == "granted" || result.state == "prompt") {
-            this.canvas.toBlob(function (blob) {
-              // eslint-disable-next-line no-undef
-              const item = new ClipboardItem({ "image/png": blob });
-              navigator.clipboard.write([item]);
-            });
-          }
-        });
+      try {
+        // eslint-disable-next-line no-undef
+        if (ClipboardItem) {
+          this.canvas.toBlob(function (blob) {
+            // eslint-disable-next-line no-undef
+            const item = new ClipboardItem({ "image/png": blob });
+            navigator.clipboard.write(item);
+          });
+        }
+      } catch (error) {
+        // Damn firefox
+        alert(
+          'Looks like your browser does not support "the copy to clipboard" right click the image and press copy to copy it.'
+        );
+      }
     },
     downloadImage() {
       const image = this.canvas.toDataURL("image/jpg");

@@ -184,7 +184,9 @@ export default {
           });
     });
     weaponsData.WeaponAttributes.then((weaponsAttr) => {
-      this.allWeaponAttributes = weaponsAttr;
+      const _unique = JSON.parse(JSON.stringify(weaponsAttr));
+      this.allWeaponAttributes = _unique;
+      this.weaponAttributes = _unique;
       this.weaponAttributes = weaponsAttr.filter((attribute) => {
         return attribute.Quality === "A";
       });

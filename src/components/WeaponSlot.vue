@@ -192,7 +192,7 @@ export default {
       });
     });
     weaponsData.WeaponMods.then((weaponMods) => {
-      this.weaponMods = weaponMods;
+      this.weaponMods = JSON.parse(JSON.stringify(weaponMods));
     });
     weaponsData.WeaponTalents.then((weaponTalents) => {
       this.weaponTalents = weaponTalents;

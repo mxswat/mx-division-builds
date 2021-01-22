@@ -93,7 +93,7 @@ $vs-dropdown-bg: #151515;
 }
 
 .vs__search:focus::placeholder {
-  color: transparent;
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .vs__selected + input.vs__search {
@@ -121,6 +121,7 @@ body .v--modal {
 	cursor: help;
 	position: relative;
 	&::before {
+		pointer-events: none;
 		left: 50%;
 		opacity: 0;
 		position: absolute;
@@ -135,6 +136,7 @@ body .v--modal {
 		transform: scale(0.6) translateY(-90%);
 	}
 	&::after {
+		pointer-events: none;
 		left: 50%;
 		opacity: 0;
 		position: absolute;

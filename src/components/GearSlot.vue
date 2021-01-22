@@ -44,7 +44,10 @@
           v-bind:max="currentGear.core.Max"
         ></StatInput>
       </div>
-      <div class="slot-element stat-edit attribute-one">
+      <div
+        class="slot-element stat-edit attribute-one"
+        v-if="currentGear.filters.attributeOne"
+      >
         <v-select
           placeholder="Minor attribute 1"
           :clearable="false"
@@ -156,27 +159,12 @@
         class="slot-element talent"
         v-if="gearTalents.length > 0 || this.currentGear.talent"
       >
-        <v-select
-          placeholder="Talent"
-          :clearable="false"
-          label="Talent"
+        <TalentSelect
           v-model="currentGear.talent"
-          :options="filterGearTalents(gearTalents)"
-          :class="currentGear.talent ? 'tool' : ''"
-          :data-tip="currentGear.talent && currentGear.talent.Desc"
+          v-bind:talentList="filterGearTalents(gearTalents)"
+          :placeholder="'Talent'"
         >
-          <template v-slot:option="option">
-            <div class="talent-info-container">
-              <span class="talent-label">{{ option.Talent }}</span>
-              <span class="talent-desc">{{ option.Desc }}</span>
-            </div>
-          </template>
-          <template #selected-option="option">
-            <div class="talent-info-container label-selected">
-              <span class="talent-label">{{ option.Talent }}</span>
-            </div>
-          </template>
-        </v-select>
+        </TalentSelect>
       </div>
     </template>
 
@@ -189,15 +177,21 @@
 <script>
 import { openGearModal } from "../utils/modalService";
 import { GearBase } from "../utils/classes";
-import { typeToImgSrc, coreAttributes, qualityToCss, getUniqueObject } from "../utils/utils";
+import {
+  typeToImgSrc,
+  coreAttributes,
+  qualityToCss,
+  getUniqueObject,
+} from "../utils/utils";
 import { gearData } from "../utils/dataImporter";
 import StatInput from "./StatInput";
+import TalentSelect from "./GearSlot/TalentSelect";
 import Vue from "vue";
 import coreService from "../utils/coreService";
 
 export default {
   name: "GearSlot",
-  components: { StatInput },
+  components: { StatInput, TalentSelect },
   props: {
     name: undefined,
     init: null,

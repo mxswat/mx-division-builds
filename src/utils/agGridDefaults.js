@@ -16,22 +16,22 @@ const gearHeaders =  [
 ];
 
 const weaponsHeaders = [
+    { headerName: 'Quality', field: 'Quality', ...columnDef },
     { headerName: 'Weapon Type', field: 'Weapon Type', ...columnDef },
+    { headerName: 'Variant', field: 'Variant', ...columnDef },
     { headerName: 'Name', field: 'Name', ...columnDef },
     // { headerName: 'Slot', field: 'Slot', ...columnDef }, hidden, not really needed for now
-    { headerName: 'Quality', field: 'Quality', ...columnDef },
     { headerName: 'Base Damage', field: 'Base Damage', ...columnDef },
+    { headerName: 'Talent', field: 'Talent', ...columnDef },
+    { headerName: 'Core 1', field: 'Core 1', ...columnDef },
+    { headerName: 'Core 2', field: 'Core 2', ...columnDef },
+    { headerName: 'Attribute 1', field: 'Attribute 1', ...columnDef },
     { headerName: 'Mag Size', field: 'Mag Size', ...columnDef },
     { headerName: 'RPM', field: 'RPM', ...columnDef },
     { headerName: 'Reload Speed (ms)', field: 'Reload Speed (ms)', ...columnDef },
     { headerName: 'Optimal Range', field: 'Optimal Range', ...columnDef },
-    { headerName: 'Variant', field: 'Variant', ...columnDef },
-    { headerName: 'Core 1', field: 'Core 1', ...columnDef },
     { headerName: 'Core 1 Max', field: 'Core 1 Max', ...columnDef },
-    { headerName: 'Core 2', field: 'Core 2', ...columnDef },
     { headerName: 'Core 2 Max', field: 'Core 2 Max', ...columnDef },
-    { headerName: 'Attribute 1', field: 'Attribute 1', ...columnDef },
-    { headerName: 'Talent', field: 'Talent', ...columnDef },
     { headerName: 'Optics', field: 'Optics', ...columnDef },
     { headerName: 'Under Barrel', field: 'Under Barrel', ...columnDef },
     { headerName: 'Magazine', field: 'Magazine', ...columnDef },

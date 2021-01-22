@@ -148,7 +148,7 @@ import { openWeaponsModal } from "../utils/modalService";
 import { weaponsData } from "../utils/dataImporter";
 import { WeaponBase } from "../utils/classes";
 import coreService from "../utils/coreService";
-import { qualityToCss } from "../utils/utils";
+import { qualityToCss, getUniqueObject } from "../utils/utils";
 import Vue from "vue";
 
 import StatInput from "./StatInput";
@@ -184,7 +184,7 @@ export default {
           });
     });
     weaponsData.WeaponAttributes.then((weaponsAttr) => {
-      const _unique = JSON.parse(JSON.stringify(weaponsAttr));
+      const _unique = getUniqueObject(weaponsAttr);
       this.allWeaponAttributes = _unique;
       this.weaponAttributes = _unique;
       this.weaponAttributes = weaponsAttr.filter((attribute) => {
@@ -192,7 +192,7 @@ export default {
       });
     });
     weaponsData.WeaponMods.then((weaponMods) => {
-      this.weaponMods = JSON.parse(JSON.stringify(weaponMods));
+      this.weaponMods = getUniqueObject(weaponMods);
     });
     weaponsData.WeaponTalents.then((weaponTalents) => {
       this.weaponTalents = weaponTalents;

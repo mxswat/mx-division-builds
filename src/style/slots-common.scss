@@ -10,3 +10,14 @@
         margin-top: -3px;
     }
 }
+
+.named-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    img.named-logo {
+        height: 25px;
+        width: auto;
+        margin: -8px 4px -8px 0px;
+    }
+}

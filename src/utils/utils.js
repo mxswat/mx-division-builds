@@ -44,6 +44,11 @@ const getByString = function (o, s) {
     return o;
 }
 
+const getUniqueObject = function(object) {
+    // Generate unique object, otherwise when you change one value it will change it on the other slots too
+    return JSON.parse(JSON.stringify(object));
+}
+
 const typeToImgSrc = {
     core: {
         'O': 'icons/offense1.png',
@@ -162,5 +167,6 @@ export {
     qualityToCss,
     utilityStats,
     offensiveStats,
-    defensiveStats
+    defensiveStats,
+    getUniqueObject
 };

@@ -6,10 +6,13 @@
         v-bind:class="[qualityToCSS(currentGear.quality)]"
         v-on:click="openGearModal()"
       >
-        {{ currentGear.itemName }}
-        <template v-if="isNamedGear(currentGear)"
-          >({{ currentGear.brand }})</template
-        >
+        <div v-if="isNamedGear(currentGear)" class="named-container">
+          <img src="icons/named.png" class="named-logo" />
+          <span> {{ currentGear.itemName }} ({{ currentGear.brand }}) </span>
+        </div>
+        <div v-else>
+          {{ currentGear.itemName }}
+        </div>
       </div>
       <!-- <div class="brand-name">{{ currentGear.brand}}</div> -->
       <div class="slot-element stat-edit core-attribute">
@@ -186,7 +189,7 @@
 <script>
 import { openGearModal } from "../utils/modalService";
 import { GearBase } from "../utils/classes";
-import { typeToImgSrc, coreAttributes, qualityToCss } from "../utils/utils";
+import { typeToImgSrc, coreAttributes, qualityToCss, getUniqueObject } from "../utils/utils";
 import { gearData } from "../utils/dataImporter";
 import StatInput from "./StatInput";
 import Vue from "vue";
@@ -258,13 +261,12 @@ export default {
     },
     initGearMods() {
       gearData.GearMods.then((res) => {
-        // Removed old fix to Gdrive Bug
-        this.gearMods = res;
+        this.gearMods = getUniqueObject(res);
       });
     },
     initGearAttributes() {
       gearData.Attributes.then((attributes) => {
-        this.allGearAttributes = JSON.parse(JSON.stringify(attributes));
+        this.allGearAttributes = getUniqueObject(attributes);
         this.gearAttributes = this.allGearAttributes.filter((attribute) => {
           return attribute.Quality === "A";
         });
@@ -378,7 +380,7 @@ export default {
     },
   },
   created() {
-    this.coreAttributes = JSON.parse(JSON.stringify(coreAttributes));
+    this.coreAttributes = getUniqueObject(coreAttributes);
     this.typeToImgSrc = typeToImgSrc;
     this.initWearableList();
     this.initGearMods();

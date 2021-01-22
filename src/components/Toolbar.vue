@@ -1,6 +1,6 @@
 <template>
   <div class="toolbar">
-    <span>The division 2 Builds tool</span>
+    <span>The Division 2 Builds tool</span>
     <div class="spacer"></div>
     <!-- 
       Bugged TODO: Fix me

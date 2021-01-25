@@ -129,8 +129,8 @@ class StatsService {
         return this.edgeCaseGear.includes(gear.itemName);
     }
 
-    handleWearableEdgeCase(wearable, wearableEdgeCaseID) {
-        switch (wearableEdgeCaseID) {
+    handleWearableEdgeCase(gear) {
+        switch (this.edgeCaseGear.indexOf(gear.itemName)) {
             case 0:
                 stats.brands['Exotic'][1] = 'Repair Skills  +10%';
                 stats.brands['Exotic'][2] = 'Status Effects +10%';

@@ -118,6 +118,7 @@ const gearData = {
     GearMods: null,
     GearTalents: null,
     BrandSetBonuses: null,
+    StatsMapping: null
 };
 
 const wearableSource = [{
@@ -160,6 +161,10 @@ const wearableSource = [{
     key: 'BrandSetBonuses',
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR5SjdRZqnZXMoq08qIekMFEV6FB37hxYkrg2q0DyTol6mvD60yLyWdyJrvybnr32_80h86Y-_NXJOh/pub?output=csv'
 },
+{
+    key: 'StatsMapping',
+    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0o0aUj35N-35i5zLcNey-bkAvB2xyqas8Qf6jaX0Flx-maPXM07R_-EGUZDghl6wcPOQnwba0Re9X/pub?gid=0&single=true&output=csv'
+}
 ];
 
 export {

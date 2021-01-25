@@ -97,67 +97,6 @@ const coreAttributes = [{
     }
 ];
 
-
-const utilityStats = [
-    'Skill Tier',
-    'Skill Damage',
-    'Skill Haste',
-    'Repair Skills',
-    'Status Effects',
-    'Pulse Haste',
-    'Skill Health',
-    'Sheild Health',
-    'Skill Duration',
-]
-
-const offensiveStats = [
-    'Weapon Damage',
-    'Headshot Damage',
-    'Critical Hit Chance',
-    'Critical Hit Damage',
-    'Damage to TOC',
-    'Damage to Armor',
-    'Damage to Health',
-    'Assault Rifle Damage',
-    'LMG Damage',
-    'Marksman Rifle Damage',
-    'Pistol Damage',
-    'Rifle Damage',
-    'Shotgun Damage',
-    'SMG Damage',
-    'Rate of Fire %',
-    'Stability',
-    'Accuracy',
-    'Reload Speed %',
-    'Mag Size %',
-    'Optimal Range',
-    'Swap Speed',
-    'Weapon Handling',
-    'Melee Damage',
-    'Ammo Capacity',
-]
-
-const defensiveStats = [
-    'Armor',
-    'Armor Regeneration',
-    'Hazard Protection',
-    'Health',
-    'Explosive Resistance',
-    'Damage to Health',
-    'Melee Damage',
-    'Armor % on Kill',
-    'Sheild Health',
-    'Armor Regeneration %',
-    'Protection from Elites',
-    'Armor on Kill',
-    'Incoming Repairs',
-    'Bleed Resistance',
-    'Blind Resistance',
-    'Burn Resistance',
-    'Disrupt Resistance',
-    'Shock Resistance',
-]
-
 export {
     getByString,
     zipObject,
@@ -165,8 +104,5 @@ export {
     typeToImgSrc,
     coreAttributes,
     qualityToCss,
-    utilityStats,
-    offensiveStats,
-    defensiveStats,
     getUniqueObject
 };

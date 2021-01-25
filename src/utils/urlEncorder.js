@@ -59,7 +59,6 @@ coreService.subscribeAllSlotsData$().subscribe(([
     SideArm,
     Specialization,
 ]) => {
-    statsService.resetStats();
     const wearablesIds =
         wearableToIds([
             Mask,
@@ -74,18 +73,22 @@ coreService.subscribeAllSlotsData$().subscribe(([
         SideArm,
     ]);
     const specializationIds = specializationToIds(Specialization);
-    console.log('newEncoder', {
-        wearablesIds: wearablesIds,
-        weapondsIds: weapondsIds,
-        specializationIds: specializationIds,
-    });
+    // console.log('newEncoder', {
+    //     wearablesIds: wearablesIds,
+    //     weapondsIds: weapondsIds,
+    //     specializationIds: specializationIds,
+    // });
     const buildData = [wearablesIds.join(':'), weapondsIds.join(':'), specializationIds.join(':')].join(':');
-    
+
     // Lazy fix because of the new versioning an encoding will be triggered but all the values are 0
     if (Number(buildData.replaceAll('-', '').replaceAll(':', '')) === 0) {
         return;
     }
-    statsService.afterEncoding();
+    statsService.updateStats({
+        gear: [Mask, Backpack, Chest, Gloves, Holster, Kneepads],
+        weapons: [Primary, Secondary, SideArm],
+        specialization: Specialization
+    });
     const encodedBuild = compressToEncodedURIComponent(buildData);
     const _router = router;
     if (_router.history.current.params.encodedBuild !== encodedBuild) {
@@ -113,7 +116,6 @@ function wearableToIds(wearables) {
         ids[i] += objectPropToNumber(wearable, 'attributeOne.StatValue', '-');
         ids[i] += objectPropToNumber(wearable, 'attributeTwo.StatValue', '-');
         ids[i] += objectPropToNumber(wearable, 'mod.StatValue', '');
-        statsService.addStatsFromwWearable(wearable);
     }
     return ids;
 }
@@ -133,7 +135,6 @@ function weaponsToIds(weapons) {
         ids[i] += objectPropToNumber(weapon, "attribute 1.StatValue", '-')
         ids[i] += objectPropToNumber(weapon, "core 1.StatValue", '-')
         ids[i] += objectPropToNumber(weapon, "core 2.StatValue", '')
-        statsService.addStatsFromWeapon(weapon);
     }
     return ids;
 }
@@ -142,7 +143,6 @@ function specializationToIds(specialization) {
     const ids = [];
     ids[0] = '';
     ids[0] += objectPropToNumber(specialization, 'id', '');
-    statsService.addStatsFromSpecialization(specialization);
     return ids;
 }
 

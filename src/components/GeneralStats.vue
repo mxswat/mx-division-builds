@@ -13,9 +13,9 @@
       <img src="icons/offense1.png" class="image" />
       Offensive {{coresCount.offensive}}
     </span>
-    <div class="stats-list-2-col" v-if="stats">
+    <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in offensiveStats" v-bind:key="idx">
-        {{stat.statName}}:
+        {{stat.key}}:
         <span>{{stat.value}}</span>
       </div>
     </div>
@@ -23,9 +23,9 @@
       <img src="icons/defense1.png" class="image" />
       Defensive {{coresCount.defensive}}
     </span>
-    <div class="stats-list-2-col" v-if="stats">
+    <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in defensiveStats" v-bind:key="idx">
-        {{stat.statName}}:
+        {{stat.key}}:
         <span>{{stat.value}}</span>
       </div>
     </div>
@@ -33,9 +33,9 @@
       <img src="icons/tech1.png" class="image" />
       Utility {{coresCount.utility}}
     </span>
-    <div class="stats-list-2-col" v-if="stats">
+    <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in utilityStats" v-bind:key="idx">
-        {{stat.statName}}:
+        {{stat.key}}:
         <span>{{stat.value}}</span>
       </div>
     </div>
@@ -43,9 +43,7 @@
 </template>
 
 <script>
-import { combineLatest, map, timer } from "rxjs";
-import { debounce } from "rxjs/operators";
-import { utilityStats, offensiveStats, defensiveStats } from "../utils/utils";
+import { combineLatest } from "rxjs";
 import statsService from "../utils/statsService";
 export default {
   name: "GeneralStats",
@@ -65,65 +63,34 @@ export default {
   },
   created() {
     const _vm = this;
-    combineLatest(
-      statsService.getStats$(),
-      statsService.getBrands$()
-    ).subscribe(([stats, brands]) => {
-      _vm.updateStatsUI(stats, brands);
+    statsService.getStats$().subscribe((stats) => {
+      _vm.updateStatsUI(stats);
     });
   },
   methods: {
-    updateStatsUI(stats, brands) {
-      this.brands = brands;
+    updateStatsUI(stats) {
+      if (!stats) {
+        return
+      }
+      this.brands = stats.brands;
       this.stats = stats;
-      this.utilityStats = [];
-      this.offensiveStats = [];
-      this.defensiveStats = [];
-      let utilityStatsIndexPrev = -1;
-      let offensiveStatsIndexPrev = -1;
-      let defensiveStatsIndexPrev = -1;
-      for (const statName in this.stats) {
-        // eslint-disable-next-line
-        if (this.stats.hasOwnProperty(statName)) {
-          const values = this.stats[statName];
-          const utilityStatsIndex = utilityStats.indexOf(statName);
-          const offensiveStatsIndex = offensiveStats.indexOf(statName);
-          const defensiveStatsIndex = defensiveStats.indexOf(statName);
-          const value = this.sumStatVals(values);
-          if (value > 0) {
-            if (utilityStatsIndex >= 0) {
-              this.utilityStats.push({
-                statName,
-                value
-              });
-            } else if (offensiveStatsIndex >= 0) {
-              this.offensiveStats.push({
-                statName,
-                value
-              });
-            } else if (defensiveStatsIndex >= 0) {
-              this.defensiveStats.push({
-                statName,
-                value
-              });
-            }
-          }
-        }
-      }
-      this.coresCount.utility = 0;
-      this.coresCount.offensive = 0;
-      this.coresCount.defensive = 0;
-      if (this.stats) {
-        if (this.stats["Skill Tier"]) {
-          this.coresCount.utility = this.stats["Skill Tier"].length;
-        }
-        if (this.stats["Weapon Damage"]) {
-          this.coresCount.offensive = this.stats["Weapon Damage"].length;
-        }
-        if (this.stats["Armor"]) {
-          this.coresCount.defensive = this.stats["Armor"].length;
-        }
-      }
+      this.utilityStats = Object.entries(stats.Utility).map(([key, value]) => ({key,value}));
+      this.offensiveStats = Object.entries(stats.Offensive).map(([key, value]) => ({key,value}));
+      this.defensiveStats = Object.entries(stats.Defensive).map(([key, value]) => ({key,value}));
+      // this.coresCount.utility = 0;
+      // this.coresCount.offensive = 0;
+      // this.coresCount.defensive = 0;
+      // if (this.stats) {
+      //   if (this.stats["Skill Tier"]) {
+      //     this.coresCount.utility = this.stats["Skill Tier"].length;
+      //   }
+      //   if (this.stats["Weapon Damage"]) {
+      //     this.coresCount.offensive = this.stats["Weapon Damage"].length;
+      //   }
+      //   if (this.stats["Armor"]) {
+      //     this.coresCount.defensive = this.stats["Armor"].length;
+      //   }
+      // }
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
@@ -149,7 +116,7 @@ export default {
 }
 // .brand-stats {
 // }
-.stats-list-2-col {
+.stats-list-3-col {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -157,8 +124,9 @@ export default {
     display: flex;
     flex-shrink: 1;
     flex-grow: 0;
-    flex-basis: calc(50% - 8px);
+    flex-basis: calc(33% - 8px);
     padding-right: 8px;
+    min-width: 180px;
   }
 
   span {

@@ -5,8 +5,8 @@ const columnDef = {
 }
 
 const gearHeaders =  [
-    // { headerName: "Brand", field: "Brand", ...columnDef }, hidden, not really needed for now
     { headerName: "Quality", field: "Quality", ...columnDef },
+    { headerName: "Brand", field: "Brand", ...columnDef },
     { headerName: "Item Name", field: "Item Name", ...columnDef },
     { headerName: "Core", field: "Core", ...columnDef },
     { headerName: "Attribute 1", field: "Attribute 1", ...columnDef },

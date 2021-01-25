@@ -17,7 +17,11 @@ let stats = {
     Defensive: {},
     Utility: {},
     Brands: {},
-    Cores: {},
+    Cores: {
+        Offensive: 0,
+        Defensive: 0,
+        Utility: 0,
+    },
     brands: {},
     cores: []
 };
@@ -34,7 +38,11 @@ class StatsService {
             Defensive: {},
             Utility: {},
             Brands: {},
-            Cores: {},
+            Cores: {
+                Offensive: 0,
+                Defensive: 0,
+                Utility: 0,
+            },
             brands: {},
             cores: []
         };
@@ -42,7 +50,7 @@ class StatsService {
 
     getStats$() {
         return stats$.asObservable()
-            .pipe(debounce(() => timer(300)));
+            .pipe(debounce(() => timer(150)));
     }
 
     async updateStats(data) {
@@ -52,7 +60,13 @@ class StatsService {
             const statsMapping = await gearData.StatsMapping
             this.statsMapping = this.statsMapping || keyBy(statsMapping, 'Stat');
         }
-        this.addStatsFromGear(data.gear)
+        this.addStatsFromGear(data.gear);
+
+        if (data.specialization) {
+            this.addStatsFromSpecialization(data.specialization);
+        }
+
+        this.handleBrandEdgeCase(stats.brands);
 
         stats$.next(stats);
     }
@@ -72,7 +86,7 @@ class StatsService {
                 stats.brands[gear.brand] = stats.brands[gear.brand] || []
                 stats.brands[gear.brand].push(null);
                 if (gear.core) {
-                    stats.cores.push(gear.core);
+                    stats.Cores[statTypes[gear.core.Type]]++;
                 }
                 const keys = ['attributeOne', 'attributeTwo', 'mod',]
                 for (let keyI = 0; keyI < keys.length; keyI++) {
@@ -83,6 +97,9 @@ class StatsService {
                         const prevVal = stats[statTypes[stat.Type]][stat.Stat] || 0;
                         stats[statTypes[stat.Type]][stat.Stat] = prevVal + val;
                     }
+                }
+                if (this.isEdgeCaseGear(gear)) {
+                    this.handleWearableEdgeCase(gear)
                 }
             }
         }
@@ -107,44 +124,73 @@ class StatsService {
         console.log(stats)
     }
 
-    // wearableEdgeCase(wearable) {
-    //     const edgeCases = ["Acosta's Go-Bag"]
-    //     return edgeCases.indexOf(wearable.itemName);
-    // }
+    edgeCaseGear = ["Acosta's Go-Bag"]
+    isEdgeCaseGear(gear) {
+        return this.edgeCaseGear.includes(gear.itemName);
+    }
 
-    // handleWearableEdgeCase(wearable, wearableEdgeCaseID) {
-    //     switch (wearableEdgeCaseID) {
-    //         case 0:
-    //             brands['Exotic'][1] = 'Repair Skills  +10%';
-    //             brands['Exotic'][2] = 'Status Effects +10%';
-    //             stats['Status Effects'] = stats['Status Effects'] || [];
-    //             stats['Status Effects'].push('10');
-    //             stats['Repair Skills'] = stats['Repair Skills'] || [];
-    //             stats['Repair Skills'].push('10');
-    //             break;
-    //         default:
-    //             break;
-    //     }
-    // }
+    handleWearableEdgeCase(wearable, wearableEdgeCaseID) {
+        switch (wearableEdgeCaseID) {
+            case 0:
+                stats.brands['Exotic'][1] = 'Repair Skills  +10%';
+                stats.brands['Exotic'][2] = 'Status Effects +10%';
+                addValueToStat(stats.Utility, 'Status Effects', 10)
+                addValueToStat(stats.Utility, 'Repair Skills', 10)
+                break;
+            default:
+                break;
+        }
+    }
 
-    // addStatsFromSpecialization(specialization) {
-    //     if (specialization) {
-    //         stats['Assault Rifle Damage'] = stats['Assault Rifle Damage'] || [];
-    //         stats['LMG Damage'] = stats['LMG Damage'] || [];
-    //         stats['Marksman Rifle Damage'] = stats['Marksman Rifle Damage'] || [];
-    //         stats['Pistol Damage'] = stats['Pistol Damage'] || [];
-    //         stats['Rifle Damage'] = stats['Rifle Damage'] || [];
-    //         stats['Shotgun Damage'] = stats['Shotgun Damage'] || [];
-    //         stats['SMG Damage'] = stats['SMG Damage'] || [];
-    //         stats['Assault Rifle Damage'].push(15);
-    //         stats['LMG Damage'].push(15);
-    //         stats['Marksman Rifle Damage'].push(15);
-    //         stats['Pistol Damage'].push(15);
-    //         stats['Rifle Damage'].push(15);
-    //         stats['Shotgun Damage'].push(15);
-    //         stats['SMG Damage'].push(15);
-    //     }
-    // }
+    edgeCaseBrands = ['Empress International']
+    handleBrandEdgeCase(brands) {
+        for (let i = 0; i < this.edgeCaseBrands.length; i++) {
+            const edgeCaseBrand = this.edgeCaseBrands[i];
+            if (brands[edgeCaseBrand]) {
+                switch (edgeCaseBrand) {
+                    case 'Empress International':
+                        if (brands[edgeCaseBrand].length > 2) {
+                            const skillEfficencyBuffs = ['Status Effects', 'Repair Skills', 'Skill Damage', 'Skill Health', 'Skill Haste']
+                            skillEfficencyBuffs.forEach((val) => {
+                                addValueToStat(stats.Utility, val, 10)
+                            })
+                        }
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    }
+
+    addStatsFromSpecialization(specialization) {
+        // if there is a specialization, add +15 to all weapons
+        [
+            'Assault Rifle Damage',
+            'LMG Damage',
+            'Marksman Rifle Damage',
+            'Pistol Damage',
+            'Rifle Damage',
+            'Shotgun Damage',
+            'SMG Damage'
+        ].forEach((dmg) => {
+            addValueToStat(stats.Offensive, dmg, 15)
+        })
+
+        if (specialization.name.includes('Technician')) {
+            stats.Cores.Utility++
+            if (specialization.name.includes('Damage')) {
+                addValueToStat(stats.Utility, 'Skill Damage', 10)
+            } else {
+                addValueToStat(stats.Utility, 'Repair Skills', 10)
+            }
+        }
+    }
+}
+
+
+function addValueToStat(statToIncrease, key, value) {
+    statToIncrease[key] = statToIncrease[key] ? statToIncrease[key] + value : value;
 }
 
 const statsService = new StatsService();

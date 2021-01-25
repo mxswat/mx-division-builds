@@ -77,20 +77,9 @@ export default {
       this.utilityStats = Object.entries(stats.Utility).map(([key, value]) => ({key,value}));
       this.offensiveStats = Object.entries(stats.Offensive).map(([key, value]) => ({key,value}));
       this.defensiveStats = Object.entries(stats.Defensive).map(([key, value]) => ({key,value}));
-      // this.coresCount.utility = 0;
-      // this.coresCount.offensive = 0;
-      // this.coresCount.defensive = 0;
-      // if (this.stats) {
-      //   if (this.stats["Skill Tier"]) {
-      //     this.coresCount.utility = this.stats["Skill Tier"].length;
-      //   }
-      //   if (this.stats["Weapon Damage"]) {
-      //     this.coresCount.offensive = this.stats["Weapon Damage"].length;
-      //   }
-      //   if (this.stats["Armor"]) {
-      //     this.coresCount.defensive = this.stats["Armor"].length;
-      //   }
-      // }
+      this.coresCount.offensive = stats.Cores.Offensive;
+      this.coresCount.defensive = stats.Cores.Defensive;
+      this.coresCount.utility  = stats.Cores.Utility;
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);

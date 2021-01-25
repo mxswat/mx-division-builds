@@ -68,8 +68,9 @@ const openIssueModal = function () {
     window.vueInstance.$modal.show('dialog', {
         title: 'Have you tried turning it off and on again? - Most of IT guys',
         text: `Are you having issues on the site? </br>
-        Press the clean button and wait for the refresh, if you still have problems please report this issue at <a  style="color:" href="http://discord.gg/ShYner2">my discord server!</a>
-        `,
+            Press the clean button and wait for the refresh, if you still have problems please report this issue at 
+            <a target="_blank" style="color:" href="http://discord.gg/ShYner2">my discord server</a> 
+            or <a target="_blank" style="color:" href="https://github.com/mxswat/mx-division-builds/issues">GitHub</a>`,
         buttons: [{
                 title: 'Clean local DB',
                 handler: () => {

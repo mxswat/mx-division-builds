@@ -11,7 +11,7 @@
     </div>
     <span class="section-title offensive">
       <img src="icons/offense1.png" class="image" />
-      Offensive {{coresCount.offensive}}
+      Offensive Cores {{coresCount.offensive}} | All weapons damage: {{allWeaponDamage}} % 
     </span>
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in offensiveStats" v-bind:key="idx">
@@ -21,7 +21,7 @@
     </div>
     <span class="section-title defensive">
       <img src="icons/defense1.png" class="image" />
-      Defensive {{coresCount.defensive}}
+      Defensive Cores {{coresCount.defensive}} | Armor: WIP
     </span>
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in defensiveStats" v-bind:key="idx">
@@ -31,7 +31,7 @@
     </div>
     <span class="section-title utility">
       <img src="icons/tech1.png" class="image" />
-      Utility {{coresCount.utility}}
+      Utility Cores {{coresCount.utility}}
     </span>
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in utilityStats" v-bind:key="idx">
@@ -54,6 +54,7 @@ export default {
       utilityStats: [],
       offensiveStats: [],
       defensiveStats: [],
+      allWeaponDamage: 0,
       coresCount: {
         utility: 0,
         offensive: 0,
@@ -77,9 +78,10 @@ export default {
       this.utilityStats = Object.entries(stats.Utility).map(([key, value]) => ({key,value}));
       this.offensiveStats = Object.entries(stats.Offensive).map(([key, value]) => ({key,value}));
       this.defensiveStats = Object.entries(stats.Defensive).map(([key, value]) => ({key,value}));
-      this.coresCount.offensive = stats.Cores.Offensive;
-      this.coresCount.defensive = stats.Cores.Defensive;
-      this.coresCount.utility  = stats.Cores.Utility;
+      this.coresCount.offensive = stats.Cores.Offensive.length;
+      this.coresCount.defensive = stats.Cores.Defensive.length;
+      this.coresCount.utility  = stats.Cores.Utility.length;
+      this.allWeaponDamage = stats.Cores.Offensive.reduce((a, b) => a + b);
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);

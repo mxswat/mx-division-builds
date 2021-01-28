@@ -83,20 +83,20 @@ class WeaponBase {
             return
         }
         this.id = weaponRaw.index;
-        this["name"] = weaponRaw["Name"];
-        this["base damage"] = weaponRaw["Base Damage"];
-        this["rpm"] = weaponRaw["RPM"];
-        this["mag size"] = weaponRaw["Mag Size"];
-        this["quality"] = weaponRaw["Quality"];
-        this["optimal range"] = weaponRaw["Optimal Range"];
-        this["weapon type"] = weaponRaw["Weapon Type"];
-        this["reload speed (ms)"] = weaponRaw["Reload Speed (ms)"];
-        this["hsd"] = weaponRaw["HSD"];
-        this["variant"] = weaponRaw["Variant"];
+        this["rpm"] = Number(weaponRaw["RPM"]);
+        this["base damage"] = Number(weaponRaw["Base Damage"]);
+        this["mag size"] = Number(weaponRaw["Mag Size"]);
+        this["optimal range"] = Number(weaponRaw["Optimal Range"]);
+        this["reload speed (ms)"] = Number(weaponRaw["Reload Speed (ms)"]);
+        this["hsd"] = Number(weaponRaw["HSD"]);
+        this["core 1"].max = Number(weaponRaw["Core 1 Max"]);
+        this["core 2"].max = Number(weaponRaw["Core 2 Max"]);
         this["core 1"].stat = weaponRaw["Core 1"];
-        this["core 1"].max = weaponRaw["Core 1 Max"];
         this["core 2"].stat = weaponRaw["Core 2"];
-        this["core 2"].max = weaponRaw["Core 2 Max"];
+        this["name"] = weaponRaw["Name"];
+        this["quality"] = weaponRaw["Quality"];
+        this["weapon type"] = weaponRaw["Weapon Type"];
+        this["variant"] = weaponRaw["Variant"];
 
         this.filters = {
             "core 1" : weaponRaw["Core 1"],

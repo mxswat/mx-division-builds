@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     updateValue: function(value) {
-      this.$emit("input", value);
+      this.$emit("input", Number(value));
     }
   }
 };

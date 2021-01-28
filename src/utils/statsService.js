@@ -37,14 +37,12 @@ class StatsService {
             Offensive: {},
             Defensive: {},
             Utility: {},
-            Brands: {},
             Cores: {
-                Offensive: 0,
-                Defensive: 0,
-                Utility: 0,
+                Offensive: [],
+                Defensive: [],
+                Utility: [],
             },
             brands: {},
-            cores: []
         };
     }
 
@@ -86,7 +84,7 @@ class StatsService {
                 stats.brands[gear.brand] = stats.brands[gear.brand] || []
                 stats.brands[gear.brand].push(null);
                 if (gear.core) {
-                    stats.Cores[statTypes[gear.core.Type]]++;
+                    stats.Cores[statTypes[gear.core.Type]].push(gear.core.StatValue || gear.core.Max);
                 }
                 const keys = ['attributeOne', 'attributeTwo', 'mod',]
                 for (let keyI = 0; keyI < keys.length; keyI++) {
@@ -116,7 +114,7 @@ class StatsService {
                         stats.brands[brand][idx] = `${found.stat} ${found.val}`;
                         const statType = this.statsMapping[found.stat].Type;
                         const prevVal = stats[statTypes[statType]][found.stat] || 0;
-                        stats[statTypes[statType]][found.stat] = prevVal + Number(found.val);
+                        stats[statTypes[statType]][found.stat] = Number(prevVal) + Number(found.val);
                     }
                 }
             }
@@ -178,7 +176,7 @@ class StatsService {
         })
 
         if (specialization.name.includes('Technician')) {
-            stats.Cores.Utility++
+            stats.Cores.Utility.push(1)
             if (specialization.name.includes('Damage')) {
                 addValueToStat(stats.Utility, 'Skill Damage', 10)
             } else {

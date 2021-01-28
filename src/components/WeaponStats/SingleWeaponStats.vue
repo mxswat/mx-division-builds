@@ -1,14 +1,38 @@
 <template>
   <div class="weapon-stat">
     <template v-if="weapon">
-      <span class="weapon-name-stat bold">{{weapon.name}}</span>
-      <span>Weapon damage (AWD only) {{weaponDamage}}</span>
-      <template v-for="(weaponStatsKey, idx) in weaponStatsArr">
-        <span
-          v-if="weaponStats[weaponStatsKey].value"
-          v-bind:key="idx"
-        >{{weaponStatsKey}} {{weaponStats[weaponStatsKey].value}}</span>
-      </template>
+      <span class="weapon-name-stat bold">{{ weapon.name }}</span>
+      <span
+        >Weapon damage <span> {{ weaponDamage }}</span></span
+      >
+      <span
+        >Damage to Armored target <span>{{ dmgToArmored }}</span></span
+      >
+      <span
+        >Damage to Out Of Cover target <span>{{ dmgToOutOfCover }}</span></span
+      >
+      <span
+        >Damage to Armored OOC target
+        <span>{{ dmgToOutOfCoverArmored }}</span></span
+      >
+      <span
+        >Damage (additive) increase by <span>{{ damageIncrease }}%</span></span
+      >
+      <span
+        >Headshot Damage <span>{{ hsd }}%</span></span
+      >
+      <span
+        >Critical Hit Damage <span>{{ chd }}%</span></span
+      >
+      <span
+        >Critical Hit Chanche <span>{{ chc }}/60%</span></span
+      >
+      <span
+        >Damage To Target Out of Cover <span>{{ dtooc }}%</span></span
+      >
+      <span
+        >Damage To Armor <span>{{ dta }}%</span></span
+      >
     </template>
     <span class="weapon-name-stat bold" v-if="!weapon">No weapon selected</span>
   </div>
@@ -16,143 +40,162 @@
 
 <script>
 import coreService from "../../utils/coreService";
-import { combineLatest, map, timer } from "rxjs";
-import { debounce } from "rxjs/operators";
+import { combineLatest } from "rxjs";
 import statsService from "../../utils/statsService";
+import { WEAPON_PROP_ENUM, STATS_ENUM } from "../../utils/utils";
 
 export default {
   name: "SingleWeaponStats",
   props: {
-    name: null
+    name: null,
   },
   data() {
     return {
-      weaponDamage: null,
+      // stats: null
       weapon: null,
-      // stats: null,
-      weaponStatsArr: [
-        "Weapon Damage",
-        "Critical Hit Chance",
-        "Critical Hit Damage",
-        "Headshot Damage",
-        "Damage to Armor",
-        "Damage to Health",
-        "Damage to TOC",
-        "Rate of Fire %",
-        "Mag Size %",
-        "Extra Rounds",
-        "Reload Speed %",
-        "Stability",
-        "Accuracy",
-        "Weapon Handling",
-        "Optimal Range",
-        "Swap Speed"
-      ],
-      weaponStats: {
-        "Weapon Damage": { value: 0 },
-        "Critical Hit Chance": { value: 0 },
-        "Critical Hit Damage": { value: 0 },
-        "Headshot Damage": { value: 0 },
-        "Damage to Armor": { value: 0 },
-        "Damage to Health": { value: 0 },
-        "Damage to TOC": { value: 0 },
-        "Rate of Fire %": { value: 0 },
-        "Mag Size %": { value: 0 },
-        "Extra Rounds": { value: 0 },
-        "Reload Speed %": { value: 0 },
-        Stability: { value: 0 },
-        Accuracy: { value: 0 },
-        "Weapon Handling": { value: 0 },
-        "Optimal Range": { value: 0 },
-        "Swap Speed": { value: 0 }
-      }
+      chc: null,
+      chd: null,
+      weaponDamage: null,
+      damageIncrease: null,
+      dmgToArmored: 0,
+      dmgToOutOfCover: 0,
+      dmgToOutOfCoverArmored: 0,
+      dta: 0,
+      dtooc: 0,
+      hsd: 0
     };
   },
   created() {
     const _vm = this;
-    combineLatest(
+    combineLatest([
       coreService.subscribeSlotData(this.name),
-      statsService.getStats$()
-    ).subscribe(([weapon, stats]) => {
+      statsService.getStats$(),
+    ]).subscribe(([weapon, stats]) => {
       _vm.updateStatsUI(weapon, stats);
     });
   },
   methods: {
     updateStatsUI(weapon, stats) {
+      if (!weapon || !stats) {
+        return;
+      }
+      // this.stats = stats;
       this.weapon = weapon;
-      if (this.weapon && stats) {
-        const statsKey = Object.keys(stats);
-        for (let i = 0; i < statsKey.length; i++) {
-          const stat = statsKey[i];
-          if (this.weaponStats[stat]) {
-            this.weaponStats[stat].value = stats[stat].reduce(
-              (a, b) => parseFloat(a) + parseFloat(b),
-              0
-            );
-          }
-        }
-        const attributeone = this.weapon["attribute 1"];
-        const coreone = this.weapon["core 1"];
-        const coretwo = this.weapon["core 2"];
-        // Mods
-        const magazine = this.weapon["magazine"];
-        const muzzle = this.weapon["muzzle"];
-        const optic = this.weapon["optic"];
-        const underbarrel = this.weapon["under barrel"];
+      const weaponCore1 = this.weapon[WEAPON_PROP_ENUM.CORE_1];
+      const weaponCore2 = this.weapon[WEAPON_PROP_ENUM.CORE_2];
+      const weaponAttribute1 = this.weapon["attribute 1"];
+      const weaponCoreType = weaponCore1.stat;
+      const weaponBaseDamage = Number(
+        this.weapon[WEAPON_PROP_ENUM.BASE_DAMAGE]
+      );
+      const AWD = stats.Cores.Offensive.reduce((a, b) => a + b); // All weapon damages from cores
+      const weaponSpecificDamage =
+        stats.Offensive[weaponCoreType] + // Damage from the brands and SHD(?)(To test)
+        (weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
+      const SHDDamage = 0; // TODO: Implement me
 
-        this.addToStat("Headshot Damage", this.weapon["hsd"], null);
-        if (attributeone) {
-          this.addToStat(
-            attributeone.Stat,
-            attributeone.StatValue,
-            attributeone.Max
-          );
-        }
+      this.damageIncrease = AWD + weaponSpecificDamage + SHDDamage;
 
-        if (coreone && coreone.stat) {
-          const weaponDamage = coreone.StatValue
-            ? coreone.StatValue
-            : coreone.max;
-          let awd = 0;
-          if (stats["Weapon Damage"]) {
-            awd = stats["Weapon Damage"].reduce(
-              (a, b) => parseFloat(a) + parseFloat(b),
-              0
-            );
-          }
-          const finalDamage = (parseFloat(weaponDamage) + awd) / 100;
-          this.weaponDamage = (this.weapon["base damage"] * (1 + finalDamage)).toFixed(2);
-        }
+      this.hsd = Number(this.weapon.hsd) + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.HEADSHOT_DAMAGE);
+      this.hsd += this.getStatValueFromGunAndGear(
+        weaponCore2,
+        weaponAttribute1,
+        stats.Offensive,
+        STATS_ENUM.HEADSHOT_DAMAGE
+      );
 
-        // this.weapon["base damage"]; Combine with Coreone
-        if (coretwo && coretwo.stat) {
-          this.addToStat(coretwo.stat, coretwo.StatValue, coretwo.max);
-        }
+      // 25 is the innate CHD of every gun
+      this.chd = 25 + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.CRITICAL_HIT_DAMAGE);
+      this.chd += this.getStatValueFromGunAndGear(
+        weaponCore2,
+        weaponAttribute1,
+        stats.Offensive,
+        STATS_ENUM.CRITICAL_HIT_DAMAGE
+      );
+      this.chc = 0 + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.CRITICAL_HIT_CHANCE);
+      this.chc += this.getStatValueFromGunAndGear(
+        weaponCore2,
+        weaponAttribute1,
+        stats.Offensive,
+        STATS_ENUM.CRITICAL_HIT_CHANCE
+      );
 
-        const mods = [magazine, muzzle, optic, underbarrel];
-        for (let i = 0; i < mods.length; i++) {
-          const mod = mods[i];
-          if (mod) {
-            this.addToStat(mod.pos, mod.valPos);
-            if (mod.neg) {
-              this.reduceStat(mod.neg, mod.valNeg);
-            }
-          }
-        }
-      }
+      this.weaponDamage = this.flatWeaponDamage(
+        weaponBaseDamage,
+        AWD,
+        weaponSpecificDamage,
+        SHDDamage
+      );
+
+      this.dta = this.getStatValueFromGunAndGear(
+        weaponCore2,
+        weaponAttribute1,
+        stats.Offensive,
+        STATS_ENUM.DAMAGE_TO_ARMOR
+      );
+      this.dmgToArmored = this.calcDmgToArmored(this.weaponDamage, this.dta);
+
+      this.dtooc = this.getStatValueFromGunAndGear(
+        weaponCore2,
+        weaponAttribute1,
+        stats.Offensive,
+        STATS_ENUM.DAMAGE_TO_TOC
+      );
+      this.dmgToOutOfCover = this.calcDmgToOutOfCover(
+        this.weaponDamage,
+        this.dtooc
+      );
+
+      this.dmgToOutOfCoverArmored = this.calcDmgToOutOfCover(
+        this.dmgToArmored,
+        this.dtooc
+      );
     },
-    addToStat(statName, value, fallbackVal) {
-      if (this.weaponStats[statName]) {
-        this.weaponStats[statName].value += value
-          ? parseFloat(value)
-          : parseFloat(fallbackVal);
-      }
+    flatWeaponDamage(weaponBaseDamage, AWD, weaponSpecificDamage, SHDDamage) {
+      return (
+        weaponBaseDamage *
+        (1 + (AWD + weaponSpecificDamage + SHDDamage) / 100)
+      ).toFixed(0);
     },
-    // Used for mods negative bonus
-    reduceStat(statName, value) {
-      this.weaponStats[statName].value += parseFloat(value);
-    }
-  }
+    calcDmgToArmored(flatDamage, DTA) {
+      return (flatDamage * (1 + DTA / 100)).toFixed(0);
+    },
+    calcDmgToOutOfCover(flatDamage, DTOOC) {
+      return (flatDamage * (1 + DTOOC / 100)).toFixed(0);
+    },
+    getStatValueFromGunAndGear(
+      weaponCore2,
+      weaponAttribute1,
+      statsObj,
+      statName
+    ) {
+      let value = statsObj[statName];
+      if (weaponCore2.stat === statName) {
+        value += weaponCore2.StatValue || Number(weaponCore2.max);
+      }
+      if (weaponAttribute1.Stat === statName) {
+        value += weaponAttribute1.StatValue || Number(weaponAttribute1.Max);
+      }
+      return value;
+    },
+    getStatValueFromGunMods(weapon, statName) {
+      let value = 0;
+      const modSlots = ["optic", "under barrel", "magazine", "muzzle"];
+      modSlots.forEach((mod) => {
+        const modEl = weapon[mod];
+        if (!modEl) {
+          return
+        }
+        if (modEl.neg === statName) {
+          value += Number(modEl.valNeg);
+        }
+        if (modEl.pos === statName) {
+          value += Number(modEl.valPos);
+        }
+      });
+      return value
+    },
+  },
 };
 </script>
 
@@ -161,9 +204,12 @@ export default {
   color: white;
   display: flex;
   flex-direction: column;
-  span {
+  > span {
     border-bottom: 1px solid white;
     padding: 8px;
+    > span {
+      float: right;
+    }
   }
 }
 </style>

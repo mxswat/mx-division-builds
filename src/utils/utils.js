@@ -44,7 +44,7 @@ const getByString = function (o, s) {
     return o;
 }
 
-const getUniqueObject = function(object) {
+const getUniqueObject = function (object) {
     // Generate unique object, otherwise when you change one value it will change it on the other slots too
     return JSON.parse(JSON.stringify(object));
 }
@@ -75,27 +75,58 @@ const qualityToCss = {
 };
 
 const coreAttributes = [{
-        label: "Weapon Damage",
-        value: 15,
-        Max: 15,
-        Type: "O",
-        index: 1
-    },
-    {
-        label: "Skill Tier",
-        value: 1,
-        Max: 1,
-        Type: "U",
-        index: 0
-    },
-    {
-        label: "Armor",
-        value: 170000,
-        Max: 170000,
-        Type: "D",
-        index: 2
-    }
+    label: "Weapon Damage",
+    value: 15,
+    Max: 15,
+    Type: "O",
+    index: 1
+},
+{
+    label: "Skill Tier",
+    value: 1,
+    Max: 1,
+    Type: "U",
+    index: 0
+},
+{
+    label: "Armor",
+    value: 170000,
+    Max: 170000,
+    Type: "D",
+    index: 2
+}
 ];
+
+const WEAPON_PROP_ENUM = {
+    ATTRIBUTE_1: 'attribute 1',
+    BASE_DAMAGE: 'base damage',
+    CORE_1: 'core 1',
+    CORE_2: 'core 2',
+    FILTERS: 'filters',
+    HSD: 'hsd',
+    ID: 'id',
+    MAG_SIZE: 'mag size:',
+    MAGAZINE: 'magazine',
+    MUZZLE: 'muzzle',
+    NAME: 'name',
+    OPTIC: 'optic',
+    OPTIMAL_RANGE: 'optimal range:',
+    QUALITY: 'quality:',
+    RELOAD_speed: 'reload speed (ms)',
+    RPM: 'rpm',
+    TALENT: 'talent',
+    UNDER_BARREL: 'under barrel',
+    VARIANT: 'variant',
+    WEAPON_TYPE: 'weapon type',
+}
+
+const STATS_ENUM = {
+    CRITICAL_HIT_DAMAGE: "Critical Hit Damage",
+    DAMAGE_TO_ARMOR: "Damage to Armor",
+    DAMAGE_TO_TOC: "Damage to TOC",
+    CRITICAL_HIT_CHANCE: "Critical Hit Chance",
+    HEADSHOT_DAMAGE: "Headshot Damage"
+}
 
 export {
     getByString,
@@ -104,5 +135,7 @@ export {
     typeToImgSrc,
     coreAttributes,
     qualityToCss,
-    getUniqueObject
+    getUniqueObject,
+    WEAPON_PROP_ENUM,
+    STATS_ENUM
 };

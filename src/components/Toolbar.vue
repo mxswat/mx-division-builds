@@ -1,12 +1,12 @@
 <template>
   <div class="toolbar">
     <span class="app-title">The Division 2 Builds tool</span>
-    <input
+    <!-- <input
       class="build-name"
       type="text"
       placeholder="Your build Name"
       name="Build Name"
-    />
+    /> -->
     <div class="spacer"></div>
     <a @click="showMobileMenu = !showMobileMenu" class="menu-btt arrow-down">Menu</a>
     <div class="toolbar-inner" :class="{ 'showOnMobile': showMobileMenu }">
@@ -133,7 +133,7 @@ export default {
 }
 
 // mobile switch to menu W/ button
-@media only screen and (max-width: 506px) {
+@media only screen and (max-width: 550px) {
   .menu-btt {
     display: flex;
   }

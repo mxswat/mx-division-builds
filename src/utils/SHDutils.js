@@ -30,7 +30,7 @@ function getSHDLevels() {
             },
             {
                 name: "Total Armor",
-                max: 20,
+                max: 10,
                 value: 0,
                 type: 'D'
             },

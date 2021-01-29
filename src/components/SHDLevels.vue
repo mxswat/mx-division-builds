@@ -17,7 +17,7 @@
 // https://thedivision.fandom.com/wiki/SHD_Level
 import StatInput from "./StatInput";
 import coreService from "../utils/coreService";
-import { getSHDLevels } from "../utils/SHDutils";
+import { getSHDLevels, updateLocalSHDLevels } from "../utils/SHDutils";
 export default {
   name: "SHDLevels",
   components: { StatInput },
@@ -31,6 +31,7 @@ export default {
     coreService.updateSHDLevels(this.levels);
   },
   updated() {
+    updateLocalSHDLevels(this.levels)
     coreService.updateSHDLevels(this.levels);
   },
 };

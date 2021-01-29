@@ -92,7 +92,7 @@ export default {
       const weaponSpecificDamage =
         stats.Offensive[weaponCoreType] + // Damage from the brands and SHD(?)(To test)
         (weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
-      const genericWeaponDamage = stats.Offensive[STATS_ENUM.WEAPON_DAMAGE]; // SHD Levels and Walker brand
+      const genericWeaponDamage = stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
 
       this.damageIncrease = AWD + weaponSpecificDamage + genericWeaponDamage;
 

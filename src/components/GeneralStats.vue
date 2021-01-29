@@ -43,7 +43,7 @@
 </template>
 
 <script>
-import { combineLatest } from "rxjs";
+import { STATS_ENUM } from "../utils/utils";
 import statsService from "../utils/statsService";
 export default {
   name: "GeneralStats",
@@ -82,6 +82,7 @@ export default {
       this.coresCount.defensive = stats.Cores.Defensive.length;
       this.coresCount.utility  = stats.Cores.Utility.length;
       this.allWeaponDamage = stats.Cores.Offensive.length > 0 ? stats.Cores.Offensive.reduce((a, b) => a + b) : 0;
+      this.allWeaponDamage += stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);

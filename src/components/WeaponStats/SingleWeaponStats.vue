@@ -2,21 +2,28 @@
   <div class="weapon-stat">
     <template v-if="weapon">
       <span class="weapon-name-stat bold">{{ weapon.name }}</span>
+      <div class="toggle-chd-hsd">
+        <Toggle :label="'Toggle Headshot'"></Toggle>
+        <Toggle :label="'Toggle Critical'"></Toggle>
+      </div>
       <span
         >Weapon damage <span> {{ roundValue(weaponDamage) }}</span></span
       >
       <span
-        >Damage to Armored target <span>{{ roundValue(dmgToArmored) }}</span></span
+        >Damage to Armored target
+        <span>{{ roundValue(dmgToArmored) }}</span></span
       >
       <span
-        >Damage to Out Of Cover target <span>{{ roundValue(dmgToOutOfCover) }}</span></span
+        >Damage to Out Of Cover target
+        <span>{{ roundValue(dmgToOutOfCover) }}</span></span
       >
       <span
         >Damage to Armored OOC target
         <span>{{ roundValue(dmgToOutOfCoverArmored) }}</span></span
       >
       <span
-        >Damage (additive) increase by <span>{{ roundValue(damageIncrease) }}%</span></span
+        >Damage (additive) increase by
+        <span>{{ roundValue(damageIncrease) }}%</span></span
       >
       <span
         >Headshot Damage <span>{{ roundValue(hsd) }}%</span></span
@@ -28,7 +35,8 @@
         >Critical Hit Chance <span>{{ roundValue(chc) }}/60%</span></span
       >
       <span
-        >Damage To Target Out of Cover <span>{{ roundValue(dtooc) }}%</span></span
+        >Damage To Target Out of Cover
+        <span>{{ roundValue(dtooc) }}%</span></span
       >
       <span
         >Damage To Armor <span>{{ roundValue(dta) }}%</span></span
@@ -43,11 +51,14 @@ import coreService from "../../utils/coreService";
 import { combineLatest } from "rxjs";
 import statsService from "../../utils/statsService";
 import { WEAPON_PROP_ENUM, STATS_ENUM } from "../../utils/utils";
-
+import Toggle from "../generic/Toggle";
 export default {
   name: "SingleWeaponStats",
   props: {
     name: null,
+  },
+  components: {
+    Toggle,
   },
   data() {
     return {
@@ -62,7 +73,7 @@ export default {
       dmgToOutOfCoverArmored: 0,
       dta: 0,
       dtooc: 0,
-      hsd: 0
+      hsd: 0,
     };
   },
   created() {
@@ -88,15 +99,21 @@ export default {
       const weaponBaseDamage = Number(
         this.weapon[WEAPON_PROP_ENUM.BASE_DAMAGE]
       );
-      const AWD = stats.Cores.Offensive.length > 0 ? stats.Cores.Offensive.reduce((a, b) => a + b) : 0; // All weapon damages from cores
+      const AWD =
+        stats.Cores.Offensive.length > 0
+          ? stats.Cores.Offensive.reduce((a, b) => a + b)
+          : 0; // All weapon damages from cores
       const weaponSpecificDamage =
         (stats.Offensive[weaponCoreType] || 0) + // Damage from the brands and SHD(?)(To test)
         (weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
-      const genericWeaponDamage = stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
+      const genericWeaponDamage =
+        stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
 
       this.damageIncrease = AWD + weaponSpecificDamage + genericWeaponDamage;
 
-      this.hsd = Number(this.weapon.hsd) + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.HEADSHOT_DAMAGE);
+      this.hsd =
+        Number(this.weapon.hsd) +
+        this.getStatValueFromGunMods(this.weapon, STATS_ENUM.HEADSHOT_DAMAGE);
       this.hsd += this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
@@ -105,14 +122,24 @@ export default {
       );
 
       // 25 is the innate CHD of every gun
-      this.chd = 25 + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.CRITICAL_HIT_DAMAGE);
+      this.chd =
+        25 +
+        this.getStatValueFromGunMods(
+          this.weapon,
+          STATS_ENUM.CRITICAL_HIT_DAMAGE
+        );
       this.chd += this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
         stats.Offensive,
         STATS_ENUM.CRITICAL_HIT_DAMAGE
       );
-      this.chc = 0 + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.CRITICAL_HIT_CHANCE);
+      this.chc =
+        0 +
+        this.getStatValueFromGunMods(
+          this.weapon,
+          STATS_ENUM.CRITICAL_HIT_CHANCE
+        );
       this.chc += this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
@@ -151,7 +178,12 @@ export default {
         this.dtooc
       );
     },
-    flatWeaponDamage(weaponBaseDamage, AWD, weaponSpecificDamage, genericWeaponDamage) {
+    flatWeaponDamage(
+      weaponBaseDamage,
+      AWD,
+      weaponSpecificDamage,
+      genericWeaponDamage
+    ) {
       return (
         weaponBaseDamage *
         (1 + (AWD + weaponSpecificDamage + genericWeaponDamage) / 100)
@@ -184,7 +216,7 @@ export default {
       modSlots.forEach((mod) => {
         const modEl = weapon[mod];
         if (!modEl) {
-          return
+          return;
         }
         if (modEl.neg === statName) {
           value += Number(modEl.valNeg);
@@ -193,11 +225,11 @@ export default {
           value += Number(modEl.valPos);
         }
       });
-      return value
+      return value;
     },
     roundValue(number) {
-      return Number(Number(number).toFixed(2))
-    }
+      return Number(Number(number).toFixed(2));
+    },
   },
 };
 </script>
@@ -214,5 +246,11 @@ export default {
       float: right;
     }
   }
+}
+
+.toggle-chd-hsd {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 </style>

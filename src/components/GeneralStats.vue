@@ -16,7 +16,7 @@
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in offensiveStats" v-bind:key="idx">
         {{stat.key}}:
-        <span>{{stat.value}}</span>
+        <span>{{roundValue(stat.value)}}</span>
       </div>
     </div>
     <span class="section-title defensive">
@@ -26,7 +26,7 @@
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in defensiveStats" v-bind:key="idx">
         {{stat.key}}:
-        <span>{{stat.value}}</span>
+        <span>{{roundValue(stat.value)}}</span>
       </div>
     </div>
     <span class="section-title utility">
@@ -36,7 +36,7 @@
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in utilityStats" v-bind:key="idx">
         {{stat.key}}:
-        <span>{{stat.value}}</span>
+        <span>{{roundValue(stat.value)}}</span>
       </div>
     </div>
   </div>
@@ -86,6 +86,9 @@ export default {
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
+    },
+    roundValue(number) {
+      return Number(number.toFixed(2))
     }
   }
 };

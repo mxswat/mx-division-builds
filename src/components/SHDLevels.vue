@@ -16,66 +16,18 @@
 <script>
 // https://thedivision.fandom.com/wiki/SHD_Level
 import StatInput from "./StatInput";
-import { typeToImgSrc } from "../utils/utils";
 import coreService from "../utils/coreService";
+import { getSHDLevels } from "../utils/SHDutils";
 export default {
   name: "SHDLevels",
   components: { StatInput },
   data() {
     return {
-      typeToImgSrc: typeToImgSrc,
       levels: [],
     };
   },
   created() {
-    this.typeToImgSrc = typeToImgSrc;
-    this.levels = [
-      {
-        name: "Weapon Damage",
-        max: 10,
-        value: 0,
-      },
-      {
-        name: "Headshot Damage",
-        max: 10,
-        value: 0,
-      },
-      {
-        name: "Critical Hit Chance",
-        max: 10,
-        value: 0,
-      },
-      {
-        name: "Critical Hit Damage",
-        max: 20,
-        value: 0,
-      },
-      {
-        name: "Armor",
-        max: 20,
-        value: 0,
-      },
-      {
-        name: "Skill Haste",
-        max: 10,
-        value: 0,
-      },
-      {
-        name: "Skill Damage",
-        max: 10,
-        value: 0,
-      },
-      {
-        name: "Skill Duration",
-        max: 10,
-        value: 0,
-      },
-      {
-        name: "Repair Skills",
-        max: 10,
-        value: 0,
-      },
-    ];
+    this.levels = getSHDLevels();
     coreService.updateSHDLevels(this.levels);
   },
   updated() {

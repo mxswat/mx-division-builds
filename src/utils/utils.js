@@ -125,7 +125,9 @@ const STATS_ENUM = {
     DAMAGE_TO_ARMOR: "Damage to Armor",
     DAMAGE_TO_TOC: "Damage to TOC",
     CRITICAL_HIT_CHANCE: "Critical Hit Chance",
-    HEADSHOT_DAMAGE: "Headshot Damage"
+    HEADSHOT_DAMAGE: "Headshot Damage",
+    WEAPON_DAMAGE: "Weapon Damage",
+    TOTAL_ARMOR: "Total Armor"
 }
 
 export {

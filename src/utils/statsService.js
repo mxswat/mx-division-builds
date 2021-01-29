@@ -28,6 +28,12 @@ let stats = {
 
 const keyBy = (array, key) => (array || []).reduce((r, x) => ({ ...r, [key ? x[key] : x]: x }), {});
 
+const statTypes = {
+    'O': 'Offensive',
+    'D': 'Defensive',
+    'U': 'Utility',
+}
+
 class StatsService {
     brandSetBonuses = null;
     statsMapping = null;
@@ -59,7 +65,9 @@ class StatsService {
             const statsMapping = await gearData.StatsMapping
             this.statsMapping = this.statsMapping || keyBy(statsMapping, 'Stat');
         }
+
         this.addStatsFromGear(data.gear);
+        this.addStatsFromSHD(data.SHDLevels);
 
         if (data.specialization) {
             this.addStatsFromSpecialization(data.specialization);
@@ -70,14 +78,7 @@ class StatsService {
         stats$.next(stats);
     }
 
-    addStatsFromWeapon(weapon) { }
-
     async addStatsFromGear(gearArr) {
-        const statTypes = {
-            'O': 'Offensive',
-            'D': 'Defensive',
-            'U': 'Utility',
-        }
         for (let i = 0; i < gearArr.length; i++) {
             const gear = gearArr[i];
             if (gear) {
@@ -93,8 +94,8 @@ class StatsService {
                     const stat = gear[key]
                     if (stat) {
                         const val = stat.StatValue || Number(stat.Max);
-                        const prevVal = stats[statTypes[stat.Type]][stat.Stat] || 0;
-                        stats[statTypes[stat.Type]][stat.Stat] = prevVal + val;
+                        const savedVal = stats[statTypes[stat.Type]][stat.Stat] || 0;
+                        stats[statTypes[stat.Type]][stat.Stat] = savedVal + val;
                     }
                 }
                 if (this.isEdgeCaseGear(gear)) {
@@ -120,7 +121,15 @@ class StatsService {
                 }
             }
         }
-        console.log(stats)
+    }
+
+    addStatsFromSHD(SHDLevels) {
+        for (let i = 0; i < SHDLevels.length; i++) {
+            const SHDLevel = SHDLevels[i];
+            const val = SHDLevel.value;
+            const savedVal = stats[statTypes[SHDLevel.type]][SHDLevel.name] || 0;
+            stats[statTypes[SHDLevel.type]][SHDLevel.name] = savedVal + val;
+        }
     }
 
     edgeCaseGear = ["Acosta's Go-Bag"]

@@ -4,7 +4,7 @@
     <label class="switch">
       <input
         :value="value"
-        v-on:input="updateValue($event.target.value)"
+        v-on:change="updateValue($event.target.checked)"
         type="checkbox"
       />
       <span class="slider"></span>

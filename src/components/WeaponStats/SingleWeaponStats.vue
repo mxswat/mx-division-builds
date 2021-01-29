@@ -3,8 +3,8 @@
     <template v-if="weapon">
       <span class="weapon-name-stat bold">{{ weapon.name }}</span>
       <div class="toggle-chd-hsd">
-        <Toggle :label="'Toggle Headshot'"></Toggle>
-        <Toggle :label="'Toggle Critical'"></Toggle>
+        <Toggle @input="updatedToggle()" v-model="toggleHSD" :label="'Toggle Headshot'"></Toggle>
+        <Toggle @input="updatedToggle()" v-model="toggleCHD" :label="'Toggle Critical'"></Toggle>
       </div>
       <span
         >Weapon damage <span> {{ roundValue(weaponDamage) }}</span></span
@@ -62,7 +62,7 @@ export default {
   },
   data() {
     return {
-      // stats: null
+      // this.stats: null
       weapon: null,
       chc: null,
       chd: null,
@@ -74,6 +74,8 @@ export default {
       dta: 0,
       dtooc: 0,
       hsd: 0,
+      toggleHSD: false,
+      toggleCHD: false,
     };
   },
   created() {
@@ -90,7 +92,7 @@ export default {
       if (!weapon || !stats) {
         return;
       }
-      // this.stats = stats;
+      this.stats = stats;
       this.weapon = weapon;
       const weaponCore1 = this.weapon[WEAPON_PROP_ENUM.CORE_1];
       const weaponCore2 = this.weapon[WEAPON_PROP_ENUM.CORE_2];
@@ -100,14 +102,14 @@ export default {
         this.weapon[WEAPON_PROP_ENUM.BASE_DAMAGE]
       );
       const AWD =
-        stats.Cores.Offensive.length > 0
-          ? stats.Cores.Offensive.reduce((a, b) => a + b)
+        this.stats.Cores.Offensive.length > 0
+          ? this.stats.Cores.Offensive.reduce((a, b) => a + b)
           : 0; // All weapon damages from cores
       const weaponSpecificDamage =
-        (stats.Offensive[weaponCoreType] || 0) + // Damage from the brands and SHD(?)(To test)
+        (this.stats.Offensive[weaponCoreType] || 0) + // Damage from the brands and SHD(?)(To test)
         (weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
       const genericWeaponDamage =
-        stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
+        this.stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
 
       this.damageIncrease = AWD + weaponSpecificDamage + genericWeaponDamage;
 
@@ -117,7 +119,7 @@ export default {
       this.hsd += this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
-        stats.Offensive,
+        this.stats.Offensive,
         STATS_ENUM.HEADSHOT_DAMAGE
       );
 
@@ -131,7 +133,7 @@ export default {
       this.chd += this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
-        stats.Offensive,
+        this.stats.Offensive,
         STATS_ENUM.CRITICAL_HIT_DAMAGE
       );
       this.chc =
@@ -143,7 +145,7 @@ export default {
       this.chc += this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
-        stats.Offensive,
+        this.stats.Offensive,
         STATS_ENUM.CRITICAL_HIT_CHANCE
       );
 
@@ -154,10 +156,16 @@ export default {
         genericWeaponDamage
       );
 
+      this.weaponDamage = this.addCHDAndOrHSD(
+        this.weaponDamage,
+        this.chd,
+        this.hsd
+      );
+
       this.dta = this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
-        stats.Offensive,
+        this.stats.Offensive,
         STATS_ENUM.DAMAGE_TO_ARMOR
       );
       this.dmgToArmored = this.calcDmgToArmored(this.weaponDamage, this.dta);
@@ -165,7 +173,7 @@ export default {
       this.dtooc = this.getStatValueFromGunAndGear(
         weaponCore2,
         weaponAttribute1,
-        stats.Offensive,
+        this.stats.Offensive,
         STATS_ENUM.DAMAGE_TO_TOC
       );
       this.dmgToOutOfCover = this.calcDmgToOutOfCover(
@@ -227,8 +235,18 @@ export default {
       });
       return value;
     },
+    addCHDAndOrHSD(flatDamage, chd, hsd) {
+      // (1 + CHC * CHD + HsD * headshot chance)
+      let toAdd = 0;
+      toAdd += this.toggleHSD ? Number(hsd) : 0;
+      toAdd += this.toggleCHD ? Number(chd) : 0;
+      return (flatDamage * (1 + toAdd / 100)).toFixed(0);
+    },
     roundValue(number) {
       return Number(Number(number).toFixed(2));
+    },
+    updatedToggle() {
+      this.updateStatsUI(this.weapon, this.stats);
     },
   },
 };

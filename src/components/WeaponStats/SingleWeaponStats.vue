@@ -170,10 +170,10 @@ export default {
       statName
     ) {
       let value = statsObj[statName] || 0;
-      if (weaponCore2.stat === statName) {
+      if (weaponCore2 && weaponCore2.stat === statName) {
         value += weaponCore2.StatValue || Number(weaponCore2.max);
       }
-      if (weaponAttribute1.Stat === statName) {
+      if (weaponAttribute1 && weaponAttribute1.Stat === statName) {
         value += weaponAttribute1.StatValue || Number(weaponAttribute1.Max);
       }
       return value;

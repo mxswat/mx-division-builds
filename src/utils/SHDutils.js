@@ -12,7 +12,7 @@ function getSHDLevels() {
             },
             {
                 name: "Headshot Damage",
-                max: 10,
+                max: 20,
                 value: 0,
                 type: 'O'
             },
@@ -48,7 +48,7 @@ function getSHDLevels() {
             },
             {
                 name: "Skill Duration",
-                max: 10,
+                max: 20,
                 value: 0,
                 type: 'U'
             },

@@ -3,35 +3,35 @@
     <template v-if="weapon">
       <span class="weapon-name-stat bold">{{ weapon.name }}</span>
       <span
-        >Weapon damage <span> {{ weaponDamage }}</span></span
+        >Weapon damage <span> {{ roundValue(weaponDamage) }}</span></span
       >
       <span
-        >Damage to Armored target <span>{{ dmgToArmored }}</span></span
+        >Damage to Armored target <span>{{ roundValue(dmgToArmored) }}</span></span
       >
       <span
-        >Damage to Out Of Cover target <span>{{ dmgToOutOfCover }}</span></span
+        >Damage to Out Of Cover target <span>{{ roundValue(dmgToOutOfCover) }}</span></span
       >
       <span
         >Damage to Armored OOC target
-        <span>{{ dmgToOutOfCoverArmored }}</span></span
+        <span>{{ roundValue(dmgToOutOfCoverArmored) }}</span></span
       >
       <span
-        >Damage (additive) increase by <span>{{ damageIncrease }}%</span></span
+        >Damage (additive) increase by <span>{{ roundValue(damageIncrease) }}%</span></span
       >
       <span
-        >Headshot Damage <span>{{ hsd }}%</span></span
+        >Headshot Damage <span>{{ roundValue(hsd) }}%</span></span
       >
       <span
-        >Critical Hit Damage <span>{{ chd }}%</span></span
+        >Critical Hit Damage <span>{{ roundValue(chd) }}%</span></span
       >
       <span
-        >Critical Hit Chance <span>{{ chc }}/60%</span></span
+        >Critical Hit Chance <span>{{ roundValue(chc) }}/60%</span></span
       >
       <span
-        >Damage To Target Out of Cover <span>{{ dtooc }}%</span></span
+        >Damage To Target Out of Cover <span>{{ roundValue(dtooc) }}%</span></span
       >
       <span
-        >Damage To Armor <span>{{ dta }}%</span></span
+        >Damage To Armor <span>{{ roundValue(dta) }}%</span></span
       >
     </template>
     <span class="weapon-name-stat bold" v-if="!weapon">No weapon selected</span>
@@ -169,7 +169,7 @@ export default {
       statsObj,
       statName
     ) {
-      let value = statsObj[statName];
+      let value = statsObj[statName] || 0;
       if (weaponCore2.stat === statName) {
         value += weaponCore2.StatValue || Number(weaponCore2.max);
       }
@@ -195,6 +195,9 @@ export default {
       });
       return value
     },
+    roundValue(number) {
+      return Number(Number(number).toFixed(2))
+    }
   },
 };
 </script>

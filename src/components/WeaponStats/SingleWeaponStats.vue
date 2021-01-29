@@ -92,9 +92,9 @@ export default {
       const weaponSpecificDamage =
         stats.Offensive[weaponCoreType] + // Damage from the brands and SHD(?)(To test)
         (weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
-      const SHDDamage = 0; // TODO: Implement me
+      const genericWeaponDamage = stats.Offensive[STATS_ENUM.WEAPON_DAMAGE]; // SHD Levels and Walker brand
 
-      this.damageIncrease = AWD + weaponSpecificDamage + SHDDamage;
+      this.damageIncrease = AWD + weaponSpecificDamage + genericWeaponDamage;
 
       this.hsd = Number(this.weapon.hsd) + this.getStatValueFromGunMods(this.weapon, STATS_ENUM.HEADSHOT_DAMAGE);
       this.hsd += this.getStatValueFromGunAndGear(
@@ -124,7 +124,7 @@ export default {
         weaponBaseDamage,
         AWD,
         weaponSpecificDamage,
-        SHDDamage
+        genericWeaponDamage
       );
 
       this.dta = this.getStatValueFromGunAndGear(
@@ -151,10 +151,10 @@ export default {
         this.dtooc
       );
     },
-    flatWeaponDamage(weaponBaseDamage, AWD, weaponSpecificDamage, SHDDamage) {
+    flatWeaponDamage(weaponBaseDamage, AWD, weaponSpecificDamage, genericWeaponDamage) {
       return (
         weaponBaseDamage *
-        (1 + (AWD + weaponSpecificDamage + SHDDamage) / 100)
+        (1 + (AWD + weaponSpecificDamage + genericWeaponDamage) / 100)
       ).toFixed(0);
     },
     calcDmgToArmored(flatDamage, DTA) {

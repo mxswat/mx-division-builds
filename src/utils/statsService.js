@@ -31,6 +31,7 @@ const keyBy = (array, key) => (array || []).reduce((r, x) => ({ ...r, [key ? x[k
 class StatsService {
     brandSetBonuses = null;
     statsMapping = null;
+    SHDLevels = null
 
     resetStats() {
         stats = {

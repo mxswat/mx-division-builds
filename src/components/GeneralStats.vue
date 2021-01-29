@@ -81,7 +81,7 @@ export default {
       this.coresCount.offensive = stats.Cores.Offensive.length;
       this.coresCount.defensive = stats.Cores.Defensive.length;
       this.coresCount.utility  = stats.Cores.Utility.length;
-      this.allWeaponDamage = stats.Cores.Offensive.reduce((a, b) => a + b);
+      this.allWeaponDamage = stats.Cores.Offensive.length > 0 ? stats.Cores.Offensive.reduce((a, b) => a + b) : 0;
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
@@ -127,22 +127,6 @@ export default {
 .brand-name {
   border-bottom: 1px solid white;
   margin-bottom: 8px;
-}
-.section-title {
-  font-weight: 700;
-  border-bottom: 1px solid white;
-  width: 100%;
-  margin-bottom: 16px;
-  position: sticky;
-  top: 0;
-  background: #1a1e24;
-  display: flex;
-  align-items: center;
-  padding: 8px 0px;
-  .image {
-    width: 25px;
-    margin-right: 4px;
-  }
 }
 
 .offensive {

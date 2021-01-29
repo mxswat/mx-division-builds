@@ -21,3 +21,20 @@
         margin: -8px 4px -8px 0px;
     }
 }
+
+.section-title {
+    font-weight: 700;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-bottom: 16px;
+    position: sticky;
+    top: 0;
+    background: #1a1e24;
+    display: flex;
+    align-items: center;
+    padding: 8px 0px;
+    .image {
+        width: 25px;
+        margin-right: 4px;
+    }
+}

@@ -34,6 +34,7 @@ const slotsToDecode = {
     Specialization: new Subject(),
 }
 
+const SHDLevels$ = new Subject();
 
 class CoreService {
 
@@ -49,6 +50,10 @@ class CoreService {
         return slotsToEncode[name].next(data);
     }
 
+    updateSHDLevels(SHDLevels) {
+        return SHDLevels$.next(SHDLevels);
+    }
+
     subscribeSlotData(name) {
         return slotsToEncode[name].asObservable()
             .pipe(debounce(() => timer(300)));
@@ -56,16 +61,19 @@ class CoreService {
 
     subscribeAllSlotsData$() {
         return combineLatest(
-            slotsToEncode.Mask.asObservable(),
-            slotsToEncode.Backpack.asObservable(),
-            slotsToEncode.Chest.asObservable(),
-            slotsToEncode.Gloves.asObservable(),
-            slotsToEncode.Holster.asObservable(),
-            slotsToEncode.Kneepads.asObservable(),
-            slotsToEncode.Primary.asObservable(),
-            slotsToEncode.Secondary.asObservable(),
-            slotsToEncode.SideArm.asObservable(),
-            slotsToEncode.Specialization.asObservable(),
+            [
+                slotsToEncode.Mask.asObservable(),
+                slotsToEncode.Backpack.asObservable(),
+                slotsToEncode.Chest.asObservable(),
+                slotsToEncode.Gloves.asObservable(),
+                slotsToEncode.Holster.asObservable(),
+                slotsToEncode.Kneepads.asObservable(),
+                slotsToEncode.Primary.asObservable(),
+                slotsToEncode.Secondary.asObservable(),
+                slotsToEncode.SideArm.asObservable(),
+                slotsToEncode.Specialization.asObservable(),
+                SHDLevels$.asObservable()
+            ]
         ).pipe(debounce(() => timer(300)));
     }
 }

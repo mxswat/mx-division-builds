@@ -23,6 +23,9 @@
         <BasicTile classes="specialization">
           <SpecializationSlot></SpecializationSlot>
         </BasicTile>
+        <BasicTile classes="SHD-levels">
+          <SHDLevels></SHDLevels>
+        </BasicTile>
         <BasicTile classes="general-stats-col no-anim">
           <GeneralStats></GeneralStats>
         </BasicTile>
@@ -36,6 +39,7 @@
 import { IsEverythingLoadedPromise } from "./utils/dataImporter";
 import WeaponStats from "./components/WeaponStats/WeaponStats";
 import GeneralStats from "./components/GeneralStats";
+import SHDLevels from "./components/SHDLevels";
 import BasicTile from "./components/BasicTile";
 import SpecializationSlot from "./components/SpecializationSlot";
 import Toolbar from "./components/Toolbar";
@@ -49,6 +53,7 @@ export default {
     BasicTile,
     SpecializationSlot,
     Toolbar,
+    SHDLevels
   },
   data() {
     return {
@@ -178,8 +183,12 @@ a {
   border-bottom: 1px solid white;
 }
 
-.tile:not(.specialization) {
+// Make every tile have a min height
+.tile {
   min-height: 230px;
+  &.specialization, &.SHD-levels {
+    min-height: 0px;
+  }
 }
 
 .loading {
@@ -263,5 +272,9 @@ $glow-color: #FF6D10;
   -webkit-transition: border 1s linear, box-shadow 1s linear;
   -moz-transition: border 1s linear, box-shadow 1s linear;
   transition: border 1s linear, box-shadow 1s linear;
+}
+
+.SHD-levels {
+  margin-bottom: 8px;
 }
 </style>

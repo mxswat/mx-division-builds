@@ -58,6 +58,7 @@ coreService.subscribeAllSlotsData$().subscribe(([
     Secondary,
     SideArm,
     Specialization,
+    SHDLevels
 ]) => {
     const wearablesIds =
         wearableToIds([
@@ -80,15 +81,17 @@ coreService.subscribeAllSlotsData$().subscribe(([
     // });
     const buildData = [wearablesIds.join(':'), weapondsIds.join(':'), specializationIds.join(':')].join(':');
 
+    statsService.updateStats({
+        gear: [Mask, Backpack, Chest, Gloves, Holster, Kneepads],
+        weapons: [Primary, Secondary, SideArm],
+        specialization: Specialization,
+        SHDLevels
+    });
+
     // Lazy fix because of the new versioning an encoding will be triggered but all the values are 0
     if (Number(buildData.replaceAll('-', '').replaceAll(':', '')) === 0) {
         return;
     }
-    statsService.updateStats({
-        gear: [Mask, Backpack, Chest, Gloves, Holster, Kneepads],
-        weapons: [Primary, Secondary, SideArm],
-        specialization: Specialization
-    });
     const encodedBuild = compressToEncodedURIComponent(buildData);
     const _router = router;
     if (_router.history.current.params.encodedBuild !== encodedBuild) {

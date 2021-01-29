@@ -25,7 +25,7 @@
         >Critical Hit Damage <span>{{ chd }}%</span></span
       >
       <span
-        >Critical Hit Chanche <span>{{ chc }}/60%</span></span
+        >Critical Hit Chance <span>{{ chc }}/60%</span></span
       >
       <span
         >Damage To Target Out of Cover <span>{{ dtooc }}%</span></span

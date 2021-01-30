@@ -1,68 +1,40 @@
 function getSHDLevels() {
-    const localLevels = localStorage.getItem('SHD-LEVELS')
-
-    return localLevels
-        ? JSON.parse(localLevels)
-        : [
+    const userValues = localStorage.getItem('SHD-LEVELS-V2') ? JSON.parse(localStorage.getItem('SHD-LEVELS-V2')) : {};
+    const defaults = [
+        // name, type, max, value
+        ["Weapon Damage", "O", 10, 0], 
+        ["Headshot Damage", "O", 20, 0], 
+        ["Critical Hit Chance", "O", 10, 0], 
+        ["Critical Hit Damage", "O", 20, 0], 
+        ["Reload Speed %", "O", 20, 0], 
+        ["Total Armor", "D", 10, 0], 
+        ["Skill Haste", "U", 10, 0], 
+        ["Skill Damage", "U", 10, 0], 
+        ["Skill Duration", "U", 20, 0], 
+        ["Repair Skills", "U", 10, 0]
+    ];
+    const SHDLevels = [];
+    for (let i = 0; i < defaults.length; i++) {
+        const defaultVal = defaults[i];
+        SHDLevels.push(
             {
-                name: "Weapon Damage",
-                max: 10,
-                value: 0,
-                type: 'O'
-            },
-            {
-                name: "Headshot Damage",
-                max: 20,
-                value: 0,
-                type: 'O'
-            },
-            {
-                name: "Critical Hit Chance",
-                max: 10,
-                value: 0,
-                type: 'O'
-            },
-            {
-                name: "Critical Hit Damage",
-                max: 20,
-                value: 0,
-                type: 'O'
-            },
-            {
-                name: "Total Armor",
-                max: 10,
-                value: 0,
-                type: 'D'
-            },
-            {
-                name: "Skill Haste",
-                max: 10,
-                value: 0,
-                type: 'U'
-            },
-            {
-                name: "Skill Damage",
-                max: 10,
-                value: 0,
-                type: 'U'
-            },
-            {
-                name: "Skill Duration",
-                max: 20,
-                value: 0,
-                type: 'U'
-            },
-            {
-                name: "Repair Skills",
-                max: 10,
-                value: 0,
-                type: 'U'
-            },
-        ];
+                name: defaultVal[0],
+                type: defaultVal[1],
+                max: defaultVal[2],
+                value: userValues[defaultVal[0]] || 0,
+            }
+        )
+    }
+    return SHDLevels;
 }
 
 function updateLocalSHDLevels(levels) {
-    localStorage.setItem('SHD-LEVELS', JSON.stringify(levels));
+    const userValues = {};
+    for (let i = 0; i < levels.length; i++) {
+        const level = levels[i];
+        userValues[level.name] = level.value
+    }
+    localStorage.setItem('SHD-LEVELS-V2', JSON.stringify(userValues));
 }
 
 export {

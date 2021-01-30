@@ -22,6 +22,10 @@
         <span>{{ roundValue(dmgToOutOfCoverArmored) }}</span></span
       >
       <span
+        >Max Damage per {{totalMagSize}} rounds
+        <span>{{ roundValue(dmgToOutOfCoverArmoredPerMag) }}</span></span
+      >
+      <span
         >Damage (additive) increase by
         <span>{{ roundValue(damageIncrease) }}%</span></span
       >
@@ -40,6 +44,9 @@
       >
       <span
         >Damage To Armor <span>{{ roundValue(dta) }}%</span></span
+      >
+      <span
+        >Magazine Size <span>{{ roundValue(totalMagSize) }}</span></span
       >
     </template>
     <span class="weapon-name-stat bold" v-if="!weapon">No weapon selected</span>
@@ -71,9 +78,11 @@ export default {
       dmgToArmored: 0,
       dmgToOutOfCover: 0,
       dmgToOutOfCoverArmored: 0,
+      dmgToOutOfCoverArmoredPerMag: 0,
       dta: 0,
       dtooc: 0,
       hsd: 0,
+      totalMagSize: 0,
       toggleHSD: false,
       toggleCHD: false,
     };
@@ -185,6 +194,10 @@ export default {
         this.dmgToArmored,
         this.dtooc
       );
+
+      this.totalMagSize = Number(this.weapon[WEAPON_PROP_ENUM.MAG_SIZE]);
+      this.totalMagSize += this.getExtraMagazineSize(this.weapon[WEAPON_PROP_ENUM.MAGAZINE]);
+      this.dmgToOutOfCoverArmoredPerMag = this.dmgToOutOfCoverArmored * this.totalMagSize;
     },
     flatWeaponDamage(
       weaponBaseDamage,
@@ -236,14 +249,22 @@ export default {
       return value;
     },
     addCHDAndOrHSD(flatDamage, chd, hsd) {
-      // (1 + CHC * CHD + HsD * headshot chance)
       let toAdd = 0;
       toAdd += this.toggleHSD ? Number(hsd) : 0;
       toAdd += this.toggleCHD ? Number(chd) : 0;
+      // (1 + CHC * CHD + HsD * headshot chance)
       return (flatDamage * (1 + toAdd / 100)).toFixed(0);
     },
     roundValue(number) {
       return Number(Number(number).toFixed(2));
+    },
+    getExtraMagazineSize(magazine) {
+      if (!magazine) {
+        return 0;
+      } else if (magazine.pos == "Extra Rounds") {
+        return Number(magazine.valPos);
+      }
+      return 0;
     },
     updatedToggle() {
       this.updateStatsUI(this.weapon, this.stats);

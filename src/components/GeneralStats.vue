@@ -120,12 +120,15 @@ export default {
     flex-shrink: 1;
     flex-grow: 0;
     flex-basis: calc(33% - 8px);
-    padding-right: 8px;
     min-width: 180px;
+    margin-right: 8px;
+    border-bottom: 1px solid white;
   }
 
   span {
     margin-left: auto;
+    text-align: left;
+    min-width: 30px;
   }
 }
 .brand-name {

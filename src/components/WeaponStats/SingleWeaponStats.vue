@@ -248,12 +248,14 @@ export default {
       }
       const TESTER = document.getElementById('chart-test');
 
-      Plotly.plot( TESTER, [{
-          name: `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
-          x: timeAxis,
-          y: damageAxis }], { 
-          margin: { t: 25, b: 25, l: 50, r: 50}, plot_bgcolor: 'transparent' , paper_bgcolor: 'transparent', font: {color: 'white'} }, {showSendToCloud:true} );
-
+      Plotly.addTraces(TESTER, [
+          {
+            name: `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
+            x: timeAxis,
+            y: damageAxis 
+          }
+        ]
+      );
     },
     flatWeaponDamage(
       weaponBaseDamage,

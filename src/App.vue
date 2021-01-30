@@ -31,7 +31,7 @@
         </BasicTile>
       </div>
       <BasicTile classes="dps-chart">
-        <div id="chart-test"></div>
+        <DPSChart></DPSChart>
       </BasicTile>
     </div>
     <v-dialog />
@@ -47,6 +47,7 @@ import BasicTile from "./components/BasicTile";
 import SpecializationSlot from "./components/SpecializationSlot";
 import Toolbar from "./components/Toolbar";
 import newFeatureGlow from "./utils/newFeatureGlow";
+import DPSChart from "./components/DPSChart/DPSChart";
 
 export default {
   name: "App",
@@ -57,6 +58,7 @@ export default {
     SpecializationSlot,
     Toolbar,
     SHDLevels,
+    DPSChart
   },
   data() {
     return {
@@ -284,9 +286,5 @@ $glow-color: #ff6d10;
 
 .dps-chart {
   grid-column: col 1 / span 5;
-}
-
-div#chart-test {
-  min-height: 600px;
 }
 </style>

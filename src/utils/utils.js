@@ -112,7 +112,7 @@ const WEAPON_PROP_ENUM = {
     OPTIC: 'optic',
     OPTIMAL_RANGE: 'optimal range',
     QUALITY: 'quality',
-    RELOAD_speed: 'reload speed (ms)',
+    RELOAD_SPEED: 'reload speed (ms)',
     RPM: 'rpm',
     TALENT: 'talent',
     UNDER_BARREL: 'under barrel',

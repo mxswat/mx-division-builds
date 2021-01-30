@@ -3,8 +3,16 @@
     <template v-if="weapon">
       <span class="weapon-name-stat bold">{{ weapon.name }}</span>
       <div class="toggle-chd-hsd">
-        <Toggle @input="updatedToggle()" v-model="toggleHSD" :label="'Toggle Headshot'"></Toggle>
-        <Toggle @input="updatedToggle()" v-model="toggleCHD" :label="'Toggle Critical'"></Toggle>
+        <Toggle
+          @input="updatedToggle()"
+          v-model="toggleHSD"
+          :label="'Toggle Headshot'"
+        ></Toggle>
+        <Toggle
+          @input="updatedToggle()"
+          v-model="toggleCHD"
+          :label="'Toggle Critical'"
+        ></Toggle>
       </div>
       <span
         >Weapon damage <span> {{ roundValue(weaponDamage) }}</span></span
@@ -22,7 +30,7 @@
         <span>{{ roundValue(dmgToOutOfCoverArmored) }}</span></span
       >
       <span
-        >Max Damage per {{totalMagSize}} rounds
+        >Max Damage per {{ totalMagSize }} rounds
         <span>{{ roundValue(dmgToOutOfCoverArmoredPerMag) }}</span></span
       >
       <span
@@ -47,6 +55,9 @@
       >
       <span
         >Magazine Size <span>{{ roundValue(totalMagSize) }}</span></span
+      >
+      <span
+        >Reload speed <span>{{ roundValue(reloadSpeed / 1000) }}s</span></span
       >
     </template>
     <span class="weapon-name-stat bold" v-if="!weapon">No weapon selected</span>
@@ -196,8 +207,21 @@ export default {
       );
 
       this.totalMagSize = Number(this.weapon[WEAPON_PROP_ENUM.MAG_SIZE]);
-      this.totalMagSize += this.getExtraMagazineSize(this.weapon[WEAPON_PROP_ENUM.MAGAZINE]);
-      this.dmgToOutOfCoverArmoredPerMag = this.dmgToOutOfCoverArmored * this.totalMagSize;
+      this.totalMagSize += this.getExtraMagazineSize(
+        this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
+      );
+      this.dmgToOutOfCoverArmoredPerMag =
+        this.dmgToOutOfCoverArmored * this.totalMagSize;
+
+      const timeToEmptyMagazine = this.totalMagSize / (this.weapon.rpm / 60);
+      const reloadSpeedModifier = this.getReloadSpeedModifier(
+        this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
+      );
+      this.reloadSpeed = this.calcReloadSpeed(
+        this.weapon[WEAPON_PROP_ENUM.RELOAD_SPEED],
+        reloadSpeedModifier
+      );
+      this.reloadSpeed;
     },
     flatWeaponDamage(
       weaponBaseDamage,
@@ -258,11 +282,27 @@ export default {
     roundValue(number) {
       return Number(Number(number).toFixed(2));
     },
+    // TODO: Add Stats Modifiers
     getExtraMagazineSize(magazine) {
       if (!magazine) {
         return 0;
       } else if (magazine.pos == "Extra Rounds") {
         return Number(magazine.valPos);
+      }
+      return 0;
+    },
+    calcReloadSpeed(weapReloadSpeed, reloadSpeedModifier) {
+      let reloadSpeedBase = weapReloadSpeed;
+      return (reloadSpeedBase * (1 + (reloadSpeedModifier / 100)));
+    },
+    // TODO: Add Stats Modifiers
+    getReloadSpeedModifier(magazine) {
+      if (!magazine) {
+        return 0;
+      } else if (magazine.pos == "Reload Speed %") {
+        return Number(magazine.valPos);
+      } else if (magazine.neg == "Reload Speed %") {
+        return Number(magazine.valNeg);
       }
       return 0;
     },

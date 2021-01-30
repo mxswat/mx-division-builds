@@ -245,7 +245,7 @@ export default {
       const TESTER = document.getElementById('chart-test');
 
       Plotly.plot( TESTER, [{
-          name: this.weapon[WEAPON_PROP_ENUM.NAME],
+          name: `${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
           x: timeAxis,
           y: damageAxis }], { 
           margin: { t: 0 } }, {showSendToCloud:true} );

@@ -220,7 +220,8 @@ export default {
 
       let timeToEmptyMagazine = (this.totalMagSize / (this.weapon.rpm / 60)) * 1000;
       const reloadSpeedModifier = this.getReloadSpeedModifier(
-        this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
+        this.weapon[WEAPON_PROP_ENUM.MAGAZINE],
+        stats.Offensive[STATS_ENUM.RELOAD_SPEED_PERC]
       );
       this.reloadSpeed = this.calcReloadSpeed(
         this.weapon[WEAPON_PROP_ENUM.RELOAD_SPEED],
@@ -330,15 +331,16 @@ export default {
       return (reloadSpeedBase * (1 + (reloadSpeedModifier / 100)));
     },
     // TODO: Add Stats Modifiers
-    getReloadSpeedModifier(magazine) {
+    getReloadSpeedModifier(magazine, statsReloadSpeed) {
+      let modifier = statsReloadSpeed || 0;
       if (!magazine) {
-        return 0;
+        // boh
       } else if (magazine.pos == "Reload Speed %") {
-        return Number(magazine.valPos);
+        modifier += Number(magazine.valPos);
       } else if (magazine.neg == "Reload Speed %") {
-        return Number(magazine.valNeg);
+        modifier += Number(magazine.valNeg);
       }
-      return 0;
+      return modifier;
     },
     updatedToggle() {
       this.updateStatsUI(this.weapon, this.stats);

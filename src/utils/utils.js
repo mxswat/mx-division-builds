@@ -127,7 +127,8 @@ const STATS_ENUM = {
     CRITICAL_HIT_CHANCE: "Critical Hit Chance",
     HEADSHOT_DAMAGE: "Headshot Damage",
     WEAPON_DAMAGE: "Weapon Damage",
-    TOTAL_ARMOR: "Total Armor"
+    TOTAL_ARMOR: "Total Armor",
+    RELOAD_SPEED_PERC: "Reload Speed %"
 }
 
 export {

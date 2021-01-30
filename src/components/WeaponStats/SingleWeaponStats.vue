@@ -30,7 +30,7 @@
         <span>{{ roundValue(dmgToOutOfCoverArmored) }}</span></span
       >
       <span
-        >Max Damage per {{ totalMagSize }} rounds
+        >Damage per magazine (AOOC)
         <span>{{ roundValue(dmgToOutOfCoverArmoredPerMag) }}</span></span
       >
       <span
@@ -238,7 +238,7 @@ export default {
       timeAxis[0] = 0;
       damageAxis[0] = 0;
       for (let i = 1; i < dataPoints.length; i++) {
-        let damage = !isReloadingTime ? Number(this.weaponDamage) + damageDelta : damageDelta;
+        let damage = !isReloadingTime ? Number(this.dmgToOutOfCoverArmoredPerMag) + damageDelta : damageDelta;
         let time = isReloadingTime ? timeDelta + this.reloadSpeed : timeDelta + timeToEmptyMagazine;
         timeAxis[i] = time / 1000;
         damageAxis[i] = this.roundValue(damage);

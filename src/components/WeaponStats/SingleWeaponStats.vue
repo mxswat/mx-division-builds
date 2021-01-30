@@ -54,6 +54,9 @@
         >Damage To Armor <span>{{ roundValue(dta) }}%</span></span
       >
       <span
+        >RPM <span>{{ rpm }}</span></span
+      >
+      <span
         >Magazine Size <span>{{ roundValue(totalMagSize) }}</span></span
       >
       <span
@@ -207,6 +210,7 @@ export default {
         this.dtooc
       );
 
+      this.rpm = this.weapon[WEAPON_PROP_ENUM.RPM];
       this.totalMagSize = Number(this.weapon[WEAPON_PROP_ENUM.MAG_SIZE]);
       this.totalMagSize += this.getExtraMagazineSize(
         this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
@@ -214,7 +218,7 @@ export default {
       this.dmgToOutOfCoverArmoredPerMag =
         this.dmgToOutOfCoverArmored * this.totalMagSize;
 
-      const timeToEmptyMagazine = (this.totalMagSize / (this.weapon.rpm / 60)) * 1000;
+      let timeToEmptyMagazine = (this.totalMagSize / (this.weapon.rpm / 60)) * 1000;
       const reloadSpeedModifier = this.getReloadSpeedModifier(
         this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
       );
@@ -248,7 +252,7 @@ export default {
           name: `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
           x: timeAxis,
           y: damageAxis }], { 
-          margin: { t: 0 } }, {showSendToCloud:true} );
+          margin: { t: 25, b: 25, l: 50, r: 50}, plot_bgcolor: 'transparent' , paper_bgcolor: 'transparent', font: {color: 'white'} }, {showSendToCloud:true} );
 
     },
     flatWeaponDamage(

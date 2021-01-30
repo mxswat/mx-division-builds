@@ -30,7 +30,9 @@
           <GeneralStats></GeneralStats>
         </BasicTile>
       </div>
-      <div id="chart-test"></div>
+      <BasicTile classes="dps-chart">
+        <div id="chart-test"></div>
+      </BasicTile>
     </div>
     <v-dialog />
   </div>
@@ -280,7 +282,11 @@ $glow-color: #ff6d10;
   margin-bottom: 8px;
 }
 
+.dps-chart {
+  grid-column: col 1 / span 5;
+}
+
 div#chart-test {
-  grid-column: col 4 / span 2;
+  min-height: 600px;
 }
 </style>

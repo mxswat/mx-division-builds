@@ -70,6 +70,7 @@ import { combineLatest } from "rxjs";
 import statsService from "../../utils/statsService";
 import { WEAPON_PROP_ENUM, STATS_ENUM } from "../../utils/utils";
 import Toggle from "../generic/Toggle";
+import Plotly from 'plotly.js-dist'
 export default {
   name: "SingleWeaponStats",
   props: {
@@ -225,27 +226,30 @@ export default {
       // Data point count
       const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + this.reloadSpeed));
       const dataPoints = new Array(dataPointsCount + 1);
-      dataPoints[0] = {
-          time: 0,
-          damage: 0
-      }
       let isReloadingTime = false
       let damageDelta = 0
       let timeDelta = 0
+      const timeAxis = new Array(dataPointsCount + 1);
+      const damageAxis = new Array(dataPointsCount + 1);
+      timeAxis[0] = 0;
+      damageAxis[0] = 0;
       for (let i = 1; i < dataPoints.length; i++) {
         let damage = !isReloadingTime ? Number(this.weaponDamage) + damageDelta : damageDelta;
         let time = isReloadingTime ? timeDelta + this.reloadSpeed : timeDelta + timeToEmptyMagazine;
-        const dataPoint = {
-          time: time,
-          damage: damage
-        }
+        timeAxis[i] = time;
+        damageAxis[i] = damage;
         timeDelta = time;
         damageDelta = damage;
         isReloadingTime = !isReloadingTime;
-        dataPoints[i] = dataPoint;
       }
+      const TESTER = document.getElementById('chart-test');
 
-      dataPoints;
+      Plotly.plot( TESTER, [{
+          name: this.weapon[WEAPON_PROP_ENUM.NAME],
+          x: timeAxis,
+          y: damageAxis }], { 
+          margin: { t: 0 } }, {showSendToCloud:true} );
+
     },
     flatWeaponDamage(
       weaponBaseDamage,

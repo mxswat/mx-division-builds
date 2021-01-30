@@ -30,6 +30,7 @@
           <GeneralStats></GeneralStats>
         </BasicTile>
       </div>
+      <div id="chart-test"></div>
     </div>
     <v-dialog />
   </div>
@@ -53,7 +54,7 @@ export default {
     BasicTile,
     SpecializationSlot,
     Toolbar,
-    SHDLevels
+    SHDLevels,
   },
   data() {
     return {
@@ -186,7 +187,8 @@ a {
 // Make every tile have a min height
 .tile {
   min-height: 230px;
-  &.specialization, &.SHD-levels {
+  &.specialization,
+  &.SHD-levels {
     min-height: 0px;
   }
 }
@@ -254,7 +256,7 @@ $loader-size: 150px;
   }
 }
 
-$glow-color: #FF6D10;
+$glow-color: #ff6d10;
 
 @-webkit-keyframes glow {
   to {
@@ -276,5 +278,9 @@ $glow-color: #FF6D10;
 
 .SHD-levels {
   margin-bottom: 8px;
+}
+
+div#chart-test {
+  grid-column: col 4 / span 2;
 }
 </style>

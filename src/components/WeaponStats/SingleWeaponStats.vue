@@ -176,7 +176,7 @@ export default {
         genericWeaponDamage
       );
 
-      this.weaponDamage = this.addCHDAndOrHSD(
+      this.weaponDamage = this.addCHDAndOrHSDOnTopOfFlatDamage(
         this.weaponDamage,
         this.chd,
         this.hsd
@@ -213,7 +213,7 @@ export default {
       this.dmgToOutOfCoverArmoredPerMag =
         this.dmgToOutOfCoverArmored * this.totalMagSize;
 
-      const timeToEmptyMagazine = this.totalMagSize / (this.weapon.rpm / 60);
+      const timeToEmptyMagazine = (this.totalMagSize / (this.weapon.rpm / 60)) * 1000;
       const reloadSpeedModifier = this.getReloadSpeedModifier(
         this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
       );
@@ -221,7 +221,31 @@ export default {
         this.weapon[WEAPON_PROP_ENUM.RELOAD_SPEED],
         reloadSpeedModifier
       );
-      this.reloadSpeed;
+
+      // Data point count
+      const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + this.reloadSpeed));
+      const dataPoints = new Array(dataPointsCount + 1);
+      dataPoints[0] = {
+          time: 0,
+          damage: 0
+      }
+      let isReloadingTime = false
+      let damageDelta = 0
+      let timeDelta = 0
+      for (let i = 1; i < dataPoints.length; i++) {
+        let damage = !isReloadingTime ? Number(this.weaponDamage) + damageDelta : damageDelta;
+        let time = isReloadingTime ? timeDelta + this.reloadSpeed : timeDelta + timeToEmptyMagazine;
+        const dataPoint = {
+          time: time,
+          damage: damage
+        }
+        timeDelta = time;
+        damageDelta = damage;
+        isReloadingTime = !isReloadingTime;
+        dataPoints[i] = dataPoint;
+      }
+
+      dataPoints;
     },
     flatWeaponDamage(
       weaponBaseDamage,
@@ -272,7 +296,7 @@ export default {
       });
       return value;
     },
-    addCHDAndOrHSD(flatDamage, chd, hsd) {
+    addCHDAndOrHSDOnTopOfFlatDamage(flatDamage, chd, hsd) {
       let toAdd = 0;
       toAdd += this.toggleHSD ? Number(hsd) : 0;
       toAdd += this.toggleCHD ? Number(chd) : 0;

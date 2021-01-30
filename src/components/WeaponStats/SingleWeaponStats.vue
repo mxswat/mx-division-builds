@@ -236,8 +236,8 @@ export default {
       for (let i = 1; i < dataPoints.length; i++) {
         let damage = !isReloadingTime ? Number(this.weaponDamage) + damageDelta : damageDelta;
         let time = isReloadingTime ? timeDelta + this.reloadSpeed : timeDelta + timeToEmptyMagazine;
-        timeAxis[i] = time;
-        damageAxis[i] = damage;
+        timeAxis[i] = time / 1000;
+        damageAxis[i] = this.roundValue(damage);
         timeDelta = time;
         damageDelta = damage;
         isReloadingTime = !isReloadingTime;
@@ -245,7 +245,7 @@ export default {
       const TESTER = document.getElementById('chart-test');
 
       Plotly.plot( TESTER, [{
-          name: `${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
+          name: `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
           x: timeAxis,
           y: damageAxis }], { 
           margin: { t: 0 } }, {showSendToCloud:true} );

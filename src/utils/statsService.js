@@ -16,7 +16,6 @@ let stats = {
     Offensive: {},
     Defensive: {},
     Utility: {},
-    Brands: {},
     Cores: {
         Offensive: 0,
         Defensive: 0,
@@ -108,17 +107,26 @@ class StatsService {
             // eslint-disable-next-line
             if (stats.brands.hasOwnProperty(brand)) {
                 const brandCount = stats.brands[brand].length;
+                const brandBuffs = []
                 for (let idx = 0; idx < brandCount; idx++) {
                     const found = this.brandSetBonuses.find(
                         b => b.Brand == `${brand}${idx}`
                     )
                     if (found) {
-                        stats.brands[brand][idx] = `${found.stat} ${found.val}`;
+                        brandBuffs.push(`${found.stat} ${found.val}`);
                         const statType = this.statsMapping[found.stat].Type;
                         const prevVal = stats[statTypes[statType]][found.stat] || 0;
                         stats[statTypes[statType]][found.stat] = Number(prevVal) + Number(found.val);
+                        // Horrible, TODO: Change me
+                        if (found.stat1) {
+                            brandBuffs.push(`${found.stat1} ${found.val1}`);
+                            const statType = this.statsMapping[found.stat1].Type;
+                            const prevVal = stats[statTypes[statType]][found.stat1] || 0;
+                            stats[statTypes[statType]][found.stat1] = Number(prevVal) + Number(found.val1);
+                        }
                     }
                 }
+                stats.brands[brand] = brandBuffs;
             }
         }
     }

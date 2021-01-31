@@ -46,16 +46,16 @@ class DPSChartCoreService {
             y: damageAxis
         })
 
-        const TESTER = document.getElementById('chart-test');
+        // const TESTER = document.getElementById('chart-test');
 
-        Plotly.addTraces(TESTER, [
-            {
-                name: traceName,
-                x: timeAxis,
-                y: damageAxis
-            }
-        ]
-        );
+        // Plotly.addTraces(TESTER, [
+        //     {
+        //         name: traceName,
+        //         x: timeAxis,
+        //         y: damageAxis
+        //     }
+        // ]
+        // );
     }
 
     // I know I know it's duplicated code

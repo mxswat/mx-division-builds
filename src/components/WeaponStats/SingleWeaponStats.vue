@@ -356,5 +356,8 @@ span.weapon-name-stat.bold {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  position: sticky;
+  top: 41px;
+  background: #1a1e24;
 }
 </style>

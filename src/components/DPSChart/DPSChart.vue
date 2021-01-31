@@ -17,8 +17,18 @@ export default {
         plot_bgcolor: "#1a1e24",
         paper_bgcolor: "#1a1e24",
         font: { color: "white" },
-        yaxis: { gridcolor: "#ffffff66" },
-        xaxis: { gridcolor: "#ffffff66" },
+        yaxis: {
+          gridcolor: "#ffffff66",
+          title: {
+            text: "Damage",
+          },
+        },
+        xaxis: {
+          gridcolor: "#ffffff66",
+          title: {
+            text: "Seconds - Flat lines is the reload time",
+          },
+        },
         legend: { orientation: "h" },
       },
       { showSendToCloud: true, responsive: true }

@@ -1,5 +1,9 @@
 <template>
-  <div id="chart-test"></div>
+  <div>
+    <span class="section-title"> DPS Visualization </span>
+    <span> READ ME! Click on the trace on the legend to hide or show it! </span>
+    <div id="chart-test"></div>
+  </div>
 </template>
 
 <script>

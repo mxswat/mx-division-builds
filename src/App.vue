@@ -30,7 +30,13 @@
           <GeneralStats></GeneralStats>
         </BasicTile>
       </div>
-      <BasicTile classes="dps-chart no-padding">
+      <BasicTile classes="news">
+        <span class="section-title" style="position: relative"
+          >Patch notes and news</span
+        >
+        <p>Scroll down to try the new DPS Visualization!</p>
+      </BasicTile>
+      <BasicTile classes="dps-chart">
         <DPSChart></DPSChart>
       </BasicTile>
     </div>
@@ -58,7 +64,7 @@ export default {
     SpecializationSlot,
     Toolbar,
     SHDLevels,
-    DPSChart
+    DPSChart,
   },
   data() {
     return {
@@ -101,16 +107,12 @@ body,
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, [col] 1fr);   
+  grid-template-columns: repeat(5, [col] 1fr);
   grid-template-rows: repeat(2, [row] auto);
   gap: 8px;
   margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
-
-.dps-chart {
-  grid-column: col 1 / span 5;
-}
   @include media("<=uibreak") {
     grid-template-columns: repeat(1, [col] 1fr);
     .inventory-gui {
@@ -121,15 +123,22 @@ body,
       grid-column: col 1;
       grid-row: row 2;
     }
+
     .general-stats-col.tile {
       position: relative;
     }
+  
     .weapon-stats-container {
       grid-column: col 1;
       grid-row: row 3;
     }
 
     .dps-chart {
+      grid-column: col 1;
+      grid-row: row 5;
+    }
+
+    .news {
       grid-column: col 1;
       grid-row: row 4;
     }
@@ -155,6 +164,14 @@ body,
 .spec-and-stats {
   grid-column: col 4 / span 2;
   grid-row: row;
+}
+
+.dps-chart {
+  grid-column: col 1 / span 5;
+}
+
+.news {
+  grid-column: col 4 / span 2;
 }
 
 .tile.general-stats-col {
@@ -201,7 +218,8 @@ a {
 .tile {
   min-height: 230px;
   &.specialization,
-  &.SHD-levels {
+  &.SHD-levels,
+  &.news {
     min-height: 0px;
   }
 }

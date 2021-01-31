@@ -35,6 +35,7 @@
           >Patch notes and news</span
         >
         <p>Scroll down to try the new DPS Visualization!</p>
+        <p>It's still in BETA, also, it show the damage to an Armorer and Out of cover target (Veteran/Elite)</p>
       </BasicTile>
       <BasicTile classes="dps-chart">
         <DPSChart></DPSChart>

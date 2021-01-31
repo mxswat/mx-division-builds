@@ -69,11 +69,12 @@
 
 <script>
 import coreService from "../../utils/coreService";
+import DPSChartCore from "../../utils/DPSChartCore";
 import { combineLatest } from "rxjs";
 import statsService from "../../utils/statsService";
 import { WEAPON_PROP_ENUM, STATS_ENUM } from "../../utils/utils";
 import Toggle from "../generic/Toggle";
-import Plotly from 'plotly.js-dist'
+
 export default {
   name: "SingleWeaponStats",
   props: {
@@ -218,7 +219,6 @@ export default {
       this.dmgToOutOfCoverArmoredPerMag =
         this.dmgToOutOfCoverArmored * this.totalMagSize;
 
-      let timeToEmptyMagazine = (this.totalMagSize / (this.weapon.rpm / 60)) * 1000;
       const reloadSpeedModifier = this.getReloadSpeedModifier(
         this.weapon[WEAPON_PROP_ENUM.MAGAZINE],
         stats.Offensive[STATS_ENUM.RELOAD_SPEED_PERC]
@@ -228,34 +228,15 @@ export default {
         reloadSpeedModifier
       );
 
-      // Data point count
-      const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + this.reloadSpeed));
-      const dataPoints = new Array(dataPointsCount + 1);
-      let isReloadingTime = false
-      let damageDelta = 0
-      let timeDelta = 0
-      const timeAxis = new Array(dataPointsCount + 1);
-      const damageAxis = new Array(dataPointsCount + 1);
-      timeAxis[0] = 0;
-      damageAxis[0] = 0;
-      for (let i = 1; i < dataPoints.length; i++) {
-        let damage = !isReloadingTime ? Number(this.dmgToOutOfCoverArmoredPerMag) + damageDelta : damageDelta;
-        let time = isReloadingTime ? timeDelta + this.reloadSpeed : timeDelta + timeToEmptyMagazine;
-        timeAxis[i] = time / 1000;
-        damageAxis[i] = this.roundValue(damage);
-        timeDelta = time;
-        damageDelta = damage;
-        isReloadingTime = !isReloadingTime;
-      }
-      const TESTER = document.getElementById('chart-test');
-
-      Plotly.addTraces(TESTER, [
-          {
-            name: `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${this.toggleHSD && ' HSD' || ''}${this.toggleCHD && ' CHD' || ''}`,
-            x: timeAxis,
-            y: damageAxis 
-          }
-        ]
+      DPSChartCore.addWeaponTrace(
+        `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${
+          (this.toggleHSD && " HSD") || ""
+        }${(this.toggleCHD && " CHD") || ""}`,
+        this.dmgToOutOfCoverArmoredPerMag,
+        this.rpm,
+        this.totalMagSize,
+        this.reloadSpeed,
+        this.name
       );
     },
     flatWeaponDamage(
@@ -328,7 +309,7 @@ export default {
     },
     calcReloadSpeed(weapReloadSpeed, reloadSpeedModifier) {
       let reloadSpeedBase = weapReloadSpeed;
-      return (reloadSpeedBase * (1 + (reloadSpeedModifier / 100)));
+      return reloadSpeedBase / (1 + reloadSpeedModifier / 100);
     },
     // TODO: Add Stats Modifiers
     getReloadSpeedModifier(magazine, statsReloadSpeed) {
@@ -361,6 +342,13 @@ export default {
       float: right;
     }
   }
+}
+
+span.weapon-name-stat.bold {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background: #1a1e24;
 }
 
 .toggle-chd-hsd {

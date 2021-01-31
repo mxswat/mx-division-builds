@@ -6,7 +6,7 @@ function getSHDLevels() {
         ["Headshot Damage", "O", 20, 0], 
         ["Critical Hit Chance", "O", 10, 0], 
         ["Critical Hit Damage", "O", 20, 0], 
-        ["Reload Speed %", "O", 20, 0], 
+        ["Reload Speed %", "O", 10, 0], 
         ["Total Armor", "D", 10, 0], 
         ["Skill Haste", "U", 10, 0], 
         ["Skill Damage", "U", 10, 0], 

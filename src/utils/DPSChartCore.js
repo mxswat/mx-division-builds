@@ -1,7 +1,21 @@
 import Plotly from 'plotly.js-dist'
-import { WEAPON_PROP_ENUM } from "./utils";
+import {
+    Subject,
+    BehaviorSubject,
+    combineLatest,
+    timer
+} from 'rxjs';
+import {
+    debounce
+} from "rxjs/operators";
 
 class DPSChartCoreService {
+
+    _subjects = {
+        Primary: new BehaviorSubject(),
+        Secondary: new BehaviorSubject(),
+        SideArm: new BehaviorSubject(),
+    }
 
     saveCurrentStatsForComparison() { }
 
@@ -26,6 +40,12 @@ class DPSChartCoreService {
             isReloadingTime = !isReloadingTime;
         }
 
+        this._subjects[slot].next({
+            name: traceName,
+            x: timeAxis,
+            y: damageAxis
+        })
+
         const TESTER = document.getElementById('chart-test');
 
         Plotly.addTraces(TESTER, [
@@ -42,6 +62,14 @@ class DPSChartCoreService {
     // I will make it common soon(TM)
     roundValue(number) {
         return Number(Number(number).toFixed(2));
+    }
+
+    subscribeToCombinedWeaponUpdates() {
+        return combineLatest([
+            this._subjects.Primary,
+            this._subjects.Secondary,
+            this._subjects.SideArm
+        ]).pipe(debounce(() => timer(300)));
     }
 }
 

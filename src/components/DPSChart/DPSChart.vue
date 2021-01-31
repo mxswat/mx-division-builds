@@ -4,9 +4,17 @@
 
 <script>
 import Plotly from "plotly.js-dist";
-
+import DPSChartCore from "../../utils/DPSChartCore";
 export default {
   name: "DPSChart",
+  created() {
+    DPSChartCore.subscribeToCombinedWeaponUpdates().subscribe(
+      // ([Primary, Secondary, SideArm]) => {
+      (weapons) => {
+        console.log(weapons)
+      }
+    );
+  },
   mounted() {
     const divTarget = document.getElementById("chart-test");
     Plotly.newPlot(

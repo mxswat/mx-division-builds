@@ -349,6 +349,7 @@ span.weapon-name-stat.bold {
   position: sticky;
   top: 0;
   background: #1a1e24;
+  z-index: 1;
 }
 
 .toggle-chd-hsd {

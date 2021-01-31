@@ -123,6 +123,7 @@ export default {
     min-width: 180px;
     margin-right: 8px;
     border-bottom: 1px solid white;
+    padding: 4px 0px;
   }
 
   span {

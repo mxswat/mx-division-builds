@@ -10,16 +10,18 @@ export default {
   mounted() {
     const divTarget = document.getElementById("chart-test");
     Plotly.newPlot(
-      divTarget, [],
+      divTarget,
+      [],
       {
         margin: { t: 25, b: 25, l: 50, r: 50 },
         plot_bgcolor: "#1a1e24",
         paper_bgcolor: "#1a1e24",
         font: { color: "white" },
-        yaxis : {gridcolor: '#ffffff66'},
-        xaxis : {gridcolor: '#ffffff66'}
+        yaxis: { gridcolor: "#ffffff66" },
+        xaxis: { gridcolor: "#ffffff66" },
+        legend: { orientation: "h" },
       },
-      { showSendToCloud: true }
+      { showSendToCloud: true, responsive: true }
     );
   },
 };

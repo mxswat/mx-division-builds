@@ -30,7 +30,7 @@
           <GeneralStats></GeneralStats>
         </BasicTile>
       </div>
-      <BasicTile classes="dps-chart">
+      <BasicTile classes="dps-chart no-padding">
         <DPSChart></DPSChart>
       </BasicTile>
     </div>
@@ -101,12 +101,16 @@ body,
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(5, [col] 1fr);
+  grid-template-columns: repeat(5, [col] 1fr);   
   grid-template-rows: repeat(2, [row] auto);
   gap: 8px;
   margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
+
+.dps-chart {
+  grid-column: col 1 / span 5;
+}
   @include media("<=uibreak") {
     grid-template-columns: repeat(1, [col] 1fr);
     .inventory-gui {
@@ -123,6 +127,11 @@ body,
     .weapon-stats-container {
       grid-column: col 1;
       grid-row: row 3;
+    }
+
+    .dps-chart {
+      grid-column: col 1;
+      grid-row: row 4;
     }
   }
 }
@@ -284,7 +293,7 @@ $glow-color: #ff6d10;
   margin-bottom: 8px;
 }
 
-.dps-chart {
-  grid-column: col 1 / span 5;
-}
+// .tile.no-padding {
+//   padding: 0;
+// }
 </style>

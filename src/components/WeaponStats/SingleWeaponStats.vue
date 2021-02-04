@@ -296,7 +296,7 @@ export default {
       return (flatDamage * (1 + toAdd / 100)).toFixed(0);
     },
     roundValue(number) {
-      return Number(Number(number).toFixed(2));
+      return Number(Number(number).toFixed(2)).toLocaleString();
     },
     // TODO: Add Stats Modifiers
     getExtraMagazineSize(magazine) {

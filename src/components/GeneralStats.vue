@@ -97,7 +97,7 @@ export default {
           ? stats.Cores.Offensive.reduce((a, b) => a + b)
           : 0;
       this.allWeaponDamage += stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0;
-      const allArmorCores = stats.Cores.Defensive.reduce((a, b) => a + b);
+      const allArmorCores = stats.Cores.Defensive.length > 0 ? stats.Cores.Defensive.reduce((a, b) => a + b) : 0;
       //660014 is the base Armor Value for a LVL40 agent
       this.armorValue = (660014 + allArmorCores) * (1 + (stats.Defensive[STATS_ENUM.TOTAL_ARMOR] / 100))
       this.armorValue = this.roundValue(this.armorValue, 0)

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="section-title"> Damage over Time - Visualization </span>
+    <span class="section-title"> Damage over Time - Visualisation </span>
     <div class="toolbar">
       <Toggle
         @input="updatedColorBlind()"

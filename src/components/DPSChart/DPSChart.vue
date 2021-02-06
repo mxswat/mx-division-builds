@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="section-title"> DPS Visualization </span>
+    <span class="section-title"> Damage over Time - Visualization </span>
     <div class="toggles">
       <Toggle
         style="max-width: 126px"
@@ -79,6 +79,9 @@ export default {
     updatedToggle() {
       this.updateChart(this.cacheWeapons);
     },
+    // updateHSDprobability() {
+    //   DPSChartCore.getWeaponStatsPerSlot
+    // }
   },
 };
 </script>

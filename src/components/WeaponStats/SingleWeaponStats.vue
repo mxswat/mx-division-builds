@@ -34,10 +34,6 @@
         <span>{{ roundValue(dmgToOutOfCoverArmoredPerMag) }}</span></span
       >
       <span
-        >Damage (additive) increase by
-        <span>{{ roundValue(damageIncrease) }}%</span></span
-      >
-      <span
         >Headshot Damage <span>{{ roundValue(hsd) }}%</span></span
       >
       <span
@@ -62,6 +58,10 @@
       <span
         >Reload speed <span>{{ roundValue(reloadSpeed / 1000) }}s</span></span
       >
+      <!-- <span
+        >Damage (additive) increase by
+        <span>{{ roundValue(damageIncrease) }}%</span></span
+      > -->
     </template>
     <span class="weapon-name-stat bold" v-if="!weaponName"
       >No weapon selected</span
@@ -84,6 +84,7 @@ export default {
   },
   data() {
     return {
+      stats: null,
       weaponName: null,
       chc: null,
       chd: null,
@@ -111,6 +112,7 @@ export default {
   },
   methods: {
     updateStatsUI(stats) {
+      this.stats = stats;
       const props = [
         "weaponName",
         "damageIncrease",
@@ -131,23 +133,12 @@ export default {
         const prop = props[i];
         this[prop] = stats[prop];
       }
-
-      // DPSChartCore.addWeaponTrace(
-      //   `${this.name}: ${this.weaponName}${(this.toggleHSD && " HSD") || ""}${
-      //     (this.toggleCHD && " CHD") || ""
-      //   }`,
-      //   this.dmgToOutOfCoverArmoredPerMag,
-      //   this.rpm,
-      //   this.totalMagSize,
-      //   this.reloadSpeed,
-      //   this.name
-      // );
     },
     roundValue(number) {
       return Number(Number(number).toFixed(2)).toLocaleString();
     },
     updatedToggle() {
-      // this.updateStatsUI(this.weapon, this.stats);
+      this.updateStatsUI(this.stats);
     },
   },
 };

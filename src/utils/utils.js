@@ -132,6 +132,15 @@ const STATS_ENUM = {
     MAGAZINE_SIZE_PERC: "Magazine Size %"
 }
 
+const UI_WEAPON_SLOT_ENUM = {
+    'Primary': 0,
+    'Secondary': 1,
+    'SideArm': 2,
+    0: 'Primary',
+    1: 'Secondary',
+    2: 'SideArm',
+}
+
 export {
     getByString,
     zipObject,
@@ -141,5 +150,6 @@ export {
     qualityToCss,
     getUniqueObject,
     WEAPON_PROP_ENUM,
-    STATS_ENUM
+    STATS_ENUM,
+    UI_WEAPON_SLOT_ENUM
 };

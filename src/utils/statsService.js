@@ -11,7 +11,7 @@ import {
     debounce
 } from "rxjs/operators";
 
-import { WEAPON_PROP_ENUM, STATS_ENUM } from "./utils";
+import { WEAPON_PROP_ENUM, STATS_ENUM, UI_WEAPON_SLOT_ENUM } from "./utils";
 import DPSChartCore from "./DPSChartCore";
 
 const stats$ = new BehaviorSubject();
@@ -52,6 +52,8 @@ class StatsService {
     statsMapping = null;
     SHDLevels = null
 
+    dataCache = null;
+
     resetStats() {
         stats = new Stats();
     }
@@ -66,6 +68,7 @@ class StatsService {
 
     async updateStats(data) {
         this.resetStats()
+        this.dataCache = data;
         this.brandSetBonuses = this.brandSetBonuses || await gearData.BrandSetBonuses;
         if (!this.statsMapping) {
             const statsMapping = await gearData.StatsMapping
@@ -81,15 +84,16 @@ class StatsService {
 
         this.handleBrandEdgeCase(stats.brands);
 
-        // calc weapon damage AFTER all the gear stats
+        // ALWAYS calc weapon damage AFTER all the gear stats
 
         // Not my best code, but it is good enough
-        for (const categoryKey in MapWeaponCategoryToIdx) {
-            if (Object.hasOwnProperty.call(MapWeaponCategoryToIdx, categoryKey)) {
-                const idx = MapWeaponCategoryToIdx[categoryKey];
-                stats.Weapons[categoryKey] = this.setWeaponStats(data.weapons[idx], categoryKey);
-                if (stats.Weapons[categoryKey].weaponName)
-                    DPSChartCore.addWeaponTrace(categoryKey, stats.Weapons[categoryKey]);
+        for (const slotKey in UI_WEAPON_SLOT_ENUM) {
+            // isNaN(Number(slotKey)) is to ignore the number side of the Enum
+            if (Object.hasOwnProperty.call(UI_WEAPON_SLOT_ENUM, slotKey) && isNaN(Number(slotKey))) {
+                const idx = UI_WEAPON_SLOT_ENUM[slotKey];
+                stats.Weapons[slotKey] = this.getWeaponStats(data.weapons[idx], slotKey);
+                if (stats.Weapons[slotKey].weaponName)
+                    DPSChartCore.addWeaponTrace(slotKey, stats.Weapons[slotKey]);
             }
         }
 
@@ -159,7 +163,11 @@ class StatsService {
         }
     }
 
-    setWeaponStats(weapon, category) {
+    getWeaponStatsPerSlot(slot) {
+        return this.getWeaponStats(this.data.weapons[UI_WEAPON_SLOT_ENUM[slot]], slot);
+    }
+
+    getWeaponStats(weapon, slot) {
         const weaponStats = {
             weaponName: null,
             damageIncrease: null,
@@ -303,7 +311,7 @@ class StatsService {
             reloadSpeedModifier
         );
 
-        console.log(category, weaponStats);
+        console.log(slot, weaponStats);
 
         return weaponStats;
     }
@@ -454,12 +462,6 @@ class StatsService {
         }
         return modifier;
     }
-}
-
-const MapWeaponCategoryToIdx = {
-    Primary: 0,
-    Secondary: 1,
-    SideArm: 2,
 }
 
 

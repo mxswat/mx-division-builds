@@ -1,7 +1,7 @@
 <template>
   <div class="weapon-stat">
-    <template v-if="weapon">
-      <span class="weapon-name-stat bold">{{ weapon.name }}</span>
+    <template v-if="weaponName">
+      <span class="weapon-name-stat bold">{{ weaponName }}</span>
       <div class="toggle-chd-hsd">
         <Toggle
           @input="updatedToggle()"
@@ -63,16 +63,15 @@
         >Reload speed <span>{{ roundValue(reloadSpeed / 1000) }}s</span></span
       >
     </template>
-    <span class="weapon-name-stat bold" v-if="!weapon">No weapon selected</span>
+    <span class="weapon-name-stat bold" v-if="!weaponName"
+      >No weapon selected</span
+    >
   </div>
 </template>
 
 <script>
-import coreService from "../../utils/coreService";
 import DPSChartCore from "../../utils/DPSChartCore";
-import { combineLatest } from "rxjs";
 import statsService from "../../utils/statsService";
-import { WEAPON_PROP_ENUM, STATS_ENUM } from "../../utils/utils";
 import Toggle from "../generic/Toggle";
 
 export default {
@@ -85,8 +84,7 @@ export default {
   },
   data() {
     return {
-      // this.stats: null
-      weapon: null,
+      weaponName: null,
       chc: null,
       chd: null,
       weaponDamage: null,
@@ -104,227 +102,52 @@ export default {
     };
   },
   created() {
-    const _vm = this;
-    combineLatest([
-      coreService.subscribeSlotData(this.name),
-      statsService.getStats$(),
-    ]).subscribe(([weapon, stats]) => {
-      _vm.updateStatsUI(weapon, stats);
+    statsService.getStats$().subscribe((stats) => {
+      if (!stats) {
+        return;
+      }
+      this.updateStatsUI(stats.Weapons[this.name]);
     });
   },
   methods: {
-    updateStatsUI(weapon, stats) {
-      if (!weapon || !stats) {
-        return;
+    updateStatsUI(stats) {
+      const props = [
+        "weaponName",
+        "damageIncrease",
+        "hsd",
+        "chd",
+        "chc",
+        "weaponDamage",
+        "dmgToArmored",
+        "dmgToOutOfCover",
+        "dmgToOutOfCoverArmored",
+        "rpm",
+        "totalMagSize",
+        "dmgToOutOfCoverArmoredPerMag",
+        "reloadSpeed",
+      ];
+
+      for (let i = 0; i < props.length; i++) {
+        const prop = props[i];
+        this[prop] = stats[prop];
       }
-      this.stats = stats;
-      this.weapon = weapon;
-      const weaponCore1 = this.weapon[WEAPON_PROP_ENUM.CORE_1];
-      const weaponCore2 = this.weapon[WEAPON_PROP_ENUM.CORE_2];
-      const weaponAttribute1 = this.weapon["attribute 1"];
-      const weaponCoreType = weaponCore1.stat;
-      const weaponBaseDamage = Number(
-        this.weapon[WEAPON_PROP_ENUM.BASE_DAMAGE]
-      );
-      const AWD =
-        this.stats.Cores.Offensive.length > 0
-          ? this.stats.Cores.Offensive.reduce((a, b) => a + b)
-          : 0; // All weapon damages from cores
-      const weaponSpecificDamage =
-        (this.stats.Offensive[weaponCoreType] || 0) + // Damage from the brands and SHD(?)(To test)
-        (weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
-      const genericWeaponDamage =
-        this.stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
 
-      this.damageIncrease = AWD + weaponSpecificDamage + genericWeaponDamage;
-
-      this.hsd =
-        Number(this.weapon.hsd) +
-        this.getStatValueFromGunMods(this.weapon, STATS_ENUM.HEADSHOT_DAMAGE);
-      this.hsd += this.getStatValueFromGunAndGear(
-        weaponCore2,
-        weaponAttribute1,
-        this.stats.Offensive,
-        STATS_ENUM.HEADSHOT_DAMAGE
-      );
-
-      // 25 is the innate CHD of every gun
-      this.chd =
-        25 +
-        this.getStatValueFromGunMods(
-          this.weapon,
-          STATS_ENUM.CRITICAL_HIT_DAMAGE
-        );
-      this.chd += this.getStatValueFromGunAndGear(
-        weaponCore2,
-        weaponAttribute1,
-        this.stats.Offensive,
-        STATS_ENUM.CRITICAL_HIT_DAMAGE
-      );
-      this.chc =
-        0 +
-        this.getStatValueFromGunMods(
-          this.weapon,
-          STATS_ENUM.CRITICAL_HIT_CHANCE
-        );
-      this.chc += this.getStatValueFromGunAndGear(
-        weaponCore2,
-        weaponAttribute1,
-        this.stats.Offensive,
-        STATS_ENUM.CRITICAL_HIT_CHANCE
-      );
-
-      this.weaponDamage = this.flatWeaponDamage(
-        weaponBaseDamage,
-        AWD,
-        weaponSpecificDamage,
-        genericWeaponDamage
-      );
-
-      this.weaponDamage = this.addCHDAndOrHSDOnTopOfFlatDamage(
-        this.weaponDamage,
-        this.chd,
-        this.hsd
-      );
-
-      this.dta = this.getStatValueFromGunAndGear(
-        weaponCore2,
-        weaponAttribute1,
-        this.stats.Offensive,
-        STATS_ENUM.DAMAGE_TO_ARMOR
-      );
-      this.dmgToArmored = this.calcDmgToArmored(this.weaponDamage, this.dta);
-
-      this.dtooc = this.getStatValueFromGunAndGear(
-        weaponCore2,
-        weaponAttribute1,
-        this.stats.Offensive,
-        STATS_ENUM.DAMAGE_TO_TOC
-      );
-      this.dmgToOutOfCover = this.calcDmgToOutOfCover(
-        this.weaponDamage,
-        this.dtooc
-      );
-
-      this.dmgToOutOfCoverArmored = this.calcDmgToOutOfCover(
-        this.dmgToArmored,
-        this.dtooc
-      );
-
-      this.rpm = this.weapon[WEAPON_PROP_ENUM.RPM];
-      this.totalMagSize = Number(this.weapon[WEAPON_PROP_ENUM.MAG_SIZE]);
-      this.totalMagSize += this.getExtraMagazineSize(
-        this.weapon[WEAPON_PROP_ENUM.MAGAZINE]
-      );
-      this.dmgToOutOfCoverArmoredPerMag =
-        this.dmgToOutOfCoverArmored * this.totalMagSize;
-
-      const reloadSpeedModifier = this.getReloadSpeedModifier(
-        this.weapon[WEAPON_PROP_ENUM.MAGAZINE],
-        stats.Offensive[STATS_ENUM.RELOAD_SPEED_PERC]
-      );
-      this.reloadSpeed = this.calcReloadSpeed(
-        this.weapon[WEAPON_PROP_ENUM.RELOAD_SPEED],
-        reloadSpeedModifier
-      );
-
-      DPSChartCore.addWeaponTrace(
-        `${this.name}: ${this.weapon[WEAPON_PROP_ENUM.NAME]}${
-          (this.toggleHSD && " HSD") || ""
-        }${(this.toggleCHD && " CHD") || ""}`,
-        this.dmgToOutOfCoverArmoredPerMag,
-        this.rpm,
-        this.totalMagSize,
-        this.reloadSpeed,
-        this.name
-      );
-    },
-    flatWeaponDamage(
-      weaponBaseDamage,
-      AWD,
-      weaponSpecificDamage,
-      genericWeaponDamage
-    ) {
-      return (
-        weaponBaseDamage *
-        (1 + (AWD + weaponSpecificDamage + genericWeaponDamage) / 100)
-      ).toFixed(0);
-    },
-    calcDmgToArmored(flatDamage, DTA) {
-      return (flatDamage * (1 + DTA / 100)).toFixed(0);
-    },
-    calcDmgToOutOfCover(flatDamage, DTOOC) {
-      return (flatDamage * (1 + DTOOC / 100)).toFixed(0);
-    },
-    getStatValueFromGunAndGear(
-      weaponCore2,
-      weaponAttribute1,
-      statsObj,
-      statName
-    ) {
-      let value = statsObj[statName] || 0;
-      if (weaponCore2 && weaponCore2.stat === statName) {
-        value += weaponCore2.StatValue || Number(weaponCore2.max);
-      }
-      if (weaponAttribute1 && weaponAttribute1.Stat === statName) {
-        value += weaponAttribute1.StatValue || Number(weaponAttribute1.Max);
-      }
-      return value;
-    },
-    getStatValueFromGunMods(weapon, statName) {
-      let value = 0;
-      const modSlots = ["optic", "under barrel", "magazine", "muzzle"];
-      modSlots.forEach((mod) => {
-        const modEl = weapon[mod];
-        if (!modEl) {
-          return;
-        }
-        if (modEl.neg === statName) {
-          value += Number(modEl.valNeg);
-        }
-        if (modEl.pos === statName) {
-          value += Number(modEl.valPos);
-        }
-      });
-      return value;
-    },
-    addCHDAndOrHSDOnTopOfFlatDamage(flatDamage, chd, hsd) {
-      let toAdd = 0;
-      toAdd += this.toggleHSD ? Number(hsd) : 0;
-      toAdd += this.toggleCHD ? Number(chd) : 0;
-      // (1 + CHC * CHD + HsD * headshot chance)
-      return (flatDamage * (1 + toAdd / 100)).toFixed(0);
+      // DPSChartCore.addWeaponTrace(
+      //   `${this.name}: ${this.weaponName}${(this.toggleHSD && " HSD") || ""}${
+      //     (this.toggleCHD && " CHD") || ""
+      //   }`,
+      //   this.dmgToOutOfCoverArmoredPerMag,
+      //   this.rpm,
+      //   this.totalMagSize,
+      //   this.reloadSpeed,
+      //   this.name
+      // );
     },
     roundValue(number) {
       return Number(Number(number).toFixed(2)).toLocaleString();
     },
-    // TODO: Add Stats Modifiers
-    getExtraMagazineSize(magazine) {
-      if (!magazine) {
-        return 0;
-      } else if (magazine.pos == "Extra Rounds") {
-        return Number(magazine.valPos);
-      }
-      return 0;
-    },
-    calcReloadSpeed(weapReloadSpeed, reloadSpeedModifier) {
-      let reloadSpeedBase = weapReloadSpeed;
-      return reloadSpeedBase / (1 + reloadSpeedModifier / 100);
-    },
-    // TODO: Add Stats Modifiers
-    getReloadSpeedModifier(magazine, statsReloadSpeed) {
-      let modifier = statsReloadSpeed || 0;
-      if (!magazine) {
-        // boh
-      } else if (magazine.pos == "Reload Speed %") {
-        modifier += Number(magazine.valPos);
-      } else if (magazine.neg == "Reload Speed %") {
-        modifier += Number(magazine.valNeg);
-      }
-      return modifier;
-    },
     updatedToggle() {
-      this.updateStatsUI(this.weapon, this.stats);
+      // this.updateStatsUI(this.weapon, this.stats);
     },
   },
 };

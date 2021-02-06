@@ -144,8 +144,8 @@ export default {
     updatedToggle() {
       const newStats = statsService.getWeaponStatsPerSlot(
         this.name,
-        this.toggleCHD,
-        this.toggleHSD
+        this.toggleCHD ? 100 : 0,
+        this.toggleHSD ? 100 : 0
       );
       this.updateStatsUI(newStats);
     },

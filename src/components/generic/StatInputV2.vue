@@ -30,9 +30,17 @@ export default {
       default: false,
     },
   },
+  data() {
+    return {
+      debouceInput: null,
+    };
+  },
   methods: {
     updateValue: function (value) {
-      this.$emit("input", Number(value));
+      clearTimeout(this.debouceInput)
+      this.debouceInput = setTimeout(() => {
+        this.$emit("input", Number(value));
+      }, 300);
     },
   },
 };

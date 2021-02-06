@@ -9,17 +9,17 @@
       ></Toggle>
       <StatInputV2
         :label="'Critical chance'"
-        v-model="criticalProbabaility"
+        v-model="criticalChance"
         v-bind:max="100"
         :showMaxVal="true"
-        @input="updatedColorBlind()"
+        @input="applyCHCandHSDtoTheCoreTraces()"
       ></StatInputV2>
       <StatInputV2
-        :label="'Headshot Probability'"
-        v-model="headshotsProbability"
+        :label="'Headshot Chance'"
+        v-model="headshotChance"
         v-bind:max="100"
         :showMaxVal="true"
-        @input="updatedColorBlind()"
+        @input="applyCHCandHSDtoTheCoreTraces()"
       ></StatInputV2>
       <div class="spacer"></div>
     </div>
@@ -64,8 +64,8 @@ export default {
       isColorblind: false,
       cacheCoreTraces: [],
       cacheExtraTraces: [],
-      criticalProbabaility: 0,
-      headshotsProbability: 0,
+      criticalChance: 0,
+      headshotChance: 0,
     };
   },
   created() {
@@ -97,6 +97,12 @@ export default {
     updatedColorBlind() {
       this.updateChart(this.cacheCoreTraces);
     },
+    applyCHCandHSDtoTheCoreTraces() {
+      DPSChartCore.applyCHCandHSDtoTheCoreTraces(
+        this.criticalChance,
+        this.headshotChance
+      )
+    }
   },
 };
 </script>
@@ -109,9 +115,6 @@ div#chart-test {
 .toolbar {
   display: flex;
   flex-wrap: wrap;
-  .stat-input-v2 {
-    // max-width: 200px;
-  }
 }
 
 .spacer {

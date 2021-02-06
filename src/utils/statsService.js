@@ -163,11 +163,17 @@ class StatsService {
         }
     }
 
-    getWeaponStatsPerSlot(slot, crit, headshot) {
-        return this.getWeaponStats(this.dataCache.weapons[UI_WEAPON_SLOT_ENUM[slot]], slot, crit, headshot);
+    /**
+     * 
+     * @param {Object} slot 
+     * @param {number} crit 
+     * @param {number} headshot 
+     */
+    getWeaponStatsPerSlot(slot, manualCriticalChance, headshotChance) {
+        return this.getWeaponStats(this.dataCache.weapons[UI_WEAPON_SLOT_ENUM[slot]], slot, manualCriticalChance, headshotChance);
     }
 
-    getWeaponStats(weapon, slot, crit = false, headshot = false) {
+    getWeaponStats(weapon, slot, manualCriticalChance = 100, headshotChance = 100) {
         const weaponStats = {
             weaponName: null,
             damageIncrease: null,
@@ -255,8 +261,8 @@ class StatsService {
             weaponStats.weaponDamage,
             weaponStats.chd,
             weaponStats.hsd,
-            headshot,
-            crit
+            headshotChance,
+            manualCriticalChance
         );
 
         weaponStats.dta = this.getStatValueFromGunAndGear(
@@ -428,10 +434,13 @@ class StatsService {
         });
         return value;
     }
-    addCHDAndOrHSDOnTopOfFlatDamage(flatDamage, chd, hsd, headshot = false, crit = false) {
+
+    addCHDAndOrHSDOnTopOfFlatDamage(flatDamage, chd, hsd, headshotChance = 0, critChance = 0) {
         let toAdd = 0;
-        toAdd += headshot ? Number(hsd) : 0;
-        toAdd += crit ? Number(chd) : 0;
+        hsd = Number(hsd);
+        chd = Number(chd);
+        toAdd += headshotChance > 0 ? hsd * (headshotChance / 100) : 0;
+        toAdd += critChance > 0 ? chd * (critChance / 100) : 0;
         // (1 + CHC * CHD + HsD * headshot chance)
         return (flatDamage * (1 + toAdd / 100)).toFixed(0);
     }

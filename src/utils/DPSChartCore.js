@@ -1,6 +1,4 @@
-import Plotly from 'plotly.js-dist'
 import {
-    Subject,
     BehaviorSubject,
     combineLatest,
     timer
@@ -8,7 +6,7 @@ import {
 import {
     debounce
 } from "rxjs/operators";
-
+import StatsService from "./statsService";
 class DPSChartCoreService {
 
     _subjects = {
@@ -19,7 +17,7 @@ class DPSChartCoreService {
 
     saveCurrentStatsForComparison() { }
 
-    addCoreWeaponTrace(category, weaponStats) {
+    addCoreWeaponTrace(slot, weaponStats) {
         let timeToEmptyMagazine = (weaponStats.totalMagSize / (weaponStats.rpm / 60)) * 1000;
         const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + weaponStats.reloadSpeed));
         const dataPointsToRenderCount = dataPointsCount + 1;
@@ -39,8 +37,8 @@ class DPSChartCoreService {
             damageDelta = damage;
         }
 
-        this._subjects[category].next({
-            name: `${category}: ${weaponStats.weaponName}`,
+        this._subjects[slot].next({
+            name: `${slot}: ${weaponStats.weaponName}`,
             x: timeAxis,
             y: damageAxis
         })
@@ -58,6 +56,13 @@ class DPSChartCoreService {
             this._subjects.Secondary,
             this._subjects.SideArm
         ]).pipe(debounce(() => timer(300)));
+    }
+
+    applyCHCandHSDtoTheCoreTraces(chc, hsd) {
+        ['Primary', 'Secondary', 'SideArm'].forEach((slot) => {
+            const weaponStat = StatsService.getWeaponStatsPerSlot(slot, chc, hsd);
+            this.addCoreWeaponTrace(slot, weaponStat);
+        })
     }
 }
 

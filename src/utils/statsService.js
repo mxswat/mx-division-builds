@@ -88,7 +88,8 @@ class StatsService {
             if (Object.hasOwnProperty.call(MapWeaponCategoryToIdx, categoryKey)) {
                 const idx = MapWeaponCategoryToIdx[categoryKey];
                 stats.Weapons[categoryKey] = this.setWeaponStats(data.weapons[idx], categoryKey);
-                DPSChartCore.addWeaponTrace(categoryKey, stats.Weapons[categoryKey]);
+                if (stats.Weapons[categoryKey].weaponName)
+                    DPSChartCore.addWeaponTrace(categoryKey, stats.Weapons[categoryKey]);
             }
         }
 

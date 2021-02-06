@@ -33,7 +33,7 @@ class Stats {
         SideArm: null,
     }
     constructor() {
-        
+
     }
 }
 
@@ -84,10 +84,13 @@ class StatsService {
         // calc weapon damage AFTER all the gear stats
 
         // Not my best code, but it is good enough
-        this.setWeaponStats(data.weapons[MapWeaponCategoryToIdx.Primary], 'Primary');
-        this.setWeaponStats(data.weapons[MapWeaponCategoryToIdx.Secondary], 'Secondary');
-        this.setWeaponStats(data.weapons[MapWeaponCategoryToIdx.SideArm], 'SideArm');
-
+        for (const categoryKey in MapWeaponCategoryToIdx) {
+            if (Object.hasOwnProperty.call(MapWeaponCategoryToIdx, categoryKey)) {
+                const idx = MapWeaponCategoryToIdx[categoryKey];
+                stats.Weapons[categoryKey] = this.setWeaponStats(data.weapons[idx], categoryKey);
+                DPSChartCore.addWeaponTrace(categoryKey, stats.Weapons[categoryKey]);
+            }
+        }
 
         stats$.next(stats);
     }
@@ -155,7 +158,7 @@ class StatsService {
         }
     }
 
-    setWeaponStats(weapon, category) {        
+    setWeaponStats(weapon, category) {
         const weaponStats = {
             weaponName: null,
             damageIncrease: null,
@@ -173,10 +176,9 @@ class StatsService {
         };
 
         if (!weapon) {
-            stats.Weapons[category] = weaponStats;
-            return;
+            return weaponStats;
         }
-        
+
         weaponStats.weaponName = weapon[WEAPON_PROP_ENUM.NAME];
         const weaponCore1 = weapon[WEAPON_PROP_ENUM.CORE_1];
         const weaponCore2 = weapon[WEAPON_PROP_ENUM.CORE_2];
@@ -289,18 +291,7 @@ class StatsService {
 
         console.log(category, weaponStats);
 
-        stats.Weapons[category] = weaponStats;
-
-        DPSChartCore.addWeaponTrace(
-            `${category}: ${weaponStats.weaponName}${(this.toggleHSD && " HSD") || ""}${
-              (this.toggleCHD && " CHD") || ""
-            }`,
-            weaponStats.dmgToOutOfCoverArmoredPerMag,
-            weaponStats.rpm,
-            weaponStats.totalMagSize,
-            weaponStats.reloadSpeed,
-            category
-          );
+        return weaponStats;
     }
 
     edgeCaseGear = ["Acosta's Go-Bag"]

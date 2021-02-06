@@ -93,7 +93,7 @@ class StatsService {
                 const idx = UI_WEAPON_SLOT_ENUM[slotKey];
                 stats.Weapons[slotKey] = this.getWeaponStats(data.weapons[idx], slotKey);
                 if (stats.Weapons[slotKey].weaponName)
-                    DPSChartCore.addWeaponTrace(slotKey, stats.Weapons[slotKey]);
+                    DPSChartCore.addCoreWeaponTrace(slotKey, stats.Weapons[slotKey]);
             }
         }
 
@@ -163,11 +163,11 @@ class StatsService {
         }
     }
 
-    getWeaponStatsPerSlot(slot) {
-        return this.getWeaponStats(this.data.weapons[UI_WEAPON_SLOT_ENUM[slot]], slot);
+    getWeaponStatsPerSlot(slot, crit, headshot) {
+        return this.getWeaponStats(this.dataCache.weapons[UI_WEAPON_SLOT_ENUM[slot]], slot, crit, headshot);
     }
 
-    getWeaponStats(weapon, slot) {
+    getWeaponStats(weapon, slot, crit = false, headshot = false) {
         const weaponStats = {
             weaponName: null,
             damageIncrease: null,
@@ -254,7 +254,9 @@ class StatsService {
         weaponStats.weaponDamage = this.addCHDAndOrHSDOnTopOfFlatDamage(
             weaponStats.weaponDamage,
             weaponStats.chd,
-            weaponStats.hsd
+            weaponStats.hsd,
+            headshot,
+            crit
         );
 
         weaponStats.dta = this.getStatValueFromGunAndGear(
@@ -310,8 +312,6 @@ class StatsService {
             weapon[WEAPON_PROP_ENUM.RELOAD_SPEED],
             reloadSpeedModifier
         );
-
-        console.log(slot, weaponStats);
 
         return weaponStats;
     }
@@ -428,10 +428,10 @@ class StatsService {
         });
         return value;
     }
-    addCHDAndOrHSDOnTopOfFlatDamage(flatDamage, chd, hsd) {
+    addCHDAndOrHSDOnTopOfFlatDamage(flatDamage, chd, hsd, headshot = false, crit = false) {
         let toAdd = 0;
-        toAdd += this.toggleHSD ? Number(hsd) : 0;
-        toAdd += this.toggleCHD ? Number(chd) : 0;
+        toAdd += headshot ? Number(hsd) : 0;
+        toAdd += crit ? Number(chd) : 0;
         // (1 + CHC * CHD + HsD * headshot chance)
         return (flatDamage * (1 + toAdd / 100)).toFixed(0);
     }

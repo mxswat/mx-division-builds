@@ -4,7 +4,7 @@
     <div class="toggles">
       <Toggle
         style="max-width: 126px"
-        @input="updatedToggle()"
+        @input="updatedColorBlind()"
         v-model="isColorblind"
         :label="'Color blind?'"
       ></Toggle>
@@ -47,12 +47,13 @@ export default {
     return {
       target: null,
       isColorblind: false,
-      cacheWeapons: [],
+      cacheCoreTraces: [],
+      cacheExtraTraces: [],
     };
   },
   created() {
-    DPSChartCore.subscribeToCombinedWeaponUpdates().subscribe((weapons) => {
-      this.cacheWeapons = weapons;
+    DPSChartCore.subscribeToCoreWeaponsTrace().subscribe((weapons) => {
+      this.cacheCoreTraces = weapons;
       this.updateChart(weapons);
     });
   },
@@ -76,12 +77,9 @@ export default {
 
       Plotly.react(this.target, weaponTraces, DEFAULT_PLOT, DEFAULT_PLOT_2);
     },
-    updatedToggle() {
-      this.updateChart(this.cacheWeapons);
+    updatedColorBlind() {
+      this.updateChart(this.cacheCoreTraces);
     },
-    // updateHSDprobability() {
-    //   DPSChartCore.getWeaponStatsPerSlot
-    // }
   },
 };
 </script>

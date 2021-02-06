@@ -19,7 +19,7 @@ class DPSChartCoreService {
 
     saveCurrentStatsForComparison() { }
 
-    addWeaponTrace(category, weaponStats) {
+    addCoreWeaponTrace(category, weaponStats) {
         let timeToEmptyMagazine = (weaponStats.totalMagSize / (weaponStats.rpm / 60)) * 1000;
         const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + weaponStats.reloadSpeed));
         const dataPointsToRenderCount = dataPointsCount + 1;
@@ -52,7 +52,7 @@ class DPSChartCoreService {
         return Number(Number(number).toFixed(2));
     }
 
-    subscribeToCombinedWeaponUpdates() {
+    subscribeToCoreWeaponsTrace() {
         return combineLatest([
             this._subjects.Primary,
             this._subjects.Secondary,

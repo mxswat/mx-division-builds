@@ -107,12 +107,16 @@ export default {
       if (!stats) {
         return;
       }
+      this.stats = stats;
       this.updateStatsUI(stats.Weapons[this.name]);
+
+      // Turn off toggles because we received a new weapon
+      this.toggleCHD = false;
+      this.toggleHSD = false;
     });
   },
   methods: {
     updateStatsUI(stats) {
-      this.stats = stats;
       const props = [
         "weaponName",
         "damageIncrease",
@@ -138,7 +142,12 @@ export default {
       return Number(Number(number).toFixed(2)).toLocaleString();
     },
     updatedToggle() {
-      this.updateStatsUI(this.stats);
+      const newStats = statsService.getWeaponStatsPerSlot(
+        this.name,
+        this.toggleCHD,
+        this.toggleHSD
+      );
+      this.updateStatsUI(newStats);
     },
   },
 };

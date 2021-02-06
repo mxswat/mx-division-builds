@@ -61,7 +61,9 @@ class DPSChartCoreService {
     applyCHCandHSDtoTheCoreTraces(chc, hsd) {
         ['Primary', 'Secondary', 'SideArm'].forEach((slot) => {
             const weaponStat = StatsService.getWeaponStatsPerSlot(slot, chc, hsd);
-            this.addCoreWeaponTrace(slot, weaponStat);
+            if (weaponStat.weaponName) {
+                this.addCoreWeaponTrace(slot, weaponStat);
+            }
         })
     }
 }

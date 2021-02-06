@@ -1,13 +1,27 @@
 <template>
   <div>
     <span class="section-title"> Damage over Time - Visualization </span>
-    <div class="toggles">
+    <div class="toolbar">
       <Toggle
-        style="max-width: 126px"
         @input="updatedColorBlind()"
         v-model="isColorblind"
         :label="'Color blind?'"
       ></Toggle>
+      <StatInputV2
+        :label="'Critical chance'"
+        v-model="criticalProbabaility"
+        v-bind:max="100"
+        :showMaxVal="true"
+        @input="updatedColorBlind()"
+      ></StatInputV2>
+      <StatInputV2
+        :label="'Headshot Probability'"
+        v-model="headshotsProbability"
+        v-bind:max="100"
+        :showMaxVal="true"
+        @input="updatedColorBlind()"
+      ></StatInputV2>
+      <div class="spacer"></div>
     </div>
     <div id="chart-test"></div>
     <span> Click on the trace on the legend to hide or show it! </span>
@@ -18,6 +32,7 @@
 import Plotly from "plotly.js-dist";
 import DPSChartCore from "../../utils/DPSChartCore";
 import Toggle from "../generic/Toggle";
+import StatInputV2 from "../generic/StatInputV2";
 const DEFAULT_PLOT = {
   margin: { t: 25, b: 25, l: 50, r: 50 },
   plot_bgcolor: "#1a1e24",
@@ -42,13 +57,15 @@ const dashStyles = ["solid", "dashdot", "dot"];
 const colors = ["#E69F00", "#56B4E9", "#009E73"];
 export default {
   name: "DPSChart",
-  components: { Toggle },
+  components: { Toggle, StatInputV2 },
   data() {
     return {
       target: null,
       isColorblind: false,
       cacheCoreTraces: [],
       cacheExtraTraces: [],
+      criticalProbabaility: 0,
+      headshotsProbability: 0,
     };
   },
   created() {
@@ -89,7 +106,20 @@ div#chart-test {
   min-height: 600px;
 }
 
-.toggles {
+.toolbar {
   display: flex;
+  flex-wrap: wrap;
+  .stat-input-v2 {
+    // max-width: 200px;
+  }
+}
+
+.spacer {
+  flex: 50;
+}
+@media only screen and (max-width: 614px) {
+  .toolbar .stat-input-v2 {
+    flex: 1 1 100%;
+  }
 }
 </style>

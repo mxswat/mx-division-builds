@@ -274,10 +274,23 @@ class StatsService {
         );
 
         weaponStats.rpm = weapon[WEAPON_PROP_ENUM.RPM];
-        weaponStats.totalMagSize = Number(weapon[WEAPON_PROP_ENUM.MAG_SIZE]);
-        weaponStats.totalMagSize += this.getExtraMagazineSize(
-            weapon[WEAPON_PROP_ENUM.MAGAZINE]
+
+
+        let flatMagazineSize = Number(weapon[WEAPON_PROP_ENUM.MAG_SIZE]);
+        flatMagazineSize += this.getAdditionalMagSizeFromTheMagazine(
+            weapon[WEAPON_PROP_ENUM.MAGAZINE],
+            stats.Offensive[STATS_ENUM.MAG_SIZE]
         );
+
+        const MagazineSizeModifier = this.getStatValueFromGunAndGear(
+            weaponCore2,
+            weaponAttribute1,
+            stats.Offensive,
+            STATS_ENUM.MAGAZINE_SIZE_PERC
+        )
+
+        weaponStats.totalMagSize = (flatMagazineSize * (1 + (MagazineSizeModifier / 100)));
+
         weaponStats.dmgToOutOfCoverArmoredPerMag =
             weaponStats.dmgToOutOfCoverArmored * weaponStats.totalMagSize;
 
@@ -415,13 +428,13 @@ class StatsService {
         return (flatDamage * (1 + toAdd / 100)).toFixed(0);
     }
 
-    // TODO: Add Stats Modifiers
-    getExtraMagazineSize(magazine) {
+    getAdditionalMagSizeFromTheMagazine(magazine) {
         if (!magazine) {
             return 0;
         } else if (magazine.pos == "Extra Rounds") {
             return Number(magazine.valPos);
         }
+
         return 0;
     }
 
@@ -430,7 +443,6 @@ class StatsService {
         return reloadSpeedBase / (1 + reloadSpeedModifier / 100);
     }
 
-    // TODO: Add Stats Modifiers
     getReloadSpeedModifier(magazine, statsReloadSpeed) {
         let modifier = statsReloadSpeed || 0;
         if (!magazine) {

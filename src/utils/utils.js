@@ -128,7 +128,8 @@ const STATS_ENUM = {
     HEADSHOT_DAMAGE: "Headshot Damage",
     WEAPON_DAMAGE: "Weapon Damage",
     TOTAL_ARMOR: "Total Armor",
-    RELOAD_SPEED_PERC: "Reload Speed %"
+    RELOAD_SPEED_PERC: "Reload Speed %",
+    MAGAZINE_SIZE_PERC: "Magazine Size %"
 }
 
 export {

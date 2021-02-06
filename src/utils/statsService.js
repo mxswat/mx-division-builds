@@ -173,7 +173,7 @@ class StatsService {
         return this.getWeaponStats(this.dataCache.weapons[UI_WEAPON_SLOT_ENUM[slot]], slot, manualCriticalChance, headshotChance);
     }
 
-    getWeaponStats(weapon, slot, manualCriticalChance = 100, headshotChance = 100) {
+    getWeaponStats(weapon, slot, manualCriticalChance = 0, headshotChance = 0) {
         const weaponStats = {
             weaponName: null,
             damageIncrease: null,

@@ -346,6 +346,7 @@ export default {
   watch: {
     currentWeapon: {
       handler: function (val, oldVal) {
+        // TODO HANDLE oldVal it might sove some issues related to multiple triggers on Encoding
         coreService.sendSlotData(this.name, val);
       },
       deep: true,

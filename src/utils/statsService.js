@@ -353,6 +353,7 @@ class StatsService {
                                 addValueToStat(stats.Utility, val, 10)
                             })
                         }
+                        delete stats.Utility['Skill Efficiency'];
                         break;
                     default:
                         break;

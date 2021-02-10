@@ -9,7 +9,6 @@ A huge "Thank you" to:
 * GyroTwister
 * Kiochy
 * FROST
-* The Soldier
 * RedKnightAMW
 * TheSoldier
 * BANNED.

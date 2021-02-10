@@ -4,16 +4,12 @@
 
 ## Credits
 
-A huge Thank you to this agents!
+A huge "Thank you" to:
 
-Kiochy
-
-FROST
-
-The Soldier
-
-RedKnightAMW
-
-TheSoldier
-
-BANNED.
+* GyroTwister
+* Kiochy
+* FROST
+* The Soldier
+* RedKnightAMW
+* TheSoldier
+* BANNED.

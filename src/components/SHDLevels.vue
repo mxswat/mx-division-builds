@@ -9,6 +9,12 @@
         <span class="level-name">{{ level.name }}</span>
         <StatInput v-model="level.value" v-bind:max="level.max"></StatInput>
       </div>
+      <div class="item">
+        <button class="btt" @click="setAllSHDLevels(true)">Set Max SHD</button>
+      </div>
+      <div class="item">
+        <button class="btt" @click="setAllSHDLevels(false)">Set 0 SHD</button>
+      </div>
     </div>
   </div>
 </template>
@@ -34,6 +40,13 @@ export default {
     updateLocalSHDLevels(this.levels)
     coreService.updateSHDLevels(this.levels);
   },
+  methods: {
+    setAllSHDLevels(isMax) {
+      this.levels.forEach((lvl)=> {
+        lvl.value = isMax ? lvl.max : 0;
+      })
+    }
+  }
 };
 </script>
 
@@ -51,6 +64,10 @@ export default {
   }
   .item {
     display: flex;
+    .btt {
+      flex: 1 1 auto;
+      margin: 0;
+    }
   }
 }
 </style>

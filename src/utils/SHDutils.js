@@ -19,7 +19,7 @@ function getSHDLevels() {
         //------------
         ["Skill Haste", "U", 10, 0], 
         ["Skill Damage", "U", 10, 0], 
-        ["Skill Duration", "U", 20, 0], 
+        ["Skill Duration", "U", 10, 0], 
         ["Repair Skills", "U", 10, 0]
     ];
     const SHDLevels = [];

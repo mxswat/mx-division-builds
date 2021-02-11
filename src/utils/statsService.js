@@ -311,6 +311,12 @@ class StatsService {
             weaponStats.dmgToOutOfCoverArmored * weaponStats.totalMagSize;
 
         let reloadSpeedModifier = this.getStatValueFromGunMods(weapon, STATS_ENUM.WEAPON_HANDLING);
+        reloadSpeedModifier += this.getStatValueFromGunAndGear(
+            weaponCore2,
+            weaponAttribute1,
+            stats.Offensive,
+            STATS_ENUM.RELOAD_SPEED_PERC
+        )
         reloadSpeedModifier += this.getReloadSpeedModifier(
             weapon[WEAPON_PROP_ENUM.MAGAZINE],
             stats.Offensive[STATS_ENUM.RELOAD_SPEED_PERC]

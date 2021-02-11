@@ -131,6 +131,8 @@ export default {
         "totalMagSize",
         "dmgToOutOfCoverArmoredPerMag",
         "reloadSpeed",
+        "dta",
+        "dtooc"
       ];
 
       for (let i = 0; i < props.length; i++) {

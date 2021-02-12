@@ -355,7 +355,7 @@ class StatsService {
                 switch (edgeCaseBrand) {
                     case 'Empress International':
                         if (brands[edgeCaseBrand].length > 2) {
-                            const skillEfficencyBuffs = ['Status Effects', 'Repair Skills', 'Skill Damage', 'Skill Health', 'Skill Haste']
+                            const skillEfficencyBuffs = ['Status Effects', 'Repair Skills', 'Skill Damage', 'Skill Health', 'Skill Haste', 'Skill Duration']
                             skillEfficencyBuffs.forEach((val) => {
                                 addValueToStat(stats.Utility, val, 10)
                             })

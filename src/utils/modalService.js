@@ -7,31 +7,46 @@ import {
     weaponsHeaders
 } from "./agGridDefaults";
 
+function noScroll(params) {
+    document.body.classList.add('no-scroll');
+}
+
+function yesScroll(params) {
+    document.body.classList.remove('no-scroll');
+}
+
+const defaultEvents = {
+    'before-open': noScroll,
+    'before-close': yesScroll
+};
+
 const openGearModal = function (gearList, onModalClose) {
     window.vueInstance.$modal.show(
         GearSelectionModal, {
-            gearData: gearList,
-            onModalClose: onModalClose,
-            tableHeaders: gearHeaders
-        }, {
-            adaptive: true,
-            width: "75%",
-            height: "90%"
-        }
+        gearData: gearList,
+        onModalClose: onModalClose,
+        tableHeaders: gearHeaders
+    }, {
+        adaptive: true,
+        width: "75%",
+        height: "90%"
+    },
+        defaultEvents
     );
 }
 
 const openWeaponsModal = function (weaponLists, onModalClose) {
     window.vueInstance.$modal.show(
         TableModal, {
-            gearData: weaponLists,
-            onModalClose: onModalClose,
-            tableHeaders: weaponsHeaders
-        }, {
-            adaptive: true,
-            width: "75%",
-            height: "90%"
-        }
+        gearData: weaponLists,
+        onModalClose: onModalClose,
+        tableHeaders: weaponsHeaders
+    }, {
+        adaptive: true,
+        width: "75%",
+        height: "90%"
+    },
+        defaultEvents
     );
 }
 
@@ -44,23 +59,23 @@ const openSaveShareModal = function () {
         To share the build just send the URL of the page or click the copy button
         `,
         buttons: [{
-                title: 'Copy',
-                handler: () => {
-                    const el = document.createElement('textarea');
-                    el.value = document.location.href;
-                    el.setAttribute('readonly', '');
-                    el.style.position = 'absolute';
-                    el.style.left = '-9999px';
-                    document.body.appendChild(el);
-                    el.select();
-                    document.execCommand('copy');
-                    document.body.removeChild(el);
-                    document.getElementsByClassName('vue-dialog-button')[0].innerText = 'Copied!'
-                }
-            },
-            {
-                title: 'Close'
+            title: 'Copy',
+            handler: () => {
+                const el = document.createElement('textarea');
+                el.value = document.location.href;
+                el.setAttribute('readonly', '');
+                el.style.position = 'absolute';
+                el.style.left = '-9999px';
+                document.body.appendChild(el);
+                el.select();
+                document.execCommand('copy');
+                document.body.removeChild(el);
+                document.getElementsByClassName('vue-dialog-button')[0].innerText = 'Copied!'
             }
+        },
+        {
+            title: 'Close'
+        }
         ]
     })
 }
@@ -73,15 +88,15 @@ const openIssueModal = function () {
             <a target="_blank" style="color:" href="http://discord.gg/ShYner2">my discord server</a> 
             or <a target="_blank" style="color:" href="https://github.com/mxswat/mx-division-builds/issues">GitHub</a>`,
         buttons: [{
-                title: 'Clean local DB',
-                handler: () => {
-                    window.localStorage.clear();
-                    location.reload();
-                }
-            },
-            {
-                title: 'Close'
+            title: 'Clean local DB',
+            handler: () => {
+                window.localStorage.clear();
+                location.reload();
             }
+        },
+        {
+            title: 'Close'
+        }
         ]
     })
 }
@@ -89,11 +104,11 @@ const openIssueModal = function () {
 const openScreenshotModal = function () {
     window.vueInstance.$modal.show(
         ScreenshotModal, {
-        }, {
-            adaptive: true,
-            width: "75%",
-            height: "90%"
-        }
+    }, {
+        adaptive: true,
+        width: "75%",
+        height: "90%"
+    }
     );
 }
 

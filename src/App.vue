@@ -106,6 +106,10 @@ body,
   margin-bottom: 8px;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, [col] 1fr);

@@ -6,7 +6,10 @@
       type="text"
       @input="debouceSearch"
     />
-    <div class="search-toolbar">
+    <a @click="showMobileMenu = !showMobileMenu" class="menu-btt arrow-down">
+      Weapon Types
+    </a>
+    <div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
       <a
         class="mx-btt"
         v-for="(weapons, key) in weaponsList"
@@ -17,8 +20,13 @@
     </div>
     <div class="overflow-handler">
       <div v-for="(weapons, key) in weaponsList" v-bind:key="key">
-        <span :id="key">{{ key }} </span>
-        <div class="weapon-grid">
+        <span
+          class="weap-type"
+          v-if="filterByName(weapons).length > 0"
+          :id="key"
+          >{{ key }}
+        </span>
+        <div class="weapon-grid" v-if="filterByName(weapons).length > 0">
           <div
             class="weapon-slot"
             :class="[qualityToCSS(weapon.Quality)]"
@@ -65,6 +73,7 @@ export default {
       weaponsList: [],
       searchText: "",
       debounce: null,
+      showMobileMenu: false,
     };
   },
   methods: {
@@ -77,9 +86,7 @@ export default {
         : `${weapon.Name} (${weapon.Variant})`;
     },
     getTalentDesc(talent) {
-      return this.WeaponTalents[talent]
-        ? this.WeaponTalents[talent].Desc
-        : null;
+      return this.WeaponTalents[talent] ? this.WeaponTalents[talent] : null;
     },
     debouceSearch(event) {
       clearTimeout(this.debounce);
@@ -97,6 +104,10 @@ export default {
           .includes(this.searchText.toLocaleLowerCase())
       );
     },
+    onSelection(weapon) {
+      this.$emit("close");
+      this.onModalClose(weapon);
+    },
   },
   created() {
     Promise.all([
@@ -105,7 +116,7 @@ export default {
       //   gearMetaData.BrandsData,
     ]).then((res) => {
       this.WeaponTalents = res[1].reduce(function (o, val) {
-        o[val.Talent] = val;
+        o[val.Name] = val.Desc;
         return o;
       }, {});
       const sorted = this.gearData.sort(
@@ -145,6 +156,17 @@ export default {
     position: relative;
     min-height: 90px;
     cursor: pointer;
+    &.named {
+      background: rgba(255, 174, 0, 0.8);
+    }
+
+    &.exotic {
+      background: rgba(225, 76, 50, 0.8);
+    }
+
+    &.gearset {
+      background: rgba(75, 175, 100, 0.8);
+    }
   }
 
   .overflow-handler {
@@ -164,7 +186,51 @@ export default {
     margin: 0;
   }
 }
+
+.weap-type {
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
 .search {
   margin: 0px 8px;
+  max-height: 32px;
+}
+
+/// - TODO: DUPED CODE
+
+.menu-btt {
+  display: none;
+  height: 31px;
+  line-height: 31px;
+  color: white;
+  padding-right: 24px;
+  background-color: transparent;
+  border: 0px;
+  background-position: right;
+  border-bottom: 1px solid white;
+  margin-top: 8px;
+  margin-bottom: 4px;
+  margin-right: 8px;
+  margin-left: 8px;
+  width: auto;
+}
+
+// mobile switch to menu W/ button
+@media only screen and (max-width: 550px) {
+  .menu-btt {
+    display: flex;
+  }
+  .search-toolbar {
+    display: none;
+    &.showOnMobile {
+      display: flex;
+      flex-direction: column;
+      button {
+        margin-right: 0;
+      }
+    }
+  }
 }
 </style>

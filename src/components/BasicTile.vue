@@ -1,9 +1,6 @@
 <template functional>
-  <div
-    class="tile outer-border"
-    :class="[props.classes]"
-  >
-    <img :src="props.bgImage" class="img-slot-bg">
+  <div class="tile outer-border" :class="[props.classes]">
+    <img :src="props.bgImage" class="img-slot-bg" />
     <div class="inner-border"></div>
     <slot></slot>
   </div>
@@ -80,18 +77,20 @@ img.img-slot-bg {
   }
 }
 
-.outer-border.anim-enabled {
-  &:hover {
-    &:after,
-    &:before {
-      width: calc(100% - 2px);
-      height: calc(100% - 2px);
-    }
-    .inner-border {
+@media screen and (prefers-reduced-motion: no-preference) {
+  .outer-border.anim-enabled {
+    &:hover {
       &:after,
       &:before {
         width: calc(100% - 2px);
         height: calc(100% - 2px);
+      }
+      .inner-border {
+        &:after,
+        &:before {
+          width: calc(100% - 2px);
+          height: calc(100% - 2px);
+        }
       }
     }
   }

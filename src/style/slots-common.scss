@@ -55,3 +55,28 @@
     background: transparent;
     min-height: 32px;
 }
+
+.mx-input {
+    min-width: 0;
+    flex: 1 1 auto;
+    height: 31px;
+    line-height: 31px;
+    padding: 0px;
+    background: transparent;
+    border: 0px;
+    font-size: 16px;
+    color: white;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    border-bottom: 1px solid white;
+}
+
+.mx-btt {
+    margin-right: 8px;
+    color: white;
+    border: 1px solid white;
+    background: transparent;
+    min-height: 32px;
+    cursor: pointer;
+    padding: 1px 6px;
+}

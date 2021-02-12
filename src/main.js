@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function () {
   window.vueInstance = vueInstance
 }, false);
 
-document.onkeypress = function (e) {
-  e = e || window.event;
-  if (e.key == 'x') {
-    debugger;
-  }
-}
+// document.onkeypress = function (e) {
+//   e = e || window.event;
+//   if (e.key == 'x') {
+//     debugger;
+//   }
+// }

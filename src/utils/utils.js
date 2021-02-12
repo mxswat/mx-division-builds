@@ -142,6 +142,21 @@ const UI_WEAPON_SLOT_ENUM = {
     2: 'SideArm',
 }
 
+const QualityPriority = {
+    Exotic: 0,
+    Named: 1,
+    Gearset: 2,
+    "High End": 3,
+};
+
+
+function groupArrayOfObjectsByKey(list, key) {
+    return list.reduce(function (rv, x) {
+        (rv[x[key]] = rv[x[key]] || []).push(x);
+        return rv;
+    }, {});
+}
+
 export {
     getByString,
     zipObject,
@@ -152,5 +167,7 @@ export {
     getUniqueObject,
     WEAPON_PROP_ENUM,
     STATS_ENUM,
-    UI_WEAPON_SLOT_ENUM
+    UI_WEAPON_SLOT_ENUM,
+    QualityPriority,
+    groupArrayOfObjectsByKey
 };

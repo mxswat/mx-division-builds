@@ -40,17 +40,12 @@
 </template>
 
 <script>
-const QualityPriority = {
-  Exotic: 0,
-  Named: 1,
-  Gearset: 2,
-  "High End": 3,
-};
+
 import {
   gearData as gearMetaData,
   IsEverythingLoadedPromise,
 } from "../../utils/dataImporter";
-import { qualityToCss } from "../../utils/utils";
+import { qualityToCss, QualityPriority } from "../../utils/utils";
 import BasicTile from "../BasicTile";
 export default {
   name: "GearSelectionModal",

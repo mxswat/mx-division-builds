@@ -1,5 +1,6 @@
 import TableModal from "../components/Modals/TableModal";
 import GearSelectionModal from "../components/Modals/GearSelectionModal";
+import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
 
 import {
@@ -37,7 +38,7 @@ const openGearModal = function (gearList, onModalClose) {
 
 const openWeaponsModal = function (weaponLists, onModalClose) {
     window.vueInstance.$modal.show(
-        TableModal, {
+        WeaponSelectionModal, {
         gearData: weaponLists,
         onModalClose: onModalClose,
         tableHeaders: weaponsHeaders

@@ -118,7 +118,8 @@ const gearData = {
     GearMods: null,
     GearTalents: null,
     BrandSetBonuses: null,
-    StatsMapping: null
+    StatsMapping: null,
+    BrandsData: null
 };
 
 const wearableSource = [{
@@ -164,6 +165,10 @@ const wearableSource = [{
 {
     key: 'StatsMapping',
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR0o0aUj35N-35i5zLcNey-bkAvB2xyqas8Qf6jaX0Flx-maPXM07R_-EGUZDghl6wcPOQnwba0Re9X/pub?gid=0&single=true&output=csv'
+},
+{
+    key: 'BrandsData',
+    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR2ScvK8DaAjgJ0WDuZmdFGACub4hiHM461kEj3XvhHR9WbZkKpLQFe1XmCklQu2g0NIN1EV5GFFDvv/pub?output=csv'
 }
 ];
 

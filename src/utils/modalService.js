@@ -1,4 +1,5 @@
 import TableModal from "../components/Modals/TableModal";
+import GearSelectionModal from "../components/Modals/GearSelectionModal";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
 
 import {
@@ -8,7 +9,7 @@ import {
 
 const openGearModal = function (gearList, onModalClose) {
     window.vueInstance.$modal.show(
-        TableModal, {
+        GearSelectionModal, {
             gearData: gearList,
             onModalClose: onModalClose,
             tableHeaders: gearHeaders

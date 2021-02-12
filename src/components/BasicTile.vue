@@ -1,6 +1,6 @@
 <template functional>
   <div
-    class="tile outer-border no-anim"
+    class="tile outer-border"
     :class="[props.classes]"
   >
     <img :src="props.bgImage" class="img-slot-bg">
@@ -80,7 +80,7 @@ img.img-slot-bg {
   }
 }
 
-.outer-border:not(.no-anim) {
+.outer-border.anim-enabled {
   &:hover {
     &:after,
     &:before {

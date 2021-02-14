@@ -31,12 +31,17 @@ export default {
   methods: {
     buildCharts(data) {
       // for (let i = 0; i < data.length; i++) {
-        const playerScalingData = data[1];
-        this.headers = [];
-        for (const difficulty in playerScalingData) {
-          this.headers.push(difficulty);
-          this.rowData.push([1, 2, 3, 4]);
+      const playerScalingData = data[1];
+      const enemyTypes = ["Difficulty","Normal", "Veteran", "Elite", "Named"];
+      this.headers = enemyTypes;
+      for (const difficulty in playerScalingData) {
+        const currentRow = [difficulty];
+        for (let j = 0; j < enemyTypes.length; j++) {
+          const enemyType = enemyTypes[j];
+          currentRow.push(j);
         }
+        this.rowData.push(currentRow);
+      }
       // }
       console.log(this.rowData);
     },

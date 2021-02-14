@@ -23,7 +23,7 @@ class DPSChartCoreService {
      * @param {*} weaponStats 
      */
     addCoreWeaponTrace(slot, weaponStats) {
-        let timeToEmptyMagazine = (weaponStats.totalMagSize / (weaponStats.rpm / 60)) * 1000;
+        let timeToEmptyMagazine = weaponStats.timeToEmptyMagazine;
         const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + weaponStats.reloadSpeed));
         const dataPointsToRenderCount = dataPointsCount + 1;
         let damageDelta = 0

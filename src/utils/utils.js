@@ -130,7 +130,8 @@ const STATS_ENUM = {
     TOTAL_ARMOR: "Total Armor",
     RELOAD_SPEED_PERC: "Reload Speed %",
     MAGAZINE_SIZE_PERC: "Magazine Size %",
-    WEAPON_HANDLING: "Weapon Handling"
+    WEAPON_HANDLING: "Weapon Handling",
+    RATE_OF_FIRE_PERC: "Rate of Fire %"
 }
 
 const UI_WEAPON_SLOT_ENUM = {

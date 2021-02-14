@@ -1,13 +1,28 @@
 <template>
   <div class="ttk-ui">
-    <span class="section-title"> Time To Kill / Bullets to Kill </span>
-    <ResponsiveTable :headers="headers" :rowData="rowData"></ResponsiveTable>
+    <span class="section-title">
+      Time To Kill / Bullets to Kill
+    </span>
+    <template v-for="(tablesData, idx) in data">
+      <div class="weapon-tables-container" v-bind:key="idx" v-if="tablesData">
+        <span>{{ tablesData.weaponName }}</span>
+        <div class="ttk-tables">
+          <ResponsiveTable
+            v-for="(tables, idx) in tablesData.tables"
+            v-bind:key="idx"
+            :title="`${idx + 1} Players`"
+            :headers="tables.headers"
+            :rowData="tables.rowData"
+          ></ResponsiveTable>
+        </div>
+      </div>
+    </template>
   </div>
 </template>
 
 <script>
-import { getAppRootPath } from "../../utils/utils";
 import ResponsiveTable from "./ResponsiveTable";
+import TTKCoreService from "../../utils/TTKCore";
 export default {
   name: "TimeToKill",
   components: {
@@ -15,35 +30,19 @@ export default {
   },
   data() {
     return {
-      headers: [],
-      rowData: [],
+      cacheWeaponsData: null,
+      data: [],
     };
   },
   created() {
-    const path = getAppRootPath() + "HPValues.json";
-    fetch(`${path}`, { method: "GET" })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        this.buildCharts(data);
-      });
+    TTKCoreService.subscribeToCoreWeaponData().subscribe((tableData) => {
+      this.updateTables(tableData);
+    });
   },
   methods: {
-    buildCharts(data) {
-      // for (let i = 0; i < data.length; i++) {
-      const playerScalingData = data[1];
-      const enemyTypes = ["Difficulty","Normal", "Veteran", "Elite", "Named"];
-      this.headers = enemyTypes;
-      for (const difficulty in playerScalingData) {
-        const currentRow = [difficulty];
-        for (let j = 0; j < enemyTypes.length; j++) {
-          const enemyType = enemyTypes[j];
-          currentRow.push(j);
-        }
-        this.rowData.push(currentRow);
-      }
-      // }
-      console.log(this.rowData);
+    updateTables(data) {
+      // I need to come up with a better name with this variable
+      this.data = data;
     },
   },
 };
@@ -52,5 +51,11 @@ export default {
 .<style scoped>
 .ttk-ui {
   width: 100%;
+}
+
+.ttk-tables {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
 }
 </style>

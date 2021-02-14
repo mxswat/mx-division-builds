@@ -13,6 +13,7 @@ import {
 
 import { WEAPON_PROP_ENUM, STATS_ENUM, UI_WEAPON_SLOT_ENUM } from "./utils";
 import DPSChartCore from "./DPSChartCore";
+import TTKCoreService from "./TTKCore";
 
 const stats$ = new BehaviorSubject();
 
@@ -94,6 +95,7 @@ class StatsService {
                 stats.Weapons[slotKey] = this.getWeaponStats(data.weapons[idx], slotKey);
                 if (stats.Weapons[slotKey].weaponName)
                     DPSChartCore.addCoreWeaponTrace(slotKey, stats.Weapons[slotKey]);
+                    TTKCoreService.addCoreWeaponData(slotKey, stats.Weapons[slotKey])
             }
         }
 
@@ -188,6 +190,7 @@ class StatsService {
             totalMagSize: null,
             dmgToOutOfCoverArmoredPerMag: null,
             reloadSpeed: null,
+            timeToEmptyMagazine: null
         };
 
         if (!weapon) {
@@ -289,6 +292,14 @@ class StatsService {
             weaponStats.dtooc
         );
 
+
+        let RPM_multiplier = this.getStatValueFromGunAndGear(
+            weaponCore2,
+            weaponAttribute1,
+            stats.Offensive,
+            STATS_ENUM.RATE_OF_FIRE_PERC
+        );
+        // add Rate of Fire % 
         weaponStats.rpm = weapon[WEAPON_PROP_ENUM.RPM];
 
 
@@ -325,6 +336,8 @@ class StatsService {
             weapon[WEAPON_PROP_ENUM.RELOAD_SPEED],
             reloadSpeedModifier
         );
+
+        weaponStats.timeToEmptyMagazine = (weaponStats.totalMagSize / (weaponStats.rpm / 60)) * 1000;
 
         return weaponStats;
     }
@@ -405,10 +418,10 @@ class StatsService {
         ).toFixed(0);
     }
     calcDmgToArmored(flatDamage, DTA) {
-        return (flatDamage * (1 + DTA / 100)).toFixed(0);
+        return Number((flatDamage * (1 + DTA / 100)).toFixed(0));
     }
     calcDmgToOutOfCover(flatDamage, DTOOC) {
-        return (flatDamage * (1 + DTOOC / 100)).toFixed(0);
+        return Number((flatDamage * (1 + DTOOC / 100)).toFixed(0));
     }
     getStatValueFromGunAndGear(
         weaponCore2,

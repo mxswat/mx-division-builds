@@ -1,24 +1,24 @@
 <template>
-  <div>
+  <div class="ttk-ui">
     <span class="section-title"> Time To Kill / Bullets to Kill </span>
-    <div class="charts-container">
-      <div class="ttk-chart" id="challenging-chart"></div>
-      <div class="ttk-chart" id="heroic-chart"></div>
-      <div class="ttk-chart" id="legendary-chart"></div>
-    </div>
+    <ResponsiveTable :headers="headers" :rowData="rowData"></ResponsiveTable>
   </div>
 </template>
 
 <script>
 import { getAppRootPath } from "../../utils/utils";
-import Plotly from "plotly.js-dist";
-import { getPlotlyDefault1, getPlotlyDefault2 } from "../../utils/plotDefaults";
-
-const DEFAULT_PLOT = getPlotlyDefault1("TTK (s)", "Difficulty")
-const DEFAULT_PLOT_2 = getPlotlyDefault2();
-
+import ResponsiveTable from "./ResponsiveTable";
 export default {
   name: "TimeToKill",
+  components: {
+    ResponsiveTable,
+  },
+  data() {
+    return {
+      headers: [],
+      rowData: [],
+    };
+  },
   created() {
     const path = getAppRootPath() + "HPValues.json";
     fetch(`${path}`, { method: "GET" })
@@ -29,29 +29,23 @@ export default {
       });
   },
   methods: {
-      buildCharts() {
-          const targets = [
-            'challenging-chart',
-            'heroic-chart',
-            'legendary-chart',
-          ]
-          for (let i = 0; i < targets.length; i++) {
-              const element = targets[i];
-              Plotly.newPlot(element, [], getPlotlyDefault1("TTK (s)", "Difficulty", element), DEFAULT_PLOT_2);
-              
-          }
-      }
-  }
+    buildCharts(data) {
+      // for (let i = 0; i < data.length; i++) {
+        const playerScalingData = data[1];
+        this.headers = [];
+        for (const difficulty in playerScalingData) {
+          this.headers.push(difficulty);
+          this.rowData.push([1, 2, 3, 4]);
+        }
+      // }
+      console.log(this.rowData);
+    },
+  },
 };
 </script>
 
 .<style scoped>
-.charts-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-}
-
-.ttk-chart {
-    min-height: 400px;
+.ttk-ui {
+  width: 100%;
 }
 </style>

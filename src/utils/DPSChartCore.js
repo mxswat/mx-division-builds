@@ -17,6 +17,11 @@ class DPSChartCoreService {
 
     saveCurrentStatsForComparison() { }
 
+    /**
+     * Sent data to build a trace for the primary, secondary and sidearm
+     * @param {*} slot 
+     * @param {*} weaponStats 
+     */
     addCoreWeaponTrace(slot, weaponStats) {
         let timeToEmptyMagazine = (weaponStats.totalMagSize / (weaponStats.rpm / 60)) * 1000;
         const dataPointsCount = Math.round(60000 / (timeToEmptyMagazine + weaponStats.reloadSpeed));

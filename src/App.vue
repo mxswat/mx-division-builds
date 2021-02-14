@@ -34,8 +34,17 @@
         <span class="section-title" style="position: relative"
           >Patch notes and news</span
         >
+        <p>Fixed: Weapon handling not affecting reload speed</p>
+        <p>Fixed: Missing raw DTA and DTOOC stats</p>
+        <p>Fixed: Skill duration not working with Skill efficency</p>
+        <p>Added: SHD levels min and max buttons</p>
+        <p>
+          !Rework!: Weapon and Gear selection screen now has a new UI with
+          filters, Color and talent descriptions
+        </p>
+        <p>Know bugs: Missing Empress, Exotic and Improvised gear Icons</p>
+        <p>------------</p>
         <p>Scroll down to try the new DPS Visualization!</p>
-        <p>It's still in BETA, and it only shows the damage to an Armorer and Out of cover target (Veteran/Elite)</p>
       </BasicTile>
       <BasicTile classes="dps-chart">
         <DPSChart></DPSChart>
@@ -70,7 +79,7 @@ export default {
     Toolbar,
     SHDLevels,
     DPSChart,
-    TimeToKill
+    TimeToKill,
   },
   data() {
     return {
@@ -137,7 +146,7 @@ body.no-scroll {
     .general-stats-col.tile {
       position: relative;
     }
-  
+
     .weapon-stats-container {
       grid-column: col 1;
       grid-row: row 3;
@@ -148,6 +157,10 @@ body.no-scroll {
       grid-row: row 5;
     }
 
+    .ttk {
+      grid-column: col 1;
+      grid-row: row 6;
+    }
     .news {
       grid-column: col 1;
       grid-row: row 4;
@@ -180,11 +193,9 @@ body.no-scroll {
   grid-column: col 1 / span 5;
 }
 
-
 .ttk {
   grid-column: col 1 / span 5;
 }
-
 
 .news {
   grid-column: col 4 / span 2;

@@ -78,6 +78,15 @@ class DPSChartCoreService {
             return this.recursiveTimeToKillBulletToKill(weaponStats, remaningHP, shotsFired, timePassed, reloads + 1);
         }
     }
+
+    applyCHCandHSDtoTheTables(chc, hsd) {
+        ['Primary', 'Secondary', 'SideArm'].forEach((slot) => {
+            const weaponStat = StatsService.getWeaponStatsPerSlot(slot, chc, hsd);
+            if (weaponStat.weaponName) {
+                this.addCoreWeaponData(slot, weaponStat);
+            }
+        })
+    }
 }
 
 export default new DPSChartCoreService();

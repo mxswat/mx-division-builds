@@ -1,6 +1,23 @@
 <template>
   <div class="ttk-ui">
     <span class="section-title"> Time To Kill / Bullets to Kill </span>
+    <div class="toolbar">
+      <StatInputV2
+        :label="'Critical chance'"
+        v-model="criticalChance"
+        v-bind:max="100"
+        :showMaxVal="true"
+        @input="applyCHCandHSDtoTheTables()"
+      ></StatInputV2>
+      <StatInputV2
+        :label="'Headshot Chance'"
+        v-model="headshotChance"
+        v-bind:max="100"
+        :showMaxVal="true"
+        @input="applyCHCandHSDtoTheTables()"
+      ></StatInputV2>
+      <div class="spacer"></div>
+    </div>
     <template v-for="(tablesData, idx) in data">
       <div class="weapon-tables-container" v-bind:key="idx" v-if="tablesData">
         <span class="ttk-weapon-name">{{ tablesData.weaponName }}</span>
@@ -21,15 +38,19 @@
 <script>
 import ResponsiveTable from "./ResponsiveTable";
 import TTKCoreService from "../../utils/TTKCore";
+import StatInputV2 from "../generic/StatInputV2";
+
 export default {
   name: "TimeToKill",
   components: {
     ResponsiveTable,
+    StatInputV2,
   },
   data() {
     return {
-      cacheWeaponsData: null,
       data: [],
+      criticalChance: 0,
+      headshotChance: 0,
     };
   },
   created() {
@@ -41,6 +62,12 @@ export default {
     updateTables(data) {
       // I need to come up with a better name with this variable
       this.data = data;
+    },
+    applyCHCandHSDtoTheTables() {
+      TTKCoreService.applyCHCandHSDtoTheTables(
+        this.criticalChance,
+        this.headshotChance
+      );
     },
   },
 };

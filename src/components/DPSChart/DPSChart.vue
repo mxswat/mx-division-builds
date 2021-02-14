@@ -58,6 +58,9 @@ export default {
     DPSChartCore.subscribeToCoreWeaponsTrace().subscribe((weapons) => {
       this.cacheCoreTraces = weapons;
       this.updateChart(weapons);
+      if (this.isCHCandHSDSet()) {
+        this.applyCHCandHSDtoTheCoreTraces();
+      }
     });
   },
   mounted() {
@@ -89,6 +92,9 @@ export default {
         this.headshotChance
       );
     },
+    isCHCandHSDSet() {
+      return this.criticalChance !== 0 || this.headshotChance !== 0
+    }
   },
 };
 </script>

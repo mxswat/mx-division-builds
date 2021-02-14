@@ -56,6 +56,9 @@ export default {
   created() {
     TTKCoreService.subscribeToCoreWeaponData().subscribe((tableData) => {
       this.updateTables(tableData);
+      if (this.isCHCandHSDSet()) {
+        this.applyCHCandHSDtoTheTables();
+      }
     });
   },
   methods: {
@@ -68,6 +71,9 @@ export default {
         this.criticalChance,
         this.headshotChance
       );
+    },
+    isCHCandHSDSet() {
+      return this.criticalChance !== 0 || this.headshotChance !== 0;
     },
   },
 };

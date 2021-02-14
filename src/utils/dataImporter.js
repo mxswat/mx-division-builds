@@ -1,6 +1,7 @@
 import Papa from "papaparse";
 import {
-    csvToArrayWithKeys
+    csvToArrayWithKeys,
+    getAppRootPath
 } from './utils';
 let IsEverythingLoadedPromiseResolve, IsEverythingLoadedPromiseReject;
 
@@ -43,9 +44,8 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
     }
 }
 
-// Check if is running in Dev env or in production
-// eslint-disable-next-line no-undef
-const path = window.webpackHotUpdate ? '/DB.Version' : '/mx-division-builds/DB.Version';
+// DB.version path
+const path = getAppRootPath() + 'DB.Version';
 
 // Disable browser cache while download the DB version
 fetch(`${path}?${new Date().toISOString()}`, { method: 'GET', })

@@ -23,7 +23,7 @@
       ></StatInputV2>
       <div class="spacer"></div>
     </div>
-    <div id="chart-test"></div>
+    <div id="dps-chart"></div>
     <span> Click on the trace on the legend to hide or show it! </span>
   </div>
 </template>
@@ -31,30 +31,16 @@
 <script>
 import Plotly from "plotly.js-dist";
 import DPSChartCore from "../../utils/DPSChartCore";
+import { getPlotlyDefault1, getPlotlyDefault2 } from "../../utils/plotDefaults";
 import Toggle from "../generic/Toggle";
 import StatInputV2 from "../generic/StatInputV2";
-const DEFAULT_PLOT = {
-  margin: { t: 25, b: 25, l: 50, r: 50 },
-  plot_bgcolor: "#1a1e24",
-  paper_bgcolor: "#1a1e24",
-  font: { color: "white" },
-  yaxis: {
-    gridcolor: "#ffffff66",
-    title: {
-      text: "Damage",
-    },
-  },
-  xaxis: {
-    gridcolor: "#ffffff66",
-    title: {
-      text: "Seconds - Flat lines is the reload time",
-    },
-  },
-  legend: { orientation: "h" },
-};
-const DEFAULT_PLOT_2 = { showSendToCloud: true, responsive: true };
+
 const dashStyles = ["solid", "dashdot", "dot"];
 const colors = ["#E69F00", "#56B4E9", "#009E73"];
+
+const DEFAULT_PLOT = getPlotlyDefault1("Damage", "Seconds - Flat lines are the reload time")
+const DEFAULT_PLOT_2 = getPlotlyDefault2();
+
 export default {
   name: "DPSChart",
   components: { Toggle, StatInputV2 },
@@ -75,7 +61,7 @@ export default {
     });
   },
   mounted() {
-    this.target = document.getElementById("chart-test");
+    this.target = document.getElementById("dps-chart");
     Plotly.newPlot(this.target, [], DEFAULT_PLOT, DEFAULT_PLOT_2);
   },
   methods: {
@@ -101,14 +87,14 @@ export default {
       DPSChartCore.applyCHCandHSDtoTheCoreTraces(
         this.criticalChance,
         this.headshotChance
-      )
-    }
+      );
+    },
   },
 };
 </script>
 
 <style lang="scss">
-div#chart-test {
+div#dps-chart {
   min-height: 600px;
 }
 

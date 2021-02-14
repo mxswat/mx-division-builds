@@ -157,6 +157,13 @@ function groupArrayOfObjectsByKey(list, key) {
     }, {});
 }
 
+/**
+ * Returns the rooth path and check if is running in Dev env or in production
+ */
+function getAppRootPath() {
+    return window.webpackHotUpdate ? '/' : '/mx-division-builds/';
+}
+
 export {
     getByString,
     zipObject,
@@ -169,5 +176,6 @@ export {
     STATS_ENUM,
     UI_WEAPON_SLOT_ENUM,
     QualityPriority,
-    groupArrayOfObjectsByKey
+    groupArrayOfObjectsByKey,
+    getAppRootPath
 };

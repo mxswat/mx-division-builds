@@ -40,6 +40,9 @@
       <BasicTile classes="dps-chart">
         <DPSChart></DPSChart>
       </BasicTile>
+      <BasicTile classes="ttk">
+        <TimeToKill></TimeToKill>
+      </BasicTile>
     </div>
     <v-dialog />
   </div>
@@ -55,6 +58,7 @@ import SpecializationSlot from "./components/SpecializationSlot";
 import Toolbar from "./components/Toolbar";
 import newFeatureGlow from "./utils/newFeatureGlow";
 import DPSChart from "./components/DPSChart/DPSChart";
+import TimeToKill from "./components/TTK/TimeToKill";
 
 export default {
   name: "App",
@@ -66,6 +70,7 @@ export default {
     Toolbar,
     SHDLevels,
     DPSChart,
+    TimeToKill
   },
   data() {
     return {
@@ -174,6 +179,12 @@ body.no-scroll {
 .dps-chart {
   grid-column: col 1 / span 5;
 }
+
+
+.ttk {
+  grid-column: col 1 / span 5;
+}
+
 
 .news {
   grid-column: col 4 / span 2;

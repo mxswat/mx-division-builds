@@ -63,7 +63,8 @@ class DPSChartCoreService {
                 // return calculations with out counting bullets to kill and just return mag size
             } else {
                 shotsFired += Math.ceil(enemyHP / weaponStats.dmgToOutOfCoverArmored)
-                timePassed += (shotsFired / (weaponStats.rpm / 60)) * 1000;
+                // -1 because the first shot should always show 0s on the TTK
+                timePassed += ((shotsFired / (weaponStats.rpm / 60)) - (1 / (weaponStats.rpm / 60))) * 1000;
                 timePassed = (timePassed / 1000)
             }
             return {

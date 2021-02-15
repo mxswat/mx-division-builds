@@ -132,6 +132,7 @@ body.no-scroll {
   margin-top: 8px;
   margin-left: 8px;
   margin-right: 8px;
+  margin-bottom: 70px;
   @include media("<=uibreak") {
     grid-template-columns: repeat(1, [col] 1fr);
     .inventory-gui {

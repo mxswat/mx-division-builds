@@ -34,6 +34,17 @@
         <span class="section-title" style="position: relative"
           >Patch notes and news</span
         >
+        <p>New feature: TTK and Bullets to kill! Scoll down to try it!</p>
+        <p>
+          Fixed: Rate of fire % from Striker and Weapon attributes was bot used
+          to calculate the DPS
+        </p>
+        <p>
+          Fixed: skill duration, and headshot damage on the watch at 10% instead
+          of 20%
+        </p>
+
+        <p>------------</p>
         <p>Fixed: Weapon handling not affecting reload speed</p>
         <p>Fixed: Missing raw DTA and DTOOC stats</p>
         <p>Fixed: Skill duration not working with Skill efficency</p>

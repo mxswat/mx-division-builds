@@ -1,4 +1,3 @@
-import TableModal from "../components/Modals/TableModal";
 import GearSelectionModal from "../components/Modals/GearSelectionModal";
 import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
@@ -113,10 +112,34 @@ const openScreenshotModal = function () {
     );
 }
 
+const openSafariIOSModal = function () {
+    window.vueInstance.$modal.show('dialog', {
+        title: 'iOS and Safari',
+        text: `Hi, I see you are using iOS and Safari, if you have issues with the tool please use Chrome. </br>
+            I don't have an iPhone so I can't debug and solve Safari related issuses.
+            I hope you understand`,
+        buttons: [
+            {
+                title: "I don't have issues",
+                handler: () => {
+                    localStorage.setItem('iOS-Safari-OK', 'ok');
+                    location.reload();
+                }
+
+            },
+            {
+                title: 'I understand and I will use chrome',
+            }
+        ],
+        defaultEvents
+    })
+}
+
 export {
     openGearModal,
     openWeaponsModal,
     openSaveShareModal,
     openIssueModal,
-    openScreenshotModal
+    openScreenshotModal,
+    openSafariIOSModal
 }

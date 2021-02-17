@@ -79,6 +79,8 @@ import Toolbar from "./components/Toolbar";
 import newFeatureGlow from "./utils/newFeatureGlow";
 import DPSChart from "./components/DPSChart/DPSChart";
 import TimeToKill from "./components/TTK/TimeToKill";
+import { executeOrderSixtysix } from "./utils/detectMobile";
+import { openSafariIOSModal } from "./utils/modalService";
 
 export default {
   name: "App",
@@ -108,6 +110,14 @@ export default {
       this.loaded = true;
       console.log("Too many request :( ");
     });
+  },
+  mounted() {
+    // TODO: Lazy fix
+    setTimeout(() => {
+      if (executeOrderSixtysix()) {
+        openSafariIOSModal();
+      }
+    }, 300);
   },
 };
 </script>

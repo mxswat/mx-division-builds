@@ -117,7 +117,8 @@ const openSafariIOSModal = function () {
         title: 'iOS and Safari',
         text: `Hi, I see you are using iOS and Safari, if you have issues with the tool please use Chrome. </br>
             I don't have an iPhone so I can't debug and solve Safari related issuses.
-            I hope you understand`,
+            I hope you understand <br> if you still have problems there might be some problem related to you OS version please report this issue at 
+            <a target="_blank" style="color:" href="http://discord.gg/ShYner2">my discord server</a> `,
         buttons: [
             {
                 title: "I don't have issues",
@@ -125,7 +126,6 @@ const openSafariIOSModal = function () {
                     localStorage.setItem('iOS-Safari-OK', 'ok');
                     location.reload();
                 }
-
             },
             {
                 title: 'I understand and I will use chrome',

@@ -4,7 +4,7 @@ function executeOrderSixtysix() {
     var webkit = !!ua.match(/WebKit/i);
     var iOSSafari = iOS && webkit && !ua.match(/CriOS/i);
 
-    return iOSSafari && !localStorage.getItem('iOS-Safari-OK');
+    return (iOS || iOSSafari) && !localStorage.getItem('iOS-Safari-OK');
 }
 
 export { executeOrderSixtysix };

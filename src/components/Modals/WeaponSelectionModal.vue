@@ -209,11 +209,6 @@ export default {
   margin-left: 8px;
 }
 
-.search {
-  margin: 0px 8px;
-  max-height: 32px;
-}
-
 /// - TODO: DUPED CODE
 
 .menu-btt {

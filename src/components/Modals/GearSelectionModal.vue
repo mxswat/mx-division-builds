@@ -25,7 +25,7 @@
                 v-for="(bonuses, idx) in getBonuses(gear)"
                 v-bind:key="idx"
               >
-                <span class="bonus" v-for="bonus in bonuses" v-bind:key="bonus">
+                <span class="bonus white-space-pre-wrap" v-for="bonus in bonuses" v-bind:key="bonus">
                   {{ bonus }}
                   <br />
                 </span>
@@ -58,7 +58,7 @@ import {
 } from "../../utils/dataImporter";
 import { qualityToCss, QualityPriority } from "../../utils/utils";
 import BasicTile from "../BasicTile";
-const gearNameProp = 'Item Name';
+const gearNameProp = "Item Name";
 
 export default {
   name: "GearSelectionModal",
@@ -101,13 +101,18 @@ export default {
       this.onModalClose(gear);
     },
     buildBrandAndGearsetsMapping(brandSetBonuses) {
-      return brandSetBonuses.reduce((o, val) => {
-        o[val.Brand.slice(0, -1)] = o[val.Brand.slice(0, -1)] || [];
-        const bonuses = [`${val.stat} ${val.val}`];
-        if (val.stat1) {
-          bonuses.push(`${val.stat1} ${val.val1}`);
+      return brandSetBonuses.reduce((o, brandBonus) => {
+        const brandName = brandBonus.Brand.slice(0, -1); // remove the last char which is used in the DB
+        o[brandName] = o[brandName] || [];
+        const bonuses = [`${brandBonus.stat} ${brandBonus.val}`];
+        if (brandBonus.stat === "Talent") {
+          bonuses[0] = brandBonus.Talent.trim();
         }
-        o[val.Brand.slice(0, -1)].push(bonuses);
+        if (brandBonus.stat1) {
+          bonuses.push(`${brandBonus.stat1} ${brandBonus.val1}`);
+        }
+
+        o[brandName].push(bonuses);
         return o;
       }, {});
     },
@@ -233,10 +238,5 @@ export default {
 .overflow-handler {
   max-height: 100%;
   overflow: auto;
-}
-
-.search {
-  margin: 0px 8px;
-  max-height: 32px;
 }
 </style>

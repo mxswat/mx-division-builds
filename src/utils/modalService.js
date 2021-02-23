@@ -136,11 +136,37 @@ const openSafariIOSModal = function () {
     })
 }
 
+const openCreditsModal = function openCreditsModal() {
+    window.vueInstance.$modal.show('dialog', {
+        title: 'Credits',
+        text: `
+            <p> mxswat </p>
+            <p> GyroTwister </p>
+            <p> Kiochy </p>
+            <p> FROST </p>
+            <p> RedKnightAMW </p>
+            <p> TheSoldier </p>
+            <p> BANNED. </p>
+            <p> "The Division 2 - Gear Attribute Sheet" Team </p>
+            <p> saagri (NPCs HP values) </p>
+            <p> Vikeman45 (NPCs HP values) </p>
+            <p> <a href="http://rubenalamina.mx/the-division-weekly-vendor-reset/">Ruben Alamina - THE DIVISION 2: WEEKLY VENDOR RESET</a> </p>
+        `,
+        buttons: [
+            {
+                title: 'Close',
+            }
+        ],
+        defaultEvents
+    })
+}
+
 export {
     openGearModal,
     openWeaponsModal,
     openSaveShareModal,
     openIssueModal,
     openScreenshotModal,
-    openSafariIOSModal
+    openSafariIOSModal,
+    openCreditsModal
 }

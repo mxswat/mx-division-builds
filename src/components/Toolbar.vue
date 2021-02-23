@@ -15,6 +15,7 @@
       <button @click="clear()">Clear</button>
       <button @click="newBuild()">New Build</button>
       <button style="color: #f7d07c" @click="issues()">Issues or bug?</button>
+      <button @click="credits()"> Credits </button>
     </div>
     <!-- 
       Bugged TODO: Fix me
@@ -29,6 +30,7 @@ import {
   openSaveShareModal,
   openIssueModal,
   openScreenshotModal,
+  openCreditsModal
 } from "../utils/modalService";
 
 export default {
@@ -63,6 +65,9 @@ export default {
     screenshot() {
       openScreenshotModal();
     },
+    credits() {
+      openCreditsModal();
+    }
   },
 };
 </script>

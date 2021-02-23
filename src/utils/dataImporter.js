@@ -100,7 +100,7 @@ fetch(`${path}?${new Date().toISOString()}`, { method: 'GET', })
             .catch(() => {
                 IsEverythingLoadedPromiseReject()
                 window.localStorage.clear();
-                location.reload();
+                // location.reload();
             })
     })
 

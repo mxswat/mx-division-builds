@@ -251,7 +251,7 @@ export default {
       }
     },
     openGearModal() {
-      openGearModal(this.gearList, this.onModalClose);
+      openGearModal(this.gearList, this.name, this.onModalClose);
     },
     initGearMods() {
       gearData.GearMods.then((res) => {

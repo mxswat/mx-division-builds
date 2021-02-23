@@ -1,6 +1,7 @@
 @import "./scrollbar.scss";
 @import "./slots-common.scss";
 @import "./slots-stat-edit.scss";
+@import "./modals-common.scss";
 
 .gear-name,
 .weapon-name {
@@ -164,6 +165,7 @@ body .v--modal {
 			transform: scale(1) translateY(0);
 			z-index: 100;
 			transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26);
+			white-space: pre-wrap;
 		}
 	}
 	&:focus {
@@ -194,4 +196,8 @@ body .v--modal {
 // Chrome agent fix
 input {
 	color: white;
+}
+
+.white-space-pre-wrap {
+	white-space: pre-wrap;
 }

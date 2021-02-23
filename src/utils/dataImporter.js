@@ -1,13 +1,14 @@
 import Papa from "papaparse";
 import {
     csvToArrayWithKeys,
-    getAppRootPath
+    getAppRootPath,
+    groupArrayOfObjectsByKey
 } from './utils';
 let IsEverythingLoadedPromiseResolve, IsEverythingLoadedPromiseReject;
 
-const IsEverythingLoadedPromise = new Promise(function(resolve, reject){
-  IsEverythingLoadedPromiseResolve = resolve;
-  IsEverythingLoadedPromiseReject = reject;
+const IsEverythingLoadedPromise = new Promise(function (resolve, reject) {
+    IsEverythingLoadedPromiseResolve = resolve;
+    IsEverythingLoadedPromiseReject = reject;
 });
 
 const ClientDBVersion = Number(localStorage.getItem('localDBversion')) || 0;
@@ -44,32 +45,63 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
     }
 }
 
+const urls = ['gear', 'weapons']
+
+const VendorPromises = Promise.all(urls.map(url => fetch(`${getAppRootPath()}vendors/${url}.json`)
+    .then(e => e.json())))
+    .then(data => {
+        const gear = data[0].map(g => {
+            return {
+                Name: g.rarity.includes('named') ? g.name : g.brand,
+                Slot: g.slot,
+                Vendor: g.vendor
+            }
+        })
+
+        const weapons = data[1].map(g => {
+            return {
+                Name: g.rarity.includes('named') ? g.name.replace(/-.*/i, '').trim() : g.name,
+                Vendor: g.vendor
+            }
+        })
+        const gearBySlot = groupArrayOfObjectsByKey(gear, 'Slot')
+        return {
+            Gear: gearBySlot,
+            Weapons: weapons
+        };
+    });
+
 // DB.version path
 const path = getAppRootPath() + 'DB.Version';
 
-// Disable browser cache while download the DB version
+// Disable browser cache for the DB version using new Date
 fetch(`${path}?${new Date().toISOString()}`, { method: 'GET', })
     .then(response => response.blob())
     .then(blob => blob.text())
     .then((DownloadedDBVersion) => {
-        RemoteDBVersion = Number(DownloadedDBVersion);   
+        RemoteDBVersion = Number(DownloadedDBVersion);
         if (DownloadedDBVersion > ClientDBVersion) {
             window.localStorage.clear(); //clear all localstorage after new per sheet versioning
         }
         getFromGoogleDrive(wearableSource, gearData);
         getFromGoogleDrive(weaponsDataSource, weaponsData);
         getFromGoogleDrive(specializationListSource, specializationList);
-        
+
         Promise.all([
             ...Object.values(gearData),
             ...Object.values(weaponsData),
             ...Object.values(specializationList),
+            VendorPromises
         ])
-        .then(()=> {
-            localStorage.setItem('localDBversion', RemoteDBVersion);
-            IsEverythingLoadedPromiseResolve();
-        })
-        .catch(() => IsEverythingLoadedPromiseReject())
+            .then(() => {
+                localStorage.setItem('localDBversion', RemoteDBVersion);
+                IsEverythingLoadedPromiseResolve();
+            })
+            .catch(() => {
+                IsEverythingLoadedPromiseReject()
+                window.localStorage.clear();
+                location.reload();
+            })
     })
 
 const weaponsData = {
@@ -177,4 +209,5 @@ export {
     gearData,
     weaponsData,
     specializationList,
+    VendorPromises as VendorData
 };

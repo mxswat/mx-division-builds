@@ -24,7 +24,7 @@
     </div>
     <span class="section-title defensive">
       <img src="icons/defense1.png" class="image" />
-      Defensive Cores {{ coresCount.defensive }} | Armor: {{armorValue}}
+      Defensive Cores {{ coresCount.defensive }} | Armor: {{ armorValue }}
     </span>
     <div class="stats-list-3-col" v-if="stats">
       <div v-for="(stat, idx) in defensiveStats" v-bind:key="idx">
@@ -97,10 +97,15 @@ export default {
           ? stats.Cores.Offensive.reduce((a, b) => a + b)
           : 0;
       this.allWeaponDamage += stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0;
-      const allArmorCores = stats.Cores.Defensive.length > 0 ? stats.Cores.Defensive.reduce((a, b) => a + b) : 0;
+      const allArmorCores =
+        stats.Cores.Defensive.length > 0
+          ? stats.Cores.Defensive.reduce((a, b) => a + b)
+          : 0;
       //660014 is the base Armor Value for a LVL40 agent
-      this.armorValue = (660014 + allArmorCores) * (1 + (stats.Defensive[STATS_ENUM.TOTAL_ARMOR] / 100))
-      this.armorValue = this.roundValue(this.armorValue, 0)
+      this.armorValue =
+        (660014 + allArmorCores) *
+        (1 + stats.Defensive[STATS_ENUM.TOTAL_ARMOR] / 100);
+      this.armorValue = this.roundValue(this.armorValue, 0);
     },
     sumStatVals(vals) {
       return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
@@ -163,5 +168,9 @@ export default {
 }
 .utility {
   color: #f7d07c;
+}
+
+span.brand-stats {
+  white-space: pre-wrap;
 }
 </style>

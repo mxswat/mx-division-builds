@@ -38,8 +38,11 @@
               <span class="name">
                 {{ getDisplayName(weapon) }}
               </span>
-              <div>
+              <div class="white-space-pre-wrap">
                 {{ getTalentDesc(weapon.Talent) }}
+              </div>
+              <div v-if="isAvailableAtVendor(weapon)" class="vendor-label">
+                Sold at <b>{{ whereIsAvailable(weapon) }}</b>
               </div>
             </BasicTile>
           </div>
@@ -53,6 +56,7 @@
 import {
   IsEverythingLoadedPromise,
   weaponsData,
+  VendorData,
 } from "../../utils/dataImporter";
 import {
   qualityToCss,
@@ -74,6 +78,7 @@ export default {
       searchText: "",
       debounce: null,
       showMobileMenu: false,
+      vendorWeapons: [],
     };
   },
   methods: {
@@ -104,6 +109,15 @@ export default {
           .includes(this.searchText.toLocaleLowerCase())
       );
     },
+    isAvailableAtVendor(weapon) {
+      return this.vendorWeapons.some((item) => item.Name === weapon.Name);
+    },
+    whereIsAvailable(weapon) {
+      const found = this.vendorWeapons.find(
+        (item) => item.Name === weapon.Name
+      );
+      return found.Vendor;
+    },
     onSelection(weapon) {
       this.$emit("close");
       this.onModalClose(weapon);
@@ -113,9 +127,10 @@ export default {
     Promise.all([
       IsEverythingLoadedPromise,
       weaponsData.WeaponTalents,
+      VendorData,
       //   gearMetaData.BrandsData,
-    ]).then((res) => {
-      this.WeaponTalents = res[1].reduce(function (o, val) {
+    ]).then((data) => {
+      this.WeaponTalents = data[1].reduce(function (o, val) {
         o[val.Name] = val.Desc;
         return o;
       }, {});
@@ -124,6 +139,7 @@ export default {
           QualityPriority[a["Quality"]] - QualityPriority[[b["Quality"]]] ||
           a["Name"].localeCompare(b["Name"])
       );
+      this.vendorWeapons = data[2].Weapons;
       this.weaponsList = groupArrayOfObjectsByKey(sorted, "Weapon Type");
       console.log(this.weaponsList);
     });
@@ -154,7 +170,7 @@ export default {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    min-height: 90px;
+    min-height: 10px;
     cursor: pointer;
     &.named {
       background: rgba(255, 174, 0, 0.8);

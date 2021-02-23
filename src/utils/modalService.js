@@ -20,12 +20,12 @@ const defaultEvents = {
     'before-close': yesScroll
 };
 
-const openGearModal = function (gearList, onModalClose) {
+const openGearModal = function (gearList, slot, onModalClose) {
     window.vueInstance.$modal.show(
         GearSelectionModal, {
         gearData: gearList,
         onModalClose: onModalClose,
-        tableHeaders: gearHeaders
+        gearSlot: slot,
     }, {
         adaptive: true,
         width: "75%",

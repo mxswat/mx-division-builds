@@ -1,55 +1,68 @@
 <template>
-  <div class="overflow-handler">
-    <div class="gear-grid">
-      <div
-        class="gear-slot"
-        v-for="(gear, idx) in gearList"
-        v-bind:key="idx"
-        :class="[qualityToCSS(gear.Quality)]"
-        @click="onSelection(gear)"
-      >
-        <BasicTile :classes="'anim-enabled'">
-          <span class="name">
-            {{ getDisplayName(gear) }}
-          </span>
-          <ol class="bonuses-container" v-if="getBonuses(gear).length > 0">
-            <li
-              class="bonus-wrap"
-              v-for="(bonuses, idx) in getBonuses(gear)"
-              v-bind:key="idx"
-            >
-              <span class="bonus" v-for="bonus in bonuses" v-bind:key="bonus">
-                {{ bonus }}
-                <br />
-              </span>
-            </li>
-          </ol>
-          <div>
-            {{ getTalentDesc(gear.Talent) }}
-          </div>
-        </BasicTile>
-        <img
-          v-if="getBrandOrGearsetIcon(gear['Brand'])"
-          class="gear-logo"
-          :src="getBrandOrGearsetIcon(gear['Brand'])"
-          alt=""
-        />
+  <div class="gear-selection-modal">
+    <input
+      class="mx-input search"
+      placeholder="Search..."
+      type="text"
+      @input="debouceSearch"
+    />
+    <div class="overflow-handler">
+      <div class="gear-grid">
+        <div
+          class="gear-slot"
+          v-for="(gear, idx) in filterByName(gearList)"
+          v-bind:key="idx"
+          :class="[qualityToCSS(gear.Quality)]"
+          @click="onSelection(gear)"
+        >
+          <BasicTile :classes="'anim-enabled'">
+            <span class="name">
+              {{ getDisplayName(gear) }}
+            </span>
+            <ol class="bonuses-container" v-if="getBonuses(gear).length > 0">
+              <li
+                class="bonus-wrap"
+                v-for="(bonuses, idx) in getBonuses(gear)"
+                v-bind:key="idx"
+              >
+                <span class="bonus" v-for="bonus in bonuses" v-bind:key="bonus">
+                  {{ bonus }}
+                  <br />
+                </span>
+              </li>
+            </ol>
+            <div class="white-space-pre-wrap">
+              {{ getTalentDesc(gear.Talent) }}
+            </div>
+            <div v-if="isAvailableAtVendor(gear)" class="vendor-label">
+              Sold at <b>{{ whereIsAvailable(gear) }}</b>
+            </div>
+          </BasicTile>
+          <img
+            v-if="getBrandOrGearsetIcon(gear['Brand'])"
+            class="gear-logo"
+            :src="getBrandOrGearsetIcon(gear['Brand'])"
+            alt=""
+          />
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-
 import {
   gearData as gearMetaData,
   IsEverythingLoadedPromise,
+  VendorData,
 } from "../../utils/dataImporter";
 import { qualityToCss, QualityPriority } from "../../utils/utils";
 import BasicTile from "../BasicTile";
+const gearNameProp = 'Item Name';
+
 export default {
   name: "GearSelectionModal",
-  props: ["gearData", "onModalClose", "tableHeaders"],
+  props: ["gearData", "onModalClose", "gearSlot"],
   components: {
     BasicTile,
   },
@@ -58,6 +71,8 @@ export default {
       gearList: [],
       BrandsData: [],
       gearTalentsMap: {},
+      searchText: "",
+      vendorGear: [],
     };
   },
   methods: {
@@ -68,9 +83,9 @@ export default {
       return qualityToCss[quality];
     },
     getDisplayName(gear) {
-      return gear["Brand"] === gear["Item Name"]
-        ? gear["Item Name"]
-        : `${gear["Item Name"]} (${gear["Brand"]})`;
+      return gear["Brand"] === gear[gearNameProp]
+        ? gear[gearNameProp]
+        : `${gear[gearNameProp]} (${gear["Brand"]})`;
     },
     getTalentDesc(talent) {
       return this.gearTalentsMap[talent]
@@ -96,6 +111,28 @@ export default {
         return o;
       }, {});
     },
+    debouceSearch(event) {
+      clearTimeout(this.debounce);
+      this.debounce = setTimeout(() => {
+        this.searchText = event.target.value;
+      }, 300);
+    },
+    filterByName(list) {
+      return list.filter((gear) =>
+        this.getDisplayName(gear)
+          .toLocaleLowerCase()
+          .includes(this.searchText.toLocaleLowerCase())
+      );
+    },
+    isAvailableAtVendor(gear) {
+      return this.vendorGear.some((item) => item.Name === gear[gearNameProp]);
+    },
+    whereIsAvailable(gear) {
+      const found = this.vendorGear.find(
+        (item) => item.Name === gear[gearNameProp]
+      );
+      return found.Vendor;
+    },
   },
   created() {
     Promise.all([
@@ -103,21 +140,23 @@ export default {
       gearMetaData.BrandsData,
       gearMetaData.BrandSetBonuses,
       gearMetaData.GearTalents,
-    ]).then((res) => {
-      this.BrandsData = res[1].reduce(function (o, val) {
+      VendorData,
+    ]).then((data) => {
+      this.BrandsData = data[1].reduce(function (o, val) {
         o[val.Brand] = val;
         return o;
       }, {});
-      this.BrandsMapping = this.buildBrandAndGearsetsMapping(res[2]);
+      this.BrandsMapping = this.buildBrandAndGearsetsMapping(data[2]);
       this.gearList = this.gearData.sort(
         (a, b) =>
           QualityPriority[a["Quality"]] - QualityPriority[[b["Quality"]]] ||
-          a["Item Name"].localeCompare(b["Item Name"])
+          a[gearNameProp].localeCompare(b[gearNameProp])
       );
-      this.gearTalentsMap = res[3].reduce(function (o, val) {
+      this.gearTalentsMap = data[3].reduce(function (o, val) {
         o[val.Talent] = val;
         return o;
       }, {});
+      this.vendorGear = data[4].Gear[this.gearSlot];
     });
   },
   mounted() {},
@@ -125,6 +164,14 @@ export default {
 </script>
 
 <style lang="scss">
+.gear-selection-modal {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 .gear-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -186,5 +233,10 @@ export default {
 .overflow-handler {
   max-height: 100%;
   overflow: auto;
+}
+
+.search {
+  margin: 0px 8px;
+  max-height: 32px;
 }
 </style>

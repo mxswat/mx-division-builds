@@ -95,7 +95,7 @@ class StatsService {
                 stats.Weapons[slotKey] = this.getWeaponStats(data.weapons[idx], slotKey);
                 if (stats.Weapons[slotKey].weaponName)
                     DPSChartCore.addCoreWeaponTrace(slotKey, stats.Weapons[slotKey]);
-                    TTKCoreService.addCoreWeaponData(slotKey, stats.Weapons[slotKey])
+                TTKCoreService.addCoreWeaponData(slotKey, stats.Weapons[slotKey])
             }
         }
 
@@ -109,6 +109,9 @@ class StatsService {
                 // Add to brands OBJ
                 stats.brands[gear.brand] = stats.brands[gear.brand] || []
                 stats.brands[gear.brand].push(null);
+                if (gear.quality === "Exotic") {
+                    stats.brands[gear.brand][0] = gear.talent.Desc
+                }
                 if (gear.core) {
                     stats.Cores[statTypes[gear.core.Type]].push(gear.core.StatValue || gear.core.Max);
                 }
@@ -120,7 +123,7 @@ class StatsService {
                         const val = stat.StatValue || Number(stat.Max);
                         const savedVal = stats[statTypes[stat.Type]][stat.Stat] || 0;
                         stats[statTypes[stat.Type]][stat.Stat] = savedVal + val;
-                    }
+                    } 
                 }
                 if (this.isEdgeCaseGear(gear)) {
                     this.handleWearableEdgeCase(gear)
@@ -132,23 +135,30 @@ class StatsService {
             // eslint-disable-next-line
             if (stats.brands.hasOwnProperty(brand)) {
                 const brandCount = stats.brands[brand].length;
-                const brandBuffs = []
+                let brandBuffs = []
                 for (let idx = 0; idx < brandCount; idx++) {
                     const found = this.brandSetBonuses.find(
                         b => b.Brand == `${brand}${idx}`
                     )
                     if (found) {
-                        brandBuffs.push(`${found.stat} ${found.val}`);
-                        const statType = this.statsMapping[found.stat].Type;
-                        const prevVal = stats[statTypes[statType]][found.stat] || 0;
-                        stats[statTypes[statType]][found.stat] = Number(prevVal) + Number(found.val);
-                        // Horrible, TODO: Change me
-                        if (found.stat1) {
-                            brandBuffs.push(`${found.stat1} ${found.val1}`);
-                            const statType = this.statsMapping[found.stat1].Type;
-                            const prevVal = stats[statTypes[statType]][found.stat1] || 0;
-                            stats[statTypes[statType]][found.stat1] = Number(prevVal) + Number(found.val1);
+                        if (found.stat === 'Talent') {
+                            brandBuffs.push(found.Talent);
+                        } else {
+                            brandBuffs.push(`${found.stat} ${found.val}`);
+                            const statType = this.statsMapping[found.stat].Type;
+                            const prevVal = stats[statTypes[statType]][found.stat] || 0;
+                            stats[statTypes[statType]][found.stat] = Number(prevVal) + Number(found.val);
+                            // Horrible, TODO: Change me
+                            if (found.stat1) {
+                                brandBuffs.push(`${found.stat1} ${found.val1}`);
+                                const statType = this.statsMapping[found.stat1].Type;
+                                const prevVal = stats[statTypes[statType]][found.stat1] || 0;
+                                stats[statTypes[statType]][found.stat1] = Number(prevVal) + Number(found.val1);
+                            }
                         }
+                    } 
+                    else if (brand === "Exotic") {
+                        brandBuffs = [...stats.brands[brand]]
                     }
                 }
                 stats.brands[brand] = brandBuffs;
@@ -350,8 +360,6 @@ class StatsService {
     handleWearableEdgeCase(gear) {
         switch (this.edgeCaseGear.indexOf(gear.itemName)) {
             case 0:
-                stats.brands['Exotic'][1] = 'Repair Skills  +10%';
-                stats.brands['Exotic'][2] = 'Status Effects +10%';
                 addValueToStat(stats.Utility, 'Status Effects', 10)
                 addValueToStat(stats.Utility, 'Repair Skills', 10)
                 break;

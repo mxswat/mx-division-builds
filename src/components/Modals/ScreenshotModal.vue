@@ -7,13 +7,10 @@
       <button @click="downloadImage()">Download</button>
       <button @click="saveToClipBoard()">Copy to clipboard</button>
     </div>
-    <p>
+    <span>
       PRO Tip: if you copy to clipboard you can paste directly in Discord or
-      Reddit
-    </p>
-    <p>
-      Notes: Copy to clipboard does not work on firefox
-    </p>
+      Reddit. If it does not work right click the image and press copy to copy it
+    </span>
     <div class="loading" v-if="!screenshotLoaded">
       <span class="loader"></span>
     </div>

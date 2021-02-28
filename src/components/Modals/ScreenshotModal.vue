@@ -9,7 +9,7 @@
     </div>
     <span>
       PRO Tip: if you copy to clipboard you can paste directly in Discord or
-      Reddit
+      Reddit. If it does not work right click the image and press copy to copy it
     </span>
     <div class="loading" v-if="!screenshotLoaded">
       <span class="loader"></span>

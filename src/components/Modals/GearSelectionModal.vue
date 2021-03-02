@@ -15,6 +15,12 @@
           :class="[qualityToCSS(gear.Quality)]"
           @click="onSelection(gear)"
         >
+          <img
+            v-if="getBrandOrGearsetIcon(gear['Brand'])"
+            class="gear-logo"
+            :src="getBrandOrGearsetIcon(gear['Brand'])"
+            alt=""
+          />
           <BasicTile :classes="'anim-enabled'">
             <span class="name">
               {{ getDisplayName(gear) }}
@@ -25,7 +31,11 @@
                 v-for="(bonuses, idx) in getBonuses(gear)"
                 v-bind:key="idx"
               >
-                <span class="bonus white-space-pre-wrap" v-for="bonus in bonuses" v-bind:key="bonus">
+                <span
+                  class="bonus white-space-pre-wrap"
+                  v-for="bonus in bonuses"
+                  v-bind:key="bonus"
+                >
                   {{ bonus }}
                   <br />
                 </span>
@@ -38,12 +48,6 @@
               Sold at <b>{{ whereIsAvailable(gear) }}</b>
             </div>
           </BasicTile>
-          <img
-            v-if="getBrandOrGearsetIcon(gear['Brand'])"
-            class="gear-logo"
-            :src="getBrandOrGearsetIcon(gear['Brand'])"
-            alt=""
-          />
         </div>
       </div>
     </div>
@@ -238,5 +242,10 @@ export default {
 .overflow-handler {
   max-height: 100%;
   overflow: auto;
+}
+
+.exotic .gear-logo {
+  bottom: 20px;
+  top: auto;
 }
 </style>

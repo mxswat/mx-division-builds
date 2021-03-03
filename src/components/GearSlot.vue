@@ -166,6 +166,13 @@
         >
         </TalentSelect>
       </div>
+      <div
+        v-if="whereIsAvailable(currentGear)"
+        style="text-align: right"
+        class="slot-element"
+      >
+        Sold at <b>{{ whereIsAvailable(currentGear) }}</b>
+      </div>
     </template>
 
     <span class="no-element-selected" v-if="!isGearSelected()">
@@ -183,7 +190,7 @@ import {
   qualityToCss,
   getUniqueObject,
 } from "../utils/utils";
-import { gearData } from "../utils/dataImporter";
+import { gearData, VendorData } from "../utils/dataImporter";
 import StatInput from "./StatInput";
 import TalentSelect from "./GearSlot/TalentSelect";
 import Vue from "vue";
@@ -207,6 +214,7 @@ export default {
       gearTalents: null,
       allTalents: null,
       allGearAttributes: null,
+      vendorGear: [],
     };
   },
   methods: {
@@ -372,6 +380,12 @@ export default {
         this.gearList = values;
       });
     },
+    whereIsAvailable(gear) {
+      const found = this.vendorGear.find(
+        (item) => item?.Name === gear.itemName
+      );
+      return found?.Vendor;
+    },
   },
   created() {
     this.coreAttributes = getUniqueObject(coreAttributes);
@@ -381,6 +395,9 @@ export default {
     this.initGearAttributes();
     this.initGearTalentsList();
     this.initGearData();
+    VendorData.then((vendorGear) => {
+      this.vendorGear = vendorGear.Gear[this.name];
+    });
   },
   watch: {
     currentGear: {

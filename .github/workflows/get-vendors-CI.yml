@@ -32,5 +32,3 @@ on:
             #  │ │ │ │ │
             #  * * * * *
     - cron:  '30 7 * * 3,4'
-
-          echo test, and deploy your project.

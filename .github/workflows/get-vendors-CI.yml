@@ -10,18 +10,18 @@ on:
 jobs:
   keep_file_updated:
     runs-on: ubuntu-latest
-    name: Keep file updated
+    name: Get Data from rubenalamina
     steps:
     - name: Checkout repo
       id: checkout
       uses: actions/checkout@v2
-    - name: Update file
+    - name: Update gear.json
       id: update_gear
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:
         url: http://rubenalamina.mx/division/gear.json
         file_in_repo: public/vendors/gear.json
-    - name: Update file
+    - name: Update weapons.json
       id: update_weapons
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:

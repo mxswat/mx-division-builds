@@ -2,8 +2,8 @@ name: Get-Vendors-Data
 
 on:
   schedule:
-    #  Run every wednesday and tuesday at 7:30pm
-    - cron:  '30 19 * * 3,4'
+    #  Run every Tuesday and Wednesday at 7:30pm
+    - cron:  '30 19 * * 2,3'
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 

@@ -47,7 +47,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
 
 const urls = ['gear', 'weapons']
 
-const VendorPromises = Promise.all(urls.map(url => fetch(`${getAppRootPath()}vendors/${url}.json`)
+const VendorPromises = Promise.all(urls.map(url => fetch(`${getAppRootPath()}vendors/${url}.json?${new Date().toISOString()}`)
     .then(e => e.json())))
     .then(data => {
         const gear = data[0].map(g => {

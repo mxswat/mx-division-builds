@@ -9,8 +9,8 @@
    "slot": "Backpack",
    "armor": "131k",
    "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
-   "attributes": "<span class=\"icon-defensive\"></span>14,497 Health  ",
-   "talents": "-",
+   "attributes": "<span class=\"icon-defensive\"></span>14,497 Health <br/><span class=\"icon-offensive\"></span>5.4% Critical Hit Chance",
+   "talents": "<span class=\"icon-active\"></span>Safeguard",
    "mods": "Utility"
  },
  {

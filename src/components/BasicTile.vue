@@ -1,6 +1,6 @@
 <template functional>
   <div class="tile outer-border" :class="[props.classes]">
-    <img :src="props.bgImage" class="img-slot-bg" />
+    <img :src="props.bgImage" class="img-slot-bg" alt=""/>
     <div class="inner-border"></div>
     <slot></slot>
   </div>

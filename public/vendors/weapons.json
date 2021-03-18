@@ -362,5 +362,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>6.5% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mechanical Animal",
+   "dmg": "50,773",
+   "rpm": 720,
+   "mag": 30,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Black Market AK-M",
+   "dmg": "60,645",
+   "rpm": 600,
+   "mag": 30,
+   "talent": "Near Sighted",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Snubnosed Diceros",
+   "dmg": "169,243",
+   "rpm": 180,
+   "mag": 6,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.8% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>6% Damage to Armor",
+   "attribute3": "-"
  }
 ]

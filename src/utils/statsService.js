@@ -121,8 +121,12 @@ class StatsService {
                     const stat = gear[key]
                     if (stat) {
                         const val = stat.StatValue || Number(stat.Max);
-                        const savedVal = stats[statTypes[stat.Type]][stat.Stat] || 0;
-                        stats[statTypes[stat.Type]][stat.Stat] = savedVal + val;
+                        // I'm using trim because of the bug of the named and exotic weapons/gear atributes
+                        // We add a space or more to the attributes to maka it work
+                        // i know it sucks, but i'm making V2 so, this is old code
+                        const statName = stat.Stat.trim();
+                        const savedVal = stats[statTypes[stat.Type]][statName] || 0;
+                        stats[statTypes[stat.Type]][statName] = savedVal + val;
                     } 
                 }
                 if (this.isEdgeCaseGear(gear)) {

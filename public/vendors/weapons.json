@@ -390,5 +390,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>12.7% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>6% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Test Subject",
+   "dmg": "",
+   "rpm": 700,
+   "mag": 30,
+   "talent": "Perfectly In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>10% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.8% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "PP-19",
+   "dmg": "59,705",
+   "rpm": 700,
+   "mag": 53,
+   "talent": "Unwavering",
+   "attribute1": "<span class=\"icon-weapons\"></span>12% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.3% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom M44",
+   "dmg": "376,096",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>88% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
  }
 ]

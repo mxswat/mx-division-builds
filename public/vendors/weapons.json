@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.8% Reload Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "New Reliable - Black Market RPK-74 E",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Perfectly Optimized",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Health Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Honey Badger",
+   "dmg": "47,952",
+   "rpm": 790,
+   "mag": 30,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>92% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
  }
 ]

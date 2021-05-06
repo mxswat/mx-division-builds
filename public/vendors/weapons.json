@@ -390,5 +390,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Swap Chain - MP7",
+   "dmg": "47,952",
+   "rpm": 950,
+   "mag": 40,
+   "talent": "Perfect Unwavering",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.1% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military MK46",
+   "dmg": "56,414",
+   "rpm": 550,
+   "mag": 100,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.1% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Police 686 Magnum",
+   "dmg": "190,339",
+   "rpm": 160,
+   "mag": 6,
+   "talent": "Perpetuation",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.2% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12.8% Swap Speed",
+   "attribute3": "-"
  }
 ]

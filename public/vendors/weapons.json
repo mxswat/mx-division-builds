@@ -390,5 +390,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>8.9% MMR Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>111% Headshot Damage",
    "attribute3": "<span class=\"icon-weapons\"></span>10% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Baker's Dozen - Classic M1A",
+   "dmg": "205,442",
+   "rpm": 180,
+   "mag": 10,
+   "talent": "Perfect Lucky Shot",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M249 B",
+   "dmg": "56,414",
+   "rpm": 550,
+   "mag": 100,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>2.6% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.9% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>111% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Stability"
  }
 ]

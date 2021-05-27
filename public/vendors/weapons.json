@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Darkness - SOCOM Mk20 SSR",
+   "dmg": "143,857",
+   "rpm": 282,
+   "mag": 20,
+   "talent": "Perfect Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.8% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>89% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Police T821",
+   "dmg": "66,757",
+   "rpm": 550,
+   "mag": 32,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.2% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.6% Swap Speed"
  }
 ]

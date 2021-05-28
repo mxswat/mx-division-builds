@@ -1,6 +1,7 @@
 [
     {
-        "Item Name": "Tardigrade Armor System",
+        "Index": 0,
+        "Name": "Tardigrade Armor System",
         "Attributes": [
             "Explosive Resistance",
             "Armor Regeneration"
@@ -14,20 +15,19 @@
         "Talents": [
             "Ablative Nano-Plating"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "D",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 1
         }
     },
     {
-        "Item Name": "5.11 Tactical",
+        "Index": 1,
+        "Name": "5.11 Tactical",
         "Attributes": [
             "A",
             "A"
@@ -41,14 +41,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -56,10 +56,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 2,
+            "Gloves": 15,
+            "Holster": 3,
+            "Kneepads": 3,
+            "Backpack": 2,
+            "Mask": 2
         }
     },
     {
-        "Item Name": "Aces & Eights",
+        "Index": 2,
+        "Name": "Aces & Eights",
         "Attributes": [
             "A"
         ],
@@ -72,14 +81,14 @@
         "Talents": [
             "No Limit"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -87,10 +96,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 3,
+            "Gloves": 2,
+            "Holster": 4,
+            "Kneepads": 4,
+            "Backpack": 3,
+            "Mask": 3
         }
     },
     {
-        "Item Name": "Airaldi Holdings",
+        "Index": 3,
+        "Name": "Airaldi Holdings",
         "Attributes": [
             "A",
             "A"
@@ -104,14 +122,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -119,10 +137,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 4,
+            "Gloves": 16,
+            "Holster": 5,
+            "Kneepads": 5,
+            "Backpack": 4,
+            "Mask": 4
         }
     },
     {
-        "Item Name": "Pristine Example",
+        "Index": 4,
+        "Name": "Pristine Example",
         "Attributes": [
             "A",
             "A"
@@ -136,20 +163,19 @@
         "Talents": [
             "Perfect Focus"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 5
         }
     },
     {
-        "Item Name": "Alps Summit Armaments",
+        "Index": 5,
+        "Name": "Alps Summit Armaments",
         "Attributes": [
             "A",
             "A"
@@ -163,14 +189,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -178,10 +204,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 6,
+            "Gloves": 17,
+            "Holster": 6,
+            "Kneepads": 6,
+            "Backpack": 5,
+            "Mask": 5
         }
     },
     {
-        "Item Name": "Badger Tuff",
+        "Index": 6,
+        "Name": "Badger Tuff",
         "Attributes": [
             "A",
             "A"
@@ -195,14 +230,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -210,10 +245,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 7,
+            "Gloves": 18,
+            "Holster": 7,
+            "Kneepads": 7,
+            "Backpack": 7,
+            "Mask": 6
         }
     },
     {
-        "Item Name": "Zero F's",
+        "Index": 7,
+        "Name": "Zero F's",
         "Attributes": [
             "A",
             "A"
@@ -227,20 +271,19 @@
         "Talents": [
             "Perfectly Unbreakable"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 8
         }
     },
     {
-        "Item Name": "Ceska Vyroba s.r.o.",
+        "Index": 8,
+        "Name": "Ceska Vyroba s.r.o.",
         "Attributes": [
             "A",
             "A"
@@ -254,14 +297,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -269,10 +312,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 9,
+            "Gloves": 19,
+            "Holster": 9,
+            "Kneepads": 8,
+            "Backpack": 8,
+            "Mask": 7
         }
     },
     {
-        "Item Name": "China Light Industries Corporation",
+        "Index": 9,
+        "Name": "China Light Industries Corporation",
         "Attributes": [
             "A",
             "A"
@@ -286,14 +338,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -301,10 +353,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 10,
+            "Gloves": 20,
+            "Holster": 10,
+            "Kneepads": 9,
+            "Backpack": 10,
+            "Mask": 8
         }
     },
     {
-        "Item Name": "Douglas & Harding",
+        "Index": 10,
+        "Name": "Douglas & Harding",
         "Attributes": [
             "A",
             "A"
@@ -318,14 +379,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -333,10 +394,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 11,
+            "Gloves": 21,
+            "Holster": 11,
+            "Kneepads": 10,
+            "Backpack": 12,
+            "Mask": 9
         }
     },
     {
-        "Item Name": "Fenris Group AB",
+        "Index": 11,
+        "Name": "Fenris Group AB",
         "Attributes": [
             "A",
             "A"
@@ -350,14 +420,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -365,10 +435,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 12,
+            "Gloves": 22,
+            "Holster": 12,
+            "Kneepads": 11,
+            "Backpack": 13,
+            "Mask": 11
         }
     },
     {
-        "Item Name": "Ferocious Calm",
+        "Index": 12,
+        "Name": "Ferocious Calm",
         "Attributes": [
             "A",
             "A"
@@ -382,20 +461,19 @@
         "Talents": [
             "Perfect Overwatch"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 13
         }
     },
     {
-        "Item Name": "Foundry Bulwark",
+        "Index": 13,
+        "Name": "Foundry Bulwark",
         "Attributes": [
             "A"
         ],
@@ -408,14 +486,14 @@
         "Talents": [
             "Improved Materials"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -423,10 +501,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 14,
+            "Gloves": 3,
+            "Holster": 13,
+            "Kneepads": 12,
+            "Backpack": 14,
+            "Mask": 12
         }
     },
     {
-        "Item Name": "Future Initiative",
+        "Index": 14,
+        "Name": "Future Initiative",
         "Attributes": [
             "A"
         ],
@@ -439,14 +526,14 @@
         "Talents": [
             "Tactical Superiority"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -454,10 +541,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 15,
+            "Gloves": 4,
+            "Holster": 14,
+            "Kneepads": 13,
+            "Backpack": 15,
+            "Mask": 13
         }
     },
     {
-        "Item Name": "Gila Guard",
+        "Index": 15,
+        "Name": "Gila Guard",
         "Attributes": [
             "A",
             "A"
@@ -471,14 +567,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -486,10 +582,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 16,
+            "Gloves": 23,
+            "Holster": 15,
+            "Kneepads": 14,
+            "Backpack": 16,
+            "Mask": 14
         }
     },
     {
-        "Item Name": "Pointman",
+        "Index": 16,
+        "Name": "Pointman",
         "Attributes": [
             "A",
             "A"
@@ -503,20 +608,19 @@
         "Talents": [
             "Perfect Vanguard"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "D",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 17
         }
     },
     {
-        "Item Name": "Golan Gear Ltd",
+        "Index": 17,
+        "Name": "Golan Gear Ltd",
         "Attributes": [
             "A",
             "A"
@@ -530,14 +634,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -545,10 +649,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 18,
+            "Gloves": 24,
+            "Holster": 16,
+            "Kneepads": 15,
+            "Backpack": 17,
+            "Mask": 16
         }
     },
     {
-        "Item Name": "Hunter-Killer",
+        "Index": 18,
+        "Name": "Hunter-Killer",
         "Attributes": [
             "A",
             "A"
@@ -562,20 +675,19 @@
         "Talents": [
             "Perfect Intimidate"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "U",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 19
         }
     },
     {
-        "Item Name": "Grupo Sombra S.A.",
+        "Index": 19,
+        "Name": "Grupo Sombra S.A.",
         "Attributes": [
             "A",
             "A"
@@ -589,14 +701,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -604,10 +716,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 20,
+            "Gloves": 25,
+            "Holster": 17,
+            "Kneepads": 16,
+            "Backpack": 19,
+            "Mask": 17
         }
     },
     {
-        "Item Name": "Door-Kicker's Knock",
+        "Index": 20,
+        "Name": "Door-Kicker's Knock",
         "Attributes": [
             "A",
             "A"
@@ -621,20 +742,19 @@
         "Talents": [
             "Perfect Spark"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "U",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 21
         }
     },
     {
-        "Item Name": "Hana-U Corporation",
+        "Index": 21,
+        "Name": "Hana-U Corporation",
         "Attributes": [
             "A",
             "A"
@@ -648,14 +768,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -663,10 +783,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 22,
+            "Gloves": 26,
+            "Holster": 18,
+            "Kneepads": 17,
+            "Backpack": 20,
+            "Mask": 18
         }
     },
     {
-        "Item Name": "Hard Wired",
+        "Index": 22,
+        "Name": "Hard Wired",
         "Attributes": [
             "A"
         ],
@@ -679,14 +808,14 @@
         "Talents": [
             "Positive Reinforcement"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -694,10 +823,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 23,
+            "Gloves": 5,
+            "Holster": 19,
+            "Kneepads": 18,
+            "Backpack": 22,
+            "Mask": 19
         }
     },
     {
-        "Item Name": "Murakami Industries",
+        "Index": 23,
+        "Name": "Murakami Industries",
         "Attributes": [
             "A",
             "A"
@@ -711,14 +849,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -726,10 +864,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 24,
+            "Gloves": 27,
+            "Holster": 20,
+            "Kneepads": 19,
+            "Backpack": 23,
+            "Mask": 20
         }
     },
     {
-        "Item Name": "Negotiator's Dilemma",
+        "Index": 24,
+        "Name": "Negotiator's Dilemma",
         "Attributes": [
             "A"
         ],
@@ -742,14 +889,14 @@
         "Talents": [
             "Target Rich Environment"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -757,10 +904,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 25,
+            "Gloves": 6,
+            "Holster": 21,
+            "Kneepads": 21,
+            "Backpack": 24,
+            "Mask": 21
         }
     },
     {
-        "Item Name": "Ongoing Directive",
+        "Index": 25,
+        "Name": "Ongoing Directive",
         "Attributes": [
             "A"
         ],
@@ -773,14 +929,14 @@
         "Talents": [
             "Parabellum Rounds"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -788,10 +944,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 26,
+            "Gloves": 7,
+            "Holster": 22,
+            "Kneepads": 22,
+            "Backpack": 25,
+            "Mask": 22
         }
     },
     {
-        "Item Name": "Overlord Armaments",
+        "Index": 26,
+        "Name": "Overlord Armaments",
         "Attributes": [
             "A",
             "A"
@@ -805,14 +970,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -820,10 +985,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 27,
+            "Gloves": 28,
+            "Holster": 23,
+            "Kneepads": 23,
+            "Backpack": 26,
+            "Mask": 23
         }
     },
     {
-        "Item Name": "Petrov Defense Group",
+        "Index": 27,
+        "Name": "Petrov Defense Group",
         "Attributes": [
             "A",
             "A"
@@ -837,14 +1011,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -852,10 +1026,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 28,
+            "Gloves": 29,
+            "Holster": 24,
+            "Kneepads": 25,
+            "Backpack": 27,
+            "Mask": 24
         }
     },
     {
-        "Item Name": "Vedmedytsya Vest",
+        "Index": 28,
+        "Name": "Vedmedytsya Vest",
         "Attributes": [
             "A",
             "A"
@@ -869,20 +1052,19 @@
         "Talents": [
             "Perfect Braced"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 29
         }
     },
     {
-        "Item Name": "Providence Defense",
+        "Index": 29,
+        "Name": "Providence Defense",
         "Attributes": [
             "A",
             "A"
@@ -896,14 +1078,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -911,10 +1093,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 30,
+            "Gloves": 30,
+            "Holster": 25,
+            "Kneepads": 26,
+            "Backpack": 28,
+            "Mask": 25
         }
     },
     {
-        "Item Name": "The Sacrifice",
+        "Index": 30,
+        "Name": "The Sacrifice",
         "Attributes": [
             "A",
             "A"
@@ -928,20 +1119,19 @@
         "Talents": [
             "Perfect Glass Cannon"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 31
         }
     },
     {
-        "Item Name": "Richter & Kaiser GmbH",
+        "Index": 31,
+        "Name": "Richter & Kaiser GmbH",
         "Attributes": [
             "A",
             "A"
@@ -955,14 +1145,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -970,10 +1160,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 32,
+            "Gloves": 31,
+            "Holster": 26,
+            "Kneepads": 27,
+            "Backpack": 30,
+            "Mask": 26
         }
     },
     {
-        "Item Name": "Sokolov Concern",
+        "Index": 32,
+        "Name": "Sokolov Concern",
         "Attributes": [
             "A",
             "A"
@@ -987,14 +1186,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1002,10 +1201,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 33,
+            "Gloves": 32,
+            "Holster": 28,
+            "Kneepads": 28,
+            "Backpack": 31,
+            "Mask": 27
         }
     },
     {
-        "Item Name": "Striker's Battlegear",
+        "Index": 33,
+        "Name": "Striker's Battlegear",
         "Attributes": [
             "A"
         ],
@@ -1018,14 +1226,14 @@
         "Talents": [
             "Press the Advantage"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1033,10 +1241,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 34,
+            "Gloves": 8,
+            "Holster": 29,
+            "Kneepads": 29,
+            "Backpack": 32,
+            "Mask": 28
         }
     },
     {
-        "Item Name": "System Corruption",
+        "Index": 34,
+        "Name": "System Corruption",
         "Attributes": [
             "A"
         ],
@@ -1049,14 +1266,14 @@
         "Talents": [
             "Compiler Optimization"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -1064,10 +1281,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 35,
+            "Gloves": 9,
+            "Holster": 30,
+            "Kneepads": 30,
+            "Backpack": 33,
+            "Mask": 29
         }
     },
     {
-        "Item Name": "Tip of the Spear",
+        "Index": 35,
+        "Name": "Tip of the Spear",
         "Attributes": [
             "A"
         ],
@@ -1080,14 +1306,14 @@
         "Talents": [
             "Specialized Destruction"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1095,10 +1321,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 36,
+            "Gloves": 10,
+            "Holster": 31,
+            "Kneepads": 31,
+            "Backpack": 34,
+            "Mask": 30
         }
     },
     {
-        "Item Name": "True Patriot",
+        "Index": 36,
+        "Name": "True Patriot",
         "Attributes": [
             "A"
         ],
@@ -1111,14 +1346,14 @@
         "Talents": [
             "Waving the Flag"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "D",
             "Gloves": "",
@@ -1126,10 +1361,19 @@
             "Kneepads": "",
             "Backpack": "D",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 37,
+            "Gloves": 11,
+            "Holster": 32,
+            "Kneepads": 32,
+            "Backpack": 35,
+            "Mask": 31
         }
     },
     {
-        "Item Name": "Wyvern Wear",
+        "Index": 37,
+        "Name": "Wyvern Wear",
         "Attributes": [
             "A",
             "A"
@@ -1143,14 +1387,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -1158,10 +1402,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 38,
+            "Gloves": 33,
+            "Holster": 33,
+            "Kneepads": 33,
+            "Backpack": 36,
+            "Mask": 32
         }
     },
     {
-        "Item Name": "Yaahl Gear",
+        "Index": 38,
+        "Name": "Yaahl Gear",
         "Attributes": [
             "A",
             "A"
@@ -1175,14 +1428,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1190,10 +1443,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 39,
+            "Gloves": 34,
+            "Holster": 35,
+            "Kneepads": 34,
+            "Backpack": 37,
+            "Mask": 33
         }
     },
     {
-        "Item Name": "Improvised Body Armor",
+        "Index": 39,
+        "Name": "Improvised Body Armor",
         "Attributes": [
             "A",
             "A"
@@ -1207,20 +1469,19 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "A",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "A"
+        },
+        "legacyIndexes": {
+            "Chest": 40
         }
     },
     {
-        "Item Name": "Walker, Harris & Co.",
+        "Index": 40,
+        "Name": "Walker, Harris & Co.",
         "Attributes": [
             "A",
             "A"
@@ -1234,14 +1495,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1249,10 +1510,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 41,
+            "Gloves": 36,
+            "Holster": 37,
+            "Kneepads": 36,
+            "Backpack": 39,
+            "Mask": 37
         }
     },
     {
-        "Item Name": "Chainkiller",
+        "Index": 41,
+        "Name": "Chainkiller",
         "Attributes": [
             "A",
             "A"
@@ -1266,20 +1536,19 @@
         "Talents": [
             "Perfect Headhunter"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 42
         }
     },
     {
-        "Item Name": "Eclipse Protocol",
+        "Index": 42,
+        "Name": "Eclipse Protocol",
         "Attributes": [
             "A"
         ],
@@ -1292,14 +1561,14 @@
         "Talents": [
             "Proliferation"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -1307,10 +1576,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 43,
+            "Gloves": 12,
+            "Holster": 38,
+            "Kneepads": 37,
+            "Backpack": 41,
+            "Mask": 38
         }
     },
     {
-        "Item Name": "Empress International",
+        "Index": 43,
+        "Name": "Empress International",
         "Attributes": [
             "A",
             "A"
@@ -1324,14 +1602,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -1339,10 +1617,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 44,
+            "Gloves": 37,
+            "Holster": 39,
+            "Kneepads": 38,
+            "Backpack": 42,
+            "Mask": 39
         }
     },
     {
-        "Item Name": "Hunter's Fury",
+        "Index": 44,
+        "Name": "Hunter's Fury",
         "Attributes": [
             "A"
         ],
@@ -1355,14 +1642,14 @@
         "Talents": [
             "Endless Hunger"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1370,10 +1657,19 @@
             "Kneepads": "",
             "Backpack": "O",
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 45,
+            "Gloves": 13,
+            "Holster": 40,
+            "Kneepads": 39,
+            "Backpack": 43,
+            "Mask": 40
         }
     },
     {
-        "Item Name": "Rigger",
+        "Index": 45,
+        "Name": "Rigger",
         "Attributes": [
             "A"
         ],
@@ -1386,14 +1682,14 @@
         "Talents": [
             "Best Buds"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "U",
             "Gloves": "",
@@ -1401,10 +1697,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 46,
+            "Gloves": 14,
+            "Holster": 41,
+            "Kneepads": 40,
+            "Backpack": 44,
+            "Mask": 41
         }
     },
     {
-        "Item Name": "Caesar's Guard",
+        "Index": 46,
+        "Name": "Caesar's Guard",
         "Attributes": [
             "A",
             "A"
@@ -1418,20 +1723,19 @@
         "Talents": [
             "Perfectly Skilled"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "U",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "U"
+        },
+        "legacyIndexes": {
+            "Chest": 47
         }
     },
     {
-        "Item Name": "Ridgeway's Pride",
+        "Index": 47,
+        "Name": "Ridgeway's Pride",
         "Attributes": [
             "Critical Hit Chance",
             "Critical Hit Damage"
@@ -1445,20 +1749,19 @@
         "Talents": [
             "Bleeding Edge"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 48
         }
     },
     {
-        "Item Name": "Everyday Carrier",
+        "Index": 48,
+        "Name": "Everyday Carrier",
         "Attributes": [
             "A",
             "A"
@@ -1472,20 +1775,19 @@
         "Talents": [
             "Perfectly Efficient"
         ],
-        "Slots": [
-            "Chest"
-        ],
+        "Slots": {
+            "Chest": true
+        },
         "ModsPerSlot": {
-            "Chest": "O",
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Chest": "O"
+        },
+        "legacyIndexes": {
+            "Chest": 49
         }
     },
     {
-        "Item Name": "Belstone Armory",
+        "Index": 49,
+        "Name": "Belstone Armory",
         "Attributes": [
             "A",
             "A"
@@ -1499,14 +1801,14 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Chest",
-            "Gloves",
-            "Holster",
-            "Kneepads",
-            "Backpack",
-            "Mask"
-        ],
+        "Slots": {
+            "Chest": true,
+            "Gloves": true,
+            "Holster": true,
+            "Kneepads": true,
+            "Backpack": true,
+            "Mask": true
+        },
         "ModsPerSlot": {
             "Chest": "O",
             "Gloves": "",
@@ -1514,10 +1816,19 @@
             "Kneepads": "",
             "Backpack": "U",
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Chest": 50,
+            "Gloves": 38,
+            "Holster": 43,
+            "Kneepads": 41,
+            "Backpack": 47,
+            "Mask": 42
         }
     },
     {
-        "Item Name": "BTSU Gloves",
+        "Index": 50,
+        "Name": "BTSU Gloves",
         "Attributes": [
             "Skill Haste",
             "Repair Skills"
@@ -1531,20 +1842,19 @@
         "Talents": [
             "Transference Overclock"
         ],
-        "Slots": [
-            "Gloves"
-        ],
+        "Slots": {
+            "Gloves": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": "",
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Gloves": ""
+        },
+        "legacyIndexes": {
+            "Gloves": 1
         }
     },
     {
-        "Item Name": "Improvised Gloves",
+        "Index": 51,
+        "Name": "Improvised Gloves",
         "Attributes": [
             "A",
             "A"
@@ -1558,20 +1868,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Gloves"
-        ],
+        "Slots": {
+            "Gloves": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": "A",
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Gloves": "A"
+        },
+        "legacyIndexes": {
+            "Gloves": 35
         }
     },
     {
-        "Item Name": "Deathgrips",
+        "Index": 52,
+        "Name": "Deathgrips",
         "Attributes": [
             "Armor on Kill %",
             "A"
@@ -1585,20 +1894,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Gloves"
-        ],
+        "Slots": {
+            "Gloves": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": "",
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Gloves": ""
+        },
+        "legacyIndexes": {
+            "Gloves": 39
         }
     },
     {
-        "Item Name": "Motherly Love",
+        "Index": 53,
+        "Name": "Motherly Love",
         "Attributes": [
             "Skill Health",
             "A"
@@ -1612,20 +1920,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Gloves"
-        ],
+        "Slots": {
+            "Gloves": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": "",
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Gloves": ""
+        },
+        "legacyIndexes": {
+            "Gloves": 40
         }
     },
     {
-        "Item Name": "Contractor's Gloves",
+        "Index": 54,
+        "Name": "Contractor's Gloves",
         "Attributes": [
             "Damage to Armor",
             "A"
@@ -1639,20 +1946,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Gloves"
-        ],
+        "Slots": {
+            "Gloves": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": "",
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Gloves": ""
+        },
+        "legacyIndexes": {
+            "Gloves": 41
         }
     },
     {
-        "Item Name": "Firm Handshake",
+        "Index": 55,
+        "Name": "Firm Handshake",
         "Attributes": [
             "Status Effects ",
             "A"
@@ -1666,20 +1972,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Gloves"
-        ],
+        "Slots": {
+            "Gloves": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": "",
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Gloves": ""
+        },
+        "legacyIndexes": {
+            "Gloves": 42
         }
     },
     {
-        "Item Name": "Dodge City Gunslinger's Holster",
+        "Index": 56,
+        "Name": "Dodge City Gunslinger's Holster",
         "Attributes": [
             "Weapon Handling",
             "Headshot Damage"
@@ -1693,20 +1998,19 @@
         "Talents": [
             "Quick Draw"
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": ""
+        },
+        "legacyIndexes": {
+            "Holster": 1
         }
     },
     {
-        "Item Name": "Imperial Dynasty",
+        "Index": 57,
+        "Name": "Imperial Dynasty",
         "Attributes": [
             "Status Effects",
             "Hazard Protection"
@@ -1720,20 +2024,19 @@
         "Talents": [
             "Dragon's Glare"
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": ""
+        },
+        "legacyIndexes": {
+            "Holster": 2
         }
     },
     {
-        "Item Name": "Ammo Dump",
+        "Index": 58,
+        "Name": "Ammo Dump",
         "Attributes": [
             "Ammo Capacity",
             "A"
@@ -1747,20 +2050,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": ""
+        },
+        "legacyIndexes": {
+            "Holster": 8
         }
     },
     {
-        "Item Name": "Forge",
+        "Index": 59,
+        "Name": "Forge",
         "Attributes": [
             "Shield Health",
             "A"
@@ -1774,20 +2076,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": ""
+        },
+        "legacyIndexes": {
+            "Holster": 27
         }
     },
     {
-        "Item Name": "Claws Out",
+        "Index": 60,
+        "Name": "Claws Out",
         "Attributes": [
             "Melee Damage",
             "Pistol Damage"
@@ -1801,20 +2102,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": ""
+        },
+        "legacyIndexes": {
+            "Holster": 34
         }
     },
     {
-        "Item Name": "Improvised Holster",
+        "Index": 61,
+        "Name": "Improvised Holster",
         "Attributes": [
             "A",
             "A"
@@ -1828,20 +2128,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "A",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": "A"
+        },
+        "legacyIndexes": {
+            "Holster": 36
         }
     },
     {
-        "Item Name": "Waveform",
+        "Index": 62,
+        "Name": "Waveform",
         "Attributes": [
             "Skill Damage",
             "Skill Haste"
@@ -1855,20 +2154,19 @@
         "Talents": [
             "Alternating Current"
         ],
-        "Slots": [
-            "Holster"
-        ],
+        "Slots": {
+            "Holster": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": "",
-            "Kneepads": null,
-            "Backpack": null,
-            "Mask": null
+            "Holster": ""
+        },
+        "legacyIndexes": {
+            "Holster": 42
         }
     },
     {
-        "Item Name": "NinjaBike Messenger Kneepads",
+        "Index": 63,
+        "Name": "NinjaBike Messenger Kneepads",
         "Attributes": [
             "Critical Hit Chance",
             "Critical Hit Damage"
@@ -1882,20 +2180,19 @@
         "Talents": [
             "Parkour!"
         ],
-        "Slots": [
-            "Kneepads"
-        ],
+        "Slots": {
+            "Kneepads": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": "",
-            "Backpack": null,
-            "Mask": null
+            "Kneepads": ""
+        },
+        "legacyIndexes": {
+            "Kneepads": 1
         }
     },
     {
-        "Item Name": "Sawyer's Kneepads",
+        "Index": 64,
+        "Name": "Sawyer's Kneepads",
         "Attributes": [
             "Explosive Resistance",
             "Health"
@@ -1909,20 +2206,19 @@
         "Talents": [
             "Stand Your Ground"
         ],
-        "Slots": [
-            "Kneepads"
-        ],
+        "Slots": {
+            "Kneepads": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": "",
-            "Backpack": null,
-            "Mask": null
+            "Kneepads": ""
+        },
+        "legacyIndexes": {
+            "Kneepads": 2
         }
     },
     {
-        "Item Name": "Emperor's Guard",
+        "Index": 65,
+        "Name": "Emperor's Guard",
         "Attributes": [
             "Armor Regeneration %",
             "A"
@@ -1936,20 +2232,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Kneepads"
-        ],
+        "Slots": {
+            "Kneepads": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": "",
-            "Backpack": null,
-            "Mask": null
+            "Kneepads": ""
+        },
+        "legacyIndexes": {
+            "Kneepads": 20
         }
     },
     {
-        "Item Name": "Fox's Prayer",
+        "Index": 66,
+        "Name": "Fox's Prayer",
         "Attributes": [
             "Damage to TOC",
             "A"
@@ -1963,20 +2258,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Kneepads"
-        ],
+        "Slots": {
+            "Kneepads": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": "",
-            "Backpack": null,
-            "Mask": null
+            "Kneepads": ""
+        },
+        "legacyIndexes": {
+            "Kneepads": 24
         }
     },
     {
-        "Item Name": "Improvised Kneepads",
+        "Index": 67,
+        "Name": "Improvised Kneepads",
         "Attributes": [
             "A",
             "A"
@@ -1990,20 +2284,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Kneepads"
-        ],
+        "Slots": {
+            "Kneepads": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": "A",
-            "Backpack": null,
-            "Mask": null
+            "Kneepads": "A"
+        },
+        "legacyIndexes": {
+            "Kneepads": 35
         }
     },
     {
-        "Item Name": "Acosta's Go-Bag",
+        "Index": 68,
+        "Name": "Acosta's Go-Bag",
         "Attributes": [
             "Skill Haste",
             "Skill Damage"
@@ -2017,20 +2310,19 @@
         "Talents": [
             "One in Hand..."
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 1
         }
     },
     {
-        "Item Name": "Percussive Maintenance",
+        "Index": 69,
+        "Name": "Percussive Maintenance",
         "Attributes": [
             "A",
             "A"
@@ -2044,20 +2336,19 @@
         "Talents": [
             "Perfect Tech Support"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 6
         }
     },
     {
-        "Item Name": "Devil's Due",
+        "Index": 70,
+        "Name": "Devil's Due",
         "Attributes": [
             "A",
             "A"
@@ -2071,20 +2362,19 @@
         "Talents": [
             "Perfect Clutch"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "D",
-            "Mask": null
+            "Backpack": "D"
+        },
+        "legacyIndexes": {
+            "Backpack": 9
         }
     },
     {
-        "Item Name": "Strategic Alignment",
+        "Index": 71,
+        "Name": "Strategic Alignment",
         "Attributes": [
             "A",
             "A"
@@ -2098,20 +2388,19 @@
         "Talents": [
             "Perfect Shock and Awe"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 11
         }
     },
     {
-        "Item Name": "Anarchist's Cookbook",
+        "Index": 72,
+        "Name": "Anarchist's Cookbook",
         "Attributes": [
             "A",
             "A"
@@ -2125,20 +2414,19 @@
         "Talents": [
             "Perfectly Wicked"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 18
         }
     },
     {
-        "Item Name": "Force Multiplier",
+        "Index": 73,
+        "Name": "Force Multiplier",
         "Attributes": [
             "A",
             "A"
@@ -2152,20 +2440,19 @@
         "Talents": [
             "Perfect Combined Arms"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "O",
-            "Mask": null
+            "Backpack": "O"
+        },
+        "legacyIndexes": {
+            "Backpack": 21
         }
     },
     {
-        "Item Name": "The Gift",
+        "Index": 74,
+        "Name": "The Gift",
         "Attributes": [
             "A",
             "A"
@@ -2179,20 +2466,19 @@
         "Talents": [
             "Perfect Vigilance"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "O",
-            "Mask": null
+            "Backpack": "O"
+        },
+        "legacyIndexes": {
+            "Backpack": 29
         }
     },
     {
-        "Item Name": "Improvised Backpack",
+        "Index": 75,
+        "Name": "Improvised Backpack",
         "Attributes": [
             "A",
             "A"
@@ -2206,20 +2492,19 @@
         "Talents": [
             "A"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 38
         }
     },
     {
-        "Item Name": "Matador",
+        "Index": 76,
+        "Name": "Matador",
         "Attributes": [
             "A",
             "A"
@@ -2233,20 +2518,19 @@
         "Talents": [
             "Perfect Adrenaline Rush"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "O",
-            "Mask": null
+            "Backpack": "O"
+        },
+        "legacyIndexes": {
+            "Backpack": 40
         }
     },
     {
-        "Item Name": "Battery Pack",
+        "Index": 77,
+        "Name": "Battery Pack",
         "Attributes": [
             "A",
             "A"
@@ -2260,20 +2544,19 @@
         "Talents": [
             "Perfectly Calculated"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 45
         }
     },
     {
-        "Item Name": "Memento",
+        "Index": 78,
+        "Name": "Memento",
         "Attributes": [],
         "Brand": "Exotic",
         "Cores": [
@@ -2284,20 +2567,19 @@
         "Talents": [
             "Kill Confirmed"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 46
         }
     },
     {
-        "Item Name": "Liquid Engineer",
+        "Index": 79,
+        "Name": "Liquid Engineer",
         "Attributes": [
             "A",
             "A"
@@ -2311,20 +2593,19 @@
         "Talents": [
             "Perfect Bloodsucker"
         ],
-        "Slots": [
-            "Backpack"
-        ],
+        "Slots": {
+            "Backpack": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": "U",
-            "Mask": null
+            "Backpack": "U"
+        },
+        "legacyIndexes": {
+            "Backpack": 48
         }
     },
     {
-        "Item Name": "Coyote's Mask",
+        "Index": 80,
+        "Name": "Coyote's Mask",
         "Attributes": [
             "Critical Hit Chance",
             "Critical Hit Damage"
@@ -2338,20 +2619,19 @@
         "Talents": [
             "Pack Instincts"
         ],
-        "Slots": [
-            "Mask"
-        ],
+        "Slots": {
+            "Mask": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Mask": 1
         }
     },
     {
-        "Item Name": "Punch Drunk",
+        "Index": 81,
+        "Name": "Punch Drunk",
         "Attributes": [
             "Headshot Damage ",
             "A"
@@ -2365,20 +2645,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Mask"
-        ],
+        "Slots": {
+            "Mask": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Mask": 10
         }
     },
     {
-        "Item Name": "Nightwatcher",
+        "Index": 82,
+        "Name": "Nightwatcher",
         "Attributes": [
             "Scanner Pulse Haste",
             "A"
@@ -2392,20 +2671,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Mask"
-        ],
+        "Slots": {
+            "Mask": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
             "Mask": "D"
+        },
+        "legacyIndexes": {
+            "Mask": 15
         }
     },
     {
-        "Item Name": "The Hollow Man",
+        "Index": 83,
+        "Name": "The Hollow Man",
         "Attributes": [
             "Health Damage",
             "A"
@@ -2419,20 +2697,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Mask"
-        ],
+        "Slots": {
+            "Mask": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
             "Mask": "O"
+        },
+        "legacyIndexes": {
+            "Mask": 34
         }
     },
     {
-        "Item Name": "Improvised Mask",
+        "Index": 84,
+        "Name": "Improvised Mask",
         "Attributes": [
             "A",
             "A"
@@ -2446,20 +2723,19 @@
         "Talents": [
             ""
         ],
-        "Slots": [
-            "Mask"
-        ],
+        "Slots": {
+            "Mask": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
             "Mask": "A"
+        },
+        "legacyIndexes": {
+            "Mask": 35
         }
     },
     {
-        "Item Name": "Vile",
+        "Index": 85,
+        "Name": "Vile",
         "Attributes": [
             "Status Effects",
             "Hazard Protection"
@@ -2473,16 +2749,14 @@
         "Talents": [
             "Toxic Delivery"
         ],
-        "Slots": [
-            "Mask"
-        ],
+        "Slots": {
+            "Mask": true
+        },
         "ModsPerSlot": {
-            "Chest": null,
-            "Gloves": null,
-            "Holster": null,
-            "Kneepads": null,
-            "Backpack": null,
             "Mask": "U"
+        },
+        "legacyIndexes": {
+            "Mask": 36
         }
     }
 ]

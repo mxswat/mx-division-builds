@@ -262,87 +262,84 @@ export default {
       openGearModal(this.gearList, this.name, this.onModalClose);
     },
     initGearMods() {
-      Promise.all(
-        [
-          gearData.Chest,
-          gearData.Gloves,
-          gearData.Holster,
-          gearData.Kneepads,
-          gearData.Backpack,
-          gearData.Mask
-        ]
-      ).then((res) => {
+      Promise.all([
+        gearData.Chest,
+        gearData.Gloves,
+        gearData.Holster,
+        gearData.Kneepads,
+        gearData.Backpack,
+        gearData.Mask,
+      ]).then((res) => {
         const slots = [
-          'Chest',
-          'Gloves',
-          'Holster',
-          'Kneepads',
-          'Backpack',
-          'Mask',
-        ]
+          "Chest",
+          "Gloves",
+          "Holster",
+          "Kneepads",
+          "Backpack",
+          "Mask",
+        ];
         for (let i = 0; i < res.length; i++) {
           const data = res[i];
           for (let k = 0; k < data.length; k++) {
             const item = data[k];
-            item.slot = slots[i]
+            item.slot = slots[i];
           }
         }
         const merged = [].concat.apply([], res);
-        const newItemsList = []
+        const newItemsList = [];
         for (let i = 0; i < merged.length; i++) {
           const item = merged[i];
           if (item._found === true) {
             continue;
           }
-          const newItemSlots = new Set([item.slot])
+          const legacyIndexes = {};
+          legacyIndexes[item.slot] = item.index;
+          const newItemSlots = {}
+          newItemSlots[item.slot] = true
           const newItem = {
-            "Item Name": item["Item Name"],
-            Attributes: [
-              item["Attribute 1"],
-              item["Attribute 2"]
-            ].filter(Boolean),
+            Index: newItemsList.length, 
+            Name: item["Item Name"],
+            Attributes: [item["Attribute 1"], item["Attribute 2"]].filter(
+              Boolean
+            ),
             Brand: item.Brand,
             Cores: [item.Core],
             Quality: item.Quality,
             Type: item.Type,
-            Talents: [
-              item.Talent
-            ],
+            Talents: [item.Talent],
             Slots: [],
-            ModsPerSlot: {
-              Chest: null,
-              Gloves: null,
-              Holster: null,
-              Kneepads: null,
-              Backpack: null,
-              Mask: null,
-            }
-          }
+            ModsPerSlot: {},
+          };
           for (let k = 0; k < merged.length; k++) {
             const _item = merged[k];
-            if (item["Item Name"] === _item["Item Name"] && _item._found !== true) {
-              _item._found = true
-              newItem.ModsPerSlot[_item.slot] = _item.Mod 
-              newItemSlots.add(_item.slot)
+            if (
+              item["Item Name"] === _item["Item Name"] &&
+              _item._found !== true
+            ) {
+              _item._found = true;
+              newItem.ModsPerSlot[_item.slot] = _item.Mod;
+              newItemSlots[_item.slot] = true
+              legacyIndexes[_item.slot] = _item.index;
             }
           }
-          newItem.Slots = Array.from(newItemSlots)
-          newItemsList.push(newItem)
+          newItem.Slots = newItemSlots
+          newItem.legacyIndexes = legacyIndexes
+          newItemsList.push(newItem);
         }
 
-        console.log(newItemsList)
+        console.log(newItemsList);
         var json = JSON.stringify(newItemsList);
-        var blob = new Blob([json], {type: "application/json"});
-        var url  = URL.createObjectURL(blob);
+        var blob = new Blob([json], { type: "application/json" });
+        var url = URL.createObjectURL(blob);
 
-        var a = document.createElement('a');
-        a.download    = "backup.json";
-        a.href        = url;
+        var a = document.createElement("a");
+        a.download = "backup.json";
+        a.href = url;
         a.textContent = "Download backup.json";
         if (!window._clicked) {
           // a.click()
         }
-        window._clicked = true
+        window._clicked = true;
       });
       gearData.GearMods.then((res) => {
         this.gearMods = getUniqueObject(res);

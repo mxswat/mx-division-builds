@@ -262,6 +262,84 @@ export default {
       openGearModal(this.gearList, this.name, this.onModalClose);
     },
     initGearMods() {
+      Promise.all(
+        [
+          gearData.Chest,
+          gearData.Gloves,
+          gearData.Holster,
+          gearData.Kneepads,
+          gearData.Backpack,
+          gearData.Mask
+        ]
+      ).then((res) => {
+        const slots = [
+          'Chest',
+          'Gloves',
+          'Holster',
+          'Kneepads',
+          'Backpack',
+          'Mask',
+        ]
+        for (let i = 0; i < res.length; i++) {
+          const data = res[i];
+          for (let k = 0; k < data.length; k++) {
+            const item = data[k];
+            item.slot = slots[i]
+          }
+        }
+        const merged = [].concat.apply([], res);
+        const newItemsList = []
+        for (let i = 0; i < merged.length; i++) {
+          const item = merged[i];
+          if (item._found === true) {
+            continue;
+          }
+          const newItemSlots = new Set([item.slot])
+          const newItem = {
+            "Item Name": item["Item Name"],
+            Attributes: [
+              item["Attribute 1"],
+              item["Attribute 2"]
+            ].filter(Boolean),
+            Brand: item.Brand,
+            Core: item.Core,
+            Quality: item.Quality,
+            Type: item.Type,
+            Talents: [
+              item.Talent
+            ],
+            Slots: [],
+            ModsPerSlot: {
+              Chest: null,
+              Gloves: null,
+              Holster: null,
+              Kneepads: null,
+              Backpack: null,
+              Mask: null,
+            }
+          }
+          for (let k = 0; k < merged.length; k++) {
+            const _item = merged[k];
+            if (item["Item Name"] === _item["Item Name"] && _item._found !== true) {
+              _item._found = true
+              newItem.ModsPerSlot[_item.slot] = _item.Mod 
+              newItemSlots.add(_item.slot)
+            }
+          }
+          newItem.Slots = Array.from(newItemSlots)
+          newItemsList.push(newItem)
+        }
+
+        console.log(newItemsList)
+        var json = JSON.stringify(newItemsList);
+        var blob = new Blob([json], {type: "application/json"});
+        var url  = URL.createObjectURL(blob);
+
+        var a = document.createElement('a');
+        a.download    = "backup.json";
+        a.href        = url;
+        a.textContent = "Download backup.json";
+      });
       gearData.GearMods.then((res) => {
         this.gearMods = getUniqueObject(res);
       });

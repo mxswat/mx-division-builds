@@ -1,0 +1,2488 @@
+[
+    {
+        "Item Name": "Tardigrade Armor System",
+        "Attributes": [
+            "Explosive Resistance",
+            "Armor Regeneration"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Ablative Nano-Plating"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "5.11 Tactical",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "5.11 Tactical",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "Aces & Eights",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Aces & Eights",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "No Limit"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Airaldi Holdings",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Airaldi Holdings",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Pristine Example",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Airaldi Holdings",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Focus"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Alps Summit Armaments",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Alps Summit Armaments",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Badger Tuff",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Badger Tuff",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Zero F's",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Badger Tuff",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfectly Unbreakable"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Ceska Vyroba s.r.o.",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Ceska Vyroba s.r.o.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "China Light Industries Corporation",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "China Light Industries Corporation",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Douglas & Harding",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Douglas & Harding",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Fenris Group AB",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Fenris Group AB",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Ferocious Calm",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Fenris Group AB",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Overwatch"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Foundry Bulwark",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Foundry Bulwark",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Improved Materials"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "Future Initiative",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Future Initiative",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Tactical Superiority"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Gila Guard",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Gila Guard",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "Pointman",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Gila Guard",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Vanguard"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Golan Gear Ltd",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Golan Gear Ltd",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Hunter-Killer",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Golan Gear Ltd",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Intimidate"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Grupo Sombra S.A.",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Grupo Sombra S.A.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Door-Kicker's Knock",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Grupo Sombra S.A.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Spark"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Hana-U Corporation",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Hana-U Corporation",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Hard Wired",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Hard Wired",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Positive Reinforcement"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Murakami Industries",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Murakami Industries",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Negotiator's Dilemma",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Negotiator's Dilemma",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Target Rich Environment"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Ongoing Directive",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Ongoing Directive",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Parabellum Rounds"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Overlord Armaments",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Overlord Armaments",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Petrov Defense Group",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Petrov Defense Group",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Vedmedytsya Vest",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Petrov Defense Group",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Braced"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Providence Defense",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Providence Defense",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "The Sacrifice",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Providence Defense",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Glass Cannon"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Richter & Kaiser GmbH",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Richter & Kaiser GmbH",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "Sokolov Concern",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Sokolov Concern",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Striker's Battlegear",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Striker's Battlegear",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Press the Advantage"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "System Corruption",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "System Corruption",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Compiler Optimization"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Tip of the Spear",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Tip of the Spear",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Specialized Destruction"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "True Patriot",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "True Patriot",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Waving the Flag"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "D",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "D",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "Wyvern Wear",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Wyvern Wear",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Yaahl Gear",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Yaahl Gear",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Improvised Body Armor",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Crafted",
+        "Cores": [
+            "A"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "A",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Walker, Harris & Co.",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Walker, Harris & Co.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Chainkiller",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Walker, Harris & Co.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Headhunter"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Eclipse Protocol",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Eclipse Protocol",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Proliferation"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Empress International",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Empress International",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Hunter's Fury",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Hunter's Fury",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Endless Hunger"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "O",
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Rigger",
+        "Attributes": [
+            "A"
+        ],
+        "Brand": "Rigger",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Gearset",
+        "Type": "S",
+        "Talents": [
+            "Best Buds"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "U"
+        }
+    },
+    {
+        "Item Name": "Caesar's Guard",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Empress International",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfectly Skilled"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "U",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Ridgeway's Pride",
+        "Attributes": [
+            "Critical Hit Chance",
+            "Critical Hit Damage"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Bleeding Edge"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Everyday Carrier",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Belstone Armory",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfectly Efficient"
+        ],
+        "Slots": [
+            "Chest"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Belstone Armory",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Belstone Armory",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Chest",
+            "Gloves",
+            "Holster",
+            "Kneepads",
+            "Backpack",
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": "O",
+            "Gloves": "",
+            "Holster": "",
+            "Kneepads": "",
+            "Backpack": "U",
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "BTSU Gloves",
+        "Attributes": [
+            "Skill Haste",
+            "Repair Skills"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Transference Overclock"
+        ],
+        "Slots": [
+            "Gloves"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": "",
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Improvised Gloves",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Crafted",
+        "Cores": [
+            "A"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Gloves"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": "A",
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Deathgrips",
+        "Attributes": [
+            "Armor on Kill %",
+            "A"
+        ],
+        "Brand": "5.11 Tactical",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Gloves"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": "",
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Motherly Love",
+        "Attributes": [
+            "Skill Health",
+            "A"
+        ],
+        "Brand": "Alps Summit Armaments",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Gloves"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": "",
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Contractor's Gloves",
+        "Attributes": [
+            "Damage to Armor",
+            "A"
+        ],
+        "Brand": "Petrov Defense Group",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Gloves"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": "",
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Firm Handshake",
+        "Attributes": [
+            "Status Effects ",
+            "A"
+        ],
+        "Brand": "Sokolov Concern",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Gloves"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": "",
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Dodge City Gunslinger's Holster",
+        "Attributes": [
+            "Weapon Handling",
+            "Headshot Damage"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Quick Draw"
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Imperial Dynasty",
+        "Attributes": [
+            "Status Effects",
+            "Hazard Protection"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Dragon's Glare"
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Ammo Dump",
+        "Attributes": [
+            "Ammo Capacity",
+            "A"
+        ],
+        "Brand": "Badger Tuff",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Forge",
+        "Attributes": [
+            "Shield Health",
+            "A"
+        ],
+        "Brand": "Richter & Kaiser GmbH",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Claws Out",
+        "Attributes": [
+            "Melee Damage",
+            "Pistol Damage"
+        ],
+        "Brand": "Wyvern Wear",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Improvised Holster",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Crafted",
+        "Cores": [
+            "A"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "A",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Waveform",
+        "Attributes": [
+            "Skill Damage",
+            "Skill Haste"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Alternating Current"
+        ],
+        "Slots": [
+            "Holster"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": "",
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "NinjaBike Messenger Kneepads",
+        "Attributes": [
+            "Critical Hit Chance",
+            "Critical Hit Damage"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Parkour!"
+        ],
+        "Slots": [
+            "Kneepads"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": "",
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Sawyer's Kneepads",
+        "Attributes": [
+            "Explosive Resistance",
+            "Health"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Stand Your Ground"
+        ],
+        "Slots": [
+            "Kneepads"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": "",
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Emperor's Guard",
+        "Attributes": [
+            "Armor Regeneration %",
+            "A"
+        ],
+        "Brand": "Murakami Industries",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Kneepads"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": "",
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Fox's Prayer",
+        "Attributes": [
+            "Damage to TOC",
+            "A"
+        ],
+        "Brand": "Overlord Armaments",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Kneepads"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": "",
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Improvised Kneepads",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Crafted",
+        "Cores": [
+            "A"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Kneepads"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": "A",
+            "Backpack": null,
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Acosta's Go-Bag",
+        "Attributes": [
+            "Skill Haste",
+            "Skill Damage"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "One in Hand..."
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Percussive Maintenance",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Alps Summit Armaments",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Tech Support"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Devil's Due",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Ceska Vyroba s.r.o.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Clutch"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "D",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Strategic Alignment",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "China Light Industries Corporation",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Shock and Awe"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Anarchist's Cookbook",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Golan Gear Ltd",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfectly Wicked"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Force Multiplier",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Hana-U Corporation",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Combined Arms"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "O",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "The Gift",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Providence Defense",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Vigilance"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "O",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Improvised Backpack",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Crafted",
+        "Cores": [
+            "A"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            "A"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Matador",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Walker, Harris & Co.",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Adrenaline Rush"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "O",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Battery Pack",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Empress International",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfectly Calculated"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Memento",
+        "Attributes": [],
+        "Brand": "Exotic",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Kill Confirmed"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Liquid Engineer",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Belstone Armory",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            "Perfect Bloodsucker"
+        ],
+        "Slots": [
+            "Backpack"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": "U",
+            "Mask": null
+        }
+    },
+    {
+        "Item Name": "Coyote's Mask",
+        "Attributes": [
+            "Critical Hit Chance",
+            "Critical Hit Damage"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Pack Instincts"
+        ],
+        "Slots": [
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Punch Drunk",
+        "Attributes": [
+            "Headshot Damage ",
+            "A"
+        ],
+        "Brand": "Douglas & Harding",
+        "Cores": [
+            "Weapon Damage"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Nightwatcher",
+        "Attributes": [
+            "Scanner Pulse Haste",
+            "A"
+        ],
+        "Brand": "Gila Guard",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": "D"
+        }
+    },
+    {
+        "Item Name": "The Hollow Man",
+        "Attributes": [
+            "Health Damage",
+            "A"
+        ],
+        "Brand": "Yaahl Gear",
+        "Cores": [
+            "Armor"
+        ],
+        "Quality": "Named",
+        "Type": "N",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": "O"
+        }
+    },
+    {
+        "Item Name": "Improvised Mask",
+        "Attributes": [
+            "A",
+            "A"
+        ],
+        "Brand": "Crafted",
+        "Cores": [
+            "A"
+        ],
+        "Quality": "High End",
+        "Type": "A",
+        "Talents": [
+            ""
+        ],
+        "Slots": [
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": "A"
+        }
+    },
+    {
+        "Item Name": "Vile",
+        "Attributes": [
+            "Status Effects",
+            "Hazard Protection"
+        ],
+        "Brand": "Exotic",
+        "Cores": [
+            "Skill Tier"
+        ],
+        "Quality": "Exotic",
+        "Type": "E",
+        "Talents": [
+            "Toxic Delivery"
+        ],
+        "Slots": [
+            "Mask"
+        ],
+        "ModsPerSlot": {
+            "Chest": null,
+            "Gloves": null,
+            "Holster": null,
+            "Kneepads": null,
+            "Backpack": null,
+            "Mask": "U"
+        }
+    }
+]

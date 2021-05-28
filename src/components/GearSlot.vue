@@ -302,7 +302,7 @@ export default {
               item["Attribute 2"]
             ].filter(Boolean),
             Brand: item.Brand,
-            Core: item.Core,
+            Cores: [item.Core],
             Quality: item.Quality,
             Type: item.Type,
             Talents: [
@@ -339,6 +339,10 @@ export default {
         a.download    = "backup.json";
         a.href        = url;
         a.textContent = "Download backup.json";
+        if (!window._clicked) {
+          // a.click()
+        }
+        window._clicked = true
       });
       gearData.GearMods.then((res) => {
         this.gearMods = getUniqueObject(res);

@@ -1,0 +1,216 @@
+Quality,Slot,Item Name,Type,Brand,Core,Attribute 1,Attribute 2,Mod,Talent
+Exotic,Backpack,Acosta's Go-Bag,E,Exotic,Skill Tier,Skill Haste,Skill Damage,U,One in Hand...
+Exotic,Gloves,BTSU Gloves,E,Exotic,Skill Tier,Skill Haste,Repair Skills,,Transference Overclock
+Exotic,Mask,Coyote's Mask,E,Exotic,Weapon Damage,Critical Hit Chance,Critical Hit Damage,O,Pack Instincts
+Exotic,Holster,Dodge City Gunslinger's Holster,E,Exotic,Weapon Damage,Weapon Handling,Headshot Damage,,Quick Draw
+Exotic,Holster,Imperial Dynasty,E,Exotic,Skill Tier,Status Effects,Hazard Protection,,Dragon's Glare
+Exotic,Kneepads,NinjaBike Messenger Kneepads,E,Exotic,Weapon Damage,Critical Hit Chance,Critical Hit Damage,,Parkour!
+Exotic,Kneepads,Sawyer's Kneepads,E,Exotic,Armor,Explosive Resistance,Health,,Grace Under Fire
+Exotic,Chest,Tardigrade Armor System,E,Exotic,Armor,Explosive Resistance,Armor Regeneration,D,Ablative Nano-Plating
+High End,Backpack,5.11 Tactical,A,5.11 Tactical,Armor,A,A,D,A
+High End,Chest,5.11 Tactical,A,5.11 Tactical,Armor,A,A,D,A
+High End,Gloves,5.11 Tactical,A,5.11 Tactical,Armor,A,A,,
+High End,Holster,5.11 Tactical,A,5.11 Tactical,Armor,A,A,,
+High End,Kneepads,5.11 Tactical,A,5.11 Tactical,Armor,A,A,,
+High End,Mask,5.11 Tactical,A,5.11 Tactical,Armor,A,A,D,
+Named,Gloves,Deathgrips,S,5.11 Tactical,Armor,Armor on Kill,A,,
+Gearset,Backpack,Aces and Eights,S,Aces and Eights,Weapon Damage,A,A,O,Poker Face
+Gearset,Chest,Aces and Eights,S,Aces and Eights,Weapon Damage,A,A,O,No Limit
+Gearset,Gloves,Aces and Eights,S,Aces and Eights,Weapon Damage,A,A,,
+Gearset,Holster,Aces and Eights,S,Aces and Eights,Weapon Damage,A,A,,
+Gearset,Kneepads,Aces and Eights,S,Aces and Eights,Weapon Damage,A,A,,
+Gearset,Mask,Aces and Eights,S,Aces and Eights,Weapon Damage,A,A,O,
+High End,Backpack,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,O,A
+High End,Chest,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,O,A
+High End,Gloves,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,,
+High End,Holster,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,,
+High End,Kneepads,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,,
+High End,Mask,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,O,
+Named,Chest,Pristine Example,N,Airaldi Holdings,Weapon Damage,A,A,O,Perfect Focus
+High End,Backpack,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,U,A
+High End,Chest,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,U,A
+High End,Gloves,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,,
+High End,Holster,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,,
+High End,Kneepads,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,,
+High End,Mask,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,U,
+Named,Gloves,Motherly Love,N,Alps Summit Armaments,Skill Tier,Skill Health,A,,
+Named,Backpack,Percussive Maintenance,N,Alps Summit Armaments,Skill Tier,A,A,U,Perfect Tech Support
+High End,Backpack,Badger Tuff,A,Badger Tuff,Armor,A,A,O,A
+High End,Chest,Badger Tuff,A,Badger Tuff,Armor,A,A,O,A
+High End,Gloves,Badger Tuff,A,Badger Tuff,Armor,A,A,,
+High End,Holster,Badger Tuff,A,Badger Tuff,Armor,A,A,,
+High End,Kneepads,Badger Tuff,A,Badger Tuff,Armor,A,A,,
+High End,Mask,Badger Tuff,A,Badger Tuff,Armor,A,A,O,
+Named,Holster,Ammo Dump,N,Badger Tuff,Armor,Ammo Capacity,A,,
+Named,Chest,Zero F's,N,Badger Tuff,Armor,A,A,O,Perfectly Unbreakable
+High End,Backpack,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,A
+High End,Chest,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,A
+High End,Gloves,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,,
+High End,Holster,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,,
+High End,Kneepads,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,,
+High End,Mask,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,
+Named,Backpack,Devil's Due,N,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,Perfect Clutch
+High End,Backpack,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,U,A
+High End,Chest,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,U,A
+High End,Gloves,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,,
+High End,Holster,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,,
+High End,Kneepads,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,,
+High End,Mask,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,U,
+Named,Backpack,Strategic Alignment,N,China Light Industries Corporation,Skill Tier,A,A,U,Perfect Shock and Awe
+High End,Backpack,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,O,A
+High End,Chest,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,O,A
+High End,Gloves,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,,
+High End,Holster,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,,
+High End,Kneepads,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,,
+High End,Mask,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,O,
+Named,Mask,Punch Drunk,N,Douglas & Harding,Weapon Damage,Headshot Damage,O,O,
+High End,Backpack,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,O,A
+High End,Chest,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,O,A
+High End,Gloves,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,,
+High End,Holster,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,,
+High End,Kneepads,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,,
+High End,Mask,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,O,
+Named,Chest,Ferocious Calm,N,Fenris Group AB,Weapon Damage,A,A,O,Perfect Overwatch
+Gearset,Backpack,Foundry Bullwark,S,Foundry Bullwark,N/A,A,A,,A
+Gearset,Chest,Foundry Bullwark,S,Foundry Bullwark,N/A,A,A,,A
+Gearset,Gloves,Foundry Bullwark,S,Foundry Bullwark,N/A,A,A,,
+Gearset,Holster,Foundry Bullwark,S,Foundry Bullwark,N/A,A,A,,
+Gearset,Kneepads,Foundry Bullwark,S,Foundry Bullwark,N/A,A,A,,
+Gearset,Mask,Foundry Bullwark,S,Foundry Bullwark,N/A,A,A,,
+Gearset,Backpack,Future Initiative,S,Future Initiative,N/A,A,A,,A
+Gearset,Chest,Future Initiative,S,Future Initiative,N/A,A,A,,A
+Gearset,Gloves,Future Initiative,S,Future Initiative,N/A,A,A,,
+Gearset,Holster,Future Initiative,S,Future Initiative,N/A,A,A,,
+Gearset,Kneepads,Future Initiative,S,Future Initiative,N/A,A,A,,
+Gearset,Mask,Future Initiative,S,Future Initiative,N/A,A,A,,
+High End,Backpack,Gila Guard,A,Gila Guard,Armor,A,A,D,A
+High End,Chest,Gila Guard,A,Gila Guard,Armor,A,A,D,A
+High End,Gloves,Gila Guard,A,Gila Guard,Armor,A,A,,
+High End,Holster,Gila Guard,A,Gila Guard,Armor,A,A,,
+High End,Kneepads,Gila Guard,A,Gila Guard,Armor,A,A,,
+High End,Mask,Gila Guard,A,Gila Guard,Armor,A,A,D,
+Named,Mask,Nightwatcher,N,Gila Guard,Armor,Pulse Haste,U,D,
+Named,Chest,Pointman,N,Gila Guard,Armor,A,A,D,Perfect Vanguard
+High End,Backpack,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,U,A
+High End,Chest,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,U,A
+High End,Gloves,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,,
+High End,Holster,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,,
+High End,Kneepads,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,,
+High End,Mask,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,U,
+Named,Backpack,Anarchist's Cookbook,N,Golan Gear Ltd,Weapon Damage,A,A,U,Perfectly Wicked
+Named,Chest,Hunter-Killer,N,Golan Gear Ltd,Skill Tier,A,A,U,Perfect Intimidate
+High End,Backpack,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,U,A
+High End,Chest,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,U,A
+High End,Gloves,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,,
+High End,Holster,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,,
+High End,Kneepads,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,,
+High End,Mask,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,U,
+Named,Chest,Door-Kicker's Knock,N,Grupo Sombra S.A.,Weapon Damage,A,A,U,Perfect Spark
+High End,Backpack,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,O,A
+High End,Chest,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,O,A
+High End,Gloves,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,,
+High End,Holster,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,,
+High End,Kneepads,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,,
+High End,Mask,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,O,
+Named,Backpack,Force Multiplier,N,Hana-U Corporation,Skill Tier,A,A,O,Perfect Combined Arms
+Gearset,Backpack,Hard Wired,S,Hard Wired,Skill Tier,A,A,U,Short Circuit
+Gearset,Chest,Hard Wired,S,Hard Wired,Skill Tier,A,A,U,Positive Reinforcement
+Gearset,Gloves,Hard Wired,S,Hard Wired,Skill Tier,A,A,,
+Gearset,Holster,Hard Wired,S,Hard Wired,Skill Tier,A,A,,
+Gearset,Kneepads,Hard Wired,S,Hard Wired,Skill Tier,A,A,,
+Gearset,Mask,Hard Wired,S,Hard Wired,Skill Tier,A,A,U,
+High End,Backpack,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,U,A
+High End,Chest,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,U,A
+High End,Gloves,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,,
+High End,Holster,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,,
+High End,Kneepads,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,,
+High End,Mask,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,U,
+Named,Kneepads,Emperor's Guard,N,Murakami Industries,Skill Tier,Armor Regeneration,A,,
+Gearset,Backpack,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,A,O,Critical Measures
+Gearset,Chest,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,A,O,Target Rich Environment
+Gearset,Gloves,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,A,,
+Gearset,Holster,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,A,,
+Gearset,Kneepads,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,A,,
+Gearset,Mask,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,A,O,
+Gearset,Backpack,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,A,U,Emergency Requisition
+Gearset,Chest,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,A,U,Parabellum Rounds
+Gearset,Gloves,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,A,,
+Gearset,Holster,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,A,,
+Gearset,Kneepads,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,A,,
+Gearset,Mask,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,A,U,
+Gearset,Backpack,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,O,A
+High End,Chest,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,O,A
+High End,Gloves,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,,
+High End,Holster,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,,
+High End,Kneepads,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,,
+High End,Mask,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,O,
+Named,Kneepads,Fox's Prayer,N,Overlord Armaments,Weapon Damage,Damage to TOC,A,,
+High End,Backpack,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,O,A
+High End,Chest,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,O,A
+High End,Gloves,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,,
+High End,Holster,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,,
+High End,Kneepads,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,,
+High End,Mask,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,O,
+Named,Gloves,Contractor's Gloves,N,Petrov Defense Group,Weapon Damage,Damage to Armor,A,,
+Named,Chest,Vedmedytsya Vest,N,Petrov Defense Group,Weapon Damage,A,A,O,Perfect Braced
+High End,Backpack,Providence Defense,A,Providence Defense,Weapon Damage,A,A,O,A
+High End,Chest,Providence Defense,A,Providence Defense,Weapon Damage,A,A,O,A
+High End,Gloves,Providence Defense,A,Providence Defense,Weapon Damage,A,A,,
+High End,Holster,Providence Defense,A,Providence Defense,Weapon Damage,A,A,,
+High End,Kneepads,Providence Defense,A,Providence Defense,Weapon Damage,A,A,,
+High End,Mask,Providence Defense,A,Providence Defense,Weapon Damage,A,A,O,
+Named,Backpack,The Gift,N,Providence Defense,Weapon Damage,A,A,O,Perfect Vigilance
+Named,Chest,The Sacrifice,N,Providence Defense,Weapon Damage,A,A,O,Perfect Glass Cannon
+High End,Backpack,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,D,A
+High End,Chest,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,D,A
+High End,Gloves,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,,
+High End,Holster,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,,
+High End,Kneepads,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,,
+High End,Mask,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,D,
+Named,Holster,Forge,N,Richter & Kaiser GmbH,Skill Tier,Shield Health,A,,
+High End,Backpack,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,O,A
+High End,Chest,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,O,A
+High End,Gloves,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,,
+High End,Holster,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,,
+High End,Kneepads,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,,
+High End,Mask,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,O,
+Named,Gloves,Firm Handshake,N,Sokolov Concern,Weapon Damage,Status Effects,A,,
+Gearset,Backpack,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,A,O,Risk Management
+Gearset,Chest,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,A,O,Press the Advantage
+Gearset,Gloves,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,A,,
+Gearset,Holster,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,A,,
+Gearset,Kneepads,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,A,,
+Gearset,Mask,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,A,O,
+Gearset,Backpack,System Corruption,S,System Corruption,Armor,A,A,D,Multithreaded Execution
+Gearset,Chest,System Corruption,S,System Corruption,Weapon Damage,A,A,D,Compiler Optimization
+Gearset,Gloves,System Corruption,S,System Corruption,Weapon Damage,A,A,,
+Gearset,Holster,System Corruption,S,System Corruption,Armor,A,A,,
+Gearset,Kneepads,System Corruption,S,System Corruption,Armor,A,A,,
+Gearset,Mask,System Corruption,S,System Corruption,Weapon Damage,A,A,O,
+Gearset,Backpack,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,A,O,Crossbow Expert
+Gearset,Chest,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,A,O,Specialized Destruction
+Gearset,Gloves,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,A,,
+Gearset,Holster,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,A,,
+Gearset,Kneepads,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,A,,
+Gearset,Mask,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,A,O,
+Gearset,Backpack,True Patriot,S,True Patriot,Armor,A,A,D,Patriotic Boost
+Gearset,Chest,True Patriot,S,True Patriot,Armor,A,A,D,Waving the Flag
+Gearset,Gloves,True Patriot,S,True Patriot,Armor,A,A,,
+Gearset,Holster,True Patriot,S,True Patriot,Armor,A,A,,
+Gearset,Kneepads,True Patriot,S,True Patriot,Armor,A,A,,
+Gearset,Mask,True Patriot,S,True Patriot,Armor,A,A,D,
+High End,Backpack,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,U,A
+High End,Chest,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,U,A
+High End,Gloves,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,,
+High End,Holster,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,,
+High End,Kneepads,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,,
+High End,Mask,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,U,
+Named,Holster,Claws Out,N,Wyvern Wear,Pistol Damage,Melee Damage,A,,
+High End,Backpack,Yaahl Gear,A,Yaahl Gear,Armor,A,A,O,A
+High End,Chest,Yaahl Gear,A,Yaahl Gear,Armor,A,A,O,A
+High End,Gloves,Yaahl Gear,A,Yaahl Gear,Armor,A,A,,
+High End,Holster,Yaahl Gear,A,Yaahl Gear,Armor,A,A,,
+High End,Kneepads,Yaahl Gear,A,Yaahl Gear,Armor,A,A,,
+High End,Mask,Yaahl Gear,A,Yaahl Gear,Armor,A,A,O,
+Named,Mask,The Hollow Man,N,Yaahl Gear,Armor,Damage to Health,O,O,
+High End,Holster,Improvised Holster,A,Crafted,Skill Tier,A,A,U,

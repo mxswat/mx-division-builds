@@ -1,0 +1,21 @@
+Name,Stat,Val
+Sharpshooter,Pulse Resistance,50
+Sharpshooter,Stability,15
+Sharpshooter,Headshot Damage,15
+Survivalist,Pulse Resistance,50
+Survivalist,Protection from Elites,10
+Survivalist,Outgoing Healing,15
+Demolitionist,Pulse Resistance,50
+Demolitionist,Explosive Damage,10
+Demolitionist,Burn Resistance,20
+Technician - Heals,Pulse Resistance,50
+Technician - Heals,Repair Skills,10
+Technician - Heals,Skill Tier,1
+Technician - Damage,Pulse Resistance,50
+Technician - Damage,Skill Damage,10
+Technician - Damage,Skill Tier,1
+Gunner,Pulse Resistance,50
+Gunner,Armor on Kill %,15
+Firewall,Pulse Resistance,50
+Firewall,Health on Kill %,30
+Firewall,Burn Duration,20

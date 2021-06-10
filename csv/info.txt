@@ -1,0 +1,13 @@
+The original CSVs are from
+https://www.reddit.com/r/thedivision/comments/fx22fk/the_division_2_build_tool_updated_for_tu8/
+https://docs.google.com/spreadsheets/d/13ktgihRoZjkcoNq7vMOOlOhE51BSfOdGuUPDPiVb9yc/
+
+
+Splitted CSV Fils Based on Content in One Line using PowerShell
+https://www.codeproject.com/Articles/70319/Splitting-CSV-file-based-on-content-in-one-line-us
+
+How to import one of those CSV into google sheets
+=importdata("https://raw.githubusercontent.com/mxswat/mx-division-builds/master/public/csv/gear/Kneepads.csv")
+
+This might be useful?
+https://github.com/odeke-em/drive

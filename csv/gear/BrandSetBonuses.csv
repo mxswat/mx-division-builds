@@ -1,0 +1,84 @@
+Brand,stat,val
+5.11 Tactical0,Health,10
+5.11 Tactical1,Incoming Repairs,15
+5.11 Tactical2,Hazard Protection,10
+Airaldi Holdings0,Marksman Rifle Damage,10
+Airaldi Holdings1,Headshot Damage,10
+Airaldi Holdings2,Damage to Armor,5
+Alps Summit Armaments0,Repair Skills,15
+Alps Summit Armaments1,Skill Duration,20
+Alps Summit Armaments2,Cooldown Reduction,10
+Badger Tuff0,Shotgun Damage,10
+Badger Tuff1,% Armor,5
+Badger Tuff2,Armor on Kill,10
+Ceska Vyroba s.r.o.0,Critical Hit Chance,10
+Ceska Vyroba s.r.o.1,Hazard Protection,10
+Ceska Vyroba s.r.o.2,Health,10
+China Light Industries Corporation0,Explosive Damage,15
+China Light Industries Corporation1,Cooldown Reduction,10
+China Light Industries Corporation2,Status Effects,10
+Douglas & Harding0,Pistol Damage,20
+Douglas & Harding1,Stability,10
+Douglas & Harding2,Accuracy,10
+Fenris Group AB0,Assault Rifle Damage,10
+Fenris Group AB1,Reload Speed %,10
+Fenris Group AB2,Stability,10
+Gila Guard0,% Armor,5
+Gila Guard1,Health,10
+Gila Guard2,Armor Regeneration %,1
+Golan Gear Ltd0,Status Effects,10
+Golan Gear Ltd1,Armor Regeneration %,1
+Golan Gear Ltd2,% Armor,5
+Grupo Sombra S.A.0,Critical Hit Damage,15
+Grupo Sombra S.A.1,Explosive Damage,15
+Grupo Sombra S.A.2,Headshot Damage,10
+Hana-U Corporation0,Cooldown Reduction,10
+Hana-U Corporation1,Skill Damage,10
+Hana-U Corporation2,Weapon Damage,5
+Murakami Industries0,Skill Duration,20
+Murakami Industries1,Repair Skills,15
+Murakami Industries2,Skill Damage,10
+Overlord Armaments0,Rifle Damage,10
+Overlord Armaments1,Accuracy,10
+Overlord Armaments2,Weapon Handling,10
+Petrov Defense Group0,LMG Damage,10
+Petrov Defense Group1,Weapon Handling,10
+Petrov Defense Group2,Ammo Capacity,20
+Providence Defense0,Headshot Damage,10
+Providence Defense1,Critical Hit Chance,10
+Providence Defense2,Critical Hit Damage,15
+Richter & Kaiser GmbH0,Incoming Repairs,15
+Richter & Kaiser GmbH1,Explosive Resistance,10
+Richter & Kaiser GmbH2,Skill Repair,15
+Sokolov Concern0,SMG Damage,10
+Sokolov Concern1,Critical Hit Damage,15
+Sokolov Concern2,Critical Hit Chance,10
+Wyvern Wear0,Skill Damage,10
+Wyvern Wear1,Status Effects,10
+Wyvern Wear2,Skill Duration,20
+Yaahl Gear0,Hazard Protection,10
+Yaahl Gear1,Weapon Damage,5
+Yaahl Gear2,Pulse Resistance,40
+Hard Wired1,Skill Haste,15
+Hard Wired2,Skill Damage,15
+Hard Wired3,Repair Skills,15
+Ongoing Directive1,Status Effects,15
+Ongoing Directive2,Reload Speed %,20
+True Patriot1,Ammo Capacity,30
+True Patriot2,Magazine Size %,30
+Aces and Eights1,Marksman Rifle Damage,15
+Aces and Eights2,Headshot Damage,20
+Negotiator's Dilemma1,Critical Hit Chance,15
+Negotiator's Dilemma2,Critical Hit Damage,20
+Tip of the Spear1,Signature Weapon Damage,10
+Tip of the Spear2,Weapon Damage,10
+Foundry Bullwark1,% Armor,10
+Foundry Bullwark2,Armor Regeneration %,3
+Future Initiative1,Skill Repair,15
+Future Initiative2,Skill Duration,15
+Future Initiative3,Cooldown Reduction,15
+Striker's Battlegear1,Weapon Handling,15
+Striker's Battlegear2,Rate of Fire %,15
+System Corruption1,Armor on Kill,15
+System Corruption2,Disrupt Resistance,40
+System Corruption3,Pulse Resistance,40

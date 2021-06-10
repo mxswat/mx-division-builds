@@ -1,0 +1,16 @@
+Quality,Type,Stat,Max
+A,O,Critical Hit Chance,6
+A,O,Critical Hit Damage,12
+A,O,Headshot Damage,10
+A,D,Armor on Kill,18935
+A,D,Incoming Repairs,20
+A,D,Protection from Elites,13
+A,D,Bleed Resistance,10
+A,D,Blind Resistance,10
+A,D,Burn Resistance,10
+A,D,Disrupt Resistance,10
+A,D,Shock Resistance,10
+A,U,Repair Skills,20
+A,U,Skill Haste,12
+A,U,Status Effects,10
+A,U,Skill Duration,10

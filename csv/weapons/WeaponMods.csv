@@ -1,0 +1,151 @@
+Slot,Type,Name,valPos,pos,valNeg,neg,Spec
+Optic,Ironsights,Open Iron Sights,10,Accuracy,,,A
+Optic,Ironsights,Streamlined Iron Sights,10,Reload Speed %,,,A
+Optic,Ironsights,Weighted Iron Sights,10,Stability,,,A
+Optic,Micro,Low Reflex Sight,10,Headshot Damage,-20,Optimal Range,A
+Optic,Micro,Rugged Mini Reflex Sight,5,Critical Hit Chance,,,A
+Optic,Short,PRO Red Dot Sight,5,Stability,,,A
+Optic,Short,Reflex Sight,5,Weapon Handling,,,A
+Optic,Short,Russian Red Dot Sight,5,Critical Hit Damage,,,A
+Optic,Short,T2 Micro Red Dot Sight,10,Accuracy,,,A
+Optic,Long,552 Holo Sight,10,Accuracy,,,A
+Optic,Long,ACOG Scope (4x),20,Optimal Range,,,A
+Optic,Long,C7 Scope (3.4x),5,Critical Hit Chance,,,A
+Optic,Long,CQBSS Scope (8x),30,Headshot Damage,,,A
+Optic,Long,Digital Scope,45,Headshot Damage,-5,Critical Hit Damage,Sharpshooter
+Optic,Short,EXPS3 Holo Sight,3,Headshot Damage,,,A
+Optic,Long,VX-1 Scope (12x),35,Headshot Damage,-10,Reload Speed %,A
+Under Barrel,Gadget,Compact Coupled Laser Pointer,10,Headshot Damage,,,A
+Under Barrel,Gadget,Compact Coupled Small Laser Pointer,10,Critical Hit Chance,,,A
+Under Barrel,Gadget,Pistol Flashlight,,,,,A
+Under Barrel,Side,Laser Pointer,5,Critical Hit Chance,,,A
+Under Barrel,Side,Small Laser Pointer,7,Critical Hit Chance,,,Demolitionist
+Under Barrel,Short,Angled Grip,10,Stability,,,A
+Under Barrel,Short,Vertical Grip,10,Accuracy,,,A
+Under Barrel,Long,Handstop,10,Reload Speed %,,,A
+Under Barrel,Long,Short Grip,5,Critical Hit Damage,,,A
+Under Barrel,Long,Linked Laser Pointer,,,,,Technician
+Under Barrel,Long,Tactical Short Grip,10,Critical Hit Damage,,,Firewall
+Magazine,.45 ACP,Extended .45 ACP Mag,10,Extra Rounds,,,A
+Magazine,.45 ACP,Force Feed .45 ACP Mag,5,Rate of Fire %,,,A
+Magazine,.45 ACP,Oversized .45 ACP Mag,20,Extra Rounds,-10,Reload Speed %,A
+Magazine,.45 ACP,Precision Feeding .45 Mag,20,Stability,,,A
+Magazine,.45 ACP,Short Spring .45 ACP Mag,20,Reload Speed %,,,A
+Magazine,5.56,Balanced Spring 5.56 Mag,20,Stability,,,A
+Magazine,5.56,Infantry 5.56 Mag,30,Optimal Range,,,Survivalist
+Magazine,5.56,Light Extended 5.56 Mag,10,Extra Rounds,,,A
+Magazine,5.56,Sturdy Extended 5.56 Mag,20,Extra Rounds,-10,Reload Speed %,A
+Magazine,5.56,Tactical 5.56 Mag,10,Critical Hit Damage,,,A
+Magazine,7.62,Light Extended 7.62 Mag,10,Extra Rounds,,,A
+Magazine,7.62,Precision 7.62 Mag,7,Headshot Damage,,,A
+Magazine,7.62,Sturdy Extended 7.62 Mag,20,Extra Rounds,-10,Reload Speed %,A
+Magazine,7.62,Thin 7.62 Mag,20,Reload Speed %,,,A
+Magazine,7.62,Weighted 7.62 Mag,20,Stability,,,A
+Magazine,9mm,Extended 9mm Mag,20,Extra Rounds,-10,Reload Speed %,A
+Magazine,9mm,Heavy Spring 9mm Mag,10,Critical Hit Damage,,,A
+Magazine,9mm,Oversized 9mm Mag,10,Extra Rounds,,,A
+Magazine,9mm,Segmented 9mm Mag,20,Reload Speed %,,,A
+Magazine,Ammunition Belt,Calibrated Link,15,Stability,,,A
+Magazine,Ammunition Belt,Large Pouch,35,Extra Rounds,,,A
+Magazine,Ammunition Belt,Nimble Link Belt,5,Rate of Fire %,,,A
+Magazine,Ammunition Belt,Non-disruptive Link,10,Critical Hit Damage,,,A
+Magazine,Ammunition Belt,Tactical Small Pouch,20,Reload Speed %,,,A
+Magazine,Ammunition Belt,Gunner Large Pouch,50,Extra Rounds,,,Gunner
+Magazine,Integrated,Compensated Integrated Spring,20,Reload Speed %,,,A
+Magazine,Integrated,Overbalanced Integrated Spring,20,Stability,,,A
+Magazine,Integrated,Stiff Integrated Spring,5,Weapon Damage,,,A
+Magazine,Integrated,Underbalanced Integrated Spring,5,Rate of Fire %,,,A
+Magazine,MM 7.62,Lightweight Marksman Mag,20,Reload Speed %,,,A
+Magazine,MM 7.62,Mended Marksman Mag,20,Optimal Range,,,A
+Magazine,MM 7.62,Sturdy Marksman Mag,20,Stability,,,A
+Magazine,MM 7.62,Tightly Packed Marksman Mag,5,Extra Rounds,,,A
+Magazine,Pistol,Extended Pistol Mag,11,Extra Rounds,,,A
+Magazine,Pistol,Field Pistol Mag,30,Optimal Range,,,A
+Magazine,Pistol,Police Pistol Mag,20,Reload Speed %,,,A
+Magazine,Revolver Drum,Speed Loading Revolver Drum,20,Reload Speed %,,,A
+Magazine,Tubular,Counter-Clockwise Tubular Spring,5,Headshot Damage,,,A
+Magazine,Tubular,Flexible Tubular Spring,20,Reload Speed %,,,A
+Magazine,Tubular,Hard Tubular Spring,5,Rate of Fire %,,,A
+Muzzle,QDC,QDC Sound Supressor,20,Stability,,,A
+Muzzle,.45 ACP,Compensator .45,10,Stability,,,A
+Muzzle,.45 ACP,Flash Hider .45,5,Critical Hit Damage,,,A
+Muzzle,.45 ACP,Loud Vent Brake .45,10,Optimal Range,,,A
+Muzzle,.45 ACP,Muzzle Brake .45,3,Headshot Damage,,,A
+Muzzle,.45 ACP,Osprey .45 Suppressor,5,Critical Hit Chance,,,A
+Muzzle,.45 ACP,Small Suppressor .45,10,Accuracy,,,A
+Muzzle,5.56,Compensator 5.56,10,Stability,,,A
+Muzzle,5.56,Flash Hider 5.56,5,Critical Hit Damage,,,A
+Muzzle,5.56,Large Suppressor 5.56,10,Accuracy,,,A
+Muzzle,5.56,Loud Vent Brake 5.56,10,Optimal Range,,,A
+Muzzle,5.56,Muzzle Brake 5.56,5,Critical Hit Chance,,,A
+Muzzle,5.56,Omega 5.56 Rifle Suppressor,20,Stability,-10,Optimal Range,A
+Muzzle,7.62,Compensator 7.62,10,Stability,,,A
+Muzzle,7.62,Flash Hider 7.62,5,Critical Hit Damage,,,A
+Muzzle,7.62,Large Suppressor 7.62,10,Accuracy,,,A
+Muzzle,7.62,Loud Vent Brake 7.62,10,Optimal Range,,,A
+Muzzle,7.62,Muzzle Brake 7.62,5,Critical Hit Chance,,,A
+Muzzle,7.62,Omega 7.62 Rifle Suppressor,20,Stability,-10,Optimal Range,A
+Muzzle,9mm,Compensator 9mm,10,Stability,,,A
+Muzzle,9mm,Flash Hider 9mm,5,Critical Hit Damage,,,A
+Muzzle,9mm,Loud Vent Brake 9mm,10,Optimal Range,,,A
+Muzzle,9mm,Small Suppressor 9mm,10,Accuracy,,,A
+Muzzle,9mm,Muzzle Brake 9mm,3,Headshot Damage,,,A
+Muzzle,9mm,Osprey 9mm Suppressor,5,Critical Hit Chance,,,A
+Optic,Nemesis,Nemesis Digital Scope,35,Headshot Damage,,,
+Magazine,Nemesis,Nemesis Bolt,10,Reload Speed %,,,
+Muzzle,Nemesis,Nemesis Barrel,5,Critical Hit Damage,,,
+Under Barrel,Nemesis,Nemesis Bipod,15,Weapon Handling,,,
+Optic,The Chatterbox,Modified Optics,5,Critical Hit Chance,,,
+Magazine,The Chatterbox,Chatterbox Magazine,10,Reload Speed %,,,
+Muzzle,The Chatterbox,Chatterbox Muzzle,10,Critical Hit Chance,,,
+Under Barrel,The Chatterbox,Chatterbox Cannister,15,Weapon Handling,,,
+Optic,Sweet Dreams,Outcast Optics,15,Accuracy,,,
+Magazine,Sweet Dreams,Modified Feed System,15,Reload Speed %,,,
+Under Barrel,Sweet Dreams,Stunner,25,Optimal Range,,,
+Optic,Lullaby,Damaged Optics,15,Accuracy,,,
+Magazine,Lullaby,Modified Feed System,15,Reload Speed %,,,
+Under Barrel,Lullaby,Hardened Grip,25,Optimal Range,,,
+Optic,Merciless,Merciless Optics,10,Accuracy,,,
+Magazine,Merciless,Merciless Magazine,15,Reload Speed %,,,
+Muzzle,Merciless,Merciless Muzzle,20,Stability,,,
+Under Barrel,Merciless,Merciless Grip,20,Weapon Handling,,,
+Optic,Ruthless,Unidentified Custom Russian Sight,10,Accuracy,,,
+Magazine,Ruthless,Ruthless Magazine,15,Reload Speed %,,,
+Muzzle,Ruthless,Mayhem's Muzzle,20,Stability,,,
+Under Barrel,Ruthless,Ruthless Grip,20,Weapon Handling,,,
+Magazine,Pestilence,Plagued Magazine,10,Rate of Fire %,,,
+Muzzle,Pestilence,Plagured Muzzle,10,Stability,,,
+Under Barrel,Pestilence,Caution Tape,10,Weapon Handling,,,
+Optic,Liberty,Liberty Sight,5,Critical Hit Chance,,,
+Magazine,Liberty,Trigger Mechanisim,15,Rate of Fire %,,,
+,Liberty,Liberty Customs,15,Stability,,,
+Under Barrel,Liberty,Liberty Grip,15,Reload Speed %,,,
+Magazine,Regulus,Engraved Drum,10,Reload Speed %,,,
+Muzzle,Regulus,Engraved Muzzle,5,Critical Hit Damage,,,
+Optic,Diamondback,Diamondback Dot Sight,10,Accuracy,,,
+Magazine,Diamondback,Diamondback Lever,10,Reload Speed %,,,
+Under Barrel,Diamondback,Diamondback Grip,10,Stability,,,
+Muzzle,Diamondback,Rattlesnake Ornamentation,15,Critical Hit Damage,,,
+Optic,The Ravenous,Predatory Optics,5,Critical Hit Chance,,,
+Magazine,The Ravenous,Gluttonous Magazines,10,Reload Speed %,,,
+Under Barrel,The Ravenous,Devouring Maw,5,Critical Hit Damage,,,
+Muzzle,The Ravenous,Wolf's Claw,10,Stability,,,
+Optic,Lady Death,Gaze of Death,5,Critical Hit Chance,,,
+Magazine,Lady Death,Death's Hand,10,Reload Speed %,,,
+Under Barrel,Lady Death,Death's Maw,5,Critical Hit Chance,,,
+Muzzle,Lady Death,Kiss of Death,5,Critical Hit Damage,,,
+Magazine,Bullet King,Mag of Holding,,,,,
+Muzzle,Bullet King,Gold Plated Muzzle,5,Critical Hit Chance,,,
+Under Barrel,Bullet King,Solid Gold Bipod,10,Stability,,,
+Optic,Chameleon,Chameleon Optics,15,Accuracy,,,
+Magazine,Chameleon,Chameleon ActivCamo Processor,20,Extra Rounds,,,
+Under Barrel,Chameleon,Chameleon Dampener,5,Critical Hit Chance,,,
+Muzzle,Chameleon,Chameleon Grip,10,Critical Hit Chance,,,
+Optic,Eagle Bearer,Eagle Eye Sight,10,Critical Hit Chance,,,
+Magazine,Eagle Bearer,Bullet Eyrie,30,Extra Rounds,,,
+Under Barrel,Eagle Bearer,Talon Grip,10,Stability,,,
+Muzzle,Eagle Bearer,Jagged Break,15,Critical Hit Damage,,,
+Optic,The Bighorn,Fire Select Scope,,,,,
+Magazine,The Bighorn,Tension Spring Magazine,7,Headshot Damage,,,
+Under Barrel,The Bighorn,Carbon Steel Muzzle,10,Accuracy,,,
+Muzzle,The Bighorn,Bighorn Grip,10,Stability,,,

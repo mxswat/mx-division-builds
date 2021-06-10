@@ -1,0 +1,231 @@
+Variant,Name,Slot,Quality,Weapon Type,Base Damage,Mag Size,RPM,Reload Speed (ms),Optimal Range,Core 1,Core 1 Max,Core 2,Core 2 Max,Attribute 1,Talent,Optics,Under Barrel,Magazine,Muzzle,HSD
+AUG,The Bighorn,P,Exotic,Assault Rifle,46071,30,800,2100,27,Assault Rifle Damage,15,Damage to Health,21,Critical Hit Damage,Big Game Hunter,The Bighorn,The Bighorn,The Bighorn,The Bighorn,55
+M4,Eagle Bearer,P,Exotic,Assault Rifle,47952,30,750,2500,35,Assault Rifle Damage,15,Damage to Health,21,Headshot Damage,Eagle's Strike,Eagle Bearer,Eagle Bearer,Eagle Bearer,Eagle Bearer,55
+Vector,Chameleon,P,Exotic,Assault Rifle,30087,30,900,2400,15,Assault Rifle Damage,15,Damage to Health,21,Critical Hit Chance,Adaptive Instincts,Chameleon,Chameleon,Chameleon,Chameleon,50
+ACR,ACR,P,High End,Assault Rifle,48422,30,650,2300,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+ACR,ACR-E,P,High End,Assault Rifle,48422,30,650,2300,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+AK-47,AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,7.62,,55
+AK-47,Black Market AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+AK-47,Black Market AK-M Replica,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+AK-47,Military AK-M,P,High End,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+AUG,AUG A3-CQC,P,High End,Assault Rifle,46071,30,680,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short,5.56,5.56,55
+Carbine 7,Carbine 7,P,High End,Assault Rifle,43215,30,790,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+F2000,F2000,P,High End,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,,5.56,5.56,55
+F2000,F2000 Replica,P,High End,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,,5.56,5.56,55
+FAL,FAL,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAL,FAL SA-58,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAL,FAL SA-58 Para,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAL,FAL SA-58 Para Replica,P,High End,Assault Rifle,50772,20,650,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,7.62,7.62,55
+FAMAS,FAMAS 2010,P,High End,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,,5.56,55
+FAMAS,FAMAS 2010 Replica,P,High End,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,,5.56,55
+G36,G36 C,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short,5.56,5.56,55
+G36,G36 Enhanced,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+G36,G36 Enhanced Replica,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+G36,Military G36,P,High End,Assault Rifle,44661,30,750,2300,32,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+M4,Police M4,P,High End,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+M4,Police M4 Replica,P,High End,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,5.56,55
+P416,Custom P416 G3,P,High End,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+P416,Military P416,P,High End,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+Honey Badger,Honey Badger,P,High End,Assault Rifle,43251,30,750,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Short / Long,Side / Short / Long,5.56,,55
+SCAR,Mk16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+SCAR,SOCOM Mk16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+SCAR,Tactical Mk 16,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+SCAR,Tactical Mk 16 Replica,P,High End,Assault Rifle,49362,30,625,2300,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+TAR-21,CTAR-21,P,High End,Assault Rifle,38079,30,900,2100,35,Assault Rifle Damage,15,Damage to Health,21,A,A,Micro / Short,Side,5.56,5.56,55
+AK-47,Manic,P,Named,Assault Rifle,53593,30,600,2500,31,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Overflowing,Short / Long,Side / Short / Long,7.62,7.62,55
+AUG,Invisible Hand,P,Named,Assault Rifle,46071,30,680,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Allegro,Ironsights / Short / Long,Side / Short,5.56,5.56,55
+F2000,Shield Splinterer,P,Named,Assault Rifle,39490,30,850,2100,27,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Optimist,Ironsights / Short / Long,,5.56,5.56,55
+FAMAS,Burnout,P,Named,Assault Rifle,39960,30,900,2200,28,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly on Empty,Short / Long,Side / Short,,5.56,55
+M4,Pyromaniac,P,Named,Assault Rifle,41370,30,850,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly Ignited,Short / Long,Side / Short / Long,5.56,5.56,55
+P416,Glory Daze,P,Named,Assault Rifle,44661,30,750,2300,26,Assault Rifle Damage,15,Damage to Health,21,A,Perfect Near Sighted,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,55
+Honey Badger,Savage Wolverine,P,Named,Assault Rifle,43251,30,750,2400,35,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly Close & Personal,Short / Long,Side / Short / Long,5.56,,55
+TAR-21,The Railsplitter,P,Named,Assault Rifle,38079,30,900,2100,35,Assault Rifle Damage,15,Damage to Health,21,A,Perfectly Accurate,Micro / Short,Side,5.56,5.56,55
+NEGEV,Bullet King,P,Exotic,LMG,35729,,850,,40,LMG Damage,15,Damage to TOC,12,Critical Hit Damage,Bullet Hell,Bullet King,Bullet King,Bullet King,Bullet King,65
+M249,Pestilence,P,Exotic,LMG,47012,100,550,5600,35,LMG Damage,15,Damage to TOC,12,Damage to Armor,Plague of the Outcasts,Pestilence,Pestilence,Pestilence,Pestilence,65
+L86,Custom L86 A2,P,High End,LMG,55004,30,610,3000,32,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,5.56,5.56,65
+L86,Custom L86 A2 Replica,P,High End,LMG,55004,30,610,3000,32,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,5.56,5.56,65
+L86,Military L86 LSW,P,High End,LMG,55004,30,610,3000,32,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short,5.56,5.56,65
+M249,M249 B,P,High End,LMG,56414,100,550,5600,35,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,5.56,65
+M249,Military MK46,P,High End,LMG,56414,100,550,5600,35,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,5.56,65
+M249,Military MK46 Replica,P,High End,LMG,56414,100,550,5600,35,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,5.56,65
+M249,Tactical M249 Para,P,High End,LMG,56414,100,550,5600,35,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,5.56,65
+M60,Black Market M60 E6,P,High End,LMG,56414,100,500,5800,40,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,7.62,65
+M60,Black Market M60 E6 Replica,P,High End,LMG,56414,100,500,5800,40,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,7.62,65
+M60,Classic M60,P,High End,LMG,56414,100,500,5800,40,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,,65
+M60,Classic M60 Replica,P,High End,LMG,56414,100,500,5800,40,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,,65
+M60,Military M60 E4,P,High End,LMG,56414,100,500,5800,40,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,Ammunition Belt,7.62,65
+MG5,Infantry MG5,P,High End,LMG,44661,50,800,5600,30,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short,Ammunition Belt,7.62,85
+MG5,Infantry MG5 Replica,P,High End,LMG,44661,50,800,5600,30,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short,Ammunition Belt,7.62,85
+MG5,MG5,P,High End,LMG,44661,50,800,5600,30,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short,Ammunition Belt,,85
+RPK-74,Black Market RPK-74 E,P,High End,LMG,49362,45,650,3000,28,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,7.62,7.62,65
+RPK-74,Black Market RPK-74 E Replica,P,High End,LMG,49362,45,650,3000,28,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,7.62,7.62,65
+RPK-74,Classic RPK-74,P,High End,LMG,49362,45,650,3000,28,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,7.62,7.62,65
+RPK-74,Military RPK-74 M,P,High End,LMG,49362,45,650,3000,28,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short / Long,7.62,7.62,65
+NEGEV,IWI NEGEV,P,High End,LMG,36669,100,850,5800,40,LMG Damage,15,Damage to TOC,12,A,A,Short,Side / Short / Long,Ammunition Belt,7.62,65
+KAC,Stoner LAMG,P,High End,LMG,47012,200,580,4670,40,LMG Damage,15,Damage to TOC,12,A,A,Short / Long,Side / Short,Ammunition Belt,QDC,65
+L86,Tabula Rasa,P,Named,LMG,55004,30,610,3000,32,LMG Damage,15,Damage to TOC,12,A,Perfectly Steady Handed,Short / Long,Side / Short,5.56,5.56,65
+M249,Black Friday,P,Named,LMG,56414,100,550,5600,35,LMG Damage,15,Damage to TOC,12,A,Perfectly Unhinged,Short / Long,Side / Short / Long,Ammunition Belt,5.56,65
+M249,The Stinger,P,Named,LMG,56414,100,550,5600,35,LMG Damage,15,Damage to TOC,12,A,Swift,Short / Long,Side / Short / Long,Ammunition Belt,5.56,65
+M60,Good Times,P,Named,LMG,56414,100,500,5800,40,LMG Damage,15,Damage to TOC,12,A,Perfect Fast Hands,Short / Long,Side / Short / Long,Ammunition Belt,7.62,65
+MG5,Sleipner,P,Named,LMG,44661,50,800,5600,30,LMG Damage,15,Damage to TOC,12,A,Perfect Frenzy,Short / Long,Side / Short,Ammunition Belt,,85
+RPK-74,New Reliable,P,Named,LMG,49362,45,650,3000,28,LMG Damage,15,Damage to TOC,12,A,Perfectly Optimized,Short / Long,Side / Short / Long,7.62,7.62,65
+NEGEV,Carnage,P,Named,LMG,36669,100,850,5800,40,LMG Damage,15,Damage to TOC,12,A,Perfect Sadist,Short,Side / Short / Long,Ammunition Belt,7.62,65
+KAC,Quiet Roar,P,Named,LMG,47012,200,580,4670,40,LMG Damage,15,Damage to TOC,12,A,Perfect Overwhelm,Short / Long,Side / Short,Ammunition Belt,QDC,65
+AWM,Nemesis,P,Exotic,Marksman Rifle,846216,5,50,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,Critical Hit Chance,Electromagnetic Accelerator,Nemesis,Nemesis,Nemesis,Nemesis,0
+M44,Classic M44 Carbine,P,High End,Marksman Rifle,376096,5,55,4200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short,Integrated,,0
+M44,Classic M44 Carbine Replica,P,High End,Marksman Rifle,376096,5,55,4200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short,Integrated,,0
+M44,Custom M44,P,High End,Marksman Rifle,347888,5,55,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,0
+M44,Custom M44 Replica,P,High End,Marksman Rifle,347888,5,55,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,0
+M44,Hunting M44,P,High End,Marksman Rifle,366693,5,55,4200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short / Long,Integrated,7.62,0
+Model 700,M700 Carbon,P,High End,Marksman Rifle,347888,7,54,3300,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,0
+Model 700,M700 Carbon Replica,P,High End,Marksman Rifle,347888,7,54,3300,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,0
+Model 700,M700 Tactical,P,High End,Marksman Rifle,347888,7,54,3300,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side,MM 7.62,7.62,0
+Model 700,Model 700,P,High End,Marksman Rifle,347888,7,54,7200,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,,Integrated,7.62,0
+Model 700,Model 700 Replica,P,High End,Marksman Rifle,347888,7,54,7200,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,,Integrated,7.62,0
+SCAR,SOCOM Mk20 SSR,P,High End,Marksman Rifle,131633,20,275,2200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short / Long,MM 7.62,7.62,0
+SCAR,SOCOM Mk20 SSR Replica,P,High End,Marksman Rifle,131633,20,275,2200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short / Long,MM 7.62,7.62,0
+SR-1,Adrestia,P,High End,Marksman Rifle,329084,5,60,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short,MM 7.62,7.62,0
+SR-1,SR-1,P,High End,Marksman Rifle,329084,5,60,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short,MM 7.62,7.62,0
+SR-1,SR-1 Replica,P,High End,Marksman Rifle,329084,5,60,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short,MM 7.62,7.62,0
+G28,G28,P,High End,Marksman Rifle,131633,20,275,2400,60,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,0
+SRS,Covert SRS,P,High End,Marksman Rifle,289123,7,60,3000,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short,MM 7.62,7.62,0
+SRS,SRS A1,P,High End,Marksman Rifle,289123,7,60,3000,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short / Long,MM 7.62,7.62,0
+SRS,SRS A1 Replica,P,High End,Marksman Rifle,289123,7,60,3000,42,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Ironsights / Short / Long,Side / Short / Long,MM 7.62,7.62,0
+SVD,Paratrooper SVD,P,High End,Marksman Rifle,164542,10,260,2600,34,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short,MM 7.62,7.62,0
+SVD,Surplus SVD,P,High End,Marksman Rifle,164542,10,260,2600,34,Marksman Rifle Damage,15,Headshot Damage,111,A,A,Short / Long,Side / Short,MM 7.62,7.62,0
+M44,The White Death,P,Named,Marksman Rifle,376096,5,55,4200,60,Marksman Rifle Damage,15,Headshot Damage,137,A,A,Short / Long,Side / Short,Integrated,,0
+Model 700,Ekim's Long Stick,P,Named,Marksman Rifle,347888,7,54,7200,42,Marksman Rifle Damage,15,Headshot Damage,111,A,Perfect Ranger,Short / Long,,Integrated,7.62,0
+SCAR,The Darkness,P,Named,Marksman Rifle,131633,20,275,2200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,Perfect Eyless,Ironsights / Short / Long,Side / Short / Long,MM 7.62,7.62,0
+SR-1,Designated Hitter,P,Named,Marksman Rifle,329084,5,60,3200,60,Marksman Rifle Damage,15,Headshot Damage,111,A,Perfect Reformation,Ironsights / Short / Long,Side / Short,MM 7.62,7.62,0
+SRS,Pinprick,P,Named,Marksman Rifle,289123,7,60,3000,42,Marksman Rifle Damage,15,Headshot Damage,111,A,Perfect First Blood,Ironsights / Short / Long,Side / Short,MM 7.62,7.62,0
+SVD,Commando,P,Named,Marksman Rifle,164542,10,260,2600,34,Marksman Rifle Damage,15,Headshot Damage,111,A,Perfectly Naked,Short / Long,Side / Short,MM 7.62,7.62,0
+Desert Eagle,Liberty,S,Exotic,Pistol,235060,8,150,1900,16,Pistol Damage,15,,,Damage to TOC,Liberty or Death,Liberty,Liberty,Liberty,Liberty,100
+m586,Regulus,S,Exotic,Pistol,282072,6,160,1800,18,Pistol Damage,15,,,Damage to Armor,Regicide,Regulus,Regulus,Regulus,Regulus,100
+586 Magnum,586 Magnum,S,High End,Pistol,112828,6,160,1800,18,Pistol Damage,15,,,A,A,Micro / Short,,Revolver Drum,,100
+586 Magnum,Police 686 Magnum,S,High End,Pistol,112828,6,160,1800,18,Pistol Damage,15,,,A,A,Micro / Short,,Revolver Drum,,100
+586 Magnum,Police 686 Magnum Replica,S,High End,Pistol,112828,6,160,1800,18,Pistol Damage,15,,,A,A,Micro / Short,,Revolver Drum,,100
+93R,93R,S,High End,Pistol,30557,20,1100,1900,16,Pistol Damage,15,,,A,A,,,Pistol,9mm,100
+Desert Eagle,D50,S,High End,Pistol,188048,8,150,1900,16,Pistol Damage,15,,,A,A,Micro / Short,,,,100
+M1911,M1911,S,High End,Pistol,109067,7,310,1900,12,Pistol Damage,15,,,A,A,,,Pistol,,100
+M1911,M45A1,S,High End,Pistol,109067,7,310,1900,12,Pistol Damage,15,,,A,A,Micro,Gadget,Pistol,.45 ACP,100
+M1911,Tactical M1911,S,High End,Pistol,109067,7,310,1900,12,Pistol Damage,15,,,A,A,Micro,Gadget,Pistol,.45 ACP,100
+M1911,Tactical M1911 Replica,S,High End,Pistol,109067,7,310,1900,12,Pistol Damage,15,,,A,A,Micro,Gadget,Pistol,.45 ACP,100
+M9,Military M9,S,High End,Pistol,75219,15,350,1700,16,Pistol Damage,15,,,A,A,,,Pistol,9mm,100
+M9,Military M9 Replica,S,High End,Pistol,75219,15,350,1700,16,Pistol Damage,15,,,A,A,,,Pistol,9mm,100
+M9,Officer's M9 A1,S,High End,Pistol,75219,20,350,1700,16,Pistol Damage,15,,,A,A,Micro,Gadget,Pistol,9mm,100
+PF45,Custom PF45,S,High End,Pistol,72868,12,370,1900,14,Pistol Damage,15,,,A,A,Micro,Gadget,Pistol,.45 ACP,100
+PF45,First Wave PF45,S,High End,Pistol,72868,15,370,1900,14,Pistol Damage,15,,,A,A,,Gadget,Pistol,,100
+Px4,Px4 Storm Type F,S,High End,Pistol,79920,17,380,1900,16,Pistol Damage,15,,,A,A,,Gadget,Pistol,9mm,100
+Px4,Px4 Storm Type T,S,High End,Pistol,79920,17,380,1900,16,Pistol Damage,15,,,A,A,,Gadget,Pistol,.45 ACP,100
+Px4,Px4 Storm Type T Replica,S,High End,Pistol,79920,17,380,1900,16,Pistol Damage,15,,,A,A,,Gadget,Pistol,.45 ACP,100
+Rhino,Diceros,S,High End,Pistol,159840,6,180,1800,18,Pistol Damage,15,,,A,A,,Gadget,Revolver Drum,,100
+Rhino,Diceros Replica,S,High End,Pistol,159840,6,180,1800,18,Pistol Damage,15,,,A,A,,Gadget,Revolver Drum,,100
+Rhino,Snubnosed Diceros,S,High End,Pistol,159840,6,180,1800,18,Pistol Damage,15,,,A,A,,,Revolver Drum,,100
+X-45,X-45,S,High End,Pistol,76629,10,400,1900,16,Pistol Damage,15,,,A,A,,Gadget,Pistol,.45 ACP,100
+X-45,X-45 Tactical,S,High End,Pistol,76629,15,400,1900,16,Pistol Damage,15,,,A,A,,Gadget,Pistol,.45 ACP,100
+X-45,X-45 Tactical Replica,S,High End,Pistol,76629,15,400,1900,16,Pistol Damage,15,,,A,A,,Gadget,Pistol,.45 ACP,100
+586 Magnum,Orbit,S,Named,Pistol,112828,6,160,1800,18,Pistol Damage,15,,,A,Perfect Finisher,Micro / Short,,Revolver Drum,,100
+M1911,Mozambique Special,S,Named,Pistol,109067,7,310,1900,12,Pistol Damage,15,,,A,Perfect Breadbasket,Micro,Gadget,Pistol,.45 ACP,100
+PF45,Lightning Rod,S,Named,Pistol,72868,15,370,1900,14,Pistol Damage,15,,,A,Perfect Salvage,Micro,Gadget,Pistol,.45 ACP,100
+AK-M,Merciless,P,Exotic,Rifle,75219,30,400,2500,50,Rifle Damage,15,Critical Hit Damage,17,Critical Hit Chance,Binary Trigger,Merciless,Merciless,Merciless,Merciless,60
+AK-M,Ruthless,P,Exotic,Rifle,75219,30,400,2500,50,Rifle Damage,15,Critical Hit Damage,17,Critical Hit Chance,Binary Trigger,Ruthless,Ruthless,Ruthless,Ruthless,60
+P416,The Ravenous,P,Exotic,Rifle,112828,30,240,2400,50,Rifle Damage,15,Critical Hit Damage,17,Damage to TOC,Geri and Freki,The Ravenous,The Ravenous,The Ravenous,The Ravenous,60
+1886,Diamondback,P,Exotic,Rifle,305578,5,100,3400,28,Rifle Damage,15,Critical Hit Damage,17,Headshot Damage,Agonizing Bite,Diamondback,Diamondback,Diamondback,Diamondback,60
+1886,1886,P,High End,Rifle,282072,5,100,3400,28,Rifle Damage,15,Critical Hit Damage,17,A,A,,,Tubular,,60
+ACR,ACR SS,P,High End,Rifle,89322,30,420,2300,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+UIC15,UIC15 MOD2,P,High End,Rifle,86972,30,240,1900,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,5.56,5.56,60
+M16A2,M16A2,P,High End,Rifle,75219,30,300,2400,32,Rifle Damage,15,Critical Hit Damage,17,A,A,Micro / Short,,5.56,5.56,60
+M16A2,M16A2 Replica,P,High End,Rifle,75219,30,300,2400,32,Rifle Damage,15,Critical Hit Damage,17,A,A,Micro / Short,,5.56,5.56,60
+M1A,Classic M1A,P,High End,Rifle,235060,10,180,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,,60
+M1A,M1A CQB,P,High End,Rifle,141036,10,320,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,60
+M1A,M1A CQB Replica,P,High End,Rifle,141036,10,320,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,60
+M1A,SOCOM M1A,P,High End,Rifle,141036,10,320,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,60
+M4,Lightweight M4,P,High End,Rifle,94024,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
+M4,LVOA-C,P,High End,Rifle,89322,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
+M4,LVOA-C Replica,P,High End,Rifle,89322,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
+MDR,Urban MDR,P,High End,Rifle,103462,20,360,1900,28,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+MDR,Urban MDR Replica,P,High End,Rifle,103462,20,360,1900,28,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+SCAR,Military Mk17,P,High End,Rifle,131633,20,275,2200,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+SCAR,Police Mk17,P,High End,Rifle,131633,20,275,2200,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+SCAR,Police Mk17 Replica,P,High End,Rifle,131633,20,275,2200,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+SIG 716,SIG 716,P,High End,Rifle,91673,20,320,2400,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+SIG 716,SIG 716 CQB,P,High End,Rifle,91673,20,320,2400,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short,7.62,,60
+SIG 716,SIG 716 Replica,P,High End,Rifle,91673,20,320,2400,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,7.62,7.62,60
+UMP-45,USC .45 ACP,P,High End,Rifle,101075,20,420,2300,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,.45 ACP,,60
+UMP-45,USC .45 ACP Replica,P,High End,Rifle,101075,20,420,2300,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,.45 ACP,,60
+1886,The Virginian,P,Named,Rifle,282072,5,100,3400,28,Rifle Damage,15,Critical Hit Damage,17,A,Perfect Boomerang,,,Tubular,,60
+M1A,Baker's Dozen,P,Named,Rifle,235060,10,180,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,Perfect Lucky Shot,Short / Long,Side / Short / Long,MM 7.62,,60
+M4,Surge,P,Named,Rifle,89322,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,Perfect Spike,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
+SCAR,Everlasting Gaze,P,Named,Rifle,131633,20,275,2200,50,Rifle Damage,15,Critical Hit Damage,17,A,Perfect Perpetuation,Short / Long,Side / Short / Long,7.62,7.62,60
+SIG 716,Artist's Tool,P,Named,Rifle,91673,20,320,2400,60,Rifle Damage,15,Critical Hit Damage,17,A,Perfect Rifleman,Short / Long,Side / Short,7.62,,60
+SPAS-12,Lullaby,P,Exotic,Shotgun,582944,8,70,5450,10,Shotgun Damage,15,Damage to Armor,12,Damage to TOC,Sandman,Lullaby,Lullaby,Lullaby,Lullaby,45
+SPAS-12,Sweet Dreams,P,Exotic,Shotgun,582944,8,70,5450,10,Shotgun Damage,15,Damage to Armor,12,Damage to TOC,Sandman,Sweet Dreams,Sweet Dreams,Sweet Dreams,Sweet Dreams,45
+AA-12,ACS-12,P,High End,Shotgun,169240,20,300,2300,14,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,,,45
+Double Barrel,Double Barrel Shotgun,P,High End,Shotgun,620552,2,200,2200,11,Shotgun Damage,15,Damage to Armor,12,A,A,,,,,45
+Double Barrel,Double Barrel Shotgun Replica,P,High End,Shotgun,620552,2,200,2200,11,Shotgun Damage,15,Damage to Armor,12,A,A,,,,,45
+Double Barrel,Double Barrel Sawed Off,S,High End,Shotgun,620552,2,200,2200,11,Shotgun Damage,15,Damage to Armor,12,A,A,,,,,45
+Double Barrel,Firestarter,P,Named,Shotgun,182952,2,200,2200,11,Shotgun Damage,11,Damage to Health,7.5,,Primer Rounds,,,,,45
+M870,Custom M870 MCS,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+M870,Custom M870 MCS Replica,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+M870,M870 Express,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+M870,M870 Express Replica,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+M870,Military M870,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,Tubular,,45
+KSG,KSG Shotgun,P,High End,Shotgun,545336,12,70,8050,16,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,Tubular,,45
+SASG-12,Black Market SASG-12 S,P,High End,Shotgun,300872,7,180,3000,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,,,45
+SASG-12,Black Market SASG-12 S Replica,P,High End,Shotgun,300872,7,180,3000,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,,,45
+SASG-12,SASG-12,P,High End,Shotgun,300872,7,180,3000,14,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,,,45
+SASG-12,Tactical SASG-12 K,P,High End,Shotgun,300872,7,180,3000,14,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,,,45
+SPAS-12,SPAS-12,P,High End,Shotgun,545336,8,70,5450,16,Shotgun Damage,15,Damage to Armor,12,A,A,,,Tubular,,45
+SPAS-12,SPAS-12 Replica,P,High End,Shotgun,545336,8,70,5450,16,Shotgun Damage,15,Damage to Armor,12,A,A,,,Tubular,,45
+Super 90,Marine Super 90,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+Super 90,Super 90,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+Super 90,Super 90 Replica,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+Super 90,Tactical Super 90 SBS,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+Super 90,Tactical Super 90 SBS Replica,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+AA-12,Rock n' Roll,P,Named,Shotgun,169240,20,300,2300,14,Shotgun Damage,15,Damage to Armor,12,A,Perfectly Extra,Micro / Short,Side / Short / Long,,,45
+Double Barrel,Boomstick,P,Named,Shotgun,620552,2,200,2200,11,Shotgun Damage,15,Damage to Armor,12,A,Perfect Pumped Up,,,,,45
+Double Barrel,Backup Boomstick,S,Named,Shotgun,620552,2,200,2200,11,Shotgun Damage,16,Damage to Armor,12,A,A,,,,,45
+M870,Cuélebre,P,Named,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,Perfect Jazz Hands,Micro / Short,Side / Short / Long,Tubular,,45
+KSG,The Send-Off,P,Named,Shotgun,545336,12,70,8050,16,Shotgun Damage,15,Damage to Armor,12,A,Perfect Distance,Micro / Short,Side / Short / Long,Tubular,,45
+SASG-12,Tsunami,P,Named,Shotgun,300872,7,180,3000,14,Shotgun Damage,15,Damage to Armor,12,A,Perfect Pummel,Micro / Short,Side / Short / Long,,,45
+Super 90,Enforcer,P,Named,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,Perfect Pummel,Micro / Short,Side / Short / Long,Tubular,,45
+CMGG,Lady Death,P,Exotic,SMG,34788,32,900,2100,26,SMG Damage,15,Critical Hit Chance,21,Damage to Armor,Breathe Free,Lady Death,Lady Death,Lady Death,Lady Death,50
+P90,The Chatterbox,P,Exotic,SMG,36669,60,700,1700,25,SMG Damage,15,Critical Hit Chance,21,Headshot Damage,Incessant Chatter,The Chatterbox,The Chatterbox,The Chatterbox,The Chatterbox,50
+AUG,AUG A3 Para XS,P,High End,SMG,51713,25,725,2100,18,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,9mm,9mm,50
+AUG,Enhanced AUG A3P,P,High End,SMG,51713,25,725,2100,18,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,9mm,9mm,50
+AUG,Tactical AUG A3P,P,High End,SMG,51713,25,725,2100,18,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short,9mm,9mm,50
+AUG,Tactical AUG A3P Replica,P,High End,SMG,51713,25,725,2100,18,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short,9mm,9mm,50
+CMMG,CMMG Banshee,P,High End,SMG,44661,32,900,2100,16,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,Side / Short,9mm,9mm,50
+MP5,MP5 ST,P,High End,SMG,47012,32,800,2100,16,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,9mm,9mm,50
+MP5,MP5 ST Replica,P,High End,SMG,47012,32,800,2100,16,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,9mm,9mm,50
+MP5,MP5-N,P,High End,SMG,47012,32,800,2100,16,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,Side / Short / Long,9mm,9mm,50
+MP5,MP5A2,P,High End,SMG,47012,32,800,2100,16,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short,9mm,9mm,50
+MP7,MP7,P,High End,SMG,37609,40,950,2000,19,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short,,5.56,50
+MPX,MPX,P,High End,SMG,45131,30,850,2300,22,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short,9mm,9mm,50
+P90,P90,P,High End,SMG,42310,50,900,2200,15,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,,,5.56,50
+P90,P90 Replica,P,High End,SMG,42310,50,900,2200,15,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,,,5.56,50
+PP-19,Enhanced PP-19,P,High End,SMG,46071,53,700,2500,16,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,,,9mm,50
+PP-19,PP-19,P,High End,SMG,46071,53,700,2500,16,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,,,9mm,50
+SMG-9,Converted SMG-9,P,High End,SMG,44661,32,825,2000,20,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,,9mm,9mm,50
+SMG-9,Converted SMG-9 A2,P,High End,SMG,44661,32,825,2000,20,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,Side / Short,9mm,9mm,50
+SMG-9,Converted SMG-9 Replica,P,High End,SMG,44661,32,825,2000,20,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,,9mm,9mm,50
+T821,Black Market T821,P,High End,SMG,57824,32,550,1900,17,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,Side / Short,9mm,9mm,50
+T821,Black Market T821 Replica,P,High End,SMG,57824,32,550,1900,17,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,Side / Short,9mm,9mm,50
+T821,Police T821,P,High End,SMG,57824,32,550,1900,17,SMG Damage,15,Critical Hit Chance,21,A,A,Micro / Short,Side / Short,9mm,9mm,50
+Thompson,M1928,P,High End,SMG,58765,30,600,2300,16,SMG Damage,15,Critical Hit Chance,21,A,A,,,.45 ACP,,50
+Thompson,Tommy Gun,P,High End,SMG,39960,50,800,2300,16,SMG Damage,15,Critical Hit Chance,21,A,A,,,,,50
+UMP-45,Police UMP-45,P,High End,SMG,58765,30,600,2300,14,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
+UMP-45,Tactical UMP-45,P,High End,SMG,58765,30,600,2300,14,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
+UMP-45,Tactical UMP-45 Replica,P,High End,SMG,58765,30,600,2300,14,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
+Vector,Tactical Vector SBR 9mm,P,High End,SMG,39960,19,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short,9mm,9mm,50
+Vector,Vector SBR .45 ACP,P,High End,SMG,35259,25,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
+Vector,Vector SBR .45 ACP Replica,P,High End,SMG,35259,25,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
+Vector,Vector SBR 9mm,P,High End,SMG,32908,33,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short,9mm,9mm,50
+CMMG,The Grudge,P,Named,SMG,44661,32,900,2100,16,SMG Damage,15,Critical Hit Chance,21,A,Perfect Vindictive,Micro / Short,Side / Short,9mm,9mm,50
+MP7,Swap Chain,P,Named,SMG,37609,40,950,2000,19,SMG Damage,15,Critical Hit Chance,21,A,Perfect Unwavering,Short / Long,Side / Short,,,50
+MPX,Safety Distance,P,Named,SMG,45131,30,850,2300,22,SMG Damage,15,Critical Hit Chance,21,A,Perfect Outsider,Short / Long,Side / Short,9mm,9mm,50
+MPX,The Apartment,P,Named,SMG,45131,30,850,2300,22,SMG Damage,15,Critical Hit Chance,21,A,Perfectly Measured,Short / Long,Side / Short,9mm,9mm,50
+P90,Emeline's Guard,P,Named,SMG,42310,50,900,2200,15,SMG Damage,15,Critical Hit Chance,21,A,Perfect Preservation,Micro / Short,,,5.56,50
+PP-19,Cold Relations,P,Named,SMG,46071,53,700,2500,16,SMG Damage,15,Critical Hit Chance,21,A,Perfect Strained,Short / Long,,,9mm,50
+Thompson,The Sleigher,P,Named,SMG,84621,50,250,2300,16,SMG Damage,15,Critical Hit Chance,21,A,Hidden Rock,,,,,50
+Vector,Dark Winter,P,Named,SMG,35259,25,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,Perfect Killer,Ironsights / Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50

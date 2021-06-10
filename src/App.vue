@@ -20,9 +20,6 @@
       <router-view></router-view>
       <WeaponStats></WeaponStats>
       <div class="spec-and-stats">
-        <BasicTile classes="specialization">
-          <SpecializationSlot></SpecializationSlot>
-        </BasicTile>
         <BasicTile classes="SHD-levels">
           <SHDLevels></SHDLevels>
         </BasicTile>
@@ -58,7 +55,6 @@ import WeaponStats from "./components/WeaponStats/WeaponStats";
 import GeneralStats from "./components/GeneralStats";
 import SHDLevels from "./components/SHDLevels";
 import BasicTile from "./components/BasicTile";
-import SpecializationSlot from "./components/SpecializationSlot";
 import Toolbar from "./components/Toolbar";
 import newFeatureGlow from "./utils/newFeatureGlow";
 import DPSChart from "./components/DPSChart/DPSChart";
@@ -72,7 +68,6 @@ export default {
     WeaponStats,
     GeneralStats,
     BasicTile,
-    SpecializationSlot,
     Toolbar,
     SHDLevels,
     DPSChart,
@@ -129,6 +124,10 @@ body.no-scroll {
   overflow: hidden;
 }
 
+.specialization {
+    grid-column: 1 / -1; // Makes the element extend for the full width! And I dont even have to set the media query, very nice
+}
+
 .grid-container {
   display: grid;
   grid-template-columns: repeat(5, [col] 1fr);
@@ -140,6 +139,7 @@ body.no-scroll {
   margin-bottom: 70px;
   @include media("<=uibreak") {
     grid-template-columns: repeat(1, [col] 1fr);
+
     .inventory-gui {
       grid-column: col 1;
       grid-row: row 1;
@@ -180,9 +180,9 @@ body.no-scroll {
 }
 
 .specialization {
-  grid-column: col 4 / span 2;
-  grid-row: row;
-  margin-bottom: 8px;
+  // grid-column: col 1 / span 3;
+  // grid-row: row;
+  // margin-bottom: 8px;
 }
 
 .weapon-stats-container {
@@ -216,7 +216,12 @@ body.no-scroll {
 .tile.toolbar-container {
   min-height: 0px !important;
   padding: 8px;
-  margin: 8px;
+  margin: 0px;
+  position: sticky;
+  top: 0px;
+  background: #1a1e24;
+  z-index: 999;
+  border: 8px solid #232830;
 }
 
 .no-element-selected {

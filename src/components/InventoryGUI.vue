@@ -1,5 +1,8 @@
 <template>
   <div class="inventory-gui" id='inventory-gui'>
+    <BasicTile classes="specialization">
+      <SpecializationSlot></SpecializationSlot>
+    </BasicTile>
     <BasicTile classes="primary" bgImage="icons/main-weapon.png">
       <WeaponSlot name="Primary"></WeaponSlot>
     </BasicTile>
@@ -34,9 +37,8 @@
 import BasicTile from "./BasicTile";
 import GearSlot from "./GearSlot";
 import WeaponSlot from "./WeaponSlot";
-import { GearBase } from "../utils/classes";
-import { gearList } from "../utils/dataImporter";
-import { gearEncoderMap, updatedInput$ } from "../utils/urlEncorder";
+import { updatedInput$ } from "../utils/urlEncorder";
+import SpecializationSlot from "./SpecializationSlot.vue";
 
 export default {
   name: "InventoryGUI",
@@ -46,7 +48,8 @@ export default {
   components: {
     BasicTile,
     GearSlot,
-    WeaponSlot
+    WeaponSlot,
+    SpecializationSlot
   },
   data() {
     return {};

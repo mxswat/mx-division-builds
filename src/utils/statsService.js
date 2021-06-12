@@ -153,7 +153,7 @@ class StatsService {
                             const prevVal = stats[statTypes[statType]][found.stat] || 0;
                             stats[statTypes[statType]][found.stat] = Number(prevVal) + Number(found.val);
                             // Horrible, TODO: Change me
-                            if (found.stat1) {
+                            if (found.stat1 && this.statsMapping[found.stat1] != undefined) {
                                 brandBuffs.push(`${found.stat1} ${found.val1}`);
                                 const statType = this.statsMapping[found.stat1].Type;
                                 const prevVal = stats[statTypes[statType]][found.stat1] || 0;

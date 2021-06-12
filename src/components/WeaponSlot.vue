@@ -320,7 +320,7 @@ export default {
           );
           this.currentWeapon = fromUrlGear;
           // Start from 1 because 0 is used to build the object
-          for (let i = 1; i < 6; i++) {
+          for (let i = 1; i <= 6; i++) {
             const id = parseInt(splittedIdS[i]);
             const mapped = map[i];
             this.currentWeapon[mapped.target] = mapped.source.find(

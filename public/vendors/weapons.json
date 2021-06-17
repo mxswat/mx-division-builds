@@ -418,5 +418,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>8.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Carnage - IWI NEGEV",
+   "dmg": "37,610",
+   "rpm": 850,
+   "mag": 100,
+   "talent": "Perfect Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.1% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Stoner LAMG",
+   "dmg": "47,952",
+   "rpm": 580,
+   "mag": 200,
+   "talent": "Overwhelm",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SOCOM M1A",
+   "dmg": "141,036",
+   "rpm": 320,
+   "mag": 10,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.3% Swap Speed"
  }
 ]

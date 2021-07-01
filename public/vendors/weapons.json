@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>17.5% Optimal Range",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tsunami - Tactical SASG-12 K",
+   "dmg": "364,812",
+   "rpm": 180,
+   "mag": 7,
+   "talent": "Perfect Pummel",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.5% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.1% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "PDR",
+   "dmg": "",
+   "rpm": 700,
+   "mag": 30,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M700 Carbon",
+   "dmg": "376,096",
+   "rpm": 54,
+   "mag": 7,
+   "talent": "Perpetuation",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>98% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.5% Swap Speed"
  }
 ]

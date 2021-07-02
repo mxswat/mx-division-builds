@@ -10,7 +10,6 @@ item {
     ]
 }
 
-
 build {
     itemSlot,
     itemSlot,

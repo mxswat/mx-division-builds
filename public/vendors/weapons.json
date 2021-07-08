@@ -11,7 +11,7 @@
    "talent": "Close & Personal",
    "attribute1": "<span class=\"icon-weapons\"></span>11% SMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>13.5% Critical Hit Chance",
-   "attribute3": "<span class=\"icon-weapons\"></span>11.6% Critical Hit Chance"
+   "attribute3": "<span class=\"icon-weapons\"></span>11.6% Swap Speed"
  },
  {
    "type": "weapon",
@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>6.7% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Emelines's Guard - P90",
+   "dmg": "48,892",
+   "rpm": 900,
+   "mag": 50,
+   "talent": "Perfect Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tactical Mk 16",
+   "dmg": "55,504",
+   "rpm": 625,
+   "mag": 30,
+   "talent": "Killer",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SPAS-12",
+   "dmg": "646,883",
+   "rpm": 70,
+   "mag": 8,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>7% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>14.4% Swap Speed"
  }
 ]

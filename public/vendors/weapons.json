@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7.5% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "New Reliable - Black Market RPK-74 E",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Perfectly Optimized",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.3% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.9% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL SA-58",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "On Empty",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic M44 Carbine",
+   "dmg": "423,108",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "First Blood",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>107% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>14.5% Optimal Range"
  }
 ]

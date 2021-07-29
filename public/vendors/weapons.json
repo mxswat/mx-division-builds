@@ -404,5 +404,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.6% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Designated Hitter - SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>91% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.9% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "First Wave PF45",
+   "dmg": "82,741",
+   "rpm": 370,
+   "mag": 12,
+   "talent": "Finisher",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8.5% Critical Hit Chance",
+   "attribute3": "-"
  }
 ]

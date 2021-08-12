@@ -390,5 +390,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>12.4% Swap Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Darkness - SOCOM Mk20 SSR",
+   "dmg": "143,857",
+   "rpm": 282,
+   "mag": 20,
+   "talent": "Perfect Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>90% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.2% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Infantry MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.2% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "KSG Shotgun",
+   "dmg": "594,230",
+   "rpm": 70,
+   "mag": 12,
+   "talent": "Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
  }
 ]

@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Glory Daze - Custom P416 G3",
+   "dmg": "47,952",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Perfectly Near Sighted",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.8% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tactical Mk 16",
+   "dmg": "55,504",
+   "rpm": 625,
+   "mag": 30,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "ACR SS",
+   "dmg": "92,614",
+   "rpm": 420,
+   "mag": 30,
+   "talent": "Lucky Shot",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
  }
 ]

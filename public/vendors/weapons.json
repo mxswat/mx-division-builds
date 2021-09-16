@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.6% Shotgun Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
    "attribute3": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Designated Hitter - SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Perfect Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>102% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.4% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "AUG A3 Para XS",
+   "dmg": "57,825",
+   "rpm": 725,
+   "mag": 25,
+   "talent": "Perpetuation",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.8% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "ACR SS",
+   "dmg": "92,614",
+   "rpm": 420,
+   "mag": 30,
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.8% Reload Speed"
  }
 ]

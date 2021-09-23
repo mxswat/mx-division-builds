@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tabula Rasa - Military L86 LSW",
+   "dmg": "59,705",
+   "rpm": 610,
+   "mag": 30,
+   "talent": "Perfectly Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>18.5% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tactical UMP-45",
+   "dmg": "65,817",
+   "rpm": 600,
+   "mag": 30,
+   "talent": "Perpetuation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Resolute MK47",
+   "dmg": "104,837",
+   "rpm": 300,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.9% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.7% Stability"
  }
 ]

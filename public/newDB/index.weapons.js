@@ -1,13 +1,17 @@
 const weapons = require('./Weapons - Weapons.json')
-
+const fs = require('fs');
 const newWeapons = []
 
 function strndrdize(string) {
   if (Number.isInteger(string)) {
     return string
+  } 
+  // if is 'A' then return the wildcard
+  if (string == 'A') {
+    return '*'
   }
   // Remove special chars, and the replace spaces with _
-  return string.replace(/[^a-zA-Z ]/g, "").replace(/[^A-Z0-9]+/ig, "_").toLowerCase()
+  return string.replace(/[^a-zA-Z0-9 ]/g, "").replace(/[^A-Z0-9]+/ig, "_").toLowerCase()
 }
 
 for (let i = 0; i < weapons.length; i++) {
@@ -45,4 +49,10 @@ for (let i = 0; i < weapons.length; i++) {
 }
 
 console.log(newWeapons)
+
+fs.writeFile('new-weapons.json', JSON.stringify(newWeapons), (err) => {
+  if (err) throw err;
+  console.log('Data written to file');
+});
+
 console.log('Done')

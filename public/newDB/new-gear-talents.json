@@ -1,0 +1,892 @@
+[
+  {
+    "id": "bloodsucker",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "calculated",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "clutch",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "combined_arms",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "companion",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "composure",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "concussion",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "creeping_death",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "energize",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "galvanize",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "leadership",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "opportunistic",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "overclock",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "protector",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "reassigned",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "safeguard",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "shock_and_awe",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "tech_support",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "unstoppable_force",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "versatile",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "vigilance",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "wicked",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "empathic_resolve",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "mad_bomber",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "overwatch",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_overwatch",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "trauma",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "explosive_delivery",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "kinetic_momentum",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "skilled",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "spotter",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "tag_team",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "tamper_proof",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "efficient",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "entrench",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "intimidate",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "protected_reload",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "unbreakable",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "vanguard",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "braced",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "focus",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "glass_cannon",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "gunslinger",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "obliterate",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "spark",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "pack_instincts",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "stand_your_ground",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "parkour",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "dragons_glare",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "quick_draw",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "transference_overclock",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "ablative_nanoplating",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "one_in_hand",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "perfect_clutch",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_combined_arms",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_shock_and_awe",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_tech_support",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_vigilance",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfectly_wicked",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_intimidate",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfectly_unbreakable",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_vanguard",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_braced",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_focus",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_glass_cannon",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_spark",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "short_circuit",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "positive_reinforcement",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "trauma_specialist",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "parabellum_rounds",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "patriotic_boost",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "waving_the_flag",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "ace_in_the_sleeve",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "no_limit",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "critical_measures",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "target_rich_environment",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "process_refinery",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "improved_materials",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "strategic_combat_support",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "tactical_superiority",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "risk_management",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "press_the_advantage",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "multithreaded_execution",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "compiler_optimization",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "signature_moves",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "specialized_destruction",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "feedback_loop",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "rules_of_engagement",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "red_white_and_blue",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "dead_mans_hand",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "hostile_negotiations",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "makeshift_repairs",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "ground_control",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "strikers_gamble",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "hackstep_protocol",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "aggressive_recon",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "adrenaline_rush",
+    "tags": [
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_adrenaline_rush",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "headhunter",
+    "tags": [
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "perfect_headhunter",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "toxic_delivery",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "symptom_aggravator",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "proliferation",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "indirect_transmission",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "endless_hunger",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "overwhelming_force",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfectly_calculated",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfectly_skilled",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "best_buds",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "complete_uptime",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "alternating_current",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "bleeding_edge",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:exotic"
+    ]
+  },
+  {
+    "id": "kill_confirmed",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfect_bloodsucker",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:backpack"
+    ]
+  },
+  {
+    "id": "perfectly_efficient",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:chest"
+    ]
+  },
+  {
+    "id": "apex_predator",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  },
+  {
+    "id": "tend_and_befriend",
+    "tags": [
+      "is_hidden",
+      "is_talent",
+      "slot_lock:*"
+    ]
+  }
+]

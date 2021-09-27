@@ -1,0 +1,866 @@
+[
+ {
+   "Brand": "5.11 Tactical0",
+   "stat": "Health",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "5.11 Tactical1",
+   "stat": "Incoming Repairs",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "5.11 Tactical2",
+   "stat": "Hazard Protection",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Airaldi Holdings0",
+   "stat": "Marksman Rifle Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Airaldi Holdings1",
+   "stat": "Headshot Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Airaldi Holdings2",
+   "stat": "Damage to Armor",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Alps Summit Armaments0",
+   "stat": "Repair Skills",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Alps Summit Armaments1",
+   "stat": "Skill Duration",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Alps Summit Armaments2",
+   "stat": "Skill Haste",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Badger Tuff0",
+   "stat": "Shotgun Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Badger Tuff1",
+   "stat": "Total Armor",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Badger Tuff2",
+   "stat": "Armor on Kill %",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Ceska Vyroba s.r.o.0",
+   "stat": "Critical Hit Chance",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Ceska Vyroba s.r.o.1",
+   "stat": "Hazard Protection",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Ceska Vyroba s.r.o.2",
+   "stat": "Health",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "China Light Industries Corporation0",
+   "stat": "Explosive Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "China Light Industries Corporation1",
+   "stat": "Skill Haste",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "China Light Industries Corporation2",
+   "stat": "Status Effects",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Douglas & Harding0",
+   "stat": "Pistol Damage",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Douglas & Harding1",
+   "stat": "Stability",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Douglas & Harding2",
+   "stat": "Accuracy",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Fenris Group AB0",
+   "stat": "Assault Rifle Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Fenris Group AB1",
+   "stat": "Reload Speed %",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Fenris Group AB2",
+   "stat": "Stability",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Gila Guard0",
+   "stat": "Total Armor",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Gila Guard1",
+   "stat": "Health",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Gila Guard2",
+   "stat": "Armor Regeneration %",
+   "val": 1,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Golan Gear Ltd0",
+   "stat": "Status Effects",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Golan Gear Ltd1",
+   "stat": "Armor Regeneration %",
+   "val": 1,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Golan Gear Ltd2",
+   "stat": "Total Armor",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Grupo Sombra S.A.0",
+   "stat": "Critical Hit Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Grupo Sombra S.A.1",
+   "stat": "Explosive Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Grupo Sombra S.A.2",
+   "stat": "Headshot Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hana-U Corporation0",
+   "stat": "Skill Haste",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hana-U Corporation1",
+   "stat": "Skill Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hana-U Corporation2",
+   "stat": "Weapon Damage",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Murakami Industries0",
+   "stat": "Skill Duration",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Murakami Industries1",
+   "stat": "Repair Skills",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Murakami Industries2",
+   "stat": "Skill Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Overlord Armaments0",
+   "stat": "Rifle Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Overlord Armaments1",
+   "stat": "Accuracy",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Overlord Armaments2",
+   "stat": "Weapon Handling",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Petrov Defense Group0",
+   "stat": "LMG Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Petrov Defense Group1",
+   "stat": "Weapon Handling",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Petrov Defense Group2",
+   "stat": "Ammo Capacity",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Providence Defense0",
+   "stat": "Headshot Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Providence Defense1",
+   "stat": "Critical Hit Chance",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Providence Defense2",
+   "stat": "Critical Hit Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Richter & Kaiser GmbH0",
+   "stat": "Incoming Repairs",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Richter & Kaiser GmbH1",
+   "stat": "Explosive Resistance",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Richter & Kaiser GmbH2",
+   "stat": "Repair Skills",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Sokolov Concern0",
+   "stat": "SMG Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Sokolov Concern1",
+   "stat": "Critical Hit Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Sokolov Concern2",
+   "stat": "Critical Hit Chance",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Wyvern Wear0",
+   "stat": "Skill Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Wyvern Wear1",
+   "stat": "Status Effects",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Wyvern Wear2",
+   "stat": "Skill Duration",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Yaahl Gear0",
+   "stat": "Hazard Protection",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Yaahl Gear1",
+   "stat": "Weapon Damage",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Yaahl Gear2",
+   "stat": "Pulse Resistance",
+   "val": 40,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hard Wired1",
+   "stat": "Skill Haste",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hard Wired2",
+   "stat": "Repair Skills",
+   "val": 30,
+   "stat1": "Skill Damage",
+   "val1": 15,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hard Wired3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Feedback Loop\nWhenever you use or cancel a skill, your other skill's cooldown is automatically reduced by 30s while increasing total skill damage and repair by 10% for 20s.\n\nFeedback Loop can occur once every 20s."
+ },
+ {
+   "Brand": "Ongoing Directive1",
+   "stat": "Status Effects",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Ongoing Directive2",
+   "stat": "Reload Speed %",
+   "val": 30,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Ongoing Directive3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Rules of Engagement\nKilling a status affected enemy grants Hollow-Point Ammo for your active weapon.\n\nHollow-Point Ammo amplifies weapon damage by 20% and applies bleed on hit."
+ },
+ {
+   "Brand": "True Patriot1",
+   "stat": "Ammo Capacity",
+   "val": 30,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "True Patriot2",
+   "stat": "Magazine Size %",
+   "val": 30,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "True Patriot3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Red, White, and Blue  Every 2s, enemies you shoot receive a stacking debuff of Red, White and Blue.\n\nRed: Amplifies the enemy's damage taken by 8%.\n\nWhite: Shooting the enemy repairs the attacking agent's armor by 2% once every second.\n\nBlue: Decreases the enemy's damage dealt by 8%.\n\nFull Flag: Enemies that die while under the effect of all 3 debuffs create a 5m explosion, dealing damage equal to their total health and armor. (Explosion damage reduced on Named enemy deaths.)"
+ },
+ {
+   "Brand": "Aces & Eights1",
+   "stat": "Marksman Rifle Damage",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Aces & Eights2",
+   "stat": "Headshot Damage",
+   "val": 30,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Aces & Eights3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Dead Man's Hand\nFlip a card when landing shots with a Marksman Rifle.\n\nAfter 5 cards are flipped, the damage of your next shot is amplified by 30%. More shots are enhanced, the better the hand revealed.\nFour of a Kind: 4 shots.\nFull House: 3 shots.\nAces and Eights: 2 shots.\n\nFlip an additional card on headshots."
+ },
+ {
+   "Brand": "Negotiator's Dilemma1",
+   "stat": "Critical Hit Chance",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Negotiator's Dilemma2",
+   "stat": "Critical Hit Damage",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Negotiator's Dilemma3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Hostile Negotiations\nCritical hits mark enemies for 20s, up to 3 marks total.\n\nWhen you critically hit a marked enemy, all other marked enemies take 60% of the damage dealt.\n\nWhenever a marked enemy dies, gain +2% critical hit damage, stacking up to 20 times, until combat ends."
+ },
+ {
+   "Brand": "Tip of the Spear1",
+   "stat": "Signature Weapon Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Tip of the Spear2",
+   "stat": "Weapon Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Tip of the Spear3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Aggressive Recon\nDealing damage with a signature weapon increases total weapon damage by 20% for 60s.\n\nAutomatically generate signature ammo every 60s."
+ },
+ {
+   "Brand": "Foundry Bulwark1",
+   "stat": "Total Armor",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Foundry Bulwark2",
+   "stat": "Armor Regeneration %",
+   "val": 1,
+   "stat1": "Shield Health",
+   "val1": 50,
+   "Talent": ""
+ },
+ {
+   "Brand": "Foundry Bulwark3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Makeshift Repairs\nWhenever you or your shield take damage, 20% of that amount is repaired to both over 15s."
+ },
+ {
+   "Brand": "Future Initiative1",
+   "stat": "Repair Skills",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Future Initiative2",
+   "stat": "Skill Duration",
+   "val": 30,
+   "stat1": "Skill Haste",
+   "val1": 15,
+   "Talent": ""
+ },
+ {
+   "Brand": "Future Initiative3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Ground Control\nIncreases you and your allies' total weapon and skill damage by 15% when at full armor.\n\nWhen you repair an ally, you and all allies within 5m of you are also repaired for 60% of that amount."
+ },
+ {
+   "Brand": "Striker's Battlegear1",
+   "stat": "Weapon Handling",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Striker's Battlegear2",
+   "stat": "Rate of Fire %",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Striker's Battlegear3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Striker's Gamble\nWeapon hits amplify total weapon damage by 0.5%, stacking up to 50 times.\n\n1 stack is lost each second.\n\n2 stacks are lost every time you miss."
+ },
+ {
+   "Brand": "System Corruption1",
+   "stat": "Armor on Kill %",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "System Corruption2",
+   "stat": "Pulse Resistance",
+   "val": 40,
+   "stat1": "Disrupt Resistance",
+   "val1": 40,
+   "Talent": ""
+ },
+ {
+   "Brand": "System Corruption3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Hackstep Protocol\nReplaces armor kits with an instant, infinite-use ability on a 20s cooldown, that repairs 20% armor, grants 50% bonus armor and hides your nameplate for 5s.\n\nIncreases total weapon damage by 1% per 5% bonus armor gained, up to 20%."
+ },
+ {
+   "Brand": "Walker, Harris & Co.0",
+   "stat": "Weapon Damage",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Walker, Harris & Co.1",
+   "stat": "Damage to Armor",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Walker, Harris & Co.2",
+   "stat": "Damage to Health",
+   "val": 5,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Eclipse Protocol1",
+   "stat": "Status Effects",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Eclipse Protocol2",
+   "stat": "Skill Haste",
+   "val": 15,
+   "stat1": "Hazard Protection",
+   "val1": 30,
+   "Talent": ""
+ },
+ {
+   "Brand": "Eclipse Protocol3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Indirect Transmission\nYour status effects now spread on kill to all enemies within 10m and refresh 50% of the duration."
+ },
+ {
+   "Brand": "Hunter's Fury1",
+   "stat": "SMG Damage",
+   "val": 15,
+   "stat1": "Shotgun Damage",
+   "val1": 15,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hunter's Fury2",
+   "stat": "Armor on Kill %",
+   "val": 20,
+   "stat1": "Health on Kill %",
+   "val1": 100,
+   "Talent": ""
+ },
+ {
+   "Brand": "Hunter's Fury3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Apex Predator\nEnemies within 15m receive a debuff, amplifying your weapon damage against them by 20%.\n\nKilling a debuffed enemy with your weapon disorients other enemies within 5m, and amplifies weapon damage by 5% for 10s, stacking up to 5 times."
+ },
+ {
+   "Brand": "Empress International0",
+   "stat": "Skill Health",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Empress International1",
+   "stat": "Skill Damage",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Empress International2",
+   "stat": "Skill Efficiency",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Rigger1",
+   "stat": "Skill Haste",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Rigger2",
+   "stat": "Skill Duration",
+   "val": 15,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Rigger3",
+   "stat": "Talent",
+   "val": null,
+   "stat1": "",
+   "val1": null,
+   "Talent": "Talent: Tend and Befriend\nInteracting with your deployed skills grants the skill 25% skill damage for 10s. This buff cannot be refreshed.\n\nInteractions include:\n- Using / Deploying the Skill\n- Changing the skill's target\n- Healing the skill"
+ },
+ {
+   "Brand": "Belstone Armory0",
+   "stat": "Armor Regeneration %",
+   "val": 1,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Belstone Armory1",
+   "stat": "Armor on Kill %",
+   "val": 10,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ },
+ {
+   "Brand": "Belstone Armory2",
+   "stat": "Incoming Repairs",
+   "val": 20,
+   "stat1": "",
+   "val1": null,
+   "Talent": ""
+ }
+]

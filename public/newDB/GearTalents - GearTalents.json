@@ -1,0 +1,938 @@
+[
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Bloodsucker",
+   "Desc": "Killing an enemy adds and refreshes a stack of +10% bonus armor for 10s. Max stack is 10.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Calculated",
+   "Desc": "Kills from cover reduce skill cooldowns by 10%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Clutch",
+   "Desc": "If you are below 15% armor, critical hits repair 2.5% missing armor. Kills allow you to repair up to 100% armor for 4-10s, based on your number of offensive core attributes.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Combined Arms",
+   "Desc": "Shooting an enemy increases total skill damage by 25% for 3s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Companion",
+   "Desc": "While you are within 5m of an ally or skill, total weapon damage is increased by 15%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Composure",
+   "Desc": "While in cover, increases total weapon damage by 15%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Concussion",
+   "Desc": "Headshots increase total weapon damage by 10% for 1.5s. 5s with marksman rifles. Headshot kills increase total weapon damage by 15% for 10s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Creeping Death",
+   "Desc": "When you apply a status effect, it is also applied to all enemies within 8m of your target. Cooldown: 15s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Energize",
+   "Desc": "Using an armor kit grants +1 skill tier for 15s. If already at skill tier 6, grants overcharge. Cooldown: 60s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Galvanize",
+   "Desc": "Applying a blind, ensnare, confuse, or shock to an enemy grants 40% of your armor as bonus armor to allies within 20m of that enemy for 10s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Leadership",
+   "Desc": "Performing a cover to cover grants 15% of your armor as bonus armor to you and all allies for 10s. This is doubled if you end within 10m of an enemy. Cooldown: 10s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Opportunistic",
+   "Desc": "Enemies you hit with shotguns and marksman rifles amplifies the damage they take by 10% from all sources for 5s. REQUIRES a Marksman Rifle or Shotgun Drawn",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Overclock",
+   "Desc": "Allies within 7m of your deployed skills, gain +25% reload speed and reduces their active cooldowns by 0.2s each second.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Protector",
+   "Desc": "When your shield is damaged, you gain +5% bonus armor and all other allies gain 15% of your armor as bonus armor for 3s. Cooldown: 3s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Reassigned",
+   "Desc": "Killing an enemy adds 1 round of a random special ammo into your sidearm. Cooldown: 15s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Safeguard",
+   "Desc": "While at full armor, increases total skill repair by 100%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Shock and Awe",
+   "Desc": "Applying a status effect to an enemy increases total skill damage and repair by 20% for 20s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Tech Support",
+   "Desc": "Skill kills increase total skill damage by 25% for 20s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Unstoppable Force",
+   "Desc": "Killing an enemy increases total weapon damage by 5% for 15s. Stacks up to 5 times.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Versatile",
+   "Desc": "Amplifies total weapon damage for 10s when swapping between your primary and secondary weapons if they are different. 35% to enemies within 15m for Shotguns and SMGs. 35% to enemies further than 25m for Rifles and Marksman Rifles. 10% to enemies between 15-25m for LMGs and Assault Rifles. At most once per 5s per weapon type.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Vigilance",
+   "Desc": "Increases total weapon damage by 25%. Taking damage disables this buff for 4s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Wicked",
+   "Desc": "Applying a status effect increases total weapon damage by 18% for 20s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Empathic Resolve",
+   "Desc": "Repairing an ally increases their total weapon and skill damage by 3-15% for 20s. 1-7% if self. Effectiveness increased by your skill tier.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Mad Bomber",
+   "Desc": "Grenade radius is increased by 50%. Grenades that kill an enemy are refunded. Grenades can now be \"cooked\" by holding the fire button, making them explode earlier. Gain +15% bonus armor while aiming grenades.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Overwatch",
+   "Desc": "After staying in cover for 10s, increases you and your allies’ total weapon and skill damage by 12% as long as you remain in cover or in a cover-to-cover move.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Overwatch",
+   "Desc": "After staying in cover for 8s, increases you and your allies’ total weapon and skill damage by 12% as long as you remain in cover or in a cover-to-cover move.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Trauma",
+   "Desc": "Applies blind to an enemy hit in the head. Cooldown: 30s. Applies bleed to an enemy hit in the chest. Cooldown: 30s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Explosive Delivery",
+   "Desc": "Whenever you throw a skill, 1.5 seconds after landing, it creates an explosion damaging enemies with 5m. Damage scales with skill tier dealing 25-100% damage of a concussion grenade. At most once per skill.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Kinetic Momentum",
+   "Desc": "When in combat, each skill generates a stack while active or not on cooldown. Stacks increase your total skill damage by 1% and total skill repair by 2%. Up to 15 stacks per skill. Lost when on cooldown.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Skilled",
+   "Desc": "Skill kills have a 25% chance to reset skill cooldowns.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Spotter",
+   "Desc": "Amplifies total weapon and skill damage by 15% to pulsed enemies.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Tag Team",
+   "Desc": "The last enemy you have damaged with a skill is marked. Dealing weapon damage to that enemy consumes the mark to reduce active cooldowns by 6s. Cooldown: 4s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Tamper Proof",
+   "Desc": "Enemies that walk within 3m of your hive, turret, or remote pulse are shocked. Arm time: 2s. Cooldown per skill: 10s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Efficient",
+   "Desc": "Using an armor kit has a 50% chance to not consume the armor kit. Specialization armor kit bonuses are increased by 100%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Entrench",
+   "Desc": "If you are below 30% armor, headshots from cover repair 20% of your armor. Cooldown: 3s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Intimidate",
+   "Desc": "While you have bonus armor, amplifies total weapon damage by 35% to enemies within 10m.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Protected Reload",
+   "Desc": "Grants +20% bonus armor while reloading. Grants 0-18% of your armor as bonus armor to all other allies when they are reloading, based on your defensive core attribute.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Unbreakable",
+   "Desc": "When your armor is depleted, repair 95% of your armor. Cooldown: 60s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Vanguard",
+   "Desc": "Deploying a shield makes it invulnerable for 5s and grants 45% of your armor as bonus armor to all other allies for 20s. Cooldown: 25s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Braced",
+   "Desc": "While in cover weapon handling is increased by +45%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Focus",
+   "Desc": "Increases total weapon damage by 5% every second you are aiming while scoped 8x or higher, up to 50%. REQUIRES a Scope with 8x magnification or higher",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Glass Cannon",
+   "Desc": "All damage you deal is amplified by 25%. All damage you take is amplified by 50%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Gunslinger",
+   "Desc": "Weapon swapping increases total weapon damage by 20% for 5s. This buff is lost for 5s if you weapon swap while it is active.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Obliterate",
+   "Desc": "Critical hits increase total weapon damage by 1% for 5s. Stacks up to 25 times.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Spark",
+   "Desc": "Damaging enemies with a skill increases total weapon damage by 15% for 15s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Pack Instincts",
+   "Desc": "You and all allies gain a bonus based on the distance of the last enemy you hit.\n\n0-15m: +25% critical hit damage.\n15-25m: +10% critical hit damage and +10% critical hit chance.\n25m+: +25% critical hit chance",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Stand Your Ground",
+   "Desc": "Cannot be staggered by explosions.\n\nIncreases total weapon damage by 3% each second you are not moving. Stacks up to 10 until you start moving. All stacks lost 10s after moving.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Parkour!",
+   "Desc": "Performing a cover to cover or vaulting reloads your drawn weapon and grants +25% bonus armor for 5s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Dragon's Glare",
+   "Desc": "While in combat, applies burn to the enemy closest to you within 20m.\n\nCooldown: 35s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Quick Draw",
+   "Desc": "While your pistol is holstered, gain a stacking buff every 0.3s, up to 100.\n\nWhen you swap to it, your first shot consumes the buff and deals +10% damage per stack. This deals headshot damage to anywhere you hit. \n\nREQUIRES: Pistol Equipped",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Transference Overclock",
+   "Desc": "Grants +15% Hive skill haste per skill tier.\n\nDetonating a Hive refreshes your skill cooldowns and grants overcharge for 15s. If at Skill Tier 6, this effect also applies to all allies.\n\nAllies receiving this effect are unable to benefit from it again for 120s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Ablative Nano-Plating",
+   "Desc": "Whenever your or any ally's armor breaks, they gain 80% of your armor as bonus armor for 10s.\n\nCooldown per ally: 45s.\nKilling an enemy with your specialization weapon removes this cooldown for all allies.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "One in Hand...",
+   "Desc": "Throwing a grenade refunds it and grants +1 skill tier for 15s. Grants overcharge if already at skill tier 6. Cooldown: 60s\n\nTwo in the Bag:\n+1 Armor Kit Capacity\n+3 Grenade Capacity\n+25% Ammo Capacity\n+10% Repair-skills\n+10% Status Effects",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Clutch",
+   "Desc": "If you are below 20% armor, critical hits repair 2.5% missing armor. Kills allow you to repair up to 100% armor for 4-10s, based on your number of offensive core attributes.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Combined Arms",
+   "Desc": "Shooting an enemy increases total skill damage by 30% for 3s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Shock and Awe",
+   "Desc": "Applying a status effect to an enemy increases total skill damage and repair by 20% for 27s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Tech Support",
+   "Desc": "Skill kills increase total skill damage by 25% for 27s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Vigilance",
+   "Desc": "Increases total weapon damage by 25%. Taking damage disables this buff for 3s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfectly Wicked",
+   "Desc": "Applying a status effect increases total weapon damage by 18% for 27s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Intimidate",
+   "Desc": "While you have bonus armor, amplifies total weapon damage by 40% to enemies within 10m.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfectly Unbreakable",
+   "Desc": "When your armor is depleted, repair 100% of your armor. Cooldown: 55s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Vanguard",
+   "Desc": "Deploying a shield makes it invulnerable for 5s and grants 50% of your armor as bonus armor to all other allies for 20s. Cooldown: 25s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Braced",
+   "Desc": "While in cover weapon handling is increased by +50%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Focus",
+   "Desc": "Increases total weapon damage by 6% every second you are aiming while scoped 8x or higher, up to 60%. REQUIRES a Scope with 8x magnification or higher",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Glass Cannon",
+   "Desc": "All damage you deal is amplified by 30%. All damage you take is amplified by 60%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Spark",
+   "Desc": "Damaging enemies with a skill increases total weapon damage by 15% for 20s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Short Circuit",
+   "Desc": "Decreases Feedback Loop cooldown from 20s to 10s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Positive Reinforcement",
+   "Desc": "Increases Feedback Loop skill damage and repair bonus from +10% to +25%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Trauma Specialist",
+   "Desc": "Increases the duration of your bleed status effects by 50% and all bleed damage done by 100%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Parabellum Rounds",
+   "Desc": "Increases Hollow-Point Ammo weapon damage amplification to 35%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Patriotic Boost",
+   "Desc": "Increases \"Red, White and Blue\" debuff strength. Red: 8% to 12%. White: 2% to 3%. Blue: 8% to 12%",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Waving the Flag",
+   "Desc": "Increases \"Red, White and Blue\" rotation speed to 1.5s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Ace in the Sleeve",
+   "Desc": "Amplifies 1 extra shot when revealing your hand.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "No Limit",
+   "Desc": "Increases Dead Man's Hand damage bonus from 30% to 50%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Critical Measures",
+   "Desc": "Increases Hostile Negotiations damage to additional marked enemies from 60% to 100%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Target Rich Environment",
+   "Desc": "Increases Hostile Negotiations mark count from 3 to 5.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Process Refinery",
+   "Desc": "Increases Makeshift Repairs speed from 15s to 10s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Improved Materials",
+   "Desc": "Increases Makeshift Repairs from 20% to 30%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Strategic Combat Support",
+   "Desc": "Increases Ground Control proximity repair from 60% to 120%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Tactical Superiority",
+   "Desc": "Increases Ground Control damage bonus from +15% to +25%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Risk Management",
+   "Desc": "Increases total weapon damage gained per stack of Striker's Gamble from 0.5% to 0.65%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Press the Advantage",
+   "Desc": "Increases max stacks for Striker's Gamble from 50 to 100.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Multithreaded Execution",
+   "Desc": "Increases Hackstep Protocol bonus armor from 50% to 100%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Compiler Optimization",
+   "Desc": "Decreases Hackstep Protocol cooldown from 20s to 15s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Signature Moves",
+   "Desc": "Increases signature weapon damage by 20%, and doubles the amount of signature weapon ammo generated by Aggressive Recon.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Specialized Destruction",
+   "Desc": "Increases Aggressive Recon weapon damage bonus from 20% to 40%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Feedback Loop",
+   "Desc": "Whenever you use or cancel a skill, your other skill's cooldown is automatically reduced by 30s while increasing total skill damage and repair by 10% for 20s. Feedback Loop can occur once every 20s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Rules of Engagement",
+   "Desc": "Killing a status effected enemy grants Hollow-Point Ammo for your active weapon. Hollow-Point Ammo amplifies weapon damage by 20% and applies bleed on hit.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Red, White and Blue",
+   "Desc": "Every 2s, enemies you shoot receive a stacking debuff of Red, White and Blue. Red: Amplifies the enemy's damage taken by 8%. White: Shooting the enemy repairs the attacking agent's armor by 2% once every second. Blue: Decreases the enemy's damage dealt by 8%. Full Flag: Enemies that die while under the effect of all 3 debuffs create a 5m explosion, dealing damage equal to their total health and armor. (Explosion damage reduced on Named enemy deaths.)",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Dead Man's Hand",
+   "Desc": "Flip a card when landing shots with a Marksman Rifle. After 5 cards are flipped, the damage of your next shot is amplified by 30%. More shots are enhanced the better the hand revealed. Four of a Kind: 4 shots. Full House: 3 shots. Aces and Eights: 2 shots. Flip an additional card on headshots.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Hostile Negotiations",
+   "Desc": "Critical hits mark enemies for 20s, up to 3 marks total. When you critically hit a marked enemy, all other marked enemies take 60% of the damage dealt. Whenever a marked enemy dies, gain +2% critical hit damage, stacking up to 20 times, or until combat ends.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Makeshift Repairs",
+   "Desc": "Whenever you or your shield take damage, 20% of that amount is repaired to both over 15s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Ground Control",
+   "Desc": "Increases you and your allies' total weapon and skill damage by 15% when at full armor. When you repair an ally, you and all allies within 5m of you are also repaired for 60% of that amount.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Striker's Gamble",
+   "Desc": "Weapon hits amplify total weapon damage by 0.5%, stacking up to 50 times. 1 stack is lost each second. 2 stacks are lost every time you miss.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Hackstep Protocol",
+   "Desc": "Replaces armor kits with an instant, infinite-use ability on a 20s cooldown, that repairs 20% armor, grants 50% bonus armor and hides your nameplate for 5s. Increases total weapon damage by 1% per 5% bonus armor gained, up to 20%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Aggressive Recon",
+   "Desc": "Dealing damage with a signature weapon increases total weapon damage by 20% for 60s. Automatically generate signature weapon ammo every 60s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Backpack",
+   "Talent": "Adrenaline Rush",
+   "Desc": "Whenever you are within 10m of an enemy, gain 20% bonus armor for 5s. Stacks up to 3 times. Cooldown: 5s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Adrenaline Rush",
+   "Desc": "Whenever you are within 10m of an enemy, gain 23% bonus armor for 5s. Stacks up to 3 times. Cooldown: 5s",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "A",
+   "Slot": "Chest",
+   "Talent": "Headhunter",
+   "Desc": "After killing an enemy with a headshot, your next weapon hit within 30s deals an additional 125% of that killing blow's damage. Damage is capped to 800% of your weapon damage. This is raised to 1250% if your headshot damage is greater than 150%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfect Headhunter",
+   "Desc": "After killing an enemy with a headshot, your next weapon hit within 30s deals an additional 150% of that killing blow's damage. Damage is capped to 800% of your weapon damage. This is raised to 1250% if your headshot damage is greater than 150%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Toxic Delivery",
+   "Desc": "Status effects also apply a damage over time debuff for 10s.\n\nTotal damage dealt is equal to 50% of your concussion grenade damage and increased by your status effect attributes.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Symptom Aggravator",
+   "Desc": "Amplifies all damage you deal to status effected targets by 30%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Proliferation",
+   "Desc": "Increases Indirect Transmission range from 10m to 15m and refresh percentage from 50% to 75%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Indirect Transmission",
+   "Desc": "Your status effects now spread to all enemies within 10m and refresh 50% of the duration.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Endless Hunger",
+   "Desc": "Increases the duration of Apex Predator stacks from 10s to 30s.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Overwhelming Force",
+   "Desc": "Increases the radius of disorient on Apex Predator kills from 5m to 10m.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfectly Calculated",
+   "Desc": "Kills from cover reduce skill cooldowns by 15%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfectly Skilled",
+   "Desc": "Skill kills have a 30% chance to reset skill cooldowns.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Chest",
+   "Talent": "Best Buds",
+   "Desc": "Increase the damage buff from 25% to 50%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "Backpack",
+   "Talent": "Complete Uptime",
+   "Desc": "Cancelling your skills will reset their cooldown.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Alternating Current",
+   "Desc": "Generate a stack of 3% Skill Damage on one of your skill every second, capping at 10 stacks. After 10 seconds at the cap the stacks transfer to your other skill. The proces then repeat ad-infinitum.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Exotic",
+   "Talent": "Bleeding Edge",
+   "Desc": "Shooting enemies within 15m applies bleed to the target.\n\nRepair 3-48% of your armor per second for every enemy that is bleeding within 15m.\n\nRepair strength per number of bleeding enemies:\n1: 3%\n2: 6%\n3: 12%\n4: 24%\n5: 48%",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "E",
+   "Slot": "Backpack",
+   "Talent": "Kill Confirmed",
+   "Desc": "Enemies you kill drop a trophy on death. Collecting trophies provides both a short and long-term buff, the first of which scales with the number of core attributes equipped and lasts 10 seconds.\n\n5% weapon damage per red core,\n10% bonus armor per blue core.\n5% skill efficiency per yellow core.\n\nFor every trophy collected, gain an additional +1% weapon damage, +1% skill efficiency, and +0.1% armor regeneration for 300s. Maximum 30 stacks.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Backpack",
+   "Talent": "Perfect Bloodsucker",
+   "Desc": "Killing an enemy adds and refreshes a stack of +12% bonus armor for 10s. Max stack is 10.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "N",
+   "Slot": "Chest",
+   "Talent": "Perfectly Efficient",
+   "Desc": "Using an armor kit has a 75% chance to not consume the armor kit. Specialization armor kit bonuses are increased by 100%.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Apex Predator",
+   "Desc": "Enemies within 15m receive a debuff, amplifying your weapon damage against them by 20%. Killing a debuffed enemy with your weapon disorients other enemies within 5m, and amplifies weapon damage by 5% for 10s, stacking up to 5 times.",
+   "Attr.": "",
+   "Val": ""
+ },
+ {
+   "Quality": "S",
+   "Slot": "A",
+   "Talent": "Tend and Befriend",
+   "Desc": "Interacting with your deployed skills grants the skill 25% skill damage for 10s. This buff cannot be refreshed.\n\nInteractions include:\nUsing / Deploying the Skill\nChanging the skills target\nHealing the skill",
+   "Attr.": "",
+   "Val": ""
+ }
+]

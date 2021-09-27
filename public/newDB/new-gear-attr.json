@@ -1,0 +1,414 @@
+[
+  {
+    "id": "weapon_handling",
+    "max": 8,
+    "min": 0,
+    "tags": [
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "critical_hit_chance",
+    "max": 6,
+    "min": 0,
+    "tags": [
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "critical_hit_damage",
+    "max": 12,
+    "min": 0,
+    "tags": [
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "headshot_damage",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "armor_regeneration",
+    "max": 4925,
+    "min": 0,
+    "tags": [
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "hazard_protection",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "health",
+    "max": 18935,
+    "min": 0,
+    "tags": [
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "explosive_resistance",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_damage",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "repair_skills",
+    "max": 20,
+    "min": 0,
+    "tags": [
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_haste",
+    "max": 12,
+    "min": 0,
+    "tags": [
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "status_effects",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "damage_to_toc",
+    "max": 8,
+    "min": 0,
+    "based_on": "damage_to_toc",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "damage_to_armor",
+    "max": 8,
+    "min": 0,
+    "based_on": "damage_to_armor",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "scanner_pulse_haste",
+    "max": 100,
+    "min": 0,
+    "based_on": "scanner_pulse_haste",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "health_damage",
+    "max": 10,
+    "min": 0,
+    "based_on": "health_damage",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "headshot_damage_",
+    "max": 20,
+    "min": 0,
+    "based_on": "headshot_damage_",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "melee_damage",
+    "max": 500,
+    "min": 0,
+    "based_on": "melee_damage",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "armor_on_kill_",
+    "max": 10,
+    "min": 0,
+    "based_on": "armor_on_kill_",
+    "tags": [
+      "is_hidden",
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_health",
+    "max": 10,
+    "min": 0,
+    "based_on": "skill_health",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "status_effects_",
+    "max": 15,
+    "min": 0,
+    "based_on": "status_effects_",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "shield_health",
+    "max": 50,
+    "min": 0,
+    "based_on": "shield_health",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "ammo_capacity",
+    "max": 20,
+    "min": 0,
+    "based_on": "ammo_capacity",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "armor_regeneration_",
+    "max": 1,
+    "min": 0,
+    "based_on": "armor_regeneration_",
+    "tags": [
+      "is_hidden",
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "critical_hit_chance",
+    "max": 6,
+    "min": 0,
+    "based_on": "critical_hit_chance",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "critical_hit_damage",
+    "max": 12,
+    "min": 0,
+    "based_on": "critical_hit_damage",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_haste",
+    "max": 12,
+    "min": 0,
+    "based_on": "skill_haste",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_damage",
+    "max": 10,
+    "min": 0,
+    "based_on": "skill_damage",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "explosive_resistance",
+    "max": 10,
+    "min": 0,
+    "based_on": "explosive_resistance",
+    "tags": [
+      "is_hidden",
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "armor_regeneration",
+    "max": 4925,
+    "min": 0,
+    "based_on": "armor_regeneration",
+    "tags": [
+      "is_hidden",
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "repair_skills",
+    "max": 20,
+    "min": 0,
+    "based_on": "repair_skills",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "weapon_handling",
+    "max": 8,
+    "min": 0,
+    "based_on": "weapon_handling",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "headshot_damage",
+    "max": 10,
+    "min": 0,
+    "based_on": "headshot_damage",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "status_effects",
+    "max": 10,
+    "min": 0,
+    "based_on": "status_effects",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "hazard_protection",
+    "max": 10,
+    "min": 0,
+    "based_on": "hazard_protection",
+    "tags": [
+      "is_hidden",
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "health",
+    "max": 18935,
+    "min": 0,
+    "based_on": "health",
+    "tags": [
+      "is_hidden",
+      "type:defensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "pistol_damage",
+    "max": 9,
+    "min": 0,
+    "based_on": "pistol_damage",
+    "tags": [
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_efficiency",
+    "max": 10,
+    "min": 0,
+    "based_on": "skill_efficiency",
+    "tags": [
+      "is_hidden",
+      "type:utility",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "stability",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "accuracy",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  }
+]

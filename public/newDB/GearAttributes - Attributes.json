@@ -1,0 +1,242 @@
+[
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Weapon Handling",
+   "Max": 8
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Critical Hit Chance",
+   "Max": 6
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Critical Hit Damage",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Headshot Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Armor Regeneration",
+   "Max": 4925
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Hazard Protection",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Health",
+   "Max": 18935
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Explosive Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Skill Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Repair Skills",
+   "Max": 20
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Skill Haste",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Status Effects",
+   "Max": 10
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Damage to TOC",
+   "Max": 8
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Damage to Armor",
+   "Max": 8
+ },
+ {
+   "Quality": "N",
+   "Type": "U",
+   "Stat": "Scanner Pulse Haste",
+   "Max": 100
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Health Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Headshot Damage ",
+   "Max": 20
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Melee Damage",
+   "Max": 500
+ },
+ {
+   "Quality": "N",
+   "Type": "D",
+   "Stat": "Armor on Kill %",
+   "Max": 10
+ },
+ {
+   "Quality": "N",
+   "Type": "U",
+   "Stat": "Skill Health",
+   "Max": 10
+ },
+ {
+   "Quality": "N",
+   "Type": "U",
+   "Stat": "Status Effects ",
+   "Max": 15
+ },
+ {
+   "Quality": "N",
+   "Type": "U",
+   "Stat": "Shield Health",
+   "Max": 50
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Ammo Capacity",
+   "Max": 20
+ },
+ {
+   "Quality": "N",
+   "Type": "D",
+   "Stat": "Armor Regeneration %",
+   "Max": 1
+ },
+ {
+   "Quality": "E",
+   "Type": "O",
+   "Stat": "Critical Hit Chance",
+   "Max": 6
+ },
+ {
+   "Quality": "E",
+   "Type": "O",
+   "Stat": "Critical Hit Damage",
+   "Max": 12
+ },
+ {
+   "Quality": "E",
+   "Type": "U",
+   "Stat": "Skill Haste",
+   "Max": 12
+ },
+ {
+   "Quality": "E",
+   "Type": "U",
+   "Stat": "Skill Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "E",
+   "Type": "D",
+   "Stat": "Explosive Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "E",
+   "Type": "D",
+   "Stat": "Armor Regeneration",
+   "Max": 4925
+ },
+ {
+   "Quality": "E",
+   "Type": "U",
+   "Stat": "Repair Skills",
+   "Max": 20
+ },
+ {
+   "Quality": "E",
+   "Type": "O",
+   "Stat": "Weapon Handling",
+   "Max": 8
+ },
+ {
+   "Quality": "E",
+   "Type": "O",
+   "Stat": "Headshot Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "E",
+   "Type": "U",
+   "Stat": "Status Effects",
+   "Max": 10
+ },
+ {
+   "Quality": "E",
+   "Type": "D",
+   "Stat": "Hazard Protection",
+   "Max": 10
+ },
+ {
+   "Quality": "E",
+   "Type": "D",
+   "Stat": "Health",
+   "Max": 18935
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Stat": "Pistol Damage",
+   "Max": 9
+ },
+ {
+   "Quality": "N",
+   "Type": "U",
+   "Stat": "Skill Efficiency",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Stability",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Accuracy",
+   "Max": 10
+ }
+]

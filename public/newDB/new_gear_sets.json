@@ -1,0 +1,526 @@
+[
+  {
+    "id": "511_tactical",
+    "tiers": [
+      {
+        "health": 10
+      },
+      {
+        "incoming_repairs": 20
+      },
+      {
+        "hazard_protection": 10
+      }
+    ]
+  },
+  {
+    "id": "airaldi_holdings",
+    "tiers": [
+      {
+        "marksman_rifle_damage": 10
+      },
+      {
+        "headshot_damage": 15
+      },
+      {
+        "damage_to_armor": 5
+      }
+    ]
+  },
+  {
+    "id": "alps_summit_armaments",
+    "tiers": [
+      {
+        "repair_skills": 20
+      },
+      {
+        "skill_duration": 20
+      },
+      {
+        "skill_haste": 10
+      }
+    ]
+  },
+  {
+    "id": "badger_tuff",
+    "tiers": [
+      {
+        "shotgun_damage": 10
+      },
+      {
+        "total_armor": 5
+      },
+      {
+        "armor_on_kill_": 10
+      }
+    ]
+  },
+  {
+    "id": "ceska_vyroba_sro",
+    "tiers": [
+      {
+        "critical_hit_chance": 10
+      },
+      {
+        "hazard_protection": 10
+      },
+      {
+        "health": 10
+      }
+    ]
+  },
+  {
+    "id": "china_light_industries_corporation",
+    "tiers": [
+      {
+        "explosive_damage": 15
+      },
+      {
+        "skill_haste": 10
+      },
+      {
+        "status_effects": 10
+      }
+    ]
+  },
+  {
+    "id": "douglas_harding",
+    "tiers": [
+      {
+        "pistol_damage": 20
+      },
+      {
+        "stability": 20
+      },
+      {
+        "accuracy": 20
+      }
+    ]
+  },
+  {
+    "id": "fenris_group_ab",
+    "tiers": [
+      {
+        "assault_rifle_damage": 10
+      },
+      {
+        "reload_speed_": 20
+      },
+      {
+        "stability": 20
+      }
+    ]
+  },
+  {
+    "id": "gila_guard",
+    "tiers": [
+      {
+        "total_armor": 5
+      },
+      {
+        "health": 10
+      },
+      {
+        "armor_regeneration_": 1
+      }
+    ]
+  },
+  {
+    "id": "golan_gear_ltd",
+    "tiers": [
+      {
+        "status_effects": 10
+      },
+      {
+        "armor_regeneration_": 1
+      },
+      {
+        "total_armor": 5
+      }
+    ]
+  },
+  {
+    "id": "grupo_sombra_sa",
+    "tiers": [
+      {
+        "critical_hit_damage": 15
+      },
+      {
+        "explosive_damage": 15
+      },
+      {
+        "headshot_damage": 15
+      }
+    ]
+  },
+  {
+    "id": "hanau_corporation",
+    "tiers": [
+      {
+        "skill_haste": 10
+      },
+      {
+        "skill_damage": 10
+      },
+      {
+        "weapon_damage": 5
+      }
+    ]
+  },
+  {
+    "id": "murakami_industries",
+    "tiers": [
+      {
+        "skill_duration": 20
+      },
+      {
+        "repair_skills": 20
+      },
+      {
+        "skill_damage": 10
+      }
+    ]
+  },
+  {
+    "id": "overlord_armaments",
+    "tiers": [
+      {
+        "rifle_damage": 10
+      },
+      {
+        "accuracy": 20
+      },
+      {
+        "weapon_handling": 10
+      }
+    ]
+  },
+  {
+    "id": "petrov_defense_group",
+    "tiers": [
+      {
+        "lmg_damage": 10
+      },
+      {
+        "weapon_handling": 10
+      },
+      {
+        "ammo_capacity": 20
+      }
+    ]
+  },
+  {
+    "id": "providence_defense",
+    "tiers": [
+      {
+        "headshot_damage": 15
+      },
+      {
+        "critical_hit_chance": 10
+      },
+      {
+        "critical_hit_damage": 15
+      }
+    ]
+  },
+  {
+    "id": "richter_kaiser_gmbh",
+    "tiers": [
+      {
+        "incoming_repairs": 20
+      },
+      {
+        "explosive_resistance": 10
+      },
+      {
+        "repair_skills": 20
+      }
+    ]
+  },
+  {
+    "id": "sokolov_concern",
+    "tiers": [
+      {
+        "smg_damage": 10
+      },
+      {
+        "critical_hit_damage": 15
+      },
+      {
+        "critical_hit_chance": 10
+      }
+    ]
+  },
+  {
+    "id": "wyvern_wear",
+    "tiers": [
+      {
+        "skill_damage": 10
+      },
+      {
+        "status_effects": 10
+      },
+      {
+        "skill_duration": 20
+      }
+    ]
+  },
+  {
+    "id": "yaahl_gear",
+    "tiers": [
+      {
+        "hazard_protection": 10
+      },
+      {
+        "weapon_damage": 5
+      },
+      {
+        "pulse_resistance": 40
+      }
+    ]
+  },
+  {
+    "id": "hard_wired",
+    "tiers": [
+      {},
+      {
+        "skill_haste": 15
+      },
+      {
+        "repair_skills": 30,
+        "skill_damage": 15
+      },
+      {
+        "feedback_loop": true
+      }
+    ]
+  },
+  {
+    "id": "ongoing_directive",
+    "tiers": [
+      {},
+      {
+        "status_effects": 15
+      },
+      {
+        "reload_speed_": 30
+      },
+      {
+        "rules_of_engagement": true
+      }
+    ]
+  },
+  {
+    "id": "true_patriot",
+    "tiers": [
+      {},
+      {
+        "ammo_capacity": 30
+      },
+      {
+        "magazine_size_": 30
+      },
+      {
+        "red_white_and_blue_every_2s_enemies_you_shoot_receive_a_stacking_debuff_of_red_white_and_blue": true
+      }
+    ]
+  },
+  {
+    "id": "aces_eights",
+    "tiers": [
+      {},
+      {
+        "marksman_rifle_damage": 15
+      },
+      {
+        "headshot_damage": 30
+      },
+      {
+        "dead_mans_hand": true
+      }
+    ]
+  },
+  {
+    "id": "negotiators_dilemma",
+    "tiers": [
+      {},
+      {
+        "critical_hit_chance": 15
+      },
+      {
+        "critical_hit_damage": 20
+      },
+      {
+        "hostile_negotiations": true
+      }
+    ]
+  },
+  {
+    "id": "tip_of_the_spear",
+    "tiers": [
+      {},
+      {
+        "signature_weapon_damage": 10
+      },
+      {
+        "weapon_damage": 10
+      },
+      {
+        "aggressive_recon": true
+      }
+    ]
+  },
+  {
+    "id": "foundry_bulwark",
+    "tiers": [
+      {},
+      {
+        "total_armor": 10
+      },
+      {
+        "armor_regeneration_": 1,
+        "shield_health": 50
+      },
+      {
+        "makeshift_repairs": true
+      }
+    ]
+  },
+  {
+    "id": "future_initiative",
+    "tiers": [
+      {},
+      {
+        "repair_skills": 15
+      },
+      {
+        "skill_duration": 30,
+        "skill_haste": 15
+      },
+      {
+        "ground_control": true
+      }
+    ]
+  },
+  {
+    "id": "strikers_battlegear",
+    "tiers": [
+      {},
+      {
+        "weapon_handling": 15
+      },
+      {
+        "rate_of_fire_": 15
+      },
+      {
+        "strikers_gamble": true
+      }
+    ]
+  },
+  {
+    "id": "system_corruption",
+    "tiers": [
+      {},
+      {
+        "armor_on_kill_": 15
+      },
+      {
+        "pulse_resistance": 40,
+        "disrupt_resistance": 40
+      },
+      {
+        "hackstep_protocol": true
+      }
+    ]
+  },
+  {
+    "id": "walker_harris_co",
+    "tiers": [
+      {
+        "weapon_damage": 5
+      },
+      {
+        "damage_to_armor": 5
+      },
+      {
+        "damage_to_health": 5
+      }
+    ]
+  },
+  {
+    "id": "eclipse_protocol",
+    "tiers": [
+      {},
+      {
+        "status_effects": 15
+      },
+      {
+        "skill_haste": 15,
+        "hazard_protection": 30
+      },
+      {
+        "indirect_transmission": true
+      }
+    ]
+  },
+  {
+    "id": "hunters_fury",
+    "tiers": [
+      {},
+      {
+        "smg_damage": 15,
+        "shotgun_damage": 15
+      },
+      {
+        "armor_on_kill_": 20,
+        "health_on_kill_": 100
+      },
+      {
+        "apex_predator": true
+      }
+    ]
+  },
+  {
+    "id": "empress_international",
+    "tiers": [
+      {
+        "skill_health": 10
+      },
+      {
+        "skill_damage": 10
+      },
+      {
+        "skill_efficiency": 10
+      }
+    ]
+  },
+  {
+    "id": "rigger",
+    "tiers": [
+      {},
+      {
+        "skill_haste": 15
+      },
+      {
+        "skill_duration": 15
+      },
+      {
+        "tend_and_befriend": true
+      }
+    ]
+  },
+  {
+    "id": "belstone_armory",
+    "tiers": [
+      {
+        "armor_regeneration_": 1
+      },
+      {
+        "armor_on_kill_": 10
+      },
+      {
+        "incoming_repairs": 20
+      }
+    ]
+  }
+]

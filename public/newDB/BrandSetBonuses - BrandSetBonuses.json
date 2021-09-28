@@ -501,7 +501,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Feedback Loop\nWhenever you use or cancel a skill, your other skill's cooldown is automatically reduced by 30s while increasing total skill damage and repair by 10% for 20s.\n\nFeedback Loop can occur once every 20s."
+   "Talent": "Feedback Loop"
  },
  {
    "Brand": "Ongoing Directive1",
@@ -525,7 +525,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Rules of Engagement\nKilling a status affected enemy grants Hollow-Point Ammo for your active weapon.\n\nHollow-Point Ammo amplifies weapon damage by 20% and applies bleed on hit."
+   "Talent": "Rules of Engagement"
  },
  {
    "Brand": "True Patriot1",
@@ -549,7 +549,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Red, White, and Blue  Every 2s, enemies you shoot receive a stacking debuff of Red, White and Blue.\n\nRed: Amplifies the enemy's damage taken by 8%.\n\nWhite: Shooting the enemy repairs the attacking agent's armor by 2% once every second.\n\nBlue: Decreases the enemy's damage dealt by 8%.\n\nFull Flag: Enemies that die while under the effect of all 3 debuffs create a 5m explosion, dealing damage equal to their total health and armor. (Explosion damage reduced on Named enemy deaths.)"
+   "Talent": "Red, White, and Blue  Every 2s, enemies you shoot receive a stacking debuff of Red, White and Blue."
  },
  {
    "Brand": "Aces & Eights1",
@@ -573,7 +573,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Dead Man's Hand\nFlip a card when landing shots with a Marksman Rifle.\n\nAfter 5 cards are flipped, the damage of your next shot is amplified by 30%. More shots are enhanced, the better the hand revealed.\nFour of a Kind: 4 shots.\nFull House: 3 shots.\nAces and Eights: 2 shots.\n\nFlip an additional card on headshots."
+   "Talent": "Dead Man's Hand"
  },
  {
    "Brand": "Negotiator's Dilemma1",
@@ -597,7 +597,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Hostile Negotiations\nCritical hits mark enemies for 20s, up to 3 marks total.\n\nWhen you critically hit a marked enemy, all other marked enemies take 60% of the damage dealt.\n\nWhenever a marked enemy dies, gain +2% critical hit damage, stacking up to 20 times, until combat ends."
+   "Talent": "Hostile Negotiations"
  },
  {
    "Brand": "Tip of the Spear1",
@@ -621,7 +621,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Aggressive Recon\nDealing damage with a signature weapon increases total weapon damage by 20% for 60s.\n\nAutomatically generate signature ammo every 60s."
+   "Talent": "Aggressive Recon"
  },
  {
    "Brand": "Foundry Bulwark1",
@@ -645,7 +645,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Makeshift Repairs\nWhenever you or your shield take damage, 20% of that amount is repaired to both over 15s."
+   "Talent": "Makeshift Repairs"
  },
  {
    "Brand": "Future Initiative1",
@@ -669,7 +669,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Ground Control\nIncreases you and your allies' total weapon and skill damage by 15% when at full armor.\n\nWhen you repair an ally, you and all allies within 5m of you are also repaired for 60% of that amount."
+   "Talent": "Ground Control"
  },
  {
    "Brand": "Striker's Battlegear1",
@@ -693,7 +693,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Striker's Gamble\nWeapon hits amplify total weapon damage by 0.5%, stacking up to 50 times.\n\n1 stack is lost each second.\n\n2 stacks are lost every time you miss."
+   "Talent": "Striker's Gamble"
  },
  {
    "Brand": "System Corruption1",
@@ -717,7 +717,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Hackstep Protocol\nReplaces armor kits with an instant, infinite-use ability on a 20s cooldown, that repairs 20% armor, grants 50% bonus armor and hides your nameplate for 5s.\n\nIncreases total weapon damage by 1% per 5% bonus armor gained, up to 20%."
+   "Talent": "Hackstep Protocol"
  },
  {
    "Brand": "Walker, Harris & Co.0",
@@ -765,7 +765,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Indirect Transmission\nYour status effects now spread on kill to all enemies within 10m and refresh 50% of the duration."
+   "Talent": "Indirect Transmission"
  },
  {
    "Brand": "Hunter's Fury1",
@@ -789,7 +789,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Apex Predator\nEnemies within 15m receive a debuff, amplifying your weapon damage against them by 20%.\n\nKilling a debuffed enemy with your weapon disorients other enemies within 5m, and amplifies weapon damage by 5% for 10s, stacking up to 5 times."
+   "Talent": "Apex Predator"
  },
  {
    "Brand": "Empress International0",
@@ -837,7 +837,7 @@
    "val": null,
    "stat1": "",
    "val1": null,
-   "Talent": "Talent: Tend and Befriend\nInteracting with your deployed skills grants the skill 25% skill damage for 10s. This buff cannot be refreshed.\n\nInteractions include:\n- Using / Deploying the Skill\n- Changing the skill's target\n- Healing the skill"
+   "Talent": "Tend and Befriend"
  },
  {
    "Brand": "Belstone Armory0",

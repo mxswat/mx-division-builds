@@ -1,0 +1,168 @@
+[
+  {
+    "id": "critical_hit_chance",
+    "max": 9.5,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "critical_hit_damage",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "headshot_damage",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "damage_to_toc",
+    "max": 10,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "damage_to_armor",
+    "max": 6,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "health_damage",
+    "max": 9.5,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "rate_of_fire_",
+    "max": 5,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "stability",
+    "max": 12,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "accuracy",
+    "max": 12,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "reload_speed_",
+    "max": 12,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "magazine_size_",
+    "max": 12.5,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "optimal_range",
+    "max": 24,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "swap_speed",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "is_gear_attribute",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "armor_on_kill_",
+    "max": 10,
+    "min": 0,
+    "based_on": "armor_on_kill_",
+    "tags": [
+      "is_gear_attribute",
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "skill_tier",
+    "max": 1,
+    "min": 0,
+    "based_on": "skill_tier",
+    "tags": [
+      "is_gear_attribute",
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  },
+  {
+    "id": "mag_size_",
+    "max": 12,
+    "min": 0,
+    "based_on": "mag_size_",
+    "tags": [
+      "is_gear_attribute",
+      "is_hidden",
+      "type:offensive",
+      "value_type:percentage"
+    ]
+  }
+]

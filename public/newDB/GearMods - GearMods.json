@@ -1,0 +1,98 @@
+[
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Critical Hit Chance",
+   "Max": 6
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Critical Hit Damage",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Stat": "Headshot Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Armor on Kill",
+   "Max": 18935
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Incoming Repairs",
+   "Max": 20
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Protection from Elites",
+   "Max": 13
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Bleed Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Blind/Deaf Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Burn Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Disrupt Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Shock Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Repair Skills",
+   "Max": 20
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Skill Haste",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "U",
+   "Stat": "Skill Duration",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Disorient Resistance",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "D",
+   "Stat": "Ensnare Resistance",
+   "Max": 10
+ }
+]

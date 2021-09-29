@@ -1,0 +1,114 @@
+[
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Critical Hit Chance",
+   "Max": 9.5
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Critical Hit Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Headshot Damage",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Damage to TOC",
+   "Max": 10
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Damage to Armor",
+   "Max": 6
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Health Damage",
+   "Max": 9.5
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Rate of Fire %",
+   "Max": 5
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Stability",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Accuracy",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Reload Speed %",
+   "Max": 12
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Magazine Size %",
+   "Max": 12.5
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Optimal Range",
+   "Max": 24
+ },
+ {
+   "Quality": "A",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Swap Speed",
+   "Max": 15
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Armor on Kill %",
+   "Max": 10
+ },
+ {
+   "Quality": "N",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Skill Tier",
+   "Max": 1
+ },
+ {
+   "Quality": "E",
+   "Type": "O",
+   "Weapon Type": "",
+   "Stat": "Mag Size %",
+   "Max": 12
+ }
+]

@@ -1,0 +1,813 @@
+[
+  {
+    "id": "boomerang",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:rifle"
+    ]
+  },
+  {
+    "id": "breadbasket",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "close_personal",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "eyeless",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "fast_hands",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "finisher",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:pistol"
+    ]
+  },
+  {
+    "id": "first_blood",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:marksman_rifle"
+    ]
+  },
+  {
+    "id": "frenzy",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:lmg"
+    ]
+  },
+  {
+    "id": "ignited",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "killer",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "lucky_shot",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:pistol"
+    ]
+  },
+  {
+    "id": "measured",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:smg"
+    ]
+  },
+  {
+    "id": "naked",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:marksman_rifle"
+    ]
+  },
+  {
+    "id": "near_sighted",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle"
+    ]
+  },
+  {
+    "id": "on_empty",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle"
+    ]
+  },
+  {
+    "id": "optimist",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "outsider",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:smg"
+    ]
+  },
+  {
+    "id": "overflowing",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle"
+    ]
+  },
+  {
+    "id": "overwhelm",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:lmg"
+    ]
+  },
+  {
+    "id": "perpetuation",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "preservation",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "pummel",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "pumped_up",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "ranger",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "reformation",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "rifleman",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:rifle"
+    ]
+  },
+  {
+    "id": "sadist",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "salvage",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:pistol"
+    ]
+  },
+  {
+    "id": "spike",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "steady_handed",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "strained",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "unhinged",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:lmg"
+    ]
+  },
+  {
+    "id": "unwavering",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:smg"
+    ]
+  },
+  {
+    "id": "vindictive",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "electromagnetic_accelerator",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "big_game_hunter",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "eagles_strike",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "tenacity",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "adaptive_instincts",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "bullet_hell",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "plague_of_the_outcasts",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "regicide",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "liberty_or_death",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "geri_and_freki",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "agonizing_bite",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "binary_trigger",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "sandman",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "breathe_free",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "incessant_chatter",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "hidden_rock",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_allegro",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_boomerang",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_breadbasket",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_distance",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_eyeless",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_fast_hands",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_finisher",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_first_blood",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_frenzy",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_jazz_hands",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_killer",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_lucky_shot",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_near_sighted",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_optimist",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_outsider",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_overflowing",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_overwhelm",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_perpetuation",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_preservation",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_pummel",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_pumped_up",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_ranger",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_reformation",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_rifleman",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_sadist",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_salvage",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_spike",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_strained",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_unwavering",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfect_vindictive",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_accurate",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_close_personal",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_extra",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_ignited",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_measured",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_naked",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_on_empty",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_optimized",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_steady_handed",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_unhinged",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "swift",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "primer_rounds",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "future_perfect",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "in_sync",
+    "tags": [
+      "is_weapon_talent",
+      "slot_lock:assault_rifle",
+      "slot_lock:rifle",
+      "slot_lock:marksman_rifle",
+      "slot_lock:smg",
+      "slot_lock:lmg",
+      "slot_lock:pistol",
+      "slot_lock:shotgun"
+    ]
+  },
+  {
+    "id": "future_perfection",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "perfectly_in_sync",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "septic_shock",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "capacitance",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "payment_in_kind",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  },
+  {
+    "id": "in_plain_sight",
+    "tags": [
+      "is_hidden",
+      "is_weapon_talent"
+    ]
+  }
+]

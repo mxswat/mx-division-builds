@@ -1,0 +1,1672 @@
+[
+ {
+   "Slot": "Optic",
+   "Type": "Ironsights",
+   "Name": "Open Iron Sights",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Ironsights",
+   "Name": "Streamlined Iron Sights",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Ironsights",
+   "Name": "Weighted Iron Sights",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Micro",
+   "Name": "Low Reflex Sight",
+   "valPos": 5,
+   "pos": "Headshot Damage",
+   "valNeg": -20,
+   "neg": "Optimal Range",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Micro",
+   "Name": "Rugged Mini Reflex Sight",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Short",
+   "Name": "PRO Red Dot Sight",
+   "valPos": 5,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Short",
+   "Name": "Reflex Sight",
+   "valPos": 5,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Short",
+   "Name": "Russian Red Dot Sight",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Short",
+   "Name": "T2 Micro Red Dot Sight",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Long",
+   "Name": "552 Holo Sight",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Long",
+   "Name": "ACOG Scope (4x)",
+   "valPos": 20,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Long",
+   "Name": "C79 Scope (3.4x)",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Long",
+   "Name": "CQBSS Scope (8x)",
+   "valPos": 30,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Long",
+   "Name": "Digital Scope",
+   "valPos": 45,
+   "pos": "Headshot Damage",
+   "valNeg": -5,
+   "neg": "Critical Hit Damage",
+   "Spec": "Sharpshooter"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Short",
+   "Name": "EXPS3 Holo Sight",
+   "valPos": 3,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Long",
+   "Name": "VX-1 Scope (12x)",
+   "valPos": 35,
+   "pos": "Headshot Damage",
+   "valNeg": -10,
+   "neg": "Reload Speed %",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Gadget",
+   "Name": "Compact Coupled Laser Pointer",
+   "valPos": 10,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Gadget",
+   "Name": "Compact Coupled Small Laser Pointer",
+   "valPos": 10,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Gadget",
+   "Name": "Pistol Flashlight",
+   "valPos": null,
+   "pos": "",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Side",
+   "Name": "Laser Pointer",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Side",
+   "Name": "Small Laser Pointer",
+   "valPos": 7,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "Demolitionist"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Short",
+   "Name": "Angled Grip",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Short",
+   "Name": "Vertical Grip",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Long",
+   "Name": "Handstop",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Long",
+   "Name": "Short Grip",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Long",
+   "Name": "Linked Laser Pointer",
+   "valPos": null,
+   "pos": "Technician Laser Pointer",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "Technician"
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Long",
+   "Name": "Tactical Short Grip",
+   "valPos": 10,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "Firewall"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": ".45 ACP",
+   "Name": "Extended .45 ACP Mag",
+   "valPos": 10,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": ".45 ACP",
+   "Name": "Force Feed .45 ACP Mag",
+   "valPos": 5,
+   "pos": "Rate of Fire %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": ".45 ACP",
+   "Name": "Oversized .45 ACP Mag",
+   "valPos": 20,
+   "pos": "Extra Rounds",
+   "valNeg": -10,
+   "neg": "Reload Speed %",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": ".45 ACP",
+   "Name": "Precision Feeding .45 Mag",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": ".45 ACP",
+   "Name": "Short Spring .45 ACP Mag",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "5.56",
+   "Name": "Balanced Spring 5.56 Mag",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "5.56",
+   "Name": "Infantry 5.56 Mag",
+   "valPos": 30,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "Survivalist"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "5.56",
+   "Name": "Light Extended 5.56 Mag",
+   "valPos": 10,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "5.56",
+   "Name": "Sturdy Extended 5.56 Mag",
+   "valPos": 20,
+   "pos": "Extra Rounds",
+   "valNeg": -10,
+   "neg": "Reload Speed %",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "5.56",
+   "Name": "Tactical 5.56 Mag",
+   "valPos": 10,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "8.02",
+   "Name": "Light Extended 7.62 Mag",
+   "valPos": 10,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "8.02",
+   "Name": "Precision 7.62 Mag",
+   "valPos": 7,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "8.02",
+   "Name": "Sturdy Extended 7.62 Mag",
+   "valPos": 20,
+   "pos": "Extra Rounds",
+   "valNeg": -10,
+   "neg": "Reload Speed %",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "8.02",
+   "Name": "Thin 7.62 Mag",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "8.02",
+   "Name": "Weighted 7.62 Mag",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "9mm",
+   "Name": "Extended 9mm Mag",
+   "valPos": 20,
+   "pos": "Extra Rounds",
+   "valNeg": -10,
+   "neg": "Reload Speed %",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "9mm",
+   "Name": "Heavy Spring 9mm Mag",
+   "valPos": 10,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "9mm",
+   "Name": "Oversized 9mm Mag",
+   "valPos": 10,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "9mm",
+   "Name": "Segmented 9mm Mag",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ammunition Belt",
+   "Name": "Calibrated Link",
+   "valPos": 15,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ammunition Belt",
+   "Name": "Large Pouch",
+   "valPos": 35,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ammunition Belt",
+   "Name": "Nimble Link Belt",
+   "valPos": 5,
+   "pos": "Rate of Fire %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ammunition Belt",
+   "Name": "Non-disruptive Link",
+   "valPos": 10,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ammunition Belt",
+   "Name": "Tactical Small Pouch",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ammunition Belt",
+   "Name": "Gunner Large Pouch",
+   "valPos": 50,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "Gunner"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Integrated",
+   "Name": "Compensated Integrated Spring",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Integrated",
+   "Name": "Overbalanced Integrated Spring",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Integrated",
+   "Name": "Stiff Integrated Spring",
+   "valPos": 5,
+   "pos": "Weapon Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Integrated",
+   "Name": "Underbalanced Integrated Spring",
+   "valPos": 5,
+   "pos": "Rate of Fire %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "MM 7.62",
+   "Name": "Lightweight Marksman Mag",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "MM 7.62",
+   "Name": "Mended Marksman Mag",
+   "valPos": 20,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "MM 7.62",
+   "Name": "Sturdy Marksman Mag",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "MM 7.62",
+   "Name": "Tightly Packed Marksman Mag",
+   "valPos": 5,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Pistol",
+   "Name": "Extended Pistol Mag",
+   "valPos": 11,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Pistol",
+   "Name": "Field Pistol Mag",
+   "valPos": 30,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Pistol",
+   "Name": "Police Pistol Mag",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Revolver Drum",
+   "Name": "Speed Loading Revolver Drum",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Tubular",
+   "Name": "Counter-Clockwise Tubular Spring",
+   "valPos": 5,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Tubular",
+   "Name": "Flexible Tubular Spring",
+   "valPos": 20,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Tubular",
+   "Name": "Hard Tubular Spring",
+   "valPos": 5,
+   "pos": "Rate of Fire %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "QDC",
+   "Name": "QDC Sound Supressor",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": ".45 ACP",
+   "Name": "Compensator .45",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": ".45 ACP",
+   "Name": "Flash Hider .45",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": ".45 ACP",
+   "Name": "Loud Vent Brake .45",
+   "valPos": 10,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": ".45 ACP",
+   "Name": "Muzzle Brake .45",
+   "valPos": 3,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": ".45 ACP",
+   "Name": "Osprey .45 Suppressor",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": ".45 ACP",
+   "Name": "Small Suppressor .45",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "5.56",
+   "Name": "Compensator 5.56",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "5.56",
+   "Name": "Flash Hider 5.56",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "5.56",
+   "Name": "Large Suppressor 5.56",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "5.56",
+   "Name": "Loud Vent Brake 5.56",
+   "valPos": 10,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "5.56",
+   "Name": "Muzzle Brake 5.56",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "5.56",
+   "Name": "Omega 5.56 Rifle Suppressor",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": -10,
+   "neg": "Optimal Range",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "8.02",
+   "Name": "Compensator 7.62",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "8.02",
+   "Name": "Flash Hider 7.62",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "8.02",
+   "Name": "Large Suppressor 7.62",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "8.02",
+   "Name": "Loud Vent Brake 7.62",
+   "valPos": 10,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "8.02",
+   "Name": "Muzzle Brake 7.62",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "8.02",
+   "Name": "Omega 7.62 Rifle Suppressor",
+   "valPos": 20,
+   "pos": "Stability",
+   "valNeg": -10,
+   "neg": "Optimal Range",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "9mm",
+   "Name": "Compensator 9mm",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "9mm",
+   "Name": "Flash Hider 9mm",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "9mm",
+   "Name": "Loud Vent Brake 9mm",
+   "valPos": 10,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "9mm",
+   "Name": "Small Suppressor 9mm",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "9mm",
+   "Name": "Muzzle Brake 9mm",
+   "valPos": 3,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "9mm",
+   "Name": "Osprey 9mm Suppressor",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": "A"
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Nemesis",
+   "Name": "Nemesis Digital Scope",
+   "valPos": 45,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Nemesis",
+   "Name": "Nemesis Bolt",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Nemesis",
+   "Name": "Nemesis Barrel",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Nemesis",
+   "Name": "Nemesis Bipod",
+   "valPos": 5,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "The Chatterbox",
+   "Name": "Modified Optics",
+   "valPos": 15,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "The Chatterbox",
+   "Name": "Chatterbox Magazine",
+   "valPos": 10,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "The Chatterbox",
+   "Name": "Chatterbox Muzzle",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "The Chatterbox",
+   "Name": "Chatterbox Cannister",
+   "valPos": 10,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Sweet Dreams",
+   "Name": "Outcast Optics",
+   "valPos": 15,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Sweet Dreams",
+   "Name": "Modified Feed System",
+   "valPos": 15,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Sweet Dreams",
+   "Name": "Stunner",
+   "valPos": 25,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Lullaby",
+   "Name": "Damaged Optics",
+   "valPos": 15,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Lullaby",
+   "Name": "Modified Feed System",
+   "valPos": 15,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Lullaby",
+   "Name": "Hardened Grip",
+   "valPos": 25,
+   "pos": "Optimal Range",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Merciless",
+   "Name": "Merciless Optics",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Merciless",
+   "Name": "Merciless Magazine",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Merciless",
+   "Name": "Merciless Muzzle",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Merciless",
+   "Name": "Merciless Grip",
+   "valPos": 10,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Ruthless",
+   "Name": "Unidentified Custom Russian Sight",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Ruthless",
+   "Name": "Ruthless Magazine",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Ruthless",
+   "Name": "Mayhem's Muzzle",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Ruthless",
+   "Name": "Ruthless Grip",
+   "valPos": 10,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Pestilence",
+   "Name": "Plagued Magazine",
+   "valPos": 10,
+   "pos": "Rate of Fire %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Pestilence",
+   "Name": "Plagured Muzzle",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Pestilence",
+   "Name": "Caution Tape",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Liberty",
+   "Name": "Liberty Sight",
+   "valPos": 5,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Liberty",
+   "Name": "Trigger Mechanisim",
+   "valPos": 15,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Liberty",
+   "Name": "Liberty Customs",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Liberty",
+   "Name": "Liberty Grip",
+   "valPos": 15,
+   "pos": "Rate of Fire %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Regulus",
+   "Name": "Engraved Drum",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Regulus",
+   "Name": "Engraved Muzzle",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Diamondback",
+   "Name": "Diamondback Dot Sight",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Diamondback",
+   "Name": "Diamondback Lever",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Diamondback",
+   "Name": "Diamondback Grip",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Diamondback",
+   "Name": "Rattlesnake Ornamentation",
+   "valPos": 15,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "The Ravenous",
+   "Name": "Predatory Optics",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "The Ravenous",
+   "Name": "Gluttonous Magazines",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "The Ravenous",
+   "Name": "Devouring Maw",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "The Ravenous",
+   "Name": "Wolf's Claw",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Lady Death",
+   "Name": "Gaze of Death",
+   "valPos": 10,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Lady Death",
+   "Name": "Death's Hand",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Lady Death",
+   "Name": "Death's Maw",
+   "valPos": 500,
+   "pos": "Melee Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Lady Death",
+   "Name": "Kiss of Death",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Bullet King",
+   "Name": "Mag of Holding",
+   "valPos": null,
+   "pos": "",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Bullet King",
+   "Name": "Gold Plated Muzzle",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Bullet King",
+   "Name": "Solid Gold Bipod",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Chameleon",
+   "Name": "Chameleon Optics",
+   "valPos": 15,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Chameleon",
+   "Name": "Chameleon ActivCamo Processor",
+   "valPos": 20,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Chameleon",
+   "Name": "Chameleon Dampener",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Chameleon",
+   "Name": "Chameleon Grip",
+   "valPos": 20,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Eagle Bearer",
+   "Name": "Eagle Eye Sight",
+   "valPos": 10,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Eagle Bearer",
+   "Name": "Bullet Eyrie",
+   "valPos": 30,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Eagle Bearer",
+   "Name": "Talon Grip",
+   "valPos": 10,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Eagle Bearer",
+   "Name": "Jagged Break",
+   "valPos": 15,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "The Bighorn",
+   "Name": "Fire Select Scope",
+   "valPos": 30,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "The Bighorn",
+   "Name": "Tension Spring Magazine",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "The Bighorn",
+   "Name": "Carbon Steel Muzzle",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "The Bighorn",
+   "Name": "Bighorn Grip",
+   "valPos": 10,
+   "pos": "Accuracy",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Scorpio",
+   "Name": "Starlight Receptor",
+   "valPos": 10,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Scorpio",
+   "Name": "Venom Glands",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Scorpio",
+   "Name": "Chelae Grip",
+   "valPos": 10,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Scorpio",
+   "Name": "Aculus",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Capacitor",
+   "Name": "Conductive Focal",
+   "valPos": 10,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Capacitor",
+   "Name": "Voltage Generator",
+   "valPos": 11,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Capacitor",
+   "Name": "Dialetic Safety Grip",
+   "valPos": 10,
+   "pos": "Weapon Handling",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Capacitor",
+   "Name": "Discharge Electrode",
+   "valPos": 30,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Backfire",
+   "Name": "Quick Sight",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Backfire",
+   "Name": "Barbed Grip Magazine",
+   "valPos": 20,
+   "pos": "Extra Rounds",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Backfire",
+   "Name": "Barbed Frame",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Backfire",
+   "Name": "Jagged Muzzle",
+   "valPos": 5,
+   "pos": "Critical Hit Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Mantis",
+   "Name": "Anti-Glint Coated Sight",
+   "valPos": 40,
+   "pos": "Headshot Damage",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Magazine",
+   "Type": "Mantis",
+   "Name": "Well-Oiled Machine",
+   "valPos": 10,
+   "pos": "Reload Speed %",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Under Barrel",
+   "Type": "Mantis",
+   "Name": "Ghillie Frame",
+   "valPos": 10,
+   "pos": "Stability",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Muzzle",
+   "Type": "Mantis",
+   "Name": "Wrapped Suppressor",
+   "valPos": 5,
+   "pos": "Critical Hit Chance",
+   "valNeg": null,
+   "neg": "",
+   "Spec": ""
+ },
+ {
+   "Slot": "Optic",
+   "Type": "Short",
+   "Name": "Small RDS Scope",
+   "valPos": 15,
+   "pos": "Stability",
+   "valNeg": -5,
+   "neg": "Accuracy",
+   "Spec": "A"
+ }
+]

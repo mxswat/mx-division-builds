@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>7.7% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>11.5% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Artist's Tool - SIG 716 CQB",
+   "dmg": "99,665",
+   "rpm": 320,
+   "mag": 20,
+   "talent": "Perfect Rifleman",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.7% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>19.5% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Black Market M60 E6",
+   "dmg": "61,116",
+   "rpm": 500,
+   "mag": 100,
+   "talent": "Future Perfect",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Resolute MK47",
+   "dmg": "104,837",
+   "rpm": 300,
+   "mag": 30,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Reload Speed"
  }
 ]

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "assault_rifle_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  },
+  {
+    "id": "lmg_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  },
+  {
+    "id": "marksman_rifle_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  },
+  {
+    "id": "pistol_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  },
+  {
+    "id": "rifle_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  },
+  {
+    "id": "shotgun_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  },
+  {
+    "id": "smg_damage",
+    "max": 15,
+    "min": 0,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "weapon_core_1"
+    ]
+  }
+]

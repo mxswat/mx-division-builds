@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>5% Damage to Armor",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Glory Daze - Custom P416 G3",
+   "dmg": "47,952",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Perfectly Near Sighted",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>3.4% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom P416 G3",
+   "dmg": "47,952",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "USC .45 ACP",
+   "dmg": "98,255",
+   "rpm": 420,
+   "mag": 20,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
  }
 ]

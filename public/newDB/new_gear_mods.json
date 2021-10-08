@@ -1,0 +1,242 @@
+[
+  {
+    "id": "critical_hit_chance",
+    "max": 6,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "critical_hit_damage",
+    "max": 12,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "headshot_damage",
+    "max": 10,
+    "tags": [
+      "offensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "armor_on_kill",
+    "max": 18935,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "incoming_repairs",
+    "max": 20,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "protection_from_elites",
+    "max": 13,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "bleed_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "blinddeaf_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "burn_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "disrupt_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "shock_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "repair_skills",
+    "max": 20,
+    "tags": [
+      "utility"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "skill_haste",
+    "max": 12,
+    "tags": [
+      "utility"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "skill_duration",
+    "max": 10,
+    "tags": [
+      "utility"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "disorient_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  },
+  {
+    "id": "ensnare_resistance",
+    "max": 10,
+    "tags": [
+      "defensive"
+    ],
+    "category": [
+      "mod_chest",
+      "mod_gloves",
+      "mod_holster",
+      "mod_kneepads",
+      "mod_backpack",
+      "mod_mask"
+    ]
+  }
+]

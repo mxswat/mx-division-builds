@@ -390,5 +390,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "New Reliable - Black Market RPK-74 E",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Perfectly Optimized",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.6% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>20% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.9% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military P416",
+   "dmg": "47,952",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SASG-12",
+   "dmg": "364,812",
+   "rpm": 180,
+   "mag": 7,
+   "talent": "Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
  }
 ]

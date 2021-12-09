@@ -418,5 +418,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.7% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Darkness - SOCOM Mk20 SSR",
+   "dmg": "143,857",
+   "rpm": 282,
+   "mag": 20,
+   "talent": "Perfect Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>98% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.9% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military RPK-74 M",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "KARD-45",
+   "dmg": "109,068",
+   "rpm": 310,
+   "mag": 7,
+   "talent": "Ignited",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>5% Damage to Armor",
+   "attribute3": "-"
  }
 ]

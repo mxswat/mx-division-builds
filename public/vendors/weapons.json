@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.6% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Scalpel - M700",
+   "dmg": "376,096",
+   "rpm": 70,
+   "mag": 7,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.9% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>99% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Infantry MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "X-45",
+   "dmg": "76,630",
+   "rpm": 400,
+   "mag": 10,
+   "talent": "Lucky Shot",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance",
+   "attribute3": "-"
  }
 ]

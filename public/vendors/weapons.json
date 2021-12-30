@@ -418,5 +418,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.5% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Invisible Hand - AUG A3-CQC",
+   "dmg": "51,243",
+   "rpm": 680,
+   "mag": 30,
+   "talent": "Perfect Allegro",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.8% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.9% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military G36",
+   "dmg": "48,892",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>24% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "D50",
+   "dmg": "220,956",
+   "rpm": 150,
+   "mag": 8,
+   "talent": "Killer",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9.3% Accuracy",
+   "attribute3": "-"
  }
 ]

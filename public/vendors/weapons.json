@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.5% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Mop - SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Armor on Kill"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>20% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "ACR",
+   "dmg": "53,124",
+   "rpm": 650,
+   "mag": 30,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic M44 Carbine",
+   "dmg": "423,108",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Naked",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>95% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Health Damage"
  }
 ]

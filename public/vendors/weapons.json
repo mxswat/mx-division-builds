@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>12.4% Swap Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.2% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Mop - SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Armor on Kill"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military L86 LSW",
+   "dmg": "59,705",
+   "rpm": 610,
+   "mag": 30,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.9% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Chance"
  }
 ]

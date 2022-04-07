@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>3.6% Rate of Fire",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Mop - SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Armor on Kill"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military G36",
+   "dmg": "48,892",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "ACS-12",
+   "dmg": "169,243",
+   "rpm": 300,
+   "mag": 20,
+   "talent": "Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Health Damage"
  }
 ]

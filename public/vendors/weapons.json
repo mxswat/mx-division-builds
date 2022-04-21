@@ -38,8 +38,8 @@
    "mag": 6,
    "talent": "Perpetuation",
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
-   "attribute2": "<span class=\"icon-weapons\"></span>- ",
-   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
+   "attribute3": "-"
  },
  {
    "type": "weapon",
@@ -206,8 +206,8 @@
    "mag": 15,
    "talent": "Breadbasket",
    "attribute1": "<span class=\"icon-weapons\"></span>12.4% Pistol Damage",
-   "attribute2": "<span class=\"icon-weapons\"></span>- ",
-   "attribute3": "<span class=\"icon-weapons\"></span>5.5% Critical Hit Chance"
+   "attribute2": "<span class=\"icon-weapons\"></span>5.5% Critical Hit Chance",
+   "attribute3": "-"
  },
  {
    "type": "weapon",
@@ -360,7 +360,63 @@
    "mag": 15,
    "talent": "Vindictive",
    "attribute1": "<span class=\"icon-weapons\"></span>9% Pistol Damage",
-   "attribute2": "<span class=\"icon-weapons\"></span>- ",
-   "attribute3": "<span class=\"icon-weapons\"></span>21% Optimal Range"
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Optimal Range",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mechanical Animal",
+   "dmg": "50,773",
+   "rpm": 720,
+   "mag": 30,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>20% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mk16",
+   "dmg": "55,504",
+   "rpm": 625,
+   "mag": 30,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Black Market SASG-12 S",
+   "dmg": "364,812",
+   "rpm": 180,
+   "mag": 7,
+   "talent": "Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>5.6% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.5% Magazine Size"
  }
 ]

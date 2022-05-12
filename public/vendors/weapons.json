@@ -141,7 +141,7 @@
  },
  {
    "type": "weapon",
-   "rarity": "header-he",
+   "rarity": "header-named",
    "vendor": "The Campus",
    "level": 40,
    "name": "Ekim's Long Stick - Model 700",
@@ -404,5 +404,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Quiet Roar - Stoner LAMG",
+   "dmg": "47,952",
+   "rpm": 580,
+   "mag": 200,
+   "talent": "Perfect Overwhelm",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.8% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.1% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Double Barrel Sawed Off",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.3% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
  }
 ]

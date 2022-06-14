@@ -46,14 +46,14 @@
    "rarity": "header-named",
    "vendor": "Clan",
    "level": 40,
-   "name": "Lightning Rod - Custom PF45",
-   "dmg": "82,741",
-   "rpm": 370,
-   "mag": 15,
-   "talent": "Salvage",
-   "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
-   "attribute2": "<span class=\"icon-weapons\"></span>13.2% Swap Speed",
-   "attribute3": "-"
+   "name": "Mechanical Animal",
+   "dmg": "50,773",
+   "rpm": 720,
+   "mag": 30,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover"
  },
  {
    "type": "weapon",

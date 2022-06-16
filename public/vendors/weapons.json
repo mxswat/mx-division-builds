@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>12.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.1% Stability",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Carnage - IWI NEGEV",
+   "dmg": "37,610",
+   "rpm": "850",
+   "mag": "100",
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>5.8% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": "850",
+   "mag": "30",
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic RPK-74",
+   "dmg": "55,474",
+   "rpm": "650",
+   "mag": "45",
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Surplus SVD",
+   "dmg": "159,841",
+   "rpm": "260",
+   "mag": "10",
+   "talent": "Naked",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>92% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12% Accuracy"
  }
 ]

@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>12.6% Swap Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cold Relations - Enhanced PP-19",
+   "dmg": "59,705",
+   "rpm": 700,
+   "mag": 58,
+   "talent": "Perfectly Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.3% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.2% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom L86 A2",
+   "dmg": "59,705",
+   "rpm": 610,
+   "mag": 30,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Police Mk17",
+   "dmg": "116,120",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Lucky Shot",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.7% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
  }
 ]

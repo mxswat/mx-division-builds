@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.6% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Lightning Rod - Custom PF45",
+   "dmg": "82,741",
+   "rpm": 370,
+   "mag": 15,
+   "talent": "Perfect Salvage",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9.5% Magazine Size",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>19% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "TKB-480",
+   "dmg": "",
+   "rpm": 650,
+   "mag": 30,
+   "talent": "Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.6% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "93R",
+   "dmg": "32,908",
+   "rpm": 1100,
+   "mag": 20,
+   "talent": "Vindictive",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9.5% Magazine Size",
+   "attribute3": "-"
  }
 ]

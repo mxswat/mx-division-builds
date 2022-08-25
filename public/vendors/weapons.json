@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9.5% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The White Death - Classic M44 Carbine",
+   "dmg": "423,108",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>137% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>6.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "AK-M",
+   "dmg": "52,056",
+   "rpm": 600,
+   "mag": 30,
+   "talent": "Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.3% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Paratrooper SVD",
+   "dmg": "159,841",
+   "rpm": 260,
+   "mag": 10,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>73% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Magazine Size"
  }
 ]

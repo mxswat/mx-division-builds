@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.8% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>7.8% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Ekim's Long Stick - Model 700",
+   "dmg": "399,602",
+   "rpm": 54,
+   "mag": 7,
+   "talent": "Perfect Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.5% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>94% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.8% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.6% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Double Barrel Sawed Off",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
  }
 ]

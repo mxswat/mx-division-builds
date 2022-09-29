@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.3% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>5% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Swap Chain - MP7",
+   "dmg": "47,952",
+   "rpm": 950,
+   "mag": 40,
+   "talent": "Perfect Unwavering",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.8% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>4% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military M60 E4",
+   "dmg": "61,116",
+   "rpm": 500,
+   "mag": 100,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>3.9% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Super 90",
+   "dmg": "440,031",
+   "rpm": 160,
+   "mag": 8,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.9% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
  }
 ]

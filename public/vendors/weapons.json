@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>7.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>13.9% Swap Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Designated Hitter - SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Perfect Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>13% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>90% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.3% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Police Mk17",
+   "dmg": "116,120",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.1% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic RPK-74",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Vindictive",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.9% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Health Damage"
  }
 ]

@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>4.7% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>11% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>14.5% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mozambique Special",
+   "dmg": "98,725",
+   "rpm": 310,
+   "mag": 18,
+   "talent": "Perfect Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.2% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>7.5% Health Damage",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Black Market RPK-74 E",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>7.8% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom M44",
+   "dmg": "376,096",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>103% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
  }
 ]

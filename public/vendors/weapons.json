@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9.5% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Mop - SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Pummel",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Armor on Kill"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>19.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.3% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom L86 A2",
+   "dmg": "59,705",
+   "rpm": 610,
+   "mag": 30,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.6% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M700 Tactical",
+   "dmg": "376,096",
+   "rpm": 54,
+   "mag": 7,
+   "talent": "Vindictive",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.8% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>91% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Health Damage"
  }
 ]

@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>10.6% Reload Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mozambique Special",
+   "dmg": "98,725",
+   "rpm": 310,
+   "mag": 18,
+   "talent": "Perfect Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.8% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Critical Hit Chance",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic RPK-74",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.2% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SOCOM M1A",
+   "dmg": "141,036",
+   "rpm": 320,
+   "mag": 10,
+   "talent": "Perpetuation",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.7% Swap Speed"
  }
 ]

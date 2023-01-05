@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Darkness - SOCOM Mk20 SSR",
+   "dmg": "143,857",
+   "rpm": 282,
+   "mag": 20,
+   "talent": "Perfect Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>95% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mk16",
+   "dmg": "55,504",
+   "rpm": 625,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom PF45",
+   "dmg": "82,741",
+   "rpm": 370,
+   "mag": 15,
+   "talent": "",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.6% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8.1% Stability",
+   "attribute3": "-"
  }
 ]

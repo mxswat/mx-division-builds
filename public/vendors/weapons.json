@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>5% Damage to Armor",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Boomstick - Double Barrel Shotgun",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Perfect Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Health Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>20% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "Future Perfect",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.8% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M1A CQB",
+   "dmg": "156,080",
+   "rpm": 320,
+   "mag": 10,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
  }
 ]

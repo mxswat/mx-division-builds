@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>11.5% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mechanical Animal",
+   "dmg": "50,773",
+   "rpm": 720,
+   "mag": 30,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military P416",
+   "dmg": "47,952",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military Mk17",
+   "dmg": "116,120",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance"
  }
 ]

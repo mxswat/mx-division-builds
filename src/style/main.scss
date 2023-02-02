@@ -5,57 +5,58 @@
 
 .gear-name,
 .weapon-name {
-  border-bottom: 1px solid white;
-  padding: 8px;
-  cursor: pointer;
-  position: relative;
-  opacity: 1;
-  
-  &::after {
-    content: "";
-    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
-    height: 15px;
-    width: 15px;
-    right: 6px;
-    background-position: center;
-    background-size: cover;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    filter: invert(1);
-  }
+	border-bottom: 1px solid white;
+	padding: 8px;
+	cursor: pointer;
+	position: relative;
+	opacity: 1;
 
-  font-weight: 700;
-  color: black;
+	&::after {
+		content: "";
+		background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABaklEQVR4Xu2aTUoDQRCFv2yNP9cInsCtbkWCl9EraE4jwWXIVo8gXiIkxL0URNBON3Yyq6p6s00z9Hv1VVdPpUYkf0bJ9SMDREByB5QCyQHQIagUUAokd0Ap0ABgAjwBN8CZc0i+gCXwAHyUWmoEmPh34MK58HL7a+CqNKFmwAswDSb+R8681FYzYBMA+1b8tqW2mgG2aByUgC4DDJO7oAZYet//1pbpEFztDsHP/wyw360SPO/K4KlzGgz7BfAI/BFvunQRch7dwdsXAYMtdP4CEeA8gIO3LwIGW+j8BS0CLoEZcA2cONd4cD/AxL8B586FH90PeAVug4k/qB9gyHjHXv2AhgPqB6gfUHwSt8qg+gFBq8CeLF2Fs0S6pVMEiIDkDigFkgPQ/F9A/QD1A2LmRtd8gPoBmg/QfEDIISnNB2g+oFLZdBWOWe77VYmAfq9irhQBMePar0oE9HsVc6UIiBnXflXpCfgGC8dCQbbkoGgAAAAASUVORK5CYII=");
+		height: 15px;
+		width: 15px;
+		right: 6px;
+		background-position: center;
+		background-size: cover;
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		filter: invert(1);
+	}
 
-  &.high-end, &.named {
-    background: #ffaf00;
-  }
+	font-weight: 700;
+	color: black;
 
-//   &.named {
-//     background: #ff9310;
-//   }
+	&.high-end,
+	&.named {
+		background: #ffaf00;
+	}
 
-  &.exotic {
-    background: #e14b32;
-  }
+	//   &.named {
+	//     background: #ff9310;
+	//   }
 
-  &.gearset {
-    background: #4baf64;
-  }
+	&.exotic {
+		background: #e14b32;
+	}
+
+	&.gearset {
+		background: #4baf64;
+	}
 }
 
 .bold {
-  font-weight: 700;
+	font-weight: 700;
 }
 
 // TODO Move me in my correct file
 // Import first the variables or the override wont work
 $vs-colors: (
-  lightest: white,
-  light: white,
-  dark: white,
-  darkest: white,
+	lightest: white,
+	light: white,
+	dark: white,
+	darkest: white,
 );
 $vs-dropdown-box-shadow: none;
 $vs-border-radius: 0px;
@@ -64,41 +65,41 @@ $vs-dropdown-bg: #151515;
 @import "vue-select/src/scss/vue-select.scss";
 
 .vs__dropdown-option {
-  color: white;
-  display: flex;
-  align-items: center;
+	color: white;
+	display: flex;
+	align-items: center;
 }
 
 .vs__dropdown-option--highlight {
-  background: rgba(255, 165, 0, 0.5);
-  color: white;
+	background: rgba(255, 165, 0, 0.5);
+	color: white;
 }
 
 .vs__search::placeholder {
-  color: white;
+	color: white;
 }
 
 .vs__dropdown-toggle {
-  border: 0;
-  border-bottom: 1px solid white;
+	border: 0;
+	border-bottom: 1px solid white;
 }
 
 .vs--searchable .vs__search,
 .vs--searchable .vs__dropdown-toggle {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .vs--searchable.vs--open .vs__search {
-  cursor: text;
-  caret-color: white;
+	cursor: text;
+	caret-color: white;
 }
 
 .vs__search:focus::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+	color: rgba(255, 255, 255, 0.5);
 }
 
 .vs__selected + input.vs__search {
-  position: absolute;
+	position: absolute;
 }
 
 // .vs__selected + input.vs__search[aria-activedescendant] {
@@ -106,15 +107,15 @@ $vs-dropdown-bg: #151515;
 // }
 
 .v-select.vs--open input.vs__search {
-  position: relative;
+	position: relative;
 }
 
 .vs--single .vs__selected {
-  width: 100%;
+	width: 100%;
 }
 
 body .v--modal {
-  background-color: #252525;
+	background-color: #252525;
 }
 
 /*== code for tooltips from https://codepen.io/pure-css/pen/bddggP ==*/
@@ -133,7 +134,8 @@ body .v--modal {
 		bottom: 100%;
 		content: "";
 		margin-left: -0.5em;
-		transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26), opacity 0.65s 0.5s;
+		transition: all 0.65s cubic-bezier(0.84, -0.18, 0.31, 1.26),
+			opacity 0.65s 0.5s;
 		transform: scale(0.6) translateY(-90%);
 	}
 	&::after {

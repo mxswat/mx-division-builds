@@ -1,46 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+		<link rel="icon" href="<%= BASE_URL %>icon.png" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<title>The Division 2 builds tool</title>
+		<meta
+			name="google-site-verification"
+			content="C62Vkru2jb3BZE_X-XUZ8LO3YcHz2zp0Ez4r0IUgJUQ"
+		/>
+		<meta
+			name="description"
+			content="The Division 2 builds tool will be your companion app and builder for theorycrafing and build share! Always updated to the latest version of the game! Now with support for the vendors reset!"
+		/>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <link rel="icon" href="<%= BASE_URL %>icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
-  <title>The Division 2 builds tool</title>
-  <meta name="google-site-verification" content="C62Vkru2jb3BZE_X-XUZ8LO3YcHz2zp0Ez4r0IUgJUQ" />
-  <meta name="description"
-    content="The Division 2 builds tool will be your companion app and builder for theorycrafing and build share! Always updated to the latest version of the game! Now with support for the vendors reset!" />
+		<!-- The Open Graph protocol Tags -->
+		<meta property="og:site_name" content="<%= VUE_APP_TITLE %>" />
+		<meta
+			property="og:url"
+			content="https://mxswat.github.io/mx-division-builds/#/"
+		/>
+		<meta property="og:type" content="article" />
+		<meta
+			property="og:title"
+			content="The Division 2 builds tool :: Home"
+		/>
+		<meta
+			property="og:description"
+			content="The Division 2 builds tool will be your companion app and builder for theorycrafing and build share! Always updated to the latest version of the game! Now with support for the vendors reset!"
+		/>
+		<meta
+			property="og:image"
+			content="https://mxswat.github.io/mx-division-builds/public/icon.png"
+		/>
 
-  <!-- The Open Graph protocol Tags -->
-  <meta property="og:site_name" content="The Division 2 builds tool" />
-  <meta property="og:url" content="https://mxswat.github.io/mx-division-builds/#/" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="The Division 2 builds tool :: Home" />
-  <meta property="og:description"
-    content="The Division 2 builds tool will be your companion app and builder for theorycrafing and build share! Always updated to the latest version of the game! Now with support for the vendors reset!" />
-  <meta property="og:image" content="https://mxswat.github.io/mx-division-builds/public/icon.png" />
+		<!-- Google Tag Manager -->
+		<script>
+			(function(w, d, s, l, i) {
+				w[l] = w[l] || [];
+				w[l].push({
+					"gtm.start": new Date().getTime(),
+					event: "gtm.js",
+				});
+				var f = d.getElementsByTagName(s)[0],
+					j = d.createElement(s),
+					dl = l != "dataLayer" ? "&l=" + l : "";
+				j.async = true;
+				j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+				f.parentNode.insertBefore(j, f);
+			})(window, document, "script", "dataLayer", "GTM-NP54972");
+		</script>
+		<!-- End Google Tag Manager -->
+		<style>
+			html {
+				background: #232830;
+			}
+		</style>
+	</head>
 
-  <!-- Google Tag Manager -->
-  <script>(function (w, d, s, l, i) {
-      w[l] = w[l] || []; w[l].push({
-        'gtm.start':
-          new Date().getTime(), event: 'gtm.js'
-      }); var f = d.getElementsByTagName(s)[0],
-        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-    })(window, document, 'script', 'dataLayer', 'GTM-NP54972');</script>
-  <!-- End Google Tag Manager -->
-  <style>
-    html {
-      background: #232830;
-    }
-  </style>
-</head>
-
-<body>
-  <!-- cors-anywhere -->
-  <!-- <script>
+	<body>
+		<!-- cors-anywhere -->
+		<!-- <script>
     (function () {
       var cors_api_host = 'cors-anywhere.herokuapp.com';
       var cors_api_url = 'https://' + cors_api_host + '/';
@@ -58,12 +83,14 @@
       };
     })();
   </script> -->
-  <noscript>
-    <strong>We're sorry but "The division 2 builds tool" doesn't work properly without JavaScript enabled.
-      Please enable it to continue.</strong>
-  </noscript>
-  <div id="app"></div>
-  <!-- built files will be auto injected -->
-</body>
-
+		<noscript>
+			<strong
+				>We're sorry but "The division 2 builds tool" doesn't work
+				properly without JavaScript enabled. Please enable it to
+				continue.</strong
+			>
+		</noscript>
+		<div id="app"></div>
+		<!-- built files will be auto injected -->
+	</body>
 </html>

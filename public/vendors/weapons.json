@@ -418,5 +418,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>13.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>5.5% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mozambique Special",
+   "dmg": "98,725",
+   "rpm": 310,
+   "mag": 18,
+   "talent": "Perfect Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.3% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Headshot Damage",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M249 B",
+   "dmg": "56,414",
+   "rpm": 550,
+   "mag": 100,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.6% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M870 Express",
+   "dmg": "695,775",
+   "rpm": 75,
+   "mag": 5,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>13% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>18% Optimal Range"
  }
 ]

@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Mop - SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Perpetuation",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.4% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "GR9",
+   "dmg": "",
+   "rpm": 750,
+   "mag": 200,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>10% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.8% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M16A2",
+   "dmg": "84,622",
+   "rpm": 400,
+   "mag": 30,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.8% Swap Speed"
  }
 ]

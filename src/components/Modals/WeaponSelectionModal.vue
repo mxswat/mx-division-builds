@@ -158,7 +158,6 @@
 					sorted,
 					"Weapon Type"
 				);
-				console.log(this.weaponsList);
 			});
 		},
 	};

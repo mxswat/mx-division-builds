@@ -114,7 +114,46 @@
 					v-bind:max="currentGear.coreThree.Max"
 				></StatInput>
 			</div>
-
+			<!-- Attribute 3 -->
+			<div
+				class="slot-element stat-edit attribute-three"
+				v-if="currentGear.filters.attributeThree"
+			>
+				<v-select
+					placeholder="Minor attribute Three"
+					:clearable="false"
+					:options="
+						filterGearAttributes(
+							gearAttributes,
+							undefined,
+							currentGear.filters.attributeThree
+						)
+					"
+					v-model="currentGear.attributeThree"
+					label="Stat"
+				>
+					<template v-slot:option="option">
+						<img
+							class="attribute-image"
+							v-bind:src="typeToImgSrc.attribute[option.Type]"
+						/>
+						<span class="attribute-label">{{ option.Stat }}</span>
+						<span class="attribute-value">{{ option.Max }}</span>
+					</template>
+					<template #selected-option="option">
+						<img
+							class="attribute-image"
+							v-bind:src="typeToImgSrc.attribute[option.Type]"
+						/>
+						<span class="attribute-label">{{ option.Stat }}</span>
+					</template>
+				</v-select>
+				<StatInput
+					v-if="currentGear.attributeThree"
+					v-model="currentGear.attributeThree.StatValue"
+					v-bind:max="currentGear.attributeThree.Max"
+				></StatInput>
+			</div>
 			<!-- Attribute 1 -->
 			<div
 				class="slot-element stat-edit attribute-one"
@@ -195,6 +234,7 @@
 					v-bind:max="currentGear.attributeTwo.Max"
 				></StatInput>
 			</div>
+			<!-- Mod -->
 			<div
 				class="slot-element stat-edit mod-slot"
 				v-if="currentGear.filters.mod"
@@ -226,6 +266,40 @@
 					v-if="currentGear.mod"
 					v-model="currentGear.mod.StatValue"
 					v-bind:max="currentGear.mod.Max"
+				></StatInput>
+			</div>
+			<!-- Mod 2 -->
+			<div
+				class="slot-element stat-edit mod-slot"
+				v-if="currentGear.filters.modTwo"
+			>
+				<v-select
+					placeholder="Mod 2"
+					:clearable="false"
+					:options="filterGearMods(gearMods)"
+					v-model="currentGear.modTwo"
+					label="Stat"
+				>
+					<template v-slot:option="option">
+						<img
+							class="attribute-image"
+							v-bind:src="typeToImgSrc.mod[option.Type]"
+						/>
+						<span class="attribute-label">{{ option.Stat }}</span>
+						<span class="attribute-value">{{ option.Max }}</span>
+					</template>
+					<template #selected-option="option">
+						<img
+							class="attribute-image"
+							v-bind:src="typeToImgSrc.mod[option.Type]"
+						/>
+						<span class="attribute-label">{{ option.Stat }}</span>
+					</template>
+				</v-select>
+				<StatInput
+					v-if="currentGear.modTwo"
+					v-model="currentGear.modTwo.StatValueModTwo"
+					v-bind:max="currentGear.modTwo.Max"
 				></StatInput>
 			</div>
 			<div
@@ -304,13 +378,6 @@
 				}
 			},
 			onModalClose(data) {
-				// if (data["Item Name"] === "Memento") {
-				// 	console.log(data);
-				// 	this.isMementoSelected = true;
-				// } else {
-				// 	this.isMementoSelected = false;
-				// 	// console.log(data["Item Name"]);
-				// }
 				this.currentGear = new GearBase(data);
 				switch (this.currentGear.quality) {
 					case "Exotic":
@@ -344,6 +411,11 @@
 								attribute.Stat ===
 								this.currentGear.filters.attributeTwo
 						);
+						this.currentGear.attributeThree = this.allGearAttributes.find(
+							(attribute) =>
+								attribute.Stat ===
+								this.currentGear.filters.attributeThree
+						);
 						this.currentGear.talent = this.allTalents.find(
 							(talent) => {
 								return (
@@ -366,7 +438,6 @@
 					default:
 						break;
 				}
-				console.log("onGearModalClose: ", this.currentGear);
 			},
 			openGearModal() {
 				openGearModal(this.gearList, this.name, this.onModalClose);
@@ -453,7 +524,6 @@
 			},
 			initGearData() {
 				coreService.getSlotInit$(this.name).subscribe((ids) => {
-					// console.log(ids);
 					const splittedIdS = ids.split("-");
 					const gearId = parseInt([splittedIdS[0]]);
 					if (gearId) {
@@ -469,10 +539,15 @@
 							(attribute) =>
 								attribute.index === parseInt(splittedIdS[2])
 						);
-						/**
-						 * Only perform if Memento (id = 46)
-						 */
-						if (this.currentGear.itemName === "Memento") {
+						// if (this.currentGear.itemName === "Memento") {
+						if (
+							this.currentGear.brand === "Exotic" &&
+							this.currentGear.quality === "Exotic" &&
+							this.currentGear.id === 46
+						) {
+							/**
+							 * Only perform if Memento (id = 46)
+							 */
 							this.currentGear.core = this.coreAttributes.find(
 								(attribute) => attribute.index === parseInt(1)
 							);
@@ -482,6 +557,53 @@
 							this.currentGear.coreThree = this.coreAttributes.find(
 								(attribute) => attribute.index === parseInt(0)
 							);
+							// } else if (this.currentGear.itemName === "NinjaBike") {
+						} else if (
+							this.currentGear.brand === "Exotic" &&
+							this.currentGear.quality === "Exotic" &&
+							this.currentGear.id === 55
+						) {
+							/**
+							 * Only perform if NinjaBike (id = 55)
+							 */
+							this.currentGear.core = this.coreAttributes.find(
+								(attribute) => attribute.index === parseInt(1)
+							);
+							this.currentGear.coreTwo = this.coreAttributes.find(
+								(attribute) => attribute.index === parseInt(2)
+							);
+							this.currentGear.coreThree = this.coreAttributes.find(
+								(attribute) => attribute.index === parseInt(0)
+							);
+						} else if (this.currentGear.itemName === "Ammo Dump") {
+							/**
+							 * Only perform if Ammo Dump (id = 8, index 23)
+							 */
+							this.currentGear.attributeThree = this.allGearAttributes.find(
+								(attribute) =>
+									attribute.Stat === "Ammo Capacity"
+							);
+							// TODO Break this out as this is not specific to this gear
+							this.currentGear.core = this.coreAttributes.find(
+								(attribute) =>
+									attribute.index === parseInt(splittedIdS[3])
+							);
+						} else if (this.currentGear.itemName === "Claws Out") {
+							/**
+							 * Only perform if Claws Out (id = 34, index = 18)
+							 */
+							this.currentGear.attributeThree = this.allGearAttributes.find(
+								(attribute) => attribute.Stat === "Melee Damage"
+							);
+							this.currentGear.attributeTwo = this.allGearAttributes.find(
+								(attribute) =>
+									attribute.Stat === "Pistol Damage"
+							);
+							// TODO Break this out as this is not specific to this gear
+							this.currentGear.core = this.coreAttributes.find(
+								(attribute) =>
+									attribute.index === parseInt(splittedIdS[3])
+							);
 						} else {
 							this.currentGear.core = this.coreAttributes.find(
 								(attribute) =>
@@ -490,6 +612,9 @@
 						}
 						this.currentGear.mod = this.gearMods.find(
 							(mod) => mod.index === parseInt(splittedIdS[4])
+						);
+						this.currentGear.modTwo = this.gearMods.find(
+							(mod) => mod.index === parseInt(splittedIdS[14])
 						);
 						this.currentGear.talent = this.allTalents.find(
 							(talent) =>
@@ -504,6 +629,7 @@
 							"mod",
 							"coreTwo",
 							"coreThree",
+							"modTwo",
 						];
 						for (let idx = 1; idx < stats.length; idx++) {
 							const stat = stats[idx];
@@ -517,14 +643,30 @@
 									splittedIdS[7 + idx]
 								);
 							}
-							if (currentStatToUpdate && valueToImport > 0) {
-								// Using Vue set because I want this to be reactive and
-								// to trigger watch deep when it changes into StatInput
-								Vue.set(
-									currentStatToUpdate,
-									"StatValue",
-									valueToImport
+							if (stat === "modTwo") {
+								valueToImport = parseFloat(
+									splittedIdS[8 + idx]
 								);
+
+								if (currentStatToUpdate && valueToImport > 0) {
+									// Using Vue set because I want this to be reactive and
+									// to trigger watch deep when it changes into StatInput
+									Vue.set(
+										currentStatToUpdate,
+										"StatValueModTwo",
+										valueToImport
+									);
+								}
+							} else {
+								if (currentStatToUpdate && valueToImport > 0) {
+									// Using Vue set because I want this to be reactive and
+									// to trigger watch deep when it changes into StatInput
+									Vue.set(
+										currentStatToUpdate,
+										"StatValue",
+										valueToImport
+									);
+								}
 							}
 						}
 					}
@@ -557,7 +699,6 @@
 		watch: {
 			currentGear: {
 				handler: function(val, oldVal) {
-					// console.log(this.name, val);
 					coreService.sendSlotData(this.name, val);
 				},
 				deep: true,

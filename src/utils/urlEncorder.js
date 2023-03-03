@@ -121,7 +121,9 @@ function wearableToIds(wearables) {
 		ids[i] += objectPropToNumber(wearable, "coreTwo.index", "-");
 		ids[i] += objectPropToNumber(wearable, "coreThree.index", "-");
 		ids[i] += objectPropToNumber(wearable, "coreTwo.StatValue", "-");
-		ids[i] += objectPropToNumber(wearable, "coreThree.StatValue", "");
+		ids[i] += objectPropToNumber(wearable, "coreThree.StatValue", "-");
+		ids[i] += objectPropToNumber(wearable, "modTwo.index", "-");
+		ids[i] += objectPropToNumber(wearable, "modTwo.StatValueModTwo", "");
 	}
 	return ids;
 }

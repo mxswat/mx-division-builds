@@ -420,6 +420,25 @@
 									statValueToImport
 								);
 							}
+							// Fixed Skill Tier for TDI Kard Custom
+							if (
+								this.currentWeapon.id === 243 &&
+								this.currentWeapon.quality === "Named"
+							) {
+								if (
+									this.currentWeapon["attribute 1"] ===
+									undefined
+								) {
+									this.currentWeapon["attribute 1"] = {
+										Max: "1",
+										Quality: "N",
+										Stat: "Skill Tier",
+										Type: "O",
+										"Weapon Type": "",
+										index: 15,
+									};
+								}
+							}
 						}
 					}
 				});

@@ -108,6 +108,8 @@ class StatsService {
 	}
 
 	async addStatsFromGear(gearArr) {
+		this.brandsData = await gearData.BrandsData;
+		this.equippedNinjaBikeMessengerBag = false;
 		for (let i = 0; i < gearArr.length; i++) {
 			const gear = gearArr[i];
 			if (gear) {
@@ -132,12 +134,17 @@ class StatsService {
 						gear.coreThree.StatValue || gear.coreThree.Max
 					);
 				}
-				const keys = ["attributeOne", "attributeTwo", "mod"];
+				const keys = ["attributeOne", "attributeTwo", "mod", "modTwo"];
 				for (let keyI = 0; keyI < keys.length; keyI++) {
 					const key = keys[keyI];
 					const stat = gear[key];
 					if (stat) {
-						const val = stat.StatValue || Number(stat.Max);
+						var val = 0;
+						if (key === "modTwo") {
+							val = stat.StatValueModTwo || Number(stat.Max);
+						} else {
+							val = stat.StatValue || Number(stat.Max);
+						}
 						// I'm using trim because of the bug of the named and exotic weapons/gear atributes
 						// We add a space or more to the attributes to maka it work
 						// i know it sucks, but i'm making V2 so, this is old code
@@ -151,6 +158,10 @@ class StatsService {
 					this.handleWearableEdgeCase(gear);
 				}
 			}
+		}
+		// NinjaBike Messenger Bag Check
+		if (stats.brands["Exotic"] !== undefined && gearArr[1].id === 55) {
+			this.equippedNinjaBikeMessengerBag = true;
 		}
 
 		for (const brand in stats.brands) {
@@ -172,6 +183,10 @@ class StatsService {
 								stats[statTypes[statType]][found.stat] || 0;
 							stats[statTypes[statType]][found.stat] =
 								Number(prevVal) + Number(found.val);
+							// if Skill Tier
+							if (found.stat === "Skill Tier") {
+								stats.Cores.Utility.push(1);
+							}
 							// Horrible, TODO: Change me
 							if (
 								found.stat1 &&
@@ -194,6 +209,100 @@ class StatsService {
 				stats.brands[brand] = brandBuffs;
 			}
 		}
+
+		// NinjaBike Messenger Bag Brands Talents
+		if (this.equippedNinjaBikeMessengerBag) {
+			for (const brand in stats.brands) {
+				const brandCount = stats.brands[brand].length;
+				// bypass the Exotics
+				let foundSetBonus = null;
+				let gearsetBonusOffset = 0;
+				if (brand !== "Exotic") {
+					// check if High End or Gearset
+					const foundBrand = this.brandsData.find((b) => {
+						return b.Brand === brand;
+					});
+					if (foundBrand.Type === "Gearset") {
+						// need to offset due to some gearsets having multiple stats with three pieces
+						// fourth piece gives Talent
+						// e.g. Eclipse Protocol, Future Initiative
+						if (stats.brands[brand].length === 3) {
+							gearsetBonusOffset = 0;
+						} else {
+							gearsetBonusOffset = 1;
+						}
+						// gearsetBonusOffset = 1;
+						foundSetBonus = this.brandSetBonuses.find((b) => {
+							return (
+								b.Brand ==
+								`${brand}${stats.brands[brand].length +
+									gearsetBonusOffset}`
+							);
+						});
+					}
+					if (foundBrand.Type === "High End") {
+						foundSetBonus = this.brandSetBonuses.find((b) => {
+							return (
+								b.Brand ==
+								`${brand}${stats.brands[brand].length}`
+							);
+						});
+					}
+
+					// ensure the brandset is not already maxed
+					// TODO this check may not be needed
+					if (stats.brands[brand].length < 4) {
+						if (foundSetBonus !== undefined) {
+							// if Talent as Bonus
+							if (foundSetBonus.stat === "Talent") {
+								stats.brands[brand].push(
+									`${foundSetBonus.Talent}`
+								);
+							} else {
+								const statType = this.statsMapping[
+									foundSetBonus.stat
+								].Type;
+
+								addValueToStat(
+									stats[statTypes[statType]],
+									foundSetBonus.stat,
+									Number(foundSetBonus.val)
+								);
+
+								stats.brands[brand].push(
+									`${foundSetBonus.stat} ${foundSetBonus.val}`
+								);
+								// add the core for Skill Tier set bonus
+								if (foundSetBonus.stat === "Skill Tier") {
+									stats.Cores.Utility.push(1);
+								}
+								// check if the set has a dual stat (stat1)
+								if (
+									foundSetBonus.stat1 &&
+									this.statsMapping[foundSetBonus.stat1] !=
+										undefined
+								) {
+									addValueToStat(
+										stats[statTypes[statType]],
+										foundSetBonus.stat1,
+										Number(foundSetBonus.val1)
+									);
+									stats.brands[brand].push(
+										`${foundSetBonus.stat1} ${foundSetBonus.val1}`
+									);
+								}
+							}
+						}
+					}
+				}
+				// stats.brands[brand] = ninjaBuffs;
+			}
+		}
+
+		// ensuring Utility Cores match Skill Tier
+		stats.Utility["Skill Tier"] = stats.Cores.Utility.length;
+
+		// console.log("stats: ", stats);
 	}
 
 	addStatsFromSHD(SHDLevels) {
@@ -255,9 +364,13 @@ class StatsService {
 				? stats.Cores.Offensive.reduce((a, b) => a + b)
 				: 0; // All weapon damages from cores
 		const weaponSpecificDamage =
-			(weaponExpertise.StatValue || weaponExpertise.max) + // adding expertise
+			(weaponExpertise.StatValue !== undefined
+				? weaponExpertise.StatValue
+				: 0 || weaponExpertise.max) + // adding expertise
 			(stats.Offensive[weaponCoreType] || 0) + // Damage from the brands and SHD(?)(To test)
-			(weaponCore1.StatValue || weaponCore1.max); // Get the weapon CORE 1
+			(weaponCore1.StatValue !== undefined
+				? weaponCore1.StatValue
+				: 0 || weaponCore1.max); // Get the weapon CORE 1
 		const genericWeaponDamage =
 			stats.Offensive[STATS_ENUM.WEAPON_DAMAGE] || 0; // SHD Levels and Walker brand
 
@@ -411,7 +524,7 @@ class StatsService {
 		}
 	}
 
-	edgeCaseBrands = ["Empress International"];
+	edgeCaseBrands = ["Empress International", "Brazos de Arcabuz"];
 	handleBrandEdgeCase(brands) {
 		for (let i = 0; i < this.edgeCaseBrands.length; i++) {
 			const edgeCaseBrand = this.edgeCaseBrands[i];
@@ -433,6 +546,11 @@ class StatsService {
 						}
 						delete stats.Utility["Skill Efficiency"];
 						break;
+					// case "Brazos de Arcabuz":
+					// 	if (brands[edgeCaseBrand].length > 1) {
+					// 		stats.Cores.Utility.push(1);
+					// 	}
+					// 	break;
 					default:
 						break;
 				}
@@ -453,15 +571,32 @@ class StatsService {
 		].forEach((dmg) => {
 			addValueToStat(stats.Offensive, dmg, 15);
 		});
+		// if (specialization.name.includes("Technician")) {
+		// 	stats.Cores.Utility.push(1);
+		// 	if (specialization.name.includes("Damage")) {
+		// 		addValueToStat(stats.Utility, "Skill Damage", 10);
+		// 	} else {
+		// 		addValueToStat(stats.Utility, "Repair Skills", 10);
+		// 	}
+		// }
 
-		if (specialization.name.includes("Technician")) {
-			stats.Cores.Utility.push(1);
-			if (specialization.name.includes("Damage")) {
-				addValueToStat(stats.Utility, "Skill Damage", 10);
-			} else {
-				addValueToStat(stats.Utility, "Repair Skills", 10);
+		specialization.stats.forEach((bonus) => {
+			if (
+				Object.hasOwnProperty.call(this.statsMapping, [bonus.name]) &&
+				Object.hasOwnProperty.call(
+					this.statsMapping[bonus.name],
+					"Type"
+				)
+			) {
+				const statType = this.statsMapping[bonus.name].Type;
+				const prevVal = stats[statTypes[statType]][bonus.name] || 0;
+				stats[statTypes[statType]][bonus.name] =
+					Number(prevVal) + Number(bonus.val);
+				if (bonus.name === "Skill Tier") {
+					stats.Cores.Utility.push(1);
+				}
 			}
-		}
+		});
 	}
 
 	flatWeaponDamage(

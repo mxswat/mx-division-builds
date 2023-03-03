@@ -10,14 +10,18 @@ class GearBase {
 	coreThree = null;
 	attributeOne = null;
 	attributeTwo = null;
+	attributeThree = null;
 	mod = null;
+	modTwo = null;
 	filters = {
 		core: null,
 		coreTwo: null,
 		coreThree: null,
 		attributeOne: null,
 		attributeTwo: null,
+		attributeThree: null,
 		mod: null,
+		modTwo: null,
 		talent: null,
 	};
 	constructor(gearRaw) {
@@ -35,7 +39,9 @@ class GearBase {
 		this.filters.coreThree = gearRaw["Core 3"];
 		this.filters.attributeOne = gearRaw["Attribute 1"];
 		this.filters.attributeTwo = gearRaw["Attribute 2"];
+		this.filters.attributeThree = gearRaw["Attribute 3"];
 		this.filters.mod = gearRaw.Mod;
+		this.filters.modTwo = gearRaw["Mod 2"];
 		this.filters.talent = gearRaw.Talent;
 	}
 }

@@ -134,7 +134,13 @@ class StatsService {
 						gear.coreThree.StatValue || gear.coreThree.Max
 					);
 				}
-				const keys = ["attributeOne", "attributeTwo", "mod", "modTwo"];
+				const keys = [
+					"attributeOne",
+					"attributeTwo",
+					"attributeThree",
+					"mod",
+					"modTwo",
+				];
 				for (let keyI = 0; keyI < keys.length; keyI++) {
 					const key = keys[keyI];
 					const stat = gear[key];

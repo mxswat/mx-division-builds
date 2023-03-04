@@ -43,8 +43,10 @@
 				>Critical Hit Damage <span>{{ roundValue(chd) }}%</span></span
 			>
 			<span
-				>Critical Hit Chance
-				<span>{{ roundValue(chc) }}/60%</span></span
+				>Critical Hit Chance <span>/60%</span
+				><span v-bind:class="{ 'chc-over': chc > 60 }">{{
+					chc
+				}}</span></span
 			>
 			<span
 				>Damage To Target Out of Cover
@@ -118,6 +120,7 @@
 				// Turn off toggles because we received a new weapon
 				this.toggleCHD = false;
 				this.toggleHSD = false;
+				this.updatedToggle();
 			});
 		},
 		methods: {
@@ -189,5 +192,9 @@
 		position: sticky;
 		top: 41px;
 		background: #1a1e24;
+	}
+
+	.chc-over {
+		color: #ff0000;
 	}
 </style>

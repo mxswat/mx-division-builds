@@ -592,10 +592,10 @@
 							/**
 							 * Only perform if Claws Out (id = 34, index = 18)
 							 */
-							this.currentGear.attributeThree = this.allGearAttributes.find(
+							this.currentGear.attributeTwo = this.allGearAttributes.find(
 								(attribute) => attribute.Stat === "Melee Damage"
 							);
-							this.currentGear.attributeTwo = this.allGearAttributes.find(
+							this.currentGear.attributeThree = this.allGearAttributes.find(
 								(attribute) =>
 									attribute.Stat === "Pistol Damage"
 							);
@@ -626,6 +626,7 @@
 							"core",
 							"attributeOne",
 							"attributeTwo",
+							"attributeThree",
 							"mod",
 							"coreTwo",
 							"coreThree",

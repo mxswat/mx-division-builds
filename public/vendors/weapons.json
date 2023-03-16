@@ -502,5 +502,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>12% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Lightning Rod - Custom PF45",
+   "dmg": "82,741",
+   "rpm": 370,
+   "mag": 15,
+   "talent": "Perfect Salvage",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>6.5% Critical Hit Chance",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>19.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Converted SMG-9",
+   "dmg": "51,713",
+   "rpm": 825,
+   "mag": 32,
+   "talent": "Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "X-45",
+   "dmg": "76,630",
+   "rpm": 400,
+   "mag": 10,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10.5% Magazine Size",
+   "attribute3": "-"
  }
 ]

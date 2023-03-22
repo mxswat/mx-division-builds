@@ -45,6 +45,16 @@
 				<span>{{ roundValue(stat.value) }}</span>
 			</div>
 		</div>
+		<!-- <span class="section-title handling">
+			<img alt="" src="icons/handling1.png" class="image" />
+			Handling
+		</span>
+		<div class="stats-list-3-col" v-if="stats">
+			<div v-for="(stat, idx) in handlingStats" v-bind:key="idx">
+				{{ stat.key }}:
+				<span>{{ roundValue(stat.value) }}</span>
+			</div>
+		</div> -->
 	</div>
 </template>
 
@@ -60,6 +70,7 @@
 				utilityStats: [],
 				offensiveStats: [],
 				defensiveStats: [],
+				handlingStats: [],
 				allWeaponDamage: 0,
 				armorValue: 0,
 				coresCount: {
@@ -112,6 +123,22 @@
 					(660014 + allArmorCores) *
 					(1 + stats.Defensive[STATS_ENUM.TOTAL_ARMOR] / 100);
 				this.armorValue = this.roundValue(this.armorValue, 0);
+				// stats["Handling"] = {
+				// 	"Reload Speed": 0,
+				// 	Stability: 0,
+				// 	Accuracy: 0,
+				// 	"Ammo Capacity": 0,
+				// };
+				this.handlingStats = Object.entries(
+					stats.Handling
+				).map(([key, value]) => ({ key, value }));
+				// this.handlingStats = [
+				// 	{ key: "Reload Speed %", value: 0 },
+				// 	{ key: "Stability", value: 0 },
+				// 	{ key: "Accuracy", value: 0 },
+				// 	{ key: "Ammo Capacity", value: 0 },
+				// ];
+				// console.log(this.handlingStats);
 			},
 			sumStatVals(vals) {
 				return vals.reduce((a, b) => parseFloat(a) + parseFloat(b), 0);
@@ -174,6 +201,10 @@
 	}
 	.utility {
 		color: #f7d07c;
+	}
+
+	.handling {
+		color: #43b603;
 	}
 
 	span.brand-stats {

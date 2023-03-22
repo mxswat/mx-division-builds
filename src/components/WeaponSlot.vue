@@ -1,7 +1,8 @@
 <template>
-	<div @click="onClick()" class="weapon-container">
+	<div class="weapon-container">
 		<template v-if="isWeaponSelected()">
 			<div
+				@click="onClick()"
 				class="slot-element weapon-name"
 				v-bind:class="[qualityToCSS(currentWeapon.quality)]"
 				v-on:click="openWeaponsModal()"
@@ -171,9 +172,11 @@
 				</template>
 			</div>
 		</template>
-		<span class="no-element-selected" v-if="!isWeaponSelected()">
-			<p>CHOOSE YOUR WEAPON</p>
-		</span>
+		<template v-if="!isWeaponSelected()">
+			<span @click="onClick()" class="no-element-selected">
+				<p>CHOOSE YOUR WEAPON</p>
+			</span>
+		</template>
 	</div>
 </template>
 
@@ -226,9 +229,13 @@
 				this.weaponAttributes = weaponsAttr.filter((attribute) => {
 					return attribute.Quality === "A";
 				});
+				this.weaponAttributes.sort((a, b) =>
+					a.Stat > b.Stat ? 1 : -1
+				);
 			});
 			weaponsData.WeaponMods.then((weaponMods) => {
 				this.weaponMods = getUniqueObject(weaponMods);
+				this.weaponMods.sort((a, b) => (a.Name > b.Name ? 1 : -1));
 			});
 			weaponsData.WeaponTalents.then((weaponTalents) => {
 				this.weaponTalents = weaponTalents;
@@ -252,6 +259,10 @@
 			},
 			onModalClose(data) {
 				this.currentWeapon = new WeaponBase(data);
+				if (this.currentWeapon.name === "(Blank)") {
+					this.currentWeapon = null;
+					return;
+				}
 				const isExotic = this.isExotic(this.currentWeapon);
 				const isNamed = this.isNamed(this.currentWeapon);
 				if (isExotic || isNamed) {
@@ -443,11 +454,47 @@
 					}
 				});
 			},
+			clearWeaponSlot() {
+				this.currentWeapon.name = null;
+				this.currentWeapon = null;
+			},
+			clearStatSlot(slotStat) {
+				// do not clear talents of named items or exotic stats
+				if (
+					this.currentWeapon.quality === "Exotic" ||
+					(this.currentWeapon.quality === "Named" &&
+						slotStat === "talent")
+				)
+					return;
+
+				this.currentWeapon[slotStat] = null;
+			},
 		},
 		watch: {
 			currentWeapon: {
 				handler: function(val, oldVal) {
 					// TODO HANDLE oldVal it might sove some issues related to multiple triggers on Encoding
+					// do not do anything no weapon selected or item to un-equip (Blank)
+					if (this.currentWeapon) {
+						const props = [
+							{ "attribute 1": "Stat" },
+							{ talent: "Name" },
+							{ optic: "Name" },
+							{ "under barrel": "Name" },
+							{ magazine: "Name" },
+							{ muzzle: "Name" },
+						];
+						props.forEach((prop) => {
+							for (const property in prop) {
+								if (
+									val[property] &&
+									val[property][prop[property]] === "(Blank)"
+								) {
+									val[property] = null;
+								}
+							}
+						});
+					}
 					coreService.sendSlotData(this.name, val);
 				},
 				deep: true,
@@ -512,4 +559,12 @@
 		border-bottom: 1px solid white;
 		cursor: pointer;
 	}
+
+	// .clear-slot {
+	// 	color: red;
+	// }
+
+	// .clear-slot-stat {
+	// 	color: red;
+	// }
 </style>

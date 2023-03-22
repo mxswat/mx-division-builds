@@ -46,6 +46,44 @@ class GearBase {
 	}
 }
 
+class SkillBase {
+	// type = null
+	id = null;
+	skillID = null;
+	itemName = null;
+	icon = null;
+	variant = null;
+	quality = null;
+	modOne = null;
+	modTwo = null;
+	modThree = null;
+	desc = null;
+	stats = null;
+	filters = {
+		modOne: null,
+		modTwo: null,
+		modThree: null,
+	};
+	constructor(skillRaw) {
+		if (!skillRaw) {
+			return;
+		}
+		// this.type = gearRaw.Type not used at the moment
+		// If named do filters and bla bla
+		this.id = skillRaw.index;
+		this.skillID = skillRaw["Skill ID"];
+		this.itemName = skillRaw["Item Name"];
+		this.icon = skillRaw.Icon;
+		this.variant = skillRaw.Variant;
+		this.quality = skillRaw.Quality;
+		this.filters.modOne = skillRaw["Mod 1"];
+		this.filters.modTwo = skillRaw["Mod 2"];
+		this.filters.modThree = skillRaw["Mod 3"];
+		this.desc = skillRaw.Desc;
+		this.stats = [];
+	}
+}
+
 class WeaponBase {
 	id = null;
 	// "slot" = null;
@@ -147,6 +185,6 @@ class WeaponTalent {
 	index = Number;
 }
 
-export { WeaponTalent, GearBase, WeaponBase };
+export { WeaponTalent, GearBase, SkillBase, WeaponBase };
 
 // TODO CHANGE ME

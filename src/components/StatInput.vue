@@ -2,7 +2,7 @@
 	<input
 		class="stat-value"
 		type="number"
-		step="0.1"
+		:step="step"
 		:max="max"
 		:value="value"
 		:placeholder="max"
@@ -15,6 +15,10 @@
 		name: "StatInput",
 		props: {
 			value: null,
+			step: {
+				type: Number,
+				default: 0.1,
+			},
 			max: null,
 		},
 		methods: {

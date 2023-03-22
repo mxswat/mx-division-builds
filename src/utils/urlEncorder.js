@@ -15,6 +15,8 @@ const gearEncoderMap = {
 	Secondary: 7,
 	SideArm: 8,
 	Specialization: 9,
+	Skill1: 10,
+	Skill2: 11,
 	0: "Mask",
 	1: "Backpack",
 	2: "Chest",
@@ -25,6 +27,8 @@ const gearEncoderMap = {
 	7: "Secondary",
 	8: "SideArm",
 	9: "Specialization",
+	10: "Skill1",
+	11: "Skill2",
 };
 
 import { IsEverythingLoadedPromise } from "./dataImporter";
@@ -55,6 +59,8 @@ coreService
 			SideArm,
 			Specialization,
 			SHDLevels,
+			Skill1,
+			Skill2,
 		]) => {
 			const wearablesIds = wearableToIds([
 				Mask,
@@ -64,17 +70,19 @@ coreService
 				Holster,
 				Kneepads,
 			]);
-			const weapondsIds = weaponsToIds([Primary, Secondary, SideArm]);
+			const weaponsIds = weaponsToIds([Primary, Secondary, SideArm]);
 			const specializationIds = specializationToIds(Specialization);
 			// console.log('newEncoder', {
 			//     wearablesIds: wearablesIds,
-			//     weapondsIds: weapondsIds,
+			//     weaponsIds: weaponsIds,
 			//     specializationIds: specializationIds,
 			// });
+			const skillsIds = skillsToIds([Skill1, Skill2]);
 			const buildData = [
 				wearablesIds.join(":"),
-				weapondsIds.join(":"),
+				weaponsIds.join(":"),
 				specializationIds.join(":"),
+				skillsIds.join(":"),
 			].join(":");
 
 			statsService.updateStats({
@@ -82,6 +90,8 @@ coreService
 				weapons: [Primary, Secondary, SideArm],
 				specialization: Specialization,
 				SHDLevels,
+				Skill1,
+				Skill2,
 			});
 
 			// Lazy fix because of the new versioning an encoding will be triggered but all the values are 0
@@ -148,6 +158,22 @@ function weaponsToIds(weapons) {
 	return ids;
 }
 
+function skillsToIds(skills) {
+	let ids = [];
+	for (let i = 0; i < skills.length; i++) {
+		const skill = skills[i];
+		ids[i] = "";
+		ids[i] += objectPropToNumber(skill, "skillID", "-");
+		ids[i] += objectPropToNumber(skill, "modOne.Skill Stat ID", "-");
+		ids[i] += objectPropToNumber(skill, "modTwo.Skill Stat ID", "-");
+		ids[i] += objectPropToNumber(skill, "modThree.Skill Stat ID", "-");
+		ids[i] += objectPropToNumber(skill, "modOne.StatValueModOne", "-");
+		ids[i] += objectPropToNumber(skill, "modTwo.StatValueModTwo", "-");
+		ids[i] += objectPropToNumber(skill, "modThree.StatValueModThree", "");
+	}
+	return ids;
+}
+
 function specializationToIds(specialization) {
 	const ids = [];
 	ids[0] = "";
@@ -184,6 +210,8 @@ const decodedSlots = {
 	Secondary: new Subject(),
 	SideArm: new Subject(),
 	Specialization: new Subject(),
+	Skill1: new Subject(),
+	Skill2: new Subject(),
 };
 
 const updatedInput$ = new Subject();

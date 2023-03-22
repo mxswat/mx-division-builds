@@ -58,11 +58,13 @@ const typeToImgSrc = {
 		O: "icons/offense2.png",
 		U: "icons/tech2.png",
 		D: "icons/defense2.png",
+		B: "icons/blank_attribute.png",
 	},
 	mod: {
 		O: "icons/offense3_2.png",
 		U: "icons/tech3_2.png",
 		D: "icons/defense3_2.png",
+		B: "icons/blank_mod.png",
 	},
 };
 
@@ -144,6 +146,13 @@ const UI_WEAPON_SLOT_ENUM = {
 	2: "SideArm",
 };
 
+const UI_SKILL_SLOT_ENUM = {
+	Skill1: 0,
+	Skill2: 1,
+	0: "Skill1",
+	1: "Skill2",
+};
+
 const QualityPriority = {
 	Exotic: 0,
 	Named: 1,
@@ -177,6 +186,7 @@ export {
 	WEAPON_PROP_ENUM,
 	STATS_ENUM,
 	UI_WEAPON_SLOT_ENUM,
+	UI_SKILL_SLOT_ENUM,
 	QualityPriority,
 	groupArrayOfObjectsByKey,
 	getAppRootPath,

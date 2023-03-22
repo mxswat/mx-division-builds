@@ -28,130 +28,18 @@
 			<router-view></router-view>
 			<WeaponStats></WeaponStats>
 			<div class="spec-and-stats">
-				<BasicTile classes="SHD-levels">
+				<!-- <BasicTile classes="SHD-levels">
 					<SHDLevels></SHDLevels>
-				</BasicTile>
+				</BasicTile> -->
 				<BasicTile classes="general-stats-col no-anim">
 					<GeneralStats></GeneralStats>
 				</BasicTile>
 			</div>
-			<BasicTile classes="news">
-				<span class="section-title" style="position: relative"
-					>Patch notes and news</span
-				>
-				<p>March 01, 2023</p>
-				<h3>Title Update 17 - Season 11: Reign of Fire</h3>
-				<h4 style="margin-bottom: -10px;">Gear</h4>
-				<p>
-					<ul style="padding-left: 1.5rem; list-style-position: outside;">
-						<li>
-							<b>Habsburg Guard</b> Brandset added
-						</li>
-						<li>
-							Named Habsburg Guard Chest <b>Cherished</b> added (Perfect	Trauma)
-						</li>
-						<li>
-							Named Habsburg Guard Backpack <b>The Courier</b> added (Perfect Creeping Death)
-						</li>
-						<li>
-							<b>Hotshot</b> Gearset added
-						</li>
-						<li>
-							Exotic Backpack <b>NinjaBike Messenger Bag</b> added <b>3 cores AND	talent working</b>!<br />
-							Please report any bugs found with Ninjabike in the
-					<a
-						href="https://discord.com/channels/702180050791039016/705147074676785262"
-						target="_blank"
-						>#bug-report</a
-					>
-					channel or on the
-					<a
-						href="https://github.com/mxswat/mx-division-builds/issues"
-						target="_blank"
-						>github issues page</a
-					>
-						</li>
-					</ul>
-					</p>
-					<h4 style="margin-bottom: -10px;">Weapons</h4>
-					<p>
-						<ul>
-							<li>
-								Exotic G28 Marksman Rifle <b>Sacrum Imperium</b> added
-							</li>
-							<li>
-								Named G28	Marksman Rifle <b>Relic</b> added (Perfectly Determined)
-							</li>
-							<li>
-								Named	Magnum Pistol <b>Prophet</b> added (Perfectly Determined)
-							</li>
-						</ul>
-					</p>
-					<h4 style="margin-bottom: -10px;">Weapon Talents</h4>
-					<p>
-						<ul>
-							<li>
-								Weapon Talent <b>Determined</b> added (Rifle, Marksman	Rifle and pistol only)
-							</li>
-						</ul>
-					</p>
-					<h4 style="margin-bottom: -10px;">Updates</h4>
-					<p>
-						<ul>
-							<li>
-								<b>Doctor Home</b> talent changed to it's new talent
-							</li>
-						</ul>
-					</p>
-					<h4 style="margin-bottom: -10px;">Fixes</h4>
-					<p>
-						<ul>
-							<li>
-								Named Magnum <b>Orbit</b> had the wrong damage value, now fixed.
-							</li>
-						</ul>
-					</p>
-					<h4 style="margin-bottom: -10px;">Known Issues</h4>
-					<p>
-						<ul>
-							<li>
-								The Skill Tier attribute doesn't update correctly
-							</li>
-						</ul>
-					</p>
-					<p>reddit - <a href="https://www.reddit.com/r/thedivision/comments/11dgg5g/the_division_2_title_update_17_patch_notes/" target="_blank">The Division 2 - Title Update 17 - Patch Notes</a></p>
-					<p>------------</p>
-					<p>
-						<a href="https://discord.com/channels/702180050791039016/702180285017620483" target="_blank">Go here to see past updates!</a>
-					</p>
-					<p>------------</p>
-				<!-- <p>February 14, 2023</p>
-				<p>Fixed 2nd Mod Slot for Chill Out Mask.</p>
-				<p>Fixed named holsters Ammo Dump and Claws Out.</p>
-				<p>
-					Fixed Stats:<br />
-					- Survivalist 10% Protection from Elites now being
-					counted.<br />
-					- Brazos de Arcabus gearset now counts extra skill tier with
-					two pieces.
-				</p>
-				<p>------------</p>
-				<p>February 02, 2023</p>
-				<p>Added expertise to weapons.</p>
-				<p>Added Memento Backpack Cores.</p>
-				<p>------------</p>
-				<p>
-					New feature: Added vendor reset data to the weapon and gear
-					selection!
-				</p>
-				<p>New feature: Search on the gear selection</p>
-				<p>------------</p>
-				<p>
-					New feature: TTK and Bullets to kill! Scroll down to try it!
-				</p>
-				<p>------------</p>
-				<p>Scroll down to try the new DPS Visualization!</p>
-				<p>------------</p> -->
+			<BasicTile classes="skill no-anim">
+				<SingleSkillStats name="Skill1"></SingleSkillStats>
+			</BasicTile>
+			<BasicTile classes="skill no-anim">
+				<SingleSkillStats name="Skill2"></SingleSkillStats>
 			</BasicTile>
 			<BasicTile classes="dps-chart">
 				<DPSChart></DPSChart>
@@ -167,6 +55,8 @@
 <script>
 	import { IsEverythingLoadedPromise } from "./utils/dataImporter";
 	import WeaponStats from "./components/WeaponStats/WeaponStats";
+	import SkillStats from "./components/SkillStats/SkillStats";
+	import SingleSkillStats from "./components/SkillStats/SingleSkillStats";
 	import GeneralStats from "./components/GeneralStats";
 	import SHDLevels from "./components/SHDLevels";
 	import BasicTile from "./components/BasicTile";
@@ -181,10 +71,12 @@
 		name: "App",
 		components: {
 			WeaponStats,
+			// SkillStats,
+			SingleSkillStats,
 			GeneralStats,
 			BasicTile,
 			Toolbar,
-			SHDLevels,
+			// SHDLevels,
 			DPSChart,
 			TimeToKill,
 		},

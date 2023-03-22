@@ -1,6 +1,6 @@
 import { BehaviorSubject, timer } from "rxjs";
 
-import { gearData } from "./dataImporter";
+import { gearData, skillsData } from "./dataImporter";
 
 import { debounce } from "rxjs/operators";
 
@@ -14,6 +14,7 @@ class Stats {
 	Offensive = {};
 	Defensive = {};
 	Utility = {};
+	Handling = {};
 	Cores = {
 		Offensive: [],
 		Defensive: [],
@@ -26,6 +27,11 @@ class Stats {
 		Secondary: null,
 		SideArm: null,
 	};
+	Skills = {
+		Skill1: null,
+		Skill2: null,
+	};
+	shdLevels = {};
 	constructor() {}
 }
 
@@ -92,17 +98,26 @@ class StatsService {
 					data.weapons[idx],
 					slotKey
 				);
-				if (stats.Weapons[slotKey].weaponName)
+				if (stats.Weapons[slotKey].weaponName) {
 					DPSChartCore.addCoreWeaponTrace(
 						slotKey,
 						stats.Weapons[slotKey]
 					);
+				} else {
+					// true set to clear stats on chart
+					DPSChartCore.addCoreWeaponTrace(slotKey, null, true);
+				}
 				TTKCoreService.addCoreWeaponData(
 					slotKey,
 					stats.Weapons[slotKey]
 				);
 			}
 		}
+
+		const skill1 = this.getSkillStats("Skill1", data.Skill1);
+		const skill2 = this.getSkillStats("Skill2", data.Skill2);
+		this.skills = { Skill1: skill1, Skill2: skill2 };
+		stats.Skills = this.skills;
 
 		stats$.next(stats);
 	}
@@ -166,7 +181,11 @@ class StatsService {
 			}
 		}
 		// NinjaBike Messenger Bag Check
-		if (stats.brands["Exotic"] !== undefined && gearArr[1].id === 55) {
+		if (
+			stats.brands["Exotic"] !== undefined &&
+			gearArr[1] !== undefined &&
+			gearArr[1].id === 55
+		) {
 			this.equippedNinjaBikeMessengerBag = true;
 		}
 
@@ -289,7 +308,13 @@ class StatsService {
 										undefined
 								) {
 									addValueToStat(
-										stats[statTypes[statType]],
+										stats[
+											statTypes[
+												this.statsMapping[
+													foundSetBonus.stat1
+												].Type
+											]
+										],
 										foundSetBonus.stat1,
 										Number(foundSetBonus.val1)
 									);
@@ -696,6 +721,34 @@ class StatsService {
 			modifier += Number(magazine.valNeg);
 		}
 		return modifier;
+	}
+
+	// getSkillStatsPerSlot(slot) {
+	// 	console.log(slot, this.dataCache);
+	// 	return this.getSkillStats(
+	// 		slot,
+	// 		this.dataCache[UI_WEAPON_SLOT_ENUM[slot]]
+	// 	);
+	// }
+
+	getSkillStats(skillSlot, skill) {
+		const skillStats = {
+			skillName: null,
+			skillDetails: null,
+		};
+		// console.log("Getting skill stats...", skillSlot, data);
+		if (!skill) {
+			// console.log("no data");
+			return {
+				skillName: null,
+			};
+		}
+		// console.log(this.SkillStats.length);
+		skillStats.skillName = `${skill.variant} ${skill.itemName}`;
+		skillStats.skillDetails = skill;
+		// console.log(`skillStats (${skillSlot}): `, skillStats);
+		// console.log(`skill: `, skill);
+		return skillStats;
 	}
 }
 

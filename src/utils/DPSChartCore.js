@@ -15,7 +15,12 @@ class DPSChartCoreService {
 	 * @param {*} slot
 	 * @param {*} weaponStats
 	 */
-	addCoreWeaponTrace(slot, weaponStats) {
+	addCoreWeaponTrace(slot, weaponStats, clear = false) {
+		// clear the data since the slot is now (Blank)
+		if (clear) {
+			this._subjects[slot].next(null);
+			return;
+		}
 		let timeToEmptyMagazine = weaponStats.timeToEmptyMagazine;
 		const dataPointsCount = Math.round(
 			60000 / (timeToEmptyMagazine + weaponStats.reloadSpeed)

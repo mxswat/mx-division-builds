@@ -1,6 +1,9 @@
 import GearSelectionModal from "../components/Modals/GearSelectionModal";
+import SkillsSelectionModal from "../components/Modals/SkillsSelectionModal";
 import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
+import WatchLevelsModal from "../components/Modals/WatchLevelsModal";
+import VersionModal from "../components/Modals/VersionModal";
 
 import { gearHeaders, weaponsHeaders } from "./agGridDefaults";
 
@@ -34,6 +37,23 @@ const openGearModal = function(gearList, slot, onModalClose) {
 	);
 };
 
+const openSkillsModal = function(skillsList, slot, onModalClose) {
+	window.vueInstance.$modal.show(
+		SkillsSelectionModal,
+		{
+			skillsData: skillsList,
+			onModalClose: onModalClose,
+			skillSlot: slot,
+		},
+		{
+			adaptive: true,
+			width: "75%",
+			height: "90%",
+		},
+		defaultEvents
+	);
+};
+
 const openWeaponsModal = function(weaponLists, onModalClose) {
 	window.vueInstance.$modal.show(
 		WeaponSelectionModal,
@@ -46,6 +66,21 @@ const openWeaponsModal = function(weaponLists, onModalClose) {
 			adaptive: true,
 			width: "75%",
 			height: "90%",
+		},
+		defaultEvents
+	);
+};
+
+const openWatchLevelsModal = function(sendToWatchSlot) {
+	window.vueInstance.$modal.show(
+		WatchLevelsModal,
+		{ sendToWatchSlot: sendToWatchSlot },
+		{
+			adaptive: true,
+			width: "80%",
+			height: "468px",
+			maxWidth: 600,
+			maxHeight: 468,
 		},
 		defaultEvents
 	);
@@ -172,12 +207,28 @@ const openCreditsModal = function openCreditsModal() {
 	});
 };
 
+const openVersionModal = function openVersionModal() {
+	window.vueInstance.$modal.show(
+		VersionModal,
+		null,
+		{
+			adaptive: true,
+			width: "75%",
+			height: "80%",
+		},
+		defaultEvents
+	);
+};
+
 export {
 	openGearModal,
+	openSkillsModal,
 	openWeaponsModal,
+	openWatchLevelsModal,
 	openSaveShareModal,
 	openIssueModal,
 	openScreenshotModal,
 	openSafariIOSModal,
 	openCreditsModal,
+	openVersionModal,
 };

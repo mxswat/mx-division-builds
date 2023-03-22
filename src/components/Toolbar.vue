@@ -21,6 +21,7 @@
 			<button style="color: #f7d07c" @click="issues()">
 				Issues or bug?
 			</button>
+			<button @click="version()">Patch Notes</button>
 			<button @click="credits()">Credits</button>
 		</div>
 		<!-- 
@@ -36,6 +37,7 @@
 		openIssueModal,
 		openScreenshotModal,
 		openCreditsModal,
+		openVersionModal,
 	} from "../utils/modalService";
 
 	export default {
@@ -72,6 +74,9 @@
 			},
 			credits() {
 				openCreditsModal();
+			},
+			version() {
+				openVersionModal();
 			},
 		},
 	};

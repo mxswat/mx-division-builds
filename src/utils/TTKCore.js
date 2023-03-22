@@ -20,6 +20,11 @@ class DPSChartCoreService {
 
 	addCoreWeaponData(slot, weaponStats) {
 		if (weaponStats.weaponName == null) {
+			// clear the data since the slot is now (Blank)
+			this._subjects[slot].next({
+				weaponName: null,
+				tables: null,
+			});
 			return;
 		}
 

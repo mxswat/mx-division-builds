@@ -44,11 +44,10 @@
 	// https://thedivision.fandom.com/wiki/SHD_Level
 	import BasicTile from "../BasicTile";
 	import StatInput from "../StatInput";
-	import coreService from "../../utils/coreService";
-	import { getSHDLevels, updateLocalSHDLevels } from "../../utils/SHDutils";
+	import { getSHDLevels } from "../../utils/SHDutils";
 	export default {
 		name: "WatchLevels",
-		props: ["sendToWatchSlot"],
+		props: ["onModalClose"],
 		components: {
 			BasicTile,
 			StatInput,
@@ -66,12 +65,9 @@
 		},
 		created() {
 			this.levels = getSHDLevels();
-			coreService.updateSHDLevels(this.levels);
 		},
-		updated() {
-			updateLocalSHDLevels(this.levels);
-			coreService.updateSHDLevels(this.levels);
-			this.sendToWatchSlot(this.levels);
+		beforeDestroy() {
+			this.onModalClose(this.levels);
 		},
 	};
 </script>

@@ -4,128 +4,89 @@
 			<img alt="" src="icons/shd_big.png" class="image" />
 			SHD Watch Levels
 		</span>
-		<div class="levels">
-			<div class="item" v-for="(level, idx) in levels" v-bind:key="idx">
-				<span class="level-name">{{ level.name }}</span>
-				<StatInput
-					v-model="level.value"
-					v-bind:max="level.max"
-				></StatInput>
-			</div>
-		</div>
 		<div class="levels-btn">
 			<div class="item-btt">
-				<button :class="buttonLvlMax" @click="maxAllLevels(true)">
+				<button
+					:class="levelsTotal === 200 ? 'btt-active' : 'btt'"
+					@click="maxAllLevels(true)"
+				>
 					{{
-						buttonLvlMax === "btt"
-							? "Set All Levels to Max"
-							: "All Levels are Set to Max"
+						levelsTotal === 200
+							? "All Levels are Set to Max"
+							: "Set All Levels to Max"
 					}}
 				</button>
 			</div>
 			<div class="item-btt">
-				<button :class="buttonLvlCustom" @click="customLevels()">
+				<button
+					:class="levelsTotal % 200 ? 'btt-active' : 'btt'"
+					@click="customLevels()"
+				>
 					{{
-						buttonLvlCustom === "btt"
-							? "Customize Levels"
-							: "Custom Levels Set"
+						levelsTotal % 200
+							? "Custom Levels Set"
+							: "Customize Levels"
 					}}
 				</button>
 			</div>
 			<div class="item-btt">
-				<button :class="buttonLvl0" @click="maxAllLevels(false)">
+				<button
+					:class="levelsTotal === 0 ? 'btt-active' : 'btt'"
+					@click="maxAllLevels(false)"
+				>
 					{{
-						buttonLvl0 === "btt"
-							? "Set All Levels to 0"
-							: "All Levels are Set to 0"
+						levelsTotal === 0
+							? "All Levels are Set to 0"
+							: "Set All Levels to 0"
 					}}
 				</button>
 			</div>
 		</div>
+		<!-- {{ "DEBUG - Total SHD percent: " + levelsTotal }} -->
 	</div>
 </template>
 
 <script>
 	// https://thedivision.fandom.com/wiki/SHD_Level
-	import StatInput from "./StatInput";
 	import coreService from "../utils/coreService";
 	import { getSHDLevels, updateLocalSHDLevels } from "../utils/SHDutils";
 	import { openWatchLevelsModal } from "../utils/modalService";
 	export default {
 		name: "WatchSlot",
-		components: { StatInput },
 		data() {
 			return {
 				levels: [],
-				buttonLvlMax: "btt",
-				buttonLvl0: "btt",
-				buttonLvlCustom: "btt",
 			};
+		},
+		computed: {
+			levelsTotal: function() {
+				let total = 0;
+				this.levels.forEach((lvl) => {
+					total += lvl.value;
+				});
+				return total;
+			},
 		},
 		created() {
 			this.levels = getSHDLevels();
-			let SHD = 0;
-			this.levels.forEach((lvl) => {
-				SHD += lvl.value;
-			});
-			if (SHD === 200) {
-				this.buttonLvlMax = "btt-active";
-				this.buttonLvlCustom = "btt";
-			} else if (SHD === 0) {
-				this.buttonLvl0 = "btt-active";
-				this.buttonLvlCustom = "btt";
-			} else {
-				this.buttonLvlCustom = "btt-active";
-			}
-
-			coreService.updateSHDLevels(this.levels);
-		},
-		updated() {
 			updateLocalSHDLevels(this.levels);
 			coreService.updateSHDLevels(this.levels);
-			// TODO Need to update the button stat after modal closes
-			// let SHD = 0;
-			// this.levels.forEach((lvl) => {
-			// 	SHD += lvl.value;
-			// });
-			// if (SHD === 200) {
-			// 	this.buttonLvlMax = "btt-active";
-			// }
-			// if (SHD === 0) {
-			// 	this.buttonLvl0 = "btt-active";
-			// }
 		},
 		methods: {
 			maxAllLevels(isMax) {
-				this.buttonLvlCustom = "btt";
-				this.buttonLvl0 = !isMax ? "btt-active" : "btt";
-				this.buttonLvlMax = isMax ? "btt-active" : "btt";
 				this.levels.forEach((lvl) => {
 					lvl.value = isMax ? lvl.max : 0;
 				});
+				updateLocalSHDLevels(this.levels);
+				coreService.updateSHDLevels(this.levels);
 			},
 			customLevels() {
-				openWatchLevelsModal(this.sendToWatchSlot);
+				openWatchLevelsModal(this.onModalClose);
 			},
-			sendToWatchSlot(data) {
-				let SHD = 0;
-				data.forEach((lvl) => {
-					SHD += lvl.value;
-				});
-				if (SHD === 200) {
-					this.buttonLvlMax = "btt-active";
-					this.buttonLvlCustom = "btt";
-				} else {
-					this.buttonLvlCustom = "btt-active";
-					this.buttonLvlMax = "btt";
-				}
-				if (SHD === 0) {
-					this.buttonLvl0 = "btt-active";
-					this.buttonLvlCustom = "btt";
-				} else {
-					this.buttonLvlCustom = "btt-active";
-					this.buttonLvl0 = "btt";
-				}
+			onModalClose(data) {
+				updateLocalSHDLevels(data);
+				coreService.updateSHDLevels(data);
+				this.levels = getSHDLevels();
 			},
 		},
 	};

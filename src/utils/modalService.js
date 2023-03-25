@@ -71,10 +71,12 @@ const openWeaponsModal = function(weaponLists, onModalClose) {
 	);
 };
 
-const openWatchLevelsModal = function(sendToWatchSlot) {
+const openWatchLevelsModal = function(onModalClose) {
 	window.vueInstance.$modal.show(
 		WatchLevelsModal,
-		{ sendToWatchSlot: sendToWatchSlot },
+		{
+			onModalClose: onModalClose,
+		},
 		{
 			adaptive: true,
 			width: "80%",

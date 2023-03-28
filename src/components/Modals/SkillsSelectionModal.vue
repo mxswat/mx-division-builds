@@ -117,7 +117,7 @@
 				return qualityToCss[quality];
 			},
 			getDisplayName(skill) {
-				return `${skill[skillNameProp]} (${skill["Variant"]})`;
+				return `${skill["Variant"]} ${skill[skillNameProp]}`;
 			},
 			onSelection(skill) {
 				this.$emit("close");

@@ -648,6 +648,11 @@
 							var valueToImport = parseFloat(
 								splittedIdS[5 + idx]
 							);
+							if (stat === "mod") {
+								valueToImport = parseFloat(
+									splittedIdS[4 + idx]
+								);
+							}
 							if (stat === "coreTwo" || stat === "coreThree") {
 								valueToImport = parseFloat(
 									splittedIdS[7 + idx]

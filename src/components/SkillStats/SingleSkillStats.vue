@@ -80,7 +80,7 @@
 		},
 		data() {
 			return {
-				debug: true,
+				debug: false,
 				stats: null,
 				skillTier: 0,
 				skillTierOvercharged: null,
@@ -159,10 +159,11 @@
 				const currentTierModifierValue = this.valueCleanup(
 					stat[currentTierModifier]
 				);
-				console.log(
-					`this.stats.Utility[skillBonusMapping[${sStat}]]:`,
-					this.stats.Utility[skillBonusMapping[sStat]]
-				);
+				if (this.debug)
+					console.log(
+						`this.stats.Utility[skillBonusMapping[${sStat}]]:`,
+						this.stats.Utility[skillBonusMapping[sStat]]
+					);
 				const gearBonus =
 					Object.hasOwnProperty.call(skillBonusMapping, sStat) &&
 					this.stats.Utility[skillBonusMapping[sStat]]
@@ -501,10 +502,11 @@
 			},
 			getSkillMods(stat) {
 				const debugFormat = "background: #222; color: #ff09c7";
-				console.groupCollapsed(
-					`%cfunction getSkillMods (${stat}):`,
-					debugFormat
-				);
+				if (this.debug)
+					console.groupCollapsed(
+						`%cfunction getSkillMods (${stat}):`,
+						debugFormat
+					);
 				// this.skillStats (the stats an actual skill has shown in the table)
 				// this.stats (is what has the mods)
 				// this.stats.Skills.Skill1.skillDetails.modOne (each mod)

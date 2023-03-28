@@ -192,7 +192,13 @@ class StatsService {
 		for (const brand in stats.brands) {
 			// eslint-disable-next-line
 			if (stats.brands.hasOwnProperty(brand)) {
-				const brandCount = stats.brands[brand].length;
+				// increase the count for each non-Exotic brand if NinjaBike is equipped
+				const brandCount =
+					stats.brands[brand].length +
+					(brand !== "Exotic" && this.equippedNinjaBikeMessengerBag
+						? 1
+						: 0);
+
 				let brandBuffs = [];
 				for (let idx = 0; idx < brandCount; idx++) {
 					const found = this.brandSetBonuses.find(
@@ -235,6 +241,7 @@ class StatsService {
 			}
 		}
 
+		/*
 		// NinjaBike Messenger Bag Brands Talents
 		if (this.equippedNinjaBikeMessengerBag) {
 			for (const brand in stats.brands) {
@@ -329,6 +336,8 @@ class StatsService {
 				// stats.brands[brand] = ninjaBuffs;
 			}
 		}
+
+		*/
 
 		// ensuring Utility Cores match Skill Tier
 		stats.Utility["Skill Tier"] = stats.Cores.Utility.length;

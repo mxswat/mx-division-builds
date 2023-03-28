@@ -69,7 +69,6 @@
 		},
 		created() {
 			this.levels = getSHDLevels();
-			updateLocalSHDLevels(this.levels);
 			coreService.updateSHDLevels(this.levels);
 		},
 		methods: {

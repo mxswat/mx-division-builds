@@ -2,8 +2,12 @@
 	<div>
 		<span class="section-title">Gearset/Brand bonus</span>
 		<div class="brand-gear-bonus">
-			<template v-for="(stats, brand) in brands">
-				<div class="brand-container" v-bind:key="brand">
+			<div
+				class="brand-container"
+				v-for="(stats, brand) in brands"
+				v-bind:key="brand"
+			>
+				<template v-if="stats.length">
 					<span class="brand-name">{{ brand }}</span>
 					<span
 						class="brand-stats"
@@ -11,8 +15,8 @@
 						v-bind:key="stat"
 						>{{ stat }}</span
 					>
-				</div>
-			</template>
+				</template>
+			</div>
 		</div>
 		<span class="section-title offensive">
 			<img alt="" src="icons/offense1.png" class="image" />

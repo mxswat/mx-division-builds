@@ -1,10 +1,10 @@
 <template>
 	<div class="skill-stats-container">
 		<BasicTile classes="skill1 no-anim">
-			<SingleSkillStats name="Skill 1"></SingleSkillStats>
+			<SingleSkillStats name="Skill1"></SingleSkillStats>
 		</BasicTile>
 		<BasicTile classes="skill2 no-anim">
-			<SingleSkillStats name="Skill 2"></SingleSkillStats>
+			<SingleSkillStats name="Skill2"></SingleSkillStats>
 		</BasicTile>
 	</div>
 </template>

@@ -35,12 +35,7 @@
 					<GeneralStats></GeneralStats>
 				</BasicTile>
 			</div>
-			<BasicTile classes="skill no-anim">
-				<SingleSkillStats name="Skill1"></SingleSkillStats>
-			</BasicTile>
-			<BasicTile classes="skill no-anim">
-				<SingleSkillStats name="Skill2"></SingleSkillStats>
-			</BasicTile>
+			<SkillStats></SkillStats>
 			<BasicTile classes="dps-chart">
 				<DPSChart></DPSChart>
 			</BasicTile>
@@ -56,9 +51,7 @@
 	import { IsEverythingLoadedPromise } from "./utils/dataImporter";
 	import WeaponStats from "./components/WeaponStats/WeaponStats";
 	import SkillStats from "./components/SkillStats/SkillStats";
-	import SingleSkillStats from "./components/SkillStats/SingleSkillStats";
 	import GeneralStats from "./components/GeneralStats";
-	import SHDLevels from "./components/SHDLevels";
 	import BasicTile from "./components/BasicTile";
 	import Toolbar from "./components/Toolbar";
 	import newFeatureGlow from "./utils/newFeatureGlow";
@@ -71,12 +64,10 @@
 		name: "App",
 		components: {
 			WeaponStats,
-			// SkillStats,
-			SingleSkillStats,
+			SkillStats,
 			GeneralStats,
 			BasicTile,
 			Toolbar,
-			// SHDLevels,
 			DPSChart,
 			TimeToKill,
 		},
@@ -168,6 +159,11 @@
 				grid-row: row 3;
 			}
 
+			.skill-stats-container {
+				grid-column: col 1;
+				grid-row: row 4;
+			}
+
 			.dps-chart {
 				grid-column: col 1;
 				grid-row: row 5;
@@ -197,6 +193,12 @@
 
 	.weapon-stats-container {
 		grid-column: col / span 3;
+		grid-row: row 2;
+	}
+
+	.skill-stats-container {
+		grid-column: col / span 2;
+		grid-column-start: 4;
 		grid-row: row 2;
 	}
 

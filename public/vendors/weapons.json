@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>12.8% Swap Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Invisible Hand - AUG A3-CQC",
+   "dmg": "51,243",
+   "rpm": 680,
+   "mag": 30,
+   "talent": "Perfect Allegro",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.3% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military MK46",
+   "dmg": "56,414",
+   "rpm": 550,
+   "mag": 100,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Hunting M44",
+   "dmg": "416,056",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Vindictive",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.6% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>100% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
  }
 ]

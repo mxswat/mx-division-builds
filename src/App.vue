@@ -28,9 +28,6 @@
 			<router-view></router-view>
 			<WeaponStats></WeaponStats>
 			<div class="spec-and-stats">
-				<!-- <BasicTile classes="SHD-levels">
-					<SHDLevels></SHDLevels>
-				</BasicTile> -->
 				<BasicTile classes="general-stats-col no-anim">
 					<GeneralStats></GeneralStats>
 				</BasicTile>
@@ -44,6 +41,9 @@
 			</BasicTile>
 		</div>
 		<v-dialog />
+		<div v-if="localServer">
+			<Calculations></Calculations>
+		</div>
 	</div>
 </template>
 
@@ -57,6 +57,7 @@
 	import newFeatureGlow from "./utils/newFeatureGlow";
 	import DPSChart from "./components/DPSChart/DPSChart";
 	import TimeToKill from "./components/TTK/TimeToKill";
+	import Calculations from "./components/Calculations/Calculations";
 	import { executeOrderSixtysix } from "./utils/detectMobile";
 	import { openSafariIOSModal } from "./utils/modalService";
 
@@ -70,17 +71,23 @@
 			Toolbar,
 			DPSChart,
 			TimeToKill,
+			Calculations,
 		},
 		data() {
 			return {
 				loaded: false,
 				errorOnGetData: false,
 				inProduction: true,
+				localServer: false,
 			};
 		},
 		created() {
 			IsEverythingLoadedPromise.then(() => {
 				this.loaded = true;
+				if (location.host.includes("localhost")) {
+					console.log(location.host);
+					this.localServer = true;
+				}
 				console.log("IsEverythingLoadedPromise Complete");
 				this.inProduction =
 					process.env.NODE_ENV !== "production" ? false : true;

@@ -14,11 +14,11 @@
 			<!-- Expertise -->
 			<div class="slot-element stat-edit">
 				<span class="expertise">Expertise</span>
-				<StatInput
+				<ExpertiseInput
 					v-if="currentSkill['expertise']"
-					v-model="currentSkill['expertise'].StatValue"
+					v-model="currentSkill['expertise'].StatValueExpertise"
 					v-bind:max="currentSkill['expertise'].max"
-				></StatInput>
+				></ExpertiseInput>
 			</div>
 			<template
 				v-for="(slot, id) in modSlots"
@@ -37,27 +37,27 @@
 						:clearable="false"
 						:options="filterSkillMods(slot)"
 						v-model="currentSkill[`mod${slot}`]"
-						label="Bonus"
+						label="Stat"
 					>
 						<template v-slot:option="option">
-							<img
+							<!-- <img
 								class="attribute-image"
 								v-bind:src="typeToImgSrc.mod[option.Type]"
-							/>
+							/> -->
 							<span class="attribute-label">{{
-								option["Bonus"]
+								option["Stat"]
 							}}</span>
 							<span class="attribute-value">{{
 								option[`Mod ${slot}`]
 							}}</span>
 						</template>
 						<template #selected-option="option">
-							<img
+							<!-- <img
 								class="attribute-image"
 								v-bind:src="typeToImgSrc.mod[option.Type]"
-							/>
+							/> -->
 							<span class="attribute-label">{{
-								option["Bonus"]
+								option["Stat"]
 							}}</span>
 						</template>
 					</v-select>
@@ -79,136 +79,6 @@
 					></StatInput>
 				</div>
 			</template>
-			<!-- <div
-				class="slot-element stat-edit mod-slot"
-				v-if="currentSkill.filters.modOne"
-			>
-				<v-select
-					:placeholder="getModSlotName('One')"
-					:clearable="false"
-					:options="filterSkillMods('One')"
-					v-model="currentSkill.modOne"
-					label="Stat"
-				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{
-							option["Stat"]
-						}}</span>
-						<span class="attribute-value">{{
-							option["Mod One"]
-						}}</span>
-					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{
-							option["Stat"]
-						}}</span>
-					</template>
-				</v-select>
-				<StatInput
-					v-if="currentSkill.modOne"
-					v-model="currentSkill.modOne.StatValueModOne"
-					v-bind:max="getMaxStatValue(currentSkill.modOne['Mod One'])"
-					v-bind:step="
-						getStepStatValue(currentSkill.modOne['Mod One'])
-					"
-				></StatInput>
-			</div>
-
-			<div
-				class="slot-element stat-edit mod-slot"
-				v-if="currentSkill.filters.modTwo"
-			>
-				<v-select
-					:placeholder="getModSlotName('Two')"
-					:clearable="false"
-					:options="filterSkillMods('Two')"
-					v-model="currentSkill.modTwo"
-					label="Stat"
-				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{
-							option["Stat"]
-						}}</span>
-						<span class="attribute-value">{{
-							option["Mod Two"]
-						}}</span>
-					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{
-							option["Stat"]
-						}}</span>
-					</template>
-				</v-select>
-				<StatInput
-					v-if="currentSkill.modTwo"
-					v-model="currentSkill.modTwo.StatValueModTwo"
-					v-bind:max="getMaxStatValue(currentSkill.modTwo['Mod Two'])"
-					v-bind:step="
-						getStepStatValue(currentSkill.modTwo['Mod Two'])
-					"
-				></StatInput>
-			</div>
-
-			<div
-				class="slot-element stat-edit mod-slot"
-				v-if="currentSkill.filters.modThree"
-			>
-				<v-select
-					:placeholder="getModSlotName('Three')"
-					:clearable="false"
-					:options="filterSkillMods('Three')"
-					v-model="currentSkill.modThree"
-					label="Stat"
-				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{
-							option["Stat"]
-						}}</span>
-						<span class="attribute-value">{{
-							option["Mod Three"]
-						}}</span>
-					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{
-							option["Stat"]
-						}}</span>
-					</template>
-				</v-select>
-				<StatInput
-					v-if="currentSkill.modThree"
-					v-model="currentSkill.modThree.StatValueModThree"
-					v-bind:max="
-						getMaxStatValue(currentSkill.modThree['Mod Three'])
-					"
-					v-bind:step="
-						getStepStatValue(currentSkill.modThree['Mod Three'])
-					"
-				></StatInput>
-			</div> -->
 		</template>
 		<template v-if="!isSkillSelected()">
 			<img src="icons/skills.png" alt="" class="img-slot-bg" />
@@ -231,6 +101,7 @@
 	import StatInput from "./StatInput";
 	import Vue from "vue";
 	import coreService from "../utils/coreService";
+	import ExpertiseInput from "./ExpertiseInput.vue";
 
 	const modSlots = ["One", "Two", "Three"];
 
@@ -294,7 +165,7 @@
 
 	export default {
 		name: "SkillSlot",
-		components: { StatInput },
+		components: { StatInput, ExpertiseInput },
 		props: {
 			name: undefined,
 			init: null,
@@ -413,21 +284,60 @@
 				const mods = this.skillStats.filter((stat) => {
 					// console.log(stat);
 					// console.log(
+					// 	`${this.currentSkill.variant} ${this.currentSkill.itemName}`
+					// );
+					// console.log(stat["Expertise Bonus"]);
+					// console.log(stat["Slot Name"]);
+					// console.log(
+					// 	modSlotsMapping[this.currentSkill.itemName][slot]
+					// );
+					// console.log(
+					// 	`Slot: ${slot}`,
 					// 	`${this.currentSkill.variant} ${this.currentSkill.itemName}`,
-					// 	`${stat.Variant}`
+					// 	`${stat.Variant}`,
+					// 	`- Expertise: ${stat["Expertise Bonus"]}`
 					// );
 					// console.log(
 					// 	this.currentSkill.filters[`mod${slot}`],
 					// 	stat[`Mod ${slot}`]
 					// );
+					// if (
+					// 	(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+					// 		stat.Variant &&
+					// 		stat["Slot Name"] ===
+					// 			modSlotsMapping[this.currentSkill.itemName][
+					// 				slot
+					// 			] &&
+					// 		!stat["Stat"].toLowerCase().includes("pvp")) ||
+					// 	(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+					// 		stat.Variant &&
+					// 		stat["Stat"] === "(Blank)" &&
+					// 		!stat["Stat"].toLowerCase().includes("pvp"))
+					// ) {
+					// 	console.log(
+					// 		slot,
+					// 		stat.Variant,
+					// 		stat["Slot Name"],
+					// 		stat["Stat"]
+					// 	);
+					// }
 					return (
-						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 							stat.Variant &&
-						this.currentSkill.filters[`mod${slot}`] &&
-						stat[`Mod ${slot}`] &&
-						!stat["Stat"].includes("PvP")
+							stat["Slot Name"] ===
+								modSlotsMapping[this.currentSkill.itemName][
+									slot
+								] &&
+							!stat["Stat"].toLowerCase().includes("pvp")) ||
+						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+							stat.Variant &&
+							stat["Stat"] === "(Blank)" &&
+							// this.currentSkill.filters[`mod${slot}`] &&
+							// stat[`Mod ${slot}`] && // removed as now using the mapping slot field instead of no value
+							!stat["Stat"].toLowerCase().includes("pvp"))
 					);
 				});
+				// console.log(mods);
 				return mods;
 			},
 			initSkillData() {
@@ -446,6 +356,7 @@
 							)
 						);
 						this.currentSkill = fromUrlGear;
+						// console.log(this.currentSkill);
 						this.currentSkill.stats = this.skillStats.filter(
 							(stat) => {
 								return (
@@ -461,10 +372,6 @@
 						// console.log("this.currentSkill: ", this.currentSkill);
 						this.currentSkill.modOne = this.skillStats.find(
 							(stat) => {
-								// console.log(
-								// 	stat["Skill Stat ID"],
-								// 	parseInt(splittedIdS[1])
-								// );
 								return (
 									parseInt(stat["Skill Stat ID"]) ===
 									parseInt(splittedIdS[1])
@@ -488,8 +395,19 @@
 							}
 						);
 
-						const stats = [null, "modOne", "modTwo", "modThree"]; // 4, 5, 6
-						const slots = ["ModOne", "ModTwo", "ModThree"];
+						const stats = [
+							null,
+							"modOne",
+							"modTwo",
+							"modThree",
+							"expertise",
+						]; // 4, 5, 6
+						const slots = [
+							"ModOne",
+							"ModTwo",
+							"ModThree",
+							"Expertise",
+						];
 						for (let idx = 1; idx < stats.length; idx++) {
 							const stat = stats[idx];
 							const slot = slots[idx - 1];
@@ -498,7 +416,6 @@
 							var valueToImport = parseFloat(
 								splittedIdS[3 + idx]
 							);
-							// console.log(`StatValue${slot}`);
 
 							if (currentStatToUpdate && valueToImport > 0) {
 								// Using Vue set because I want this to be reactive and

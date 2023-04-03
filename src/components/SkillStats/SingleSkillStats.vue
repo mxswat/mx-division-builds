@@ -2,14 +2,27 @@
 	<div class="skill-stat">
 		<template v-if="skillName">
 			<span class="section-title utility">
-				<!-- <img alt="" src="icons/tech1.png" class="image" /> -->
 				{{ skillName }}
 			</span>
 			<div class="toggle-overcharged">
 				<Toggle
-					@input="updatedToggle()"
+					@input="updatedToggle('Overcharge')"
 					v-model="toggleOvercharge"
 					:label="'Toggle Overcharge'"
+				></Toggle>
+			</div>
+			<div class="toggle-dttoc">
+				<Toggle
+					@input="updatedToggle('DTTOC')"
+					v-model="toggleDTTOC"
+					:label="'Toggle DtTOC'"
+				></Toggle>
+			</div>
+			<div class="toggle-armor">
+				<Toggle
+					@input="updatedToggle('DTA')"
+					v-model="toggleDTA"
+					:label="toggleDTA ? 'Damage to Armor' : 'Damage to Health'"
 				></Toggle>
 			</div>
 			<span
@@ -88,6 +101,8 @@
 				skillStats: null,
 				skillMods: null,
 				toggleOvercharge: false,
+				toggleDTTOC: false,
+				toggleDTA: false,
 			};
 		},
 		created() {
@@ -107,12 +122,12 @@
 		},
 		methods: {
 			updateStatsUI(stats) {
-				const props = ["skillName"];
+				// const props = ["skillName"];
 
-				for (let i = 0; i < props.length; i++) {
-					const prop = props[i];
-					this[prop] = stats.Skills[this.name][prop];
-				}
+				// for (let i = 0; i < props.length; i++) {
+				// 	const prop = props[i];
+				this["skillName"] = stats.Skills[this.name].skillName;
+				// }
 
 				// Skill Tier
 				this.skillTier = stats.Utility["Skill Tier"];
@@ -131,242 +146,730 @@
 					].skillDetails.stats.filter((stat) => {
 						return stat.Stat !== "(Blank)";
 					});
+					// console.log(this.skillStats);
 				}
 			},
 			calculateStatValue(stat) {
 				if (this.debug) {
 					console.groupCollapsed(
-						`%cSTART ${this.name} - ${stat.Variant} (${stat["Stat"]}):`,
+						`%cSTART ${this.name} - ${stat.Variant} (${stat["Bonus"]}):`,
 						`background: #222; color: #bada55`
 					);
+					console.warn(`(stats) :`, this.stats);
 					console.warn(`(stat) :`, stat);
 				}
 				if (stat["Stat"] === "(Blank)") {
 					if (this.debug) console.log("Blank");
 					return;
 				}
+
 				let value = this.valueCleanup(stat["Tier 0"]); // eventual calculated value
-				const valueType = this.valueType(stat["Tier 0"]); // floatThousands, floatPoint, wholeThousands, percent, other
-				const tier0Value = value; // base value at no tiers no mods
-				const sStat = stat["Stat"]; // name displayed in the table
-				const sBonus = stat["Bonus"]; // Bonus name to actually modify
-				const valueUnit = stat["Unit"]; // m, HP, s, HP/s, blank = whole number
-				const bonusType = stat["Bonus Type"].toLowerCase(); // add, subtract, actual, cumulative
-				const bonusTypeModifier = this.getBonusTypeModifier(bonusType); // add, subtract, actual, cumulative
-				const currentTierModifier = this.toggleOvercharge
-					? "Overcharge"
-					: `Tier ${this.skillTier}`;
-				const currentTierModifierValue = this.valueCleanup(
-					stat[currentTierModifier]
-				);
-				if (this.debug)
-					console.log(
-						`this.stats.Utility[skillBonusMapping[${sStat}]]:`,
-						this.stats.Utility[skillBonusMapping[sStat]]
-					);
-				const gearBonus =
-					Object.hasOwnProperty.call(skillBonusMapping, sStat) &&
-					this.stats.Utility[skillBonusMapping[sStat]]
-						? parseFloat(
-								this.stats.Utility[skillBonusMapping[sStat]]
-								// eslint-disable-next-line no-mixed-spaces-and-tabs
-						  )
-						: 0;
-				const applySkillEfficiency = skillEfficiencyStats.find(
-					(s) => s === sBonus
-				)
-					? true
-					: false;
-				const skillEfficiency = Object.hasOwnProperty.call(
-					this.stats.Utility,
-					"Skill Efficiency"
-				)
-					? parseInt(this.stats.Utility["Skill Efficiency"])
-					: 0;
-				/**
-				 * Need to add Mods stats here as each skill cannot use the Gear etc. stats
-				 */
-				const skillMods = this.getSkillMods(sStat); // sStat stat
-				if (this.debug)
-					console.log(
-						"%cskillMods: ",
-						`background: #222; color: #00ffff`,
-						skillMods
-					);
-				/**
-				 * Build Props
-				 */
-				const statProps = {
-					valueType: valueType,
-					valueUnit: valueUnit,
-					tier0Value: tier0Value,
-					sStat: sStat,
-					sBonus: sBonus,
-					bonusType: bonusType, // add, subtract, actual, cumulative
-					bonusTypeModifier: bonusTypeModifier,
-					currentTierModifier: currentTierModifier,
-					currentTierModifierValue: currentTierModifierValue,
-					gearBonus: gearBonus,
-					skillMods: skillMods,
-					applySkillEfficiency: applySkillEfficiency,
-					skillEfficiency: skillEfficiency,
-				};
-				if (this.debug)
-					console.log(
-						`%ccalculating StatValue (${sStat}): statProps: `,
-						`background: #222; color: #00ffff`,
-						statProps
-					);
 
-				// TODO Cumulative Additive per Tier ????
-				// TODO Actual for Actual Values in the column
-				// TODO Traps / Ammo / Charges
 				/**
-				 * Need to know if these are add, cumulative or Actual
-				 */
-				// TODO Damage Bonus Per Enemy
-				/**
-				 * Not really sure - 1% of 5% ?
-				 */
-				// TODO add Skill Efficiency
-				/**
-				 *
-				 * Skill Damage, Skill Haste, Skill Duration, Skill Health, Repair Skills, Status Effects
+				 * Starting New
 				 */
 
-				// TODO Gear Attributes not being added Damage for example
+				switch (stat["Bonus"]) {
+					case "Skill Damage":
+						value = this.calcDamage(stat);
+						break;
+					case "Skill Haste":
+						value = this.calculateCooldown(stat);
+						break;
+					case "Skill Duration":
+						value = this.calculateDuration(stat);
+						break;
+					case "Ammo":
+						value = this.calculateAmmo(stat);
+						break;
+					default:
+						value = this.calculateStat(stat);
+						break;
+				}
 
-				let modsValue = 0;
-				if (this.debug)
-					console.log(
-						`skillBonusMapping[${sBonus}]:`,
-						skillBonusMapping[sBonus],
-						`skillMods:`,
-						skillMods
-					);
-				for (let i = 0; i < skillMods.length; i++) {
-					const element = skillMods[i];
-					if (this.debug) console.log(`element:`, element);
-					if (
-						// !skillBonusMapping[sBonus] &&
-						Object.hasOwnProperty.call(
-							element,
-							skillBonusMapping[sBonus]
-						)
-					) {
-						if (this.debug)
-							console.log(
-								"ADDING:",
-								element[skillBonusMapping[sBonus]]
-							);
-						modsValue += parseFloat(
-							element[skillBonusMapping[sBonus]]
-						);
-					}
-					// for those times when there is no bonus mapping
-					if (sBonus === "Damage" || sBonus === "Duration") {
-						if (this.debug) console.log(sBonus);
-						modsValue += element[sBonus]
-							? parseFloat(element[sBonus])
-							: 0;
-					}
-				}
-				// check if we need the overcharge tier
-				let overchargeBonusPercent = 0;
-				if (this.toggleOvercharge) {
-					overchargeBonusPercent = stat["Overcharge"]
-						? Number(parseFloat(stat["Overcharge"]) / 100)
-						: 0;
-					if (this.debug) console.log(`// OVERCHARGED ${sStat}`);
-					// const overchargedValue = this.calculateStat(
-					// 	value,
-					// 	statProps,
-					// 	stat
-					// );
-					if (this.debug) {
-						console.log(
-							`overchargeBonusPercent:`,
-							overchargeBonusPercent
-						);
-					}
-				}
-				// get skill tier percent
-				const skillTierBonusPercent =
-					!this.toggleOvercharge &&
-					this.skillTier !== 0 &&
-					stat[`Tier ${this.skillTier}`]
-						? Number(
-								parseFloat(stat[`Tier ${this.skillTier}`]) / 100
-								// eslint-disable-next-line no-mixed-spaces-and-tabs
-						  )
-						: 0;
-				if (this.debug)
-					console.log(
-						`Skill Tier ${this.skillTier} Percent =`,
-						"(RAW) = " + stat[`Tier ${this.skillTier}`],
-						"(FORMATTED) = " + skillTierBonusPercent
-					);
-				// console.log("ADDING:", sStat, modsValue);
-				const gearBonusPercent = gearBonus
-					? Number(gearBonus / 100)
-					: 0;
-				// TODO check if it's a percent or whole number (i.e. Ammo)
-				const modBonusPercent = Number(modsValue / 100);
-				const skillEfficiencyPercent = applySkillEfficiency
-					? Number(skillEfficiency / 100)
-					: 0;
-				const totalBonusPercent =
-					overchargeBonusPercent +
-					skillTierBonusPercent +
-					gearBonusPercent +
-					skillEfficiencyPercent +
-					modBonusPercent;
-				// add from spec/watch/gear
-				value =
-					tier0Value +
-					bonusTypeModifier * (tier0Value * totalBonusPercent);
-				if (this.debug)
-					console.log(
-						`totalBonusPercent (${totalBonusPercent}) = overchargeBonusPercent (${overchargeBonusPercent}) + skillTierBonusPercent (${skillTierBonusPercent}) + gearBonusPercent (${gearBonusPercent}) + skillEfficiencyPercent (${skillEfficiencyPercent} + modBonusPercent (${modBonusPercent}))`
-					);
-				if (this.debug) {
-					console.log(
-						`tier0Value (${tier0Value}) + bonusTypeModifier (${bonusTypeModifier}) * (tier0Value (${tier0Value}) * totalBonusPercent (${totalBonusPercent})) =`,
-						`this.formatValue(value):`,
-						this.formatValue(value)
-					);
-					console.groupEnd();
-				}
-				const baseSkillDamage = 26545;
-				const sumSkillDamage = 0.6 + 5.6; // Sum of Skill Damage (Watch, Gear, Mods) + Skill expertise
-				const skillTierBonus = 20; // skill tier bonus
-				const totalSkillDamage = 0; // talents
-				const statusEffects = 0;
-				const dttoc = 0;
-				const dta = 0;
-				const amps = 0;
-				const calc =
-					baseSkillDamage *
-					(1 + sumSkillDamage / 100) *
-					(1 + skillTierBonus / 100) *
-					(1 + totalSkillDamage) *
-					(1 + statusEffects) *
-					(1 + dttoc) *
-					(1 + dta) *
-					(1 + amps);
-				if (this.debug)
-					console.log(
-						`baseSkillDamage (${baseSkillDamage}) x `,
-						`sumSkillDamage (${sumSkillDamage}) x `,
-						`totalSkillDamage (${totalSkillDamage}) x `,
-						`statusEffects (${statusEffects}) x `,
-						`dttoc (${dttoc}) x `,
-						`dta (${dta}) x `,
-						`amps (${amps}) = ${this.formatValue(calc)}`
-					);
+				// const valueType = this.valueType(stat["Tier 0"]); // floatThousands, floatPoint, wholeThousands, percent, other
+				// const tier0Value = value; // base value at no tiers no mods
+				// const sStat = stat["Stat"]; // name displayed in the table
+				// const sBonus = stat["Bonus"]; // Bonus name to actually modify
+				// const valueUnit = stat["Unit"]; // m, HP, s, HP/s, blank = whole number
+				// const bonusType = stat["Bonus Type"].toLowerCase(); // add, subtract, actual, cumulative
+				// const bonusTypeModifier = this.getBonusTypeModifier(bonusType); // add, subtract, actual, cumulative
+				// const currentTierModifier = this.toggleOvercharge
+				// 	? "Overcharge"
+				// 	: `Tier ${this.skillTier}`;
+				// const currentTierModifierValue = this.valueCleanup(
+				// 	stat[currentTierModifier]
+				// );
+				// if (this.debug)
+				// 	console.log(
+				// 		`this.stats.Utility[skillBonusMapping[${sStat}]]:`,
+				// 		this.stats.Utility[skillBonusMapping[sStat]]
+				// 	);
+				// const gearBonus =
+				// 	Object.hasOwnProperty.call(skillBonusMapping, sStat) &&
+				// 	this.stats.Utility[skillBonusMapping[sStat]]
+				// 		? parseFloat(
+				// 				this.stats.Utility[skillBonusMapping[sStat]]
+				// 				// eslint-disable-next-line no-mixed-spaces-and-tabs
+				// 		  )
+				// 		: 0;
+				// const applySkillEfficiency = skillEfficiencyStats.find(
+				// 	(s) => s === sBonus
+				// )
+				// 	? true
+				// 	: false;
+				// const skillEfficiency = Object.hasOwnProperty.call(
+				// 	this.stats.Utility,
+				// 	"Skill Efficiency"
+				// )
+				// 	? parseInt(this.stats.Utility["Skill Efficiency"])
+				// 	: 0;
+				// /**
+				//  * Need to add Mods stats here as each skill cannot use the Gear etc. stats
+				//  */
+				// const skillMods = this.getSkillMods(sStat); // sStat stat
+				// if (this.debug)
+				// 	console.log(
+				// 		"%cskillMods: ",
+				// 		`background: #222; color: #00ffff`,
+				// 		skillMods
+				// 	);
+				// /**
+				//  * Build Props
+				//  */
+				// const statProps = {
+				// 	valueType: valueType,
+				// 	valueUnit: valueUnit,
+				// 	tier0Value: tier0Value,
+				// 	sStat: sStat,
+				// 	sBonus: sBonus,
+				// 	bonusType: bonusType, // add, subtract, actual, cumulative
+				// 	bonusTypeModifier: bonusTypeModifier,
+				// 	currentTierModifier: currentTierModifier,
+				// 	currentTierModifierValue: currentTierModifierValue,
+				// 	gearBonus: gearBonus,
+				// 	skillMods: skillMods,
+				// 	applySkillEfficiency: applySkillEfficiency,
+				// 	skillEfficiency: skillEfficiency,
+				// };
+				// if (this.debug)
+				// 	console.log(
+				// 		`%ccalculating StatValue (${sStat}): statProps: `,
+				// 		`background: #222; color: #00ffff`,
+				// 		statProps
+				// 	);
+
+				// // TODO Cumulative Additive per Tier ????
+				// // TODO Actual for Actual Values in the column
+				// // TODO Traps / Ammo / Charges
+				// /**
+				//  * Need to know if these are add, cumulative or Actual
+				//  */
+				// // TODO Damage Bonus Per Enemy
+				// /**
+				//  * Not really sure - 1% of 5% ?
+				//  */
+				// // TODO add Skill Efficiency
+				// /**
+				//  *
+				//  * Skill Damage, Skill Haste, Skill Duration, Skill Health, Repair Skills, Status Effects
+				//  */
+
+				// // TODO Gear Attributes not being added Damage for example
+
+				// let modsValue = 0;
+				// if (this.debug)
+				// 	console.log(
+				// 		`skillBonusMapping[${sBonus}]:`,
+				// 		skillBonusMapping[sBonus],
+				// 		`skillMods:`,
+				// 		skillMods
+				// 	);
+				// for (let i = 0; i < skillMods.length; i++) {
+				// 	const element = skillMods[i];
+				// 	if (this.debug) console.log(`element:`, element);
+				// 	if (
+				// 		// !skillBonusMapping[sBonus] &&
+				// 		Object.hasOwnProperty.call(
+				// 			element,
+				// 			skillBonusMapping[sBonus]
+				// 		)
+				// 	) {
+				// 		if (this.debug)
+				// 			console.log(
+				// 				"ADDING:",
+				// 				element[skillBonusMapping[sBonus]]
+				// 			);
+				// 		modsValue += parseFloat(
+				// 			element[skillBonusMapping[sBonus]]
+				// 		);
+				// 	}
+				// 	// for those times when there is no bonus mapping
+				// 	if (sBonus === "Damage" || sBonus === "Duration") {
+				// 		if (this.debug) console.log(sBonus);
+				// 		modsValue += element[sBonus]
+				// 			? parseFloat(element[sBonus])
+				// 			: 0;
+				// 	}
+				// }
+				// // check if we need the overcharge tier
+				// let overchargeBonusPercent = 0;
+				// if (this.toggleOvercharge) {
+				// 	overchargeBonusPercent = stat["Overcharge"]
+				// 		? Number(parseFloat(stat["Overcharge"]) / 100)
+				// 		: 0;
+				// 	if (this.debug) console.log(`// OVERCHARGED ${sStat}`);
+				// 	// const overchargedValue = this.calculateStat(
+				// 	// 	value,
+				// 	// 	statProps,
+				// 	// 	stat
+				// 	// );
+				// 	if (this.debug) {
+				// 		console.log(
+				// 			`overchargeBonusPercent:`,
+				// 			overchargeBonusPercent
+				// 		);
+				// 	}
+				// }
+				// // get skill tier percent
+				// const skillTierBonusPercent =
+				// 	!this.toggleOvercharge &&
+				// 	this.skillTier !== 0 &&
+				// 	stat[`Tier ${this.skillTier}`]
+				// 		? Number(
+				// 				(parseFloat(stat[`Tier ${this.skillTier}`]) +
+				// 					Number.EPSILON) /
+				// 					100
+				// 		  )
+				// 		: stat[`Overcharge`]
+				// 		? Number(
+				// 				(parseFloat(stat[`Overcharge`]) +
+				// 					Number.EPSILON) /
+				// 					100
+				// 		  )
+				// 		: 0;
+				// if (this.debug)
+				// 	console.log(
+				// 		`Skill Tier ${this.skillTier} Percent =`,
+				// 		"(RAW) = " + stat[`Tier ${this.skillTier}`],
+				// 		"(FORMATTED) = " + skillTierBonusPercent
+				// 	);
+				// // console.log("ADDING:", sStat, modsValue);
+				// const gearBonusPercent = gearBonus
+				// 	? Number(gearBonus / 100) + Number.EPSILON
+				// 	: 0;
+				// // TODO check if it's a percent or whole number (i.e. Ammo)
+				// const modBonusPercent = Number(
+				// 	(modsValue + Number.EPSILON) / 100
+				// );
+				// const skillEfficiencyPercent = applySkillEfficiency
+				// 	? Number(skillEfficiency / 100)
+				// 	: 0;
+				// const totalBonusPercent =
+				// 	overchargeBonusPercent +
+				// 	skillTierBonusPercent +
+				// 	gearBonusPercent +
+				// 	skillEfficiencyPercent +
+				// 	modBonusPercent;
+				// // add from spec/watch/gear
+				// value =
+				// 	tier0Value +
+				// 	bonusTypeModifier * (tier0Value * totalBonusPercent);
+				// if (this.debug)
+				// 	console.log(
+				// 		`totalBonusPercent (${totalBonusPercent}) = overchargeBonusPercent (${overchargeBonusPercent}) + skillTierBonusPercent (${skillTierBonusPercent}) + gearBonusPercent (${gearBonusPercent}) + skillEfficiencyPercent (${skillEfficiencyPercent} + modBonusPercent (${modBonusPercent}))`
+				// 	);
+				// if (this.debug) {
+				// 	console.log(
+				// 		`tier0Value (${tier0Value}) + bonusTypeModifier (${bonusTypeModifier}) * (tier0Value (${tier0Value}) * totalBonusPercent (${totalBonusPercent})) =`,
+				// 		`this.formatValue(value):`,
+				// 		this.formatValue(value)
+				// 	);
+				// 	console.groupEnd();
+				// }
+				// /**
+				//  * ****************
+				//  * New Calculations START
+				//  * ****************
+				//  */
+				// // switch (stat["Stat"]) {
+				// // 	case "Damage":
+				// // 		value = this.calcDamage(stat);
+				// // 		break;
+				// // 	default:
+				// // 		break;
+				// // }
+				// if (stat["Stat"] === "Damage") {
+				// 	// Damage Done
+				// 	// skill damage
+				// 	// console.log(this.stats);
+				// 	// console.log(`CHECKING (stat):`, stat);
+				// 	const baseSkillDamage = tier0Value;
+				// 	const skillEfficiency = this.stats.Utility[
+				// 		"Skill Efficiency"
+				// 	]
+				// 		? (this.stats.Utility["Skill Efficiency"] +
+				// 				Number.EPSILON) /
+				// 		  100
+				// 		: 0;
+				// 	const sumSkillDamage = this.stats.Utility["Skill Damage"]
+				// 		? (this.stats.Utility["Skill Damage"] +
+				// 				Number.EPSILON) /
+				// 		  100
+				// 		: 0; // Watch, Tech Perk, Sum of Gear, Sum of Brand Bonus
+				// 	const skillTierBonus = skillTierBonusPercent; // skill tier bonus
+				// 	const skillExpertise =
+				// 		Object.hasOwnProperty.call(
+				// 			this.stats.Skills[this.name].skillDetails.expertise,
+				// 			"StatValueExpertise"
+				// 		) && stat["Expertise Bonus"] === stat["Stat"]
+				// 			? (this.stats.Skills[this.name].skillDetails
+				// 					.expertise.StatValueExpertise +
+				// 					Number.EPSILON) /
+				// 			  100
+				// 			: (this.stats.Skills[this.name].skillDetails
+				// 					.expertise.max +
+				// 					Number.EPSILON) /
+				// 			  100;
+				// 	const totalSkillDamage = 0 / 100; // talents
+				// 	const amps = 0 / 100; // amps multiplied against the result
+				// 	const dta =
+				// 		this.stats.Offensive["Damage to Armor"] &&
+				// 		this.toggleDTA
+				// 			? (this.stats.Offensive["Damage to Armor"] +
+				// 					Number.EPSILON) /
+				// 			  100
+				// 			: 0; // 0 / 100;
+				// 	const dttoc =
+				// 		this.stats.Offensive["Damage to TOC"] &&
+				// 		this.toggleDTTOC
+				// 			? (this.stats.Offensive["Damage to TOC"] +
+				// 					Number.EPSILON) /
+				// 			  100
+				// 			: 0; // 0 / 100;
+
+				// 	const statusEffects = 0 / 100;
+				// 	const calc =
+				// 		Math.floor(
+				// 			baseSkillDamage *
+				// 				(1 + sumSkillDamage + skillEfficiency)
+				// 		) *
+				// 		(1 +
+				// 			skillTierBonus +
+				// 			modBonusPercent +
+				// 			skillExpertise) *
+				// 		(1 + totalSkillDamage) *
+				// 		(1 + amps) *
+				// 		(1 + dta) *
+				// 		(1 + dttoc);
+				// 	// (1 + statusEffects) *
+				// 	if (this.debug)
+				// 		console.log(
+				// 			`${baseSkillDamage} *\n`,
+				// 			`(1 + ${sumSkillDamage} + ${skillEfficiency}) *\n`,
+				// 			`(1 + ${skillTierBonus} + ${modBonusPercent} +	${skillExpertise}) *\n`,
+				// 			`(1 + ${totalSkillDamage}) *\n`,
+				// 			`(1 + ${amps}) *\n`,
+				// 			`(1 + ${dta}) *\n`,
+				// 			`(1 + ${dttoc})\n`
+				// 		);
+				// 	// console.log(
+				// 	// 	`%cResult: ${this.formatValue(calc)}`,
+				// 	// 	"background: #222; color: #ff0000"
+				// 	// );
+				// 	value = calc;
+				// } else if (stat["Stat"] === "Cooldown") {
+				// 	const baseCooldown = tier0Value;
+				// 	const skillTierBonus = skillTierBonusPercent; // skill tier bonus
+				// 	const skillEfficiency = this.stats.Utility[
+				// 		"Skill Efficiency"
+				// 	]
+				// 		? (this.stats.Utility["Skill Efficiency"] +
+				// 				Number.EPSILON) /
+				// 		  100
+				// 		: 0;
+				// 	const sumSkillHaste =
+				// 		(this.stats.Utility["Skill Haste"] + Number.EPSILON) /
+				// 			100 +
+				// 		skillEfficiency;
+				// 	const calc = baseCooldown / (1 + sumSkillHaste);
+				// 	if (this.debug) {
+				// 		console.log(
+				// 			` ${baseCooldown} (baseCooldown)\n`,
+				// 			`/ (1 + ${sumSkillHaste} (sumSkillHaste))\n`,
+				// 			`{${skillTierBonus}} (skillTierBonus)`
+				// 		);
+				// 		console.log(
+				// 			`%cResult: ${this.formatValue(calc)}`,
+				// 			"background: #222; color: #ff0000"
+				// 		);
+				// 	}
+				// 	value = calc;
+				// } else if (stat["Stat"] === "Health") {
+				// 	const baseHealth = tier0Value;
+				// 	const skillTierBonus = skillTierBonusPercent; // skill tier bonus
+				// 	const skillEfficiency = this.stats.Utility[
+				// 		"Skill Efficiency"
+				// 	]
+				// 		? (this.stats.Utility["Skill Efficiency"] +
+				// 				Number.EPSILON) /
+				// 		  100
+				// 		: 0;
+				// 	const sumSkillHealth =
+				// 		(this.stats.Utility["Skill Health"]
+				// 			? (this.stats.Utility["Skill Health"] +
+				// 					Number.EPSILON) /
+				// 			  100
+				// 			: 0) + skillEfficiency;
+				// 	const sumSkillHealthMods = modBonusPercent
+				// 		? modBonusPercent
+				// 		: 0;
+				// 	const calc =
+				// 		baseHealth *
+				// 		(1 + sumSkillHealth) *
+				// 		(1 + (sumSkillHealthMods + skillTierBonus));
+				// 	if (this.debug) {
+				// 		console.log(
+				// 			` ${baseHealth} (baseHealth)\n`,
+				// 			`* (1 + ${sumSkillHealth} (sumSkillHealth))\n`,
+				// 			`* (1 + (${sumSkillHealthMods} (sumSkillHealthMods) + ${skillTierBonus} (skillTierBonus)))\n`,
+				// 			`{${skillTierBonus}} (skillTierBonus)`
+				// 		);
+				// 		console.log(
+				// 			`%cResult: ${this.formatValue(calc)}`,
+				// 			"background: #222; color: #ff0000"
+				// 		);
+				// 	}
+				// 	value = calc;
+				// } else if (stat["Stat"] === "Duration") {
+				// 	const baseDuration = tier0Value;
+				// 	const skillTierBonus = skillTierBonusPercent; // skill tier bonus
+				// 	const skillEfficiency = this.stats.Utility[
+				// 		"Skill Efficiency"
+				// 	]
+				// 		? (this.stats.Utility["Skill Efficiency"] +
+				// 				Number.EPSILON) /
+				// 		  100
+				// 		: 0;
+				// 	const sumSkillDuration =
+				// 		(this.stats.Utility["Skill Duration"] +
+				// 			Number.EPSILON) /
+				// 			100 +
+				// 		skillEfficiency;
+				// 	const sumSkillDurationMods = modBonusPercent
+				// 		? modBonusPercent
+				// 		: 0;
+				// 	const calc =
+				// 		baseDuration *
+				// 		(1 + sumSkillDuration) *
+				// 		(1 + (sumSkillDurationMods + skillTierBonus));
+				// 	if (this.debug) {
+				// 		console.log(
+				// 			` ${baseDuration} (baseDuration)\n`,
+				// 			`* (1 + ${sumSkillDuration} (sumSkillDuration))\n`,
+				// 			`* (1 + ${sumSkillDurationMods} (sumSkillDurationMods))\n`,
+				// 			`{${skillTierBonus}} (skillTierBonus)`
+				// 		);
+				// 		console.log(
+				// 			`%cResult: ${this.formatValue(calc)}`,
+				// 			"background: #222; color: #ff0000"
+				// 		);
+				// 	}
+				// 	value = calc;
+				// }
+				// /**
+				//  * ****************
+				//  * New Calculations END
+				//  * ****************
+				//  */
+				console.groupEnd();
 				return this.formatValue(value);
 			},
-			calculateStat(value, props, stat) {
+			/**
+			 * Calculate Damage
+			 * @param {object} stat
+			 */
+			calcDamage(stat) {
+				if (this.debug) {
+					console.log("Calculating Damage");
+					console.log(stat["Bonus"]);
+					console.log(this.getSkillModsBonus(stat["Mod Bonus"]));
+				}
+				// Damage Done
+				// skill damage
+				// console.log(this.stats);
+				// console.log(`CHECKING (stat):`, stat);
+				const baseSkillDamage = this.valueCleanup(stat["Tier 0"]);
+				const skillEfficiency = this.stats.Utility["Skill Efficiency"]
+					? (this.stats.Utility["Skill Efficiency"] +
+							Number.EPSILON) /
+					  100
+					: 0;
+				const sumSkillDamage = this.stats.Utility[stat.Bonus]
+					? (this.stats.Utility[stat.Bonus] + Number.EPSILON) / 100
+					: 0; // Watch, Tech Perk, Sum of Gear, Sum of Brand Bonus
+				const skillTierBonus = this.toggleOvercharge
+					? Number(
+							(parseFloat(stat[`Overcharge`]) + Number.EPSILON) /
+								100
+					  )
+					: this.skillTier === 0
+					? 0
+					: Number(
+							(parseFloat(stat[`Tier ${this.skillTier}`]) +
+								Number.EPSILON) /
+								100
+					  ); // skill tier bonus
+				const skillExpertise =
+					Object.hasOwnProperty.call(
+						this.stats.Skills[this.name].skillDetails.expertise,
+						"StatValueExpertise"
+					) && stat["Expertise Bonus"] === stat["Bonus"]
+						? (this.stats.Skills[this.name].skillDetails.expertise
+								.StatValueExpertise +
+								Number.EPSILON) /
+						  100
+						: (this.stats.Skills[this.name].skillDetails.expertise
+								.max +
+								Number.EPSILON) /
+						  100;
+				const totalSkillDamage = 0 / 100; // talents
+				const amps = 0 / 100; // amps multiplied against the result
+				const dta =
+					this.stats.Offensive["Damage to Armor"] && this.toggleDTA
+						? (this.stats.Offensive["Damage to Armor"] +
+								Number.EPSILON) /
+						  100
+						: 0; // 0 / 100;
+				const dttoc =
+					this.stats.Offensive["Damage to TOC"] && this.toggleDTTOC
+						? (this.stats.Offensive["Damage to TOC"] +
+								Number.EPSILON) /
+						  100
+						: 0; // 0 / 100;
+
+				const statusEffects = 0 / 100;
+
+				// TODO
+				const modBonus = this.getSkillModsBonus(stat["Mod Bonus"]);
+
+				const calc =
+					Math.floor(
+						baseSkillDamage * (1 + sumSkillDamage + skillEfficiency)
+					) *
+					(1 + skillTierBonus + modBonus + skillExpertise) *
+					(1 + totalSkillDamage) *
+					(1 + amps) *
+					(1 + dta) *
+					(1 + dttoc);
+				// (1 + statusEffects) *
+				if (this.debug)
+					console.log(
+						`${baseSkillDamage} *\n`,
+						`(1 + ${sumSkillDamage} + ${skillEfficiency}) *\n`,
+						`(1 + ${skillTierBonus} + ${modBonus} +	${skillExpertise}) *\n`,
+						`(1 + ${totalSkillDamage}) *\n`,
+						`(1 + ${amps}) *\n`,
+						`(1 + ${dta}) *\n`,
+						`(1 + ${dttoc})\n`
+					);
+				// console.log(
+				// 	`%cResult: ${this.formatValue(calc)}`,
+				// 	"background: #222; color: #ff0000"
+				// );
+				return calc;
+			},
+			calculateCooldown(stat) {
+				if (this.debug) {
+					console.log("Calculating Cooldown");
+					console.log(stat["Bonus"]);
+					console.log(this.getSkillModsBonus(stat["Mod Bonus"]));
+				}
+				const baseCooldown = this.valueCleanup(stat["Tier 0"]);
+				const skillTierBonus = this.toggleOvercharge
+					? Number(
+							(parseFloat(stat[`Overcharge`]) + Number.EPSILON) /
+								100
+					  )
+					: this.skillTier === 0
+					? 0
+					: Number(
+							(parseFloat(stat[`Tier ${this.skillTier}`]) +
+								Number.EPSILON) /
+								100
+					  ); // skill tier bonus
+				const skillEfficiency = this.stats.Utility["Skill Efficiency"]
+					? (this.stats.Utility["Skill Efficiency"] +
+							Number.EPSILON) /
+					  100
+					: 0;
+				const sumSkillHaste =
+					(this.stats.Utility[stat.Bonus] + Number.EPSILON) / 100 +
+					skillEfficiency;
+				const modBonus = this.getSkillModsBonus(stat["Mod Bonus"]);
+				const calc = baseCooldown / (1 + (sumSkillHaste + modBonus));
+				if (this.debug) {
+					console.log(
+						` ${baseCooldown} (baseCooldown)\n`,
+						`/ (1 + (${sumSkillHaste} (sumSkillHaste) + ${modBonus} (modBonus))\n`,
+						`{${skillTierBonus}} (skillTierBonus)`
+					);
+					console.log(
+						`%cResult: ${this.formatValue(calc)}`,
+						"background: #222; color: #ff0000"
+					);
+				}
+				return calc;
+			},
+			calculateDuration(stat) {
+				const baseDuration = this.valueCleanup(stat["Tier 0"]);
+				const skillTierBonus =
+					this.toggleOvercharge && stat[`Overcharge`]
+						? Number(
+								(parseFloat(stat[`Overcharge`]) +
+									Number.EPSILON) /
+									100
+						  )
+						: this.skillTier === 0
+						? 0
+						: stat[`Tier ${this.skillTier}`]
+						? Number(
+								(parseFloat(stat[`Tier ${this.skillTier}`]) +
+									Number.EPSILON) /
+									100
+						  )
+						: 0; // skill tier bonus
+				const skillEfficiency = this.stats.Utility["Skill Efficiency"]
+					? (this.stats.Utility["Skill Efficiency"] +
+							Number.EPSILON) /
+					  100
+					: 0;
+				const sumSkillDuration = this.stats.Utility[`${stat.Bonus}`]
+					? (this.stats.Utility[`${stat.Bonus}`] + Number.EPSILON) /
+							100 +
+					  skillEfficiency
+					: 0 + skillEfficiency;
+				const sumDurationMods = this.getSkillModsBonus(
+					stat["Mod Bonus"]
+				);
+				const calc =
+					baseDuration *
+					(1 + sumSkillDuration) *
+					(1 + (sumDurationMods + skillTierBonus));
+				if (this.debug) {
+					console.log(
+						` ${baseDuration} (baseDuration)\n`,
+						`* (1 + ${sumSkillDuration} (sumSkillDuration))\n`,
+						`* (1 + ${sumDurationMods} (sumDurationMods))\n`,
+						`{${skillTierBonus}} (skillTierBonus)`
+					);
+					console.log(
+						`%cResult: ${this.formatValue(calc)}`,
+						"background: #222; color: #ff0000"
+					);
+				}
+				return calc;
+			},
+			calculateAmmo(stat) {
+				const baseAmmo = this.valueCleanup(stat["Tier 0"]);
+				const skillTierBonus =
+					this.toggleOvercharge && stat[`Overcharge`]
+						? Number(parseFloat(stat[`Overcharge`]))
+						: this.skillTier === 0
+						? 0
+						: stat[`Tier ${this.skillTier}`]
+						? Number(parseFloat(stat[`Tier ${this.skillTier}`]))
+						: 0; // skill tier bonus
+				const sumSkillDuration = this.stats.Utility[`${stat.Bonus}`]
+					? (this.stats.Utility[`${stat.Bonus}`] + Number.EPSILON) /
+					  100
+					: 0;
+				const sumAmmoMods = this.getSkillModsBonus(stat["Mod Bonus"]);
+				const calc =
+					baseAmmo *
+					(1 + sumSkillDuration) *
+					(1 + (sumAmmoMods + skillTierBonus));
+				if (this.debug) {
+					console.log(
+						` ${baseAmmo} (baseDuration)\n`,
+						`* (1 + ${sumSkillDuration} (sumSkillDuration))\n`,
+						`* (1 + ${sumAmmoMods} (sumDurationMods))\n`,
+						`{${skillTierBonus}} (skillTierBonus)`
+					);
+					console.log(
+						`%cResult: ${this.formatValue(calc)}`,
+						"background: #222; color: #ff0000"
+					);
+				}
+				return calc;
+			},
+			calculateStat(stat) {
+				const baseStat = this.valueCleanup(stat["Tier 0"]);
+				const skillTierBonus =
+					this.toggleOvercharge && stat[`Overcharge`]
+						? Number(
+								(parseFloat(stat[`Overcharge`]) +
+									Number.EPSILON) /
+									100
+						  )
+						: this.skillTier === 0
+						? 0
+						: stat[`Tier ${this.skillTier}`]
+						? Number(
+								(parseFloat(stat[`Tier ${this.skillTier}`]) +
+									Number.EPSILON) /
+									100
+						  )
+						: 0; // skill tier bonus
+				// TODO check if Skill Efficiency Applies
+				// 10% Skill Efficiency is equal to ALL of the following:
+				// 10% Skill Damage
+				// 10% Skill Haste
+				// 10% Skill Duration
+				// 10% Skill Health
+				// 10% Repair Skills
+				// 10% Status Effects
+				let useEfficiency = false;
+				switch (stat.Bonus) {
+					case "Skill Damage":
+					case "Skill Haste":
+					case "Skill Duration":
+					case "Skill Health":
+					case "Repair Skills":
+					case "Status Effects":
+						useEfficiency = true;
+						break;
+				}
+				const skillEfficiency =
+					useEfficiency && this.stats.Utility["Skill Efficiency"]
+						? (this.stats.Utility["Skill Efficiency"] +
+								Number.EPSILON) /
+						  100
+						: 0;
+				const sumSkillStat = this.stats.Utility[stat.Bonus]
+					? (this.stats.Utility[stat.Bonus] + Number.EPSILON) / 100 +
+					  skillEfficiency
+					: 0;
+				const sumStatMods = this.getSkillModsBonus(stat["Mod Bonus"]);
+				const calc =
+					baseStat *
+					(1 + sumSkillStat) *
+					(1 + (sumStatMods + skillTierBonus));
+				if (this.debug) {
+					console.log(
+						` ${baseStat} (baseStat)\n`,
+						`* (1 + ${sumSkillStat} (sumSkillStat))\n`,
+						`* (1 + ${sumStatMods} (sumStatMods))\n`,
+						`{${skillTierBonus}} (skillTierBonus)`
+					);
+					console.log(
+						`%cResult: ${this.formatValue(calc)}`,
+						"background: #222; color: #ff0000"
+					);
+				}
+				return calc;
+			},
+			calculateStat1(value, props, stat) {
 				const debugFormat = "background: #222; color: #ae09ff";
 				const debugStat = "Charges1";
 				if (this.debug)
@@ -577,6 +1080,77 @@
 				console.groupEnd();
 				return skillMods;
 			},
+			getSkillModsBonus(stat) {
+				const debugFormat = "background: #222; color: #ff09c7";
+				if (this.debug)
+					console.groupCollapsed(
+						`%cfunction getSkillModsBonus (${stat}):`,
+						debugFormat
+					);
+				// this.skillStats (the stats an actual skill has shown in the table)
+				// this.stats (is what has the mods)
+				// this.stats.Skills.Skill1.skillDetails.modOne (each mod)
+				// if (this.debug) console.log(this.name, this.stats, stat);
+				let bonusValue = 0;
+				const skillMods = [];
+				const mods = [
+					{
+						prop: "modOne",
+						propStatVal: "StatValueModOne",
+						propVal: "StatValueModOne",
+						propMax: "Mod One",
+					},
+					{
+						prop: "modTwo",
+						propStatVal: "StatValueModTwo",
+						propVal: "StatValueModTwo",
+						propMax: "Mod Two",
+					},
+					{
+						prop: "modThree",
+						propStatVal: "StatValueModThree",
+						propVal: "StatValueModThree",
+						propMax: "Mod Three",
+					},
+				];
+				const skillDetails = this.stats.Skills[this.name].skillDetails;
+				if (this.debug) console.log(this.name, skillDetails, stat);
+				// loop through each Mod
+				mods.forEach((mod) => {
+					if (skillDetails[mod.prop]) {
+						if (this.debug) console.log(`MOD FOUND: `, mod.prop);
+						// const stat = stat;
+						const val = skillDetails[mod.prop][mod.propStatVal]
+							? skillDetails[mod.prop][mod.propStatVal]
+							: parseFloat(
+									skillDetails[mod.prop][
+										mod.propMax
+									].replaceAll("%", "")
+									// eslint-disable-next-line no-mixed-spaces-and-tabs
+							  ); // [mod.propStatVal] [mod.propMax]
+						if (this.debug) console.log(`MOD VALUE: `, val);
+						// skillMods.stat = stat;
+						// skillMods.val = val;
+						if (this.debug)
+							console.log(
+								`MOD ADDED: `,
+								`${skillDetails[mod.prop]["Mod Bonus"]}: ${val}`
+							);
+						skillMods.push({
+							[skillDetails[mod.prop]["Mod Bonus"]]: val,
+						});
+						if (skillDetails[mod.prop]["Mod Bonus"] === stat) {
+							bonusValue += val;
+						}
+					}
+				});
+				console.groupEnd();
+				if (stat === "Ammo") {
+					return bonusValue ? bonusValue + Number.EPSILON : 0;
+				} else {
+					return bonusValue ? (bonusValue + Number.EPSILON) / 100 : 0;
+				}
+			},
 			// addSkillStats(skill, skillStats) {
 			// 	const mods = [
 			// 		{
@@ -684,11 +1258,17 @@
 			roundValue(number) {
 				return Number(Number(number).toFixed(2)).toLocaleString();
 			},
-			updatedToggle() {
-				!this.toggleOvercharge;
-				this.skillTierOvercharged = this.toggleOvercharge
-					? "Overcharged"
-					: "";
+			updatedToggle(toggle) {
+				!this[`toggle${toggle}`];
+				switch (toggle) {
+					case "Overcharge":
+						this.skillTierOvercharged = this.toggleOvercharge
+							? "Overcharged"
+							: "";
+						break;
+					default:
+						break;
+				}
 				this.updateStatsUI(this.stats);
 			},
 		},
@@ -761,15 +1341,21 @@ Azurmen32:
 Simple Weapon formula:
 Base Bullet damage x (sum of WD + sWD + Expertise) x TWD x (CHD+HSD) x DTOOC x (DTA or DTH) x Amp 1 x amp 2…..
 
-Simple Skill damage formula:
 Base skill damage x
-(Sum of SD + Skill expertise) x
-Skill Tier Boost x
-TSD x 
-Status effect (if it has one) x
-DTOOC (oxy only) x 
-DTA (no assault turret/ striker drone) x
-Amp 1 x amp 2...
+(Sum of skill damage + efficiency+ technician perk+ watch) x
+(skill tier damage + skill mod damage + expertise damage) x
+(total skill damage) x
+amps x
+dta (for all but assault turret, sniper turret and striker drone) x
+DTOOC (oxy chem and demo fly only)
+
+		10% Skill Efficiency is equal to ALL of the following:
+    10% Skill Damage
+    10% Skill Haste
+    10% Skill Duration
+    10% Skill Health
+    10% Repair Skills
+    10% Status Effects
 
 •    All stat categorys are additive with themselves and then multiplicative with other status unless noted, Except Amps are NEVER additive. 
 •    SD = skill damage, TSD= total skill damage (ie talent combined arms), TWD = Total weapon damage (ie vigilance)

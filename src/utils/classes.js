@@ -54,6 +54,10 @@ class SkillBase {
 	icon = null;
 	variant = null;
 	quality = null;
+	expertise = {
+		stat: "Expertise",
+		max: 22,
+	};
 	modOne = null;
 	modTwo = null;
 	modThree = null;
@@ -68,14 +72,13 @@ class SkillBase {
 		if (!skillRaw) {
 			return;
 		}
-		// this.type = gearRaw.Type not used at the moment
-		// If named do filters and bla bla
 		this.id = skillRaw.index;
 		this.skillID = skillRaw["Skill ID"];
 		this.itemName = skillRaw["Item Name"];
 		this.icon = skillRaw.Icon;
 		this.variant = skillRaw.Variant;
 		this.quality = skillRaw.Quality;
+		this["expertise"].max = 22;
 		this.filters.modOne = skillRaw["Mod 1"];
 		this.filters.modTwo = skillRaw["Mod 2"];
 		this.filters.modThree = skillRaw["Mod 3"];
@@ -100,7 +103,7 @@ class WeaponBase {
 
 	expertise = {
 		stat: "Expertise",
-		max: 21,
+		max: 22,
 	};
 
 	"core 1" = {
@@ -144,7 +147,7 @@ class WeaponBase {
 		this["optimal range"] = Number(weaponRaw["Optimal Range"]);
 		this["reload speed (ms)"] = Number(weaponRaw["Reload Speed (ms)"]);
 		this["hsd"] = Number(weaponRaw["HSD"]);
-		this["expertise"].max = 21;
+		this["expertise"].max = 22;
 		this["core 1"].max = Number(weaponRaw["Core 1 Max"]);
 		this["core 2"].max = Number(weaponRaw["Core 2 Max"]);
 		this["core 1"].stat = weaponRaw["Core 1"];

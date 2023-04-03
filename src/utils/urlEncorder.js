@@ -169,7 +169,8 @@ function skillsToIds(skills) {
 		ids[i] += objectPropToNumber(skill, "modThree.Skill Stat ID", "-");
 		ids[i] += objectPropToNumber(skill, "modOne.StatValueModOne", "-");
 		ids[i] += objectPropToNumber(skill, "modTwo.StatValueModTwo", "-");
-		ids[i] += objectPropToNumber(skill, "modThree.StatValueModThree", "");
+		ids[i] += objectPropToNumber(skill, "modThree.StatValueModThree", "-");
+		ids[i] += objectPropToNumber(skill, "expertise.StatValueExpertise", "");
 	}
 	return ids;
 }

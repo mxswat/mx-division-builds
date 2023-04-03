@@ -112,6 +112,14 @@
 			overflow: auto;
 		}
 	}
+	.level-name {
+		min-width: 200px;
+		flex: 1;
+	}
+	.item {
+		max-width: 250px;
+		display: flex;
+	}
 	.section-title {
 		font-weight: 700;
 		border-bottom: 1px solid white;
@@ -133,8 +141,13 @@
 			grid-auto-flow: row;
 			margin: 8px;
 		}
-		.shd-level-name {
+		.level-name {
+			min-width: 200px;
 			flex: 1;
+		}
+		.item {
+			max-width: 250px;
+			display: flex;
 		}
 	}
 </style>

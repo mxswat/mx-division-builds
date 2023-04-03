@@ -37,7 +37,15 @@
 						:class="[qualityToCSS(skill.Variant)]"
 						@click="onSelection(skill)"
 					>
-						<img class="skill-icon" :src="skill['Icon']" alt="" />
+						<img
+							:class="
+								skill.Variant === 'Slot'
+									? 'skill-icon-blank'
+									: 'skill-icon'
+							"
+							:src="skill['Icon']"
+							alt=""
+						/>
 						<BasicTile :classes="'anim-enabled'">
 							<span class="name">
 								{{ getDisplayName(skill) }}
@@ -203,6 +211,17 @@
 			opacity: 0.7;
 			position: absolute;
 			top: 60px;
+			right: 16px;
+			z-index: 0;
+		}
+
+		.skill-icon-blank {
+			height: 84px;
+			width: 84px;
+			object-fit: contain;
+			opacity: 0.7;
+			position: absolute;
+			top: 20px;
 			right: 16px;
 			z-index: 0;
 		}

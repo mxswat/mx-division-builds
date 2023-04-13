@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.7% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Artist's Tool - SIG 716 CQB",
+   "dmg": "99,665",
+   "rpm": 320,
+   "mag": 20,
+   "talent": "Perfect Rifleman",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.6% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>19% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "ACR-E",
+   "dmg": "53,124",
+   "rpm": 650,
+   "mag": 30,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>20% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Double Barrel Shotgun",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.4% Accuracy"
  }
 ]

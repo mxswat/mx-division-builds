@@ -61,9 +61,9 @@
 								v-bind:src="typeToImgSrc.mod[option.Type]"
 							/> -->
 							<span class="attribute-label">{{
-								`${option["Stat"]}${
+								`${option["Bonus"]}${
 									option["Specialization"]
-										? ` (${option["Specialization"]})`
+										? ` [${option["Specialization"]}]`
 										: ""
 								}`
 							}}</span>

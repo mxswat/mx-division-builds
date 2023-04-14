@@ -58,6 +58,13 @@
 									class="bonuses-container"
 									v-if="getSkillStats(skill).length > 0"
 								>
+									<li class="stats-wrap">
+										<span class="stat white-space-pre-wrap">
+											Expertise:
+											{{ skill["Expertise Bonus"] }}
+											<br />
+										</span>
+									</li>
 									<li
 										class="stats-wrap"
 										v-for="(stat, idx) in getSkillStats(

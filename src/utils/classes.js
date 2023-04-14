@@ -61,12 +61,18 @@ class SkillBase {
 	modOne = null;
 	modTwo = null;
 	modThree = null;
+	slotOne = null;
+	slotTwo = null;
+	slotThree = null;
 	desc = null;
 	stats = null;
 	filters = {
 		modOne: null,
 		modTwo: null,
 		modThree: null,
+		slotOne: null,
+		slotTwo: null,
+		slotThree: null,
 	};
 	constructor(skillRaw) {
 		if (!skillRaw) {
@@ -79,9 +85,15 @@ class SkillBase {
 		this.variant = skillRaw.Variant;
 		this.quality = skillRaw.Quality;
 		this["expertise"].max = 22;
+		this.slotOne = skillRaw["Slot One"];
+		this.slotTwo = skillRaw["Slot Two"];
+		this.slotThree = skillRaw["Slot Three"];
 		this.filters.modOne = skillRaw["Mod 1"];
 		this.filters.modTwo = skillRaw["Mod 2"];
 		this.filters.modThree = skillRaw["Mod 3"];
+		this.filters.slotOne = skillRaw["Slot One"];
+		this.filters.slotTwo = skillRaw["Slot Two"];
+		this.filters.slotThree = skillRaw["Slot Three"];
 		this.desc = skillRaw.Desc;
 		this.stats = [];
 	}

@@ -45,7 +45,11 @@
 								v-bind:src="typeToImgSrc.mod[option.Type]"
 							/> -->
 							<span class="attribute-label">{{
-								option["Stat"]
+								`${option["Stat"]}${
+									option["Specialization"]
+										? ` [${option["Specialization"]}]`
+										: ""
+								}`
 							}}</span>
 							<span class="attribute-value">{{
 								option[`Mod ${slot}`]
@@ -57,7 +61,11 @@
 								v-bind:src="typeToImgSrc.mod[option.Type]"
 							/> -->
 							<span class="attribute-label">{{
-								option["Stat"]
+								`${option["Stat"]}${
+									option["Specialization"]
+										? ` (${option["Specialization"]})`
+										: ""
+								}`
 							}}</span>
 						</template>
 					</v-select>
@@ -105,64 +113,6 @@
 
 	const modSlots = ["One", "Two", "Three"];
 
-	const modSlotsMapping = {
-		"Sticky Bomb": {
-			One: "Launcher Slot",
-			Two: "Payload Slot",
-			Three: "",
-		},
-		Trap: {
-			One: "Charge Slot",
-			Two: "Electronics Slot",
-			Three: "",
-		},
-		Decoy: {
-			One: "Projector Slot",
-			Two: "Housing Slot",
-			Three: "",
-		},
-		Pulse: {
-			One: "Coil Slot",
-			Two: "Housing Slot",
-			Three: "",
-		},
-		Turret: {
-			One: "Firing Mechanism Slot",
-			Two: "Housing Slot",
-			Three: "Targeting Slot",
-		},
-		Hive: {
-			One: "Drones Slot",
-			Two: "Launcher Slot",
-			Three: "System Slot",
-		},
-		"Chem Launcher": {
-			One: "Agitator Slot",
-			Two: "Pneumatics Slot",
-			Three: "",
-		},
-		Firefly: {
-			One: "Propulsion Slot",
-			Two: "Payload Slot",
-			Three: "Targeting Slot",
-		},
-		"Seeker Mine": {
-			One: "Drive Slot",
-			Two: "Targeting Slot",
-			Three: "Payload Slot",
-		},
-		Drone: {
-			One: "Battery Slot",
-			Two: "Hull Slot",
-			Three: "Feed Slot",
-		},
-		"Ballistic Shield": {
-			One: "Circuit Board Slot",
-			Two: "Hard Coating Slot",
-			Three: "Gyro Slot",
-		},
-	};
-
 	export default {
 		name: "SkillSlot",
 		components: { StatInput, ExpertiseInput },
@@ -185,16 +135,20 @@
 				return qualityToCss[quality];
 			},
 			getModSlotName(slot) {
-				if (
-					Object.hasOwnProperty.call(
-						modSlotsMapping,
-						this.currentSkill.itemName
-					)
-				) {
-					return modSlotsMapping[this.currentSkill.itemName][slot];
-				} else {
-					return "Slot";
+				// console.log(this.currentSkill[`slot${slot}`]);
+				if (this.currentSkill[`slot${slot}`]) {
+					return this.currentSkill[`slot${slot}`];
 				}
+				// if (
+				// 	Object.hasOwnProperty.call(
+				// 		modSlotsMapping,
+				// 		this.currentSkill.itemName
+				// 	)
+				// ) {
+				// 	return modSlotsMapping[this.currentSkill.itemName][slot];
+				// } else {
+				// 	return "Slot";
+				// }
 			},
 			isSkillSelected() {
 				return this.currentSkill && this.currentSkill.itemName;
@@ -305,9 +259,7 @@
 					// 	(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 					// 		stat.Variant &&
 					// 		stat["Slot Name"] ===
-					// 			modSlotsMapping[this.currentSkill.itemName][
-					// 				slot
-					// 			] &&
+					// 			this.currentSkill[`slot${slot}`] &&
 					// 		!stat["Stat"].toLowerCase().includes("pvp")) ||
 					// 	(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 					// 		stat.Variant &&
@@ -325,9 +277,7 @@
 						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 							stat.Variant &&
 							stat["Slot Name"] ===
-								modSlotsMapping[this.currentSkill.itemName][
-									slot
-								] &&
+								this.currentSkill[`slot${slot}`] &&
 							!stat["Stat"].toLowerCase().includes("pvp")) ||
 						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 							stat.Variant &&

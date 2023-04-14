@@ -23,6 +23,7 @@
 			</button>
 			<button @click="version()">Patch Notes</button>
 			<button @click="credits()">Credits</button>
+			<span class="toolbar-info">v{{ localDBVersion }}</span>
 		</div>
 		<!-- 
       Bugged TODO: Fix me
@@ -44,11 +45,15 @@
 		name: "Toolbar",
 		data() {
 			return {
+				localDBVersion: "0",
 				history,
 				showMobileMenu: false,
 			};
 		},
 		created() {
+			const ClientDBVersion =
+				Number(localStorage.getItem("localDBversion")) || 0;
+			this.localDBVersion = ClientDBVersion;
 			this.history = window.history;
 		},
 		methods: {
@@ -138,6 +143,23 @@
 		margin-bottom: 4px;
 		margin-right: 8px;
 		margin-left: 8px;
+		width: 100%;
+	}
+
+	.toolbar-info {
+		font-size: 0.7em;
+		height: 31px;
+		line-height: 31px;
+		color: white;
+		// padding-right: 4px;
+		// padding-left: 4px;
+		background-color: transparent;
+		border: 0px;
+		background-position: center;
+		margin-top: 8px;
+		margin-bottom: 4px;
+		// margin-right: 8px;
+		// margin-left: 8px;
 		width: 100%;
 	}
 

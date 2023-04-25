@@ -612,6 +612,7 @@
 				// this.stats (is what has the mods)
 				// this.stats.Skills.Skill1.skillDetails.modOne (each mod)
 				// if (this.debug) console.log(this.name, this.stats, stat);
+				if (!stat) return 0;
 				let bonusValue = 0;
 				const skillMods = [];
 				const mods = [

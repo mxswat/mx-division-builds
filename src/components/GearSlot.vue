@@ -1,6 +1,6 @@
 <template>
-	<div @click="onClick()" class="gear-container">
-		<template v-if="isGearSelected()">
+	<div class="gear-container">
+		<template @click="onClick()" v-if="isGearSelected()">
 			<div
 				class="slot-element gear-name"
 				v-bind:class="[qualityToCSS(currentGear.quality)]"
@@ -321,10 +321,11 @@
 				Sold at <b>{{ whereIsAvailable(currentGear) }}</b>
 			</div>
 		</template>
-
-		<span class="no-element-selected" v-if="!isGearSelected()">
-			<p>CHOOSE YOUR GEAR</p>
-		</span>
+		<template v-if="!isGearSelected()">
+			<span @click="onClick()" class="no-element-selected">
+				<p>CHOOSE YOUR GEAR</p>
+			</span>
+		</template>
 	</div>
 </template>
 
@@ -379,6 +380,10 @@
 			},
 			onModalClose(data) {
 				this.currentGear = new GearBase(data);
+				if (this.currentGear.itemName === "(Blank)") {
+					this.currentGear = null;
+					return;
+				}
 				switch (this.currentGear.quality) {
 					case "Exotic":
 					case "Named":
@@ -445,6 +450,7 @@
 			initGearMods() {
 				gearData.GearMods.then((res) => {
 					this.gearMods = getUniqueObject(res);
+					this.gearMods.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
 				});
 			},
 			initGearAttributes() {
@@ -454,6 +460,9 @@
 						(attribute) => {
 							return attribute.Quality === "A";
 						}
+					);
+					this.gearAttributes.sort((a, b) =>
+						a.Stat > b.Stat ? 1 : -1
 					);
 				});
 			},
@@ -639,6 +648,11 @@
 							var valueToImport = parseFloat(
 								splittedIdS[5 + idx]
 							);
+							if (stat === "mod") {
+								valueToImport = parseFloat(
+									splittedIdS[4 + idx]
+								);
+							}
 							if (stat === "coreTwo" || stat === "coreThree") {
 								valueToImport = parseFloat(
 									splittedIdS[7 + idx]
@@ -684,6 +698,22 @@
 				);
 				return found?.Vendor;
 			},
+			clearGearSlot() {
+				this.currentGear.name = null;
+				this.currentGear = null;
+			},
+			clearStatSlot(slotStat) {
+				// do not clear certain stats from exotics and named
+				if (
+					(this.currentGear.quality === "Exotic" &&
+						slotStat !== "mod") ||
+					(this.currentGear.quality === "Named" &&
+						slotStat === "talent")
+				)
+					return;
+
+				this.currentGear[slotStat] = null;
+			},
 		},
 		created() {
 			this.coreAttributes = getUniqueObject(coreAttributes);
@@ -700,6 +730,27 @@
 		watch: {
 			currentGear: {
 				handler: function(val, oldVal) {
+					// do not do anything no gear selected or item to un-equip (Blank)
+					if (this.currentGear) {
+						const props = [
+							{ attributeOne: "Stat" },
+							{ attributeTwo: "Stat" },
+							{ attributeThree: "Stat" },
+							{ mod: "Stat" },
+							{ modTwo: "Stat" },
+							{ talent: "Talent" },
+						];
+						props.forEach((prop) => {
+							for (const property in prop) {
+								if (
+									val[property] &&
+									val[property][prop[property]] === "(Blank)"
+								) {
+									val[property] = null;
+								}
+							}
+						});
+					}
 					coreService.sendSlotData(this.name, val);
 				},
 				deep: true,
@@ -717,5 +768,13 @@
 	// attribute-label
 	.attribute-value {
 		margin-left: auto;
+	}
+
+	.clear-slot {
+		color: red;
+	}
+
+	.clear-slot-stat {
+		color: red;
 	}
 </style>

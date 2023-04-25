@@ -742,7 +742,7 @@
 			updateMoJoeData(stats) {
 				if (stats) {
 					buildMetaMoJoe(stats);
-					console.log(stats);
+					// console.log(stats);
 					weaponsTableData[0].tables[0].headers = [
 						"   ",
 						"Primary Weapon",

@@ -740,71 +740,82 @@
 				return this.criticalChance !== 0 || this.headshotChance !== 0;
 			},
 			updateMoJoeData(stats) {
-				buildMetaMoJoe(stats);
-				console.log(stats);
-				weaponsTableData[0].tables[0].headers = [
-					"   ",
-					"Primary Weapon",
-					"Secondary Weapon",
-					"Sidearm",
-					"Special Weapon",
-				];
-				const primaryWeaponStats = statsService.getWeaponStatsPerSlot(
-					"Primary"
-				);
-				const secondaryWeaponStats = statsService.getWeaponStatsPerSlot(
-					"Secondary"
-				);
-				const sidearmWeaponStats = statsService.getWeaponStatsPerSlot(
-					"SideArm"
-				);
-				// console.log(primaryWeaponStats);
-				const rowData = [];
-				if (stats && Object.hasOwnProperty.call(stats, "Weapons")) {
-					weaponStats.forEach((element) => {
-						// console.log(
-						// 	statsService.getWeaponStatsPerSlot("Primary")
-						// );
-						// console.log(
-						// 	`Primary`,
-						// 	stats.Weapons["Primary"][element.prop]
-						// );
-						// console.log(element.prop);
-						if (
-							(Object.hasOwnProperty.call(
-								stats.Weapons["Primary"],
-								element.prop
-							) ||
-								Object.hasOwnProperty.call(
-									stats.Weapons["Secondary"],
+				if (stats) {
+					buildMetaMoJoe(stats);
+					console.log(stats);
+					weaponsTableData[0].tables[0].headers = [
+						"   ",
+						"Primary Weapon",
+						"Secondary Weapon",
+						"Sidearm",
+						"Special Weapon",
+					];
+					const primaryWeaponStats = statsService.getWeaponStatsPerSlot(
+						"Primary"
+					);
+					const secondaryWeaponStats = statsService.getWeaponStatsPerSlot(
+						"Secondary"
+					);
+					const sidearmWeaponStats = statsService.getWeaponStatsPerSlot(
+						"SideArm"
+					);
+					// console.log(primaryWeaponStats);
+					const rowData = [];
+					if (stats && Object.hasOwnProperty.call(stats, "Weapons")) {
+						weaponStats.forEach((element) => {
+							// console.log(
+							// 	statsService.getWeaponStatsPerSlot("Primary")
+							// );
+							// console.log(
+							// 	`Primary`,
+							// 	stats.Weapons["Primary"][element.prop]
+							// );
+							// console.log(element.prop);
+							if (
+								(Object.hasOwnProperty.call(
+									stats.Weapons["Primary"],
 									element.prop
 								) ||
-								Object.hasOwnProperty.call(
-									stats.Weapons["SideArm"],
-									element.prop
-								)) &&
-							(stats.Weapons["Primary"][element.prop] ||
-								stats.Weapons["Secondary"][element.prop] ||
-								stats.Weapons["SideArm"][element.prop])
-						) {
-							rowData.push([
-								element.name,
-								this.formatValue(primaryWeaponStats, element),
-								this.formatValue(secondaryWeaponStats, element),
-								this.formatValue(sidearmWeaponStats, element),
-								"[Placeholder Value]",
-							]);
-						}
-					});
+									Object.hasOwnProperty.call(
+										stats.Weapons["Secondary"],
+										element.prop
+									) ||
+									Object.hasOwnProperty.call(
+										stats.Weapons["SideArm"],
+										element.prop
+									)) &&
+								(stats.Weapons["Primary"][element.prop] ||
+									stats.Weapons["Secondary"][element.prop] ||
+									stats.Weapons["SideArm"][element.prop])
+							) {
+								rowData.push([
+									element.name,
+									this.formatValue(
+										primaryWeaponStats,
+										element
+									),
+									this.formatValue(
+										secondaryWeaponStats,
+										element
+									),
+									this.formatValue(
+										sidearmWeaponStats,
+										element
+									),
+									"[Placeholder Value]",
+								]);
+							}
+						});
+					}
+					weaponsTableData[0].tables[0].rowData = rowData;
+					weaponsTableData[0].tables[0].headers[1] =
+						primaryWeaponStats.weaponName;
+					weaponsTableData[0].tables[0].headers[2] =
+						secondaryWeaponStats.weaponName;
+					weaponsTableData[0].tables[0].headers[3] =
+						sidearmWeaponStats.weaponName;
+					// console.log(weaponsTableData[0]);
 				}
-				weaponsTableData[0].tables[0].rowData = rowData;
-				weaponsTableData[0].tables[0].headers[1] =
-					primaryWeaponStats.weaponName;
-				weaponsTableData[0].tables[0].headers[2] =
-					secondaryWeaponStats.weaponName;
-				weaponsTableData[0].tables[0].headers[3] =
-					sidearmWeaponStats.weaponName;
-				// console.log(weaponsTableData[0]);
 			},
 			formatValue(stats, element) {
 				const value = parseInt(stats[element.prop]).toLocaleString();

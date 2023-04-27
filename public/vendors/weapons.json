@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>14.1% LMG Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
    "attribute3": "<span class=\"icon-weapons\"></span>6.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Designated Hitter - SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Perfect Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>94% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Health Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.1% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "P90",
+   "dmg": "48,892",
+   "rpm": 900,
+   "mag": 50,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.2% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Double Barrel Sawed Off",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>6% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>24% Optimal Range"
  }
 ]

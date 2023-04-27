@@ -25,19 +25,19 @@
 			<div v-for="(weapons, key) in weaponsList" v-bind:key="key">
 				<span
 					class="weap-type"
-					v-if="filterByName(weapons).length > 0"
+					v-if="filterWeaponList(weapons).length > 0"
 					:id="key"
 					>{{ key }}
 				</span>
 				<div
 					class="weapon-grid"
-					v-if="filterByName(weapons).length > 0"
+					v-if="filterWeaponList(weapons).length > 0"
 				>
 					<div
 						class="weapon-slot"
 						:class="[qualityToCSS(weapon.Quality)]"
 						@click="onSelection(weapon)"
-						v-for="(weapon, idx) in filterByName(weapons)"
+						v-for="(weapon, idx) in filterWeaponList(weapons)"
 						v-bind:key="idx"
 					>
 						<BasicTile :classes="'anim-enabled'">
@@ -119,6 +119,18 @@
 						.toLocaleLowerCase()
 						.includes(this.searchText.toLocaleLowerCase())
 				);
+			},
+			filterWeaponList(list) {
+				return list.filter((weapon) => {
+					return (
+						this.getDisplayName(weapon)
+							.toLocaleLowerCase()
+							.includes(this.searchText.toLocaleLowerCase()) ||
+						weapon.Quality.toLocaleLowerCase().includes(
+							this.searchText.toLocaleLowerCase()
+						)
+					);
+				});
 			},
 			isAvailableAtVendor(weapon) {
 				return this.vendorWeapons.some(

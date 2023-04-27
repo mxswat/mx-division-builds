@@ -260,26 +260,26 @@
 								this.currentSkill.stats
 							);
 						}
-						this.currentSkill.modOne = this.skillStats.find(
-							(stat) => {
+						this.currentSkill.modOne = this.skillMods.find(
+							(mod) => {
 								return (
-									parseInt(stat["Skill Stat ID"]) ===
+									parseInt(mod["Skill Mod ID"]) ===
 									parseInt(splittedIdS[1])
 								);
 							}
 						);
-						this.currentSkill.modTwo = this.skillStats.find(
-							(stat) => {
+						this.currentSkill.modTwo = this.skillMods.find(
+							(mod) => {
 								return (
-									parseInt(stat["Skill Stat ID"]) ===
+									parseInt(mod["Skill Mod ID"]) ===
 									parseInt(splittedIdS[2])
 								);
 							}
 						);
-						this.currentSkill.modThree = this.skillStats.find(
-							(stat) => {
+						this.currentSkill.modThree = this.skillMods.find(
+							(mod) => {
 								return (
-									parseInt(stat["Skill Stat ID"]) ===
+									parseInt(mod["Skill Mod ID"]) ===
 									parseInt(splittedIdS[3])
 								);
 							}

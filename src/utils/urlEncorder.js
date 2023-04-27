@@ -164,9 +164,9 @@ function skillsToIds(skills) {
 		const skill = skills[i];
 		ids[i] = "";
 		ids[i] += objectPropToNumber(skill, "skillID", "-");
-		ids[i] += objectPropToNumber(skill, "modOne.Skill Stat ID", "-");
-		ids[i] += objectPropToNumber(skill, "modTwo.Skill Stat ID", "-");
-		ids[i] += objectPropToNumber(skill, "modThree.Skill Stat ID", "-");
+		ids[i] += objectPropToNumber(skill, "modOne.Skill Mod ID", "-");
+		ids[i] += objectPropToNumber(skill, "modTwo.Skill Mod ID", "-");
+		ids[i] += objectPropToNumber(skill, "modThree.Skill Mod ID", "-");
 		ids[i] += objectPropToNumber(skill, "modOne.StatValueModOne", "-");
 		ids[i] += objectPropToNumber(skill, "modTwo.StatValueModTwo", "-");
 		ids[i] += objectPropToNumber(skill, "modThree.StatValueModThree", "-");

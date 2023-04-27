@@ -34,12 +34,12 @@
 						class="skills-slot"
 						v-for="(skill, idx) in filterByName(skills)"
 						v-bind:key="idx"
-						:class="[qualityToCSS(skill.Variant)]"
+						:class="[qualityToCSS(skill['Skill Variant Name'])]"
 						@click="onSelection(skill)"
 					>
 						<img
 							:class="
-								skill.Variant === 'Slot'
+								skill['Skill Variant Name'] === 'Slot'
 									? 'skill-icon-blank'
 									: 'skill-icon'
 							"
@@ -116,15 +116,26 @@
 				document.getElementById(divId).scrollIntoView();
 			},
 			getSkillStats(skill) {
-				const stats = this.skillStats.filter((stat) => {
-					return (
-						`${skill["Variant"]} ${skill["Item Name"]}` ===
-							stat["Variant"] &&
-						!stat.Stat.toLowerCase().includes("pvp") &&
-						!stat.Stat.toLowerCase().includes("conflict") &&
-						!stat.Stat.toLowerCase().includes("(blank)")
-					);
-				});
+				const stats = this.skillStats
+					.filter((skillStat) => {
+						return (
+							`${skill["Variant"]} ${skill["Item Name"]}` ===
+								skillStat["Skill Variant Name"] &&
+							// !stat.Stat.toLowerCase().includes("pvp") &&
+							// !stat.Stat.toLowerCase().includes("conflict") &&
+							!skillStat.Stat.toLowerCase().includes("(blank)") &&
+							skillStat.Display.toLowerCase() === "true"
+						);
+					})
+					.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
+				// console.log(stats);
+				// let uniqueObjArray = [
+				// 	...new Map(
+				// 		stats.map((item) => [item["Stat"], item])
+				// 	).values(),
+				// ];
+				// // console.log(uniqueObjArray);
+				// return uniqueObjArray;
 				return stats;
 			},
 			qualityToCSS(quality) {

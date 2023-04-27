@@ -37,7 +37,7 @@
 						:clearable="false"
 						:options="filterSkillMods(slot)"
 						v-model="currentSkill[`mod${slot}`]"
-						label="Stat"
+						label="Mod Attribute"
 					>
 						<template v-slot:option="option">
 							<!-- <img
@@ -45,14 +45,14 @@
 								v-bind:src="typeToImgSrc.mod[option.Type]"
 							/> -->
 							<span class="attribute-label">{{
-								`${option["Bonus"]}${
-									option["Specialization"]
-										? ` [${option["Specialization"]}]`
+								`${option["Mod Attribute"]}${
+									option["Specialization Mod"]
+										? ` [${option["Specialization Mod"]}]`
 										: ""
 								}`
 							}}</span>
 							<span class="attribute-value">{{
-								option[`Mod ${slot}`]
+								option[`Max`]
 							}}</span>
 						</template>
 						<template #selected-option="option">
@@ -61,9 +61,9 @@
 								v-bind:src="typeToImgSrc.mod[option.Type]"
 							/> -->
 							<span class="attribute-label">{{
-								`${option["Bonus"]}${
-									option["Specialization"]
-										? ` [${option["Specialization"]}]`
+								`${option["Mod Attribute"]}${
+									option["Specialization Mod"]
+										? ` [${option["Specialization Mod"]}]`
 										: ""
 								}`
 							}}</span>
@@ -75,14 +75,10 @@
 							currentSkill[`mod${slot}`][`StatValueMod${slot}`]
 						"
 						v-bind:max="
-							getMaxStatValue(
-								currentSkill[`mod${slot}`][`Mod ${slot}`]
-							)
+							getMaxStatValue(currentSkill[`mod${slot}`][`Max`])
 						"
 						v-bind:step="
-							getStepStatValue(
-								currentSkill[`mod${slot}`][`Mod ${slot}`]
-							)
+							getStepStatValue(currentSkill[`mod${slot}`][`Max`])
 						"
 					></StatInput>
 				</div>
@@ -122,6 +118,7 @@
 		},
 		data() {
 			return {
+				debug: true,
 				currentSkill: new SkillBase(),
 				typeToImgSrc: null,
 				skillsList: [],
@@ -130,25 +127,40 @@
 				modSlots: modSlots,
 			};
 		},
+		created() {
+			this.typeToImgSrc = typeToImgSrc;
+			this.initSkillsList();
+			this.initSkillStats();
+			this.initSkillMods();
+			this.initSkillSlot();
+		},
 		methods: {
+			initSkillsList() {
+				skillsData.Skills.then((values) => {
+					this.skillsList = values;
+				});
+			},
+			initSkillStats() {
+				skillsData.SkillStats.then((values) => {
+					this.skillStats = getUniqueObject(values);
+					this.skillStats.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
+				});
+			},
+			initSkillMods() {
+				skillsData.SkillMods.then((res) => {
+					this.skillMods = getUniqueObject(res);
+					this.skillMods.sort((a, b) =>
+						a["Mod Attribute"] > b["Mod Attribute"] ? 1 : -1
+					);
+				});
+			},
 			qualityToCSS(quality) {
 				return qualityToCss[quality];
 			},
 			getModSlotName(slot) {
-				// console.log(this.currentSkill[`slot${slot}`]);
 				if (this.currentSkill[`slot${slot}`]) {
 					return this.currentSkill[`slot${slot}`];
 				}
-				// if (
-				// 	Object.hasOwnProperty.call(
-				// 		modSlotsMapping,
-				// 		this.currentSkill.itemName
-				// 	)
-				// ) {
-				// 	return modSlotsMapping[this.currentSkill.itemName][slot];
-				// } else {
-				// 	return "Slot";
-				// }
 			},
 			isSkillSelected() {
 				return this.currentSkill && this.currentSkill.itemName;
@@ -159,9 +171,13 @@
 				}
 			},
 			onModalClose(data) {
-				// console.log("data: ", data);
+				if (this.debug) {
+					console.groupCollapsed(
+						`%conModalClose:`,
+						`background: #222; color: #bada55`
+					);
+				}
 				this.currentSkill = new SkillBase(data);
-				// console.log(this.currentSkill);
 				if (this.currentSkill.itemName === "(Blank)") {
 					this.currentSkill = null;
 					return;
@@ -169,135 +185,55 @@
 				this.currentSkill.stats = this.skillStats.filter((stat) => {
 					return (
 						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-							stat.Variant &&
-						!stat.Stat.toLowerCase().includes("pvp") &&
-						!stat.Stat.toLowerCase().includes("conflict")
+							stat["Skill Variant Name"] &&
+						stat.Stat !== "(Blank)"
 					);
 				});
-				// console.log(this.currentSkill);
-				// this.currentSkill = new GearBase(data);
-				// switch (this.currentSkill.quality) {
-				// 	case "Exotic":
-				// 	case "Named":
-				// 		this.currentSkill.core = this.coreAttributes.find(
-				// 			(attribute) =>
-				// 				attribute.label ===
-				// 				this.currentSkill.filters.core
-				// 		);
-				// 		if (data.coreTwo !== null) {
-				// 			this.currentSkill.coreTwo = this.coreAttributes.find(
-				// 				(attribute) =>
-				// 					attribute.label ===
-				// 					this.currentSkill.filters.coreTwo
-				// 			);
-				// 		}
-				// 		if (data.coreThree !== null) {
-				// 			this.currentSkill.coreThree = this.coreAttributes.find(
-				// 				(attribute) =>
-				// 					attribute.label ===
-				// 					this.currentSkill.filters.coreThree
-				// 			);
-				// 		}
-				// 		this.currentSkill.attributeOne = this.allGearAttributes.find(
-				// 			(attribute) =>
-				// 				attribute.Stat ===
-				// 				this.currentSkill.filters.attributeOne
-				// 		);
-				// 		this.currentSkill.attributeTwo = this.allGearAttributes.find(
-				// 			(attribute) =>
-				// 				attribute.Stat ===
-				// 				this.currentSkill.filters.attributeTwo
-				// 		);
-				// 		this.currentSkill.attributeThree = this.allGearAttributes.find(
-				// 			(attribute) =>
-				// 				attribute.Stat ===
-				// 				this.currentSkill.filters.attributeThree
-				// 		);
-				// 		break;
-				// 	case "Gearset":
-				// 		break;
-				// 	default:
-				// 		break;
-				// }
+				if (this.debug) {
+					console.warn(`(currentSkill) :`, this.currentSkill);
+					console.warn(`(skillStats) :`, this.currentSkill.stats);
+				}
+				console.groupEnd();
 			},
 			openSkillsModal() {
 				openSkillsModal(this.skillsList, this.name, this.onModalClose);
 			},
 			filterSkillMods(slot) {
-				// console.log(
-				// 	"this.currentSkill.filters: ",
-				// 	this.currentSkill.filters
-				// );
-				// const mods = this.skillMods.filter((mod) => {
-				// 	// console.log(this.currentSkill.filters.modOne, mod.Skill);
-				// 	return (
-				// 		mod.Slot === slot &&
-				// 		this.currentSkill.filters[`mod${slot}`] === mod.Skill
-				// 	);
-				// });
-				const mods = this.skillStats.filter((stat) => {
-					// console.log(stat);
-					// console.log(
-					// 	`${this.currentSkill.variant} ${this.currentSkill.itemName}`
-					// );
-					// console.log(stat["Expertise Bonus"]);
-					// console.log(stat["Slot Name"]);
-					// console.log(
-					// 	modSlotsMapping[this.currentSkill.itemName][slot]
-					// );
-					// console.log(
-					// 	`Slot: ${slot}`,
-					// 	`${this.currentSkill.variant} ${this.currentSkill.itemName}`,
-					// 	`${stat.Variant}`,
-					// 	`- Expertise: ${stat["Expertise Bonus"]}`
-					// );
-					// console.log(
-					// 	this.currentSkill.filters[`mod${slot}`],
-					// 	stat[`Mod ${slot}`]
-					// );
-					// if (
-					// 	(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-					// 		stat.Variant &&
-					// 		stat["Slot Name"] ===
-					// 			this.currentSkill[`slot${slot}`] &&
-					// 		!stat["Stat"].toLowerCase().includes("pvp")) ||
-					// 	(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-					// 		stat.Variant &&
-					// 		stat["Stat"] === "(Blank)" &&
-					// 		!stat["Stat"].toLowerCase().includes("pvp"))
-					// ) {
-					// 	console.log(
-					// 		slot,
-					// 		stat.Variant,
-					// 		stat["Slot Name"],
-					// 		stat["Stat"]
-					// 	);
-					// }
+				if (this.debug) {
+					console.groupCollapsed(
+						`%cfilterSkillMods(${slot}):`,
+						`background: #222; color: #bada55`
+					);
+					console.log(`Current Skill:`, this.currentSkill);
+				}
+				const mods = this.skillMods.filter((stat) => {
 					return (
-						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-							stat.Variant &&
-							stat["Slot Name"] ===
-								this.currentSkill[`slot${slot}`] &&
-							!stat["Stat"].toLowerCase().includes("pvp")) ||
-						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-							stat.Variant &&
-							stat["Stat"] === "(Blank)" &&
-							// this.currentSkill.filters[`mod${slot}`] &&
-							// stat[`Mod ${slot}`] && // removed as now using the mapping slot field instead of no value
-							!stat["Stat"].toLowerCase().includes("pvp"))
+						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+							stat["Skill Variant Name"] &&
+						(stat["Skill Mod Slot"] ===
+							this.currentSkill[`slot${slot}`] ||
+							stat["Skill Mod Slot"]
+								.toLowerCase()
+								.includes("all"))
 					);
 				});
-				// console.log(mods);
+				if (this.debug) {
+					console.warn(`(mods) :`, mods);
+					console.groupEnd();
+				}
 				return mods;
 			},
-			initSkillData() {
+			initSkillSlot() {
 				coreService.getSlotInit$(this.name).subscribe((ids) => {
-					// console.log(`ids (${this.name}): `, ids);
+					if (this.debug) {
+						console.groupCollapsed(
+							`%cinitSkillSlot (${this.name}):`,
+							`background: #222; color: #bada55`
+						);
+					}
 					const splittedIdS = ids.split("-");
 					const skillId = parseInt([splittedIdS[0]]);
-					// console.log(`skillId (${this.name}): `, skillId);
 					if (skillId) {
-						// console.log("this.skillStats: ", this.skillStats);
 						const fromUrlGear = new SkillBase(
 							this.skillsList.find(
 								(skill) =>
@@ -306,20 +242,24 @@
 							)
 						);
 						this.currentSkill = fromUrlGear;
-						// console.log(this.currentSkill);
+						if (this.debug) {
+							console.warn(`(currentSkill) :`, this.currentSkill);
+						}
 						this.currentSkill.stats = this.skillStats.filter(
 							(stat) => {
 								return (
 									`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-										stat.Variant &&
-									!stat.Stat.toLowerCase().includes("pvp") &&
-									!stat.Stat.toLowerCase().includes(
-										"conflict"
-									)
+										stat["Skill Variant Name"] &&
+									stat.Stat !== "(Blank)"
 								);
 							}
 						);
-						// console.log("this.currentSkill: ", this.currentSkill);
+						if (this.debug) {
+							console.warn(
+								`(currentSkill.stats) :`,
+								this.currentSkill.stats
+							);
+						}
 						this.currentSkill.modOne = this.skillStats.find(
 							(stat) => {
 								return (
@@ -344,6 +284,14 @@
 								);
 							}
 						);
+						if (this.debug) {
+							console.warn(
+								`(currentSkill Mods) :`,
+								`modOne: ${this.currentSkill.modOne}`,
+								`modTwo: ${this.currentSkill.modTwo}`,
+								`modThree: ${this.currentSkill.modThree}`
+							);
+						}
 
 						const stats = [
 							null,
@@ -367,7 +315,22 @@
 								splittedIdS[3 + idx]
 							);
 
+							if (this.debug) {
+								console.warn(
+									`stat:`,
+									stat,
+									`slot:`,
+									slot,
+									`currentStatToUpdate:`,
+									currentStatToUpdate,
+									`StatValue${slot}`,
+									`valueToImport: ${valueToImport}`
+								);
+							}
 							if (currentStatToUpdate && valueToImport > 0) {
+								if (this.debug) {
+									console.warn(`Sending Update!`);
+								}
 								// Using Vue set because I want this to be reactive and
 								// to trigger watch deep when it changes into StatInput
 								Vue.set(
@@ -378,38 +341,20 @@
 							}
 						}
 					}
-				});
-			},
-			initSkillsList() {
-				// console.log(
-				// 	`initSkillsList (${this.name}): `,
-				// 	skillsData[this.name]
-				// );
-				skillsData["Skills"].then((values) => {
-					this.skillsList = values;
-				});
-			},
-			initSkillStats() {
-				skillsData.SkillStats.then((res) => {
-					this.skillStats = getUniqueObject(res);
-					this.skillStats.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
-				});
-			},
-			initSkillMods() {
-				skillsData.SkillMods.then((res) => {
-					this.skillMods = getUniqueObject(res);
+					if (this.debug) {
+						console.warn(`(END) :`);
+						console.groupEnd();
+					}
 				});
 			},
 			getMaxStatValue(value) {
 				if (value.includes(`%`)) {
-					// console.log("getMaxStatValue: ", value);
 					return value.replace("%", "");
 				}
 				return value;
 			},
 			getStepStatValue(value) {
 				if (!value.includes(`.`)) {
-					// console.log("getMaxStatValue: ", value);
 					return 1;
 				}
 				return 0.1;
@@ -422,35 +367,45 @@
 				this.currentSkill[slotStat] = null;
 			},
 		},
-		created() {
-			this.typeToImgSrc = typeToImgSrc;
-			this.initSkillsList();
-			this.initSkillStats();
-			this.initSkillMods();
-			this.initSkillData();
-		},
 		watch: {
 			currentSkill: {
 				handler: function(val, oldVal) {
+					if (this.debug) {
+						console.groupCollapsed(
+							`%cwatching->currentSkill (${this.name} / ${this.currentSkill.variant} ${this.currentSkill.itemName}):`,
+							`background: #222; color: #bada55`
+						);
+						console.warn(`this.currentSkill:`, this.currentSkill);
+					}
 					// do not do anything no gear selected or item to un-equip (Blank)
 					if (this.currentSkill) {
-						const props = [
-							{ modOne: "Stat" },
-							{ modTwo: "Stat" },
-							{ modThree: "Stat" },
+						const slots = [
+							{ modOne: "Mod Attribute" },
+							{ modTwo: "Mod Attribute" },
+							{ modThree: "Mod Attribute" },
 						];
-						props.forEach((prop) => {
-							for (const property in prop) {
+						slots.forEach((modSlot) => {
+							console.warn(`modSlot:`, modSlot);
+							for (const property in modSlot) {
+								console.warn(`property:`, property);
 								if (
 									val[property] &&
-									val[property][prop[property]] === "(Blank)"
+									val[property][modSlot[property]] ===
+										"(Blank)"
 								) {
 									val[property] = null;
 								}
 							}
 						});
 					}
+					if (this.debug) {
+						console.warn(`sending val:`, val);
+					}
 					coreService.sendSlotData(this.name, val);
+					if (this.debug) {
+						console.warn(`(END) :`);
+						console.groupEnd();
+					}
 				},
 				deep: true,
 			},

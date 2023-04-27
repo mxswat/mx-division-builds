@@ -75,66 +75,62 @@
 				if (!stats) {
 					return;
 				}
-				// console.log(`created : (${this.name})`, stats);
-				// this.stats = stats;
-				// console.log(
-				// 	`stats.Skills[this.name]: (${this.name})`,
-				// 	stats.Skills[this.name]
-				// );
+				// console.log(stats);
 				this.stats = stats;
 				this.updateStatsUI(stats);
 			});
 		},
 		methods: {
 			updateStatsUI(stats) {
-				// const props = ["skillName"];
-
-				// for (let i = 0; i < props.length; i++) {
-				// 	const prop = props[i];
 				this["skillName"] = stats.Skills[this.name].skillName;
-				// }
 
 				// Skill Tier
 				this.skillTier = stats.Utility["Skill Tier"];
-				// this.skillStats = stats.stats;
-				// console.log(stats);
 				if (
 					Object.hasOwnProperty.call(
 						stats.Skills[this.name],
 						"skillDetails"
 					)
 				) {
-					// console.log(stats.skillDetails.stats);
-
 					this.skillStats = stats.Skills[
 						this.name
 					].skillDetails.stats.filter((stat) => {
 						return stat.Stat !== "(Blank)";
 					});
 					this.skillStatsList = this.getUniqueSkillStats(stats);
-					// console.log(this.skillStats);
 				}
 			},
 			getUniqueSkillStats(stats) {
 				// TODO need to check to ensure the correct stat is being used, perhaps use ID  or only use this to create the list of stats
 				// console.log(stats.Skills[this.name].skillDetails.stats);
 				const array = stats.Skills[this.name].skillDetails.stats;
-				let uniqueObjArray = [
-					...new Map(
-						array.map((item) => [item["Stat"], item])
-					).values(),
-				];
-				// console.log(uniqueObjArray);
-				const unique = [...new Set(array.map((item) => item.Stat))];
-				// console.log(unique);
-				return uniqueObjArray.filter((stat) => {
-					return stat.Bonus !== "" && stat.Stat !== "(Blank)";
+				return array.filter((stat) => {
+					return (
+						stat.Bonus !== "" &&
+						stat.Stat !== "(Blank)" &&
+						stat["Display"].toLowerCase() === "true"
+					);
 				});
+				// let uniqueObjArray = [
+				// 	...new Map(
+				// 		array.map((item) => [item["Stat"], item])
+				// 	).values(),
+				// ];
+				// // console.log(uniqueObjArray);
+				// // const unique = [...new Set(array.map((item) => item.Stat))];
+				// // console.log(unique);
+				// return uniqueObjArray.filter((stat) => {
+				// 	return (
+				// 		stat.Bonus !== "" &&
+				// 		stat.Stat !== "(Blank)" &&
+				// 		stat["Show In Stats"].toLowerCase() === "true"
+				// 	);
+				// });
 			},
 			calculateStatValue(stat) {
 				if (this.debug) {
 					console.groupCollapsed(
-						`%cSTART ${this.name} - ${stat.Variant} (${stat["Bonus"]}):`,
+						`%cSTART ${this.name} - ${stat["Skill Variant Name"]} (${stat["Stat Bonus"]}):`,
 						`background: #222; color: #bada55`
 					);
 					console.warn(`(stats) :`, this.stats);
@@ -187,7 +183,7 @@
 				 * Starting New
 				 */
 				// TODO Get expertise stat to calculate from Expertise Column for all OTHER stats
-				switch (stat["Bonus"]) {
+				switch (stat["Stat Bonus"]) {
 					case "Skill Damage":
 						value = this.calcDamage(stat);
 						break;
@@ -431,20 +427,12 @@
 						: stat[`Tier ${this.skillTier}`]
 						? Number(parseFloat(stat[`Tier ${this.skillTier}`]))
 						: 0; // skill tier bonus
-				const sumSkillDuration = this.stats.Utility[`${stat.Bonus}`]
-					? (this.stats.Utility[`${stat.Bonus}`] + Number.EPSILON) /
-					  100
-					: 0;
 				const sumAmmoMods = this.getSkillModsBonus(stat["Mod Bonus"]);
-				const calc =
-					baseAmmo *
-					(1 + sumSkillDuration) *
-					(1 + (sumAmmoMods + skillTierBonus));
+				const calc = baseAmmo * (1 + (sumAmmoMods + skillTierBonus));
 				if (this.debug) {
 					console.log(
-						` ${baseAmmo} (baseDuration)\n`,
-						`* (1 + ${sumSkillDuration} (sumSkillDuration))\n`,
-						`* (1 + ${sumAmmoMods} (sumDurationMods))\n`,
+						` ${baseAmmo} (baseAmmo)\n`,
+						`* (1 + ${sumAmmoMods} (sumAmmoMods))\n`,
 						`{${skillTierBonus}} (skillTierBonus)`
 					);
 					console.log(

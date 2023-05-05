@@ -210,6 +210,7 @@
 					return (
 						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 							stat["Skill Variant Name"] &&
+						stat["Display"].toLowerCase().includes("true") &&
 						(stat["Skill Mod Slot"] ===
 							this.currentSkill[`slot${slot}`] ||
 							stat["Skill Mod Slot"]
@@ -385,9 +386,10 @@
 							{ modThree: "Mod Attribute" },
 						];
 						slots.forEach((modSlot) => {
-							console.warn(`modSlot:`, modSlot);
+							if (this.debug) console.warn(`modSlot:`, modSlot);
 							for (const property in modSlot) {
-								console.warn(`property:`, property);
+								if (this.debug)
+									console.warn(`property:`, property);
 								if (
 									val[property] &&
 									val[property][modSlot[property]] ===

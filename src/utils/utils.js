@@ -58,6 +58,7 @@ const typeToImgSrc = {
 		O: "icons/offense2.png",
 		U: "icons/tech2.png",
 		D: "icons/defense2.png",
+		B: "icons/blank_attribute.png",
 	},
 	mod: {
 		O: "icons/offense3_2.png",

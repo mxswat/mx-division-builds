@@ -84,21 +84,28 @@ coreService
 				SHDLevels,
 			});
 
+			let encodedBuild = undefined;
+
 			// Lazy fix because of the new versioning an encoding will be triggered but all the values are 0
 			if (
-				Number(buildData.replaceAll("-", "").replaceAll(":", "")) === 0
+				Number(buildData.replaceAll("-", "").replaceAll(":", "")) !== 0
 			) {
-				return;
+				encodedBuild = compressToEncodedURIComponent(buildData);
 			}
-			const encodedBuild = compressToEncodedURIComponent(buildData);
 			const _router = router;
 			if (_router.history.current.params.encodedBuild !== encodedBuild) {
-				router.push({
-					name: "homeId",
-					params: {
-						encodedBuild: "" + encodedBuild,
-					},
-				});
+				if (encodedBuild) {
+					router.push({
+						name: "homeId",
+						params: {
+							encodedBuild: "" + encodedBuild,
+						},
+					});
+				} else {
+					router.push({
+						name: "home",
+					});
+				}
 			}
 		}
 	);

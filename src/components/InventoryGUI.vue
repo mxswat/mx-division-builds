@@ -30,6 +30,9 @@
 		<BasicTile classes="kneepads" bgImage="icons/kneepads.png">
 			<GearSlot name="Kneepads"></GearSlot>
 		</BasicTile>
+		<BasicTile classes="watch" bgImage="icons/shd_med.png">
+			<WatchSlot name="Watch"></WatchSlot>
+		</BasicTile>
 	</div>
 </template>
 
@@ -37,6 +40,7 @@
 	import BasicTile from "./BasicTile";
 	import GearSlot from "./GearSlot";
 	import WeaponSlot from "./WeaponSlot";
+	import WatchSlot from "./WatchSlot";
 	import { updatedInput$ } from "../utils/urlEncorder";
 	import SpecializationSlot from "./SpecializationSlot.vue";
 
@@ -49,6 +53,7 @@
 			BasicTile,
 			GearSlot,
 			WeaponSlot,
+			WatchSlot,
 			SpecializationSlot,
 		},
 		data() {

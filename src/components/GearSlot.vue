@@ -381,7 +381,7 @@
 			onModalClose(data) {
 				this.currentGear = new GearBase(data);
 				if (this.currentGear.itemName === "(Blank)") {
-					this.currentGear = null;
+					this.currentGear = undefined;
 					return;
 				}
 				switch (this.currentGear.quality) {

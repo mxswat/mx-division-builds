@@ -137,7 +137,7 @@
 	}
 	input::-webkit-outer-spin-button,
 	input::-webkit-inner-spin-button {
-		margin-left: 10px;
+		margin-left: 5px;
 	}
 
 	// mobile switch to one column grid

@@ -113,7 +113,7 @@
 		}
 	}
 	.level-name {
-		min-width: 200px;
+		min-width: 180px;
 		flex: 1;
 	}
 	.item {
@@ -142,7 +142,7 @@
 			margin: 8px;
 		}
 		.level-name {
-			min-width: 200px;
+			min-width: 180px;
 			flex: 1;
 		}
 		.item {

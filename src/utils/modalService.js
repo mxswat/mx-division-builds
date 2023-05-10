@@ -1,6 +1,8 @@
 import GearSelectionModal from "../components/Modals/GearSelectionModal";
 import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
+import WatchLevelsModal from "../components/Modals/WatchLevelsModal";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
+import VersionModal from "../components/Modals/VersionModal";
 
 import { gearHeaders, weaponsHeaders } from "./agGridDefaults";
 
@@ -46,6 +48,36 @@ const openWeaponsModal = function(weaponLists, onModalClose) {
 			adaptive: true,
 			width: "75%",
 			height: "90%",
+		},
+		defaultEvents
+	);
+};
+
+const openWatchLevelsModal = function(onModalClose) {
+	window.vueInstance.$modal.show(
+		WatchLevelsModal,
+		{
+			onModalClose: onModalClose,
+		},
+		{
+			adaptive: true,
+			width: "80%",
+			height: "468px",
+			maxWidth: 600,
+			maxHeight: 468,
+		},
+		defaultEvents
+	);
+};
+
+const openVersionModal = function openVersionModal() {
+	window.vueInstance.$modal.show(
+		VersionModal,
+		null,
+		{
+			adaptive: true,
+			width: "75%",
+			height: "80%",
 		},
 		defaultEvents
 	);
@@ -175,9 +207,11 @@ const openCreditsModal = function openCreditsModal() {
 export {
 	openGearModal,
 	openWeaponsModal,
+	openWatchLevelsModal,
 	openSaveShareModal,
 	openIssueModal,
 	openScreenshotModal,
 	openSafariIOSModal,
 	openCreditsModal,
+	openVersionModal,
 };

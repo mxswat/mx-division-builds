@@ -131,6 +131,15 @@
 		padding: 8px 8px;
 		z-index: 99;
 	}
+
+	input[type="number"] {
+		text-align: right;
+	}
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		margin-left: 10px;
+	}
+
 	// mobile switch to one column grid
 	@media only screen and (max-width: 675px) {
 		.four-square-grid {

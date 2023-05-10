@@ -12,7 +12,7 @@
               Moved Watch Levels to a tile on the inventory GUI.
             </li>
           </ul>
-          <p>= = = = = = = = = = = = = = = = = = = =</p>
+          <p>- - - - - - - - - - - - - - - - - - - -</p>
           <p>March 19, 2023</p>
           <h3>UI Updates</h3>
           <h4 style="margin-bottom: -10px;">Need to remove a weapon, attribute or mod?</h4>
@@ -27,7 +27,7 @@
               Moved Patch Notes and News information here to make room for Skills and other UI changes.
             </li>
           </ul>
-          <p>= = = = = = = = = = = = = = = = = = = =</p>
+          <p>- - - - - - - - - - - - - - - - - - - -</p>
           <p>March 01, 2023</p>
           <h3>Title Update 17 - Season 11: Reign of Fire</h3>
           <h4 style="margin-bottom: -10px;">Gear</h4>
@@ -109,11 +109,11 @@
 						</ul>
 					</p>
 					<p>reddit - <a href="https://www.reddit.com/r/thedivision/comments/11dgg5g/the_division_2_title_update_17_patch_notes/" target="_blank">The Division 2 - Title Update 17 - Patch Notes</a></p>
-					<p>------------</p>
+					<p>- - - - - - - - - - - - - - - - - - - -</p>
 					<p>
             <a href="https://discord.com/channels/702180050791039016/702180285017620483" target="_blank">Go here to see past updates!</a>
 					</p>
-					<p>------------</p>
+					<p>- - - - - - - - - - - - - - - - - - - -</p>
         </div>
   </div>
 </template>
@@ -133,7 +133,7 @@
 
 <style lang="scss" scoped>
 	div#version-modal {
-    margin: 8px;
+    margin: 20px;
     overflow: auto;
 		height: 100%;
 		width: 100%;

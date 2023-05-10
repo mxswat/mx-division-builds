@@ -21,10 +21,10 @@ jobs:
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:
         url: http://rubenalamina.mx/division/gear.json
-        file_in_repo: public/vendors/gear.json
+        file_in_repo: vendors/gear.json
     - name: Update weapons.json
       id: update_weapons
       uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
       with:
         url: http://rubenalamina.mx/division/weapons.json
-        file_in_repo: public/vendors/weapons.json
+        file_in_repo: vendors/weapons.json

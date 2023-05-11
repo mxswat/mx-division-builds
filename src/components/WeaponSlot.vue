@@ -260,7 +260,7 @@
 			onModalClose(data) {
 				this.currentWeapon = new WeaponBase(data);
 				if (this.currentWeapon.name === "(Blank)") {
-					this.currentWeapon = null;
+					this.currentWeapon = undefined;
 					return;
 				}
 				const isExotic = this.isExotic(this.currentWeapon);

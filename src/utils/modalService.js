@@ -1,4 +1,5 @@
 import GearSelectionModal from "../components/Modals/GearSelectionModal";
+import SkillsSelectionModal from "../components/Modals/SkillsSelectionModal";
 import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
 import WatchLevelsModal from "../components/Modals/WatchLevelsModal";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
@@ -26,6 +27,23 @@ const openGearModal = function(gearList, slot, onModalClose) {
 			gearData: gearList,
 			onModalClose: onModalClose,
 			gearSlot: slot,
+		},
+		{
+			adaptive: true,
+			width: "75%",
+			height: "90%",
+		},
+		defaultEvents
+	);
+};
+
+const openSkillsModal = function(skillsList, slot, onModalClose) {
+	window.vueInstance.$modal.show(
+		SkillsSelectionModal,
+		{
+			skillsData: skillsList,
+			onModalClose: onModalClose,
+			skillSlot: slot,
 		},
 		{
 			adaptive: true,
@@ -206,6 +224,7 @@ const openCreditsModal = function openCreditsModal() {
 
 export {
 	openGearModal,
+	openSkillsModal,
 	openWeaponsModal,
 	openWatchLevelsModal,
 	openSaveShareModal,

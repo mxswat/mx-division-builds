@@ -1,6 +1,6 @@
 import { BehaviorSubject, timer } from "rxjs";
 
-import { gearData } from "./dataImporter";
+import { gearData, skillsData } from "./dataImporter";
 
 import { debounce } from "rxjs/operators";
 
@@ -25,6 +25,10 @@ class Stats {
 		Primary: null,
 		Secondary: null,
 		SideArm: null,
+	};
+	Skills = {
+		Skill1: null,
+		Skill2: null,
 	};
 	constructor() {}
 }
@@ -103,6 +107,11 @@ class StatsService {
 				);
 			}
 		}
+
+		const skill1 = this.getSkillStats("Skill1", data.Skill1);
+		const skill2 = this.getSkillStats("Skill2", data.Skill2);
+		this.skills = { Skill1: skill1, Skill2: skill2 };
+		stats.Skills = this.skills;
 
 		stats$.next(stats);
 	}
@@ -225,104 +234,6 @@ class StatsService {
 				stats.brands[brand] = brandBuffs;
 			}
 		}
-
-		/*
-		// NinjaBike Messenger Bag Brands Talents
-		if (this.equippedNinjaBikeMessengerBag) {
-			for (const brand in stats.brands) {
-				const brandCount = stats.brands[brand].length;
-				// bypass the Exotics
-				let foundSetBonus = null;
-				let gearsetBonusOffset = 0;
-				if (brand !== "Exotic") {
-					// check if High End or Gearset
-					const foundBrand = this.brandsData.find((b) => {
-						return b.Brand === brand;
-					});
-					if (foundBrand.Type === "Gearset") {
-						// need to offset due to some gearsets having multiple stats with three pieces
-						// fourth piece gives Talent
-						// e.g. Eclipse Protocol, Future Initiative
-						if (stats.brands[brand].length === 3) {
-							gearsetBonusOffset = 0;
-						} else {
-							gearsetBonusOffset = 1;
-						}
-						// gearsetBonusOffset = 1;
-						foundSetBonus = this.brandSetBonuses.find((b) => {
-							return (
-								b.Brand ==
-								`${brand}${stats.brands[brand].length +
-									gearsetBonusOffset}`
-							);
-						});
-					}
-					if (foundBrand.Type === "High End") {
-						foundSetBonus = this.brandSetBonuses.find((b) => {
-							return (
-								b.Brand ==
-								`${brand}${stats.brands[brand].length}`
-							);
-						});
-					}
-
-					// ensure the brandset is not already maxed
-					// TODO this check may not be needed
-					if (stats.brands[brand].length < 4) {
-						if (foundSetBonus !== undefined) {
-							// if Talent as Bonus
-							if (foundSetBonus.stat === "Talent") {
-								stats.brands[brand].push(
-									`${foundSetBonus.Talent}`
-								);
-							} else {
-								const statType = this.statsMapping[
-									foundSetBonus.stat
-								].Type;
-
-								addValueToStat(
-									stats[statTypes[statType]],
-									foundSetBonus.stat,
-									Number(foundSetBonus.val)
-								);
-
-								stats.brands[brand].push(
-									`${foundSetBonus.stat} ${foundSetBonus.val}`
-								);
-								// add the core for Skill Tier set bonus
-								if (foundSetBonus.stat === "Skill Tier") {
-									stats.Cores.Utility.push(1);
-								}
-								// check if the set has a dual stat (stat1)
-								if (
-									foundSetBonus.stat1 &&
-									this.statsMapping[foundSetBonus.stat1] !=
-										undefined
-								) {
-									addValueToStat(
-										stats[
-											statTypes[
-												this.statsMapping[
-													foundSetBonus.stat1
-												].Type
-											]
-										],
-										foundSetBonus.stat1,
-										Number(foundSetBonus.val1)
-									);
-									stats.brands[brand].push(
-										`${foundSetBonus.stat1} ${foundSetBonus.val1}`
-									);
-								}
-							}
-						}
-					}
-				}
-				// stats.brands[brand] = ninjaBuffs;
-			}
-		}
-
-		*/
 
 		// ensuring Utility Cores match Skill Tier
 		stats.Utility["Skill Tier"] = stats.Cores.Utility.length;
@@ -715,6 +626,34 @@ class StatsService {
 			modifier += Number(magazine.valNeg);
 		}
 		return modifier;
+	}
+
+	// getSkillStatsPerSlot(slot) {
+	// 	console.log(slot, this.dataCache);
+	// 	return this.getSkillStats(
+	// 		slot,
+	// 		this.dataCache[UI_WEAPON_SLOT_ENUM[slot]]
+	// 	);
+	// }
+
+	getSkillStats(skillSlot, skill) {
+		const skillStats = {
+			skillName: null,
+			skillDetails: null,
+		};
+		// console.log("Getting skill stats...", skillSlot, data);
+		if (!skill) {
+			// console.log("no data");
+			return {
+				skillName: null,
+			};
+		}
+		// console.log(this.SkillStats.length);
+		skillStats.skillName = `${skill.variant} ${skill.itemName}`;
+		skillStats.skillDetails = skill;
+		// console.log(`skillStats (${skillSlot}): `, skillStats);
+		// console.log(`skill: `, skill);
+		return skillStats;
 	}
 }
 

@@ -16,6 +16,11 @@ class DPSChartCoreService {
 	 * @param {*} weaponStats
 	 */
 	addCoreWeaponTrace(slot, weaponStats) {
+		if (weaponStats.weaponName == null) {
+			this._subjects[slot].next(undefined);
+			return;
+		}
+
 		let timeToEmptyMagazine = weaponStats.timeToEmptyMagazine;
 		const dataPointsCount = Math.round(
 			60000 / (timeToEmptyMagazine + weaponStats.reloadSpeed)

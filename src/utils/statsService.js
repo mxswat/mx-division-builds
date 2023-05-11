@@ -92,11 +92,11 @@ class StatsService {
 					data.weapons[idx],
 					slotKey
 				);
-				if (stats.Weapons[slotKey].weaponName)
-					DPSChartCore.addCoreWeaponTrace(
-						slotKey,
-						stats.Weapons[slotKey]
-					);
+
+				DPSChartCore.addCoreWeaponTrace(
+					slotKey,
+					stats.Weapons[slotKey]
+				);
 				TTKCoreService.addCoreWeaponData(
 					slotKey,
 					stats.Weapons[slotKey]

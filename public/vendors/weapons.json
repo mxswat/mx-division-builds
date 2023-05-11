@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.7% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>11.8% Swap Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Test Subject",
+   "dmg": "",
+   "rpm": 700,
+   "mag": 30,
+   "talent": "Perfectly In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>19% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.1% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Infantry MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military M9",
+   "dmg": "81,801",
+   "rpm": 350,
+   "mag": 15,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage",
+   "attribute3": "-"
  }
 ]

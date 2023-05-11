@@ -20,6 +20,7 @@ class DPSChartCoreService {
 
 	addCoreWeaponData(slot, weaponStats) {
 		if (weaponStats.weaponName == null) {
+			this._subjects[slot].next(undefined);
 			return;
 		}
 

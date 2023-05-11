@@ -1,0 +1,38 @@
+name: Get-Vendors-Data-GH-Pages
+
+on:
+    schedule:
+        #  Run every Tuesday, Wednesday and Thursday at 0:15am
+        #  The Thursday run is just for safety, in case ruben team forgot something
+        - cron: "30 0 * * 2,3,4"
+    # Allows you to run this workflow manually from the Actions tab
+    workflow_dispatch:
+
+jobs:
+    keep_file_updated:
+        runs-on: ubuntu-latest
+        name: Get Data from rubenalamina
+        steps:
+            - name: Checkout repo
+              id: checkout
+              uses: actions/checkout@v2
+              with:
+                ref: 'gh-pages'
+            - name: Update gear.json
+              id: update_gear
+              uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
+              with:
+                  url: http://rubenalamina.mx/division/gear.json
+                  file_in_repo: vendors/gear.json
+            - name: Update weapons.json
+              id: update_weapons
+              uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
+              with:
+                  url: http://rubenalamina.mx/division/weapons.json
+                  file_in_repo: vendors/weapons.json
+            - name: Update mods.json
+              id: update_mods
+              uses: TheLastProject/keep-remote-file-locally-up-to-date-action@v1
+              with:
+                  url: http://rubenalamina.mx/division/mods.json
+                  file_in_repo: vendors/mods.json

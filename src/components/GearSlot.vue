@@ -1,6 +1,11 @@
 <template>
 	<div class="gear-container">
-		<template @click="onClick()" v-if="isGearSelected()">
+		<template v-if="!isGearSelected()">
+			<span @click="openGearModal()" class="no-element-selected">
+				<p>CHOOSE YOUR GEAR</p>
+			</span>
+		</template>
+		<template v-else>
 			<div
 				class="slot-element gear-name"
 				v-bind:class="[qualityToCSS(currentGear.quality)]"
@@ -20,9 +25,7 @@
 					placeholder="Core attribute"
 					:clearable="false"
 					v-model="currentGear.core"
-					:options="
-						currentGear.quality === 'Exotic' ? [] : coreAttributes
-					"
+					:options="filterGearCores()"
 				>
 					<template v-slot:option="option">
 						<img
@@ -88,9 +91,7 @@
 					placeholder="Core three attribute"
 					:clearable="false"
 					v-model="currentGear.coreThree"
-					:options="
-						currentGear.quality === 'Exotic' ? [] : coreAttributes
-					"
+					:options="[]"
 				>
 					<template v-slot:option="option">
 						<img
@@ -242,7 +243,7 @@
 				<v-select
 					placeholder="Mod"
 					:clearable="false"
-					:options="filterGearMods(gearMods)"
+					:options="gearMods"
 					v-model="currentGear.mod"
 					label="Stat"
 				>
@@ -276,7 +277,7 @@
 				<v-select
 					placeholder="Mod 2"
 					:clearable="false"
-					:options="filterGearMods(gearMods)"
+					:options="gearMods"
 					v-model="currentGear.modTwo"
 					label="Stat"
 				>
@@ -320,11 +321,6 @@
 			>
 				Sold at <b>{{ whereIsAvailable(currentGear) }}</b>
 			</div>
-		</template>
-		<template v-if="!isGearSelected()">
-			<span @click="onClick()" class="no-element-selected">
-				<p>CHOOSE YOUR GEAR</p>
-			</span>
 		</template>
 	</div>
 </template>
@@ -373,75 +369,56 @@
 			isGearSelected() {
 				return this.currentGear && this.currentGear.itemName;
 			},
-			onClick() {
-				if (!this.isGearSelected()) {
-					this.openGearModal();
-				}
-			},
 			onModalClose(data) {
 				this.currentGear = new GearBase(data);
 				if (this.currentGear.itemName === "(Blank)") {
 					this.currentGear = undefined;
 					return;
 				}
-				switch (this.currentGear.quality) {
-					case "Exotic":
-					case "Named":
-						this.currentGear.core = this.coreAttributes.find(
-							(attribute) =>
-								attribute.label ===
-								this.currentGear.filters.core
-						);
-						if (data.coreTwo !== null) {
-							this.currentGear.coreTwo = this.coreAttributes.find(
-								(attribute) =>
-									attribute.label ===
-									this.currentGear.filters.coreTwo
+
+				this.currentGear.core = this.coreAttributes.find(
+					(attribute) =>
+						attribute.label ===
+						this.currentGear.filters.core
+				);
+				if (data.coreTwo !== null) {
+					this.currentGear.coreTwo = this.coreAttributes.find(
+						(attribute) =>
+							attribute.label ===
+							this.currentGear.filters.coreTwo
+					);
+				}
+				if (data.coreThree !== null) {
+					this.currentGear.coreThree = this.coreAttributes.find(
+						(attribute) =>
+							attribute.label ===
+							this.currentGear.filters.coreThree
+					);
+				}
+				this.currentGear.attributeOne = this.allGearAttributes.find(
+					(attribute) =>
+						attribute.Stat ===
+						this.currentGear.filters.attributeOne
+				);
+				this.currentGear.attributeTwo = this.allGearAttributes.find(
+					(attribute) =>
+						attribute.Stat ===
+						this.currentGear.filters.attributeTwo
+				);
+				this.currentGear.attributeThree = this.allGearAttributes.find(
+					(attribute) =>
+						attribute.Stat ===
+						this.currentGear.filters.attributeThree
+				);
+				if (data.Talent !== null) {
+					this.currentGear.talent = this.allTalents.find(
+						(talent) => {
+							return (
+								talent.Talent ===
+								this.currentGear.filters.talent
 							);
 						}
-						if (data.coreThree !== null) {
-							this.currentGear.coreThree = this.coreAttributes.find(
-								(attribute) =>
-									attribute.label ===
-									this.currentGear.filters.coreThree
-							);
-						}
-						this.currentGear.attributeOne = this.allGearAttributes.find(
-							(attribute) =>
-								attribute.Stat ===
-								this.currentGear.filters.attributeOne
-						);
-						this.currentGear.attributeTwo = this.allGearAttributes.find(
-							(attribute) =>
-								attribute.Stat ===
-								this.currentGear.filters.attributeTwo
-						);
-						this.currentGear.attributeThree = this.allGearAttributes.find(
-							(attribute) =>
-								attribute.Stat ===
-								this.currentGear.filters.attributeThree
-						);
-						this.currentGear.talent = this.allTalents.find(
-							(talent) => {
-								return (
-									talent.Talent ===
-									this.currentGear.filters.talent
-								);
-							}
-						);
-						break;
-					case "Gearset":
-						this.currentGear.talent = this.allTalents.find(
-							(talent) => {
-								return (
-									talent.Talent ===
-									this.currentGear.filters.talent
-								);
-							}
-						);
-						break;
-					default:
-						break;
+					);
 				}
 			},
 			openGearModal() {
@@ -489,9 +466,16 @@
 						});
 				});
 			},
-			filterGearMods(mods) {
-				// Filter removed since now mods can go on every brand and exotic
-				return mods;
+			filterGearCores() {
+				if (this.currentGear.quality === 'Exotic') {
+					return []
+				}
+				if (this.currentGear.itemName === "Picaro's Holster") {
+					return this.coreAttributes.filter((core) => { 
+						return (core.Type !== 'O');
+					});
+				}
+				return this.coreAttributes;
 			},
 			filterGearAttributes(attributes, otherAttribute, filter) {
 				// TODO  Clean code like I did for filterWeaponModsByType();

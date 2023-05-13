@@ -260,6 +260,32 @@
                 `(1 + ${params.dttoc} {dttoc})\n`
               );
             break;
+          case "Damage":
+            console.log(bonus);
+            result =
+              Math.floor(
+                params.baseValue *
+                  (1 + params.sumSkillStat + params.skillEfficiency)
+              ) *
+              (1 +
+                params.skillTierBonus +
+                params.sumSkillStatMods +
+                params.skillExpertise) *
+              (1 + params.totalSkillStat) *
+              (1 + params.amps) *
+              (1 + params.dta) *
+              (1 + params.dttoc);
+            if (this.debug)
+              console.log(
+                `${params.baseValue} {baseValue} *\n`,
+                `(1 + ${params.sumSkillStat} {sumSkillStat} + ${params.skillEfficiency} {skillEfficiency}) *\n`,
+                `(1 + ${params.skillTierBonus} {skillTierBonus} + ${params.sumSkillStatMods} {sumSkillStatMods} +	${params.skillExpertise} {skillExpertise}) *\n`,
+                `(1 + ${params.totalSkillStat} {totalSkillStat}) *\n`,
+                `(1 + ${params.amps} {amps}) *\n`,
+                `(1 + ${params.dta} {dta}) *\n`,
+                `(1 + ${params.dttoc} {dttoc})\n`
+              );
+            break;
           case "Ammo":
           case "Repair Charges":
           case "Charges":
@@ -281,6 +307,32 @@
             result =
               params.baseValue /
               (1 + (params.sumSkillStat + params.sumSkillStatMods));
+            break;
+          case "Bleed Damage":
+            console.log(bonus);
+            result =
+              Math.floor(
+                params.baseValue *
+                  (1 + params.sumSkillStat + params.skillEfficiency)
+              ) *
+              (1 +
+                params.skillTierBonus +
+                params.sumSkillStatMods +
+                params.skillExpertise) *
+              (1 + params.totalSkillStat) *
+              (1 + params.amps) *
+              (1 + params.dta) *
+              (1 + params.dttoc);
+            if (this.debug)
+              console.log(
+                `${params.baseValue} {baseValue} *\n`,
+                `(1 + ${params.sumSkillStat} {sumSkillStat} + ${params.skillEfficiency} {skillEfficiency}) *\n`,
+                `(1 + ${params.skillTierBonus} {skillTierBonus} + ${params.sumSkillStatMods} {sumSkillStatMods} +	${params.skillExpertise} {skillExpertise}) *\n`,
+                `(1 + ${params.totalSkillStat} {totalSkillStat}) *\n`,
+                `(1 + ${params.amps} {amps}) *\n`,
+                `(1 + ${params.dta} {dta}) *\n`,
+                `(1 + ${params.dttoc} {dttoc})\n`
+              );
             break;
           case "Status Effects": // 55,247
             console.log(bonus);
@@ -356,18 +408,28 @@
             debugFormat,
             stat
           );
-        const skillExpertise =
-          Object.hasOwnProperty.call(
-            this.stats.Skills[this.name].skillDetails.expertise,
-            "StatValueExpertise"
-          ) && stat["Expertise Bonus"] === stat["Bonus"]
-            ? (this.stats.Skills[this.name].skillDetails.expertise
-                .StatValueExpertise +
-                Number.EPSILON) /
-              100
-            : (this.stats.Skills[this.name].skillDetails.expertise.max +
-                Number.EPSILON) /
-              100;
+        // get skill expertise stat
+        console.log(
+          this.stats.Skills[this.name].skillDetails.expertise.bonusStat
+        );
+        let skillExpertise = 0;
+        if (
+          this.stats.Skills[this.name].skillDetails.expertise.bonusStat ===
+          stat["Stat Bonus"]
+        ) {
+          skillExpertise =
+            Object.hasOwnProperty.call(
+              this.stats.Skills[this.name].skillDetails.expertise,
+              "StatValueExpertise"
+            ) && stat["Expertise Bonus"] === stat["Bonus"]
+              ? (this.stats.Skills[this.name].skillDetails.expertise
+                  .StatValueExpertise +
+                  Number.EPSILON) /
+                100
+              : (this.stats.Skills[this.name].skillDetails.expertise.max +
+                  Number.EPSILON) /
+                100;
+        }
         if (this.debug) {
           console.groupEnd();
         }
@@ -430,9 +492,6 @@
           : 0;
       },
       getSumSkillStat(stat) {
-        const sumBonus = this.stats.Utility[stat["Stat Bonus"]]
-          ? (this.stats.Utility[stat["Stat Bonus"]] + Number.EPSILON) / 100
-          : 0;
         const debugFormat = "background: #222; color: #ff09c7";
         if (this.debug)
           console.groupCollapsed(
@@ -440,6 +499,30 @@
             debugFormat,
             stat
           );
+        let sumBonus = 0;
+        switch (stat["Stat Bonus"]) {
+          case "Burn Damage":
+          case "Bleed Damage":
+            sumBonus =
+              this.stats.Utility["Skill Damage"] ||
+              this.stats.Utility["Status Effects"]
+                ? (this.stats.Utility["Skill Damage"] +
+                    this.stats.Utility["Status Effects"] +
+                    Number.EPSILON) /
+                  100
+                : 0;
+            break;
+          case "Damage":
+            sumBonus = this.stats.Utility["Skill Damage"]
+              ? (this.stats.Utility["Skill Damage"] + Number.EPSILON) / 100
+              : 0;
+            break;
+          default:
+            sumBonus = this.stats.Utility[stat["Stat Bonus"]]
+              ? (this.stats.Utility[stat["Stat Bonus"]] + Number.EPSILON) / 100
+              : 0;
+            break;
+        }
         if (this.debug) {
           console.groupEnd();
         }
@@ -449,9 +532,7 @@
             "background: #222; color: #ff0000"
           );
         }
-        return this.stats.Utility[stat["Stat Bonus"]]
-          ? (this.stats.Utility[stat["Stat Bonus"]] + Number.EPSILON) / 100
-          : 0;
+        return sumBonus;
       },
       getSkillMods(stat) {
         const debugFormat = "background: #222; color: #ff09c7";

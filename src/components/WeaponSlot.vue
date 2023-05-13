@@ -1,8 +1,12 @@
 <template>
 	<div class="weapon-container">
-		<template v-if="isWeaponSelected()">
+		<template v-if="!isWeaponSelected()">
+			<span @click="openWeaponsModal()" class="no-element-selected">
+				<p>CHOOSE YOUR WEAPON</p>
+			</span>
+		</template>
+		<template v-else>
 			<div
-				@click="onClick()"
 				class="slot-element weapon-name"
 				v-bind:class="[qualityToCSS(currentWeapon.quality)]"
 				v-on:click="openWeaponsModal()"
@@ -172,11 +176,6 @@
 				</template>
 			</div>
 		</template>
-		<template v-if="!isWeaponSelected()">
-			<span @click="onClick()" class="no-element-selected">
-				<p>CHOOSE YOUR WEAPON</p>
-			</span>
-		</template>
 	</div>
 </template>
 
@@ -248,11 +247,6 @@
 			},
 			isWeaponSelected() {
 				return this.currentWeapon && this.currentWeapon.name;
-			},
-			onClick() {
-				if (!this.isWeaponSelected()) {
-					this.openWeaponsModal();
-				}
 			},
 			openWeaponsModal() {
 				openWeaponsModal(this.weaponsList, this.onModalClose);

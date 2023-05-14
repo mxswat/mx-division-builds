@@ -87,7 +87,7 @@
 		},
 		methods: {
 			getBrandOrGearsetIcon(name) {
-				return this.BrandsData[name] ? this.BrandsData[name].Icon : "";
+				return this.BrandsData[name] ? `icons/brands/'${this.BrandsData[name].Icon}` : "";
 			},
 			qualityToCSS(quality) {
 				return qualityToCss[quality];

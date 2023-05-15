@@ -6,10 +6,7 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<a
-			@click="showMobileMenu = !showMobileMenu"
-			class="menu-btt arrow-down"
-		>
+		<a @click="showMobileMenu = !showMobileMenu" class="menu-btt arrow-down">
 			Skill Types
 		</a>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
@@ -39,9 +36,7 @@
 					>
 						<img
 							:class="
-								skill['Skill Variant Name'] === 'Slot'
-									? 'skill-icon-blank'
-									: 'skill-icon'
+								skill['Variant'] === 'Slot' ? 'skill-icon-blank' : 'skill-icon'
 							"
 							:src="skill['Icon']"
 							alt=""
@@ -67,9 +62,7 @@
 									</li>
 									<li
 										class="stats-wrap"
-										v-for="(stat, idx) in getSkillStats(
-											skill
-										)"
+										v-for="(stat, idx) in getSkillStats(skill)"
 										v-bind:key="idx"
 									>
 										<span class="stat white-space-pre-wrap">

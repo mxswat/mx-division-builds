@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>8.1% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.5% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Scalpel - Tactical .308",
+   "dmg": "376,096",
+   "rpm": 70,
+   "mag": 7,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>93% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "GR9",
+   "dmg": "",
+   "rpm": 750,
+   "mag": 200,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>18.5% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Resolute MK47",
+   "dmg": "104,837",
+   "rpm": 300,
+   "mag": 30,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
  }
 ]

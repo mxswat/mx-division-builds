@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Electronics Upgrade",
    "attributes": " Trap<br/>5.7% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility Protocol: Intensity",
+   "attributes": "8.9% Skill Duration "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Liquid Nitrogen Cooling System",
+   "attributes": " Chem Launcher<br/>6.5% Radius"
  }
 ]

@@ -33,6 +33,7 @@
 
 	.skill1,
 	.skill2 {
-		background: rgba(0, 0, 0, 0.25);
+		// background: rgba(0, 0, 0, 0.25);
+		background: rgba(255, 0, 0, 0.25);
 	}
 </style>

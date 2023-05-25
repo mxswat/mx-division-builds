@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": " Sticky Bomb<br/>6.5% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "4.7% Critical Hit Chance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Swarm Control",
+   "attributes": " Hive<br/>4.4% Duration"
  }
 ]

@@ -44,7 +44,18 @@
 							<span class="name">
 								{{ getDisplayName(weapon) }}
 							</span>
-							<div class="white-space-pre-wrap">
+							<ul class="perfect-attributes" v-if="getPerfectAttributes(weapon).length > 0">
+								<li
+									v-for="(attribute, idx) in getPerfectAttributes(weapon)"
+									v-bind:key="idx"
+								>
+									{{ attribute }}
+								</li>
+							</ul>
+							<div
+								v-if="getTalentDesc(weapon.Talent)"
+								class="talent-wrap"
+							>
 								{{ getTalentDesc(weapon.Talent) }}
 							</div>
 							<div
@@ -83,6 +94,7 @@
 		data() {
 			return {
 				WeaponTalents: {},
+				perfectAttributes: [],
 				weaponsList: [],
 				searchText: "",
 				debounce: null,
@@ -99,9 +111,24 @@
 					? weapon.Name
 					: `${weapon.Name} (${weapon.Variant})`;
 			},
+			getPerfectAttributes(weapon) {
+				let result = [];
+				if (weapon['Quality'] !== 'Named') {
+					return result;
+				}
+				['Attribute 1'].forEach((key) => {
+					if (weapon[key] && weapon[key].length > 1) {
+						let found = this.perfectAttributes.find((a) => a.Stat === weapon[key]);
+						if (found) {
+							result.push(`${found.Stat.trim()} ${found.Max}`);
+						}
+					}
+				})
+				return result;
+			},
 			getTalentDesc(talent) {
 				return this.WeaponTalents[talent]
-					? this.WeaponTalents[talent]
+					? `Talent: ${talent}\n${this.WeaponTalents[talent]}`
 					: null;
 			},
 			debouceSearch(event) {
@@ -152,6 +179,7 @@
 			Promise.all([
 				IsEverythingLoadedPromise,
 				weaponsData.WeaponTalents,
+				weaponsData.WeaponAttributes,
 				VendorData,
 				//   gearMetaData.BrandsData,
 			]).then((data) => {
@@ -165,7 +193,8 @@
 							QualityPriority[[b["Quality"]]] ||
 						a["Name"].localeCompare(b["Name"])
 				);
-				this.vendorWeapons = data[2].Weapons;
+				this.perfectAttributes = data[2].filter( a => a.Quality === 'N');
+				this.vendorWeapons = data[3].Weapons;
 				this.weaponsList = groupArrayOfObjectsByKey(
 					sorted,
 					"Weapon Type"
@@ -200,6 +229,13 @@
 			position: relative;
 			min-height: 10px;
 			cursor: pointer;
+
+			.name {
+				width: 100%;
+				font-size: 18px;
+				font-weight: 600;
+			}
+
 			&.named {
 				background: rgba(255, 174, 0, 0.8);
 			}
@@ -272,4 +308,19 @@
 			}
 		}
 	}
+
+
+	ul.perfect-attributes {
+		list-style-type :none;
+	}
+
+	ul.perfect-attributes > li::before {
+		content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 -256 1792 1792'%3E%3Cpath d='M704 512q0 53-37.5 90.5T576 640q-53 0-90.5-37.5T448 512q0-37 19-67t51-47l-69-229q-5-15 5-28t26-13h192q16 0 26 13t5 28l-69 229q32 17 51 47t19 67zM320 768h512v192q0 106-75 181t-181 75q-106 0-181-75t-75-181V768zm832-96V96q0-40-28-68t-68-28H96Q56 0 28 28T0 96v576q0 40 28 68t68 28h32v192q0 184 132 316t316 132q184 0 316-132t132-316V768h32q40 0 68-28t28-68z' style='fill:currentColor' transform='matrix(1 0 0 -1 318.915 1346.17)'/%3E%3C/svg%3E");
+		filter: invert(100%);
+		display: inline-block;
+		width: 1.5em;
+		margin-left: -2.75em;
+		vertical-align: text-top;
+	}
+
 </style>

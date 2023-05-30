@@ -25,7 +25,10 @@
             <span class="name">
               {{ getDisplayName(gear) }}
             </span>
-            <ol class="bonuses-container" v-if="getBonuses(gear).length > 0">
+            <ol class="bonuses-container"
+                :start="gear.Quality === 'Gearset' ? 2 : 1"
+                v-if="getBonuses(gear).length > 0"
+            >
               <li
                 class="bonus-wrap"
                 v-for="(bonuses, idx) in getBonuses(gear)"

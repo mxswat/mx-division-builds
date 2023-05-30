@@ -16,8 +16,8 @@
 		</div>
 		<div class="loading" v-if="errorOnGetData">
 			<span
-				>I'm sorry, too many people are connected to the server right
-				now. Try again later in one hour.<br />
+				>I'm sorry, too many people are connected to the server right now. Try
+				again later in one hour.<br />
 				If you can, please report this issue at
 				<a style="color: " href="http://discord.gg/ShYner2"
 					>my discord server!</a
@@ -32,7 +32,7 @@
 					<GeneralStats></GeneralStats>
 				</BasicTile>
 			</div>
-			<SkillStats></SkillStats>
+			<!-- <SkillStats></SkillStats> -->
 			<BasicTile classes="dps-chart">
 				<DPSChart></DPSChart>
 			</BasicTile>
@@ -61,7 +61,7 @@
 		name: "App",
 		components: {
 			WeaponStats,
-			SkillStats,
+			// SkillStats,
 			GeneralStats,
 			BasicTile,
 			Toolbar,

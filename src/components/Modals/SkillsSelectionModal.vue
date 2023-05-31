@@ -36,6 +36,7 @@
 						@click="onSelection(skill)"
 					>
 						<img
+							v-if="getSkillIcon(skill)"
 							:class="
 								skill['Variant'] === 'Slot' ? 'skill-icon-blank' : 'skill-icon'
 							"
@@ -48,6 +49,9 @@
 							</span>
 							<div class="white-space-pre-wrap">
 								{{ skill.Desc }}
+							</div>
+							<div class="white-space-pre-wrap">
+								{{ skill.Status }}
 							</div>
 							<div class="white-space-pre-wrap">
 								<ul

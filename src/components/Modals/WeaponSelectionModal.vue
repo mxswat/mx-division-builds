@@ -6,10 +6,7 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<a
-			@click="showMobileMenu = !showMobileMenu"
-			class="menu-btt arrow-down"
-		>
+		<a @click="showMobileMenu = !showMobileMenu" class="menu-btt arrow-down">
 			Weapon Types
 		</a>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
@@ -29,10 +26,8 @@
 					:id="key"
 					>{{ key }}
 				</span>
-				<div
-					class="weapon-grid"
-					v-if="filterWeaponList(weapons).length > 0"
-				>
+				<div class="weapon-grid" v-if="filterWeaponList(weapons).length > 0">
+					<div v-for="n in 4" v-bind:key="n"></div>
 					<div
 						class="weapon-slot"
 						:class="[qualityToCSS(weapon.Quality)]"
@@ -47,10 +42,7 @@
 							<div class="white-space-pre-wrap">
 								{{ getTalentDesc(weapon.Talent) }}
 							</div>
-							<div
-								v-if="isAvailableAtVendor(weapon)"
-								class="vendor-label"
-							>
+							<div v-if="isAvailableAtVendor(weapon)" class="vendor-label">
 								Sold at <b>{{ whereIsAvailable(weapon) }}</b>
 							</div>
 						</BasicTile>
@@ -100,9 +92,7 @@
 					: `${weapon.Name} (${weapon.Variant})`;
 			},
 			getTalentDesc(talent) {
-				return this.WeaponTalents[talent]
-					? this.WeaponTalents[talent]
-					: null;
+				return this.WeaponTalents[talent] ? this.WeaponTalents[talent] : null;
 			},
 			debouceSearch(event) {
 				clearTimeout(this.debounce);
@@ -133,9 +123,7 @@
 				});
 			},
 			isAvailableAtVendor(weapon) {
-				return this.vendorWeapons.some(
-					(item) => item.Name === weapon.Name
-				);
+				return this.vendorWeapons.some((item) => item.Name === weapon.Name);
 			},
 			whereIsAvailable(weapon) {
 				const found = this.vendorWeapons.find(
@@ -161,15 +149,11 @@
 				}, {});
 				const sorted = this.gearData.sort(
 					(a, b) =>
-						QualityPriority[a["Quality"]] -
-							QualityPriority[[b["Quality"]]] ||
+						QualityPriority[a["Quality"]] - QualityPriority[[b["Quality"]]] ||
 						a["Name"].localeCompare(b["Name"])
 				);
 				this.vendorWeapons = data[2].Weapons;
-				this.weaponsList = groupArrayOfObjectsByKey(
-					sorted,
-					"Weapon Type"
-				);
+				this.weaponsList = groupArrayOfObjectsByKey(sorted, "Weapon Type");
 			});
 		},
 	};

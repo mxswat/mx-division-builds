@@ -27,6 +27,7 @@
 					>{{ key }}
 				</span>
 				<div class="skills-grid" v-if="filterByName(skills).length > 0">
+					<div v-for="n in 4" v-bind:key="n"></div>
 					<div
 						class="skills-slot"
 						v-for="(skill, idx) in filterByName(skills)"
@@ -38,7 +39,7 @@
 							:class="
 								skill['Variant'] === 'Slot' ? 'skill-icon-blank' : 'skill-icon'
 							"
-							:src="skill['Icon']"
+							:src="getSkillIcon(skill)"
 							alt=""
 						/>
 						<BasicTile :classes="'anim-enabled'">
@@ -105,6 +106,10 @@
 			};
 		},
 		methods: {
+			getSkillIcon(skill) {
+				console.log(skill);
+				return skill.Icon ? `icons/skills/${skill.Icon}` : "";
+			},
 			scrollToElementID(divId) {
 				document.getElementById(divId).scrollIntoView();
 			},

@@ -1,7 +1,7 @@
 <template>
 	<div class="skill-container">
 		<template @click="onClick()" v-if="isSkillSelected()">
-			<img :src="currentSkill.icon" alt="" class="img-slot-bg" />
+			<img :src="getSkillIcon(currentSkill)" alt="" class="img-slot-bg" />
 			<div
 				class="slot-element skill-name"
 				v-bind:class="[qualityToCSS(currentSkill.quality)]"
@@ -136,6 +136,9 @@
 						a["Mod Attribute"] > b["Mod Attribute"] ? 1 : -1
 					);
 				});
+			},
+			getSkillIcon(skill) {
+				return skill.icon ? `icons/skills/${skill.icon}` : "";
 			},
 			qualityToCSS(quality) {
 				return qualityToCss[quality];

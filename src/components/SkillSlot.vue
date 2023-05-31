@@ -7,9 +7,7 @@
 				v-bind:class="[qualityToCSS(currentSkill.quality)]"
 				v-on:click="openSkillsModal()"
 			>
-				<div>
-					{{ currentSkill.variant }} {{ currentSkill.itemName }}
-				</div>
+				<div>{{ currentSkill.variant }} {{ currentSkill.itemName }}</div>
 			</div>
 			<!-- Expertise -->
 			<div class="slot-element stat-edit">
@@ -26,10 +24,7 @@
 			>
 				<div
 					class="slot-element stat-edit mod-slot"
-					v-if="
-						currentSkill.filters[`mod${slot}`] &&
-							getModSlotName(slot)
-					"
+					v-if="currentSkill.filters[`mod${slot}`] && getModSlotName(slot)"
 					v-bind:key="id"
 				>
 					<v-select
@@ -51,9 +46,7 @@
 										: ""
 								}`
 							}}</span>
-							<span class="attribute-value">{{
-								option[`Max`]
-							}}</span>
+							<span class="attribute-value">{{ option[`Max`] }}</span>
 						</template>
 						<template #selected-option="option">
 							<!-- <img
@@ -71,15 +64,9 @@
 					</v-select>
 					<StatInput
 						v-if="currentSkill[`mod${slot}`]"
-						v-model="
-							currentSkill[`mod${slot}`][`StatValueMod${slot}`]
-						"
-						v-bind:max="
-							getMaxStatValue(currentSkill[`mod${slot}`][`Max`])
-						"
-						v-bind:step="
-							getStepStatValue(currentSkill[`mod${slot}`][`Max`])
-						"
+						v-model="currentSkill[`mod${slot}`][`StatValueMod${slot}`]"
+						v-bind:max="getMaxStatValue(currentSkill[`mod${slot}`][`Max`])"
+						v-bind:step="getStepStatValue(currentSkill[`mod${slot}`][`Max`])"
 					></StatInput>
 				</div>
 			</template>
@@ -96,11 +83,7 @@
 <script>
 	import { openSkillsModal } from "../utils/modalService";
 	import { SkillBase } from "../utils/classes";
-	import {
-		typeToImgSrc,
-		qualityToCss,
-		getUniqueObject,
-	} from "../utils/utils";
+	import { typeToImgSrc, qualityToCss, getUniqueObject } from "../utils/utils";
 	import { skillsData } from "../utils/dataImporter";
 	import StatInput from "./StatInput";
 	import Vue from "vue";
@@ -118,7 +101,7 @@
 		},
 		data() {
 			return {
-				debug: true,
+				debug: false,
 				currentSkill: new SkillBase(),
 				typeToImgSrc: null,
 				skillsList: [],
@@ -179,14 +162,14 @@
 				}
 				this.currentSkill = new SkillBase(data);
 				if (this.currentSkill.itemName === "(Blank)") {
-					this.currentSkill = null;
+					console.warn(`(Blank) skill selected, clearing slot`);
+					this.currentSkill = undefined;
 					return;
 				}
 				this.currentSkill.stats = this.skillStats.filter((stat) => {
 					return (
 						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-							stat["Skill Variant Name"] &&
-						stat.Stat !== "(Blank)"
+							stat["Skill Variant Name"] && stat.Stat !== "(Blank)"
 					);
 				});
 				if (this.debug) {
@@ -211,11 +194,8 @@
 						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 							stat["Skill Variant Name"] &&
 						stat["Display"].toLowerCase().includes("true") &&
-						(stat["Skill Mod Slot"] ===
-							this.currentSkill[`slot${slot}`] ||
-							stat["Skill Mod Slot"]
-								.toLowerCase()
-								.includes("all"))
+						(stat["Skill Mod Slot"] === this.currentSkill[`slot${slot}`] ||
+							stat["Skill Mod Slot"].toLowerCase().includes("all"))
 					);
 				});
 				if (this.debug) {
@@ -237,54 +217,31 @@
 					if (skillId) {
 						const fromUrlGear = new SkillBase(
 							this.skillsList.find(
-								(skill) =>
-									parseInt(skill["Skill ID"]) ===
-									parseInt(skillId)
+								(skill) => parseInt(skill["Skill ID"]) === parseInt(skillId)
 							)
 						);
 						this.currentSkill = fromUrlGear;
 						if (this.debug) {
 							console.warn(`(currentSkill) :`, this.currentSkill);
 						}
-						this.currentSkill.stats = this.skillStats.filter(
-							(stat) => {
-								return (
-									`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
-										stat["Skill Variant Name"] &&
-									stat.Stat !== "(Blank)"
-								);
-							}
-						);
-						if (this.debug) {
-							console.warn(
-								`(currentSkill.stats) :`,
-								this.currentSkill.stats
+						this.currentSkill.stats = this.skillStats.filter((stat) => {
+							return (
+								`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+									stat["Skill Variant Name"] && stat.Stat !== "(Blank)"
 							);
+						});
+						if (this.debug) {
+							console.warn(`(currentSkill.stats) :`, this.currentSkill.stats);
 						}
-						this.currentSkill.modOne = this.skillMods.find(
-							(mod) => {
-								return (
-									parseInt(mod["Skill Mod ID"]) ===
-									parseInt(splittedIdS[1])
-								);
-							}
-						);
-						this.currentSkill.modTwo = this.skillMods.find(
-							(mod) => {
-								return (
-									parseInt(mod["Skill Mod ID"]) ===
-									parseInt(splittedIdS[2])
-								);
-							}
-						);
-						this.currentSkill.modThree = this.skillMods.find(
-							(mod) => {
-								return (
-									parseInt(mod["Skill Mod ID"]) ===
-									parseInt(splittedIdS[3])
-								);
-							}
-						);
+						this.currentSkill.modOne = this.skillMods.find((mod) => {
+							return parseInt(mod["Skill Mod ID"]) === parseInt(splittedIdS[1]);
+						});
+						this.currentSkill.modTwo = this.skillMods.find((mod) => {
+							return parseInt(mod["Skill Mod ID"]) === parseInt(splittedIdS[2]);
+						});
+						this.currentSkill.modThree = this.skillMods.find((mod) => {
+							return parseInt(mod["Skill Mod ID"]) === parseInt(splittedIdS[3]);
+						});
 						if (this.debug) {
 							console.warn(
 								`(currentSkill Mods) :`,
@@ -294,27 +251,14 @@
 							);
 						}
 
-						const stats = [
-							null,
-							"modOne",
-							"modTwo",
-							"modThree",
-							"expertise",
-						]; // 4, 5, 6
-						const slots = [
-							"ModOne",
-							"ModTwo",
-							"ModThree",
-							"Expertise",
-						];
+						const stats = [null, "modOne", "modTwo", "modThree", "expertise"]; // 4, 5, 6
+						const slots = ["ModOne", "ModTwo", "ModThree", "Expertise"];
 						for (let idx = 1; idx < stats.length; idx++) {
 							const stat = stats[idx];
 							const slot = slots[idx - 1];
 							const currentStatToUpdate = this.currentSkill[stat];
 
-							var valueToImport = parseFloat(
-								splittedIdS[3 + idx]
-							);
+							var valueToImport = parseFloat(splittedIdS[3 + idx]);
 
 							if (this.debug) {
 								console.warn(
@@ -334,11 +278,7 @@
 								}
 								// Using Vue set because I want this to be reactive and
 								// to trigger watch deep when it changes into StatInput
-								Vue.set(
-									currentStatToUpdate,
-									`StatValue${slot}`,
-									valueToImport
-								);
+								Vue.set(currentStatToUpdate, `StatValue${slot}`, valueToImport);
 							}
 						}
 					}
@@ -388,12 +328,10 @@
 						slots.forEach((modSlot) => {
 							if (this.debug) console.warn(`modSlot:`, modSlot);
 							for (const property in modSlot) {
-								if (this.debug)
-									console.warn(`property:`, property);
+								if (this.debug) console.warn(`property:`, property);
 								if (
 									val[property] &&
-									val[property][modSlot[property]] ===
-										"(Blank)"
+									val[property][modSlot[property]] === "(Blank)"
 								) {
 									val[property] = null;
 								}

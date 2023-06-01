@@ -27,7 +27,6 @@
 					>{{ key }}
 				</span>
 				<div class="skills-grid" v-if="filterByName(skills).length > 0">
-					<div v-for="n in 4" v-bind:key="n"></div>
 					<div
 						class="skills-slot"
 						v-for="(skill, idx) in filterByName(skills)"
@@ -35,51 +34,60 @@
 						:class="[qualityToCSS(skill['Skill Variant Name'])]"
 						@click="onSelection(skill)"
 					>
-						<img
-							v-if="getSkillIcon(skill)"
-							:class="
-								skill['Variant'] === 'Slot' ? 'skill-icon-blank' : 'skill-icon'
-							"
-							:src="getSkillIcon(skill)"
-							alt=""
-						/>
 						<BasicTile :classes="'anim-enabled'">
 							<span class="name">
 								{{ getDisplayName(skill) }}
 							</span>
-							<div class="white-space-pre-wrap">
-								{{ skill.Desc }}
-							</div>
-							<div class="white-space-pre-wrap">
-								{{ skill.Status }}
-							</div>
-							<div class="white-space-pre-wrap">
-								<ul
-									class="bonuses-container"
-									v-if="getSkillStats(skill).length > 0"
-								>
-									<li class="stats-wrap">
-										<span class="stat white-space-pre-wrap">
-											Expertise:
-											{{ skill["Expertise Bonus"] }}
-											<br />
-										</span>
-									</li>
-									<li
-										class="stats-wrap"
-										v-for="(stat, idx) in getSkillStats(skill)"
-										v-bind:key="idx"
+							<div>
+								<img
+									v-if="getSkillIcon(skill)"
+									:class="
+										skill['Variant'] === 'Slot'
+											? 'skill-icon-blank'
+											: 'skill-icon'
+									"
+									:src="getSkillIcon(skill)"
+									alt=""
+								/>
+								<div class="white-space-pre-wrap">
+									{{ skill.Desc }}
+								</div>
+								<div class="white-space-pre-wrap">
+									{{ skill.Status }}
+								</div>
+								<div class="white-space-pre-wrap">
+									<ul
+										class="bonuses-container"
+										v-if="getSkillStats(skill).length > 0"
 									>
-										<span class="stat white-space-pre-wrap">
-											{{ stat.Stat }}
-											{{ stat.Val }}
-											<br />
-										</span>
-									</li>
-								</ul>
+										<li class="stats-wrap">
+											<span class="stat white-space-pre-wrap">
+												Expertise:
+												{{ skill["Expertise Bonus"] }}
+												<br />
+											</span>
+										</li>
+										<li
+											class="stats-wrap"
+											v-for="(stat, idx) in getSkillStats(skill)"
+											v-bind:key="idx"
+										>
+											<span class="stat white-space-pre-wrap">
+												{{ stat.Stat }}
+												{{ stat.Val }}
+												<br />
+											</span>
+										</li>
+									</ul>
+								</div>
 							</div>
 						</BasicTile>
 					</div>
+					<div
+						style="display:flex"
+						v-for="i in getKeys(skills)"
+						v-bind:key="i"
+					></div>
 				</div>
 			</div>
 		</div>
@@ -110,8 +118,15 @@
 			};
 		},
 		methods: {
+			getKeys(skills) {
+				// return an array of keys for the dummy skill divs
+				const MAX_VARIANTS = 5;
+				const num_variants = this.filterByName(skills).length;
+				const len = MAX_VARIANTS - num_variants;
+				return Array.from({ length: len }, (_, i) => num_variants + i);
+			},
 			getSkillIcon(skill) {
-				console.log(skill);
+				// console.log(skill);
 				return skill.Icon ? `icons/skills/${skill.Icon}` : "";
 			},
 			scrollToElementID(divId) {
@@ -229,9 +244,10 @@
 			width: 84px;
 			object-fit: contain;
 			opacity: 0.7;
-			position: absolute;
-			top: 60px;
-			right: 16px;
+			// position: absolute;
+			// top: 60px;
+			// right: 16px;
+			float: right;
 			z-index: 0;
 		}
 

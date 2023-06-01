@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Payload",
    "attributes": " Sticky Bomb<br/>4.7% Blast Radius"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "10.4% Critical Hit Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Backpack Battery",
+   "attributes": " Hive<br/>8.5% Health"
  }
 ]

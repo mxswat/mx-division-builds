@@ -516,5 +516,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>10.5% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The White Death - Classic M44 Carbine",
+   "dmg": "423,108",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Future Perfection",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>137% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "MP5 ST",
+   "dmg": "51,713",
+   "rpm": 800,
+   "mag": 32,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>10% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.8% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "KSG Shotgun",
+   "dmg": "594,230",
+   "rpm": 70,
+   "mag": 12,
+   "talent": "Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
  }
 ]

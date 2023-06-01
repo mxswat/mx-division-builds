@@ -141,7 +141,8 @@
 				return skill.icon ? `icons/skills/${skill.icon}` : "";
 			},
 			qualityToCSS(quality) {
-				return qualityToCss[quality];
+				// return qualityToCss[quality];
+				return "skill";
 			},
 			getModSlotName(slot) {
 				if (this.currentSkill[`slot${slot}`]) {
@@ -360,6 +361,10 @@
 	.skill-container {
 		height: 100%;
 		color: white;
+	}
+
+	.skill {
+		background: #9dacb3;
 	}
 
 	// attribute-label

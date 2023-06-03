@@ -99,7 +99,7 @@
     methods: {
       getBrandOrGearsetIcon(name) {
         return this.BrandsData[name]
-          ? `/icons/brands/${this.BrandsData[name].Icon}`
+          ? `icons/brands/${this.BrandsData[name].Icon}`
           : "";
       },
       qualityToCSS(quality) {

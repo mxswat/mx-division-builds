@@ -8,7 +8,9 @@
       name="Build Name"
     /> -->
 		<div class="spacer"></div>
-		<a @click="showMobileMenu = !showMobileMenu" class="menu-btt arrow-down"
+		<a @click="showMobileMenu = !showMobileMenu"
+			class="menu-btt no-select"
+			:class="[showMobileMenu ? 'arrow-up' : 'arrow-down']"
 			>Menu</a
 		>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">

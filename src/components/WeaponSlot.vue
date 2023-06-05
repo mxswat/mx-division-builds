@@ -252,11 +252,11 @@
 				openWeaponsModal(this.weaponsList, this.onModalClose);
 			},
 			onModalClose(data) {
-				this.currentWeapon = new WeaponBase(data);
-				if (this.currentWeapon.name === "(Blank)") {
+				if (!data) {
 					this.currentWeapon = undefined;
 					return;
 				}
+				this.currentWeapon = new WeaponBase(data);
 				const isExotic = this.isExotic(this.currentWeapon);
 				const isNamed = this.isNamed(this.currentWeapon);
 				if (isExotic || isNamed) {

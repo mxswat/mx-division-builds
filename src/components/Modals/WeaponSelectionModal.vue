@@ -35,26 +35,36 @@
 					<template v-else>
 						<BasicTile :classes="'anim-enabled'">
 							<div class="tile-content">
-								<span class="name">
-									{{ getDisplayName(item.weapon) }}
-								</span>
-								<div
-									class="perks-container"
-									v-for="(perk, idx) in getPerks(item.weapon)"
-									v-bind:key="idx"
-								>
-									<div class="perk-icon" :class="perk.type"></div>
-									<div class="perk">{{ perk.desc }}</div>
-								</div>
-								<div class="talent"
-									>{{ getTalentDesc(item.weapon.Talent) }}</div
-								>
-								<div
-									v-if="isAvailableAtVendor(item.weapon)"
-									class="vendor-label"
-								>
-									Sold at <b>{{ whereIsAvailable(item.weapon) }}</b>
-								</div>
+								<template v-if="!item.weapon">
+									<span class="name">
+										Empty Slot
+									</span>
+									<div class="talent"
+										>Remove the weapon from this slot.</div
+									>
+								</template>
+								<template v-else>
+									<span class="name">
+										{{ getDisplayName(item.weapon) }}
+									</span>
+									<div
+										class="perks-container"
+										v-for="(perk, idx) in getPerks(item.weapon)"
+										v-bind:key="idx"
+									>
+										<div class="perk-icon" :class="perk.type"></div>
+										<div class="perk">{{ perk.desc }}</div>
+									</div>
+									<div class="talent"
+										>{{ getTalentDesc(item.weapon.Talent) }}</div
+									>
+									<div
+										v-if="isAvailableAtVendor(item.weapon)"
+										class="vendor-label"
+									>
+										Sold at <b>{{ whereIsAvailable(item.weapon) }}</b>
+									</div>
+								</template>
 							</div>
 						</BasicTile>
 					</template>
@@ -201,7 +211,14 @@
 						classes: 'weapon-type',
 						event: null,
 						weapon: null,
-					})
+					});
+					// add an empty slot option at the beginning of each category
+					this.gridItems.push({
+						type: null,
+						classes: 'weapon-slot',
+						event: 'click',
+						weapon: null,
+					});
 					weapons[type].forEach((weapon) => {
 						// then add all of the weapons for the section
 						this.gridItems.push({
@@ -209,7 +226,7 @@
 							classes: 'weapon-slot ' + qualityToCss[weapon.Quality],
 							event: 'click',
 							weapon: weapon,
-						})
+						});
 					});
 				});
 			});
@@ -333,7 +350,6 @@
 		margin-left: 8px;
 		width: auto;
 	}
-
 
 	// mobile switch to menu W/ button
 	@media only screen and (max-width: 850px) {

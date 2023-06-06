@@ -98,15 +98,15 @@
         vendorGear: [],
       };
     },
-		computed: {
-			gridItems: function () {
-				// computed list of items which can be filtered by user searches
-
-				// filter the full list of gear if needed before
-				// generating the list of items for the grid
-				const gears = this.searchText.length
-					? this.getFilteredGearList()
-					: this.gearList;
+    computed: {
+      gridItems: function () {
+        // computed list of items which can be filtered by user searches
+        
+        // filter the full list of gear if needed before
+        // generating the list of items for the grid
+        const gears = this.searchText.length
+          ? this.getFilteredGearList()
+          : this.gearList;
 
         const itemList = [];
         // add an empty slot at the beginning of the list

@@ -28,8 +28,8 @@
               <div class="talent"
                 >Remove the item from this slot.</div
               >
-						</template>
-						<template v-else>
+            </template>
+            <template v-else>
               <span class="name">
                 {{ getDisplayName(item.gear) }}
               </span>

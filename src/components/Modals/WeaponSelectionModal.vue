@@ -97,13 +97,58 @@
 			return {
 				WeaponTalents: {},
 				perfectAttributes: [],
-				weaponTypes: [],
-				gridItems: [],
+				weaponsList: [],
 				searchText: "",
 				debounce: null,
 				showMobileMenu: false,
 				vendorWeapons: [],
 			};
+		},
+		computed: {
+			weaponTypes: function () {
+				// this updates if the grid items are filtered by the user
+				return this.gridItems.filter((item) => item.type).map(item => item.type);
+			},
+			gridItems: function () {
+				// computed list of items which can be filtered by user searches
+
+				// vue won't let us loop on templates for the alternating grid sections
+				// so we flatten the list sections and weapons into a single list
+
+				// filter the full list of weapons if needed before
+				// generating the list of items for the grid
+				const weapons = this.searchText.length
+					? this.filterWeaponsList()
+					: this.weaponsList;
+
+				const itemList = [];
+				Object.keys(weapons).sort().forEach((type) =>{
+					// add each weapon type section heading
+					itemList.push({
+						type: type,
+						classes: 'weapon-type',
+						event: null,
+						weapon: null,
+					});
+					// add an empty slot option at the beginning of each section
+					itemList.push({
+						type: null,
+						classes: 'weapon-slot',
+						event: 'click',
+						weapon: null,
+					});
+					weapons[type].forEach((weapon) => {
+						// then add all of the weapons for the section
+						itemList.push({
+							type: null,
+							classes: 'weapon-slot ' + qualityToCss[weapon.Quality],
+							event: 'click',
+							weapon: weapon,
+						});
+					});
+				});
+				return itemList;
+			},
 		},
 		methods: {
 			getDisplayName(weapon) {
@@ -112,7 +157,7 @@
 					: `${weapon.Name} (${weapon.Variant})`;
 			},
 			getPerks(weapon) {
-				let perks = [];
+				const perks = [];
 				if (weapon['Quality'] === 'Named') {
 					['Attribute 1'].forEach((key) => {
 						if (weapon[key] && weapon[key].length > 1) {
@@ -145,24 +190,25 @@
 			toggleMobileMenu() {
 				this.showMobileMenu = !this.showMobileMenu;
 			},
-			filterByName(list) {
-				return list.filter((weapon) =>
-					this.getDisplayName(weapon)
-						.toLocaleLowerCase()
-						.includes(this.searchText.toLocaleLowerCase())
-				);
-			},
-			filterWeaponList(list) {
-				return list.filter((weapon) => {
-					return (
-						this.getDisplayName(weapon)
-							.toLocaleLowerCase()
-							.includes(this.searchText.toLocaleLowerCase()) ||
-						weapon.Quality.toLocaleLowerCase().includes(
-							this.searchText.toLocaleLowerCase()
-						)
-					);
+			filterWeaponsList() {
+				const searchText = this.searchText.toLocaleLowerCase();
+				const result = {};
+				Object.keys(this.weaponsList).sort().forEach(type => {
+					const filtered = this.weaponsList[type].filter((weapon) => {
+						return (
+							this.getDisplayName(weapon)
+								.toLocaleLowerCase()
+								.includes(searchText) ||
+							weapon.Quality
+								.toLocaleLowerCase()
+								.includes(searchText)
+						);
+					});
+					if (filtered.length) {
+						result[type] = filtered;
+					}
 				});
+				return result;
 			},
 			isAvailableAtVendor(weapon) {
 				return this.vendorWeapons.some(
@@ -192,43 +238,18 @@
 					o[val.Name] = val.Desc;
 					return o;
 				}, {});
-				this.perfectAttributes = data[2].filter( a => a.Quality === 'N');				
-				this.vendorWeapons = data[3].Weapons;
 				const sorted = this.gearData.sort(
 					(a, b) =>
 						QualityPriority[a["Quality"]] -
 							QualityPriority[[b["Quality"]]] ||
 						a["Name"].localeCompare(b["Name"])
 				);
-				const weapons = groupArrayOfObjectsByKey(sorted, "Weapon Type");
-				// vue won't let us loop on templates for the alternating grid sections
-				// so we flatten the list sections/weapons into a single list
-				this.weaponTypes = Object.keys(weapons).sort();
-				this.weaponTypes.forEach((type) =>{
-					// add each weapon type section heading
-					this.gridItems.push({
-						type: type,
-						classes: 'weapon-type',
-						event: null,
-						weapon: null,
-					});
-					// add an empty slot option at the beginning of each category
-					this.gridItems.push({
-						type: null,
-						classes: 'weapon-slot',
-						event: 'click',
-						weapon: null,
-					});
-					weapons[type].forEach((weapon) => {
-						// then add all of the weapons for the section
-						this.gridItems.push({
-							type: null,
-							classes: 'weapon-slot ' + qualityToCss[weapon.Quality],
-							event: 'click',
-							weapon: weapon,
-						});
-					});
-				});
+				this.perfectAttributes = data[2].filter( a => a.Quality === 'N');
+				this.vendorWeapons = data[3].Weapons;
+				this.weaponsList = groupArrayOfObjectsByKey(
+					sorted,
+					"Weapon Type"
+				);
 			});
 		},
 	};

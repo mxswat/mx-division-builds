@@ -40,7 +40,7 @@
 										Empty Slot
 									</span>
 									<div class="talent"
-										>Remove the weapon from this slot.</div
+										>Remove the item from this slot.</div
 									>
 								</template>
 								<template v-else>
@@ -118,8 +118,10 @@
 				// filter the full list of weapons if needed before
 				// generating the list of items for the grid
 				const weapons = this.searchText.length
-					? this.filterWeaponsList()
+					? this.getFilteredWeaponsList()
 					: this.weaponsList;
+
+				console.log('weapons: ', weapons)
 
 				const itemList = [];
 				Object.keys(weapons).sort().forEach((type) =>{
@@ -130,7 +132,7 @@
 						event: null,
 						weapon: null,
 					});
-					// add an empty slot option at the beginning of each section
+					// add an empty slot at the beginning of each section
 					itemList.push({
 						type: null,
 						classes: 'weapon-slot',
@@ -190,7 +192,7 @@
 			toggleMobileMenu() {
 				this.showMobileMenu = !this.showMobileMenu;
 			},
-			filterWeaponsList() {
+			getFilteredWeaponsList() {
 				const searchText = this.searchText.toLocaleLowerCase();
 				const result = {};
 				Object.keys(this.weaponsList).sort().forEach(type => {

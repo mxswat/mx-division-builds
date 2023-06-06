@@ -9,53 +9,62 @@
     <div class="overflow-handler">
       <div class="gear-grid">
         <div
-          class="gear-slot"
-          v-for="(gear, idx) in filterByName(gearList)"
+          v-for="(item, idx) in gridItems"
           v-bind:key="idx"
-          :class="[qualityToCSS(gear.Quality)]"
-          @click="onSelection(gear)"
+          :class="[item.classes]"
+          @click="onSelection(item.gear)"
         >
           <img
-            v-if="getBrandOrGearsetIcon(gear['Brand'])"
+            v-if="item.gear && getBrandOrGearsetIcon(item.gear['Brand'])"
             class="gear-logo"
-            :src="getBrandOrGearsetIcon(gear['Brand'])"
+            :src="getBrandOrGearsetIcon(item.gear['Brand'])"
             alt=""
           />
           <BasicTile :classes="'anim-enabled'">
-            <span class="name">
-              {{ getDisplayName(gear) }}
-            </span>
-            <ol class="bonuses-container"
-                v-if="getBonuses(gear).length > 0"
-                :start="gear.Quality === 'Gearset' ? 2 : 1"
-            >
-              <li
-                class="bonus-wrap"
-                v-for="(bonuses, idx) in getBonuses(gear)"
+            <template v-if="item.gear === null">
+              <span class="name">
+                Empty Slot
+              </span>
+              <div class="talent"
+                >Remove the item from this slot.</div
+              >
+						</template>
+						<template v-else>
+              <span class="name">
+                {{ getDisplayName(item.gear) }}
+              </span>
+              <ol class="bonuses-container"
+                  v-if="getBonuses(item.gear).length > 0"
+                  :start="item.gear.Quality === 'Gearset' ? 2 : 1"
+              >
+                <li
+                  class="bonus-wrap"
+                  v-for="(bonuses, idx) in getBonuses(item.gear)"
+                  v-bind:key="idx"
+                >
+                  <span
+                    class="bonus"
+                    v-for="bonus in bonuses"
+                    v-bind:key="bonus"
+                    >{{ bonus }}<br /></span
+                  >
+                </li>
+              </ol>
+              <div
+                class="perks-container"
+                v-for="(perk, idx) in getPerks(item.gear)"
                 v-bind:key="idx"
               >
-                <span
-                  class="bonus"
-                  v-for="bonus in bonuses"
-                  v-bind:key="bonus"
-                  >{{ bonus }}<br /></span
-                >
-              </li>
-            </ol>
-            <div
-              class="perks-container"
-              v-for="(perk, idx) in getPerks(gear)"
-              v-bind:key="idx"
-            >
-              <div class="perk-icon" :class="perk.type"></div>
-              <div class="perk">{{ perk.desc }}</div>
-            </div>
-            <div class="talent"
-              >{{ getTalentDesc(gear.Talent) }}</div
-            >
-            <div v-if="isAvailableAtVendor(gear)" class="vendor-label">
-              Sold at <b>{{ whereIsAvailable(gear) }}</b>
-            </div>
+                <div class="perk-icon" :class="perk.type"></div>
+                <div class="perk">{{ perk.desc }}</div>
+              </div>
+              <div class="talent"
+                >{{ getTalentDesc(item.gear.Talent) }}</div
+              >
+              <div v-if="isAvailableAtVendor(item.gear)" class="vendor-label">
+                Sold at <b>{{ whereIsAvailable(item.gear) }}</b>
+              </div>
+            </template>
           </BasicTile>
         </div>
       </div>
@@ -89,14 +98,37 @@
         vendorGear: [],
       };
     },
+		computed: {
+			gridItems: function () {
+				// computed list of items which can be filtered by user searches
+
+				// filter the full list of gear if needed before
+				// generating the list of items for the grid
+				const gears = this.searchText.length
+					? this.getFilteredGearList()
+					: this.gearList;
+
+        const itemList = [];
+        // add an empty slot at the beginning of the list
+        itemList.push({
+          classes: 'gear-slot',
+          gear: null,
+        });
+        gears.forEach((gear) => {
+          // then add all of the gear to the list
+          itemList.push({
+            classes: 'gear-slot ' + qualityToCss[gear.Quality],
+            gear: gear,
+          });
+        });
+        return itemList;
+      },
+    },
     methods: {
       getBrandOrGearsetIcon(name) {
         return this.BrandsData[name]
           ? `icons/brands/${this.BrandsData[name].Icon}`
           : "";
-      },
-      qualityToCSS(quality) {
-        return qualityToCss[quality];
       },
       getDisplayName(gear) {
         return gear["Brand"] === gear[gearNameProp]
@@ -163,8 +195,8 @@
           this.searchText = event.target.value;
         }, 300);
       },
-      filterByName(list) {
-        return list.filter((gear) =>
+      getFilteredGearList() {
+        return this.gearList.filter((gear) =>
           this.getDisplayName(gear)
             .toLocaleLowerCase()
             .includes(this.searchText.toLocaleLowerCase())
@@ -222,7 +254,7 @@
 
   .gear-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 8px;
     padding: 8px;
     .tile {
@@ -234,6 +266,8 @@
       flex-wrap: wrap;
       position: relative;
       min-height: 180px;
+			min-width: 250px; /* must be the same as grid min */
+			max-width: 500px;
       cursor: pointer;
 
       .name {

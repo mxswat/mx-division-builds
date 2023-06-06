@@ -370,12 +370,11 @@
 				return this.currentGear && this.currentGear.itemName;
 			},
 			onModalClose(data) {
-				this.currentGear = new GearBase(data);
-				if (this.currentGear.itemName === "(Blank)") {
+				if (!data) {
 					this.currentGear = undefined;
 					return;
 				}
-
+				this.currentGear = new GearBase(data);
 				this.currentGear.core = this.coreAttributes.find(
 					(attribute) =>
 						attribute.label ===

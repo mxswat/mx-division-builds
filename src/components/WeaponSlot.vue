@@ -101,7 +101,10 @@
 			</div>
 			<div class="mods-toggle" @click="showModSlots = !showModSlots">
 				<span>Mods</span>
-				<div :class="[showModSlots ? 'arrow-up' : 'arrow-down']"></div>
+				<div
+					class="arrow-down mx__open-indicator {"
+					:class="[showModSlots ? 'mx--open' : '']"
+				></div>
 			</div>
 			<div class="mods-slots-container" v-if="showModSlots">
 				<template v-for="(mod, i) in modSlots">

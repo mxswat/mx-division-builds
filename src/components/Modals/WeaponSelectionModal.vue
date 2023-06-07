@@ -6,12 +6,15 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<a @click="toggleMobileMenu()"
-			class="menu-btt no-select"
-			:class="[showMobileMenu ? 'arrow-up' : 'arrow-down']"
+		<div @click="toggleMobileMenu()"
+			class="menu-btt"
 		>
-			Weapon Types
-		</a>
+			<span class="no-select">Weapon Types</span>
+			<div
+				class="arrow-down mx__open-indicator"
+				:class="[showMobileMenu ? 'mx--open' : '']"
+			></div>
+		</div>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
 			<button
 				class="mx-btt"
@@ -362,7 +365,8 @@
 		height: 31px;
 		line-height: 31px;
 		color: white;
-		padding-right: 24px;
+		padding-left: 8px;
+		padding-right: 6px;
 		background-color: transparent;
 		border: 0px;
 		background-position: right;
@@ -372,6 +376,10 @@
 		margin-right: 8px;
 		margin-left: 8px;
 		width: auto;
+		cursor: pointer;
+		.arrow-down {
+			margin-top: 6px;
+		}
 	}
 
 	// mobile switch to menu W/ button

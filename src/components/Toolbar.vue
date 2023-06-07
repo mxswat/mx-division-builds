@@ -8,11 +8,15 @@
       name="Build Name"
     /> -->
 		<div class="spacer"></div>
-		<a @click="showMobileMenu = !showMobileMenu"
-			class="menu-btt no-select"
-			:class="[showMobileMenu ? 'arrow-up' : 'arrow-down']"
-			>Menu</a
+		<div @click="showMobileMenu = !showMobileMenu"
+			class="menu-btt"
 		>
+			<span class="no-select">Menu</span>
+			<div
+				class="arrow-down mx__open-indicator"
+				:class="[showMobileMenu ? 'mx--open' : '']"
+			></div>
+		</div>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>
 			<button @click="screenshot()" id="screenshotBTT">
@@ -131,16 +135,21 @@
 		height: 31px;
 		line-height: 31px;
 		color: white;
-		padding-right: 24px;
+		padding-left: 8px;
+		padding-right: 6px;
 		background-color: transparent;
 		border: 0px;
 		background-position: right;
 		border-bottom: 1px solid white;
-		margin-top: 8px;
+		margin-top: 8px;		
 		margin-bottom: 4px;
 		margin-right: 8px;
 		margin-left: 8px;
 		width: 100%;
+		cursor: pointer;
+		.arrow-down {
+			margin-top: 6px;
+		}
 	}
 
 	@media only screen and (max-width: 964px) {

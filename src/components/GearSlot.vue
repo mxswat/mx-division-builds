@@ -427,6 +427,17 @@
 				gearData.GearMods.then((res) => {
 					this.gearMods = getUniqueObject(res);
 					this.gearMods.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
+
+					if (this.gearMods.length) {
+						// push a dummy attribute onto the front of the list
+						this.gearMods.unshift({
+							"Quality": "A",
+							"Type": "B",
+							"Stat": "(Blank)",
+							"Max": "",
+							"index": -1
+						});
+					}
 				});
 			},
 			initGearAttributes() {
@@ -440,6 +451,17 @@
 					this.gearAttributes.sort((a, b) =>
 						a.Stat > b.Stat ? 1 : -1
 					);
+
+					if (this.gearAttributes.length) {
+						// push a dummy attribute onto the front of the list
+						this.gearAttributes.unshift({
+							"Quality": "A",
+							"Type": "B",
+							"Stat": "(Blank)",
+							"Max":"", 
+							"index": -1
+						});
+					}
 				});
 			},
 			initGearTalentsList() {

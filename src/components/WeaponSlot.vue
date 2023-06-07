@@ -222,10 +222,8 @@
 					  });
 			});
 			weaponsData.WeaponAttributes.then((weaponsAttr) => {
-				const _unique = getUniqueObject(weaponsAttr);
-				this.allWeaponAttributes = _unique;
-				this.weaponAttributes = _unique;
-				this.weaponAttributes = weaponsAttr.filter((attribute) => {
+				this.allWeaponAttributes = getUniqueObject(weaponsAttr);
+				this.weaponAttributes = this.allWeaponAttributes.filter((attribute) => {
 					return attribute.Quality === "A";
 				});
 				this.weaponAttributes.sort((a, b) =>
@@ -297,34 +295,26 @@
 				}
 			});
 			weaponsData.WeaponTalents.then((weaponTalents) => {
-				this.weaponTalents = weaponTalents;
+				this.weaponTalents = getUniqueObject(weaponTalents);
 
-				// TODO: figure out why this happens and remove this check
-				// This code gets called three times (once for each weapon slot).
-				// The list of talents is shared by all three.
-				// We only want to add the dummy row the first time.
 				if (this.weaponTalents.length) {
-					const found = this.weaponTalents.find((talent) => talent['index'] === -1);
-					if (!found) {
-						// push a dummy talent onto the front of the list
-						this.weaponTalents.unshift({
-							"Quality":"A",
-							"Name":"(Blank)",
-							"Assault Rifle":"x",
-							"Rifle":"x",
-							"Marksman Rifle":"x",
-							"SMG":"x",
-							"LMG":"x",
-							"Pistol":"x",
-							"Shotgun":"x",
-							"Desc":"",
-							"attr":"",
-							"val":"",
-							"index": -1
-						});
-					}
+					// push a dummy talent onto the front of the list
+					this.weaponTalents.unshift({
+						"Quality":"A",
+						"Name":"(Blank)",
+						"Assault Rifle":"x",
+						"Rifle":"x",
+						"Marksman Rifle":"x",
+						"SMG":"x",
+						"LMG":"x",
+						"Pistol":"x",
+						"Shotgun":"x",
+						"Desc":"",
+						"attr":"",
+						"val":"",
+						"index": -1
+					});
 				}
-
 			});
 			this.initGearData();
 		},

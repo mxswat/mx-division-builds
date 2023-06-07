@@ -238,6 +238,32 @@
 			});
 			weaponsData.WeaponTalents.then((weaponTalents) => {
 				this.weaponTalents = weaponTalents;
+
+				// This code gets called three times (once for each weapon slot).
+				// The list of talents is shared by all three.
+				// We only want to add the dummy row the first time.
+				if (this.weaponTalents.length) {
+					const found = this.weaponTalents.find((talent) => talent['Name'] === '(Blank)');
+					if (!found) {
+						// push a dummy talent onto the front of the list
+						this.weaponTalents.unshift({
+							"Quality":"A",
+							"Name":"(Blank)",
+							"Assault Rifle":"x",
+							"Rifle":"x",
+							"Marksman Rifle":"x",
+							"SMG":"x",
+							"LMG":"x",
+							"Pistol":"x",
+							"Shotgun":"x",
+							"Desc":"",
+							"attr":"",
+							"val":"",
+							"index": -1
+						});
+					}
+				}
+
 			});
 			this.initGearData();
 		},

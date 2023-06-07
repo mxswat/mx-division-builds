@@ -463,6 +463,19 @@
 							}
 							return 0;
 						});
+
+					if (this.gearTalents.length) {
+						// push a dummy talent onto the front of the list
+						this.gearTalents.unshift({
+							"Quality": "A",
+							"Slot": this.name,
+							"Talent": "(Blank)",
+							"Desc": "",
+							"Attr.": "",
+							"Val": "",
+							"index": -1
+						});
+					}
 				});
 			},
 			filterGearCores() {

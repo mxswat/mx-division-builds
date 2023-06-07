@@ -121,22 +121,20 @@
 					? this.getFilteredWeaponsList()
 					: this.weaponsList;
 
-				console.log('weapons: ', weapons)
-
 				const itemList = [];
+				// add an empty slot at the beginning of each section
+				itemList.push({
+					type: null,
+					classes: 'remove-item',
+					event: 'click',
+					weapon: null,
+				});
 				Object.keys(weapons).sort().forEach((type) =>{
 					// add each weapon type section heading
 					itemList.push({
 						type: type,
 						classes: 'weapon-type',
 						event: null,
-						weapon: null,
-					});
-					// add an empty slot at the beginning of each section
-					itemList.push({
-						type: null,
-						classes: 'weapon-slot',
-						event: 'click',
 						weapon: null,
 					});
 					weapons[type].forEach((weapon) => {
@@ -280,7 +278,9 @@
 				padding: 16px;
 			}
 		}
-
+		.remove-item {
+			grid-column: 1 / -1;
+		}
 		.weapon-type {
 			grid-column: 1 / -1;
 			font-size: 20px;

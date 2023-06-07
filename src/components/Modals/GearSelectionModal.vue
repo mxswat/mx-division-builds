@@ -21,50 +21,52 @@
             alt=""
           />
           <BasicTile :classes="'anim-enabled'">
-            <template v-if="item.gear === null">
-              <span class="name">
-                Empty Slot
-              </span>
-              <div class="talent"
-                >Remove the item from this slot.</div
-              >
-            </template>
-            <template v-else>
-              <span class="name">
-                {{ getDisplayName(item.gear) }}
-              </span>
-              <ol class="bonuses-container"
-                  v-if="getBonuses(item.gear).length > 0"
-                  :start="item.gear.Quality === 'Gearset' ? 2 : 1"
-              >
-                <li
-                  class="bonus-wrap"
-                  v-for="(bonuses, idx) in getBonuses(item.gear)"
+            <div class="tile-content">
+              <template v-if="item.gear === null">
+                <span class="name">
+                  Empty Slot
+                </span>
+                <div class="talent"
+                  >Remove the item from this slot.</div
+                >
+              </template>
+              <template v-else>
+                <span class="name">
+                  {{ getDisplayName(item.gear) }}
+                </span>
+                <ol class="bonuses-container"
+                    v-if="getBonuses(item.gear).length > 0"
+                    :start="item.gear.Quality === 'Gearset' ? 2 : 1"
+                >
+                  <li
+                    class="bonus-wrap"
+                    v-for="(bonuses, idx) in getBonuses(item.gear)"
+                    v-bind:key="idx"
+                  >
+                    <span
+                      class="bonus"
+                      v-for="bonus in bonuses"
+                      v-bind:key="bonus"
+                      >{{ bonus }}<br /></span
+                    >
+                  </li>
+                </ol>
+                <div
+                  class="perks-container"
+                  v-for="(perk, idx) in getPerks(item.gear)"
                   v-bind:key="idx"
                 >
-                  <span
-                    class="bonus"
-                    v-for="bonus in bonuses"
-                    v-bind:key="bonus"
-                    >{{ bonus }}<br /></span
-                  >
-                </li>
-              </ol>
-              <div
-                class="perks-container"
-                v-for="(perk, idx) in getPerks(item.gear)"
-                v-bind:key="idx"
-              >
-                <div class="perk-icon" :class="perk.type"></div>
-                <div class="perk">{{ perk.desc }}</div>
-              </div>
-              <div class="talent"
-                >{{ getTalentDesc(item.gear.Talent) }}</div
-              >
-              <div v-if="isAvailableAtVendor(item.gear)" class="vendor-label">
-                Sold at <b>{{ whereIsAvailable(item.gear) }}</b>
-              </div>
-            </template>
+                  <div class="perk-icon" :class="perk.type"></div>
+                  <div class="perk">{{ perk.desc }}</div>
+                </div>
+                <div class="talent"
+                  >{{ getTalentDesc(item.gear.Talent) }}</div
+                >
+                <div v-if="isAvailableAtVendor(item.gear)" class="vendor-label">
+                  Sold at <b>{{ whereIsAvailable(item.gear) }}</b>
+                </div>
+              </template>
+            </div>
           </BasicTile>
         </div>
       </div>
@@ -111,7 +113,7 @@
         const itemList = [];
         // add an empty slot at the beginning of the list
         itemList.push({
-          classes: 'gear-slot',
+          classes: 'remove-item',
           gear: null,
         });
         gears.forEach((gear) => {
@@ -257,17 +259,23 @@
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 8px;
     padding: 8px;
+
     .tile {
-      min-height: 100px;
-      width: 100%;
-    }
+      padding: unset; /* must unset so we can apply to content below */
+      height:100%;
+      min-height: 10px;
+
+      .tile-content {
+        padding: 16px;
+      }
+		}
+    .remove-item {
+      grid-column: 1 / -1;
+		}
     .gear-slot {
-      display: flex;
-      flex-wrap: wrap;
       position: relative;
-      min-height: 180px;
-			min-width: 250px; /* must be the same as grid min */
-			max-width: 500px;
+      min-width: 250px; /* must be the same as grid min */
+      max-width: 500px;
       cursor: pointer;
 
       .name {

@@ -101,7 +101,10 @@
 			</div>
 			<div class="mods-toggle" @click="showModSlots = !showModSlots">
 				<span>Mods</span>
-				<div class="arrow-down"></div>
+				<div
+					class="arrow-down mx__open-indicator {"
+					:class="[showModSlots ? 'mx--open' : '']"
+				></div>
 			</div>
 			<div class="mods-slots-container" v-if="showModSlots">
 				<template v-for="(mod, i) in modSlots">
@@ -222,22 +225,99 @@
 					  });
 			});
 			weaponsData.WeaponAttributes.then((weaponsAttr) => {
-				const _unique = getUniqueObject(weaponsAttr);
-				this.allWeaponAttributes = _unique;
-				this.weaponAttributes = _unique;
-				this.weaponAttributes = weaponsAttr.filter((attribute) => {
+				this.allWeaponAttributes = getUniqueObject(weaponsAttr);
+				this.weaponAttributes = this.allWeaponAttributes.filter((attribute) => {
 					return attribute.Quality === "A";
 				});
 				this.weaponAttributes.sort((a, b) =>
 					a.Stat > b.Stat ? 1 : -1
 				);
+
+				if (this.weaponAttributes.length) {
+					// push a dummy attribute onto the front of the list
+					this.weaponAttributes.unshift({
+						"Quality": "A",
+						"Type": "O",
+						"Weapon Type": "",
+						"Stat": "(Blank)",
+						"Max": "",
+						"index": -1
+					});
+				}
 			});
 			weaponsData.WeaponMods.then((weaponMods) => {
 				this.weaponMods = getUniqueObject(weaponMods);
 				this.weaponMods.sort((a, b) => (a.Name > b.Name ? 1 : -1));
+
+				if (this.weaponMods.length) {
+					// push dummy weapon mods onto the front of the list
+					this.weaponMods.unshift({
+						"Slot": "Optic",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -1
+					});
+					this.weaponMods.unshift({
+						"Slot": "Magazine",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -2
+					});
+					this.weaponMods.unshift({
+						"Slot": "Under Barrel",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -3
+					});
+					this.weaponMods.unshift({
+						"Slot" :"Muzzle",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -4
+					});
+				}
 			});
 			weaponsData.WeaponTalents.then((weaponTalents) => {
-				this.weaponTalents = weaponTalents;
+				this.weaponTalents = getUniqueObject(weaponTalents);
+
+				if (this.weaponTalents.length) {
+					// push a dummy talent onto the front of the list
+					this.weaponTalents.unshift({
+						"Quality":"A",
+						"Name":"(Blank)",
+						"Assault Rifle":"x",
+						"Rifle":"x",
+						"Marksman Rifle":"x",
+						"SMG":"x",
+						"LMG":"x",
+						"Pistol":"x",
+						"Shotgun":"x",
+						"Desc":"",
+						"attr":"",
+						"val":"",
+						"index": -1
+					});
+				}
 			});
 			this.initGearData();
 		},
@@ -252,11 +332,11 @@
 				openWeaponsModal(this.weaponsList, this.onModalClose);
 			},
 			onModalClose(data) {
-				this.currentWeapon = new WeaponBase(data);
-				if (this.currentWeapon.name === "(Blank)") {
+				if (!data) {
 					this.currentWeapon = undefined;
 					return;
 				}
+				this.currentWeapon = new WeaponBase(data);
 				const isExotic = this.isExotic(this.currentWeapon);
 				const isNamed = this.isNamed(this.currentWeapon);
 				if (isExotic || isNamed) {

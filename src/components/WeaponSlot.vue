@@ -231,19 +231,80 @@
 				this.weaponAttributes.sort((a, b) =>
 					a.Stat > b.Stat ? 1 : -1
 				);
+
+				if (this.weaponAttributes.length) {
+					// push a dummy attribute onto the front of the list
+					this.weaponAttributes.unshift({
+						"Quality": "A",
+						"Type": "O",
+						"Weapon Type": "",
+						"Stat": "(Blank)",
+						"Max": "",
+						"index": -1
+					});
+				}
 			});
 			weaponsData.WeaponMods.then((weaponMods) => {
 				this.weaponMods = getUniqueObject(weaponMods);
 				this.weaponMods.sort((a, b) => (a.Name > b.Name ? 1 : -1));
+
+				if (this.weaponMods.length) {
+					// push dummy weapon mods onto the front of the list
+					this.weaponMods.unshift({
+						"Slot": "Optic",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -1
+					});
+					this.weaponMods.unshift({
+						"Slot": "Magazine",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -2
+					});
+					this.weaponMods.unshift({
+						"Slot": "Under Barrel",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -3
+					});
+					this.weaponMods.unshift({
+						"Slot" :"Muzzle",
+						"Type": "",
+						"Name": "(Blank)",
+						"valPos": "",
+						"pos": "",
+						"valNeg": "",
+						"neg": "",
+						"Spec": "",
+						"index": -4
+					});
+				}
 			});
 			weaponsData.WeaponTalents.then((weaponTalents) => {
 				this.weaponTalents = weaponTalents;
 
+				// TODO: figure out why this happens and remove this check
 				// This code gets called three times (once for each weapon slot).
 				// The list of talents is shared by all three.
 				// We only want to add the dummy row the first time.
 				if (this.weaponTalents.length) {
-					const found = this.weaponTalents.find((talent) => talent['Name'] === '(Blank)');
+					const found = this.weaponTalents.find((talent) => talent['index'] === -1);
 					if (!found) {
 						// push a dummy talent onto the front of the list
 						this.weaponTalents.unshift({

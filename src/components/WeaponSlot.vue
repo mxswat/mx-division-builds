@@ -101,7 +101,7 @@
 			</div>
 			<div class="mods-toggle" @click="showModSlots = !showModSlots">
 				<span>Mods</span>
-				<div class="arrow-down"></div>
+				<div :class="[showModSlots ? 'arrow-up' : 'arrow-down']"></div>
 			</div>
 			<div class="mods-slots-container" v-if="showModSlots">
 				<template v-for="(mod, i) in modSlots">

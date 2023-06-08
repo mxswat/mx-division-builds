@@ -102,7 +102,7 @@
 			<div class="mods-toggle" @click="showModSlots = !showModSlots">
 				<span>Mods</span>
 				<div
-					class="arrow-down mx__open-indicator {"
+					class="arrow-down mx__open-indicator"
 					:class="[showModSlots ? 'mx--open' : '']"
 				></div>
 			</div>
@@ -119,6 +119,7 @@
 										mod
 									)
 								"
+								:filterBy="modMatchesUserSearch"
 								v-model="currentWeapon[mod]"
 								label="Name"
 							>
@@ -415,6 +416,14 @@
 					);
 				}
 				return result;
+			},
+			modMatchesUserSearch(option, label, search) {
+				// return true if this option matches the text entered by the user
+				const properties = [option.Name, option.pos, option.neg];
+				const found = properties.filter(
+					(p) => (p || '').toLowerCase().indexOf(search.toLowerCase()) > -1
+				);
+				return found.length > 0;
 			},
 			filterTalents(weaponTalents) {
 				let result = [];

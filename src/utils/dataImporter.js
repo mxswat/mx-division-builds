@@ -11,14 +11,14 @@ const IsEverythingLoadedPromise = new Promise(function(resolve, reject) {
 	IsEverythingLoadedPromiseReject = reject;
 });
 
-const ClientDBVersion = Number(localStorage.getItem("localDBversion")) || 0;
+const ClientDBVersion = localStorage.getItem("localDBversion") || "";
 let RemoteDBVersion = process.env.VUE_APP_DB_VERSION;
 
 function getFromGoogleDrive(dataSources, listToPopulate) {
 	for (let i = 0; i < dataSources.length; i++) {
 		const DataTableName = dataSources[i].key;
 		const url = dataSources[i].url;
-		if (!ClientDBVersion || ClientDBVersion < RemoteDBVersion) {
+		if (!ClientDBVersion || ClientDBVersion !== RemoteDBVersion) {
 			listToPopulate[DataTableName] = new Promise((resolve, reject) => {
 				Papa.parse(url, {
 					download: true,
@@ -26,14 +26,8 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
 						try {
 							// console.log("Parsing complete:", incomingData, fileName);
 							const headers = incomingData.data.shift();
-							let result = csvToArrayWithKeys(
-								headers,
-								incomingData.data
-							);
-							localStorage.setItem(
-								DataTableName,
-								JSON.stringify(result)
-							);
+							let result = csvToArrayWithKeys(headers, incomingData.data);
+							localStorage.setItem(DataTableName, JSON.stringify(result));
 							resolve(result);
 						} catch (error) {
 							reject(
@@ -50,9 +44,7 @@ function getFromGoogleDrive(dataSources, listToPopulate) {
 			});
 		} else {
 			const localData = localStorage.getItem(DataTableName);
-			listToPopulate[DataTableName] = Promise.resolve(
-				JSON.parse(localData)
-			);
+			listToPopulate[DataTableName] = Promise.resolve(JSON.parse(localData));
 		}
 	}
 }
@@ -97,8 +89,8 @@ fetch(`${path}?${new Date().toISOString()}`, { method: "GET" })
 	.then((response) => response.blob())
 	.then((blob) => blob.text())
 	.then((DownloadedDBVersion) => {
-		RemoteDBVersion = Number(DownloadedDBVersion);
-		if (DownloadedDBVersion > ClientDBVersion) {
+		RemoteDBVersion = DownloadedDBVersion;
+		if (DownloadedDBVersion !== ClientDBVersion) {
 			window.localStorage.clear(); //clear all localstorage after new per sheet versioning
 		}
 		getFromGoogleDrive(wearableSource, gearData);

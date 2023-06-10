@@ -99,12 +99,8 @@
 					</template>
 				</v-select>
 			</div>
-			<div class="mods-toggle" @click="showModSlots = !showModSlots">
-				<span>Mods</span>
-				<div
-					class="arrow-down mx__open-indicator"
-					:class="[showModSlots ? 'mx--open' : '']"
-				></div>
+			<div class="slot-element">
+				<MenuButton v-model="showModSlots" :sync="true" label="Mods"/>
 			</div>
 			<div class="mods-slots-container" v-if="showModSlots">
 				<template v-for="(mod, i) in modSlots">
@@ -193,9 +189,10 @@
 
 	import StatInput from "./StatInput";
 	import ExpertiseInput from "./ExpertiseInput.vue";
+	import MenuButton from "./MenuButton.vue";
 	export default {
 		name: "WeaponSlot",
-		components: { StatInput, ExpertiseInput },
+		components: { StatInput, ExpertiseInput, MenuButton },
 		props: {
 			name: null,
 			init: null,
@@ -633,21 +630,4 @@
 		white-space: break-spaces;
 	}
 
-	.mods-toggle {
-		margin-top: 8px;
-		padding: 8px;
-		padding-right: 6px;
-		display: flex;
-		// background: rgba(0, 0, 0, 0.3);
-		border-bottom: 1px solid white;
-		cursor: pointer;
-	}
-
-	// .clear-slot {
-	// 	color: red;
-	// }
-
-	// .clear-slot-stat {
-	// 	color: red;
-	// }
 </style>

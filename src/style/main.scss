@@ -64,6 +64,11 @@ $vs-dropdown-bg: #151515;
 // Than import the actuall vue-select scss
 @import "vue-select/src/scss/vue-select.scss";
 
+// force the v-selects to use our desired font
+.vs__search {
+	font-family: "Titillium Web", sans-serif;
+}
+
 .vs__dropdown-option {
 	color: white;
 	display: flex;

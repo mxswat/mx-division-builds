@@ -8,15 +8,7 @@
       name="Build Name"
     /> -->
 		<div class="spacer"></div>
-		<div @click="showMobileMenu = !showMobileMenu"
-			class="menu-btt"
-		>
-			<span class="no-select">Menu</span>
-			<div
-				class="arrow-down mx__open-indicator"
-				:class="[showMobileMenu ? 'mx--open' : '']"
-			></div>
-		</div>
+		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Menu"/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>
 			<button @click="screenshot()" id="screenshotBTT">
@@ -45,9 +37,11 @@
 		openVersionModal,
 		openCreditsModal,
 	} from "../utils/modalService";
+	import MenuButton from "./MenuButton.vue";
 
 	export default {
 		name: "Toolbar",
+		components: { MenuButton },
 		data() {
 			return {
 				history,
@@ -130,38 +124,23 @@
 		min-width: 275px;
 	}
 
+	// don't show the menu button normally
 	.menu-btt {
 		display: none;
-		height: 31px;
-		line-height: 31px;
-		color: white;
-		padding-left: 8px;
-		padding-right: 6px;
-		background-color: transparent;
-		border: 0px;
-		background-position: right;
-		border-bottom: 1px solid white;
-		margin-top: 8px;		
-		margin-bottom: 4px;
-		margin-right: 8px;
-		margin-left: 8px;
 		width: 100%;
-		cursor: pointer;
-		.arrow-down {
-			margin-top: 6px;
-		}
 	}
 
-	@media only screen and (max-width: 964px) {
-		button {
+	@media only screen and (max-width: 810px) {
+		.toolbar-inner button {
 			margin-top: 8px;
 		}
 	}
 
 	// mobile switch to menu W/ button
-	@media only screen and (max-width: 550px) {
+	@media only screen and (max-width: 625px) {
 		.menu-btt {
 			display: flex;
+			flex-direction: column;
 		}
 		.toolbar-inner {
 			display: none;
@@ -176,4 +155,5 @@
 			}
 		}
 	}
+
 </style>

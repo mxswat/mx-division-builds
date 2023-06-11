@@ -1,13 +1,12 @@
 <template>
 	<div class="toolbar">
-		<span class="app-title">The Division 2 Builds tool</span>
+		<span class="app-title">The Division 2 Builds Tool</span>
 		<!-- <input
-      class="build-name"
-      type="text"
-      placeholder="Your build Name"
-      name="Build Name"
-    /> -->
-		<div class="spacer"></div>
+			class="build-name"
+			type="text"
+			placeholder="Your build Name"
+			name="Build Name"
+		/> -->
 		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Menu"/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>
@@ -23,10 +22,11 @@
 			<button @click="credits()">Credits</button>
 		</div>
 		<!-- 
-      Bugged TODO: Fix me
-    <button @click="history.back()">Undo</button>
-    <button @click="history.forward()">Redo</button> 
-    --></div>
+		Bugged TODO: Fix me
+		<button @click="history.back()">Undo</button>
+		<button @click="history.forward()">Redo</button> 
+		-->
+	</div>
 </template>
 
 <script>
@@ -87,24 +87,27 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-	}
-	.spacer {
-		flex: 1 1;
-	}
-
-	.toolbar-inner button {
-		margin-right: 8px;
-		color: white;
-		border: 1px solid white;
-		background: transparent;
-		min-height: 32px;
+		justify-content: space-between;
+		gap: 8px;
 	}
 
 	.app-title {
 		margin-left: 8px;
 		margin-right: 8px;
-		height: 31px;
-		line-height: 31px;
+		font-size: x-large;
+	}
+
+	.toolbar-inner {
+		display: flex;
+		flex-direction: row;
+		gap: 8px;
+
+		button {
+			color: white;
+			border: 1px solid white;
+			background: transparent;
+			min-height: 32px;
+		}
 	}
 
 	.build-name {
@@ -127,20 +130,14 @@
 	// don't show the menu button normally
 	.menu-btt {
 		display: none;
-		width: 100%;
-	}
-
-	@media only screen and (max-width: 810px) {
-		.toolbar-inner button {
-			margin-top: 8px;
-		}
 	}
 
 	// mobile switch to menu W/ button
-	@media only screen and (max-width: 625px) {
+	@media only screen and (max-width: 675px) {
 		.menu-btt {
 			display: flex;
 			flex-direction: column;
+			width: 100%;
 		}
 		.toolbar-inner {
 			display: none;
@@ -148,12 +145,7 @@
 				display: flex;
 				flex-direction: column;
 				width: 100%;
-				button {
-					margin-right: 0;
-					width: 100%;
-				}
 			}
 		}
 	}
-
 </style>

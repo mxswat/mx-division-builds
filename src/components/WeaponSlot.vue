@@ -602,7 +602,9 @@
 	}
 
 	.mods-slots-container {
-		margin-left: 10px;
+		margin-left: 6px;
+		padding-left: 6px;
+		border-left: 4px solid rgba(255, 255, 255, .125);
 	}
 
 	.mod-option-container {

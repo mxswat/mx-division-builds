@@ -340,7 +340,6 @@
 		padding: 8px;
 		background: #252525;
 		z-index: 2;
-		border-bottom: 1px solid white;
 		.mx-btt {
 			margin: 0;
 		}

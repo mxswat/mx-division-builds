@@ -601,6 +601,10 @@
 		border-bottom: 1px solid white;
 	}
 
+	.mods-slots-container {
+		margin-left: 10px;
+	}
+
 	.mod-option-container {
 		display: flex;
 		flex-direction: column;

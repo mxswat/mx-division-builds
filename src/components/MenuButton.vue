@@ -18,16 +18,29 @@
     />
     <div class="vs__dropdown-toggle">
       <div class="vs__selected-options">
-        <div class="vs__search">{{ label }}</div>
+        <div class="vs__search">{{label}}</div>
       </div>
       <div class="vs__actions">
-        <v-select-open-indicator role="presentation" class="vs__open-indicator"></v-select-open-indicator>
+        <v-select-open-indicator
+          role="presentation"
+          class="vs__open-indicator"
+        ></v-select-open-indicator>
       </div>
     </div>
   </label>
 </template>
 
 <script>
+  /*
+    This component is a toggle button that can be used to show/hide other
+    content such as menus or expander panels.
+
+    It is designed to match the style and appearance of the vue-select control.
+    As such, it exclusively uses CSS styling classes from vue-select as well as the
+    OpenIndicator component for the down-arrow on the right side of the button.
+
+    Obviously this component depends on the vue-select library being present.
+  */
   export default {
     name: 'MenuButton',
     props: {

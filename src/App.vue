@@ -104,7 +104,7 @@
 		margin-bottom: 8px;
 	}
 
-	/* these don't inherit the font-family by default so they need to be forced*/
+	/* these don't inherit the font-family by default */
 	input, textarea, button {
 		font-family: inherit;
 	}

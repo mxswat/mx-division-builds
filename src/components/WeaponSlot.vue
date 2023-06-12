@@ -604,7 +604,7 @@
 	.mods-slots-container {
 		margin-left: 6px;
 		padding-left: 6px;
-		border-left: 2px solid rgba(255, 255, 255, .125);
+		border-left: 2px solid rgba(255, 255, 255, .25);
 	}
 
 	.mod-option-container {

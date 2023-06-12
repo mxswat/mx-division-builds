@@ -90,27 +90,49 @@
 		justify-content: space-between;
 		gap: 8px;
 		padding: 8px;
-	}
 
-	.app-title {
-		margin-left: 8px;
-		margin-right: 8px;
-		font-size: x-large;
-	}
-
-	.toolbar-inner {
-		display: flex;
-		flex-direction: row;
-		gap: 8px;
-
-		button {
-			color: white;
-			border: 1px solid white;
-			background: transparent;
-			min-height: 32px;
+		.app-title {
+			margin-left: 8px;
+			margin-right: 8px;
+			font-size: x-large;
 		}
+
+		// don't show the menu button normally
+		.menu-btt {
+			display: none;
+		}
+		.toolbar-inner {
+			display: flex;
+			flex-direction: row;
+			gap: 8px;
+
+			button {
+				color: white;
+				border: 1px solid white;
+				background: transparent;
+				min-height: 32px;
+			}
+		}
+
+		// mobile switch to menu W/ button
+		@media only screen and (max-width: 650px) {
+			.menu-btt {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+			.toolbar-inner {
+				display: none;
+				&.showOnMobile {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+				}
+			}
+		}		
 	}
 
+	/*
 	.build-name {
 		$height: 31px;
 		height: $height;
@@ -123,30 +145,8 @@
 		border-bottom: 1px solid white;
 		font-size: 16px;
 		color: white;
-		font-family: "Titillium Web", sans-serif;
 		font-weight: 400;
 		min-width: 275px;
 	}
-
-	// don't show the menu button normally
-	.menu-btt {
-		display: none;
-	}
-
-	// mobile switch to menu W/ button
-	@media only screen and (max-width: 675px) {
-		.menu-btt {
-			display: flex;
-			flex-direction: column;
-			width: 100%;
-		}
-		.toolbar-inner {
-			display: none;
-			&.showOnMobile {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-			}
-		}
-	}
+	*/
 </style>

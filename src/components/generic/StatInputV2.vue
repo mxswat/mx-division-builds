@@ -75,7 +75,6 @@
 		border: 0px;
 		font-size: 16px;
 		color: white;
-		font-family: "Titillium Web", sans-serif;
 		font-weight: 400;
 		border-bottom: 1px solid white;
 		&::-webkit-inner-spin-button {

@@ -6,7 +6,10 @@ function getPlotlyDefault1(yaxisTitle, xaxisTitle, chartTitle) {
 		margin: { t: 25, b: 25, l: 50, r: 50 },
 		plot_bgcolor: "#1a1e24",
 		paper_bgcolor: "#1a1e24",
-		font: { color: "white" },
+		font: { 
+			family: "Titillium Web, sans-serif",
+			color: "#ffffff"
+		},
 		yaxis: {
 			gridcolor: "#ffffff66",
 			title: {

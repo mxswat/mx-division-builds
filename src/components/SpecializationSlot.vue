@@ -75,13 +75,22 @@
 					});
 				}
 				this.specializations = Object.values(holder);
+
+				if (this.specializations.length) {
+					// push a dummy attribute onto the front of the list
+					this.specializations.unshift({
+						"name": "(Blank)",
+						"stats": [],
+						"id": -1
+					});
+				}
 			});
 			this.initSpec();
 		},
 		methods: {
 			initSpec() {
 				coreService.getSlotInit$("Specialization").subscribe((ids) => {
-					const specId = parseInt(ids) - 1;
+					const specId = parseInt(ids);
 					if (specId >= 0) {
 						this.currentSpecialization = this.specializations[
 							specId
@@ -93,7 +102,14 @@
 		watch: {
 			currentSpecialization: {
 				handler: function(val, oldVal) {
-					coreService.sendSlotData("Specialization", val);
+					console.log(`val: ${JSON.stringify(val)}`)
+					if (val && val['name'] === "(Blank)") {
+						// setting this to null will clear the select control
+						// and trigger another run though this code with val === null
+						this.currentSpecialization = null;
+					} else {
+						coreService.sendSlotData("Specialization", val);
+					}
 				},
 				deep: true,
 			},

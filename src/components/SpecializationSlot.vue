@@ -90,7 +90,7 @@
 		methods: {
 			initSpec() {
 				coreService.getSlotInit$("Specialization").subscribe((ids) => {
-					const specId = parseInt(ids) - 1;
+					const specId = parseInt(ids);
 					if (specId >= 0) {
 						this.currentSpecialization = this.specializations[
 							specId
@@ -102,6 +102,7 @@
 		watch: {
 			currentSpecialization: {
 				handler: function(val, oldVal) {
+					console.log(`val: ${JSON.stringify(val)}`)
 					if (val && val['name'] === "(Blank)") {
 						// setting this to null will clear the select control
 						// and trigger another run though this code with val === null

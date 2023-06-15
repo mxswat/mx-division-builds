@@ -1,6 +1,8 @@
 import GearSelectionModal from "../components/Modals/GearSelectionModal";
+import SkillsSelectionModal from "../components/Modals/SkillsSelectionModal";
 import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
 import WatchLevelsModal from "../components/Modals/WatchLevelsModal";
+import { cleanLocalSHDLevels } from "../utils/SHDutils";
 import ScreenshotModal from "../components/Modals/ScreenshotModal";
 import VersionModal from "../components/Modals/VersionModal";
 
@@ -36,6 +38,24 @@ const openGearModal = function(gearList, slot, onModalClose) {
 	);
 };
 
+const openSkillsModal = function(skillsList, slot, onModalClose) {
+	window.vueInstance.$modal.show(
+		SkillsSelectionModal,
+		{
+			skillsData: skillsList,
+			onModalClose: onModalClose,
+			skillSlot: slot,
+		},
+		{
+			adaptive: true,
+			width: "75%",
+			height: "90%",
+			maxWidth: 1200,
+		},
+		defaultEvents
+	);
+};
+
 const openWeaponsModal = function(weaponLists, onModalClose) {
 	window.vueInstance.$modal.show(
 		WeaponSelectionModal,
@@ -48,6 +68,7 @@ const openWeaponsModal = function(weaponLists, onModalClose) {
 			adaptive: true,
 			width: "75%",
 			height: "90%",
+			maxWidth: 1200,
 		},
 		defaultEvents
 	);
@@ -109,9 +130,8 @@ const openSaveShareModal = function() {
 					el.select();
 					document.execCommand("copy");
 					document.body.removeChild(el);
-					document.getElementsByClassName(
-						"vue-dialog-button"
-					)[0].innerText = "Copied!";
+					document.getElementsByClassName("vue-dialog-button")[0].innerText =
+						"Copied!";
 				},
 			},
 			{
@@ -132,7 +152,8 @@ const openIssueModal = function() {
 			{
 				title: "Clean local DB",
 				handler: () => {
-					window.localStorage.clear();
+					cleanLocalSHDLevels();
+					// window.localStorage.clear();
 					location.reload();
 				},
 			},
@@ -206,6 +227,7 @@ const openCreditsModal = function openCreditsModal() {
 
 export {
 	openGearModal,
+	openSkillsModal,
 	openWeaponsModal,
 	openWatchLevelsModal,
 	openSaveShareModal,

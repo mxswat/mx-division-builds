@@ -46,4 +46,16 @@ function updateLocalSHDLevels(levels) {
 	localStorage.setItem("SHD-LEVELS-V2", JSON.stringify(userValues));
 }
 
-export { getSHDLevels, updateLocalSHDLevels };
+function cleanLocalSHDLevels() {
+	console.log("Cleaning SHD levels", localStorage);
+	for (const property in localStorage) {
+		if (property !== "SHD-LEVELS-V2") {
+			console.log(`${property}:`);
+			localStorage.removeItem(property);
+		}
+	}
+	console.log(localStorage);
+	// throw new Error("Not implemented");
+}
+
+export { getSHDLevels, updateLocalSHDLevels, cleanLocalSHDLevels };

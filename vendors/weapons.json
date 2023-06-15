@@ -502,5 +502,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>8.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>10.1% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cuélebre – Military M870",
+   "dmg": "695,775",
+   "rpm": 75,
+   "mag": 5,
+   "talent": "Perfect Jazz Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>7.5% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.8% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Police T821",
+   "dmg": "66,757",
+   "rpm": 550,
+   "mag": 32,
+   "talent": "Vindictive",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.2% Rate of Fire"
  }
 ]

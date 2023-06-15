@@ -203,10 +203,3 @@ input {
 .white-space-pre-wrap {
 	white-space: pre-wrap;
 }
-
-/* prevent text from being highlighted */
-.no-select {
-	user-select: none;
-	-webkit-user-select: none; /*Safari*/
-	-moz-user-select: none; /*Firefox*/
-  }

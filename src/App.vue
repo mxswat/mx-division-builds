@@ -104,6 +104,11 @@
 		margin-bottom: 8px;
 	}
 
+	/* these don't inherit the font-family by default */
+	input, textarea, button {
+		font-family: inherit;
+	}
+
 	body.no-scroll {
 		overflow: hidden;
 	}

@@ -1,22 +1,13 @@
 <template>
 	<div class="toolbar">
-		<span class="app-title">The Division 2 Builds tool</span>
+		<span class="app-title">The Division 2 Builds Tool</span>
 		<!-- <input
-      class="build-name"
-      type="text"
-      placeholder="Your build Name"
-      name="Build Name"
-    /> -->
-		<div class="spacer"></div>
-		<div @click="showMobileMenu = !showMobileMenu"
-			class="menu-btt"
-		>
-			<span class="no-select">Menu</span>
-			<div
-				class="arrow-down mx__open-indicator"
-				:class="[showMobileMenu ? 'mx--open' : '']"
-			></div>
-		</div>
+			class="build-name"
+			type="text"
+			placeholder="Your build Name"
+			name="Build Name"
+		/> -->
+		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Menu"/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>
 			<button @click="screenshot()" id="screenshotBTT">
@@ -31,10 +22,11 @@
 			<button @click="credits()">Credits</button>
 		</div>
 		<!-- 
-      Bugged TODO: Fix me
-    <button @click="history.back()">Undo</button>
-    <button @click="history.forward()">Redo</button> 
-    --></div>
+		Bugged TODO: Fix me
+		<button @click="history.back()">Undo</button>
+		<button @click="history.forward()">Redo</button> 
+		-->
+	</div>
 </template>
 
 <script>
@@ -45,9 +37,11 @@
 		openVersionModal,
 		openCreditsModal,
 	} from "../utils/modalService";
+	import MenuButton from "./MenuButton.vue";
 
 	export default {
 		name: "Toolbar",
+		components: { MenuButton },
 		data() {
 			return {
 				history,
@@ -93,26 +87,52 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
-	}
-	.spacer {
-		flex: 1 1;
+		justify-content: space-between;
+		gap: 8px;
+		padding: 8px;
+
+		.app-title {
+			margin-left: 8px;
+			margin-right: 8px;
+			font-size: x-large;
+		}
+
+		// don't show the menu button normally
+		.menu-btt {
+			display: none;
+		}
+		.toolbar-inner {
+			display: flex;
+			flex-direction: row;
+			gap: 8px;
+
+			button {
+				color: white;
+				border: 1px solid white;
+				background: transparent;
+				min-height: 32px;
+			}
+		}
+
+		// mobile switch to menu W/ button
+		@media only screen and (max-width: 650px) {
+			.menu-btt {
+				display: flex;
+				flex-direction: column;
+				width: 100%;
+			}
+			.toolbar-inner {
+				display: none;
+				&.showOnMobile {
+					display: flex;
+					flex-direction: column;
+					width: 100%;
+				}
+			}
+		}		
 	}
 
-	.toolbar-inner button {
-		margin-right: 8px;
-		color: white;
-		border: 1px solid white;
-		background: transparent;
-		min-height: 32px;
-	}
-
-	.app-title {
-		margin-left: 8px;
-		margin-right: 8px;
-		height: 31px;
-		line-height: 31px;
-	}
-
+	/*
 	.build-name {
 		$height: 31px;
 		height: $height;
@@ -125,55 +145,8 @@
 		border-bottom: 1px solid white;
 		font-size: 16px;
 		color: white;
-		font-family: "Titillium Web", sans-serif;
 		font-weight: 400;
 		min-width: 275px;
 	}
-
-	.menu-btt {
-		display: none;
-		height: 31px;
-		line-height: 31px;
-		color: white;
-		padding-left: 8px;
-		padding-right: 6px;
-		background-color: transparent;
-		border: 0px;
-		background-position: right;
-		border-bottom: 1px solid white;
-		margin-top: 8px;		
-		margin-bottom: 4px;
-		margin-right: 8px;
-		margin-left: 8px;
-		width: 100%;
-		cursor: pointer;
-		.arrow-down {
-			margin-top: 6px;
-		}
-	}
-
-	@media only screen and (max-width: 964px) {
-		button {
-			margin-top: 8px;
-		}
-	}
-
-	// mobile switch to menu W/ button
-	@media only screen and (max-width: 550px) {
-		.menu-btt {
-			display: flex;
-		}
-		.toolbar-inner {
-			display: none;
-			&.showOnMobile {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-				button {
-					margin-right: 0;
-					width: 100%;
-				}
-			}
-		}
-	}
+	*/
 </style>

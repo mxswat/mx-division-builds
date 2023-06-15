@@ -6,21 +6,13 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<div @click="toggleMobileMenu()"
-			class="menu-btt"
-		>
-			<span class="no-select">Weapon Types</span>
-			<div
-				class="arrow-down mx__open-indicator"
-				:class="[showMobileMenu ? 'mx--open' : '']"
-			></div>
-		</div>
+		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Weapon Types"/>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
 			<button
 				class="mx-btt"
 				v-for="(type, key) in weaponTypes"
 				v-bind:key="key"
-				@click="scrollToElementID(type);toggleMobileMenu()"
+				@click="scrollToElementID(type);showMobileMenu = false;"
 				>{{ type }}</button
 			>
 		</div>
@@ -89,12 +81,14 @@
 		groupArrayOfObjectsByKey,
 	} from "../../utils/utils";
 	import BasicTile from "../BasicTile";
+	import MenuButton from "../MenuButton.vue"
 
 		export default {
 		name: "WeaponSelectionModal",
 		props: ["gearData", "onModalClose", "tableHeaders"],
 		components: {
 			BasicTile,
+			MenuButton,
 		},
 		data() {
 			return {
@@ -189,9 +183,6 @@
 			},
 			scrollToElementID(divId) {
 				document.getElementById(divId).scrollIntoView();
-			},
-			toggleMobileMenu() {
-				this.showMobileMenu = !this.showMobileMenu;
 			},
 			getFilteredWeaponsList() {
 				const searchText = this.searchText.toLocaleLowerCase();
@@ -349,43 +340,21 @@
 		padding: 8px;
 		background: #252525;
 		z-index: 2;
-		border-bottom: 1px solid white;
 		.mx-btt {
 			margin: 0;
-
-
 		}
 	}
 
-
-	/// - TODO: DUPED CODE
-
+	// don't show the menu button normally
 	.menu-btt {
 		display: none;
-		height: 31px;
-		line-height: 31px;
-		color: white;
-		padding-left: 8px;
-		padding-right: 6px;
-		background-color: transparent;
-		border: 0px;
-		background-position: right;
-		border-bottom: 1px solid white;
-		margin-top: 8px;
-		margin-bottom: 4px;
-		margin-right: 8px;
-		margin-left: 8px;
-		width: auto;
-		cursor: pointer;
-		.arrow-down {
-			margin-top: 6px;
-		}
 	}
 
 	// mobile switch to menu W/ button
 	@media only screen and (max-width: 850px) {
 		.menu-btt {
 			display: flex;
+			flex-direction: column;
 		}
 		.search-toolbar {
 			display: none;

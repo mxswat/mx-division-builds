@@ -14,6 +14,9 @@ Vue.use(VModal, {
 
 Vue.component("v-select", vSelect);
 
+// This is used by our custom MenuButton component
+Vue.component("v-select-open-indicator", vSelect['components'].OpenIndicator);
+
 Vue.use(VueRouter);
 
 var vueInstance = new Vue({

@@ -281,6 +281,7 @@
 		}
 		.remove-item {
 			grid-column: 1 / -1;
+			cursor: pointer;
 		}
 		.weapon-type {
 			grid-column: 1 / -1;

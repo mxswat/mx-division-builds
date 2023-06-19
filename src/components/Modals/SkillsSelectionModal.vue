@@ -6,88 +6,85 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<a @click="showMobileMenu = !showMobileMenu" class="menu-btt arrow-down">
-			Skill Types
-		</a>
+		<MenuButton
+			class="menu-btt"
+			v-model="showMobileMenu"
+			:sync="true"
+			label="Skill Types"
+		/>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
-			<a
+			<button
 				class="mx-btt"
-				v-for="(skills, key) in skillsList"
+				v-for="(type, key) in skillTypes"
 				v-bind:key="key"
-				@click="scrollToElementID(key)"
-				>{{ key }}</a
+				@click="
+					scrollToElementID(type);
+					showMobileMenu = false;
+				"
 			>
+				{{ type }}
+			</button>
 		</div>
 		<div class="overflow-handler">
-			<div v-for="(skills, key) in skillsList" v-bind:key="key">
-				<span
-					class="skill-type"
-					v-if="filterByName(skills).length > 0"
-					:id="key"
-					>{{ key }}
-				</span>
-				<div class="skills-grid" v-if="filterByName(skills).length > 0">
-					<div
-						class="skills-slot"
-						v-for="(skill, idx) in filterByName(skills)"
-						v-bind:key="idx"
-						:class="[qualityToCSS(skill['Skill Variant Name'])]"
-						@click="onSelection(skill)"
-					>
+			<div class="skills-grid">
+				<div
+					v-for="(item, index) in gridItems"
+					v-bind:key="index"
+					:class="item.classes"
+					@[item.event]="onSelection(item.skill)"
+				>
+					<template v-if="item.type">
+						<div :id="item.type">{{ item.type }}</div>
+					</template>
+					<template v-else>
 						<BasicTile :classes="'anim-enabled'">
-							<span class="name">
-								{{ getDisplayName(skill) }}
-							</span>
-							<div>
-								<img
-									v-if="getSkillIcon(skill)"
-									:class="
-										skill['Variant'] === 'Slot'
-											? 'skill-icon-blank'
-											: 'skill-icon'
-									"
-									:src="getSkillIcon(skill)"
-									alt=""
-								/>
-								<div class="white-space-pre-wrap">
-									{{ skill.Desc }}
-								</div>
-								<div class="white-space-pre-wrap">
-									{{ skill.Status }}
-								</div>
-								<div class="white-space-pre-wrap">
-									<ul
-										class="bonuses-container"
-										v-if="getSkillStats(skill).length > 0"
-									>
-										<li class="stats-wrap">
-											<span class="stat white-space-pre-wrap">
-												Expertise:
-												{{ skill["Expertise Bonus"] }}
-												<br />
-											</span>
-										</li>
-										<li
-											class="stats-wrap"
-											v-for="(stat, idx) in getSkillStats(skill)"
-											v-bind:key="idx"
-										>
-											<span class="stat white-space-pre-wrap">
-												{{ stat.Stat }}
-												{{ stat.Val }}
-												<br />
-											</span>
-										</li>
-									</ul>
-								</div>
+							<div class="tile-content">
+								<template v-if="!item.skill">
+									<span class="name">
+										Empty Slot
+									</span>
+									<div class="description">Remove the item from this slot.</div>
+								</template>
+								<template v-else>
+									<span class="name">
+										{{ getDisplayName(item.skill) }}
+									</span>
+									<div>
+										<img
+											v-if="getSkillIcon(item.skill)"
+											class="skill-icon"
+											:src="getSkillIcon(item.skill)"
+											alt=""
+										/>
+										<div class="description">{{ item.skill.Desc }}</div>
+										<div class="status">{{ item.skill.Status }}</div>
+										<div>
+											<ul
+												class="stats-container"
+												v-if="getSkillStats(item.skill).length > 0"
+											>
+												<li class="stats-wrap">
+													<span class="stat"
+														>Expertise: {{ item.skill["Expertise Bonus"]
+														}}<br />
+													</span>
+												</li>
+												<li
+													class="stats-wrap"
+													v-for="(stat, idx) in getSkillStats(item.skill)"
+													v-bind:key="idx"
+												>
+													<span class="stat"
+														>{{ stat.Stat }} {{ stat.Val }}<br />
+													</span>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</template>
 							</div>
 						</BasicTile>
-					</div>
-					<div
-						style="display:flex"
-						v-for="i in getKeys(skills)"
-						v-bind:key="i"
-					></div>
+					</template>
 				</div>
 			</div>
 		</div>
@@ -96,34 +93,80 @@
 
 <script>
 	import {
-		skillsData,
 		IsEverythingLoadedPromise,
+		skillsData,
 	} from "../../utils/dataImporter";
 	import { qualityToCss, groupArrayOfObjectsByKey } from "../../utils/utils";
 	import BasicTile from "../BasicTile";
+	import MenuButton from "../MenuButton.vue";
+
 	const skillNameProp = "Item Name";
+
 	export default {
 		name: "SkillsSelectionModal",
 		props: ["skillsData", "onModalClose", "skillSlot"],
 		components: {
 			BasicTile,
+			MenuButton,
 		},
 		data() {
 			return {
 				skillsList: [],
 				skillStats: [],
 				searchText: "",
+				debounce: null,
 				showMobileMenu: false,
 			};
 		},
-		methods: {
-			getKeys(skills) {
-				// return an array of keys for the dummy skill divs
-				const MAX_VARIANTS = 5;
-				const num_variants = this.filterByName(skills).length;
-				const len = MAX_VARIANTS - num_variants;
-				return Array.from({ length: len }, (_, i) => num_variants + i);
+		computed: {
+			skillTypes: function() {
+				// this updates if the grid items are filtered by the user
+				return this.gridItems
+					.filter((item) => item.type)
+					.map((item) => item.type);
 			},
+			gridItems: function() {
+				// computed list of items which can be filtered by user searches
+
+				// vue won't let us loop on templates for the alternating grid sections
+				// so we flatten the list sections and weapons into a single list
+
+				// filter the full list of sklls if needed before
+				// generating the list of items for the grid
+				const skills = this.searchText.length
+					? this.getFilteredSkillsList()
+					: this.skillsList;
+
+				const itemList = [];
+				// add an empty slot at the beginning of each section
+				itemList.push({
+					type: null,
+					classes: "remove-item",
+					event: "click",
+					skill: null,
+				});
+				Object.keys(skills).forEach((type) => {
+					// add each skill type section heading
+					itemList.push({
+						type: type,
+						classes: "skill-type",
+						event: null,
+						skill: null,
+					});
+					skills[type].forEach((skill) => {
+						// then add all of the skills for the section
+						itemList.push({
+							type: null,
+							classes: "skill-slot",
+							event: "click",
+							skill: skill,
+						});
+					});
+				});
+				return itemList;
+			},
+		},
+		methods: {
 			getSkillIcon(skill) {
 				// console.log(skill);
 				return skill.Icon ? `icons/skills/${skill.Icon}` : "";
@@ -171,12 +214,20 @@
 					this.searchText = event.target.value;
 				}, 300);
 			},
-			filterByName(list) {
-				return list.filter((skill) =>
-					this.getDisplayName(skill)
-						.toLocaleLowerCase()
-						.includes(this.searchText.toLocaleLowerCase())
-				);
+			getFilteredSkillsList() {
+				const searchText = this.searchText.toLocaleLowerCase();
+				const result = {};
+				Object.keys(this.skillsList).forEach((type) => {
+					const filtered = this.skillsList[type].filter((skill) => {
+						return this.getDisplayName(skill)
+							.toLocaleLowerCase()
+							.includes(searchText);
+					});
+					if (filtered.length) {
+						result[type] = filtered;
+					}
+				});
+				return result;
 			},
 		},
 		created() {
@@ -206,69 +257,80 @@
 	}
 	.skills-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 8px;
 		padding: 8px;
+
 		.tile {
-			min-height: 100px;
-			width: 100%;
+			padding: unset; /* must unset so we can apply to content below */
+			height: 100%;
+			min-height: 10px;
+
+			.tile-content {
+				padding: 16px;
+			}
 		}
-		.skills-slot {
-			display: flex;
-			flex-wrap: wrap;
-			position: relative;
-			min-height: 90px;
+		.remove-item {
+			grid-column: 1 / -1;
 			cursor: pointer;
+		}
+		.skill-type {
+			grid-column: 1 / -1;
+			font-size: 20px;
+			font-weight: 600;
+		}
+
+		.skill-slot {
+			min-width: 250px; /* must be the same as grid min */
+			max-width: 500px;
+			cursor: pointer;
+
+			.skill-icon {
+				height: 84px;
+				width: 84px;
+				object-fit: contain;
+				opacity: 0.7;
+				// position: absolute;
+				// top: 60px;
+				// right: 16px;
+				float: right;
+				z-index: 0;
+			}
+
 			.name {
 				width: 100%;
 				font-size: 18px;
 				font-weight: 600;
 			}
-			.bonuses-container {
+
+			.stats-container {
 				display: flex;
 				flex-direction: column;
 				padding-left: 18px;
+
+				.stats-wrap {
+					border-left: 2px solid white;
+					margin-top: 5px;
+					padding-left: 6px;
+				}
 			}
-			.overflow-handler {
-				max-height: 100%;
-				overflow: auto;
-			}
-		}
-		.skill-icon {
-			height: 84px;
-			width: 84px;
-			object-fit: contain;
-			opacity: 0.7;
-			// position: absolute;
-			// top: 60px;
-			// right: 16px;
-			float: right;
-			z-index: 0;
-		}
-		.skill-icon-blank {
-			height: 84px;
-			width: 84px;
-			object-fit: contain;
-			opacity: 0.7;
-			position: absolute;
-			top: 20px;
-			right: 16px;
-			z-index: 0;
-		}
-		.stats-wrap {
-			border-left: 2px solid white;
-			margin-top: 5px;
-			padding-left: 4px;
 		}
 	}
-	.skill-type {
-		font-size: 20px;
-		font-weight: 600;
-		margin-left: 8px;
+
+	.description,
+	.status,
+	.stat {
+		white-space: pre-line;
 	}
+
+	.overflow-handler {
+		max-height: 100%;
+		overflow: auto;
+	}
+
 	.search-toolbar {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 		gap: 8px;
 		padding: 8px;
 		background: #252525;
@@ -278,35 +340,23 @@
 			margin: 0;
 		}
 	}
+
+	/// - TODO: DUPED CODE
+
 	.menu-btt {
 		display: none;
-		height: 31px;
-		line-height: 31px;
-		color: white;
-		padding-right: 24px;
-		background-color: transparent;
-		border: 0px;
-		background-position: right;
-		border-bottom: 1px solid white;
-		margin-top: 8px;
-		margin-bottom: 4px;
-		margin-right: 8px;
-		margin-left: 8px;
-		width: auto;
 	}
+
 	// mobile switch to menu W/ button
-	@media only screen and (max-width: 550px) {
+	@media only screen and (max-width: 850px) {
 		.menu-btt {
 			display: flex;
+			flex-direction: column;
 		}
 		.search-toolbar {
 			display: none;
 			&.showOnMobile {
-				display: flex;
-				flex-direction: column;
-				button {
-					margin-right: 0;
-				}
+				display: grid;
 			}
 		}
 	}

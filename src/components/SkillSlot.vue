@@ -89,7 +89,9 @@
 	import Vue from "vue";
 	import coreService from "../utils/coreService";
 	import ExpertiseInput from "./ExpertiseInput.vue";
+
 	const modSlots = ["One", "Two", "Three"];
+
 	export default {
 		name: "SkillSlot",
 		components: { StatInput, ExpertiseInput },
@@ -133,6 +135,26 @@
 					this.skillMods.sort((a, b) =>
 						a["Mod Attribute"] > b["Mod Attribute"] ? 1 : -1
 					);
+
+					if (this.skillMods.length) {
+						// push a dummy mod onto the front of the list
+						this.skillMods.unshift({
+							"Skill Mod ID": "-1",
+							"Skill Variant Name": "A",
+							"Skill Type": "A",
+							Variant: "A",
+							"Specialization Variant": "",
+							"Skill Mod Slot": "All",
+							"Mod Attribute": "(Blank)",
+							"Mod Bonus": "",
+							"Specialization Mod": "",
+							Max: "",
+							Display: "TRUE",
+							Calculate: "No",
+							"Which Skill Stat(s)?": "",
+							index: -1,
+						});
+					}
 				});
 			},
 			getSkillIcon(skill) {
@@ -193,11 +215,11 @@
 				}
 				const mods = this.skillMods.filter((stat) => {
 					return (
-						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
+						stat["Skill Variant Name"] === "A" ||
+						(`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===
 							stat["Skill Variant Name"] &&
-						stat["Display"].toLowerCase().includes("true") &&
-						(stat["Skill Mod Slot"] === this.currentSkill[`slot${slot}`] ||
-							stat["Skill Mod Slot"].toLowerCase().includes("all"))
+							(stat["Skill Mod Slot"] === this.currentSkill[`slot${slot}`] ||
+								stat["Skill Mod Slot"].toLowerCase().includes("all")))
 					);
 				});
 				if (this.debug) {
@@ -252,13 +274,16 @@
 								`modThree: ${this.currentSkill.modThree}`
 							);
 						}
+
 						const stats = [null, "modOne", "modTwo", "modThree", "expertise"]; // 4, 5, 6
 						const slots = ["ModOne", "ModTwo", "ModThree", "Expertise"];
 						for (let idx = 1; idx < stats.length; idx++) {
 							const stat = stats[idx];
 							const slot = slots[idx - 1];
 							const currentStatToUpdate = this.currentSkill[stat];
+
 							var valueToImport = parseFloat(splittedIdS[3 + idx]);
+
 							if (this.debug) {
 								console.warn(
 									`stat:`,
@@ -357,16 +382,20 @@
 		height: 100%;
 		color: white;
 	}
+
 	.skill {
 		background: #9dacb3;
 	}
+
 	// attribute-label
 	.attribute-value {
 		margin-left: auto;
 	}
+
 	.clear-slot {
 		color: red;
 	}
+
 	.clear-slot-stat {
 		color: red;
 	}

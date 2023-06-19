@@ -178,6 +178,10 @@
 				}
 			},
 			onModalClose(data) {
+				if (!data) {
+					this.currentSkill = undefined;
+					return;
+				}
 				if (this.debug) {
 					console.groupCollapsed(
 						`%conModalClose:`,
@@ -185,11 +189,6 @@
 					);
 				}
 				this.currentSkill = new SkillBase(data);
-				if (this.currentSkill.itemName === "(Blank)") {
-					console.warn(`(Blank) skill selected, clearing slot`);
-					this.currentSkill = undefined;
-					return;
-				}
 				this.currentSkill.stats = this.skillStats.filter((stat) => {
 					return (
 						`${this.currentSkill.variant} ${this.currentSkill.itemName}` ===

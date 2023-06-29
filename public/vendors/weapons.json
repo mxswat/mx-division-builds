@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cold Relations - Enhanced PP-19",
+   "dmg": "59,705",
+   "rpm": 700,
+   "mag": 58,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.1% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.3% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Resolute MK47",
+   "dmg": "104,837",
+   "rpm": 300,
+   "mag": 30,
+   "talent": "Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>8..1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Headshot Damage"
  }
 ]

@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": " Sticky Bomb<br/>6.4% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-defensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Defensive Protocol: Stamina",
+   "attributes": "12.0% Protection from Elites "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Propantriol Adhesive",
+   "attributes": " Firefly<br/>6.4% Blind Effect Duration"
  }
 ]

@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>5% Damage to Armor",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Relic - G28",
+   "dmg": "146,677",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Perfectly Determined",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>95% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Carbine 7",
+   "dmg": "47,012",
+   "rpm": 790,
+   "mag": 30,
+   "talent": "Overflowing",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>20% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Hunting M44",
+   "dmg": "416,056",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>91% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>22.5% Optimal Range"
  }
 ]

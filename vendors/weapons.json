@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Surge - LVOA-C",
+   "dmg": "100,136",
+   "rpm": 380,
+   "mag": 30,
+   "talent": "Perfect Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.9% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Big Show - MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "Perfect Thunder Strike",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.3% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M700 Tactical",
+   "dmg": "376,096",
+   "rpm": 54,
+   "mag": 7,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.6% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>102% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13% Swap Speed"
  }
 ]

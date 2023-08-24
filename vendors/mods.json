@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Payload",
    "attributes": " Sticky Bomb<br/>4.0% Burn Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Firearms",
+   "attributes": "10.5% Critical Hit Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Ecotoxicology Research",
+   "attributes": " Chem Launcher<br/>4.4% Duration"
  }
 ]

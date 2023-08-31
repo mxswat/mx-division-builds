@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Housing Shell",
    "attributes": " Decoy<br/>6.0% Health"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Dexterity",
+   "attributes": "7.7% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Weather Coating",
+   "attributes": " Turret<br/>6.1% Duration"
  }
 ]

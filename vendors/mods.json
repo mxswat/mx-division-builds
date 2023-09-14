@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": " Sticky Bomb<br/>6.4% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Dexterity",
+   "attributes": "8.0% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Microwave Amplifier",
+   "attributes": " Pulse<br/>6.6% Cone Size"
  }
 ]

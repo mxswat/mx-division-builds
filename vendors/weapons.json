@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7.5% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mozambique Special",
+   "dmg": "98,725",
+   "rpm": 310,
+   "mag": 18,
+   "talent": "Perfect Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.3% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>5% Damage to Armor",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.2% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SIG 556",
+   "dmg": "50,773",
+   "rpm": 720,
+   "mag": 30,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "USC .45 ACP",
+   "dmg": "98,255",
+   "rpm": 420,
+   "mag": 20,
+   "talent": "Future Perfect",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Chance"
  }
 ]

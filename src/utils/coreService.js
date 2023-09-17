@@ -12,6 +12,8 @@ const slotsToEncode = {
 	Secondary: new BehaviorSubject(),
 	SideArm: new BehaviorSubject(),
 	Specialization: new BehaviorSubject(),
+	Skill1: new BehaviorSubject(),
+	Skill2: new BehaviorSubject(),
 };
 
 const slotsToDecode = {
@@ -25,6 +27,8 @@ const slotsToDecode = {
 	Secondary: new Subject(),
 	SideArm: new Subject(),
 	Specialization: new Subject(),
+	Skill1: new Subject(),
+	Skill2: new Subject(),
 };
 
 const SHDLevels$ = new Subject();
@@ -47,9 +51,7 @@ class CoreService {
 	}
 
 	subscribeSlotData(name) {
-		return slotsToEncode[name]
-			.asObservable()
-			.pipe(debounce(() => timer(300)));
+		return slotsToEncode[name].asObservable().pipe(debounce(() => timer(300)));
 	}
 
 	subscribeAllSlotsData$() {
@@ -65,6 +67,8 @@ class CoreService {
 			slotsToEncode.SideArm.asObservable(),
 			slotsToEncode.Specialization.asObservable(),
 			SHDLevels$.asObservable(),
+			slotsToEncode.Skill1.asObservable(),
+			slotsToEncode.Skill2.asObservable(),
 		]).pipe(debounce(() => timer(300)));
 	}
 }

@@ -95,10 +95,12 @@ fetch(`${path}?${new Date().toISOString()}`, { method: "GET" })
 		}
 		getFromGoogleDrive(wearableSource, gearData);
 		getFromGoogleDrive(weaponsDataSource, weaponsData);
+		getFromGoogleDrive(skillsDataSource, skillsData);
 		getFromGoogleDrive(specializationListSource, specializationList);
 
 		Promise.all([
 			...Object.values(gearData),
+			...Object.values(skillsData),
 			...Object.values(weaponsData),
 			...Object.values(specializationList),
 			VendorPromises,
@@ -113,6 +115,27 @@ fetch(`${path}?${new Date().toISOString()}`, { method: "GET" })
 				// location.reload();
 			});
 	});
+
+const skillsData = {
+	Skills: null,
+	SkillStats: null,
+	SkillMods: null,
+};
+
+const skillsDataSource = [
+	{
+		key: "Skills",
+		url: process.env.VUE_APP_DATA_URL_SKILLS,
+	},
+	{
+		key: "SkillStats",
+		url: process.env.VUE_APP_DATA_URL_SKILL_STATS,
+	},
+	{
+		key: "SkillMods",
+		url: process.env.VUE_APP_DATA_URL_SKILL_MODS,
+	},
+];
 
 const weaponsData = {
 	Weapons: null,
@@ -220,6 +243,7 @@ const wearableSource = [
 export {
 	IsEverythingLoadedPromise,
 	gearData,
+	skillsData,
 	weaponsData,
 	specializationList,
 	VendorPromises as VendorData,

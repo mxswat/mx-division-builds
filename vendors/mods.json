@@ -5,78 +5,78 @@
    "vendor": "White House",
    "level": 40,
    "name": "Offensive System: Dexterity",
-   "attributes": "7.2% Headshot Damage "
+   "attributes": "7.6% Headshot Damage "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "White House",
    "level": 40,
-   "name": "Micropulse Frequency",
-   "attributes": " Drone<br/>4.1% Damage"
+   "name": "Freedom Package",
+   "attributes": " Drone<br/>8.2% Health"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "White House",
    "level": 40,
-   "name": "SHD CPU V.2",
-   "attributes": " Turret<br/>6.1% Skill Haste"
+   "name": "Organic Circuits",
+   "attributes": " Turret<br/>1 Extra Mortar Ammo"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "White House",
    "level": 40,
-   "name": "Improved Sticky Launcher",
-   "attributes": " Sticky Bomb<br/>4.7% Blast Radius"
- },
- {
-   "type": "mod",
-   "rarity": "header-offensive",
-   "vendor": "Clan",
-   "level": 40,
-   "name": "Offensive System: Dexterity",
-   "attributes": "8.0% Headshot Damage "
+   "name": "Improved Sticky Payload",
+   "attributes": " Sticky Bomb<br/>4.0% Burn Duration"
  },
  {
    "type": "mod",
    "rarity": "header-utility",
    "vendor": "Clan",
    "level": 40,
-   "name": "Utility Protocol: Intensity",
-   "attributes": "10.5% Skill Haste "
+   "name": "Utility System: Assist",
+   "attributes": "17.6% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "7.7% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Vac Pack",
+   "attributes": " Firefly<br/>6.1% Blind Effect Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Internal Storage",
+   "attributes": " Hive<br/>4.0% Range"
  },
  {
    "type": "mod",
    "rarity": "header-defensive",
-   "vendor": "Clan",
+   "vendor": "The Theater",
    "level": 40,
    "name": "Defensive Protocol: Stamina",
-   "attributes": "8.8% Bleed Resistance "
- },
- {
-   "type": "mod",
-   "rarity": "header-he",
-   "vendor": "Clan",
-   "level": 40,
-   "name": "Trauma Analyzer",
-   "attributes": " Drone<br/>2 Extra Bombs"
- },
- {
-   "type": "mod",
-   "rarity": "header-defensive",
-   "vendor": "The Theater",
-   "level": 40,
-   "name": "Defensive Protocol: Resilience",
-   "attributes": "8.5% Shock Resistance "
+   "attributes": "8.2% Disorient Resistance "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "The Theater",
    "level": 40,
-   "name": "Delivery System Upgrade",
+   "name": "Larrea Tridentata Infusion",
    "attributes": " Seeker Mine<br/>4.2% Damage"
  },
  {
@@ -84,15 +84,15 @@
    "rarity": "header-he",
    "vendor": "The Theater",
    "level": 40,
-   "name": "Liquid Metal Microdroplets",
-   "attributes": " Shield<br/>4.3% Deflector Damage"
+   "name": "Magnetostrictive Material",
+   "attributes": " Shield<br/>1.0 Damage Bonus Per Enemy"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "The Theater",
    "level": 40,
-   "name": "Vac Pack",
+   "name": "Propantriol Adhesive",
    "attributes": " Firefly<br/>5.9% Blind Effect Duration"
  },
  {
@@ -109,39 +109,39 @@
    "vendor": "The Campus",
    "level": 40,
    "name": "Utility System: Electronics",
-   "attributes": "15.6% Repair Skills "
+   "attributes": "15.8% Repair Skills "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "The Campus",
    "level": 40,
-   "name": "Slip Fit Tube",
-   "attributes": " Chem Launcher<br/>7.6% Ensnare Duration"
+   "name": "Ecotoxicology Research",
+   "attributes": " Chem Launcher<br/>6.1% Skill Haste"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "The Campus",
    "level": 40,
-   "name": "Extra Payload",
-   "attributes": " Hive<br/>4.3% Damage"
+   "name": "Polycarbonate Housing",
+   "attributes": " Hive<br/>4.2% Duration"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "The Campus",
    "level": 40,
-   "name": "Unstable Oscillator",
-   "attributes": " Pulse<br/>6.5% Cone Size"
+   "name": "Nickel-Chromium Wire",
+   "attributes": " Pulse<br/>8.6% Radius"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "The Campus",
    "level": 40,
-   "name": "Trap Electronics Upgrade",
-   "attributes": " Trap<br/>5.9% Duration"
+   "name": "Trap Charge Improvement",
+   "attributes": " Trap<br/>4.3% Duration"
  },
  {
    "type": "mod",
@@ -149,22 +149,22 @@
    "vendor": "Castle",
    "level": 40,
    "name": "Utility Protocol: Intensity",
-   "attributes": "8.5% Skill Duration "
+   "attributes": "10.2% Skill Haste "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "Castle",
    "level": 40,
-   "name": "Liquid Nitrogen Cooling System",
-   "attributes": " Chem Launcher<br/>4.2% Duration"
+   "name": "Disintegrating Links",
+   "attributes": " Chem Launcher<br/>4.3% Duration"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "Castle",
    "level": 40,
-   "name": "Steel Harness",
+   "name": "Internal Storage",
    "attributes": " Hive<br/>4 Stinger Charges"
  },
  {
@@ -172,8 +172,8 @@
    "rarity": "header-he",
    "vendor": "Castle",
    "level": 40,
-   "name": "Unstable Oscillator",
-   "attributes": " Pulse<br/>6.4% Cone Size"
+   "name": "Super Glue",
+   "attributes": " Pulse<br/>14.7% Health"
  },
  {
    "type": "mod",
@@ -181,30 +181,30 @@
    "vendor": "Castle",
    "level": 40,
    "name": "Trap Electronics Upgrade",
-   "attributes": " Trap<br/>6.1% Shock Radius"
+   "attributes": " Trap<br/>5.7% Shock Radius"
  },
  {
    "type": "mod",
    "rarity": "header-defensive",
    "vendor": "DZ West",
    "level": 40,
-   "name": "Defensive Protocol: Stamina",
-   "attributes": "8.5% Ensnare Resistance "
+   "name": "Defensive Protocol: Resilience",
+   "attributes": "15,165 Armor on Kill "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ West",
    "level": 40,
-   "name": "Larrea Tridentata Infusion",
-   "attributes": " Seeker Mine<br/>4.2% Damage"
+   "name": "Ball Bearings",
+   "attributes": " Seeker Mine<br/>1 Cluster Mines"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ West",
    "level": 40,
-   "name": "Weaved Aramid Fiber",
+   "name": "Smart UHMWPE Lexicon",
    "attributes": " Shield<br/>4.3% Deflector Damage"
  },
  {
@@ -212,8 +212,8 @@
    "rarity": "header-he",
    "vendor": "DZ West",
    "level": 40,
-   "name": "RAM Surplus",
-   "attributes": " Firefly<br/>1 Max Targets"
+   "name": "Micro Conduits",
+   "attributes": " Firefly<br/>5.9% Skill Haste"
  },
  {
    "type": "mod",
@@ -228,24 +228,24 @@
    "rarity": "header-offensive",
    "vendor": "DZ South",
    "level": 40,
-   "name": "Offensive System: Firearms",
-   "attributes": "4.4% Critical Hit Chance "
+   "name": "Offensive Protocol: Critical",
+   "attributes": "10.0% Critical Hit Damage "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ South",
    "level": 40,
-   "name": "Trauma Analyzer",
-   "attributes": " Drone<br/>7.8m Scan Range"
+   "name": "Blitzkrieg Blasting Powder",
+   "attributes": " Drone<br/>6.3% Duration"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ South",
    "level": 40,
-   "name": "Organic Circuits",
-   "attributes": " Turret<br/>1 Extra Mortar Ammo"
+   "name": "Carbon Fiber Barrel",
+   "attributes": " Turret<br/>6.1% Duration"
  },
  {
    "type": "mod",
@@ -253,47 +253,47 @@
    "vendor": "DZ South",
    "level": 40,
    "name": "Improved Sticky Launcher",
-   "attributes": " Sticky Bomb<br/>4.8% Blast Radius"
+   "attributes": " Sticky Bomb<br/>4.2% Skill Haste"
  },
  {
    "type": "mod",
    "rarity": "header-utility",
    "vendor": "DZ East",
    "level": 40,
-   "name": "Utility Protocol: Intensity",
-   "attributes": "16.2% Repair Skills "
+   "name": "Utility System: Assist",
+   "attributes": "10.1% Skill Haste "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ East",
    "level": 40,
-   "name": "Ecotoxicology Research",
-   "attributes": " Chem Launcher<br/>4.1% Duration"
+   "name": "Feed Strip",
+   "attributes": " Chem Launcher<br/>6.5% Burn Strength"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ East",
    "level": 40,
-   "name": "Extra Payload",
-   "attributes": " Hive<br/>8.6% Stim Efficiency"
+   "name": "Polycarbonate Housing",
+   "attributes": " Hive<br/>4.1% Duration"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ East",
    "level": 40,
-   "name": "Super Glue",
-   "attributes": " Pulse<br/>15.1% Health"
+   "name": "Heating Mantle",
+   "attributes": " Pulse<br/>14.7% Health"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "DZ East",
    "level": 40,
-   "name": "Trap Electronics Upgrade",
-   "attributes": " Trap<br/>5.8% Shock Radius"
+   "name": "Trap Charge Improvement",
+   "attributes": " Trap<br/>4.1% Duration"
  },
  {
    "type": "mod",
@@ -301,7 +301,7 @@
    "vendor": "Haven",
    "level": 40,
    "name": "Offensive System: Firearms",
-   "attributes": "9.9% Critical Hit Damage "
+   "attributes": "4.5% Critical Hit Chance "
  },
  {
    "type": "mod",
@@ -309,86 +309,86 @@
    "vendor": "Haven",
    "level": 40,
    "name": "Defensive Protocol: Stamina",
-   "attributes": "15,517 Armor on Kill "
+   "attributes": "8.5% Pulse Resistance "
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "Haven",
    "level": 40,
-   "name": "Sturdy Piston",
-   "attributes": " Seeker Mine<br/>6.0% Healing"
+   "name": "Delivery System Upgrade",
+   "attributes": " Seeker Mine<br/>5.0% Skill Haste"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "Haven",
    "level": 40,
-   "name": "Heating Mantle",
-   "attributes": " Pulse<br/>8.9% Effect Duration"
+   "name": "Imbued Metal String",
+   "attributes": " Chem Launcher<br/>4.1% Damage"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "Haven",
    "level": 40,
-   "name": "Improved Sticky Payload",
-   "attributes": " Sticky Bomb<br/>6.3% Damage"
- },
- {
-   "type": "mod",
-   "rarity": "header-utility",
-   "vendor": "Benitez",
-   "level": 40,
-   "name": "Utility System: Electronics",
-   "attributes": "16.1% Repair Skills "
- },
- {
-   "type": "mod",
-   "rarity": "header-defensive",
-   "vendor": "Benitez",
-   "level": 40,
-   "name": "Defensive Protocol: Resilience",
-   "attributes": "8.5% Blind Deaf Resistance "
- },
- {
-   "type": "mod",
-   "rarity": "header-he",
-   "vendor": "Benitez",
-   "level": 40,
-   "name": "RDX Pellet Payload",
-   "attributes": " Seeker Mine<br/>5.7% Healing"
- },
- {
-   "type": "mod",
-   "rarity": "header-he",
-   "vendor": "Benitez",
-   "level": 40,
-   "name": "Ultra-Thin Cartridges",
-   "attributes": " Chem Launcher<br/>6.0% Skill Haste"
- },
- {
-   "type": "mod",
-   "rarity": "header-he",
-   "vendor": "Benitez",
-   "level": 40,
-   "name": "Improved Sticky Launcher",
-   "attributes": " Sticky Bomb<br/>6.4% Duration"
+   "name": "Trap Electronics Upgrade",
+   "attributes": " Trap<br/>5.8% Shock Radius"
  },
  {
    "type": "mod",
    "rarity": "header-offensive",
-   "vendor": "Cassie",
+   "vendor": "Benitez",
    "level": 40,
    "name": "Offensive System: Dexterity",
-   "attributes": "8.0% Headshot Damage "
+   "attributes": "4.7% Critical Hit Chance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "4.3% Critical Hit Chance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Carbon Fiber Barrel",
+   "attributes": " Turret<br/>5.9% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Super Glue",
+   "attributes": " Pulse<br/>4.7% Skill Haste"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Decoy Projector Internals",
+   "attributes": " Decoy<br/>6.0% Duration"
  },
  {
    "type": "mod",
    "rarity": "header-he",
    "vendor": "Cassie",
    "level": 40,
-   "name": "Microwave Amplifier",
-   "attributes": " Pulse<br/>6.6% Cone Size"
+   "name": "Utility System: Assist",
+   "attributes": "17.6% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Synthetic Mineral Frame",
+   "attributes": " Shield<br/>4.3% Holstered Regeneration"
  }
 ]

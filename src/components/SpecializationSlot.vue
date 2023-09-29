@@ -102,7 +102,6 @@
 		watch: {
 			currentSpecialization: {
 				handler: function(val, oldVal) {
-					console.log(`val: ${JSON.stringify(val)}`)
 					if (val && val['name'] === "(Blank)") {
 						// setting this to null will clear the select control
 						// and trigger another run though this code with val === null

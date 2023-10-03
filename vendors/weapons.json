@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Quiet Roar - Stoner LAMG",
+   "dmg": "47,952",
+   "rpm": 580,
+   "mag": 200,
+   "talent": "Perfect Overwhelm",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.4% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.3% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military M60 E4",
+   "dmg": "61,116",
+   "rpm": 500,
+   "mag": 100,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.1% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "LVOA-C",
+   "dmg": "100,136",
+   "rpm": 360,
+   "mag": 30,
+   "talent": "Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.3% Swap Speed"
  }
 ]

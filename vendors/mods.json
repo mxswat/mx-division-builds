@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Charge Improvement",
    "attributes": " Trap<br/>4.2% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Dexterity",
+   "attributes": "7.6% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cyclone Magazine",
+   "attributes": " Turret<br/>4.4% Burn Damage"
  }
 ]

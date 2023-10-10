@@ -32,7 +32,7 @@
 					<GeneralStats></GeneralStats>
 				</BasicTile>
 			</div>
-			<!-- <SkillStats></SkillStats> -->
+			<SkillStats></SkillStats>
 			<BasicTile classes="dps-chart">
 				<DPSChart></DPSChart>
 			</BasicTile>
@@ -61,7 +61,7 @@
 		name: "App",
 		components: {
 			WeaponStats,
-			// SkillStats,
+			SkillStats,
 			GeneralStats,
 			BasicTile,
 			Toolbar,

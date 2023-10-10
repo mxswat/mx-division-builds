@@ -6,9 +6,7 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<div @click="toggleMobileMenu()"
-			class="menu-btt"
-		>
+		<div @click="toggleMobileMenu()" class="menu-btt">
 			<span class="no-select">Weapon Types</span>
 			<div
 				class="arrow-down mx__open-indicator"
@@ -20,8 +18,10 @@
 				class="mx-btt"
 				v-for="(type, key) in weaponTypes"
 				v-bind:key="key"
-				@click="scrollToElementID(type);toggleMobileMenu()"
-				>{{ type }}</button
+				@click="
+					scrollToElementID(type);
+					toggleMobileMenu();
+				"
 			>
 				{{ type }}
 			</button>
@@ -35,7 +35,7 @@
 					@[item.event]="onSelection(item.weapon)"
 				>
 					<template v-if="item.type">
-						<div :id="item.type">{{item.type}}</div>
+						<div :id="item.type">{{ item.type }}</div>
 					</template>
 					<template v-else>
 						<BasicTile :classes="'anim-enabled'">
@@ -44,9 +44,7 @@
 									<span class="name">
 										Empty Slot
 									</span>
-									<div class="talent"
-										>Remove the item from this slot.</div
-									>
+									<div class="talent">Remove the item from this slot.</div>
 								</template>
 								<template v-else>
 									<span class="name">
@@ -60,9 +58,9 @@
 										<div class="perk-icon" :class="perk.type"></div>
 										<div class="perk">{{ perk.desc }}</div>
 									</div>
-									<div class="talent"
-										>{{ getTalentDesc(item.weapon.Talent) }}</div
-									>
+									<div class="talent">
+										{{ getTalentDesc(item.weapon.Talent) }}
+									</div>
 									<div
 										v-if="isAvailableAtVendor(item.weapon)"
 										class="vendor-label"
@@ -92,7 +90,7 @@
 	} from "../../utils/utils";
 	import BasicTile from "../BasicTile";
 
-		export default {
+	export default {
 		name: "WeaponSelectionModal",
 		props: ["gearData", "onModalClose", "tableHeaders"],
 		components: {
@@ -110,11 +108,13 @@
 			};
 		},
 		computed: {
-			weaponTypes: function () {
+			weaponTypes: function() {
 				// this updates if the grid items are filtered by the user
-				return this.gridItems.filter((item) => item.type).map(item => item.type);
+				return this.gridItems
+					.filter((item) => item.type)
+					.map((item) => item.type);
 			},
-			gridItems: function () {
+			gridItems: function() {
 				// computed list of items which can be filtered by user searches
 
 				// vue won't let us loop on templates for the alternating grid sections
@@ -130,28 +130,30 @@
 				// add an empty slot at the beginning of each section
 				itemList.push({
 					type: null,
-					classes: 'remove-item',
-					event: 'click',
+					classes: "remove-item",
+					event: "click",
 					weapon: null,
 				});
-				Object.keys(weapons).sort().forEach((type) =>{
-					// add each weapon type section heading
-					itemList.push({
-						type: type,
-						classes: 'weapon-type',
-						event: null,
-						weapon: null,
-					});
-					weapons[type].forEach((weapon) => {
-						// then add all of the weapons for the section
+				Object.keys(weapons)
+					.sort()
+					.forEach((type) => {
+						// add each weapon type section heading
 						itemList.push({
-							type: null,
-							classes: 'weapon-slot ' + qualityToCss[weapon.Quality],
-							event: 'click',
-							weapon: weapon,
+							type: type,
+							classes: "weapon-type",
+							event: null,
+							weapon: null,
+						});
+						weapons[type].forEach((weapon) => {
+							// then add all of the weapons for the section
+							itemList.push({
+								type: null,
+								classes: "weapon-slot " + qualityToCss[weapon.Quality],
+								event: "click",
+								weapon: weapon,
+							});
 						});
 					});
-				});
 				return itemList;
 			},
 		},
@@ -163,13 +165,15 @@
 			},
 			getPerks(weapon) {
 				const perks = [];
-				if (weapon['Quality'] === 'Named') {
-					['Attribute 1'].forEach((key) => {
+				if (weapon["Quality"] === "Named") {
+					["Attribute 1"].forEach((key) => {
 						if (weapon[key] && weapon[key].length > 1) {
-							let found = this.perfectAttributes.find((a) => a.Stat === weapon[key]);
+							let found = this.perfectAttributes.find(
+								(a) => a.Stat === weapon[key]
+							);
 							if (found) {
 								perks.push({
-									type: 'perfect',
+									type: "perfect",
 									desc: `${found.Stat.trim()} ${found.Max}`,
 								});
 							}
@@ -198,21 +202,21 @@
 			getFilteredWeaponsList() {
 				const searchText = this.searchText.toLocaleLowerCase();
 				const result = {};
-				Object.keys(this.weaponsList).sort().forEach(type => {
-					const filtered = this.weaponsList[type].filter((weapon) => {
-						return (
-							this.getDisplayName(weapon)
-								.toLocaleLowerCase()
-								.includes(searchText) ||
-							weapon.Quality
-								.toLocaleLowerCase()
-								.includes(searchText)
-						);
+				Object.keys(this.weaponsList)
+					.sort()
+					.forEach((type) => {
+						const filtered = this.weaponsList[type].filter((weapon) => {
+							return (
+								this.getDisplayName(weapon)
+									.toLocaleLowerCase()
+									.includes(searchText) ||
+								weapon.Quality.toLocaleLowerCase().includes(searchText)
+							);
+						});
+						if (filtered.length) {
+							result[type] = filtered;
+						}
 					});
-					if (filtered.length) {
-						result[type] = filtered;
-					}
-				});
 				return result;
 			},
 			isAvailableAtVendor(weapon) {
@@ -246,12 +250,9 @@
 						QualityPriority[a["Quality"]] - QualityPriority[[b["Quality"]]] ||
 						a["Name"].localeCompare(b["Name"])
 				);
-				this.perfectAttributes = data[2].filter( a => a.Quality === 'N');
+				this.perfectAttributes = data[2].filter((a) => a.Quality === "N");
 				this.vendorWeapons = data[3].Weapons;
-				this.weaponsList = groupArrayOfObjectsByKey(
-					sorted,
-					"Weapon Type"
-				);
+				this.weaponsList = groupArrayOfObjectsByKey(sorted, "Weapon Type");
 			});
 		},
 	};
@@ -267,13 +268,13 @@
 	}
 	.weapon-grid {
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+		grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
 		gap: 8px;
 		padding: 8px;
 
 		.tile {
 			padding: unset; /* must unset so we can apply to content below */
-			height:100%;
+			height: 100%;
 			min-height: 10px;
 
 			.tile-content {
@@ -309,7 +310,7 @@
 					height: 18px;
 					width: 18px;
 					&.perfect {
-					content: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' style='fill:white' viewBox='-25 -25 350 350'%3E%3Cpath d='M67.2 16.4 59 24.8l.2 36.8.3 36.9 20.3.3c15.8.2 20.2 0 20.3-1 0-.7 0-11-.1-22.9-.1-18.3.1-21.8 1.4-23 3.1-2.9 4.1-3.8 5.4-5.4 1.1-1.3 6.6-1.5 43.7-1.5H193l1.6 2.5c.9 1.3 2.4 2.7 3.5 3 1.7.6 1.9 2.1 2.1 24.3l.3 23.7h41l.3-36.8.2-36.8-8.4-8.4-8.4-8.5-74.9.1H75.5l-8.3 8.3zM42.3 114.4l-3.3 3.3v169.4l3.5 3.4 3.4 3.5h105c103.2 0 105 0 105.6-1.9.3-1.1 1.5-2.3 2.6-2.6 1-.4 1.9-.9 1.9-1.3v-86l.1-85.3-3-2.9-2.9-3-104.9.1H45.5l-3.2 3.3zm132.5 43.8c1.4 1.4 1.7 85.4.4 87.6-.7.9-6.4 1.2-25.3 1l-24.4-.3-.3-43.4c-.1-31.2.1-43.8.9-44.7 1.6-1.9 46.9-2 48.7-.2z'/%3E%3C/svg%3E");
+						content: url("data:image/svg+xml,%3Csvg version='1.0' xmlns='http://www.w3.org/2000/svg' style='fill:white' viewBox='-25 -25 350 350'%3E%3Cpath d='M67.2 16.4 59 24.8l.2 36.8.3 36.9 20.3.3c15.8.2 20.2 0 20.3-1 0-.7 0-11-.1-22.9-.1-18.3.1-21.8 1.4-23 3.1-2.9 4.1-3.8 5.4-5.4 1.1-1.3 6.6-1.5 43.7-1.5H193l1.6 2.5c.9 1.3 2.4 2.7 3.5 3 1.7.6 1.9 2.1 2.1 24.3l.3 23.7h41l.3-36.8.2-36.8-8.4-8.4-8.4-8.5-74.9.1H75.5l-8.3 8.3zM42.3 114.4l-3.3 3.3v169.4l3.5 3.4 3.4 3.5h105c103.2 0 105 0 105.6-1.9.3-1.1 1.5-2.3 2.6-2.6 1-.4 1.9-.9 1.9-1.3v-86l.1-85.3-3-2.9-2.9-3-104.9.1H45.5l-3.2 3.3zm132.5 43.8c1.4 1.4 1.7 85.4.4 87.6-.7.9-6.4 1.2-25.3 1l-24.4-.3-.3-43.4c-.1-31.2.1-43.8.9-44.7 1.6-1.9 46.9-2 48.7-.2z'/%3E%3C/svg%3E");
 					}
 				}
 
@@ -351,8 +352,6 @@
 		border-bottom: 1px solid white;
 		.mx-btt {
 			margin: 0;
-
-
 		}
 	}
 

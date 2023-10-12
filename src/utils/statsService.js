@@ -192,6 +192,13 @@ class StatsService {
 					if (found) {
 						if (found.stat === "Talent") {
 							brandBuffs.push(found.Talent);
+							// if the gearset chest/backpack is equipped then append their talent too
+							[[1,'Backpack'],[2,'Chest']].forEach(([i,slot]) => {
+								let item = gearArr[i];
+								if (item && item.brand === brand) {
+									brandBuffs.push(`+ ${slot}: ${item.talent.Talent}\n${item.talent.Desc}`);
+								}
+							})
 						} else {
 							brandBuffs.push(`${found.stat} ${found.val}`);
 							const statType = this.statsMapping[found.stat].Type;
@@ -225,104 +232,6 @@ class StatsService {
 				stats.brands[brand] = brandBuffs;
 			}
 		}
-
-		/*
-		// NinjaBike Messenger Bag Brands Talents
-		if (this.equippedNinjaBikeMessengerBag) {
-			for (const brand in stats.brands) {
-				const brandCount = stats.brands[brand].length;
-				// bypass the Exotics
-				let foundSetBonus = null;
-				let gearsetBonusOffset = 0;
-				if (brand !== "Exotic") {
-					// check if High End or Gearset
-					const foundBrand = this.brandsData.find((b) => {
-						return b.Brand === brand;
-					});
-					if (foundBrand.Type === "Gearset") {
-						// need to offset due to some gearsets having multiple stats with three pieces
-						// fourth piece gives Talent
-						// e.g. Eclipse Protocol, Future Initiative
-						if (stats.brands[brand].length === 3) {
-							gearsetBonusOffset = 0;
-						} else {
-							gearsetBonusOffset = 1;
-						}
-						// gearsetBonusOffset = 1;
-						foundSetBonus = this.brandSetBonuses.find((b) => {
-							return (
-								b.Brand ==
-								`${brand}${stats.brands[brand].length +
-									gearsetBonusOffset}`
-							);
-						});
-					}
-					if (foundBrand.Type === "High End") {
-						foundSetBonus = this.brandSetBonuses.find((b) => {
-							return (
-								b.Brand ==
-								`${brand}${stats.brands[brand].length}`
-							);
-						});
-					}
-
-					// ensure the brandset is not already maxed
-					// TODO this check may not be needed
-					if (stats.brands[brand].length < 4) {
-						if (foundSetBonus !== undefined) {
-							// if Talent as Bonus
-							if (foundSetBonus.stat === "Talent") {
-								stats.brands[brand].push(
-									`${foundSetBonus.Talent}`
-								);
-							} else {
-								const statType = this.statsMapping[
-									foundSetBonus.stat
-								].Type;
-
-								addValueToStat(
-									stats[statTypes[statType]],
-									foundSetBonus.stat,
-									Number(foundSetBonus.val)
-								);
-
-								stats.brands[brand].push(
-									`${foundSetBonus.stat} ${foundSetBonus.val}`
-								);
-								// add the core for Skill Tier set bonus
-								if (foundSetBonus.stat === "Skill Tier") {
-									stats.Cores.Utility.push(1);
-								}
-								// check if the set has a dual stat (stat1)
-								if (
-									foundSetBonus.stat1 &&
-									this.statsMapping[foundSetBonus.stat1] !=
-										undefined
-								) {
-									addValueToStat(
-										stats[
-											statTypes[
-												this.statsMapping[
-													foundSetBonus.stat1
-												].Type
-											]
-										],
-										foundSetBonus.stat1,
-										Number(foundSetBonus.val1)
-									);
-									stats.brands[brand].push(
-										`${foundSetBonus.stat1} ${foundSetBonus.val1}`
-									);
-								}
-							}
-						}
-					}
-				}
-				// stats.brands[brand] = ninjaBuffs;
-			}
-		}
-
-		*/
 
 		// ensuring Utility Cores match Skill Tier
 		stats.Utility["Skill Tier"] = stats.Cores.Utility.length;

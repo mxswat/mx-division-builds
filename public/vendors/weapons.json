@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.5% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Relic - G28",
+   "dmg": "146,677",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Perfectly Determined",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>110% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tactical Mk 16",
+   "dmg": "55,504",
+   "rpm": 625,
+   "mag": 30,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.9% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M700 Tactical",
+   "dmg": "376,096",
+   "rpm": 54,
+   "mag": 7,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>97% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Magazine Size"
  }
 ]

@@ -62,8 +62,7 @@
 				for (let i = 0; i < specializations.length; i++) {
 					const specialization = specializations[i];
 					if (!holder[specialization.Name]) {
-						holder[specialization.Name] =
-							holder[specialization.Name] || {};
+						holder[specialization.Name] = holder[specialization.Name] || {};
 						holder[specialization.Name].name = specialization.Name;
 						holder[specialization.Name].stats =
 							holder[specialization.Name].stats || [];
@@ -79,9 +78,9 @@
 				if (this.specializations.length) {
 					// push a dummy attribute onto the front of the list
 					this.specializations.unshift({
-						"name": "(Blank)",
-						"stats": [],
-						"id": -1
+						name: "(Blank)",
+						stats: [],
+						id: -1,
 					});
 				}
 			});
@@ -92,9 +91,7 @@
 				coreService.getSlotInit$("Specialization").subscribe((ids) => {
 					const specId = parseInt(ids);
 					if (specId >= 0) {
-						this.currentSpecialization = this.specializations[
-							specId
-						];
+						this.currentSpecialization = this.specializations[specId];
 					}
 				});
 			},
@@ -102,8 +99,8 @@
 		watch: {
 			currentSpecialization: {
 				handler: function(val, oldVal) {
-					console.log(`val: ${JSON.stringify(val)}`)
-					if (val && val['name'] === "(Blank)") {
+					// console.log(`val: ${JSON.stringify(val)}`)
+					if (val && val["name"] === "(Blank)") {
 						// setting this to null will clear the select control
 						// and trigger another run though this code with val === null
 						this.currentSpecialization = null;

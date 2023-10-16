@@ -57,7 +57,7 @@ class SkillBase {
 	expertise = {
 		stat: "Expertise",
 		bonusStat: null,
-		max: 22,
+		max: 24,
 	};
 	modOne = null;
 	modTwo = null;
@@ -86,7 +86,7 @@ class SkillBase {
 		this.variant = skillRaw.Variant;
 		this.quality = skillRaw.Quality;
 		this["expertise"].bonusStat = skillRaw["Expertise Bonus"];
-		this["expertise"].max = 22;
+		this["expertise"].max = 24;
 		this.slotOne = skillRaw["Slot One"];
 		this.slotTwo = skillRaw["Slot Two"];
 		this.slotThree = skillRaw["Slot Three"];
@@ -117,7 +117,7 @@ class WeaponBase {
 
 	expertise = {
 		stat: "Expertise",
-		max: 22,
+		max: 24,
 	};
 
 	"core 1" = {
@@ -161,7 +161,7 @@ class WeaponBase {
 		this["optimal range"] = Number(weaponRaw["Optimal Range"]);
 		this["reload speed (ms)"] = Number(weaponRaw["Reload Speed (ms)"]);
 		this["hsd"] = Number(weaponRaw["HSD"]);
-		this["expertise"].max = 22;
+		this["expertise"].max = 24;
 		this["core 1"].max = Number(weaponRaw["Core 1 Max"]);
 		this["core 2"].max = Number(weaponRaw["Core 2 Max"]);
 		this["core 1"].stat = weaponRaw["Core 1"];

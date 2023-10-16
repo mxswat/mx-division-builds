@@ -214,6 +214,8 @@ const openCreditsModal = function openCreditsModal() {
             <p> "The Division 2 - Gear Attribute Sheet" Team </p>
             <p> saagri (NPCs HP values) </p>
             <p> Vikeman45 (NPCs HP values) </p>
+						<p> Azurmen </p>
+						<p> wkrick </p>
             <p> <a href="http://rubenalamina.mx/the-division-weekly-vendor-reset/">Ruben Alamina - THE DIVISION 2: WEEKLY VENDOR RESET</a> </p>
         `,
 		buttons: [

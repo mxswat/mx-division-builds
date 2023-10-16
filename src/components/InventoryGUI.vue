@@ -30,6 +30,12 @@
 		<BasicTile classes="kneepads" bgImage="icons/kneepads.png">
 			<GearSlot name="Kneepads"></GearSlot>
 		</BasicTile>
+		<BasicTile classes="skills">
+			<SkillSlot name="Skill1"></SkillSlot>
+		</BasicTile>
+		<BasicTile classes="skills">
+			<SkillSlot name="Skill2"></SkillSlot>
+		</BasicTile>
 		<BasicTile classes="watch" bgImage="icons/shd_med.png">
 			<WatchSlot name="Watch"></WatchSlot>
 		</BasicTile>
@@ -39,6 +45,7 @@
 <script>
 	import BasicTile from "./BasicTile";
 	import GearSlot from "./GearSlot";
+	import SkillSlot from "./SkillSlot";
 	import WeaponSlot from "./WeaponSlot";
 	import WatchSlot from "./WatchSlot";
 	import { updatedInput$ } from "../utils/urlEncorder";
@@ -52,6 +59,7 @@
 		components: {
 			BasicTile,
 			GearSlot,
+			SkillSlot,
 			WeaponSlot,
 			WatchSlot,
 			SpecializationSlot,

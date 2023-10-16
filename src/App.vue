@@ -1,5 +1,13 @@
 <template>
 	<div id="app">
+		<div
+			v-if="!inProduction"
+			style="background-color: red; text-align: center;"
+		>
+			<span>
+				NOT IN PRODUCTION
+			</span>
+		</div>
 		<BasicTile classes="toolbar-container">
 			<Toolbar></Toolbar>
 		</BasicTile>
@@ -8,8 +16,8 @@
 		</div>
 		<div class="loading" v-if="errorOnGetData">
 			<span
-				>I'm sorry, too many people are connected to the server right
-				now. Try again later in one hour.<br />
+				>I'm sorry, too many people are connected to the server right now. Try
+				again later in one hour.<br />
 				If you can, please report this issue at
 				<a style="color: " href="http://discord.gg/ShYner2"
 					>my discord server!</a
@@ -61,12 +69,20 @@
 			return {
 				loaded: false,
 				errorOnGetData: false,
+				inProduction: true,
+				localServer: false,
 			};
 		},
 		created() {
 			IsEverythingLoadedPromise.then(() => {
 				this.loaded = true;
+				if (location.host.includes("localhost")) {
+					console.log(location.host);
+					this.localServer = true;
+				}
 				console.log("IsEverythingLoadedPromise Complete");
+				this.inProduction =
+					process.env.NODE_ENV !== "production" ? false : true;
 				newFeatureGlow("screenshotBTT");
 			}).catch(() => {
 				this.errorOnGetData = true;
@@ -105,7 +121,9 @@
 	}
 
 	/* these don't inherit the font-family by default */
-	input, textarea, button {
+	input,
+	textarea,
+	button {
 		font-family: inherit;
 	}
 
@@ -147,6 +165,11 @@
 				grid-row: row 3;
 			}
 
+			.skill-stats-container {
+				grid-column: col 1;
+				grid-row: row 4;
+			}
+
 			.dps-chart {
 				grid-column: col 1;
 				grid-row: row 5;
@@ -176,6 +199,12 @@
 
 	.weapon-stats-container {
 		grid-column: col / span 3;
+		grid-row: row 2;
+	}
+
+	.skill-stats-container {
+		grid-column: col / span 2;
+		grid-column-start: 4;
 		grid-row: row 2;
 	}
 

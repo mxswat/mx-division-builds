@@ -488,5 +488,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "The Mop - SIX12",
+   "dmg": "451,314",
+   "rpm": 170,
+   "mag": 6,
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.2% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Armor on Kill"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.2% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL SA-58 Para",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.5% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military M870",
+   "dmg": "695,775",
+   "rpm": 75,
+   "mag": 5,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>3.7% Rate of Fire"
  }
 ]

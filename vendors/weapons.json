@@ -488,5 +488,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.5% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Boomstick - Double Barrel Shotgun",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Perfect Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.8% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.4% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "AK-M",
+   "dmg": "52,056",
+   "rpm": 600,
+   "mag": 30,
+   "talent": "Thunder Strike",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.4% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SIG 716",
+   "dmg": "97,785",
+   "rpm": 320,
+   "mag": 20,
+   "talent": "Lucky Shot",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.5% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Health Damage"
  }
 ]

@@ -7,7 +7,13 @@
 			placeholder="Your build Name"
 			name="Build Name"
 		/> -->
-		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Menu"/>
+		<LocaleSwitcher />
+		<MenuButton
+			class="menu-btt"
+			v-model="showMobileMenu"
+			:sync="true"
+			label="Menu"
+		/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>
 			<button @click="screenshot()" id="screenshotBTT">
@@ -25,8 +31,7 @@
 		Bugged TODO: Fix me
 		<button @click="history.back()">Undo</button>
 		<button @click="history.forward()">Redo</button> 
-		-->
-	</div>
+		--></div>
 </template>
 
 <script>
@@ -38,10 +43,14 @@
 		openCreditsModal,
 	} from "../utils/modalService";
 	import MenuButton from "./MenuButton.vue";
+	import LocaleSwitcher from "./LocalSwitcher.vue";
 
 	export default {
 		name: "Toolbar",
-		components: { MenuButton },
+		components: {
+			MenuButton,
+			LocaleSwitcher,
+		},
 		data() {
 			return {
 				history,
@@ -129,7 +138,7 @@
 					width: 100%;
 				}
 			}
-		}		
+		}
 	}
 
 	/*

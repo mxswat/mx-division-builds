@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Projector Internals",
    "attributes": " Decoy<br/>5.5% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility System: Electronics",
+   "attributes": "17.2% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cyclone Magazine",
+   "attributes": " Turret<br/>4.4% Damage"
  }
 ]

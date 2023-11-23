@@ -488,5 +488,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Born Great - G36",
+   "dmg": "",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Perfect Stabilize",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.7% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>15% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "1886",
+   "dmg": "342,247",
+   "rpm": 100,
+   "mag": 5,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.9% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Health Damage"
  }
 ]

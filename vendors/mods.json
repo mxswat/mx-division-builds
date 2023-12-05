@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Charge Improvement",
    "attributes": " Trap<br/>4.3% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-defensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Defensive System: Mending",
+   "attributes": "8.8% Disorient Resistance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Exploded Blueprint",
+   "attributes": " Pulse<br/>15.5% Health"
  }
 ]

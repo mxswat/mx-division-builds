@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cold Relations - Enhanced PP-19",
+   "dmg": "59,705",
+   "rpm": 700,
+   "mag": 58,
+   "talent": "Perfectly Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.2% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "MG5",
+   "dmg": "43,251",
+   "rpm": 800,
+   "mag": 50,
+   "talent": "Stabilize",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.1% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "M870 Express",
+   "dmg": "695,775",
+   "rpm": 75,
+   "mag": 5,
+   "talent": "Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
  }
 ]

@@ -37,7 +37,7 @@
    "slot": "Gloves",
    "armor": "80k",
    "core": "<span class=\"icon-offensive\"></span>10.4% Weapon Damage",
-   "attributes": "<span class=\"icon-defensive\"></span>8 Armor Regeneration <br/><span class=\"icon-offensive\"></span>7% Headshot Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>8.0 Damage to Armor<br/><span class=\"icon-offensive\"></span>7.0% Headshot Damage",
    "talents": "-",
    "mods": "-"
  },

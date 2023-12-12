@@ -1,3 +1,14 @@
 {
-	"message": "hello i18n !!"
+	"toolbar": {
+		"saveShare": "Save & Share",
+		"saveScreenshot": "Save Screenshot",
+		"clear": "Clear",
+		"newBuild": "New Build",
+		"issuesOrBugs": "Issues or Bugs?",
+		"patchNotes": "Patch Notes",
+		"credits": "Credits"
+	},
+	"dev": {
+		"notProduction": "NOT IN PRODUCTION"
+	}
 }

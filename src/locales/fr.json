@@ -1,0 +1,14 @@
+{
+	"toolbar": {
+		"saveShare": "Sauvegarder & Partager",
+		"saveScreenshot": "Enregistrer l'Image",
+		"clear": "Reinitialiser",
+		"newBuild": "Nouveau Build",
+		"issuesOrBugs": "Probleme ou Bug?",
+		"patchNotes": "Patch Notes",
+		"credits": "Credits"
+	},
+	"dev": {
+		"notProduction": "NOT IN PRODUCTION"
+	}
+}

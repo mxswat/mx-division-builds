@@ -15,17 +15,17 @@
 			label="Menu"
 		/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
-			<button @click="saveAndShare()">Save & Share</button>
+			<button @click="saveAndShare()">{{ $t("toolbar.saveShare") }}</button>
 			<button @click="screenshot()" id="screenshotBTT">
-				Save Screenshot
+				{{ $t("toolbar.saveScreenshot") }}
 			</button>
 			<button @click="clear()">Clear</button>
 			<button @click="newBuild()">New Build</button>
 			<button style="color: #f7d07c" @click="issues()">
-				Issues or bug?
+				{{ $t("toolbar.issuesOrBugs") }}
 			</button>
-			<button @click="version()">Patch Notes</button>
-			<button @click="credits()">Credits</button>
+			<button @click="version()">{{ $t("toolbar.patchNotes") }}</button>
+			<button @click="credits()">{{ $t("toolbar.credits") }}</button>
 		</div>
 		<!-- 
 		Bugged TODO: Fix me

@@ -5,7 +5,7 @@
 			style="background-color: red; text-align: center;"
 		>
 			<span>
-				NOT IN PRODUCTION
+				{{ $t("dev.notProduction") }}
 			</span>
 		</div>
 		<BasicTile classes="toolbar-container">
@@ -84,6 +84,8 @@
 				this.inProduction =
 					process.env.NODE_ENV !== "production" ? false : true;
 				newFeatureGlow("screenshotBTT");
+				console.log(this.$i18n.locale);
+				// console.log(this.$i18n);
 			}).catch(() => {
 				this.errorOnGetData = true;
 				this.loaded = true;

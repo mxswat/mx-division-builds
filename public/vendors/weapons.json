@@ -488,5 +488,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>10.1% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Boomstick - Double Barrel Shotgun",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Perfect Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Health Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Black Market T821",
+   "dmg": "66,757",
+   "rpm": 550,
+   "mag": 32,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.9% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Health Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SOCOM M1A",
+   "dmg": "141,036",
+   "rpm": 320,
+   "mag": 10,
+   "talent": "Boomerang",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12% Reload Speed"
  }
 ]

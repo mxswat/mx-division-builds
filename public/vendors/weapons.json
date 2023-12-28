@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.6% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Relic - G28",
+   "dmg": "146,677",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Perfectly Determined",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>97% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.7% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "MP5-N",
+   "dmg": "51,713",
+   "rpm": 800,
+   "mag": 32,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tactical Super 90 SBS",
+   "dmg": "440,031",
+   "rpm": 160,
+   "mag": 8,
+   "talent": "Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.6% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.5% Magazine Size"
  }
 ]

@@ -1,0 +1,5 @@
+src/components/Modals/GearSelectionModal.vue
+src/components/Modals/WeaponSelectionModal.vue
+src/components/SkillSlot.vue
+src/components/Toolbar.vue
+src/components/generic/Toggle.vue

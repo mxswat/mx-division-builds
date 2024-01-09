@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.6% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>3.7% Rate of Fire",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Boomstick - Double Barrel Shotgun",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Perfect Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>13% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.6% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL SA-58 Para",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "Thunder Strike",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Surplus SVD",
+   "dmg": "159,841",
+   "rpm": 260,
+   "mag": 10,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.3% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>89% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.6% Reload Speed"
  }
 ]

@@ -432,5 +432,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7.5% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Pyromaniac - Police M4",
+   "dmg": "44,191",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfectly Ignited",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military RPK-74 M",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.2% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "KSG Shotgun",
+   "dmg": "594,230",
+   "rpm": 70,
+   "mag": 12,
+   "talent": "Ignited",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.8% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>5% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>15% Swap Speed"
  }
 ]

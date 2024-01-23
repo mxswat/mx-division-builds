@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.4% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Invisible Hand - AUG A3-CQC",
+   "dmg": "51,243",
+   "rpm": 680,
+   "mag": 30,
+   "talent": "Perfect Allegro",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.8% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAMAS 2010",
+   "dmg": "44,191",
+   "rpm": 900,
+   "mag": 30,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic M44 Carbine",
+   "dmg": "423,108",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Ranger",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.8% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>91% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
  }
 ]

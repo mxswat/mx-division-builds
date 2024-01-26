@@ -185,9 +185,8 @@
 	import { WeaponBase } from "../utils/classes";
 	import coreService from "../utils/coreService";
 	import { qualityToCss, getUniqueObject } from "../utils/utils";
-	import Vue from "vue";
 
-	import StatInput from "./StatInput";
+	import StatInput from "./StatInput.vue";
 	import ExpertiseInput from "./ExpertiseInput.vue";
 	import MenuButton from "./MenuButton.vue";
 	export default {

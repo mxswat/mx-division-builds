@@ -72,7 +72,7 @@
 			</template>
 		</template>
 		<template v-if="!isSkillSelected()">
-			<img src="icons/skills/skills.png" alt="" class="img-slot-bg" />
+			<img :src="`./icons/skills/skills.png`" alt="" class="img-slot-bg" />
 			<span @click="onClick()" class="no-element-selected">
 				<p>CHOOSE YOUR SKILL</p>
 			</span>
@@ -85,8 +85,7 @@
 	import { SkillBase } from "../utils/classes";
 	import { typeToImgSrc, qualityToCss, getUniqueObject } from "../utils/utils";
 	import { skillsData } from "../utils/dataImporter";
-	import StatInput from "./StatInput";
-	import Vue from "vue";
+	import StatInput from "./StatInput.vue";
 	import coreService from "../utils/coreService";
 	import ExpertiseInput from "./ExpertiseInput.vue";
 
@@ -151,7 +150,7 @@
 				});
 			},
 			getSkillIcon(skill) {
-				return skill.icon ? `icons/skills/${skill.icon}` : "";
+				return skill.icon ? `./icons/skills/${skill.icon}` : "";
 			},
 			qualityToCSS(quality) {
 				// return qualityToCss[quality];

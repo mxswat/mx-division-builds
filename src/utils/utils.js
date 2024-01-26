@@ -50,21 +50,21 @@ const getUniqueObject = function(object) {
 
 const typeToImgSrc = {
 	core: {
-		O: "icons/offense1.png",
-		U: "icons/tech1.png",
-		D: "icons/defense1.png",
+		O: "./icons/offense1.png",
+		U: "./icons/tech1.png",
+		D: "./icons/defense1.png",
 	},
 	attribute: {
-		O: "icons/offense2.png",
-		U: "icons/tech2.png",
-		D: "icons/defense2.png",
-		B: "icons/blank_attribute.png",
+		O: "./icons/offense2.png",
+		U: "./icons/tech2.png",
+		D: "./icons/defense2.png",
+		B: "./icons/blank_attribute.png",
 	},
 	mod: {
-		O: "icons/offense3_2.png",
-		U: "icons/tech3_2.png",
-		D: "icons/defense3_2.png",
-		B: "icons/blank_mod.png",
+		O: "./icons/offense3_2.png",
+		U: "./icons/tech3_2.png",
+		D: "./icons/defense3_2.png",
+		B: "./icons/blank_mod.png",
 	},
 };
 
@@ -165,7 +165,8 @@ function groupArrayOfObjectsByKey(list, key) {
  */
 function getAppRootPath() {
 	// return window.webpackHotUpdate ? "/" : "/mx-division-builds/";
-	return window.webpackHotUpdate ? "/" : process.env.BASE_URL;
+	//return window.webpackHotUpdate ? "/" : import.meta.env.BASE_URL;
+	return import.meta.env.BASE_URL;
 }
 
 export {

@@ -87,7 +87,7 @@
 		QualityPriority,
 		groupArrayOfObjectsByKey,
 	} from "../../utils/utils";
-	import BasicTile from "../BasicTile";
+	import BasicTile from "../BasicTile.vue";
 	import MenuButton from "../MenuButton.vue";
 
 	export default {

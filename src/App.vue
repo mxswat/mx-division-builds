@@ -45,13 +45,13 @@
 
 <script>
 	import { IsEverythingLoadedPromise } from "./utils/dataImporter";
-	import WeaponStats from "./components/WeaponStats/WeaponStats";
-	import GeneralStats from "./components/GeneralStats";
-	import BasicTile from "./components/BasicTile";
-	import Toolbar from "./components/Toolbar";
+	import WeaponStats from "./components/WeaponStats/WeaponStats.vue";
+	import GeneralStats from "./components/GeneralStats.vue";
+	import BasicTile from "./components/BasicTile.vue";
+	import Toolbar from "./components/Toolbar.vue";
 	import newFeatureGlow from "./utils/newFeatureGlow";
-	import DPSChart from "./components/DPSChart/DPSChart";
-	import TimeToKill from "./components/TTK/TimeToKill";
+	import DPSChart from "./components/DPSChart/DPSChart.vue";
+	import TimeToKill from "./components/TTK/TimeToKill.vue";
 	import { executeOrderSixtysix } from "./utils/detectMobile";
 	import { openSafariIOSModal } from "./utils/modalService";
 

@@ -12,7 +12,7 @@
 				v-on:click="openGearModal()"
 			>
 				<div v-if="isNamedGear(currentGear)" class="named-container">
-					<img src="icons/named.png" class="named-logo" />
+					<img :src="`./icons/named.png`" class="named-logo" />
 					<span>
 						{{ currentGear.itemName }} ({{ currentGear.brand }})
 					</span>
@@ -335,9 +335,8 @@
 		getUniqueObject,
 	} from "../utils/utils";
 	import { gearData, VendorData } from "../utils/dataImporter";
-	import StatInput from "./StatInput";
-	import TalentSelect from "./GearSlot/TalentSelect";
-	import Vue from "vue";
+	import StatInput from "./StatInput.vue";
+	import TalentSelect from "./GearSlot/TalentSelect.vue";
 	import coreService from "../utils/coreService";
 
 	export default {

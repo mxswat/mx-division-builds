@@ -1,10 +1,10 @@
-import GearSelectionModal from "../components/Modals/GearSelectionModal";
-import SkillsSelectionModal from "../components/Modals/SkillsSelectionModal";
-import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal";
-import WatchLevelsModal from "../components/Modals/WatchLevelsModal";
+import GearSelectionModal from "../components/Modals/GearSelectionModal.vue";
+import SkillsSelectionModal from "../components/Modals/SkillsSelectionModal.vue";
+import WeaponSelectionModal from "../components/Modals/WeaponSelectionModal.vue";
+import WatchLevelsModal from "../components/Modals/WatchLevelsModal.vue";
 import { cleanLocalSHDLevels } from "../utils/SHDutils";
-import ScreenshotModal from "../components/Modals/ScreenshotModal";
-import VersionModal from "../components/Modals/VersionModal";
+import ScreenshotModal from "../components/Modals/ScreenshotModal.vue";
+import VersionModal from "../components/Modals/VersionModal.vue";
 
 import { gearHeaders, weaponsHeaders } from "./agGridDefaults";
 

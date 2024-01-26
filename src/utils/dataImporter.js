@@ -12,7 +12,7 @@ const IsEverythingLoadedPromise = new Promise(function(resolve, reject) {
 });
 
 const ClientDBVersion = localStorage.getItem("localDBversion") || "";
-let RemoteDBVersion = process.env.VUE_APP_DB_VERSION;
+let RemoteDBVersion = import.meta.env.VITE_APP_DB_VERSION;
 
 function getFromGoogleDrive(dataSources, listToPopulate) {
 	for (let i = 0; i < dataSources.length; i++) {
@@ -125,15 +125,15 @@ const skillsData = {
 const skillsDataSource = [
 	{
 		key: "Skills",
-		url: process.env.VUE_APP_DATA_URL_SKILLS,
+		url: import.meta.env.VITE_APP_DATA_URL_SKILLS,
 	},
 	{
 		key: "SkillStats",
-		url: process.env.VUE_APP_DATA_URL_SKILL_STATS,
+		url: import.meta.env.VITE_APP_DATA_URL_SKILL_STATS,
 	},
 	{
 		key: "SkillMods",
-		url: process.env.VUE_APP_DATA_URL_SKILL_MODS,
+		url: import.meta.env.VITE_APP_DATA_URL_SKILL_MODS,
 	},
 ];
 
@@ -147,19 +147,19 @@ const weaponsData = {
 const weaponsDataSource = [
 	{
 		key: "Weapons",
-		url: process.env.VUE_APP_DATA_URL_WEAPONS,
+		url: import.meta.env.VITE_APP_DATA_URL_WEAPONS,
 	},
 	{
 		key: "WeaponAttributes",
-		url: process.env.VUE_APP_DATA_URL_WEAPON_ATTRIBUTES,
+		url: import.meta.env.VITE_APP_DATA_URL_WEAPON_ATTRIBUTES,
 	},
 	{
 		key: "WeaponMods",
-		url: process.env.VUE_APP_DATA_URL_WEAPON_MODS,
+		url: import.meta.env.VITE_APP_DATA_URL_WEAPON_MODS,
 	},
 	{
 		key: "WeaponTalents",
-		url: process.env.VUE_APP_DATA_URL_WEAPON_TALENTS,
+		url: import.meta.env.VITE_APP_DATA_URL_WEAPON_TALENTS,
 	},
 ];
 
@@ -170,7 +170,7 @@ const specializationList = {
 const specializationListSource = [
 	{
 		key: "Specialization",
-		url: process.env.VUE_APP_DATA_URL_SPECIALIZATION,
+		url: import.meta.env.VITE_APP_DATA_URL_SPECIALIZATION,
 	},
 ];
 
@@ -192,51 +192,51 @@ const gearData = {
 const wearableSource = [
 	{
 		key: "Chest",
-		url: process.env.VUE_APP_DATA_URL_CHEST,
+		url: import.meta.env.VITE_APP_DATA_URL_CHEST,
 	},
 	{
 		key: "Gloves",
-		url: process.env.VUE_APP_DATA_URL_GLOVES,
+		url: import.meta.env.VITE_APP_DATA_URL_GLOVES,
 	},
 	{
 		key: "Holster",
-		url: process.env.VUE_APP_DATA_URL_HOLSTER,
+		url: import.meta.env.VITE_APP_DATA_URL_HOLSTER,
 	},
 	{
 		key: "Kneepads",
-		url: process.env.VUE_APP_DATA_URL_KNEEPADS,
+		url: import.meta.env.VITE_APP_DATA_URL_KNEEPADS,
 	},
 	{
 		key: "Backpack",
-		url: process.env.VUE_APP_DATA_URL_BACKPACK,
+		url: import.meta.env.VITE_APP_DATA_URL_BACKPACK,
 	},
 	{
 		key: "Mask",
-		url: process.env.VUE_APP_DATA_URL_MASK,
+		url: import.meta.env.VITE_APP_DATA_URL_MASK,
 	},
 	{
 		key: "Attributes",
-		url: process.env.VUE_APP_DATA_URL_GEAR_ATTRIBUTES,
+		url: import.meta.env.VITE_APP_DATA_URL_GEAR_ATTRIBUTES,
 	},
 	{
 		key: "GearMods",
-		url: process.env.VUE_APP_DATA_URL_GEAR_MODS,
+		url: import.meta.env.VITE_APP_DATA_URL_GEAR_MODS,
 	},
 	{
 		key: "GearTalents",
-		url: process.env.VUE_APP_DATA_URL_GEAR_TALENTS,
+		url: import.meta.env.VITE_APP_DATA_URL_GEAR_TALENTS,
 	},
 	{
 		key: "BrandSetBonuses",
-		url: process.env.VUE_APP_DATA_URL_BRAND_SET_BONUSES,
+		url: import.meta.env.VITE_APP_DATA_URL_BRAND_SET_BONUSES,
 	},
 	{
 		key: "StatsMapping",
-		url: process.env.VUE_APP_DATA_URL_STATS_MAPPING,
+		url: import.meta.env.VITE_APP_DATA_URL_STATS_MAPPING,
 	},
 	{
 		key: "BrandsData",
-		url: process.env.VUE_APP_DATA_URL_BRANDS_DATA,
+		url: import.meta.env.VITE_APP_DATA_URL_BRANDS_DATA,
 	},
 ];
 

@@ -35,8 +35,8 @@
 		getPlotlyDefault1,
 		getPlotlyDefault2,
 	} from "../../utils/plotDefaults";
-	import Toggle from "../generic/Toggle";
-	import StatInputV2 from "../generic/StatInputV2";
+	import Toggle from "../generic/Toggle.vue";
+	import StatInputV2 from "../generic/StatInputV2.vue";
 
 	const dashStyles = ["solid", "dashdot", "dot"];
 	const colors = ["#E69F00", "#56B4E9", "#009E73"];

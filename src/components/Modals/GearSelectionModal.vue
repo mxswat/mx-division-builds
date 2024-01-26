@@ -78,7 +78,7 @@
 		VendorData,
 	} from "../../utils/dataImporter";
 	import { qualityToCss, QualityPriority } from "../../utils/utils";
-	import BasicTile from "../BasicTile";
+	import BasicTile from "../BasicTile.vue";
 	const gearNameProp = "Item Name";
 
 	export default {
@@ -126,7 +126,7 @@
 		methods: {
 			getBrandOrGearsetIcon(name) {
 				return this.BrandsData[name]
-					? `icons/brands/${this.BrandsData[name].Icon}`
+					? `./icons/brands/${this.BrandsData[name].Icon}`
 					: "";
 			},
 			getDisplayName(gear) {

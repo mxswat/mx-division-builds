@@ -40,9 +40,9 @@
 </template>
 
 <script>
-	import ResponsiveTable from "./ResponsiveTable";
+	import ResponsiveTable from "./ResponsiveTable.vue";
 	import TTKCoreService from "../../utils/TTKCore";
-	import StatInputV2 from "../generic/StatInputV2";
+	import StatInputV2 from "../generic/StatInputV2.vue";
 
 	export default {
 		name: "TimeToKill",

@@ -1,8 +1,8 @@
 <template>
 	<div class="shd-levels-modal">
-		<img src="icons/shd_big.png" class="img-levels-bg" alt="" />
+		<img :src="`./icons/shd_big.png`" class="img-levels-bg" alt="" />
 		<span class="section-title">
-			<img alt="" src="icons/shd_big.png" class="image" />
+			<img alt="" :src="`./icons/shd_big.png`" class="image" />
 			SHD Watch Levels
 		</span>
 		<div class="overflow-handler">
@@ -16,7 +16,7 @@
 						<div class="inner-border"></div>
 						<div class="shd-level-group-title">
 							<img
-								:src="`icons/${stat.icon}`"
+								:src="`./icons/${stat.icon}`"
 								alt=""
 								class="img-shd-title"
 							/>{{ stat.name }}
@@ -42,8 +42,8 @@
 
 <script>
 	// https://thedivision.fandom.com/wiki/SHD_Level
-	import BasicTile from "../BasicTile";
-	import StatInput from "../StatInput";
+	import BasicTile from "../BasicTile.vue";
+	import StatInput from "../StatInput.vue";
 	import { getSHDLevels } from "../../utils/SHDutils";
 	export default {
 		name: "WatchLevels",

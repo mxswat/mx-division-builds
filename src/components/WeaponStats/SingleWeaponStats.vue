@@ -79,7 +79,7 @@
 <script>
 	import DPSChartCore from "../../utils/DPSChartCore";
 	import statsService from "../../utils/statsService";
-	import Toggle from "../generic/Toggle";
+	import Toggle from "../generic/Toggle.vue";
 
 	export default {
 		name: "SingleWeaponStats",

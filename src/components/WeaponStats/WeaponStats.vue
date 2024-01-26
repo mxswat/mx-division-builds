@@ -13,8 +13,8 @@
 </template>
 
 <script>
-	import SingleWeaponStats from "./SingleWeaponStats";
-	import BasicTile from "../BasicTile";
+	import SingleWeaponStats from "./SingleWeaponStats.vue";
+	import BasicTile from "../BasicTile.vue";
 
 	export default {
 		name: "WeaponStats",

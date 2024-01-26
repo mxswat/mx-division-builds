@@ -1,5 +1,5 @@
 import VueRouter from "vue-router";
-import InventoryGUI from "./components/InventoryGUI";
+import InventoryGUI from "./components/InventoryGUI.vue";
 
 // const inventoryGUI = {
 //     template:

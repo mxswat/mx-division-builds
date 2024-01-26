@@ -41,7 +41,7 @@
 
 <script>
 	import { specializationList } from "../utils/dataImporter";
-	import { decodedSlots } from "../utils/urlEncorder";
+	import { decodedSlots } from "../utils/urlEncoder";
 	import coreService from "../utils/coreService";
 
 	export default {

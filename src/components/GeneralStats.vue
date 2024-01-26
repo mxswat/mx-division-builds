@@ -15,7 +15,7 @@
 			</template>
 		</div>
 		<span class="section-title offensive">
-			<img alt="" src="icons/offense1.png" class="image" />
+			<img alt="" :src="`./icons/offense1.png`" class="image" />
 			Offensive Cores {{ coresCount.offensive }} | All weapons damage:
 			{{ allWeaponDamage }} %
 		</span>
@@ -26,7 +26,7 @@
 			</div>
 		</div>
 		<span class="section-title defensive">
-			<img alt="" src="icons/defense1.png" class="image" />
+			<img alt="" :src="`./icons/defense1.png`" class="image" />
 			Defensive Cores {{ coresCount.defensive }} | Armor: {{ armorValue }}
 		</span>
 		<div class="stats-list-3-col" v-if="stats">
@@ -36,7 +36,7 @@
 			</div>
 		</div>
 		<span class="section-title utility">
-			<img alt="" src="icons/tech1.png" class="image" />
+			<img alt="" :src="`./icons/tech1.png`" class="image" />
 			Utility Cores {{ coresCount.utility }}
 		</span>
 		<div class="stats-list-3-col" v-if="stats">

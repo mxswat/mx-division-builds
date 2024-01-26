@@ -97,7 +97,7 @@
 		skillsData,
 	} from "../../utils/dataImporter";
 	import { qualityToCss, groupArrayOfObjectsByKey } from "../../utils/utils";
-	import BasicTile from "../BasicTile";
+	import BasicTile from "../BasicTile.vue";
 	import MenuButton from "../MenuButton.vue";
 
 	const skillNameProp = "Item Name";
@@ -169,7 +169,7 @@
 		methods: {
 			getSkillIcon(skill) {
 				// console.log(skill);
-				return skill.Icon ? `icons/skills/${skill.Icon}` : "";
+				return skill.Icon ? `./icons/skills/${skill.Icon}` : "";
 			},
 			scrollToElementID(divId) {
 				document.getElementById(divId).scrollIntoView();

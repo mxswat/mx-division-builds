@@ -225,4 +225,4 @@ updatedInput$.subscribe((encodedBuild) => {
 	urlDecoder(encodedBuild);
 });
 
-export { gearEncoderMap, urlDecoder, updatedInput$ };
+export { gearEncoderMap, urlDecoder, decodedSlots, updatedInput$ };

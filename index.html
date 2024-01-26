@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-		<link rel="icon" href="<%= BASE_URL %>icon.png" />
+		<link rel="icon" href="%BASE_URL%icon.png"/>
 		<link
 			href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
 			rel="stylesheet"
@@ -20,7 +20,7 @@
 		/>
 
 		<!-- The Open Graph protocol Tags -->
-		<meta property="og:site_name" content="<%= VUE_APP_TITLE %>" />
+		<!--<meta property="og:site_name" content="%VITE_APP_TITLE%" />-->
 		<meta
 			property="og:url"
 			content="https://mxswat.github.io/mx-division-builds/#/"
@@ -36,9 +36,8 @@
 		/>
 		<meta
 			property="og:image"
-			content="https://mxswat.github.io/mx-division-builds/public/icon.png"
+			content="https://mxswat.github.io/mx-division-builds/icon.png"
 		/>
-
 		<!-- Google Tag Manager -->
 		<script>
 			(function(w, d, s, l, i) {
@@ -91,6 +90,6 @@
 			>
 		</noscript>
 		<div id="app"></div>
-		<!-- built files will be auto injected -->
+		<script type="module" src="/src/main.ts"></script>
 	</body>
 </html>

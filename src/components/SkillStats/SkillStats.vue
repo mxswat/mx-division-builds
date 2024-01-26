@@ -11,7 +11,7 @@
 
 <script>
 	import SingleSkillStats from "./SingleSkillStats";
-	import BasicTile from "../BasicTile";
+	import BasicTile from "../BasicTile.vue";
 	export default {
 		name: "SkillStats",
 		components: {

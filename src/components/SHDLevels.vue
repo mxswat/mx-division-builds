@@ -1,7 +1,7 @@
 <template>
 	<div class="SHD-levels-inner">
 		<span class="section-title">
-			<img alt="" src="./icons/shd_big.png" class="image" />
+			<img alt="" :src="`./icons/shd_big.png`" class="image" />
 			SHD Levels
 		</span>
 		<div class="levels">

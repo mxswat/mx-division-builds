@@ -1,7 +1,6 @@
-/* eslint-disable no-undef */
 <template>
 	<div id="screenshot-modal">
-		<img id="screenshot" src="" alt="" />
+		<img id="screenshot" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" alt="" />
 
 		<div class="controls" v-if="screenshotLoaded">
 			<button @click="downloadImage()">Download</button>

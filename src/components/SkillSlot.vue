@@ -1,6 +1,12 @@
 <template>
 	<div class="skill-container">
-		<template @click="onClick()" v-if="isSkillSelected()">
+		<template v-if="!isSkillSelected()">
+			<img :src="`./icons/skills/skills.png`" alt="" class="img-slot-bg" />
+			<span @click="openSkillsModal()" class="no-element-selected">
+				<p>CHOOSE YOUR SKILL</p>
+			</span>
+		</template>
+		<template v-else>
 			<img :src="getSkillIcon(currentSkill)" alt="" class="img-slot-bg" />
 			<div
 				class="slot-element skill-name"
@@ -20,7 +26,6 @@
 			</div>
 			<template
 				v-for="(slot, id) in modSlots"
-				class="slot-element stat-edit mod-slot"
 			>
 				<div
 					class="slot-element stat-edit mod-slot"
@@ -70,12 +75,6 @@
 					></StatInput>
 				</div>
 			</template>
-		</template>
-		<template v-if="!isSkillSelected()">
-			<img :src="`./icons/skills/skills.png`" alt="" class="img-slot-bg" />
-			<span @click="onClick()" class="no-element-selected">
-				<p>CHOOSE YOUR SKILL</p>
-			</span>
 		</template>
 	</div>
 </template>
@@ -163,11 +162,6 @@
 			},
 			isSkillSelected() {
 				return this.currentSkill && this.currentSkill.itemName;
-			},
-			onClick() {
-				if (!this.isSkillSelected()) {
-					this.openSkillsModal();
-				}
 			},
 			onModalClose(data) {
 				if (!data) {

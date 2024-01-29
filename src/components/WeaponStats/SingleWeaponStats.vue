@@ -3,16 +3,16 @@
 		<template v-if="weaponName">
 			<span class="weapon-name-stat bold">{{ weaponName }}</span>
 			<div class="toggle-chd-hsd">
-				<Toggle
+				<ToggleSwitch
 					@input="updatedToggle()"
 					v-model="toggleHSD"
 					:label="'Toggle Headshot'"
-				></Toggle>
-				<Toggle
+				></ToggleSwitch>
+				<ToggleSwitch
 					@input="updatedToggle()"
 					v-model="toggleCHD"
 					:label="'Toggle Critical'"
-				></Toggle>
+				></ToggleSwitch>
 			</div>
 			<span
 				>Weapon damage
@@ -79,7 +79,7 @@
 <script>
 	import DPSChartCore from "../../utils/DPSChartCore";
 	import statsService from "../../utils/statsService";
-	import Toggle from "../generic/Toggle.vue";
+	import ToggleSwitch from "../generic/ToggleSwitch.vue";
 
 	export default {
 		name: "SingleWeaponStats",
@@ -87,7 +87,7 @@
 			name: null,
 		},
 		components: {
-			Toggle,
+			ToggleSwitch,
 		},
 		data() {
 			return {

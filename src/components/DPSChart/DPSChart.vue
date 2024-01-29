@@ -2,11 +2,11 @@
 	<div>
 		<span class="section-title"> Damage over Time - Visualisation </span>
 		<div class="toolbar">
-			<Toggle
+			<ToggleSwitch
 				@input="updatedColorBlind()"
 				v-model="isColorblind"
 				:label="'Color blind?'"
-			></Toggle>
+			></ToggleSwitch>
 			<StatInputV2
 				:label="'Critical chance'"
 				v-model="criticalChance"
@@ -35,7 +35,7 @@
 		getPlotlyDefault1,
 		getPlotlyDefault2,
 	} from "../../utils/plotDefaults";
-	import Toggle from "../generic/Toggle.vue";
+	import ToggleSwitch from "../generic/ToggleSwitch.vue";
 	import StatInputV2 from "../generic/StatInputV2.vue";
 
 	const dashStyles = ["solid", "dashdot", "dot"];
@@ -49,7 +49,7 @@
 
 	export default {
 		name: "DPSChart",
-		components: { Toggle, StatInputV2 },
+		components: { ToggleSwitch, StatInputV2 },
 		data() {
 			return {
 				target: null,

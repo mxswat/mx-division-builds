@@ -86,6 +86,7 @@
 		qualityToCss,
 		QualityPriority,
 		groupArrayOfObjectsByKey,
+		getUniqueObject,
 	} from "../../utils/utils";
 	import BasicTile from "../BasicTile.vue";
 	import MenuButton from "../MenuButton.vue";
@@ -243,7 +244,7 @@
 					o[val.Name] = val.Desc;
 					return o;
 				}, {});
-				const sorted = this.gearData.sort(
+				const sorted = getUniqueObject(this.gearData).sort(
 					(a, b) =>
 						QualityPriority[a["Quality"]] - QualityPriority[[b["Quality"]]] ||
 						a["Name"].localeCompare(b["Name"])

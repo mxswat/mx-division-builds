@@ -3,25 +3,25 @@
 		<template v-if="skillName">
 			<span class="section-title utility"> (BETA) - {{ skillName }} </span>
 			<div class="toggle-overcharged">
-				<Toggle
+				<ToggleSwitch
 					@input="updatedToggle('Overcharge')"
 					v-model="toggleOvercharge"
 					:label="'Toggle Overcharge'"
-				></Toggle>
+				></ToggleSwitch>
 			</div>
 			<div class="toggle-dttoc">
-				<Toggle
+				<ToggleSwitch
 					@input="updatedToggle('DTTOC')"
 					v-model="toggleDTTOC"
 					:label="'Toggle DtTOC'"
-				></Toggle>
+				></ToggleSwitch>
 			</div>
 			<div class="toggle-armor">
-				<Toggle
+				<ToggleSwitch
 					@input="updatedToggle('DTA')"
 					v-model="toggleDTA"
 					:label="toggleDTA ? 'Damage to Armor' : 'Damage to Health'"
-				></Toggle>
+				></ToggleSwitch>
 			</div>
 			<span
 				>Skill Tier
@@ -43,7 +43,7 @@
 
 <script>
 	import statsService from "../../utils/statsService";
-	import Toggle from "../generic/Toggle.vue";
+	import ToggleSwitch from "../generic/ToggleSwitch.vue";
 
 	export default {
 		name: "SingleSkillStats",
@@ -51,7 +51,7 @@
 			name: null,
 		},
 		components: {
-			Toggle,
+			ToggleSwitch,
 		},
 		data() {
 			return {

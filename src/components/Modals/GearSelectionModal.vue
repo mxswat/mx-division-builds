@@ -77,7 +77,7 @@
 		IsEverythingLoadedPromise,
 		VendorData,
 	} from "../../utils/dataImporter";
-	import { qualityToCss, QualityPriority } from "../../utils/utils";
+	import { qualityToCss, QualityPriority, getUniqueObject } from "../../utils/utils";
 	import BasicTile from "../BasicTile.vue";
 	const gearNameProp = "Item Name";
 
@@ -230,7 +230,7 @@
 					return o;
 				}, {});
 				this.BrandsMapping = this.buildBrandAndGearsetsMapping(data[2]);
-				this.gearList = this.gearData.sort(
+				this.gearList = getUniqueObject(this.gearData).sort(
 					(a, b) =>
 						QualityPriority[a["Quality"]] - QualityPriority[[b["Quality"]]] ||
 						a[gearNameProp].localeCompare(b[gearNameProp])

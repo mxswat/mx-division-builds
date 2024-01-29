@@ -14,7 +14,7 @@
 
 <script>
 	export default {
-		name: "Toggle",
+		name: "ToggleSwitch",
 		props: {
 			value: null,
 			label: null,

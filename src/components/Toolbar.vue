@@ -40,7 +40,7 @@
 	import MenuButton from "./MenuButton.vue";
 
 	export default {
-		name: "Toolbar",
+		name: "ToolBar",
 		components: { MenuButton },
 		data() {
 			return {

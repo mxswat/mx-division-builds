@@ -9,7 +9,7 @@
 			</span>
 		</div>
 		<BasicTile classes="toolbar-container">
-			<Toolbar></Toolbar>
+			<ToolBar></ToolBar>
 		</BasicTile>
 		<div class="loading" v-if="!loaded">
 			<span class="loader"></span>
@@ -48,7 +48,7 @@
 	import WeaponStats from "./components/WeaponStats/WeaponStats.vue";
 	import GeneralStats from "./components/GeneralStats.vue";
 	import BasicTile from "./components/BasicTile.vue";
-	import Toolbar from "./components/Toolbar.vue";
+	import ToolBar from "./components/ToolBar.vue";
 	import newFeatureGlow from "./utils/newFeatureGlow";
 	import DPSChart from "./components/DPSChart/DPSChart.vue";
 	import TimeToKill from "./components/TTK/TimeToKill.vue";
@@ -61,7 +61,7 @@
 			WeaponStats,
 			GeneralStats,
 			BasicTile,
-			Toolbar,
+			ToolBar,
 			DPSChart,
 			TimeToKill,
 		},

@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Housing Shell",
    "attributes": " Decoy<br/>6.0% Health"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "5.0% Critical Hit Chance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Titanium Reinforcement",
+   "attributes": " Shield<br/>4.5% Shield Health"
  }
 ]

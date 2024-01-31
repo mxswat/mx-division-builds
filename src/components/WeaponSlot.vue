@@ -102,7 +102,7 @@
 			<div class="slot-element">
 				<MenuButton v-model="showModSlots" :sync="true" label="Mods"/>
 			</div>
-			<div class="mods-slots-container" v-if="showModSlots">
+			<div class="mods-slots-container" v-show="showModSlots">
 				<template v-for="(mod, i) in modSlots">
 					<template v-if="weaponHasThisMod(mod)">
 						<div class="slot-element mod-slot" v-bind:key="i">

@@ -1,12 +1,14 @@
 <template>
 	<div class="toolbar">
 		<span class="app-title">The Division 2 Builds Tool</span>
-		<!-- <input
+		<!-- 
+		<input
 			class="build-name"
 			type="text"
 			placeholder="Your build Name"
 			name="Build Name"
-		/> -->
+		/>
+		-->
 		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Menu"/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>

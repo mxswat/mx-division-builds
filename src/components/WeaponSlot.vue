@@ -100,7 +100,7 @@
 				</v-select>
 			</div>
 			<div class="slot-element">
-				<Panel header="Mods" :toggleable="true">
+				<Panel header="Mods" :toggleable="true" :collapsed="true">
 					<div class="mods-slots-container">
 						<template v-for="(mod, i) in modSlots">
 							<template v-if="weaponHasThisMod(mod)">

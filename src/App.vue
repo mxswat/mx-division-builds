@@ -104,6 +104,8 @@
 <style lang="scss">
 	@import "./style/main.scss";
 	@import "./style/_include-media.scss";
+	@import "../node_modules/primevue/resources/primevue.min.css";
+	@import "../node_modules/primeicons/primeicons.css";
 
 	html,
 	body,

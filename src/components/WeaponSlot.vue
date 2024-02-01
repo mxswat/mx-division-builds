@@ -100,80 +100,81 @@
 				</v-select>
 			</div>
 			<div class="slot-element">
-				<MenuButton v-model="showModSlots" :sync="true" label="Mods"/>
-			</div>
-			<div class="mods-slots-container" v-show="showModSlots">
-				<template v-for="(mod, i) in modSlots">
-					<template v-if="weaponHasThisMod(mod)">
-						<div class="slot-element mod-slot" v-bind:key="i">
-							<v-select
-								:placeholder="'Mod Slot: ' + mod"
-								:clearable="false"
-								:options="
-									filterWeaponModsByType(
-										currentWeapon.filters[mod],
-										mod
-									)
-								"
-								:filterBy="modMatchesUserSearch"
-								v-model="currentWeapon[mod]"
-								label="Name"
-							>
-								<template v-slot:option="option">
-									<div class="mod-option-container">
-										<span class="mod-name">{{
-											option.Name
-										}}</span>
-										<span class="mod-stat">
-											<span
-												class="mod-increase"
-												v-if="option.pos"
-												>{{ option.pos }} +{{
-													option.valPos
-												}}</span
-											>
-											<span
-												class="mod-decrease"
-												v-if="option.neg"
-												>{{ option.neg }}
-												{{ option.valNeg }}</span
-											>
-										</span>
-									</div>
-								</template>
-								<template #selected-option="option">
-									<div class="mod-option-container">
-										<span class="mod-name">{{
-											option.Name
-										}}</span>
-										<!-- <span class="mod-stat">
-                      <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
-                      <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
-                    </span>-->
-									</div>
-								</template>
-							</v-select>
-							<span
-								class="mod-stat selected"
-								v-if="currentWeapon[mod]"
-							>
-								<span
-									class="mod-increase"
-									v-if="currentWeapon[mod].pos"
-									>{{ currentWeapon[mod].pos }} +{{
-										currentWeapon[mod].valPos
-									}}</span
-								>
-								<span
-									class="mod-decrease"
-									v-if="currentWeapon[mod].neg"
-									>{{ currentWeapon[mod].neg }}
-									{{ currentWeapon[mod].valNeg }}</span
-								>
-							</span>
-						</div>
-					</template>
-				</template>
+				<Panel header="Mods" :toggleable="true">
+					<div class="mods-slots-container">
+						<template v-for="(mod, i) in modSlots">
+							<template v-if="weaponHasThisMod(mod)">
+								<div class="slot-element mod-slot" v-bind:key="i">
+									<v-select
+										:placeholder="'Mod Slot: ' + mod"
+										:clearable="false"
+										:options="
+											filterWeaponModsByType(
+												currentWeapon.filters[mod],
+												mod
+											)
+										"
+										:filterBy="modMatchesUserSearch"
+										v-model="currentWeapon[mod]"
+										label="Name"
+									>
+										<template v-slot:option="option">
+											<div class="mod-option-container">
+												<span class="mod-name">{{
+													option.Name
+												}}</span>
+												<span class="mod-stat">
+													<span
+														class="mod-increase"
+														v-if="option.pos"
+														>{{ option.pos }} +{{
+															option.valPos
+														}}</span
+													>
+													<span
+														class="mod-decrease"
+														v-if="option.neg"
+														>{{ option.neg }}
+														{{ option.valNeg }}</span
+													>
+												</span>
+											</div>
+										</template>
+										<template #selected-option="option">
+											<div class="mod-option-container">
+												<span class="mod-name">{{
+													option.Name
+												}}</span>
+												<!-- <span class="mod-stat">
+							<span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
+							<span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
+							</span>-->
+											</div>
+										</template>
+									</v-select>
+									<span
+										class="mod-stat selected"
+										v-if="currentWeapon[mod]"
+									>
+										<span
+											class="mod-increase"
+											v-if="currentWeapon[mod].pos"
+											>{{ currentWeapon[mod].pos }} +{{
+												currentWeapon[mod].valPos
+											}}</span
+										>
+										<span
+											class="mod-decrease"
+											v-if="currentWeapon[mod].neg"
+											>{{ currentWeapon[mod].neg }}
+											{{ currentWeapon[mod].valNeg }}</span
+										>
+									</span>
+								</div>
+							</template>
+						</template>
+					</div>
+				</Panel>
 			</div>
 		</template>
 	</div>
@@ -185,13 +186,12 @@
 	import { WeaponBase } from "../utils/classes";
 	import coreService from "../utils/coreService";
 	import { qualityToCss, getUniqueObject } from "../utils/utils";
-
+	import Vue from "vue";
 	import StatInput from "./StatInput.vue";
 	import ExpertiseInput from "./ExpertiseInput.vue";
-	import MenuButton from "./MenuButton.vue";
 	export default {
 		name: "WeaponSlot",
-		components: { StatInput, ExpertiseInput, MenuButton },
+		components: { StatInput, ExpertiseInput },
 		props: {
 			name: null,
 			init: null,

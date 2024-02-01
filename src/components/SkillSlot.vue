@@ -85,6 +85,7 @@
 	import { typeToImgSrc, qualityToCss, getUniqueObject } from "../utils/utils";
 	import { skillsData } from "../utils/dataImporter";
 	import StatInput from "./StatInput.vue";
+	import Vue from "vue";
 	import coreService from "../utils/coreService";
 	import ExpertiseInput from "./ExpertiseInput.vue";
 

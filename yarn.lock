@@ -1171,6 +1171,16 @@ prelude-ls@^1.2.1:
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
+primeicons@^6.0.1:
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/primeicons/-/primeicons-6.0.1.tgz#431fa7c79825934eefd62087d8e1faa6a9e376ad"
+  integrity sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==
+
+primevue@^2.10.2:
+  version "2.10.4"
+  resolved "https://registry.yarnpkg.com/primevue/-/primevue-2.10.4.tgz#f803404ef1580f5b229bd126a46b754f52776e14"
+  integrity sha512-lJWtocP4l6C6K8VzMo58xPhyWERtWWhd+OTCoXHuQDKLI9o+YZKbLqAw42EdyGcA05eXLSvXXz1ESEMnIxBB7A==
+
 punycode@^2.1.0:
   version "2.3.1"
   resolved "https://registry.npmjs.org/punycode/-/punycode-2.3.1.tgz"

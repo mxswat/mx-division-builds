@@ -337,6 +337,7 @@
 	import { gearData, VendorData } from "../utils/dataImporter";
 	import StatInput from "./StatInput.vue";
 	import TalentSelect from "./GearSlot/TalentSelect.vue";
+	import Vue from "vue";
 	import coreService from "../utils/coreService";
 
 	export default {

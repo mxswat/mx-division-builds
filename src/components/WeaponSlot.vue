@@ -635,4 +635,13 @@
 		white-space: break-spaces;
 	}
 
+	.p-panel-header-icon {
+		color: white;
+		margin-right: 6px;
+	}
+
+	.p-panel-title {
+		margin-left: 8px;
+	}
+
 </style>

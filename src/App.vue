@@ -371,11 +371,4 @@
 	//   padding: 0;
 	// }
 
-
-	// PrimeVue theming.  This probably belongs in a separate file
-
-	.p-panel-header-icon {
-		color: white;
-	}
-	
 </style>

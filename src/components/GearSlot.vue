@@ -21,28 +21,34 @@
 			</div>
 			<!-- <div class="brand-name">{{ currentGear.brand }}</div> -->
 			<div class="slot-element stat-edit core-attribute">
-				<v-select
+				<Dropdown
 					placeholder="Core attribute"
-					:clearable="false"
 					v-model="currentGear.core"
 					:options="filterGearCores()"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.core[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.label }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.core[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.label }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.core[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.label }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.core[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.label }}</span>
+						</div>
+						<span v-else>
+							{{slotProps.placeholder}}
+						</span>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.core"
 					v-model="currentGear.core.StatValue"
@@ -54,28 +60,31 @@
 				v-if="currentGear.coreTwo"
 				class="slot-element stat-edit core-attribute"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Core two attribute"
-					:clearable="false"
 					v-model="currentGear.coreTwo"
 					:options="[]"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.core[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.label }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.core[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.label }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.core[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.label }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.core[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.label }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.coreTwo"
 					v-model="currentGear.coreTwo.StatValue"
@@ -87,28 +96,31 @@
 				v-if="currentGear.coreThree"
 				class="slot-element stat-edit core-attribute"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Core three attribute"
-					:clearable="false"
 					v-model="currentGear.coreThree"
 					:options="[]"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.core[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.label }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.core[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.label }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.core[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.label }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.core[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.label }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.coreThree"
 					v-model="currentGear.coreThree.StatValue"
@@ -120,9 +132,8 @@
 				class="slot-element stat-edit attribute-three"
 				v-if="currentGear.filters.attributeThree"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Minor attribute Three"
-					:clearable="false"
 					:options="
 						filterGearAttributes(
 							gearAttributes,
@@ -131,24 +142,28 @@
 						)
 					"
 					v-model="currentGear.attributeThree"
-					label="Stat"
+					optionLabel="Stat"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.attribute[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.attribute[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.Stat }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.attribute[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.attribute[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.Stat }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.attributeThree"
 					v-model="currentGear.attributeThree.StatValue"
@@ -160,9 +175,8 @@
 				class="slot-element stat-edit attribute-one"
 				v-if="currentGear.filters.attributeOne"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Minor attribute 1"
-					:clearable="false"
 					:options="
 						filterGearAttributes(
 							gearAttributes,
@@ -171,24 +185,28 @@
 						)
 					"
 					v-model="currentGear.attributeOne"
-					label="Stat"
+					optionLabel="Stat"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.attribute[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.attribute[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.Stat }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.attribute[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.attribute[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.Stat }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.attributeOne"
 					v-model="currentGear.attributeOne.StatValue"
@@ -200,9 +218,8 @@
 				class="slot-element stat-edit attribute-two"
 				v-if="currentGear.filters.attributeTwo"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Minor attribute 2"
-					:clearable="false"
 					:options="
 						filterGearAttributes(
 							gearAttributes,
@@ -211,24 +228,28 @@
 						)
 					"
 					v-model="currentGear.attributeTwo"
-					label="Stat"
+					optionLabel="Stat"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.attribute[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.attribute[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.Stat }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.attribute[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.attribute[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.Stat }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.attributeTwo"
 					v-model="currentGear.attributeTwo.StatValue"
@@ -240,29 +261,32 @@
 				class="slot-element stat-edit mod-slot"
 				v-if="currentGear.filters.mod"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Mod"
-					:clearable="false"
 					:options="gearMods"
 					v-model="currentGear.mod"
-					label="Stat"
+					optionLabel="Stat"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.mod[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.Stat }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.mod[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.Stat }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.mod"
 					v-model="currentGear.mod.StatValue"
@@ -274,29 +298,32 @@
 				class="slot-element stat-edit mod-slot"
 				v-if="currentGear.filters.modTwo"
 			>
-				<v-select
+				<Dropdown
 					placeholder="Mod 2"
-					:clearable="false"
 					:options="gearMods"
 					v-model="currentGear.modTwo"
-					label="Stat"
+					optionLabel="Stat"
 				>
-					<template v-slot:option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.mod[slotProps.option.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.option.Stat }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<img
-							class="attribute-image"
-							v-bind:src="typeToImgSrc.mod[option.Type]"
-						/>
-						<span class="attribute-label">{{ option.Stat }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<img
+								class="attribute-image"
+								v-bind:src="typeToImgSrc.mod[slotProps.value.Type]"
+							/>
+							<span class="attribute-label">{{ slotProps.value.Stat }}</span>
+						</div>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentGear.modTwo"
 					v-model="currentGear.modTwo.StatValueModTwo"
@@ -307,12 +334,33 @@
 				class="slot-element talent"
 				v-if="gearTalents.length > 0 || this.currentGear.talent"
 			>
-				<TalentSelect
+				<Dropdown
+					placeholder="Talent"
+					:options="filterGearTalents(gearTalents)"
 					v-model="currentGear.talent"
-					v-bind:talentList="filterGearTalents(gearTalents)"
-					:placeholder="'Talent'"
+					optionLabel="Talent"
+					:class="currentGear.talent ? 'tool' : ''"
+					:data-tip="
+						currentGear.talent && currentGear.talent.Desc
+						"
 				>
-				</TalentSelect>
+					<template #option="slotProps">
+						<div class="talent-info-container">
+							<span class="talent-label">{{ slotProps.option.Talent }}</span>
+							<span class="talent-desc">{{ slotProps.option.Desc }}</span>
+						</div>
+					</template>
+					<template #value="slotProps">
+						<div v-if="slotProps.value">
+							<div class="talent-info-container label-selected">
+								<span class="talent-label">{{ slotProps.value.Talent }}</span>
+							</div>
+						</div>
+						<span v-else>
+							{{slotProps.placeholder}}
+						</span>
+					</template>
+				</Dropdown>
 			</div>
 			<div
 				v-if="whereIsAvailable(currentGear)"
@@ -336,13 +384,12 @@
 	} from "../utils/utils";
 	import { gearData, VendorData } from "../utils/dataImporter";
 	import StatInput from "./StatInput.vue";
-	import TalentSelect from "./GearSlot/TalentSelect.vue";
 	import Vue from "vue";
 	import coreService from "../utils/coreService";
 
 	export default {
 		name: "GearSlot",
-		components: { StatInput, TalentSelect },
+		components: { StatInput },
 		props: {
 			name: undefined,
 			init: null,
@@ -777,13 +824,34 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.gear-container {
 		height: 100%;
 		color: white;
 	}
 
-	// attribute-label
+	.talent-info-container {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.talent-label {
+		white-space: break-spaces;
+	}
+	
+	.talent-desc {
+		white-space: break-spaces;
+	}
+	
+	.attribute-container {
+		display:flex;
+		align-items: center;
+	}
+
+	.attribute-label {
+		white-space: normal;
+	}
+
 	.attribute-value {
 		margin-left: auto;
 	}

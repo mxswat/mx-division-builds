@@ -104,8 +104,6 @@
 <style lang="scss">
 	@import "./style/main.scss";
 	@import "./style/_include-media.scss";
-	@import "../node_modules/primevue/resources/primevue.min.css";
-	@import "../node_modules/primeicons/primeicons.css";
 
 	html,
 	body,
@@ -191,11 +189,13 @@
 		grid-row: row;
 	}
 
+	/*
 	.specialization {
 		// grid-column: col 1 / span 3;
 		// grid-row: row;
 		// margin-bottom: 8px;
 	}
+	*/
 
 	.weapon-stats-container {
 		grid-column: col / span 3;
@@ -345,7 +345,7 @@
 
 	$glow-color: #ff6d10;
 
-	@-webkit-keyframes glow {
+	@keyframes glow {
 		to {
 			border-color: $glow-color;
 			-webkit-box-shadow: 0 0 5px $glow-color;
@@ -358,6 +358,8 @@
 		background-color: #ccc;
 		border: 1px solid transparent;
 		-webkit-animation: glow 1s infinite alternate;
+		-moz-animation: glow 1s infinite alternate;
+		animation: glow 1s infinite alternate;
 		-webkit-transition: border 1s linear, box-shadow 1s linear;
 		-moz-transition: border 1s linear, box-shadow 1s linear;
 		transition: border 1s linear, box-shadow 1s linear;
@@ -366,9 +368,5 @@
 	.SHD-levels {
 		margin-bottom: 8px;
 	}
-
-	// .tile.no-padding {
-	//   padding: 0;
-	// }
 
 </style>

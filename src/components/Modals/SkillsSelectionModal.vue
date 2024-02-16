@@ -6,12 +6,17 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<MenuButton
-			class="menu-btt"
-			v-model="showMobileMenu"
-			:sync="true"
-			label="Skill Types"
-		/>
+		<div class="button-container">
+			<ToggleButton
+				class="menu-btt"
+				v-model="showMobileMenu"
+				onLabel="Skill Types"
+				offLabel="Skill Types"
+				onIcon="pi pi-minus"
+				offIcon="pi pi-plus"
+				iconPos="right"
+			/>
+		</div>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
 			<button
 				class="mx-btt"
@@ -98,7 +103,6 @@
 	} from "../../utils/dataImporter";
 	import { qualityToCss, groupArrayOfObjectsByKey } from "../../utils/utils";
 	import BasicTile from "../BasicTile.vue";
-	import MenuButton from "../MenuButton.vue";
 
 	const skillNameProp = "Item Name";
 
@@ -107,7 +111,6 @@
 		props: ["skillsData", "onModalClose", "skillSlot"],
 		components: {
 			BasicTile,
-			MenuButton,
 		},
 		data() {
 			return {
@@ -341,17 +344,26 @@
 		}
 	}
 
-	/// - TODO: DUPED CODE
-
-	.menu-btt {
+	// don't show the menu button normally
+	.button-container {
 		display: none;
+		margin: 8px;
+
+		.menu-btt {
+			width: 100%;
+			text-align: left;
+			padding: 0 .5rem;
+			background: unset;
+			border: 0;
+			border-bottom: 1px solid #fff;
+			border-radius: 0;
+		}
 	}
 
 	// mobile switch to menu W/ button
 	@media only screen and (max-width: 850px) {
-		.menu-btt {
+		.button-container {
 			display: flex;
-			flex-direction: column;
 		}
 		.search-toolbar {
 			display: none;

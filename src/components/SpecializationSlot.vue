@@ -1,32 +1,34 @@
 <template>
 	<div class="specialization-container">
 		<div class="slot-element spec-slot" v-if="specializations">
-			<v-select
+			<Dropdown
 				placeholder="Choose a specialization"
-				:clearable="false"
 				:options="specializations"
 				v-model="currentSpecialization"
-				label="name"
+				optionLabel="name"
+				style="width: 100%"
 			>
-				<template v-slot:option="option">
+				<template #option="slotProps">
 					<div class="spec-option-container">
-						<span class="spec-name">{{ option.name }}</span>
+						<span class="spec-name">{{ slotProps.option.name }}</span>
 						<div class="spec-stats">
 							<span
 								class="spec-stat"
-								v-for="stat in option.stats"
+								v-for="stat in slotProps.option.stats"
 								v-bind:key="stat.name"
 								>{{ stat.name }} {{ stat.val }}</span
 							>
 						</div>
 					</div>
 				</template>
-				<template #selected-option="option">
-					<div class="spec-option-container">
-						<span class="spec-name">{{ option.name }}</span>
+				<template #value="slotProps">
+					<div v-if="slotProps.value">
+						<div class="spec-option-container">
+							<span class="spec-name">{{ slotProps.value.name }}</span>
+						</div>
 					</div>
 				</template>
-			</v-select>
+			</Dropdown>
 			<span v-if="currentSpecialization" class="spec-stats">
 				<span
 					class="spec-stat"

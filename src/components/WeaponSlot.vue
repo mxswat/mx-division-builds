@@ -52,22 +52,27 @@
 				</template>
 			</div>
 			<div class="slot-element stat-edit attribute-one">
-				<v-select
+				<Dropdown
 					placeholder="Attribute"
-					:clearable="false"
 					:options="weaponAttributes"
 					v-model="currentWeapon['attribute 1']"
-					label="Stat"
+					optionLabel="Stat"
 				>
-					<template v-slot:option="option">
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<span class="attribute-value">{{ option.Max }}</span>
+					<template #option="slotProps">
+						<div class="attribute-container">
+							<span class="attribute-label">{{ slotProps.option.Stat }}</span>
+							<span class="attribute-value">{{ slotProps.option.Max }}</span>
+						</div>
 					</template>
-					<template #selected-option="option">
-						<span class="attribute-label">{{ option.Stat }}</span>
-						<!-- <span class="attribute-value">{{option.Max}}</span> -->
+					<template #value="slotProps">
+						<div v-if="slotProps.value" class="attribute-container">
+							<span class="attribute-label">{{ slotProps.value.Stat }}</span>
+						</div>
+						<span v-else>
+							{{slotProps.placeholder}}
+						</span>
 					</template>
-				</v-select>
+				</Dropdown>
 				<StatInput
 					v-if="currentWeapon['attribute 1']"
 					v-model="currentWeapon['attribute 1'].StatValue"
@@ -75,37 +80,41 @@
 				></StatInput>
 			</div>
 			<div class="slot-element talent">
-				<v-select
+				<Dropdown
 					placeholder="Talent"
-					:clearable="false"
 					:options="filterTalents(weaponTalents)"
 					v-model="currentWeapon['talent']"
-					label="Name"
+					optionLabel="Name"
 					:class="currentWeapon.talent ? 'tool' : ''"
 					:data-tip="
 						currentWeapon.talent && currentWeapon.talent.Desc
-					"
+						"
 				>
-					<template v-slot:option="option">
+					<template #option="slotProps">
 						<div class="talent-info-container">
-							<span class="talent-label">{{ option.Name }}</span>
-							<span class="talent-desc">{{ option.Desc }}</span>
+							<span class="talent-label">{{ slotProps.option.Name }}</span>
+							<span class="talent-desc">{{ slotProps.option.Desc }}</span>
 						</div>
 					</template>
-					<template #selected-option="option">
-						<div class="talent-info-container label-selected">
-							<span class="talent-label">{{ option.Name }}</span>
+					<template #value="slotProps">
+						<div v-if="slotProps.value">
+							<div class="talent-info-container label-selected">
+								<span class="talent-label">{{ slotProps.value.Name }}</span>
+							</div>
 						</div>
+						<span v-else>
+							{{slotProps.placeholder}}
+						</span>
 					</template>
-				</v-select>
+				</Dropdown>
 			</div>
 			<div class="slot-element">
 				<Panel header="Mods" :toggleable="true" :collapsed="true">
 					<div class="mods-slots-container">
 						<template v-for="(mod, i) in modSlots">
 							<template v-if="weaponHasThisMod(mod)">
-								<div class="slot-element mod-slot" v-bind:key="i">
-									<v-select
+								<div class="slot-element weapon-mod-slot" v-bind:key="i">
+									<Dropdown
 										:placeholder="'Mod Slot: ' + mod"
 										:clearable="false"
 										:options="
@@ -116,42 +125,47 @@
 										"
 										:filterBy="modMatchesUserSearch"
 										v-model="currentWeapon[mod]"
-										label="Name"
+										optionsLabel="Name"
 									>
-										<template v-slot:option="option">
+										<template #option="slotProps">
 											<div class="mod-option-container">
 												<span class="mod-name">{{
-													option.Name
+													slotProps.option.Name
 												}}</span>
 												<span class="mod-stat">
 													<span
 														class="mod-increase"
-														v-if="option.pos"
-														>{{ option.pos }} +{{
-															option.valPos
+														v-if="slotProps.option.pos"
+														>{{ slotProps.option.pos }} +{{
+															slotProps.option.valPos
 														}}</span
 													>
 													<span
 														class="mod-decrease"
-														v-if="option.neg"
-														>{{ option.neg }}
-														{{ option.valNeg }}</span
+														v-if="slotProps.option.neg"
+														>{{ slotProps.option.neg }}
+														{{ slotProps.option.valNeg }}</span
 													>
 												</span>
 											</div>
 										</template>
-										<template #selected-option="option">
-											<div class="mod-option-container">
-												<span class="mod-name">{{
-													option.Name
-												}}</span>
-												<!-- <span class="mod-stat">
-							<span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
-							<span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
-							</span>-->
+										<template #value="slotProps">
+											<div v-if="slotProps.value">
+												<div class="mod-option-container">
+													<span class="mod-name">{{
+														slotProps.value.Name
+													}}</span>
+													<!-- <span class="mod-stat">
+														<span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
+														<span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
+													</span>-->
+												</div>
 											</div>
+											<span v-else>
+												{{slotProps.placeholder}}
+											</span>
 										</template>
-									</v-select>
+									</Dropdown>
 									<span
 										class="mod-stat selected"
 										v-if="currentWeapon[mod]"
@@ -582,7 +596,7 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.weapon-container {
 		height: 100%;
 		color: white;
@@ -609,11 +623,13 @@
 	.mod-option-container {
 		display: flex;
 		flex-direction: column;
+		flex-wrap: wrap;
 	}
 
 	.mod-stat {
 		display: flex;
 		flex-wrap: wrap;
+		min-width: 100%;
 		padding: 6px 10px;
 		&.selected {
 			padding-left: 20px;
@@ -630,18 +646,28 @@
 		flex-direction: column;
 	}
 
-	.talent-label,
-	.talent-desc {
+	.talent-label {
 		white-space: break-spaces;
 	}
 
-	.p-panel-header-icon {
-		color: white;
-		margin-right: 6px;
+	.talent-desc {
+		white-space: break-spaces;
+	}
+	
+	.attribute-container {
+		display:flex;
+		align-items: center;
 	}
 
-	.p-panel-title {
-		margin-left: 8px;
+	.attribute-label {
+		//float: left;
+		white-space: normal;
+	}
+
+	.attribute-value {
+		//float: right;
+		//text-align: right;
+		margin-left: auto;
 	}
 
 </style>

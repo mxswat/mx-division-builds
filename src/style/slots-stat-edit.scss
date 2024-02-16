@@ -2,11 +2,39 @@
 	&.stat-edit {
 		display: flex;
 
-		.v-select {
+		.p-dropdown {
 			flex: 3;
 		}
 	}
+	&.talent {
+		display: flex;
+
+		.p-dropdown {
+			flex: 1;
+		}
+	}
+	&.weapon-mod-slot {
+		display: flex;
+		flex-direction: column;
+		flex-wrap:wrap;
+
+		.p-dropdown {
+			flex: 1;
+			min-width: 100%;
+
+			.p-dropdown-label {
+				white-space: normal;
+			}
+		}		
+	}
+
 }
+
+// TESTING...
+//.p-dropdown-item {
+//	display:flex;
+//	align-items: center;
+//}
 
 input.expertise-value {
 	$height: 31px;

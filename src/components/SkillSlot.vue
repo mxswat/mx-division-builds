@@ -28,45 +28,48 @@
 				v-for="(slot, id) in modSlots"
 			>
 				<div
-					class="slot-element stat-edit mod-slot"
+					class="slot-element stat-edit"
 					v-if="currentSkill.filters[`mod${slot}`] && getModSlotName(slot)"
 					v-bind:key="id"
 				>
-					<v-select
+					<Dropdown
 						:placeholder="getModSlotName(slot)"
-						:clearable="false"
 						:options="filterSkillMods(slot)"
 						v-model="currentSkill[`mod${slot}`]"
-						label="Mod Attribute"
+						optionLabel="Mod Attribute"
 					>
-						<template v-slot:option="option">
-							<!-- <img
-								class="attribute-image"
-								v-bind:src="typeToImgSrc.mod[option.Type]"
-							/> -->
-							<span class="attribute-label">{{
-								`${option["Mod Attribute"]}${
-									option["Specialization Mod"]
-										? ` [${option["Specialization Mod"]}]`
-										: ""
-								}`
-							}}</span>
-							<span class="attribute-value">{{ option[`Max`] }}</span>
+						<template #option="slotProps">
+							<div class="attribute-container">
+								<!-- <img
+									class="attribute-image"
+									v-bind:src="typeToImgSrc.mod[option.Type]"
+								/> -->
+								<span class="attribute-label">{{
+									`${slotProps.option["Mod Attribute"]}${
+										slotProps.option["Specialization Mod"]
+											? ` [${slotProps.option["Specialization Mod"]}]`
+											: ""
+									}`
+								}}</span>
+								<span class="attribute-value">{{ slotProps.option[`Max`] }}</span>
+							</div>
 						</template>
-						<template #selected-option="option">
-							<!-- <img
-								class="attribute-image"
-								v-bind:src="typeToImgSrc.mod[option.Type]"
-							/> -->
-							<span class="attribute-label">{{
-								`${option["Mod Attribute"]}${
-									option["Specialization Mod"]
-										? ` [${option["Specialization Mod"]}]`
-										: ""
-								}`
-							}}</span>
+						<template #value="slotProps">
+							<div v-if="slotProps.value" class="attribute-container">
+								<!-- <img
+									class="attribute-image"
+									v-bind:src="typeToImgSrc.mod[option.Type]"
+								/> -->
+								<span class="attribute-label">{{
+									`${slotProps.value["Mod Attribute"]}${
+										slotProps.value["Specialization Mod"]
+											? ` [${slotProps.value["Specialization Mod"]}]`
+											: ""
+									}`
+								}}</span>
+							</div>
 						</template>
-					</v-select>
+					</Dropdown>
 					<StatInput
 						v-if="currentSkill[`mod${slot}`]"
 						v-model="currentSkill[`mod${slot}`][`StatValueMod${slot}`]"
@@ -354,14 +357,24 @@
 	};
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 	.skill-container {
 		height: 100%;
 		color: white;
 	}
 
+	span.expertise {
+		flex: 3;
+		padding: 4px 8px;
+		border-bottom: 1px solid white;
+	}
 	.skill {
 		background: #9dacb3;
+	}
+
+	.attribute-container {
+		display:flex;
+		align-items: center;
 	}
 
 	// attribute-label

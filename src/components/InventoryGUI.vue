@@ -79,7 +79,7 @@
 	};
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 	// https://carterbancroft.com/sass-and-webpack/ thanks <3
 	@use "sass:math";
 	@import "../style/_include-media.scss";

@@ -9,7 +9,15 @@
 			name="Build Name"
 		/>
 		-->
-		<MenuButton class="menu-btt" v-model="showMobileMenu" :sync="true" label="Menu"/>
+		<ToggleButton
+			class="menu-btt"
+			v-model="showMobileMenu"
+			onLabel="Menu"
+			offLabel="Menu"
+			onIcon="pi pi-minus"
+			offIcon="pi pi-plus"
+			iconPos="right"
+		/>
 		<div class="toolbar-inner" :class="{ showOnMobile: showMobileMenu }">
 			<button @click="saveAndShare()">Save & Share</button>
 			<button @click="screenshot()" id="screenshotBTT">
@@ -39,11 +47,9 @@
 		openVersionModal,
 		openCreditsModal,
 	} from "../utils/modalService";
-	import MenuButton from "./MenuButton.vue";
 
 	export default {
 		name: "ToolBar",
-		components: { MenuButton },
 		data() {
 			return {
 				history,
@@ -102,6 +108,13 @@
 		// don't show the menu button normally
 		.menu-btt {
 			display: none;
+			width: 100%;
+			text-align: left;
+			padding: 0 .5rem;
+			background: unset;
+			border: 0;
+			border-bottom: 1px solid #fff;
+			border-radius: 0;
 		}
 		.toolbar-inner {
 			display: flex;
@@ -119,9 +132,7 @@
 		// mobile switch to menu W/ button
 		@media only screen and (max-width: 650px) {
 			.menu-btt {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
+				display: flex;				
 			}
 			.toolbar-inner {
 				display: none;

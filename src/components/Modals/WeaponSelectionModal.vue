@@ -6,12 +6,17 @@
 			type="text"
 			@input="debouceSearch"
 		/>
-		<MenuButton
-			class="menu-btt"
-			v-model="showMobileMenu"
-			:sync="true"
-			label="Weapon Types"
-		/>
+		<div class="button-container">
+			<ToggleButton
+				class="menu-btt"
+				v-model="showMobileMenu"
+				onLabel="Weapon Types"
+				offLabel="Weapon Types"
+				onIcon="pi pi-minus"
+				offIcon="pi pi-plus"
+				iconPos="right"
+			/>
+		</div>
 		<div class="search-toolbar" :class="{ showOnMobile: showMobileMenu }">
 			<button
 				class="mx-btt"
@@ -89,14 +94,12 @@
 		getUniqueObject,
 	} from "../../utils/utils";
 	import BasicTile from "../BasicTile.vue";
-	import MenuButton from "../MenuButton.vue";
 
 	export default {
 		name: "WeaponSelectionModal",
 		props: ["gearData", "onModalClose", "tableHeaders"],
 		components: {
 			BasicTile,
-			MenuButton,
 		},
 		data() {
 			return {
@@ -349,21 +352,32 @@
 		padding: 8px;
 		background: #252525;
 		z-index: 2;
+		border-bottom: 1px solid white;
 		.mx-btt {
 			margin: 0;
 		}
 	}
 
 	// don't show the menu button normally
-	.menu-btt {
+	.button-container {
 		display: none;
+		margin: 8px;
+
+		.menu-btt {
+			width: 100%;
+			text-align: left;
+			padding: 0 .5rem;
+			background: unset;
+			border: 0;
+			border-bottom: 1px solid #fff;
+			border-radius: 0;
+		}
 	}
 
 	// mobile switch to menu W/ button
 	@media only screen and (max-width: 850px) {
-		.menu-btt {
+		.button-container {
 			display: flex;
-			flex-direction: column;
 		}
 		.search-toolbar {
 			display: none;

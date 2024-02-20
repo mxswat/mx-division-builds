@@ -366,5 +366,21 @@
    "level": 40,
    "name": "Decoy Housing Shell",
    "attributes": " Decoy<br/>5.5% Health"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility Protocol: Intensity",
+   "attributes": "17.2% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Sturdy Piston",
+   "attributes": " Seeker Mine<br/>4.3% Damage"
  }
 ]

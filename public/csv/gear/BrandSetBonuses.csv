@@ -1,61 +1,82 @@
 Brand,stat,val
-5.11 Tactical0,Health,10
-5.11 Tactical1,Incoming Repairs,15
-5.11 Tactical2,Hazard Protection,10
+5.11 Tactical0,Health,30
+5.11 Tactical1,Incoming Repairs,20
+5.11 Tactical2,Hazard Protection,20
 Airaldi Holdings0,Marksman Rifle Damage,10
 Airaldi Holdings1,Headshot Damage,10
 Airaldi Holdings2,Damage to Armor,5
 Alps Summit Armaments0,Repair Skills,15
-Alps Summit Armaments1,Skill Duration,20
-Alps Summit Armaments2,Cooldown Reduction,10
+Alps Summit Armaments1,Skill Duration,30
+Alps Summit Armaments2,Cooldown Reduction,30
 Badger Tuff0,Shotgun Damage,10
 Badger Tuff1,% Armor,5
-Badger Tuff2,Armor on Kill,10
+Badger Tuff2,Armor on Kill,15
+Brazos de Arcabuz0,Cooldown Reduction,10
+Brazos de Arcabuz1,Skill Tier,1
+Brazos de Arcabuz2,Magazine Size %,50
 Ceska Vyroba s.r.o.0,Critical Hit Chance,10
 Ceska Vyroba s.r.o.1,Hazard Protection,10
-Ceska Vyroba s.r.o.2,Health,10
+Ceska Vyroba s.r.o.2,Health,90
 China Light Industries Corporation0,Explosive Damage,15
-China Light Industries Corporation1,Cooldown Reduction,10
-China Light Industries Corporation2,Status Effects,10
+China Light Industries Corporation1,Cooldown Reduction,20
+China Light Industries Corporation2,Status Effects,20
 Douglas & Harding0,Pistol Damage,20
-Douglas & Harding1,Stability,10
-Douglas & Harding2,Accuracy,10
+Douglas & Harding1,Stability,30
+Douglas & Harding2,Accuracy,50
+Electrique0,Status Effects,10
+Electrique1,Shock Resistance,20
+Electrique2,SMG Damage,30
+Empress International0,Skill Health,10
+Empress International1,Skill Damage,10
+Empress International2,Skill Efficiency,10
 Fenris Group AB0,Assault Rifle Damage,10
-Fenris Group AB1,Reload Speed %,10
-Fenris Group AB2,Stability,10
+Fenris Group AB1,Reload Speed %,30
+Fenris Group AB2,Stability,50
 Gila Guard0,% Armor,5
-Gila Guard1,Health,10
-Gila Guard2,Armor Regeneration %,1
+Gila Guard1,Health,60
+Gila Guard2,Armor Regeneration %,2
 Golan Gear Ltd0,Status Effects,10
-Golan Gear Ltd1,Armor Regeneration %,1
-Golan Gear Ltd2,% Armor,5
+Golan Gear Ltd1,Armor Regeneration %,1.5
+Golan Gear Ltd2,% Armor,10
 Grupo Sombra S.A.0,Critical Hit Damage,15
-Grupo Sombra S.A.1,Explosive Damage,15
+Grupo Sombra S.A.1,Explosive Damage,20
 Grupo Sombra S.A.2,Headshot Damage,10
+Habsburg Guard0,Headshot Damage,15
+Habsburg Guard1,Marksman Rifle Damage,20
+Habsburg Guard2,Status Effects,20
 Hana-U Corporation0,Cooldown Reduction,10
 Hana-U Corporation1,Skill Damage,10
-Hana-U Corporation2,Weapon Damage,5
+Hana-U Corporation2,Weapon Damage,10
+Lengmo0,Explosive Resistance,20
+Lengmo1,Skill Health,25
+Lengmo2,LMG Damage,30
 Murakami Industries0,Skill Duration,20
-Murakami Industries1,Repair Skills,15
-Murakami Industries2,Skill Damage,10
+Murakami Industries1,Repair Skills,30
+Murakami Industries2,Skill Damage,20
 Overlord Armaments0,Rifle Damage,10
-Overlord Armaments1,Accuracy,10
-Overlord Armaments2,Weapon Handling,10
+Overlord Armaments1,Accuracy,30
+Overlord Armaments2,Weapon Handling,30
 Petrov Defense Group0,LMG Damage,10
-Petrov Defense Group1,Weapon Handling,10
-Petrov Defense Group2,Ammo Capacity,20
+Petrov Defense Group1,Weapon Handling,15
+Petrov Defense Group2,Ammo Capacity,50
 Providence Defense0,Headshot Damage,10
 Providence Defense1,Critical Hit Chance,10
 Providence Defense2,Critical Hit Damage,15
-Richter & Kaiser GmbH0,Incoming Repairs,15
-Richter & Kaiser GmbH1,Explosive Resistance,10
-Richter & Kaiser GmbH2,Skill Repair,15
+Richter & Kaiser GmbH0,Incoming Repairs,20
+Richter & Kaiser GmbH1,Explosive Resistance,25
+Richter & Kaiser GmbH2,Skill Repair,40
 Sokolov Concern0,SMG Damage,10
 Sokolov Concern1,Critical Hit Damage,15
 Sokolov Concern2,Critical Hit Chance,10
+Uzina Getica0,Total Armor,5
+Uzina Getica1,Armor on Kill,10
+Uzina Getica2,Hazard Protection,20
+"Walker, Harris & Co0",Weapon Damage,5
+"Walker, Harris & Co0",Damage to Armor,5
+"Walker, Harris & Co0",Damage to Health,10
 Wyvern Wear0,Skill Damage,10
-Wyvern Wear1,Status Effects,10
-Wyvern Wear2,Skill Duration,20
+Wyvern Wear1,Status Effects,15
+Wyvern Wear2,Skill Duration,40
 Yaahl Gear0,Hazard Protection,10
 Yaahl Gear1,Weapon Damage,5
 Yaahl Gear2,Pulse Resistance,40

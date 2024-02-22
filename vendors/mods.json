@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Projector Internals",
    "attributes": " Decoy<br/>6.0% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-defensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Defensive System: Mending",
+   "attributes": "8.9% Blind Deaf Resistance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Terminal Ballistics",
+   "attributes": " Drone<br/>8.7% Health"
  }
 ]

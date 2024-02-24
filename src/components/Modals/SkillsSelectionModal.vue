@@ -62,7 +62,7 @@
 											alt=""
 										/>
 										<div class="description">{{ item.skill.Desc }}</div>
-										<div class="status">Applies {{ item.skill.Status }} status effect on affected target.</div>
+										<div class="status" v-if="item.skill.Status" >Applies {{ item.skill.Status }} status effect on affected target.</div>
 										<div>
 											<ul
 												class="stats-container"

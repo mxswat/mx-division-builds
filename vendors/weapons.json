@@ -488,5 +488,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.7% Reload Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Carnage - IWI NEGEV",
+   "dmg": "37,610",
+   "rpm": 850,
+   "mag": 100,
+   "talent": "Perfect Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.2% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.2% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Classic M60",
+   "dmg": "63,466",
+   "rpm": 500,
+   "mag": 100,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.7% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.6% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SASG-12",
+   "dmg": "364,812",
+   "rpm": 180,
+   "mag": 7,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.6% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Magazine Size"
  }
 ]

@@ -1,7 +1,7 @@
 [
  {
    "type": "weapon",
-   "rarity": "header-he",
+   "rarity": "header-named",
    "vendor": "White House",
    "level": 40,
    "name": "Mechanical Animal",
@@ -43,7 +43,7 @@
  },
  {
    "type": "weapon",
-   "rarity": "header-he",
+   "rarity": "header-named",
    "vendor": "White House",
    "level": 40,
    "name": "Prophet - Police 686 Magnum",

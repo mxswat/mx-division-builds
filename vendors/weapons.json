@@ -502,5 +502,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.5% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9.5% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Designated Hitter - SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Perfect Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.6% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>99% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.3% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>20% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "GR9",
+   "dmg": "37,610",
+   "rpm": 750,
+   "mag": 200,
+   "talent": "Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>7% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>15% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Lightweight M4",
+   "dmg": "103,987",
+   "rpm": 360,
+   "mag": 30,
+   "talent": "Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.1% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance"
  }
 ]

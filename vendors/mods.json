@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Housing Shell",
    "attributes": " Decoy<br/>6.0% Health"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-defensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Defensive System: Mending",
+   "attributes": "16,346 Armor on Kill "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Carbon Fiber Frame",
+   "attributes": " Drone<br/>2 Extra Bombs"
  }
 ]

@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Projector Internals",
    "attributes": " Decoy<br/>6.0% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Firearms",
+   "attributes": "10.5% Critical Hit Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Synthetic Mineral Frame",
+   "attributes": " Shield<br/>4.5% Holstered Regeneration"
  }
 ]

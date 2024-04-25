@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Projector Internals",
    "attributes": " Decoy<br/>5.5% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility Protocol: Intensity",
+   "attributes": "8.6% Skill Duration "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Graphene Battery",
+   "attributes": " Drone<br/>6.6% Deflect Duration"
  }
 ]

@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>8.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9.1% Accuracy",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Commando - Paratrooper SVD",
+   "dmg": "159,841",
+   "rpm": 260,
+   "mag": 10,
+   "talent": "Perfectly Naked",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.8% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>92% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>10.9% Stability"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "GR9",
+   "dmg": "37,610",
+   "rpm": 750,
+   "mag": 200,
+   "talent": "Ignited",
+   "attribute1": "<span class=\"icon-weapons\"></span>4.8% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.5% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military Mk17",
+   "dmg": "116,120",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.9% Swap Speed"
  }
 ]

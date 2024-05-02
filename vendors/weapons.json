@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.6% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7.5% Health Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Artist's Tool - SIG 716 CQB",
+   "dmg": "99,665",
+   "rpm": 320,
+   "mag": 20,
+   "talent": "Perfect Rifleman",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.9% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military RPK-74 M",
+   "dmg": "55,474",
+   "rpm": 650,
+   "mag": 45,
+   "talent": "Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>14.3% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SOCOM Mk20 SSR",
+   "dmg": "143,857",
+   "rpm": 275,
+   "mag": 20,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.7% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>86% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>15% Swap Speed"
  }
 ]

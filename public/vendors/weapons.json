@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Emelines's Guard - P90",
+   "dmg": "48,892",
+   "rpm": 900,
+   "mag": 50,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.9% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Magazine Size"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>20.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8.7% Accuracy"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAMAS 2010",
+   "dmg": "44,191",
+   "rpm": 900,
+   "mag": 30,
+   "talent": "Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>10.8% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Surplus SVD",
+   "dmg": "159,841",
+   "rpm": 260,
+   "mag": 10,
+   "talent": "Vindictive",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.6% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>99% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Magazine Size"
  }
 ]

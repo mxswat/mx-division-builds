@@ -516,5 +516,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8% Magazine Size",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Dare - GR9",
+   "dmg": "37,610",
+   "rpm": 580,
+   "mag": 200,
+   "talent": "Perfect Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.4% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>10% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.2% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>12% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military MK46",
+   "dmg": "56,414",
+   "rpm": 550,
+   "mag": 100,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.2% LMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Double Barrel Sawed Off",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>8% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Damage Out of Cover"
  }
 ]

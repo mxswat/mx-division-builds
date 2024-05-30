@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Payload",
    "attributes": " Sticky Bomb<br/>4.9% Blast Radius"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Firearms",
+   "attributes": "8.0% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Tungsten Compound",
+   "attributes": " Firefly<br/>6.3% Blind Effect Duration"
  }
 ]

@@ -488,5 +488,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.9% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Kingbreaker",
+   "dmg": "",
+   "rpm": 650,
+   "mag": 30,
+   "talent": "Perfect Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.6% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>17.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Police UMP-45",
+   "dmg": "65,817",
+   "rpm": 600,
+   "mag": 30,
+   "talent": "Measured",
+   "attribute1": "<span class=\"icon-weapons\"></span>7.6% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>19% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>22.5% Optimal Range"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Hunting M44",
+   "dmg": "416,056",
+   "rpm": 55,
+   "mag": 5,
+   "talent": "Flatline",
+   "attribute1": "<span class=\"icon-weapons\"></span>12% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>101% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.6% Stability"
  }
 ]

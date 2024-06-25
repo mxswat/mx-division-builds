@@ -13,9 +13,7 @@
 			>
 				<div v-if="isNamedGear(currentGear)" class="named-container">
 					<img src="icons/named.png" class="named-logo" />
-					<span>
-						{{ currentGear.itemName }} ({{ currentGear.brand }})
-					</span>
+					<span> {{ currentGear.itemName }} ({{ currentGear.brand }}) </span>
 				</div>
 				<div v-else>{{ currentGear.itemName }}</div>
 			</div>
@@ -376,48 +374,43 @@
 				}
 				this.currentGear = new GearBase(data);
 				this.currentGear.core = this.coreAttributes.find(
-					(attribute) =>
-						attribute.label ===
-						this.currentGear.filters.core
+					(attribute) => attribute.label === this.currentGear.filters.core
 				);
 				if (data.coreTwo !== null) {
 					this.currentGear.coreTwo = this.coreAttributes.find(
-						(attribute) =>
-							attribute.label ===
-							this.currentGear.filters.coreTwo
+						(attribute) => attribute.label === this.currentGear.filters.coreTwo
 					);
 				}
 				if (data.coreThree !== null) {
 					this.currentGear.coreThree = this.coreAttributes.find(
 						(attribute) =>
-							attribute.label ===
-							this.currentGear.filters.coreThree
+							attribute.label === this.currentGear.filters.coreThree
 					);
 				}
-				this.currentGear.attributeOne = this.allGearAttributes.find(
-					(attribute) =>
-						attribute.Stat ===
-						this.currentGear.filters.attributeOne
-				);
+				if (this.currentGear.quality === "Named") {
+					this.currentGear.attributeOne = this.allGearAttributes.find(
+						(attribute) =>
+							attribute.Quality === "N" &&
+							attribute.Stat === this.currentGear.filters.attributeOne
+					);
+				} else {
+					this.currentGear.attributeOne = this.allGearAttributes.find(
+						(attribute) =>
+							attribute.Stat === this.currentGear.filters.attributeOne
+					);
+				}
 				this.currentGear.attributeTwo = this.allGearAttributes.find(
 					(attribute) =>
-						attribute.Stat ===
-						this.currentGear.filters.attributeTwo
+						attribute.Stat === this.currentGear.filters.attributeTwo
 				);
 				this.currentGear.attributeThree = this.allGearAttributes.find(
 					(attribute) =>
-						attribute.Stat ===
-						this.currentGear.filters.attributeThree
+						attribute.Stat === this.currentGear.filters.attributeThree
 				);
 				if (data.Talent !== null) {
-					this.currentGear.talent = this.allTalents.find(
-						(talent) => {
-							return (
-								talent.Talent ===
-								this.currentGear.filters.talent
-							);
-						}
-					);
+					this.currentGear.talent = this.allTalents.find((talent) => {
+						return talent.Talent === this.currentGear.filters.talent;
+					});
 				}
 			},
 			openGearModal() {
@@ -431,11 +424,11 @@
 					if (this.gearMods.length) {
 						// push a dummy attribute onto the front of the list
 						this.gearMods.unshift({
-							"Quality": "A",
-							"Type": "B",
-							"Stat": "(Blank)",
-							"Max": "",
-							"index": -1
+							Quality: "A",
+							Type: "B",
+							Stat: "(Blank)",
+							Max: "",
+							index: -1,
 						});
 					}
 				});
@@ -443,23 +436,19 @@
 			initGearAttributes() {
 				gearData.Attributes.then((attributes) => {
 					this.allGearAttributes = getUniqueObject(attributes);
-					this.gearAttributes = this.allGearAttributes.filter(
-						(attribute) => {
-							return attribute.Quality === "A";
-						}
-					);
-					this.gearAttributes.sort((a, b) =>
-						a.Stat > b.Stat ? 1 : -1
-					);
+					this.gearAttributes = this.allGearAttributes.filter((attribute) => {
+						return attribute.Quality === "A";
+					});
+					this.gearAttributes.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
 
 					if (this.gearAttributes.length) {
 						// push a dummy attribute onto the front of the list
 						this.gearAttributes.unshift({
-							"Quality": "A",
-							"Type": "B",
-							"Stat": "(Blank)",
-							"Max":"", 
-							"index": -1
+							Quality: "A",
+							Type: "B",
+							Stat: "(Blank)",
+							Max: "",
+							index: -1,
 						});
 					}
 				});
@@ -471,10 +460,7 @@
 					this.allTalents = talents;
 					this.gearTalents = talents
 						.filter((talent) => {
-							return (
-								talent.Slot === this.name &&
-								talent.Quality === "A"
-							);
+							return talent.Slot === this.name && talent.Quality === "A";
 						})
 						.sort(function(a, b) {
 							if (a.Talent < b.Talent) {
@@ -489,24 +475,24 @@
 					if (this.gearTalents.length) {
 						// push a dummy talent onto the front of the list
 						this.gearTalents.unshift({
-							"Quality": "A",
-							"Slot": this.name,
-							"Talent": "(Blank)",
-							"Desc": "",
+							Quality: "A",
+							Slot: this.name,
+							Talent: "(Blank)",
+							Desc: "",
 							"Attr.": "",
-							"Val": "",
-							"index": -1
+							Val: "",
+							index: -1,
 						});
 					}
 				});
 			},
 			filterGearCores() {
-				if (this.currentGear.quality === 'Exotic') {
-					return []
+				if (this.currentGear.quality === "Exotic") {
+					return [];
 				}
 				if (this.currentGear.itemName === "Picaro's Holster") {
-					return this.coreAttributes.filter((core) => { 
-						return (core.Type !== 'O');
+					return this.coreAttributes.filter((core) => {
+						return core.Type !== "O";
 					});
 				}
 				return this.coreAttributes;
@@ -559,12 +545,10 @@
 						);
 						this.currentGear = fromUrlGear;
 						this.currentGear.attributeOne = this.allGearAttributes.find(
-							(attribute) =>
-								attribute.index === parseInt(splittedIdS[1])
+							(attribute) => attribute.index === parseInt(splittedIdS[1])
 						);
 						this.currentGear.attributeTwo = this.allGearAttributes.find(
-							(attribute) =>
-								attribute.index === parseInt(splittedIdS[2])
+							(attribute) => attribute.index === parseInt(splittedIdS[2])
 						);
 						// if (this.currentGear.itemName === "Memento") {
 						if (
@@ -607,13 +591,11 @@
 							 * Only perform if Ammo Dump (id = 8, index 23)
 							 */
 							this.currentGear.attributeThree = this.allGearAttributes.find(
-								(attribute) =>
-									attribute.Stat === "Ammo Capacity"
+								(attribute) => attribute.Stat === "Ammo Capacity"
 							);
 							// TODO Break this out as this is not specific to this gear
 							this.currentGear.core = this.coreAttributes.find(
-								(attribute) =>
-									attribute.index === parseInt(splittedIdS[3])
+								(attribute) => attribute.index === parseInt(splittedIdS[3])
 							);
 						} else if (this.currentGear.itemName === "Claws Out") {
 							/**
@@ -623,18 +605,15 @@
 								(attribute) => attribute.Stat === "Melee Damage"
 							);
 							this.currentGear.attributeThree = this.allGearAttributes.find(
-								(attribute) =>
-									attribute.Stat === "Pistol Damage"
+								(attribute) => attribute.Stat === "Pistol Damage"
 							);
 							// TODO Break this out as this is not specific to this gear
 							this.currentGear.core = this.coreAttributes.find(
-								(attribute) =>
-									attribute.index === parseInt(splittedIdS[3])
+								(attribute) => attribute.index === parseInt(splittedIdS[3])
 							);
 						} else {
 							this.currentGear.core = this.coreAttributes.find(
-								(attribute) =>
-									attribute.index === parseInt(splittedIdS[3])
+								(attribute) => attribute.index === parseInt(splittedIdS[3])
 							);
 						}
 						this.currentGear.mod = this.gearMods.find(
@@ -644,8 +623,7 @@
 							(mod) => mod.index === parseInt(splittedIdS[14])
 						);
 						this.currentGear.talent = this.allTalents.find(
-							(talent) =>
-								talent.index === parseInt(splittedIdS[5])
+							(talent) => talent.index === parseInt(splittedIdS[5])
 						);
 
 						const stats = [
@@ -663,23 +641,15 @@
 							const stat = stats[idx];
 							const currentStatToUpdate = this.currentGear[stat];
 
-							var valueToImport = parseFloat(
-								splittedIdS[5 + idx]
-							);
+							var valueToImport = parseFloat(splittedIdS[5 + idx]);
 							if (stat === "mod") {
-								valueToImport = parseFloat(
-									splittedIdS[4 + idx]
-								);
+								valueToImport = parseFloat(splittedIdS[4 + idx]);
 							}
 							if (stat === "coreTwo" || stat === "coreThree") {
-								valueToImport = parseFloat(
-									splittedIdS[7 + idx]
-								);
+								valueToImport = parseFloat(splittedIdS[7 + idx]);
 							}
 							if (stat === "modTwo") {
-								valueToImport = parseFloat(
-									splittedIdS[8 + idx]
-								);
+								valueToImport = parseFloat(splittedIdS[8 + idx]);
 
 								if (currentStatToUpdate && valueToImport > 0) {
 									// Using Vue set because I want this to be reactive and
@@ -694,11 +664,7 @@
 								if (currentStatToUpdate && valueToImport > 0) {
 									// Using Vue set because I want this to be reactive and
 									// to trigger watch deep when it changes into StatInput
-									Vue.set(
-										currentStatToUpdate,
-										"StatValue",
-										valueToImport
-									);
+									Vue.set(currentStatToUpdate, "StatValue", valueToImport);
 								}
 							}
 						}
@@ -723,10 +689,8 @@
 			clearStatSlot(slotStat) {
 				// do not clear certain stats from exotics and named
 				if (
-					(this.currentGear.quality === "Exotic" &&
-						slotStat !== "mod") ||
-					(this.currentGear.quality === "Named" &&
-						slotStat === "talent")
+					(this.currentGear.quality === "Exotic" && slotStat !== "mod") ||
+					(this.currentGear.quality === "Named" && slotStat === "talent")
 				)
 					return;
 

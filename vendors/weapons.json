@@ -38,7 +38,7 @@
    "mag": 20,
    "talent": "Reformation",
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
-   "attribute2": "<span class=\"icon-weapons\"></span>12.3% swa",
+   "attribute2": "<span class=\"icon-weapons\"></span>12.3% Swap Speed",
    "attribute3": "-"
  },
  {
@@ -446,5 +446,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.2% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9.1% Reload Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Mozambique Special",
+   "dmg": "98,725",
+   "rpm": 310,
+   "mag": 18,
+   "talent": "Perfect Breadbasket",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.7% Pistol Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage",
+   "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.2% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "G36 C",
+   "dmg": "48,892",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Custom M870 MCS",
+   "dmg": "695,775",
+   "rpm": 75,
+   "mag": 5,
+   "talent": "Steady Handed",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.7% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.9% Swap Speed"
  }
 ]

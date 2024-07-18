@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": " Sticky Bomb<br/>4.8% Blast Radius"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Firearms",
+   "attributes": "7.8% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Carbon Fiber Frame",
+   "attributes": " Drone<br/>8.6m Scan Range"
  }
 ]

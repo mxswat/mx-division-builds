@@ -502,5 +502,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9% Headshot Damage",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Whisper",
+   "dmg": "84,622",
+   "rpm": 400,
+   "mag": 30,
+   "talent": "Perfectly Behind You",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% Rifle Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Critical Hit Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>13.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Critical Hit Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAMAS 2010",
+   "dmg": "44,191",
+   "rpm": 900,
+   "mag": 30,
+   "talent": "Preservation",
+   "attribute1": "<span class=\"icon-weapons\"></span>9.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SASG-12",
+   "dmg": "364,812",
+   "rpm": 180,
+   "mag": 7,
+   "talent": "In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Rate of Fire"
  }
 ]

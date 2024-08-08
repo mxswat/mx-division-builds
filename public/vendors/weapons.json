@@ -502,5 +502,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>8.7% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>9.3% Reload Speed",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Boomstick - Double Barrel Shotgun",
+   "dmg": "620,556",
+   "rpm": 200,
+   "mag": 2,
+   "talent": "Perfect Pumped Up",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.2% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Damage Out of Cover"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>11% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>11.6% Reload Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military P416",
+   "dmg": "47,952",
+   "rpm": 750,
+   "mag": 30,
+   "talent": "Strained",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>15% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.1% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Model 700",
+   "dmg": "399,602",
+   "rpm": 54,
+   "mag": 7,
+   "talent": "Reformation",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>94% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.2% Stability"
  }
 ]

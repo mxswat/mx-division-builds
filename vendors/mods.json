@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Charge Improvement",
    "attributes": " Trap<br/>4.3% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility System: Electronics",
+   "attributes": "10.6% Skill Haste "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Adaptive Insulation Foam",
+   "attributes": " Shield<br/>4.5% Shield Health"
  }
 ]

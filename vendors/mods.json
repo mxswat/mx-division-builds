@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Electronics Upgrade",
    "attributes": " Trap<br/>5.7% Shock Radius"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility Protocol: Intensity",
+   "attributes": "10.6% Skill Haste "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Vac Pack",
+   "attributes": " Firefly<br/>6.3% Damage"
  }
 ]

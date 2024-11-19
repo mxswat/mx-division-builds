@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": " Sticky Bomb<br/>4.1% Skill Haste"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility Protocol: Intensity",
+   "attributes": "8.8% Skill Duration "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Weather Coating",
+   "attributes": " Turret<br/>1 Extra Mortar Ammo"
  }
 ]

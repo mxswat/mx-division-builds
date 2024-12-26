@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Charge Improvement",
    "attributes": " Trap<br/>4.1% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Dexterity",
+   "attributes": "5.0% Critical Hit Chance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Blitzkrieg Blasting Powder",
+   "attributes": " Drone<br/>6.8% Deflect Duration"
  }
 ]

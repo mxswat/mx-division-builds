@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Test Subject",
+   "dmg": "",
+   "rpm": 700,
+   "mag": 30,
+   "talent": "Perfectly In Sync",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>5% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Cabaret - MP5 ST",
+   "dmg": "51,713",
+   "rpm": 800,
+   "mag": 32,
+   "talent": "Perfect Thunder Strike",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.1% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>10% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Paratrooper SVD",
+   "dmg": "159,841",
+   "rpm": 260,
+   "mag": 10,
+   "talent": "Close & Personal",
+   "attribute1": "<span class=\"icon-weapons\"></span>11% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>92% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9.5% Health Damage"
  }
 ]

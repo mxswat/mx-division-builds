@@ -57,7 +57,7 @@
  },
  {
    "type": "weapon",
-   "rarity": "header-exo",
+   "rarity": "header-he",
    "vendor": "Clan",
    "level": 40,
    "name": "Hunting M44",
@@ -71,7 +71,7 @@
  },
  {
    "type": "weapon",
-   "rarity": "header-exo",
+   "rarity": "header-he",
    "vendor": "Clan",
    "level": 40,
    "name": "Black Market RPK-74 E",
@@ -85,7 +85,7 @@
  },
  {
    "type": "weapon",
-   "rarity": "header-exo",
+   "rarity": "header-he",
    "vendor": "Clan",
    "level": 40,
    "name": "Police UMP-45",

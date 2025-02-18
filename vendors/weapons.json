@@ -488,5 +488,33 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>7% Critical Hit Chance",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "FAL",
+   "dmg": "56,885",
+   "rpm": 650,
+   "mag": 20,
+   "talent": "Fast Hands",
+   "attribute1": "<span class=\"icon-weapons\"></span>12% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>14.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>9% Headshot Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Covert SRS",
+   "dmg": "338,957",
+   "rpm": 60,
+   "mag": 7,
+   "talent": "Killer",
+   "attribute1": "<span class=\"icon-weapons\"></span>14.2% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>111% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>6.5% Magazine Size"
  }
 ]

@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Decoy Projector Internals",
    "attributes": " Decoy<br/>6.0% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility System: Assist",
+   "attributes": "17.4% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Micro Conduits",
+   "attributes": " Firefly<br/>8.6% Speed"
  }
 ]

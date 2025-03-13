@@ -460,5 +460,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>10.8% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>8.7% Stability",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Like Glue - Super 90",
+   "dmg": "440,031",
+   "rpm": 160,
+   "mag": 8,
+   "talent": "Perfect Brazen",
+   "attribute1": "<span class=\"icon-weapons\"></span>6.8% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.9% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16.5% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>4.1% Rate of Fire"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Enhanced AUG A3P",
+   "dmg": "57,825",
+   "rpm": 725,
+   "mag": 25,
+   "talent": "Sledgehammer",
+   "attribute1": "<span class=\"icon-weapons\"></span>8.8% SMG Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>21% Critical Hit Chance",
+   "attribute3": "<span class=\"icon-weapons\"></span>7.5% Health Damage"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Military M870",
+   "dmg": "695,775",
+   "rpm": 75,
+   "mag": 5,
+   "talent": "Spike",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>9% Damage Out of Cover",
+   "attribute3": "<span class=\"icon-weapons\"></span>12.2% Swap Speed"
  }
 ]

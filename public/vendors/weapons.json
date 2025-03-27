@@ -474,5 +474,61 @@
    "attribute1": "<span class=\"icon-weapons\"></span>11.3% Pistol Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>19% Optimal Range",
    "attribute3": "-"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Thorn - SPAS-12",
+   "dmg": "646,883",
+   "rpm": 70,
+   "mag": 8,
+   "talent": "Perfect Brazen",
+   "attribute1": "<span class=\"icon-weapons\"></span>7.2% Shotgun Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>12% Damage to Armor",
+   "attribute3": "<span class=\"icon-weapons\"></span>13.6% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Shield Splinterer - F2000",
+   "dmg": "45,132",
+   "rpm": 850,
+   "mag": 30,
+   "talent": "Perfect Optimist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.4% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>13% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Critical Hit Chance"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SIG 556",
+   "dmg": "50,773",
+   "rpm": 720,
+   "mag": 30,
+   "talent": "Eyeless",
+   "attribute1": "<span class=\"icon-weapons\"></span>11.5% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>16% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>14% Swap Speed"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "SR-1",
+   "dmg": "357,291",
+   "rpm": 60,
+   "mag": 5,
+   "talent": "Sadist",
+   "attribute1": "<span class=\"icon-weapons\"></span>12.7% MMR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>100% Headshot Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>7% Health Damage"
  }
 ]

@@ -374,5 +374,21 @@
    "level": 40,
    "name": "Trap Electronics Upgrade",
    "attributes": " Trap<br/>5.9% Shock Radius"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive System: Dexterity",
+   "attributes": "10.6% Critical Hit Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Improved Sticky Payload",
+   "attributes": " Sticky Bomb<br/>4.0% Burn Duration"
  }
 ]

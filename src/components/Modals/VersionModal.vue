@@ -5,6 +5,38 @@
 		</span>
 		<div class="overflow-handler">
 			<p>- - - - - - - - - - - - - - - - - - - -</p>
+			<p>May 28, 2025</p>
+			<h3>Year 7 Season 1 | Brooklyn!</h3>
+			<h4 style="margin-bottom: -10px;">
+				Been a minute since we've noted any updates, but we have been keeping
+				this app updated!
+			</h4>
+			<ul style="padding-left: 1.5rem; list-style-position: outside;">
+				<li>
+					Season 1 of Year 7 is here, and with it comes a new season of content!
+				</li>
+				<li>
+					Brooklyn!
+				</li>
+				<li>
+					Check out the patch notes:
+					<a
+						href="https://www.ubisoft.com/en-us/game/the-division/the-division-2/news-updates/HP67k5N5kneQmSCVlVMmi"
+						target="_blank"
+						>The Division 2: Crossroads</a
+					>
+				</li>
+				<li>
+					For those who like Reddit:
+					<a
+						href="https://www.reddit.com/r/thedivision/comments/1kw9oii/the_division_2_y7s1_crossroads_battle_for/"
+						target="_blank"
+						>The Division 2 - Y7S1: Crossroads / Battle for Brooklyn -
+						Overview</a
+					>
+				</li>
+			</ul>
+			<p>- - - - - - - - - - - - - - - - - - - -</p>
 			<p>October 16, 2023</p>
 			<h3>Skill Slots added to the builder</h3>
 			<h4 style="margin-bottom: -10px;">

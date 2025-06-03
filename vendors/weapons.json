@@ -586,5 +586,19 @@
    "attribute1": "<span class=\"icon-weapons\"></span>9.6% MMR Damage",
    "attribute2": "<span class=\"icon-weapons\"></span>86% Headshot Damage",
    "attribute3": "<span class=\"icon-weapons\"></span>6% Damage to Armor"
+ },
+ {
+   "type": "weapon",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Huntsman - FAMAS 2010",
+   "dmg": "44,191",
+   "rpm": 900,
+   "mag": 30,
+   "talent": "Perfect Frenzy",
+   "attribute1": "<span class=\"icon-weapons\"></span>15% AR Damage",
+   "attribute2": "<span class=\"icon-weapons\"></span>18% Health Damage",
+   "attribute3": "<span class=\"icon-weapons\"></span>8% Headshot Damage"
  }
 ]

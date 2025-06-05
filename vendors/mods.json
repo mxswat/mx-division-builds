@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Trap Electronics Upgrade",
    "attributes": " Trap<br/>6.1% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility System: Electronics",
+   "attributes": "17.3% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Gimbal Vibration Damping",
+   "attributes": " Drone<br/>6.8% Deflect Duration"
  }
 ]

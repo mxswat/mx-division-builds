@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": " Sticky Bomb<br/>4.1% Skill Haste"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "4.7% Critical Hit Chance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Slip Fit Tube",
+   "attributes": " Chem Launcher<br/>6.4% Heal"
  }
 ]

@@ -677,6 +677,9 @@
 				});
 			},
 			whereIsAvailable(gear) {
+				if (!this.vendorGear || this.vendorGear.length === 0) {
+					return null;
+				}
 				const found = this.vendorGear.find(
 					(item) => item?.Name === gear.itemName
 				);

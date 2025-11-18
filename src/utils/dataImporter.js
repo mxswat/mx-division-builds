@@ -53,14 +53,17 @@ const urls = ["gear", "weapons"];
 
 const VendorPromises = Promise.all(
 	urls.map((url) =>
-		fetch(
-			`${getAppRootPath()}vendors/${url}.json?${new Date().toISOString()}`
-		).then((e) => e.json())
+		fetch(`${getAppRootPath()}vendors/${url}.json?${new Date().toISOString()}`)
+			.then((e) => e.json())
+			.catch((error) => {
+				console.warn(`Failed to parse ${url} vendor data:`, error);
+				return []; // Return empty array if json() fails
+			})
 	)
 ).then((data) => {
 	const gear = data[0].map((g) => {
 		return {
-			Name: g.rarity.includes("named") ? g.name : g.brand,
+			Name: g.rarity?.includes("named") ? g.name : g.brand,
 			Slot: g.slot,
 			Vendor: g.vendor,
 		};
@@ -68,8 +71,8 @@ const VendorPromises = Promise.all(
 
 	const weapons = data[1].map((g) => {
 		return {
-			Name: g.rarity.includes("named")
-				? g.name.replace(/-.*/i, "").trim()
+			Name: g.rarity?.includes("named")
+				? g.name?.replace(/-.*/i, "").trim()
 				: g.name,
 			Vendor: g.vendor,
 		};

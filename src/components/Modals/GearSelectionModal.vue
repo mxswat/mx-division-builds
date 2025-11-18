@@ -207,13 +207,18 @@
 				);
 			},
 			isAvailableAtVendor(gear) {
-				return this.vendorGear.some((item) => item.Name === gear[gearNameProp]);
+				return this.vendorGear && this.vendorGear.length > 0
+					? this.vendorGear.some((item) => item.Name === gear[gearNameProp])
+					: false;
 			},
 			whereIsAvailable(gear) {
+				if (!this.vendorGear || this.vendorGear.length === 0) {
+					return "Unknown";
+				}
 				const found = this.vendorGear.find(
 					(item) => item.Name === gear[gearNameProp]
 				);
-				return found.Vendor;
+				return found ? found.Vendor : "Unknown";
 			},
 		},
 		created() {
@@ -240,7 +245,10 @@
 					return o;
 				}, {});
 				this.perfectAttributes = data[4].filter((a) => a.Quality === "N");
-				this.vendorGear = data[5].Gear[this.gearSlot];
+				this.vendorGear =
+					data[5] && data[5].Gear && data[5].Gear[this.gearSlot]
+						? data[5].Gear[this.gearSlot]
+						: [];
 			});
 		},
 		mounted() {},

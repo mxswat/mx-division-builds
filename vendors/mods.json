@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Improved Sticky Payload",
    "attributes": " Sticky Bomb<br/>4.0% Burn Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility System: Electronics",
+   "attributes": "17.0% Repair Skills "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Terminal Ballistics",
+   "attributes": " Drone<br/>8.6% Health"
  }
 ]

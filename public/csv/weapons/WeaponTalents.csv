@@ -33,6 +33,7 @@ A,Strained,x,x,x,x,x,x,x,Gain 10% critical hit damage for every 0.5 seconds you 
 A,Unhinged,,,,,x,,,Receive 18% weapon damage at the cost of 25% stability and 25% accuracy.,Weapon Damage,18
 A,Unwavering,,,,x,,,,Swapping to this weapon grants 300% weapon handling for 5 seconds. Kills refresh the buff. Swapping away disables this from all weapons for 5 seconds.,,
 A,Vindictive,x,x,x,x,x,x,x,"Killing an enemy with a status effect applied grants all group members within 15 meters, 15% critical hit chance and 15% critical hit damage for 20 seconds.",,
+A,Immobilize,x,x,x,x,x,x,x,"Amplifies Weapon Damage by 20% to ensnared enemies. After 4 kills, applies Ensnare to the next enemy you hit. For PvP: Amplifies Weapon Damage by 10% to ensnared enemies. After 4 kills, applies Ensnare to the next enemy you hit.",,
 E,Electromagnetic Accelerator,,,,,,,,Shots fired deal 0 -100% weapon damage based on how long the trigger is held before releasing.,,
 E,Big Game Hunter,,,,,,,,"When scoped, switches to semi-automatic fire mode, dealing 450% weapon damage with each shot.",,
 E,Eagle's Strike,,,,,,,,"+Accuracy as you fire, up to 30%. Headshot kills grant Tenacity for 15s increasing 1% for body shots, 5% for headshots.",,
@@ -48,7 +49,10 @@ E,Binary Trigger,,,,,,,,"Gain a stack if both bullets hit the same enemy. At 7 s
 E,Sandman,,,,,,,,Melee attacks instantly kill non-elite enemies. Cooldown: 15 seconds,,
 E,Breathe Free,,,,,,,,"Gain 4 stacks/s moving, 8 sprinting, 40 max. Shots use a stack, increasing damage by 60%. Kills grant 20% movement speed for 10s.",,
 E,Incessant Chatter,,,,,,,,Reloading increases ROF 20% for each enemy within 15M for the duration of that magazine. 5 stacks max. Kills refill 50% of your magazine.,,
+E,Transfusion,,,,,,,,"Headshots build stacks, up to 8. Shooting an Ally or Skill repairs them for 50% of the shot damage per stack and grants them Bonus Armor equal to 200% of your Repair Skills per stack for 10 seconds. At max stacks, healing an Ally or Skill turns all hits into guaranteed headshots for 8 seconds.",,
+E,Autentico,,,,,,,"+35% Weapon Damage, +100% Accuracy, and no damage drop off. These bonuses are built into the weapon base stats.",,
 N,Hidden Rock,,,,,,,,,,
+N,Perfect Immobilize,,,,,,,"Amplifies Weapon Damage by 25% to ensnared enemies. After 3 kills, applies Ensnare to the next enemy you hit. For PvP: Amplifies Weapon Damage by 15% to ensnared enemies. After 3 kills, applies Ensnare to the next enemy you hit.",,
 N,Perfect Allegro,,,,,,,,,,
 N,Perfect Boomerang,,,,,,,,"Critical hits have a 50% chance to return the bullet to the magazine. If a bullet is returned to the magazine, the next shot has 40% increased damage.",,
 N,Perfect Breadbasket,,,,,,,,Landing body shots adds a stack of bonus 50% headshot damage to the next headshot for 10 seconds. Max stack is 2.,,

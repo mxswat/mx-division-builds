@@ -140,6 +140,7 @@ M1A,Classic M1A,P,High End,Rifle,235060,10,180,3000,60,Rifle Damage,15,Critical 
 M1A,M1A CQB,P,High End,Rifle,141036,10,320,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,60
 M1A,M1A CQB Replica,P,High End,Rifle,141036,10,320,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,60
 M1A,SOCOM M1A,P,High End,Rifle,141036,10,320,3000,60,Rifle Damage,15,Critical Hit Damage,17,A,A,Short / Long,Side / Short / Long,MM 7.62,7.62,60
+M1A,Bittersweet,P,Exotic,Rifle,235060,10,180,3000,60,Rifle Damage,15,Critical Hit Damage,17,Headshot Damage,Transfusion,Bittersweet,Bittersweet,Bittersweet,,60
 M4,Lightweight M4,P,High End,Rifle,94024,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
 M4,LVOA-C,P,High End,Rifle,89322,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
 M4,LVOA-C Replica,P,High End,Rifle,89322,30,360,2400,50,Rifle Damage,15,Critical Hit Damage,17,A,A,Ironsights / Short / Long,Side / Short / Long,5.56,5.56,60
@@ -169,6 +170,7 @@ M870,Custom M870 MCS,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Da
 M870,Custom M870 MCS Replica,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
 M870,M870 Express,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
 M870,M870 Express Replica,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+M870,Lockdown,P,Named,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,Perfect Immobilize,Short / Long,Side / Short / Long,Tubular,,45
 M870,Military M870,P,High End,Shotgun,564144,5,75,3700,14,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,Tubular,,45
 KSG,KSG Shotgun,P,High End,Shotgun,545336,12,70,8050,16,Shotgun Damage,15,Damage to Armor,12,A,A,Micro / Short,Side / Short / Long,Tubular,,45
 SASG-12,Black Market SASG-12 S,P,High End,Shotgun,300872,7,180,3000,14,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,,,45
@@ -182,6 +184,7 @@ Super 90,Super 90,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Dama
 Super 90,Super 90 Replica,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
 Super 90,Tactical Super 90 SBS,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
 Super 90,Tactical Super 90 SBS Replica,P,High End,Shotgun,357288,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,A,A,Short / Long,Side / Short / Long,Tubular,,45
+Super 90,Sheriff,P,Exotic,Shotgun,482339,8,160,4800,16,Shotgun Damage,15,Damage to Armor,12,Accuracy,Autentico,Short / Long,Side / Short / Long,Tubular,,45
 AA-12,Rock n' Roll,P,Named,Shotgun,169240,20,300,2300,14,Shotgun Damage,15,Damage to Armor,12,A,Perfectly Extra,Micro / Short,Side / Short / Long,,,45
 Double Barrel,Boomstick,P,Named,Shotgun,620552,2,200,2200,11,Shotgun Damage,15,Damage to Armor,12,A,Perfect Pumped Up,,,,,45
 Double Barrel,Backup Boomstick,S,Named,Shotgun,620552,2,200,2200,11,Shotgun Damage,16,Damage to Armor,12,A,A,,,,,45
@@ -218,6 +221,7 @@ UMP-45,Police UMP-45,P,High End,SMG,58765,30,600,2300,14,SMG Damage,15,Critical 
 UMP-45,Tactical UMP-45,P,High End,SMG,58765,30,600,2300,14,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
 UMP-45,Tactical UMP-45 Replica,P,High End,SMG,58765,30,600,2300,14,SMG Damage,15,Critical Hit Chance,21,A,A,Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
 Vector,Tactical Vector SBR 9mm,P,High End,SMG,39960,19,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short,9mm,9mm,50
+Vector,Froth,P,Named,SMG,39960,19,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,Perfect Immobilize,Ironsights / Short / Long,Side / Short,9mm,9mm,50
 Vector,Vector SBR .45 ACP,P,High End,SMG,35259,25,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
 Vector,Vector SBR .45 ACP Replica,P,High End,SMG,35259,25,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short / Long,.45 ACP,.45 ACP,50
 Vector,Vector SBR 9mm,P,High End,SMG,32908,33,1200,1900,15,SMG Damage,15,Critical Hit Chance,21,A,A,Ironsights / Short / Long,Side / Short,9mm,9mm,50

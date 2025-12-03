@@ -214,3 +214,18 @@ High End,Kneepads,Yaahl Gear,A,Yaahl Gear,Armor,A,A,,
 High End,Mask,Yaahl Gear,A,Yaahl Gear,Armor,A,A,O,
 Named,Mask,The Hollow Man,N,Yaahl Gear,Armor,Damage to Health,O,O,
 High End,Holster,Improvised Holster,A,Crafted,Skill Tier,A,A,U,
+Exotic,Chest,Beacon,E,Exotic,Weapon Damage,Critical Hit Chance,Critical Hit Damage,O,Bond
+Gearset,Backpack,Concentrated Company,S,Concentrated Company,Weapon Damage,A,A,O,One for All
+Gearset,Chest,Concentrated Company,S,Concentrated Company,Weapon Damage,A,A,O,All for One
+Gearset,Gloves,Concentrated Company,S,Concentrated Company,Weapon Damage,A,A,,
+Gearset,Holster,Concentrated Company,S,Concentrated Company,Weapon Damage,A,A,,
+Gearset,Kneepads,Concentrated Company,S,Concentrated Company,Weapon Damage,A,A,,
+Gearset,Mask,Concentrated Company,S,Concentrated Company,Weapon Damage,A,A,O,
+High End,Backpack,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,O,A
+High End,Chest,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,O,A
+Named,Chest,Equalizer,N,Unit Alloys,Weapon Damage,A,A,O,Perfect Obliterate
+High End,Gloves,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,,
+High End,Holster,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,,
+Named,Holster,Salvo,N,Unit Alloys,Weapon Damage,Rate of Fire %,A,,
+High End,Kneepads,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,,
+High End,Mask,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,O,

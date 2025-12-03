@@ -1,5 +1,6 @@
 Quality,Slot,Item Name,Type,Brand,Core,Attribute 1,Attribute 2,Mod,Talent
 Exotic,Chest,Tardigrade Armor System,E,Exotic,Armor,Explosive Resistance,Armor Regeneration,D,Ablative Nano-Plating
+Exotic,Chest,Beacon,E,Exotic,Weapon Damage,Critical Hit Chance,Critical Hit Damage,O,Bond
 High End,Chest,5.11 Tactical,A,5.11 Tactical,Armor,A,A,D,A
 Gearset,Chest,Aces and Eights,S,Aces and Eights,Weapon Damage,A,,O,No Limit
 High End,Chest,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,O,A
@@ -22,6 +23,7 @@ High End,Chest,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,U,A
 Named,Chest,Door-Kicker's Knock,N,Grupo Sombra S.A.,Weapon Damage,A,A,U,Perfect Spark
 High End,Chest,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,O,A
 Gearset,Chest,Hard Wired,S,Hard Wired,Skill Tier,A,,U,Positive Reinforcement
+Gearset,Chest,Concentrated Company,S,Concentrated Company,Weapon Damage,A,,O,All for One
 High End,Chest,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,U,A
 Gearset,Chest,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,,O,Target Rich Environment
 Gearset,Chest,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,,U,Parabellum Rounds
@@ -32,6 +34,8 @@ High End,Chest,Providence Defense,A,Providence Defense,Weapon Damage,A,A,O,A
 Named,Chest,The Sacrifice,N,Providence Defense,Weapon Damage,A,A,O,Perfect Glass Cannon
 High End,Chest,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,D,A
 High End,Chest,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,O,A
+High End,Chest,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,O,A
+Named,Chest,Equalizer,N,Unit Alloys,Weapon Damage,A,A,O,Perfect Obliterate
 Gearset,Chest,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,,O,Press the Advantage
 Gearset,Chest,System Corruption,S,System Corruption,Weapon Damage,A,,D,Compiler Optimization
 Gearset,Chest,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,,O,Specialized Destruction

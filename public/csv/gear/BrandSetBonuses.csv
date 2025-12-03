@@ -59,6 +59,9 @@ Wyvern Wear2,Skill Duration,20
 Yaahl Gear0,Hazard Protection,10
 Yaahl Gear1,Weapon Damage,5
 Yaahl Gear2,Pulse Resistance,40
+Unit Alloys0,Rate of Fire %,5
+Unit Alloys1,Assault Rifle Damage,20
+Unit Alloys2,Magazine Size %,50
 Hard Wired1,Skill Haste,15
 Hard Wired2,Skill Damage,15
 Hard Wired3,Repair Skills,15
@@ -82,3 +85,6 @@ Striker's Battlegear2,Rate of Fire %,15
 System Corruption1,Armor on Kill,15
 System Corruption2,Disrupt Resistance,40
 System Corruption3,Pulse Resistance,40
+Concentrated Company1,Weapon Damage,10
+Concentrated Company2,Weapon Handling,30
+Concentrated Company3,Talent,Camaraderie - marks enemies; ally or skill contribution adds weapon and crit damage stacks; max stacks 35; marks cap 4; stacks decay

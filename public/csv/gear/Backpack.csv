@@ -1,38 +1,87 @@
 Quality,Slot,Item Name,Type,Brand,Core,Attribute 1,Attribute 2,Mod,Talent
-Exotic,Backpack,Acosta's Go-Bag,E,Exotic,Skill Tier,Skill Haste,Skill Damage,U,One in Hand...
-High End,Backpack,5.11 Tactical,A,5.11 Tactical,Armor,A,A,D,A
-Gearset,Backpack,Aces and Eights,S,Aces and Eights,Weapon Damage,A,,O,Poker Face
-High End,Backpack,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,O,A
-High End,Backpack,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,U,A
-Named,Backpack,Percussive Maintenance,N,Alps Summit Armaments,Skill Tier,A,A,U,Perfect Tech Support
-High End,Backpack,Badger Tuff,A,Badger Tuff,Armor,A,A,O,A
-High End,Backpack,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,A
-Named,Backpack,Devil's Due,N,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,Perfect Clutch
-High End,Backpack,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,U,A
-Named,Backpack,Strategic Alignment,N,China Light Industries Corporation,Skill Tier,A,A,U,Perfect Shock and Awe
-High End,Backpack,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,O,A
-High End,Backpack,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,O,A
-Gearset,Backpack,Foundry Bullwark,S,Foundry Bullwark,N/A,A,,,A
-Gearset,Backpack,Future Initiative,S,Future Initiative,N/A,A,,,A
-High End,Backpack,Gila Guard,A,Gila Guard,Armor,A,A,D,A
-High End,Backpack,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,U,A
-Named,Backpack,Anarchist's Cookbook,N,Golan Gear Ltd,Weapon Damage,A,A,U,Perfectly Wicked
-High End,Backpack,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,U,A
-High End,Backpack,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,O,A
-Named,Backpack,Force Multiplier,N,Hana-U Corporation,Skill Tier,A,A,O,Perfect Combined Arms
+Quality,Slot,Item Name,Type,Brand,Core,Attribute 1,Attribute 2,Mod,Talent
+Exotic,Backpack,Acosta's Go-Bag,E,Exotic,Skill Tier,Skill Damage,Skill Haste,U,One in Hand...
+Exotic,Backpack,Birdie's Quick Fix Pack,E,Exotic,Skill Tier,Skill Haste,Repair Skills,U,Combat Medic
+Exotic,Backpack,Memento,E,Exotic,Weapon Damage,Skill Tier,Armor,U,Kill Confirmed
+Exotic,Backpack,Ninjabike Messenger Bag,E,Exotic,Weapon Damage,Skill Tier,Armor,U,Resourceful
+Gearset,Backpack,Aces and Eights,S,Aces and Eights,Weapon Damage,A,,O,Ace in the Sleeve
+Gearset,Backpack,Aegis,S,Aegis,Armor,A,,D,Polyethylene Plating
+Gearset,Backpack,Breakpoint,S,Breakpoint,Weapon Damage,A,,O,Point of honor
+Gearset,Backpack,Cavalier,S,Cavalier,Armor,A,,D,Safe Charging
+Gearset,Backpack,Concentrated Company,S,Concentrated Company,Weapon Damage,A,,O,One for All
+Gearset,Backpack,Eclipse Protocol,S,Eclipse Protocol,Skill Tier,A,,U,Symptom Aggravator
+Gearset,Backpack,Foundry Bullwark,S,Foundry Bullwark,Armor,A,,O,Process Refinery
+Gearset,Backpack,Future Initiative,S,Future Initiative,Skill Tier,A,,U,Advanced Combat Tactics
 Gearset,Backpack,Hard Wired,S,Hard Wired,Skill Tier,A,,U,Short Circuit
-High End,Backpack,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,U,A
+Gearset,Backpack,Heartbreaker,S,Heartbreaker,Armor,A,,O,Cold
+Gearset,Backpack,Hotshot,S,Hotshot,Weapon Damage,A,,O,Lucky
+Gearset,Backpack,Hunter's Fury,S,Hunter's Fury,Weapon Damage,A,,O,Overwhelming Force
+Gearset,Backpack,Measured Assembly,S,Measured Assembly,Skill Tier,A,,U,Smart Cooperation
 Gearset,Backpack,Negotiator's Dilemma,S,Negotiator's Dilemma,Weapon Damage,A,,O,Critical Measures
-Gearset,Backpack,Ongoing Directive,S,Ongoing Directive,Skill Tier,A,,U,Emergency Requisition
-High End,Backpack,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,O,A
-High End,Backpack,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,O,A
-High End,Backpack,Providence Defense,A,Providence Defense,Weapon Damage,A,A,O,A
-Named,Backpack,The Gift,N,Providence Defense,Weapon Damage,A,A,O,Perfect Vigilance
-High End,Backpack,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,D,A
-High End,Backpack,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,O,A
+Gearset,Backpack,Ongoing Directive,S,Ongoing Directive,Weapon Damage,A,,O,Trauma Specialist
+Gearset,Backpack,Ortiz: Exuro,S,Ortiz: Exuro,Skill Tier,A,,U,Heatstroke
+Gearset,Backpack,Refactor,S,Refactor,Armor,A,,O,Over-engineered
+Gearset,Backpack,Rigger,S,Rigger,Skill Tier,A,,U,Complete Uptime
 Gearset,Backpack,Striker's Battlegear,S,Striker's Battlegear,Weapon Damage,A,,O,Risk Management
 Gearset,Backpack,System Corruption,S,System Corruption,Armor,A,,D,Multithreaded Execution
 Gearset,Backpack,Tip of the Spear,S,Tip of the Spear,Weapon Damage,A,,O,Crossbow Expert
+Gearset,Backpack,Tipping Scales,S,Tipping Scales,Weapon Damage,A,,O,Snowball
 Gearset,Backpack,True Patriot,S,True Patriot,Armor,A,,D,Patriotic Boost
+Gearset,Backpack,Umbra Initiative,S,Umbra Initiative,Weapon Damage,A,,O,Into the Light
+Gearset,Backpack,Virtuoso,S,Virtuoso,Weapon Damage,A,,O,Accelerando
+High End,Backpack,5.11 Tactical,A,5.11 Tactical,Armor,A,A,D,A
+High End,Backpack,Airaldi Holdings,A,Airaldi Holdings,Weapon Damage,A,A,O,A
+High End,Backpack,Alps Summit Armaments,A,Alps Summit Armaments,Skill Tier,A,A,U,A
+High End,Backpack,Badger Tuff,A,Badger Tuff,Armor,A,A,O,A
+High End,Backpack,Belstone Armory,A,Belstone Armory,Armor,A,A,D,A
+High End,Backpack,Brazos de Arcabuz,A,Brazos de Arcabuz,Armor,A,A,D,A
+High End,Backpack,Ceska Vyroba s.r.o.,A,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,A
+High End,Backpack,China Light Industries Corporation,A,China Light Industries Corporation,Skill Tier,A,A,U,A
+High End,Backpack,Douglas & Harding,A,Douglas & Harding,Weapon Damage,A,A,O,A
+High End,Backpack,Electrique,A,Electrique,Skill Tier,A,A,U,A
+High End,Backpack,Empress International,A,Empress International,Skill Tier,A,A,U,A
+High End,Backpack,Fenris Group AB,A,Fenris Group AB,Weapon Damage,A,A,O,A
+High End,Backpack,Gila Guard,A,Gila Guard,Armor,A,A,D,A
+High End,Backpack,Golan Gear Ltd,A,Golan Gear Ltd,Armor,A,A,U,A
+High End,Backpack,Grupo Sombra S.A.,A,Grupo Sombra S.A.,Weapon Damage,A,A,U,A
+High End,Backpack,Habsburg Guard,A,Habsburg Guard,Armor,A,A,U,A
+High End,Backpack,Hana-U Corporation,A,Hana-U Corporation,Skill Tier,A,A,O,A
+High End,Backpack,Imminence Armaments,A,Imminence Armaments,Weapon Damage,A,A,O,A
+High End,Backpack,Legatus S.p.A.,A,Legatus S.p.A.,Weapon Damage,A,A,O,A
+High End,Backpack,Lengmo,A,Lengmo,Armor,A,A,U,A
+High End,Backpack,Murakami Industries,A,Murakami Industries,Skill Tier,A,A,U,A
+High End,Backpack,Overlord Armaments,A,Overlord Armaments,Weapon Damage,A,A,O,A
+High End,Backpack,Pallisade Steelworks,A,Pallisade Steelworks,Armor,A,A,U,A
+High End,Backpack,Petrov Defense Group,A,Petrov Defense Group,Weapon Damage,A,A,O,A
+High End,Backpack,Providence Defense,A,Providence Defense,Weapon Damage,A,A,O,A
+High End,Backpack,Richter & Kaiser GmbH,A,Richter & Kaiser GmbH,Skill Tier,A,A,D,A
+High End,Backpack,Shiny Monkey,A,Shiny Monkey,Skill Tier,A,A,U,A
+High End,Backpack,Sokolov Concern,A,Sokolov Concern,Weapon Damage,A,A,O,A
+High End,Backpack,Unit Alloys,A,Unit Alloys,Weapon Damage,A,A,O,A
+High End,Backpack,Urban Lookout,A,Urban Lookout,Weapon Damage,A,A,O,A
+High End,Backpack,Uzina Getica,A,Uzina Getica,Armor,A,A,U,A
+High End,Backpack,Urban Lookout,A,Urban Lookout,Weapon Damage,A,A,O,A
+High End,Backpack,Walker, Harris & Co.,A,Walker, Harris & Co.,Weapon Damage,A,A,O,A
 High End,Backpack,Wyvern Wear,A,Wyvern Wear,Skill Tier,A,A,U,A
 High End,Backpack,Yaahl Gear,A,Yaahl Gear,Armor,A,A,O,A
+High End,Backpack,Zwiadowka Sp. z o.o.,A,Zwiadowka Sp. z o.o.,Weapon Damage,A,A,O,A
+Named,Backpack,Anarchist's Cookbook,N,Golan Gear Ltd,Weapon Damage,A,A,U,Perfectly Wicked
+Named,Backpack,Axel,N,Shiny Monkey,Skill Tier,A,A,U,Perfectly Energize
+Named,Backpack,Backbone,N,Lengmo,Armor,A,A,D,Perfectl Unstoppable Force
+Named,Backpack,Battery Pack,N,Empress Insternational,Skill Tier,A,A,U,Perfectly Calculated
+Named,Backpack,Cap'n,N,Imminence Armaments,Weapon Damage,A,A,O,Perfectly Leadership
+Named,Backpack,Devil's Due,N,Ceska Vyroba s.r.o.,Weapon Damage,A,A,D,Perfect Clutch
+Named,Backpack,Force Multiplier,N,Hana-U Corporation,Skill Tier,A,A,O,Perfect Combined Arms
+Named,Backpack,Equalizer,N,Unit Alloys,Weapon Damage,A,A,O,Perfect Obliterate
+Named,Backpack,Festive Delivery,N,Grupo Sombra S.A.,Weapon Damage,A,A,O,Fireworks Show
+Named,Backpack,Hermano,N,Brazos de Acabruz,Armor,A,A,D,Perfect Overclock
+Named,Backpack,Lavosier,N,Electrique,Skill Tier,A,A,U,Perfect Galvanize
+Named,Backpack,Liquid Engineer,N,Belstone Armory,Armor,A,A,D,Perfect Bloodsucker
+Named,Backpack,Matador,N,Walker, Harris & Con.,Weapon Damage,A,A,O,Perfect Adrenaline Rush
+Named,Backpack,Percussive Maintenance,N,Alps Summit Armaments,Skill Tier,A,A,U,Perfect Tech Support
+Named,Backpack,Proxy,N,Pallisade Steelworks,Armor,A,A,D,Perfectly Tamper Proof
+Named,Backpack,Strategic Alignment,N,China Light Industries Corporation,Skill Tier,A,A,U,Perfect Shock and Awe
+Named,Backpack,The Courier,N,Habsburg Guard,Armor,A,A,D,Perfect Creeping Death
+Named,Backpack,The Gift,N,Providence Defense,Weapon Damage,A,A,O,Perfect Vigilance
+Named,Backpack,The Setup,N,Uzina Getica,Armor,A,A,D,Perfectly Oppurtunistic
+Named,Backpack,Vigil,N,Legatus S.p.A.,Weapon Damage,A,A,O,Perfect Versatile

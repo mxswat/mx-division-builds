@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Decoy Projector Internals",
    "attributes": " Decoy<br/>6.0% Duration"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-offensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Offensive Protocol: Critical",
+   "attributes": "7.7% Headshot Damage "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Decoy Projector Internals",
+   "attributes": " Decoy<br/>6.5% Duration"
  }
 ]

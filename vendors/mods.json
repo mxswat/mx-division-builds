@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Decoy Housing Shell",
    "attributes": " Decoy<br/>6.0% Health"
+ },
+ {
+   "type": "mod",
+   "rarity": "header-defensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Defensive System: Mending",
+   "attributes": "9.0% Shock Resistance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Ultra-Thin Cartridges",
+   "attributes": " Chem Launcher<br/>6.4% Skill Haste"
  }
 ]

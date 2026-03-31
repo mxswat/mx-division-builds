@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Trap Charge Improvement",
    "attributes": "4.2% Duration "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-defensive",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Defensive Protocol: Resilience",
+   "attributes": "8.7% Ensnare Resistance "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Nitroglycerin Mixture",
+   "attributes": " Hive<br/>4 Stinger Charges"
  }
 ]

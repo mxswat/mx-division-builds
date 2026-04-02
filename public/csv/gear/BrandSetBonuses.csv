@@ -1,84 +1,171 @@
 Brand,stat,val
-5.11 Tactical0,Health,10
-5.11 Tactical1,Incoming Repairs,15
-5.11 Tactical2,Hazard Protection,10
-Airaldi Holdings0,Marksman Rifle Damage,10
-Airaldi Holdings1,Headshot Damage,10
+5.11 Tactical0,Health,30
+5.11 Tactical1,Incoming Repairs,30
+5.11 Tactical2,Hazard Protection,30
+Airaldi Holdings0,MMR Damage,10
+Airaldi Holdings1,Headshot Damage,13
 Airaldi Holdings2,Damage to Armor,5
-Alps Summit Armaments0,Repair Skills,15
-Alps Summit Armaments1,Skill Duration,20
-Alps Summit Armaments2,Cooldown Reduction,10
+Alps Summit Armaments0,Repair Skills,18
+Alps Summit Armaments1,Skill Duration,30
+Alps Summit Armaments2,Skill Haste,30
 Badger Tuff0,Shotgun Damage,10
-Badger Tuff1,% Armor,5
-Badger Tuff2,Armor on Kill,10
-Ceska Vyroba s.r.o.0,Critical Hit Chance,10
-Ceska Vyroba s.r.o.1,Hazard Protection,10
-Ceska Vyroba s.r.o.2,Health,10
+Badger Tuff1,Total Armor,5
+Badger Tuff2,Armor on Kill,15
+Belstone Armory0,Armor Regenaration %,1
+Belstone Armory1,Armor on Kill,10
+Belstone Armory2,Incoming Repairs,45
+Brazos de Arcabuz0,Skill Haste,10
+Brazos de Arcabuz1,Skill Tier,1
+Brazos de Arcabuz2,% Magaszine Size,50
+Ceska Vyroba s.r.o.0,Critical Hit Chance,8
+Ceska Vyroba s.r.o.1,Hazard Protection,20
+Ceska Vyroba s.r.o.2,Health,90
 China Light Industries Corporation0,Explosive Damage,15
-China Light Industries Corporation1,Cooldown Reduction,10
-China Light Industries Corporation2,Status Effects,10
+China Light Industries Corporation1,Skill Haste,20
+China Light Industries Corporation2,Status Effects,25
 Douglas & Harding0,Pistol Damage,20
-Douglas & Harding1,Stability,10
-Douglas & Harding2,Accuracy,10
-Fenris Group AB0,Assault Rifle Damage,10
-Fenris Group AB1,Reload Speed %,10
-Fenris Group AB2,Stability,10
-Gila Guard0,% Armor,5
-Gila Guard1,Health,10
-Gila Guard2,Armor Regeneration %,1
+Douglas & Harding1,Stability,30
+Douglas & Harding2,Accuracy,50
+Electrique0,Status Effect,10
+Electrique1,Electrcity Protection,20
+Electrique2,SMG Damage,30
+Empress International0,Skill Haste,10
+Empress International1,Skill Damage,10
+Empress International2,Skill Efficiency,8
+Fenris Group AB0,AR Damage,10
+Fenris Group AB1,Reload Speed %,30
+Fenris Group AB2,Stability,50
+Gila Guard0,Total Armor %,5
+Gila Guard1,Health,60
+Gila Guard2,Armor Regeneration %,2
 Golan Gear Ltd0,Status Effects,10
-Golan Gear Ltd1,Armor Regeneration %,1
-Golan Gear Ltd2,% Armor,5
-Grupo Sombra S.A.0,Critical Hit Damage,15
-Grupo Sombra S.A.1,Explosive Damage,15
-Grupo Sombra S.A.2,Headshot Damage,10
-Hana-U Corporation0,Cooldown Reduction,10
+Golan Gear Ltd1,Armor Regeneration %,1.5
+Golan Gear Ltd2,Total Armor,10
+Grupo Sombra S.A.0,Critical Hit Damage,13
+Grupo Sombra S.A.1,Explosive Damage,20
+Grupo Sombra S.A.2,Headshot Damage,13
+Habsburg Guard0,Headshot Damage,13
+Habsburg Guard1,MMR Damage,20
+Habsburg Guard2,Status Effects,25
+Hana-U Corporation0,Skill Haste,10
 Hana-U Corporation1,Skill Damage,10
-Hana-U Corporation2,Weapon Damage,5
-Murakami Industries0,Skill Duration,20
-Murakami Industries1,Repair Skills,15
-Murakami Industries2,Skill Damage,10
+Hana-U Corporation2,Weapon Damage,15
+Imminence Armaments0,Weapon Damage,5
+Imminence Armaments1,Increased Threat,100
+Imminence Armaments2,Pistol Damage,60
+Legatus S.p.A0,Swap Speed,30
+Legatus S.p.A1,Optimal Range,70
+Legatus S.p.A2,Weapon Damage,15
+Lengmo0,Explosive Resistance,20
+Lengmo1,Skill Haste,20
+Lengmo2,LMG Damage,30
+Murakami Industries0,Skill Duration,15
+Murakami Industries1,Repair Skills,35
+Murakami Industries2,Skill Damage,18
 Overlord Armaments0,Rifle Damage,10
-Overlord Armaments1,Accuracy,10
-Overlord Armaments2,Weapon Handling,10
+Overlord Armaments1,Accuracy,30
+Overlord Armaments2,Weapon Handling,30
+Palisade Steelworks0,Armor on Kill,10
+Palisade Steelworks1,Health,60
+Palisade Steelworks2,Skill Tier,1
 Petrov Defense Group0,LMG Damage,10
-Petrov Defense Group1,Weapon Handling,10
-Petrov Defense Group2,Ammo Capacity,20
-Providence Defense0,Headshot Damage,10
-Providence Defense1,Critical Hit Chance,10
-Providence Defense2,Critical Hit Damage,15
+Petrov Defense Group1,Weapon Handling,15
+Petrov Defense Group2,Ammo Capacity,50
+Providence Defense0,Headshot Damage,13
+Providence Defense1,Critical Hit Chance,8
+Providence Defense2,Critical Hit Damage,13
 Richter & Kaiser GmbH0,Incoming Repairs,15
-Richter & Kaiser GmbH1,Explosive Resistance,10
-Richter & Kaiser GmbH2,Skill Repair,15
+Richter & Kaiser GmbH1,Explosive Resistance,40
+Richter & Kaiser GmbH2,Repair Skills,52
+Shiny Monkey0,Skill Duration,15
+Shiny Monkey1,Skill Efficiency,5
+Shiny Monkey2,Repair Skills,52
 Sokolov Concern0,SMG Damage,10
-Sokolov Concern1,Critical Hit Damage,15
-Sokolov Concern2,Critical Hit Chance,10
-Wyvern Wear0,Skill Damage,10
-Wyvern Wear1,Status Effects,10
-Wyvern Wear2,Skill Duration,20
+Sokolov Concern1,Critical Hit Damage,13
+Sokolov Concern2,Critical Hit Chance,8
+Unit Alloys0,Rate of Fire,5
+Unit Alloys1,AR Damage,20
+Unit Alloys2,Magaszine Size,50
+Urban Lookout0,Accuracy,10
+Urban Lookout1,Skill Efficiency,5
+Urban Lookout2,MMR Damage,30
+Uzina Getica0,Total Armor,5
+Uzina Getica1,Armor on Kill,10
+Uzina Getica2,Hazard Protection,30
+Walker, Harris & Co.0,Weapon Damage,5
+Walker, Harris & Co.1,Damage to Armor,5
+Walker, Harris & Co.2,Damage to Health,10
+Wyvern Wear0,Skill Damage,8
+Wyvern Wear1,Status Effects,18
+Wyvern Wear2,Skill Duration,45
 Yaahl Gear0,Hazard Protection,10
-Yaahl Gear1,Weapon Damage,5
+Yaahl Gear1,Weapon Damage,10
 Yaahl Gear2,Pulse Resistance,40
+Zwiadowka Sp. z o.o.0,Magaszine Size,15
+Zwiadowka Sp. z o.o.1,Rifle Damage,20
+Zwiadowka Sp. z o.o.2,Weapon Handling,30
+Aces and Eights1,MMR Damage,15
+Aces and Eights2,Rifle Damage,15
+Aces and Eights3,Headshot Damage,30
+Aegis1,Health,70
+Aegis2,Total Armor,15
+Breaking Point1,Rifle Damage,25
+Breaking Point2,MMR Damage,25
+Breaking Point3,Headshot Damage,30
+Breaking Point4,Weapon Handling,15
+Cavalier1,Hazard Protection,30
+Cavalier2,Repair Skills,40
+Concentrated Company1,Weapon Damage,10
+Concentrated Company2,Weapon Handling,30
+Eclipse Protocol1,Status Effects,15
+Eclipse Protocol2,Skill Haste,15
+Eclipse Protocol3,Hazard Protection,30
+Foundry Bullwark1,Total Armor,10
+Foundry Bullwark2,Armor Regeneration %,1
+Foundry Bullwark3,Shield Health,50
+Future Initiative1,Repair Skills,30
+Future Initiative2,Skill Duration,30
+Future Initiative3,Skill Haste,15
 Hard Wired1,Skill Haste,15
 Hard Wired2,Skill Damage,15
-Hard Wired3,Repair Skills,15
-Ongoing Directive1,Status Effects,15
-Ongoing Directive2,Reload Speed %,20
-True Patriot1,Ammo Capacity,30
-True Patriot2,Magazine Size %,30
-Aces and Eights1,Marksman Rifle Damage,15
-Aces and Eights2,Headshot Damage,20
+Hard Wired3,Repair Skills,30
+Heartbreaker1,AR Damage,15
+Heartbreaker2,LMG Damage,15
+Heartbreaker3,Weapon Handling,15
+Hotshot1,MMR Damage,30
+Hotshot2,Weapon Handling,30
+Hotshot3,Headshot Damage,30
+Hunter's Fury1,Shotgun Damage,15
+Hunter's Fury2,SMG Damage,15
+Hunter's Fury3,Armor on Kill,20
+Hunter's Fury4,Health on Kill,50
+Measured Assembly1,Skill Haste,15
+Measured Assembly2,Repair Skills,60
+Measured Assembly3,Explosive Resistance,40
 Negotiator's Dilemma1,Critical Hit Chance,15
 Negotiator's Dilemma2,Critical Hit Damage,20
-Tip of the Spear1,Signature Weapon Damage,10
-Tip of the Spear2,Weapon Damage,10
-Foundry Bullwark1,% Armor,10
-Foundry Bullwark2,Armor Regeneration %,3
-Future Initiative1,Skill Repair,15
-Future Initiative2,Skill Duration,15
-Future Initiative3,Cooldown Reduction,15
+Ongoing Directive1,Status Effects,15
+Ongoing Directive2,  Speed %,20
+Ortiz: Exuro1,Burn Duration,20
+Ortiz: Exuro2,Skill Health,15
+Ortiz: Exuro3,Burn Damage,40
+Refactor1,Status Effects,15
+Refactor2,Skill Damage,25
+Rigger1,Skill Haste,15
+Rigger2,Skill Duration,15
 Striker's Battlegear1,Weapon Handling,15
 Striker's Battlegear2,Rate of Fire %,15
 System Corruption1,Armor on Kill,15
 System Corruption2,Disrupt Resistance,40
 System Corruption3,Pulse Resistance,40
+Tip of the Spear1,Signature Weapon Damage,10
+Tip of the Spear2,Weapon Damage,10
+Tipping Scales1,Magazine Size,30
+Tipping Scales2,LMG Damage,30
+True Patriot1,Ammo Capacity,30
+True Patriot2,Magazine Size,30
+Umbra Initiative1,Critical Hit Chance,15
+Umbra Initiative2,Reload Speed,30
+Virtuoso1,Weapon Handling,15
+Virtuoso2,Magazine Size,15
+Virtuoso3,Weapon Damage,15

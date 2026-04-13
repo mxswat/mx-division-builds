@@ -12,8 +12,7 @@
 				v-on:click="openWeaponsModal()"
 			>
 				{{ currentWeapon.name }}
-				<template
-					v-if="isExotic(currentWeapon) || isNamed(currentWeapon)"
+				<template v-if="isExotic(currentWeapon) || isNamed(currentWeapon)"
 					>({{ currentWeapon.variant }})</template
 				>
 			</div>
@@ -21,8 +20,7 @@
 				<span class="expertise">Expertise</span>
 				<ExpertiseInput
 					v-if="currentWeapon['expertise']"
-					v-model="currentWeapon['expertise'].StatValue"
-					v-bind:max="currentWeapon['expertise'].max"
+					v-model="expertiseValue"
 				></ExpertiseInput>
 			</div>
 			<div class="slot-element stat-edit">
@@ -41,9 +39,7 @@
 					>Core 2 is not available on this weapon</span
 				>
 				<template v-if="currentWeapon.filters['core 2']">
-					<span class="core">{{
-						currentWeapon.filters["core 2"]
-					}}</span>
+					<span class="core">{{ currentWeapon.filters["core 2"] }}</span>
 					<StatInput
 						v-if="currentWeapon['core 2']"
 						v-model="currentWeapon['core 2'].StatValue"
@@ -82,9 +78,7 @@
 					v-model="currentWeapon['talent']"
 					label="Name"
 					:class="currentWeapon.talent ? 'tool' : ''"
-					:data-tip="
-						currentWeapon.talent && currentWeapon.talent.Desc
-					"
+					:data-tip="currentWeapon.talent && currentWeapon.talent.Desc"
 				>
 					<template v-slot:option="option">
 						<div class="talent-info-container">
@@ -100,7 +94,7 @@
 				</v-select>
 			</div>
 			<div class="slot-element">
-				<MenuButton v-model="showModSlots" :sync="true" label="Mods"/>
+				<MenuButton v-model="showModSlots" :sync="true" label="Mods" />
 			</div>
 			<div class="mods-slots-container" v-if="showModSlots">
 				<template v-for="(mod, i) in modSlots">
@@ -110,10 +104,7 @@
 								:placeholder="'Mod Slot: ' + mod"
 								:clearable="false"
 								:options="
-									filterWeaponModsByType(
-										currentWeapon.filters[mod],
-										mod
-									)
+									filterWeaponModsByType(currentWeapon.filters[mod], mod)
 								"
 								:filterBy="modMatchesUserSearch"
 								v-model="currentWeapon[mod]"
@@ -121,31 +112,20 @@
 							>
 								<template v-slot:option="option">
 									<div class="mod-option-container">
-										<span class="mod-name">{{
-											option.Name
-										}}</span>
+										<span class="mod-name">{{ option.Name }}</span>
 										<span class="mod-stat">
-											<span
-												class="mod-increase"
-												v-if="option.pos"
-												>{{ option.pos }} +{{
-													option.valPos
-												}}</span
+											<span class="mod-increase" v-if="option.pos"
+												>{{ option.pos }} +{{ option.valPos }}</span
 											>
-											<span
-												class="mod-decrease"
-												v-if="option.neg"
-												>{{ option.neg }}
-												{{ option.valNeg }}</span
+											<span class="mod-decrease" v-if="option.neg"
+												>{{ option.neg }} {{ option.valNeg }}</span
 											>
 										</span>
 									</div>
 								</template>
 								<template #selected-option="option">
 									<div class="mod-option-container">
-										<span class="mod-name">{{
-											option.Name
-										}}</span>
+										<span class="mod-name">{{ option.Name }}</span>
 										<!-- <span class="mod-stat">
                       <span class="mod-increase" v-if="option.pos">{{option.pos}} +{{option.valPos}}</span>
                       <span class="mod-decrease" v-if="option.neg">{{option.neg}} {{option.valNeg}}</span>
@@ -153,20 +133,13 @@
 									</div>
 								</template>
 							</v-select>
-							<span
-								class="mod-stat selected"
-								v-if="currentWeapon[mod]"
-							>
-								<span
-									class="mod-increase"
-									v-if="currentWeapon[mod].pos"
+							<span class="mod-stat selected" v-if="currentWeapon[mod]">
+								<span class="mod-increase" v-if="currentWeapon[mod].pos"
 									>{{ currentWeapon[mod].pos }} +{{
 										currentWeapon[mod].valPos
 									}}</span
 								>
-								<span
-									class="mod-decrease"
-									v-if="currentWeapon[mod].neg"
+								<span class="mod-decrease" v-if="currentWeapon[mod].neg"
 									>{{ currentWeapon[mod].neg }}
 									{{ currentWeapon[mod].valNeg }}</span
 								>
@@ -210,6 +183,19 @@
 				showModSlots: false,
 			};
 		},
+		computed: {
+			expertiseValue: {
+				get() {
+					return (
+						this.currentWeapon.expertise.StatValue || 0
+						// this.currentWeapon.expertise.max
+					);
+				},
+				set(value) {
+					Vue.set(this.currentWeapon.expertise, "StatValue", value);
+				},
+			},
+		},
 		updated() {
 			// console.log(this.name + "updated!");
 		},
@@ -227,19 +213,17 @@
 				this.weaponAttributes = this.allWeaponAttributes.filter((attribute) => {
 					return attribute.Quality === "A";
 				});
-				this.weaponAttributes.sort((a, b) =>
-					a.Stat > b.Stat ? 1 : -1
-				);
+				this.weaponAttributes.sort((a, b) => (a.Stat > b.Stat ? 1 : -1));
 
 				if (this.weaponAttributes.length) {
 					// push a dummy attribute onto the front of the list
 					this.weaponAttributes.unshift({
-						"Quality": "A",
-						"Type": "O",
+						Quality: "A",
+						Type: "O",
 						"Weapon Type": "",
-						"Stat": "(Blank)",
-						"Max": "",
-						"index": -1
+						Stat: "(Blank)",
+						Max: "",
+						index: -1,
 					});
 				}
 			});
@@ -250,48 +234,48 @@
 				if (this.weaponMods.length) {
 					// push dummy weapon mods onto the front of the list
 					this.weaponMods.unshift({
-						"Slot": "Optic",
-						"Type": "",
-						"Name": "(Blank)",
-						"valPos": "",
-						"pos": "",
-						"valNeg": "",
-						"neg": "",
-						"Spec": "",
-						"index": -1
+						Slot: "Optic",
+						Type: "",
+						Name: "(Blank)",
+						valPos: "",
+						pos: "",
+						valNeg: "",
+						neg: "",
+						Spec: "",
+						index: -1,
 					});
 					this.weaponMods.unshift({
-						"Slot": "Magazine",
-						"Type": "",
-						"Name": "(Blank)",
-						"valPos": "",
-						"pos": "",
-						"valNeg": "",
-						"neg": "",
-						"Spec": "",
-						"index": -2
+						Slot: "Magazine",
+						Type: "",
+						Name: "(Blank)",
+						valPos: "",
+						pos: "",
+						valNeg: "",
+						neg: "",
+						Spec: "",
+						index: -2,
 					});
 					this.weaponMods.unshift({
-						"Slot": "Under Barrel",
-						"Type": "",
-						"Name": "(Blank)",
-						"valPos": "",
-						"pos": "",
-						"valNeg": "",
-						"neg": "",
-						"Spec": "",
-						"index": -3
+						Slot: "Under Barrel",
+						Type: "",
+						Name: "(Blank)",
+						valPos: "",
+						pos: "",
+						valNeg: "",
+						neg: "",
+						Spec: "",
+						index: -3,
 					});
 					this.weaponMods.unshift({
-						"Slot" :"Muzzle",
-						"Type": "",
-						"Name": "(Blank)",
-						"valPos": "",
-						"pos": "",
-						"valNeg": "",
-						"neg": "",
-						"Spec": "",
-						"index": -4
+						Slot: "Muzzle",
+						Type: "",
+						Name: "(Blank)",
+						valPos: "",
+						pos: "",
+						valNeg: "",
+						neg: "",
+						Spec: "",
+						index: -4,
 					});
 				}
 			});
@@ -301,19 +285,19 @@
 				if (this.weaponTalents.length) {
 					// push a dummy talent onto the front of the list
 					this.weaponTalents.unshift({
-						"Quality":"A",
-						"Name":"(Blank)",
-						"Assault Rifle":"x",
-						"Rifle":"x",
-						"Marksman Rifle":"x",
-						"SMG":"x",
-						"LMG":"x",
-						"Pistol":"x",
-						"Shotgun":"x",
-						"Desc":"",
-						"attr":"",
-						"val":"",
-						"index": -1
+						Quality: "A",
+						Name: "(Blank)",
+						"Assault Rifle": "x",
+						Rifle: "x",
+						"Marksman Rifle": "x",
+						SMG: "x",
+						LMG: "x",
+						Pistol: "x",
+						Shotgun: "x",
+						Desc: "",
+						attr: "",
+						val: "",
+						index: -1,
 					});
 				}
 			});
@@ -338,30 +322,19 @@
 				const isExotic = this.isExotic(this.currentWeapon);
 				const isNamed = this.isNamed(this.currentWeapon);
 				if (isExotic || isNamed) {
-					this.currentWeapon[
-						"attribute 1"
-					] = this.allWeaponAttributes.find((el) => {
-						return (
-							el["Stat"] ===
-							this.currentWeapon.filters["attribute 1"]
-						);
-					});
-					this.currentWeapon[
-						"attribute 2"
-					] = this.allWeaponAttributes.find((el) => {
-						return (
-							el["Stat"] ===
-							this.currentWeapon.filters["attribute 2"]
-						);
-					});
-					this.currentWeapon["talent"] = this.weaponTalents.find(
+					this.currentWeapon["attribute 1"] = this.allWeaponAttributes.find(
 						(el) => {
-							return (
-								el["Name"] ===
-								this.currentWeapon.filters["talent"]
-							);
-						}
+							return el["Stat"] === this.currentWeapon.filters["attribute 1"];
+						},
 					);
+					this.currentWeapon["attribute 2"] = this.allWeaponAttributes.find(
+						(el) => {
+							return el["Stat"] === this.currentWeapon.filters["attribute 2"];
+						},
+					);
+					this.currentWeapon["talent"] = this.weaponTalents.find((el) => {
+						return el["Name"] === this.currentWeapon.filters["talent"];
+					});
 					if (isExotic) {
 						const modMap = [
 							{
@@ -387,18 +360,15 @@
 						];
 						for (let i = 0; i < modMap.length; i++) {
 							const mappedMod = modMap[i];
-							const mappedFilter = this.currentWeapon.filters[
-								mappedMod.target
-							];
-							this.currentWeapon[
-								mappedMod.target
-							] = mappedMod.source.find((el) => {
-								return (
-									el[mappedMod.toMatch].toLowerCase() ===
-										mappedMod.target &&
-									el.Type === mappedFilter
-								);
-							});
+							const mappedFilter = this.currentWeapon.filters[mappedMod.target];
+							this.currentWeapon[mappedMod.target] = mappedMod.source.find(
+								(el) => {
+									return (
+										el[mappedMod.toMatch].toLowerCase() === mappedMod.target &&
+										el.Type === mappedFilter
+									);
+								},
+							);
 						}
 					}
 				}
@@ -408,8 +378,7 @@
 				if (this.currentWeapon.quality !== "Exotic") {
 					result = this.weaponMods.filter(
 						(mod) =>
-							slot === mod.Slot.toLowerCase() &&
-							type.indexOf(mod.Type) >= 0
+							slot === mod.Slot.toLowerCase() && type.indexOf(mod.Type) >= 0,
 					);
 				}
 				return result;
@@ -418,7 +387,7 @@
 				// return true if this option matches the text entered by the user
 				const properties = [option.Name, option.pos, option.neg];
 				const found = properties.filter(
-					(p) => (p || '').toLowerCase().indexOf(search.toLowerCase()) > -1
+					(p) => (p || "").toLowerCase().indexOf(search.toLowerCase()) > -1,
 				);
 				return found.length > 0;
 			},
@@ -473,18 +442,16 @@
 							{ target: "muzzle", source: this.weaponMods },
 						];
 						const fromUrlGear = new WeaponBase(
-							this.weaponsList.find(
-								(weapon) => weapon.index === id
-							)
+							this.weaponsList.find((weapon) => weapon.index === id),
 						);
 						this.currentWeapon = fromUrlGear;
 						// Start from 1 because 0 is used to build the object
 						for (let i = 1; i <= 6; i++) {
 							const id = parseInt(splittedIdS[i]);
 							const mapped = map[i];
-							this.currentWeapon[
-								mapped.target
-							] = mapped.source.find((el) => el.index === id);
+							this.currentWeapon[mapped.target] = mapped.source.find(
+								(el) => el.index === id,
+							);
 						}
 
 						const stats = [
@@ -496,30 +463,19 @@
 						];
 						for (let idx = 1; idx < stats.length; idx++) {
 							const stat = stats[idx];
-							const currentStatToUpdate = this.currentWeapon[
-								stat
-							];
-							const statValueToImport = parseFloat(
-								splittedIdS[6 + idx]
-							);
+							const currentStatToUpdate = this.currentWeapon[stat];
+							const statValueToImport = parseFloat(splittedIdS[6 + idx]);
 							if (currentStatToUpdate && statValueToImport > 0) {
 								// Using Vue set because I want this to be reactive and
 								// to trigger watch deep when it changes into StatInput
-								Vue.set(
-									currentStatToUpdate,
-									"StatValue",
-									statValueToImport
-								);
+								Vue.set(currentStatToUpdate, "StatValue", statValueToImport);
 							}
 							// Fixed Skill Tier for TDI Kard Custom
 							if (
 								this.currentWeapon.id === 243 &&
 								this.currentWeapon.quality === "Named"
 							) {
-								if (
-									this.currentWeapon["attribute 1"] ===
-									undefined
-								) {
+								if (this.currentWeapon["attribute 1"] === undefined) {
 									this.currentWeapon["attribute 1"] = {
 										Max: "1",
 										Quality: "N",
@@ -542,8 +498,7 @@
 				// do not clear talents of named items or exotic stats
 				if (
 					this.currentWeapon.quality === "Exotic" ||
-					(this.currentWeapon.quality === "Named" &&
-						slotStat === "talent")
+					(this.currentWeapon.quality === "Named" && slotStat === "talent")
 				)
 					return;
 
@@ -604,7 +559,7 @@
 	.mods-slots-container {
 		margin-left: 6px;
 		padding-left: 6px;
-		border-left: 2px solid rgba(255, 255, 255, .25);
+		border-left: 2px solid rgba(255, 255, 255, 0.25);
 	}
 
 	.mod-option-container {
@@ -635,5 +590,4 @@
 	.talent-desc {
 		white-space: break-spaces;
 	}
-
 </style>

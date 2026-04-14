@@ -1,2630 +1,702 @@
 [
  {
-   "FIELD1": "White House",
-   "Rarity": "High End",
-   "Name": "RUSH24 Backpack",
-   "Core": [
-      "127,819",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>127,819 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "3,855",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "7.6",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Skill Damage",
-   "Talent": "Concussion",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>3,855 Armor Regeneration <br/><span class=\"icon-utility\"></span>7.6% Skill Damage",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Concussion"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Concussion"
-},
- {
-   "FIELD1": "White House",
-   "Rarity": "High End",
-   "Name": "Harnesk Armor",
-   "Core": [
-      "15.0",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>15.0% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "6.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "7.2",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Hazard Protection",
-   "Talent": "Gunslinger",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling <br/><span class=\"icon-defensive\"></span>7.2% Hazard Protection",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Gunslinger"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Gunslinger"
-},
- {
-   "FIELD1": "Clan",
-   "Rarity": "Gear Set",
-   "Name": "Medley Backpack",
-   "Core": [
-      "11.5",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.5% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "4,091",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "Accelerando",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-defensive\"></span>4,091 Armor Regeneration  ",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Accelerando"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Accelerando"
-},
- {
-   "FIELD1": "Clan",
-   "Rarity": "Gear Set",
-   "Name": "Driven Kneepads",
-   "Core": [
-      "9.5",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>9.5% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "7.5",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>7.5% Weapon Handling  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Clan",
-   "Rarity": "Gear Set",
-   "Name": "Charger's Kneepads",
-   "Core": [
-      "11.7",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.7% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "7.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Headshot Damage",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>7.9% Headshot Damage  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Clan",
-   "Rarity": "High End",
-   "Name": "Garibaldi Pack",
-   "Core": [
-      "170,000",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>170,000 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "4,293",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "7.7",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Hazard Protection",
-   "Talent": "Clutch",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>4,293 Armor Regeneration <br/><span class=\"icon-defensive\"></span>7.7% Hazard Protection",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Clutch"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Clutch"
-},
- {
-   "FIELD1": "Clan",
-   "Rarity": "High End",
-   "Name": "B.O.T. Protector",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "11.2",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Skill Haste",
-   "Attribute 2": [
-      "6.3",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Headshot Damage",
-   "Talent": "Overwatch",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>11.2% Skill Haste <br/><span class=\"icon-offensive\"></span>6.3% Headshot Damage",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Overwatch"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Overwatch"
-},
- {
-   "FIELD1": "Clan",
-   "Rarity": "High End",
-   "Name": "Micro Plated Gloves",
-   "Core": [
-      "10.1",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>10.1% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "5.8",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Chance",
-   "Attribute 2": [
-      "9.8",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Critical Hit Damage",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Gloves",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>5.8% Critical Hit Chance <br/><span class=\"icon-offensive\"></span>9.8% Critical Hit Damage",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Countdown",
-   "Rarity": "Named",
-   "Name": "Force Multiplier",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "16.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Repair Skills",
-   "Attribute 2": [
-      "7.7",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Explosive Resistance",
-   "Talent": "Perfect Combined Arms",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>16.9% Repair Skills <br/><span class=\"icon-defensive\"></span>7.7% Explosive Resistance",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Perfect Combined Arms"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Perfect Combined Arms"
-},
- {
-   "FIELD1": "The Theater",
-   "Rarity": "Named",
-   "Name": "Eagle's Grasp",
-   "Core": [
-      "11.9",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.9% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "15.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "9.7",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Critical Hit Damage",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Gloves",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>15.0% Weapon Handling <br/><span class=\"icon-offensive\"></span>9.7% Critical Hit Damage",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Theater",
-   "Rarity": "High End",
-   "Name": "Hybrid FL Gloves",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "10.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Skill Haste",
-   "Attribute 2": [
-      "6.0",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Weapon Handling",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Gloves",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>10.0% Skill Haste <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Theater",
-   "Rarity": "High End",
-   "Name": "Patella Knee Cups",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "15,241",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Health",
-   "Attribute 2": [
-      "9.9",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Skill Haste",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>15,241 Health <br/><span class=\"icon-utility\"></span>9.9% Skill Haste",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Campus",
-   "Rarity": "High End",
-   "Name": "Electrique Mask",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "7.5",
-      "%",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Explosive Resistance",
-   "Attribute 2": [
-      "15,995",
-      "",
-      "<br/>"
-   ],
-   "FIELD9": "Health",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>7.5% Explosive Resistance <br/><span class=\"icon-defensive\"></span>15,995 Health",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Campus",
-   "Rarity": "High End",
-   "Name": "Graffham Thigh Combo",
-   "Core": [
-      "10.9",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>10.9% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "16.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Repair Skills",
-   "Attribute 2": [
-      "3,764",
-      "",
-      "<br/>"
-   ],
-   "FIELD9": "Armor Regeneration",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>16.9% Repair Skills <br/><span class=\"icon-defensive\"></span>3,764 Armor Regeneration",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Castle",
-   "Rarity": "Named",
-   "Name": "Punch Drunk",
-   "Core": [
-      "11.1",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.1% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "20.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Headshot Damage",
-   "Attribute 2": [
-      "17.6",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Repair Skills",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>20.0% Headshot Damage <br/><span class=\"icon-utility\"></span>17.6% Repair Skills",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Castle",
-   "Rarity": "High End",
-   "Name": "Field Protective Mask",
-   "Core": [
-      "11.1",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.1% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "8.6",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Status Effects",
-   "Attribute 2": [
-      "6.0",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Weapon Handling",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>8.6% Status Effects <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Castle",
-   "Rarity": "High End",
-   "Name": "Artisan Holster",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "8.2",
-      "%",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Explosive Resistance",
-   "Attribute 2": [
-      "5.9",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Skill Damage",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>8.2% Explosive Resistance <br/><span class=\"icon-utility\"></span>5.9% Skill Damage",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ West",
-   "Rarity": "Gear Set",
-   "Name": "Hotshot Gloves",
-   "Core": [
-      "10.6",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>10.6% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "4.4",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Chance",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Gloves",
-   "Armor": "80k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>4.4% Critical Hit Chance  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ West",
-   "Rarity": "Gear Set",
-   "Name": "Strines Stabilizing Pads",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "15.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Repair Skills",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-utility\"></span>15.9% Repair Skills  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ West",
-   "Rarity": "High End",
-   "Name": "Kote Hand Guards",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "7.3",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Headshot Damage",
-   "Attribute 2": [
-      "7.3",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Skill Damage",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Gloves",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>7.3% Headshot Damage <br/><span class=\"icon-utility\"></span>7.3% Skill Damage",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ West",
-   "Rarity": "High End",
-   "Name": "Tay Protective Pads",
-   "Core": [
-      "10.3",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>10.3% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "6.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "15,633",
-      "",
-      "<br/>"
-   ],
-   "FIELD9": "Health",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling <br/><span class=\"icon-defensive\"></span>15,633 Health",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ South",
-   "Rarity": "Gear Set",
-   "Name": "Reorganized Backpack",
-   "Core": [
-      "115,448",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>115,448 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "9.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Damage",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "Over-Engineered",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>9.9% Critical Hit Damage  ",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Over-Engineered"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Over-Engineered"
-},
- {
-   "FIELD1": "DZ South",
-   "Rarity": "Gear Set",
-   "Name": "Burst-resistant Plate",
-   "Core": [
-      "11.8",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.8% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "4.4",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Chance",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "Sustainability",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>4.4% Critical Hit Chance  ",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Sustainability"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Sustainability"
-},
- {
-   "FIELD1": "DZ South",
-   "Rarity": "High End",
-   "Name": "KM 9",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "16.3",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Repair Skills",
-   "Attribute 2": [
-      "7.4",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Headshot Damage",
-   "Talent": "Clutch",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>16.3% Repair Skills <br/><span class=\"icon-offensive\"></span>7.4% Headshot Damage",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Clutch"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Clutch"
-},
- {
-   "FIELD1": "DZ South",
-   "Rarity": "High End",
-   "Name": "Steelwork Chestplate",
-   "Core": [
-      "120,039",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>120,039 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "3,743",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "15,506",
-      "",
-      "<br/>"
-   ],
-   "FIELD9": "Health",
-   "Talent": "Tamper Proof",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>3,743 Armor Regeneration <br/><span class=\"icon-defensive\"></span>15,506 Health",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Tamper Proof"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Tamper Proof"
-},
- {
-   "FIELD1": "DZ South",
-   "Rarity": "Named",
-   "Name": "Matador",
-   "Core": [
-      "7.4",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>7.4% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "7.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "7.6",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Explosive Resistance",
-   "Talent": "Perfect Adrenaline Rush",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>7.0% Weapon Handling <br/><span class=\"icon-defensive\"></span>7.6% Explosive Resistance",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Perfect Adrenaline Rush"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Perfect Adrenaline Rush"
-},
- {
-   "FIELD1": "DZ East",
-   "Rarity": "Named",
-   "Name": "Claws Out",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "6.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "11.0",
-      "",
-      "<br/>"
-   ],
-   "FIELD9": "Pistol Damage",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling <br/><span class=\"icon-offensive\"></span>11.0 Pistol Damage",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ East",
-   "Rarity": "Gear Set",
-   "Name": "Cavalier Mask",
-   "Core": [
-      "121,672",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>121,672 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "15,618",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Health",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-defensive\"></span>15,618 Health  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ East",
-   "Rarity": "Gear Set",
-   "Name": "Deadeye Holster",
-   "Core": [
-      "11.2",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.2% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "10.3",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Damage",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>10.3% Critical Hit Damage  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ East",
-   "Rarity": "High End",
-   "Name": "Bevor Air Guard",
-   "Core": [
-      "91,284",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>91,284 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "4,840",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "7.4",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Status Effects",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>4,840 Armor Regeneration <br/><span class=\"icon-utility\"></span>7.4% Status Effects",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "DZ East",
-   "Rarity": "High End",
-   "Name": "Vertical Y Holster",
-   "Core": [
-      "6.6",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>6.6% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "6.5",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "12.0",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Critical Hit Damage",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>6.5% Weapon Handling <br/><span class=\"icon-offensive\"></span>12.0% Critical Hit Damage",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Haven",
-   "Rarity": "High End",
-   "Name": "Urban Assault Vest",
-   "Core": [
-      "10.0",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>10.0% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "8.5",
-      "%",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Hazard Protection",
-   "Attribute 2": [
-      "4.2",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Critical Hit Chance",
-   "Talent": "Trauma",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>8.5% Hazard Protection <br/><span class=\"icon-offensive\"></span>4.2% Critical Hit Chance",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Trauma"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Trauma"
-},
- {
-   "FIELD1": "Haven",
-   "Rarity": "High End",
-   "Name": "Urban Warfare Kneepads",
-   "Core": [
-      "12.5",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>12.5% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "10.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Damage",
-   "Attribute 2": [
-      "12,688",
-      "",
-      "<br/>"
-   ],
-   "FIELD9": "Health",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>10.9% Critical Hit Damage <br/><span class=\"icon-defensive\"></span>12,688 Health",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Haven",
-   "Rarity": "High End",
-   "Name": "Equipment Holster Huffle",
-   "Core": [
-      "117,645",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>117,645 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "15.8",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Repair Skills",
-   "Attribute 2": [
-      "8.3",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Status Effects",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>15.8% Repair Skills <br/><span class=\"icon-utility\"></span>8.3% Status Effects",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Benitez",
-   "Rarity": "High End",
-   "Name": "Armadillo Vest",
-   "Core": [
-      "116,546",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>116,546 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "7.4",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Skill Damage",
-   "Attribute 2": [
-      "6.0",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Weapon Handling",
-   "Talent": "Spark",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>7.4% Skill Damage <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Spark"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Spark"
-},
- {
-   "FIELD1": "Benitez",
-   "Rarity": "High End",
-   "Name": "Sundown Knee Guards",
-   "Core": [
-      "11.1",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.1% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "10.3",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Damage",
-   "Attribute 2": [
-      "6.0",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Weapon Handling",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>10.3% Critical Hit Damage <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Benitez",
-   "Rarity": "High End",
-   "Name": "Graffham Thigh Combo",
-   "Core": [
-      "9.7",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>9.7% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "4.7",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Chance",
-   "Attribute 2": [
-      "16.7",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Repair Skills",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>4.7% Critical Hit Chance <br/><span class=\"icon-utility\"></span>16.7% Repair Skills",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Bridge",
-   "Rarity": "High End",
-   "Name": "Urban Assault Vest",
-   "Core": [
-      "9.5",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>9.5% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "5.5",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "17.9",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Repair Skills",
-   "Talent": "Explosive Delivery",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>5.5% Weapon Handling <br/><span class=\"icon-utility\"></span>17.9% Repair Skills",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Explosive Delivery"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Explosive Delivery"
-},
- {
-   "FIELD1": "The Bridge",
-   "Rarity": "High End",
-   "Name": "Wear-anywhere Protectors",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "10.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Skill Haste",
-   "Attribute 2": [
-      "4.8",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Critical Hit Chance",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>10.0% Skill Haste <br/><span class=\"icon-offensive\"></span>4.8% Critical Hit Chance",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "The Bridge",
-   "Rarity": "High End",
-   "Name": "Bauta Mask",
-   "Core": [
-      "13.1",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>13.1% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "3,921",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "7.6",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Status Effects",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>3,921 Armor Regeneration <br/><span class=\"icon-utility\"></span>7.6% Status Effects",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Named",
-   "Name": "Force Multiplier",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "16.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-utility\"></span>"
-   ],
-   "FIELD7": "Repair Skills",
-   "Attribute 2": [
-      "7.7",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Explosive Resistance",
-   "Talent": "Perfect Combined Arms",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "<span class=\"icon-defensive\"></span>",
-   "Attributes": "<span class=\"icon-utility\"></span>16.9% Repair Skills <br/><span class=\"icon-defensive\"></span>7.7% Explosive Resistance",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Perfect Combined Arms"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Perfect Combined Arms"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Named",
-   "Name": "Hunter-Killer",
-   "Core": [
-      "120,024",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>120,024 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "15,505",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Health",
-   "Attribute 2": [
-      "10.0",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Status Effects",
-   "Talent": "Perfect Intimidate",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>15,505 Health <br/><span class=\"icon-utility\"></span>10.0% Status Effects",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Perfect Intimidate"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Perfect Intimidate"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Gear Set",
-   "Name": "Directed Backpack",
-   "Core": [
-      "9.5",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>9.5% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "7.5",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "One for All",
-   "FIELD11": "",
-   "Slot": "Backpack",
-   "Armor": "131k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>7.5% Weapon Handling  ",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "One for All"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>One for All"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Gear Set",
-   "Name": "Fastened Plate",
-   "Core": [
-      "11.7",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.7% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "7.9",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Headshot Damage",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "All for One",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>7.9% Headshot Damage  ",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "All for One"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>All for One"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Gear Set",
-   "Name": "Aegis Gloves",
-   "Core": [
-      "118,900",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>118,900 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "4,567",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Gloves",
-   "Armor": "80k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-defensive\"></span>4,567 Armor Regeneration  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Gear Set",
-   "Name": "Aggressor Kneepads",
-   "Core": [
-      "141,867",
-      "",
-      "<span class=\"icon-defensive\"></span>",
-      "<span class=\"icon-defensive\"></span>141,867 Armor"
-   ],
-   "FIELD5": "Armor",
-   "Attribute 1": [
-      "4,128",
-      "",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Armor Regeneration",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Kneepads",
-   "Armor": "99k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-defensive\"></span>4,128 Armor Regeneration  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Gear Set",
-   "Name": "Bogey Thigh Rig",
-   "Core": [
-      "13.0",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>13.0% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "6.0",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Weapon Handling",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Holster",
-   "Armor": "112k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "Gear Set",
-   "Name": "Fermata Mask",
-   "Core": [
-      "11.9",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>11.9% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "10.6",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Damage",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "",
-   "Attributes": "<span class=\"icon-offensive\"></span>10.6% Critical Hit Damage  ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "High End",
-   "Name": "Counterforce Vest",
-   "Core": [
-      "10.1",
-      "%",
-      "<span class=\"icon-offensive\"></span>",
-      "<span class=\"icon-offensive\"></span>10.1% Weapon Damage"
-   ],
-   "FIELD5": "Weapon Damage",
-   "Attribute 1": [
-      "5.8",
-      "%",
-      "<br/>",
-      "<span class=\"icon-offensive\"></span>"
-   ],
-   "FIELD7": "Critical Hit Chance",
-   "Attribute 2": [
-      "9.8",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Critical Hit Damage",
-   "Talent": "Gunslinger",
-   "FIELD11": "",
-   "Slot": "Chest",
-   "Armor": "158k",
-   "Attribue 2": "<span class=\"icon-offensive\"></span>",
-   "Attributes": "<span class=\"icon-offensive\"></span>5.8% Critical Hit Chance <br/><span class=\"icon-offensive\"></span>9.8% Critical Hit Damage",
-   "Talent 1": [
-      "<span class=\"icon-active\"></span>",
-      "Gunslinger"
-   ],
-   "Talents": "<span class=\"icon-active\"></span>Gunslinger"
-},
- {
-   "FIELD1": "Cassie",
-   "Rarity": "High End",
-   "Name": "Filter Mask",
-   "Core": [
-      "1",
-      "",
-      "<span class=\"icon-utility\"></span>",
-      "<span class=\"icon-utility\"></span>1 Skill Tier"
-   ],
-   "FIELD5": "Skill Tier",
-   "Attribute 1": [
-      "9.2",
-      "%",
-      "<br/>",
-      "<span class=\"icon-defensive\"></span>"
-   ],
-   "FIELD7": "Hazard Protection",
-   "Attribute 2": [
-      "10.6",
-      "%",
-      "<br/>"
-   ],
-   "FIELD9": "Skill Haste",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "Mask",
-   "Armor": "80k",
-   "Attribue 2": "<span class=\"icon-utility\"></span>",
-   "Attributes": "<span class=\"icon-defensive\"></span>9.2% Hazard Protection <br/><span class=\"icon-utility\"></span>10.6% Skill Haste",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "#N/A",
-      "",
-      "#N/A"
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "#N/A",
-   "Armor": "#N/A",
-   "Attribue 2": "",
-   "Attributes": "   ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "#N/A",
-      "",
-      "#N/A"
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "#N/A",
-   "Armor": "#N/A",
-   "Attribue 2": "",
-   "Attributes": "   ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "#N/A",
-      "",
-      "#N/A"
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "#N/A",
-   "Armor": "#N/A",
-   "Attribue 2": "",
-   "Attributes": "   ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "#N/A",
-      "",
-      "#N/A"
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "#N/A",
-   "Armor": "#N/A",
-   "Attribue 2": "",
-   "Attributes": "   ",
-   "Talent 1": [
-      "",
-      "-"
-   ],
-   "Talents": "-"
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": "",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-},
- {
-   "FIELD1": "",
-   "Rarity": "",
-   "Name": "",
-   "Core": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD5": "",
-   "Attribute 1": [
-      "",
-      "",
-      "",
-      ""
-   ],
-   "FIELD7": "",
-   "Attribute 2": [
-      "",
-      "",
-      ""
-   ],
-   "FIELD9": ",",
-   "Talent": "",
-   "FIELD11": "",
-   "Slot": "",
-   "Armor": "",
-   "Attribue 2": "",
-   "Attributes": "",
-   "Talent 1": [
-      "",
-      ""
-   ],
-   "Talents": ""
-}
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "White House",
+   "level": 40,
+   "name": "RUSH24 Backpack",
+   "brand": "5.11 Tactical",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-defensive\"></span>127,819 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>3,855 Armor Regeneration <br/><span class=\"icon-utility\"></span>7.6% Skill Damage",
+   "talents": "<span class=\"icon-active\"></span>Concussion",
+   "mods": "Defensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "White House",
+   "level": 40,
+   "name": "Harnesk Armor",
+   "brand": "Fenris Group AB",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-offensive\"></span>15.0% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling <br/><span class=\"icon-defensive\"></span>7.2% Hazard Protection",
+   "talents": "<span class=\"icon-active\"></span>Gunslinger",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Medley Backpack",
+   "brand": "Virtuoso",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-offensive\"></span>11.5% Weapon Damage",
+   "attributes": "<span class=\"icon-defensive\"></span>4,091 Armor Regeneration  ",
+   "talents": "<span class=\"icon-active\"></span>Accelerando",
+   "mods": "Defensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Driven Kneepads",
+   "brand": "Tipping Scales",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-offensive\"></span>9.5% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>7.5% Weapon Handling  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Charger's Kneepads",
+   "brand": "Breaking Point",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-offensive\"></span>11.7% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>7.9% Headshot Damage  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Garibaldi Pack",
+   "brand": "Yaahl",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-defensive\"></span>170,000 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>4,293 Armor Regeneration <br/><span class=\"icon-defensive\"></span>7.7% Hazard Protection",
+   "talents": "<span class=\"icon-active\"></span>Clutch",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "B.O.T. Protector",
+   "brand": "Empress International",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>11.2% Skill Haste <br/><span class=\"icon-offensive\"></span>6.3% Headshot Damage",
+   "talents": "<span class=\"icon-active\"></span>Overwatch",
+   "mods": "Utility"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Clan",
+   "level": 40,
+   "name": "Micro Plated Gloves",
+   "brand": "Sokolov Concern",
+   "slot": "Gloves",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>10.1% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>5.8% Critical Hit Chance <br/><span class=\"icon-offensive\"></span>9.8% Critical Hit Damage",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "Countdown",
+   "level": 40,
+   "name": "Force Multiplier",
+   "brand": "Hana-U Corporation",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>16.9% Repair Skills <br/><span class=\"icon-defensive\"></span>7.7% Explosive Resistance",
+   "talents": "<span class=\"icon-active\"></span>Perfect Combined Arms",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "The Theater",
+   "level": 40,
+   "name": "Eagle's Grasp",
+   "brand": "Zwiadowka Sp. z o.o.",
+   "slot": "Gloves",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>11.9% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>15.0% Weapon Handling <br/><span class=\"icon-offensive\"></span>9.7% Critical Hit Damage",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Theater",
+   "level": 40,
+   "name": "Hybrid FL Gloves",
+   "brand": "Alps Summit Armaments",
+   "slot": "Gloves",
+   "armor": "80k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>10.0% Skill Haste <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Theater",
+   "level": 40,
+   "name": "Patella Knee Cups",
+   "brand": "Wyvern Wear",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-defensive\"></span>15,241 Health <br/><span class=\"icon-utility\"></span>9.9% Skill Haste",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Campus",
+   "level": 40,
+   "name": "Electrique Mask",
+   "brand": "Electrique",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-defensive\"></span>7.5% Explosive Resistance <br/><span class=\"icon-defensive\"></span>15,995 Health",
+   "talents": "-",
+   "mods": "Utility"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Campus",
+   "level": 40,
+   "name": "Graffham Thigh Combo",
+   "brand": "Overlord Armaments",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-offensive\"></span>10.9% Weapon Damage",
+   "attributes": "<span class=\"icon-utility\"></span>16.9% Repair Skills <br/><span class=\"icon-defensive\"></span>3,764 Armor Regeneration",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "The Castle",
+   "level": 40,
+   "name": "Punch Drunk",
+   "brand": "Douglas & Harding",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>11.1% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>20.0% Headshot Damage <br/><span class=\"icon-utility\"></span>17.6% Repair Skills",
+   "talents": "-",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Castle",
+   "level": 40,
+   "name": "Field Protective Mask",
+   "brand": "Providence Defense",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>11.1% Weapon Damage",
+   "attributes": "<span class=\"icon-utility\"></span>8.6% Status Effects <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
+   "talents": "-",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Castle",
+   "level": 40,
+   "name": "Artisan Holster",
+   "brand": "Shiny Monkey Gear",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-defensive\"></span>8.2% Explosive Resistance <br/><span class=\"icon-utility\"></span>5.9% Skill Damage",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "DZ West",
+   "level": 40,
+   "name": "Hotshot Gloves",
+   "brand": "Hotshot",
+   "slot": "Gloves",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>10.6% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>4.4% Critical Hit Chance  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "DZ West",
+   "level": 40,
+   "name": "Strines Stabilizing Pads",
+   "brand": "Hard Wired",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>15.9% Repair Skills  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "DZ West",
+   "level": 40,
+   "name": "Kote Hand Guards",
+   "brand": "Murakami Industries",
+   "slot": "Gloves",
+   "armor": "80k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-offensive\"></span>7.3% Headshot Damage <br/><span class=\"icon-utility\"></span>7.3% Skill Damage",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "DZ West",
+   "level": 40,
+   "name": "Tay Protective Pads",
+   "brand": "Douglas & Harding",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-offensive\"></span>10.3% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling <br/><span class=\"icon-defensive\"></span>15,633 Health",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "DZ South",
+   "level": 40,
+   "name": "Reorganized Backpack",
+   "brand": "Refactor",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-defensive\"></span>115,448 Armor",
+   "attributes": "<span class=\"icon-offensive\"></span>9.9% Critical Hit Damage  ",
+   "talents": "<span class=\"icon-active\"></span>Over-Engineered",
+   "mods": "Defensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "DZ South",
+   "level": 40,
+   "name": "Burst-resistant Plate",
+   "brand": "Tipping Scales",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-offensive\"></span>11.8% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>4.4% Critical Hit Chance  ",
+   "talents": "<span class=\"icon-active\"></span>Sustainability",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "DZ South",
+   "level": 40,
+   "name": "KM 9",
+   "brand": "China Light Industries Corporation",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>16.3% Repair Skills <br/><span class=\"icon-offensive\"></span>7.4% Headshot Damage",
+   "talents": "<span class=\"icon-active\"></span>Clutch",
+   "mods": "Utility"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "DZ South",
+   "level": 40,
+   "name": "Steelwork Chestplate",
+   "brand": "Palisade Steelworks",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-defensive\"></span>120,039 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>3,743 Armor Regeneration <br/><span class=\"icon-defensive\"></span>15,506 Health",
+   "talents": "<span class=\"icon-active\"></span>Tamper Proof",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "DZ South",
+   "level": 40,
+   "name": "Matador",
+   "brand": "Walker, Harris & Co.",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-offensive\"></span>7.4% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>7.0% Weapon Handling <br/><span class=\"icon-defensive\"></span>7.6% Explosive Resistance",
+   "talents": "<span class=\"icon-active\"></span>Perfect Adrenaline Rush",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "DZ East",
+   "level": 40,
+   "name": "Claws Out",
+   "brand": "Wyvern Wear",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling <br/><span class=\"icon-offensive\"></span>11.0 Pistol Damage",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "DZ East",
+   "level": 40,
+   "name": "Cavalier Mask",
+   "brand": "Cavalier",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-defensive\"></span>121,672 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>15,618 Health  ",
+   "talents": "-",
+   "mods": "Defensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "DZ East",
+   "level": 40,
+   "name": "Deadeye Holster",
+   "brand": "Breaking Point",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-offensive\"></span>11.2% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>10.3% Critical Hit Damage  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "DZ East",
+   "level": 40,
+   "name": "Bevor Air Guard",
+   "brand": "Belstone Armory",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-defensive\"></span>91,284 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>4,840 Armor Regeneration <br/><span class=\"icon-utility\"></span>7.4% Status Effects",
+   "talents": "-",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "DZ East",
+   "level": 40,
+   "name": "Vertical Y Holster",
+   "brand": "Sokolov Concern",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-offensive\"></span>6.6% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>6.5% Weapon Handling <br/><span class=\"icon-offensive\"></span>12.0% Critical Hit Damage",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Haven",
+   "level": 40,
+   "name": "Urban Assault Vest",
+   "brand": "Imminence Armaments",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-offensive\"></span>10.0% Weapon Damage",
+   "attributes": "<span class=\"icon-defensive\"></span>8.5% Hazard Protection <br/><span class=\"icon-offensive\"></span>4.2% Critical Hit Chance",
+   "talents": "<span class=\"icon-active\"></span>Trauma",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Haven",
+   "level": 40,
+   "name": "Urban Warfare Kneepads",
+   "brand": "Providence Defense",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-offensive\"></span>12.5% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>10.9% Critical Hit Damage <br/><span class=\"icon-defensive\"></span>12,688 Health",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Haven",
+   "level": 40,
+   "name": "Equipment Holster Huffle",
+   "brand": "Badger Tuff",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-defensive\"></span>117,645 Armor",
+   "attributes": "<span class=\"icon-utility\"></span>15.8% Repair Skills <br/><span class=\"icon-utility\"></span>8.3% Status Effects",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Armadillo Vest",
+   "brand": "Gila Guard",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-defensive\"></span>116,546 Armor",
+   "attributes": "<span class=\"icon-utility\"></span>7.4% Skill Damage <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
+   "talents": "<span class=\"icon-active\"></span>Spark",
+   "mods": "Defensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Sundown Knee Guards",
+   "brand": "Grupo Sombra S.A.",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-offensive\"></span>11.1% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>10.3% Critical Hit Damage <br/><span class=\"icon-offensive\"></span>6.0% Weapon Handling",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Benitez",
+   "level": 40,
+   "name": "Graffham Thigh Combo",
+   "brand": "Overlord Armaments",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-offensive\"></span>9.7% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>4.7% Critical Hit Chance <br/><span class=\"icon-utility\"></span>16.7% Repair Skills",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Bridge",
+   "level": 40,
+   "name": "Urban Assault Vest",
+   "brand": "Imminence Armaments",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-offensive\"></span>9.5% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>5.5% Weapon Handling <br/><span class=\"icon-utility\"></span>17.9% Repair Skills",
+   "talents": "<span class=\"icon-active\"></span>Explosive Delivery",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Bridge",
+   "level": 40,
+   "name": "Wear-anywhere Protectors",
+   "brand": "Empress International",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>10.0% Skill Haste <br/><span class=\"icon-offensive\"></span>4.8% Critical Hit Chance",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "The Bridge",
+   "level": 40,
+   "name": "Bauta Mask",
+   "brand": "Legatus S.p.A.",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>13.1% Weapon Damage",
+   "attributes": "<span class=\"icon-defensive\"></span>3,921 Armor Regeneration <br/><span class=\"icon-utility\"></span>7.6% Status Effects",
+   "talents": "-",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Force Multiplier",
+   "brand": "Hana-U Corporation",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-utility\"></span>16.9% Repair Skills <br/><span class=\"icon-defensive\"></span>7.7% Explosive Resistance",
+   "talents": "<span class=\"icon-active\"></span>Perfect Combined Arms",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-named",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Hunter-Killer",
+   "brand": "Golan Gear Ltd",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-defensive\"></span>120,024 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>15,505 Health <br/><span class=\"icon-utility\"></span>10.0% Status Effects",
+   "talents": "<span class=\"icon-active\"></span>Perfect Intimidate",
+   "mods": "Utility"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Directed Backpack",
+   "brand": "Concentrated Company",
+   "slot": "Backpack",
+   "armor": "131k",
+   "core": "<span class=\"icon-offensive\"></span>9.5% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>7.5% Weapon Handling  ",
+   "talents": "<span class=\"icon-active\"></span>One for All",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Fastened Plate",
+   "brand": "Concentrated Company",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-offensive\"></span>11.7% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>7.9% Headshot Damage  ",
+   "talents": "<span class=\"icon-active\"></span>All for One",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Aegis Gloves",
+   "brand": "Aegis",
+   "slot": "Gloves",
+   "armor": "80k",
+   "core": "<span class=\"icon-defensive\"></span>118,900 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>4,567 Armor Regeneration  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Aggressor Kneepads",
+   "brand": "Umbra Initiative",
+   "slot": "Kneepads",
+   "armor": "99k",
+   "core": "<span class=\"icon-defensive\"></span>141,867 Armor",
+   "attributes": "<span class=\"icon-defensive\"></span>4,128 Armor Regeneration  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Bogey Thigh Rig",
+   "brand": "Negotiator's Dilemma",
+   "slot": "Holster",
+   "armor": "112k",
+   "core": "<span class=\"icon-offensive\"></span>13.0% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>6.0% Weapon Handling  ",
+   "talents": "-",
+   "mods": "-"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-gs",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Fermata Mask",
+   "brand": "Virtuoso",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-offensive\"></span>11.9% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>10.6% Critical Hit Damage  ",
+   "talents": "-",
+   "mods": "Defensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Counterforce Vest",
+   "brand": "Providence Defense",
+   "slot": "Chest",
+   "armor": "158k",
+   "core": "<span class=\"icon-offensive\"></span>10.1% Weapon Damage",
+   "attributes": "<span class=\"icon-offensive\"></span>5.8% Critical Hit Chance <br/><span class=\"icon-offensive\"></span>9.8% Critical Hit Damage",
+   "talents": "<span class=\"icon-active\"></span>Gunslinger",
+   "mods": "Offensive"
+ },
+ {
+   "type": "gear",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Filter Mask",
+   "brand": "Hana-U Corporation",
+   "slot": "Mask",
+   "armor": "80k",
+   "core": "<span class=\"icon-utility\"></span>1 Skill Tier",
+   "attributes": "<span class=\"icon-defensive\"></span>9.2% Hazard Protection <br/><span class=\"icon-utility\"></span>10.6% Skill Haste",
+   "talents": "-",
+   "mods": "Offensive"
+ }
 ]

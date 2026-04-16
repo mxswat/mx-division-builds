@@ -414,5 +414,21 @@
    "level": 40,
    "name": "Improved Sticky Launcher",
    "attributes": "4.1% Skill Haste "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-utility",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Utility Protocol: Intensity",
+   "attributes": "9.0% Skill Duration "
+ },
+ {
+   "type": "mod",
+   "rarity": "header-he",
+   "vendor": "Cassie",
+   "level": 40,
+   "name": "Trap Charge Improvement",
+   "attributes": " Trap<br/>4.4% Duration"
  }
 ]
